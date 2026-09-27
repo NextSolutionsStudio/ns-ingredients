@@ -1,0 +1,64 @@
+id: coconut-oil
+type: fat
+names:
+  en: [coconut oil]
+  pl: [olej kokosowy, tłuszcz kokosowy]
+  de: [Kokosöl]
+summary:
+  en: >-
+    Oil pressed from the flesh (kernel) of the coconut, rich in lauric acid and solid below about 24°C.
+    Despite the name, the coconut is a drupe, not a tree nut, and it is not on the EU's Annex II list of
+    the fourteen regulated allergens (almonds, hazelnuts, walnuts, cashews, pecans, Brazil nuts, pistachios
+    and macadamia nuts) — a coincidental naming, not a legal exemption from something it was ever in.
+  pl: >-
+    Olej wyciskany z miąższu (jądra) orzecha kokosowego, bogaty w kwas laurynowy, stały poniżej ok. 24°C.
+    Wbrew nazwie kokos botanicznie to pestkowiec, nie orzech drzewny, i nie znajduje się na unijnej liście
+    czternastu regulowanych alergenów z Załącznika II (migdały, orzechy laskowe, włoskie, nerkowca, pekan,
+    brazylijskie, pistacje i makadamia) — to zbieżność nazwy, a nie prawne wyłączenie z czegoś, do czego
+    nigdy nie należał.
+variants:
+  - id: virgin
+    names:
+      en: [virgin coconut oil, cold-pressed coconut oil]
+      pl: [olej kokosowy virgin, nierafinowany olej kokosowy, olej kokosowy tłoczony na zimno]
+    process:
+      en: "Pressed from fresh (not dried/copra) coconut meat and minimally processed; keeps coconut aroma and flavour."
+      pl: "Wyciskany ze świeżego (nie suszonego/kopry) miąższu kokosa i minimalnie przetwarzany; zachowuje aromat i smak kokosa."
+    tells: ['virgin coconut', 'kokos.*virgin', 'cold.?pressed coconut', 'nierafinowan.*kokos', 'tloczony na zimno.*kokos', 'kokos.*tloczony na zimno']
+    prior: 0.35
+    prior_rationale:
+      en: "A quality/flavour feature manufacturers name when they pay for it."
+      pl: "Cecha jakości/smaku, którą producenci nazywają, gdy za nią płacą."
+  - id: refined
+    names:
+      en: [refined coconut oil, RBD coconut oil]
+      pl: [olej kokosowy rafinowany, rafinowany olej kokosowy]
+    process:
+      en: "Pressed from dried coconut meat (copra) then refined, bleached and deodorised to a neutral, near-flavourless oil."
+      pl: "Wyciskany z suszonego miąższu kokosa (kopry), następnie rafinowany, odbarwiany i dezodoryzowany do neutralnego, praktycznie bezsmakowego oleju."
+    tells: ['refined coconut', 'rbd coconut', 'rafinowan.*kokos', 'kokos.*rafinowan']
+    prior: 0.65
+    prior_rationale:
+      en: "The default for food manufacturing, which usually wants a neutral fat rather than coconut flavour."
+      pl: "Standard w produkcji spożywczej, która zwykle potrzebuje neutralnego tłuszczu, a nie smaku kokosa."
+assertions:
+  - code: origin.vegetable_oil_derived
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "A pressed vegetable oil; EU labelling requires its specific plant origin to be named."
+      pl: "Wyciskany olej roślinny; przepisy UE o etykietowaniu wymagają podania jego konkretnego pochodzenia rośliny."
+    sources: [{ id: reg-1169-2011, locator: "Annex VII Part A, point 8" }]
+  - code: processing.refined
+    variant: refined
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Refined, bleached and deodorised to remove coconut aroma/flavour."
+      pl: "Rafinowany, odbarwiany i dezodoryzowany w celu usunięcia aromatu/smaku kokosa."
+    sources: [{ id: reg-1169-2011, locator: "Annex VII Part A, point 8" }]
+review_status: draft
+provenance: ai-drafted
+review_notes: []

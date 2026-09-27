@@ -1,0 +1,147 @@
+id: steviol-glycosides
+type: additive
+e_number: E960a
+ids: { wikidata: Q2805600 }
+names:
+  en: [steviol glycosides, steviol glycosides from Stevia]
+  pl: [glikozydy stewiolowe, stewiozydy]
+  de: [Steviolglycoside]
+functions: [sweetener]
+summary:
+  en: >-
+    A family of intensely sweet compounds (stevioside, rebaudioside A, D, M...) extracted or
+    derived from the leaves of Stevia rebaudiana. What was originally authorised as a single
+    additive 'steviol glycosides (E 960)' was renamed 'steviol glycosides from Stevia (E 960a)'
+    in 2021, when the EU also began authorising newer production routes as their own additive
+    codes: 'enzymatically produced steviol glycosides (E 960c)', which bioconverts a stevia leaf
+    extract to the rarer, cleaner-tasting rebaudioside D/M with an enzyme pair, and 'steviol
+    glycosides from fermentation (E 960b)', made by fermenting sugar with an engineered yeast.
+    All routes share the same group ADI (4 mg/kg bw/day as steviol equivalents), reaffirmed by
+    EFSA in 2024. A plain 'stewiolo glikozydy' or 'ekstrakt z stewii' on a Polish label usually
+    means the original leaf-extract form; the newer codes are typically named explicitly because
+    they are separate legal entries.
+  pl: >-
+    Grupa intensywnie słodkich związków (stewiozyd, rebaudiozyd A, D, M...) ekstrahowanych lub
+    otrzymywanych z liści Stewii (Stevia rebaudiana). Dodatek pierwotnie dopuszczony jako
+    'glikozydy stewiolowe (E 960)' został w 2021 r. przemianowany na 'glikozydy stewiolowe z
+    Stewii (E 960a)', kiedy UE zaczęła też dopuszczać nowsze metody produkcji jako odrębne kody
+    dodatków: 'enzymatycznie otrzymane glikozydy stewiolowe (E 960c)', gdzie ekstrakt z liści
+    stewii jest przekształcany parą enzymów do rzadszego, czystszego w smaku rebaudiozydu D/M,
+    oraz 'glikozydy stewiolowe z fermentacji (E 960b)', otrzymywane przez fermentację cukru przy
+    użyciu zmodyfikowanych drożdży. Wszystkie metody mają to samo grupowe ADI (4 mg/kg m.c./dobę
+    w przeliczeniu na stewiol), potwierdzone przez EFSA w 2024 r. Samo 'glikozydy stewiolowe' lub
+    'ekstrakt z stewii' na polskiej etykiecie zwykle oznacza pierwotną formę z ekstraktu z liści;
+    nowsze kody są zwykle nazywane wprost, bo są odrębnymi pozycjami prawnymi.
+variants:
+  - id: leaf-extract
+    names:
+      en: ["steviol glycosides from Stevia", "E960a"]
+      pl: ["glikozydy stewiolowe z Stewii", "ekstrakt z liści stewii", "E960a"]
+      de: ["Steviolglycoside aus Stevia"]
+    process:
+      en: >-
+        Purified aqueous/ethanol extract of Stevia rebaudiana leaves, standardised to ≥95%
+        steviol glycosides (mainly stevioside and rebaudioside A), purified by ion exchange and
+        crystallisation per the Reg 231/2012 specification. The historical and still-dominant
+        commercial form.
+      pl: >-
+        Oczyszczony ekstrakt wodno-etanolowy z liści Stevia rebaudiana, standaryzowany do ≥95%
+        glikozydów stewiolowych (głównie stewiozyd i rebaudiozyd A), oczyszczany metodą wymiany
+        jonowej i krystalizacji zgodnie ze specyfikacją Rozporządzenia 231/2012. Historyczna i
+        wciąż dominująca handlowo forma.
+    tells: ['glikozyd(?:y)? stewiolow.* ze? stewi', 'ekstrakt z li[sz]ci stewii', 'steviol glycosides from stevia', 'steviolglycoside.*stevia', 'e ?960a\b']
+    prior: 0.85
+    prior_rationale:
+      en: "The original, cheapest and most widely used route; newer codes (E960b, E960c) are recent (2021-2025) premium additions that manufacturers tend to name explicitly since they are distinct legal entries."
+      pl: "Pierwotna, najtańsza i najbardziej rozpowszechniona metoda; nowsze kody (E960b, E960c) to niedawne (2021-2025) dodatki premium, które producenci zwykle nazywają wprost, bo są odrębnymi pozycjami prawnymi."
+  - id: enzymatic
+    names:
+      en: ["enzymatically produced steviol glycosides", "E960c"]
+      pl: ["enzymatycznie otrzymane glikozydy stewiolowe", "E960c"]
+      de: ["enzymatisch hergestellte Steviolglycoside"]
+    process:
+      en: >-
+        A UDP-glucosyltransferase + sucrose synthase enzyme pair (expressed in genetically
+        modified Komagataella phaffii yeast, then removed from the final product) glucosylates
+        rebaudioside A in a purified stevia leaf extract to the rarer rebaudioside D (or, in later
+        specifications, M); the reaction mixture is heat-treated to denature the enzymes, then
+        purified by resin adsorption and crystallised with food-grade ethanol.
+      pl: >-
+        Para enzymów, UDP-glukozylotransferaza i syntaza sacharozy (wytwarzane przez
+        genetycznie zmodyfikowane drożdże Komagataella phaffii, usuwane z produktu końcowego),
+        glikozyluje rebaudiozyd A w oczyszczonym ekstrakcie z liści stewii do rzadszego
+        rebaudiozydu D (lub, w nowszych specyfikacjach, M); mieszanina reakcyjna jest podgrzewana
+        w celu denaturacji enzymów, następnie oczyszczana adsorpcją na żywicy i krystalizowana
+        etanolem spożywczym.
+    tells: ['enzymatic(?:ally)?.*steviol glycoside', 'enzymatycznie.*glikozyd.*stewiolow', 'enzymatisch.*steviolglycoside', 'e ?960c\b']
+    prior: 0.08
+    prior_rationale:
+      en: "Authorised only since 2021; a premium, higher-purity route used mainly by large beverage brands, usually named explicitly on the label."
+      pl: "Dopuszczone dopiero od 2021 r.; premiowa, wyżej oczyszczona metoda stosowana głównie przez duże marki napojów, zwykle nazywana wprost na etykiecie."
+  - id: fermentation
+    names:
+      en: ["steviol glycosides from fermentation", "E960b"]
+      pl: ["glikozydy stewiolowe z fermentacji", "E960b"]
+      de: ["Steviolglycoside aus Fermentation"]
+    process:
+      en: >-
+        Made by fermenting a simple-sugar feedstock with the genetically modified yeast Yarrowia
+        lipolytica strain VRM, yielding a product that is ≥95% rebaudioside M, D, A and B combined.
+        Authorised in the EU from April 2025.
+      pl: >-
+        Otrzymywane przez fermentację prostego cukru przy użyciu genetycznie zmodyfikowanych
+        drożdży Yarrowia lipolytica, szczep VRM, dającą produkt zawierający ≥95% rebaudiozydów M,
+        D, A i B łącznie. Dopuszczone w UE od kwietnia 2025 r.
+    tells: ['steviol glycosides from fermentation', 'glikozyd.*stewiolow.*fermentacj', 'steviolglycoside.*fermentation', 'e ?960b\b']
+    prior: 0.07
+    prior_rationale:
+      en: "The newest (2025) and most novel route; expected to be named explicitly given its recency and the marketing value of 'fermentation-derived' claims."
+      pl: "Najnowsza (2025) i najbardziej nowatorska metoda; oczekuje się, że będzie nazywana wprost ze względu na nowość i wartość marketingową określenia 'z fermentacji'."
+assertions:
+  - code: origin.plant
+    variant: leaf-extract
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Extracted from Stevia rebaudiana leaves.", pl: "Ekstrahowane z liści Stevia rebaudiana." }
+    sources: [{ id: swt-efsa-e960c-2022 }]
+  - code: origin.microbial_fermentation
+    variant: fermentation
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Made by fermentation of a sugar feedstock using genetically modified Yarrowia lipolytica.", pl: "Otrzymywane przez fermentację cukru z użyciem genetycznie zmodyfikowanych drożdży Yarrowia lipolytica." }
+    sources: [{ id: swt-reg-2025-652 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: B
+    note: { en: "All three documented production routes (leaf extract, enzymatic bioconversion, yeast fermentation) use plant or microbial material, no animal inputs.", pl: "Wszystkie trzy udokumentowane metody produkcji (ekstrakt z liści, biokonwersja enzymatyczna, fermentacja drożdżowa) wykorzystują materiał roślinny lub mikrobiologiczny, bez surowców zwierzęcych." }
+    sources: [{ id: swt-efsa-e960c-2022 }, { id: swt-reg-2025-652 }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: "Authorised sweetener under Reg 1333/2008 Annex II; E960 was renamed E960a in 2021 (18-month transition to Feb 2023) when E960c was added, and E960b(i) was added in 2025 — all four combine under shared maximum levels expressed as steviol equivalents."
+      pl: "Dozwolona substancja słodząca na podstawie Rozporządzenia 1333/2008, Załącznik II; E960 przemianowano na E960a w 2021 r. (18-miesięczny okres przejściowy do lutego 2023), kiedy dodano E960c, a w 2025 r. dodano E960b(i) — wszystkie cztery łączą się w ramach wspólnych maksymalnych poziomów wyrażonych jako ekwiwalenty stewiolu."
+    since: "2011 (as E960); renamed 2021"
+    source: reg-1333-2008
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: "Commission Regulation (EU) 2021/1156 (in force 3 August 2021, 18-month transition to 2 February 2023) renamed 'steviol glycosides (E 960)' to 'steviol glycosides from Stevia (E 960a)' and added 'enzymatically produced steviol glycosides (E 960c)' as a distinct entry."
+      pl: "Rozporządzenie Komisji (UE) 2021/1156 (w mocy od 3 sierpnia 2021, okres przejściowy do 2 lutego 2023) przemianowało 'glikozydy stewiolowe (E 960)' na 'glikozydy stewiolowe z Stewii (E 960a)' i dodało 'enzymatycznie otrzymane glikozydy stewiolowe (E 960c)' jako odrębną pozycję."
+    since: "2021"
+    source: swt-reg-2021-1156
+reference_values:
+  - type: group_ADI
+    value: 4
+    unit: "mg/kg bw/day (as steviol equivalents)"
+    body: EFSA
+    year: 2024
+    source: swt-efsa-steviol-adi-2024
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "E960c specification has since been amended again for rebaudioside M (2025/2026 opinions); revisit if a product declares a specific rebaudioside grade."
+  - "The exact renaming/introduction regulations (2021/1156, 2025/652) were confirmed via secondary summaries (Reading Foodlaw, Food Compliance International) rather than a direct EUR-Lex fetch, which returned empty content this session; re-verify wording against the EUR-Lex ELI text when convenient."

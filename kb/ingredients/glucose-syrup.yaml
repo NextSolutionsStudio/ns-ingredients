@@ -1,0 +1,95 @@
+id: glucose-syrup
+type: carbohydrate
+names:
+  en: [glucose syrup]
+  pl: [syrop glukozowy]
+  de: [Glukosesirup, Glucosesirup]
+summary:
+  en: >-
+    A thick, sticky solution of glucose and shorter glucose-chain sugars made by hydrolysing starch — from
+    wheat, maize or potato. EU sugars law defines it by dry-matter and reducing-sugar content rather than
+    by crop. EU allergen law exempts "glucose syrups based on wheat" (and barley) from a mandatory gluten
+    warning, on the view that refining removes the protein to a level judged not to trigger a reaction.
+  pl: >-
+    Gęsty, kleisty roztwór glukozy i krótszych łańcuchów glukozowych, otrzymywany przez hydrolizę skrobi —
+    pszennej, kukurydzianej lub ziemniaczanej. Unijne prawo o cukrach definiuje go przez zawartość suchej
+    masy i cukrów redukujących, a nie przez surowiec roślinny. Unijne prawo o alergenach zwalnia "syropy
+    glukozowe na bazie pszenicy" (i jęczmienia) z obowiązkowego ostrzeżenia o glutenie, uznając, że
+    rafinacja usuwa białko do poziomu ocenionego jako nie wywołujący reakcji.
+variants:
+  - id: wheat
+    names:
+      en: [wheat glucose syrup]
+      pl: [syrop glukozowy z pszenicy, pszenny syrop glukozowy]
+    process:
+      en: "Hydrolysed from wheat starch."
+      pl: "Otrzymywany z hydrolizy skrobi pszennej."
+    tells: ['wheat glucose syrup', 'syrop glukozowy z pszenicy', 'pszenny syrop glukozowy']
+    prior: 0.15
+    prior_rationale:
+      en: "Legally exempt from a gluten warning, but many EU manufacturers still default to maize or potato starch for cost and to avoid consumer gluten confusion."
+      pl: "Prawnie zwolniony z ostrzeżenia o glutenie, ale wielu producentów w UE wciąż domyślnie wybiera skrobię kukurydzianą lub ziemniaczaną ze względu na koszt i by uniknąć konsumenckiej obawy o gluten."
+  - id: maize
+    names:
+      en: [maize glucose syrup, corn glucose syrup, corn syrup]
+      pl: [syrop glukozowy z kukurydzy, kukurydziany syrop glukozowy]
+    process:
+      en: "Hydrolysed from maize (corn) starch — the most widely available commodity feedstock, and the base for high-fructose corn syrup after further enzymatic isomerisation (a separate ingredient)."
+      pl: "Otrzymywany z hydrolizy skrobi kukurydzianej — najbardziej dostępnego surowca towarowego i bazy do syropu glukozowo-fruktozowego po dalszej izomeryzacji enzymatycznej (odrębny składnik)."
+    tells: ['maize glucose syrup', 'corn glucose syrup', 'corn syrup', 'syrop glukozowy z kukurydzy', 'kukurydziany syrop glukozowy']
+    prior: 0.6
+    prior_rationale:
+      en: "The default global commodity feedstock, cheaper and more available than wheat or potato in most supply chains."
+      pl: "Domyślny globalny surowiec towarowy, tańszy i łatwiej dostępny niż pszenica czy ziemniak w większości łańcuchów dostaw."
+  - id: potato
+    names:
+      en: [potato glucose syrup]
+      pl: [syrop glukozowy z ziemniaków, ziemniaczany syrop glukozowy]
+    process:
+      en: "Hydrolysed from potato starch — a common European (incl. Polish) feedstock."
+      pl: "Otrzymywany z hydrolizy skrobi ziemniaczanej — powszechnego surowca europejskiego, w tym polskiego."
+    tells: ['potato glucose syrup', 'syrop glukozowy z ziemniak', 'ziemniaczany syrop glukozowy']
+    prior: 0.25
+    prior_rationale:
+      en: "A significant European feedstock, though smaller globally than maize."
+      pl: "Istotny surowiec europejski, choć w skali globalnej mniejszy niż kukurydza."
+assertions:
+  - code: allergen.gluten
+    variant: wheat
+    certainty: maybe
+    kind: fact
+    grade: A
+    population: [coeliac]
+    note:
+      en: >-
+        EU law explicitly exempts "wheat based glucose syrups including dextrose" from the mandatory
+        gluten allergen declaration (Annex II point 1(a)). "Maybe" rather than "no": the exemption is a
+        regulatory judgement about typical refining, not a zero-residue guarantee for every batch.
+      pl: >-
+        Prawo UE wyraźnie zwalnia "syropy glukozowe na bazie pszenicy, łącznie z dekstrozą" z obowiązkowej
+        deklaracji alergenu glutenowego (Załącznik II pkt 1(a)). "Może", nie "nie": zwolnienie to ocena
+        regulacyjna typowej rafinacji, a nie gwarancja zerowej pozostałości dla każdej partii.
+    sources: [{ id: reg-1169-2011, locator: "Annex II, point 1(a)" }]
+  - code: diet.gluten_free
+    variant: wheat
+    certainty: maybe
+    kind: estimate
+    grade: C
+    population: [coeliac]
+    note:
+      en: "Legally exempt from a gluten warning, but the same processing-not-guarantee caveat applies for someone avoiding gluten strictly."
+      pl: "Prawnie zwolniony z ostrzeżenia o glutenie, ale to samo zastrzeżenie o procesie (a nie gwarancji) dotyczy osoby ściśle unikającej glutenu."
+    sources: [{ id: reg-1169-2011, locator: "Annex II, point 1(a)" }]
+  - code: origin.gmo_derived
+    variant: maize
+    certainty: maybe
+    kind: estimate
+    grade: C
+    note:
+      en: "Maize is one of the crops most often genetically modified worldwide (about 92% of US corn acreage); a label alone does not say which maize the syrup was hydrolysed from."
+      pl: "Kukurydza jest jedną z roślin najczęściej modyfikowanych genetycznie na świecie (ok. 92% powierzchni uprawy kukurydzy w USA); sama etykieta nie mówi, z jakiej kukurydzy otrzymano syrop."
+    sources: [{ id: usda-ers-ge-crops }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Left out a processing.ultra_processed_marker assertion (unlike maltodextrin, glucose syrup is not one of the named examples in this database's own implications.yaml, so applying the code here would be this session's own extension of the taxonomy rather than following it)."

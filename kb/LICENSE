@@ -1,0 +1,14 @@
+The curated knowledge base in this directory — every file except those under kb/generated/ — is
+licensed under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).
+
+  Full legal code: https://creativecommons.org/licenses/by/4.0/legalcode
+  Summary:         https://creativecommons.org/licenses/by/4.0/
+
+Attribution: "NextSolutions ns-ingredients knowledge base", with a link to the repository and the
+kb_version you used (GET /v1/meta returns it).
+
+kb/generated/ holds identity data (E-numbers, names, CAS/ChEBI/PubChem identifiers) generated from
+Wikidata, which is available under CC0 1.0. It is redistributed here under the same terms.
+
+Sources cited by entries (regulations, EFSA opinions, studies) are referenced, not reproduced; they
+remain under their own licences.

@@ -1,0 +1,139 @@
+id: vitamin-e
+type: nutrient
+names:
+  en: [vitamin e, tocopherol]
+  pl: [witamina e]
+  de: [Vitamin E]
+summary:
+  en: >-
+    A fat-soluble antioxidant vitamin. Fruit and vegetable oils supply the natural RRR-
+    (d-alpha-) form; most fortified foods and supplements use the synthetic all-rac-
+    (dl-alpha-) form or one of its acetate/succinate esters, made industrially from
+    petrochemical building blocks. The two forms are not equally potent: IOM (2000) treats
+    1 mg RRR-alpha-tocopherol as equal to 2 mg of the synthetic all-rac mixture, so a label's
+    milligram figure means different things depending on which form is inside.
+  pl: >-
+    Rozpuszczalna w tłuszczach witamina o działaniu przeciwutleniającym. Owoce i oleje
+    roślinne zawierają naturalną formę RRR (d-alfa); większość żywności wzbogacanej i
+    suplementów zawiera syntetyczną formę all-rac (dl-alfa) lub jej estry (octan, sukcynian),
+    wytwarzane przemysłowo z surowców petrochemicznych. Obie formy nie są równie
+    aktywne: według IOM (2000) 1 mg naturalnego RRR-alfa-tokoferolu odpowiada 2 mg
+    syntetycznej mieszaniny all-rac, więc liczba miligramów na etykiecie znaczy coś innego
+    w zależności od tego, która forma jest w środku.
+variants:
+  - id: natural
+    names:
+      en: [D-alpha-tocopherol, RRR-alpha-tocopherol]
+      pl: [D-alfa-tokoferol]
+    process:
+      en: >-
+        Concentrated from the deodoriser distillate of vegetable oils (soybean, sunflower,
+        wheat germ) by molecular distillation and purification; the naturally occurring
+        stereoisomer, also written d-alpha-tocopherol or RRR-alpha-tocopherol.
+      pl: >-
+        Zatężana z destylatu odwaniania olejów roślinnych (sojowego, słonecznikowego, z
+        zarodków pszenicy) metodą destylacji molekularnej i oczyszczania; naturalnie
+        występujący stereoizomer, zapisywany też jako d-alfa-tokoferol lub RRR-alfa-tokoferol.
+    tells: ['\bd[ -]?alpha[ -]?toco', '\brrr[ -]?alpha', '\bd alfa tokofer']
+    prior: 0.3
+    prior_rationale:
+      en: >-
+        Brands that pay for the natural extract almost always print "natural", "d-alpha" or
+        "RRR" on the label; plain "vitamin E" or "alpha-tocopherol" with no such marking is
+        more likely the cheaper synthetic form.
+      pl: >-
+        Producenci, którzy płacą za naturalny ekstrakt, prawie zawsze piszą na etykiecie
+        „naturalna", „d-alfa" lub „RRR"; sama „witamina E" lub „alfa-tokoferol" bez takiego
+        oznaczenia to najczęściej tańsza forma syntetyczna.
+  - id: synthetic
+    names:
+      en: [DL-alpha-tocopherol, all-rac-alpha-tocopherol, DL-alpha-tocopheryl acetate, DL-alpha-tocopheryl acid succinate]
+      pl: [DL-alfa-tokoferol, octan DL-alfa-tokoferylu, bursztynian DL-alfa-tokoferylu]
+      de: [DL-alpha-Tocopherylacetat]
+    process:
+      en: >-
+        Made by chemical synthesis: condensation of trimethylhydroquinone with isophytol
+        (both petrochemical-derived), yielding a racemic (all-rac) mixture of eight
+        stereoisomers rather than the single natural one. Often esterified to the acetate or
+        acid succinate for oxidative stability in supplements and fortified food; intestinal
+        esterases free the active tocopherol before absorption.
+      pl: >-
+        Otrzymywana syntezą chemiczną: kondensacja trimetylohydrochinonu z izofitolem (oba
+        pochodzenia petrochemicznego), dająca racemiczną mieszaninę (all-rac) ośmiu
+        stereoizomerów, a nie jeden naturalny. Często estryfikowana do octanu lub
+        kwasu-sukcynianu dla stabilności oksydacyjnej w suplementach i żywności wzbogacanej;
+        esterazy jelitowe uwalniają aktywny tokoferol przed wchłonięciem.
+    tells: ['\bdl[ -]?alpha', '\ball[ -]?rac', '\bdl alfa tokofer']
+    prior: 0.7
+    prior_rationale:
+      en: >-
+        DL-alpha-tocopherol (and its esters) is the commodity form used in most multivitamins
+        and fortified foods because it costs far less than the natural extract; silence on the
+        label defaults here.
+      pl: >-
+        DL-alfa-tokoferol (i jego estry) to towarowa forma stosowana w większości
+        multiwitamin i żywności wzbogacanej, ponieważ jest znacznie tańsza od naturalnego
+        ekstraktu; brak oznaczenia na etykiecie domyślnie wskazuje na tę formę.
+assertions:
+  - code: origin.petrochemical_synthetic
+    variant: synthetic
+    certainty: yes
+    kind: estimate
+    grade: C
+    note:
+      en: "A trade-press description of the manufacturing process names trimethylhydroquinone and isophytol, both petrochemical derivatives, as the starting materials for the condensation reaction."
+      pl: "Opis procesu produkcji z prasy branżowej wskazuje trimetylohydrochinon i izofitol, oba pochodzenia petrochemicznego, jako surowce reakcji kondensacji."
+    sources: [{ id: chemanalyst-vitamin-e-2025 }]
+  - code: origin.vegetable_oil_derived
+    variant: natural
+    certainty: yes
+    kind: estimate
+    grade: C
+    note:
+      en: "Extracted from the deodoriser distillate of vegetable oils (soybean, sunflower, wheat germ)."
+      pl: "Otrzymywana z destylatu odwaniania olejów roślinnych (sojowego, słonecznikowego, z zarodków pszenicy)."
+    sources: [{ id: chemanalyst-vitamin-e-2025 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: estimate
+    grade: C
+    note:
+      en: "Neither the vegetable-oil extraction route nor the petrochemical synthesis route uses animal material."
+      pl: "Ani wydobycie z oleju roślinnego, ani synteza petrochemiczna nie wykorzystują surowców zwierzęcych."
+    sources: [{ id: chemanalyst-vitamin-e-2025 }]
+  - code: health.high_dose_supplement_nutrient
+    certainty: yes
+    kind: fact
+    grade: A
+    population: [general]
+    note:
+      en: >-
+        IOM (US), not EFSA, set the reference value actually verified here: a Tolerable Upper
+        Intake Level of 1000 mg/day of any form of supplemental alpha-tocopherol for adults,
+        based on an increased tendency to bleed. It applies to supplemental forms, not to
+        vitamin E naturally present in food.
+      pl: >-
+        Wartość referencyjną zweryfikowaną tutaj ustalił IOM (USA), nie EFSA: górny
+        tolerowany poziom spożycia 1000 mg/dobę dla dowolnej formy suplementowanego
+        alfa-tokoferolu u dorosłych, ze względu na zwiększoną tendencję do krwawień. Dotyczy
+        form suplementowych, nie witaminy E naturalnie obecnej w żywności.
+    sources: [{ id: iom-dri-vitamin-e-2000 }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: "Permitted vitamin-E source substances for food supplements (Annex II): D-alpha-tocopherol, DL-alpha-tocopherol, their acetate and acid-succinate esters, mixed tocopherols, tocotrienol tocopherol."
+      pl: "Dopuszczone substancje źródłowe witaminy E w suplementach diety (Aneks II): D-alfa-tokoferol, DL-alfa-tokoferol, ich estry (octan, sukcynian kwasowy), tokoferole mieszane, tokoferol tokotrienolowy."
+    source: dir-2002-46-annex2
+reference_values:
+  - type: UL
+    value: 1000
+    unit: "mg/day"
+    body: IOM
+    year: 2000
+    source: iom-dri-vitamin-e-2000
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "EU/SCF set a separate vitamin E UL used in some EU consumer materials; only the IOM (2000) figure was opened and verified this session, so only that one is recorded here."
+  - "DL-alpha-tocopherol's own CAS number could not be pinned down this session (catalogues disagreed on the final check digit, 10191-41-0 vs 10191-41-1), so no `ids.cas` is recorded for this entry to avoid publishing a wrong one."

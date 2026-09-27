@@ -1,0 +1,99 @@
+id: polysorbate-80
+type: additive
+e_number: E433
+ids: { cas: "9005-65-6", wikidata: "Q420358", chebi: "CHEBI:53426", pubchem: 5281955 }
+names:
+  en: [polysorbate 80, Tween 80]
+  pl: [polisorbat 80]
+  de: [Polysorbat 80, Tween 80]
+functions: [emulsifier]
+summary:
+  en: >-
+    A fully synthetic emulsifier made by reacting sorbitol and oleic acid with ethylene oxide
+    (polyoxyethylene sorbitan monooleate), used in ice cream, sauces, vitamin drinks and vaccines to
+    keep oil and water mixed. EFSA's 2015 re-evaluation set a group ADI of 25 mg/kg body weight per day
+    for the polysorbates (20, 40, 60, 65 and 80), based on a rodent no-effect dose of 2,500 mg/kg with a
+    100-fold safety margin, and found no concern for genotoxicity, carcinogenicity or developmental
+    toxicity — though estimated intake in toddlers can approach the group ADI. Separately, mouse studies
+    from one 2015 research group found that dietary polysorbate 80 altered gut bacteria and promoted
+    low-grade gut inflammation and metabolic changes in susceptible mice; this has not been confirmed in
+    humans at dietary doses or acted on by regulators.
+  pl: >-
+    W pełni syntetyczny emulgator otrzymywany w reakcji sorbitolu i kwasu oleinowego z tlenkiem etylenu
+    (polioksyetylenosorbitanu monooleinianu), stosowany w lodach, sosach, napojach witaminowych i
+    szczepionkach, aby utrzymać emulsję oleju z wodą. Ponowna ocena EFSA z 2015 r. ustaliła grupowe ADI
+    25 mg/kg masy ciała na dobę dla polisorbatów (20, 40, 60, 65 i 80), na podstawie dawki bez efektu u
+    gryzoni 2500 mg/kg z 100-krotnym współczynnikiem bezpieczeństwa, i nie stwierdziła zagrożenia
+    genotoksycznością, rakotwórczością ani wpływem na rozwój potomstwa — choć szacowane spożycie u
+    małych dzieci może zbliżać się do grupowego ADI. Niezależnie od tego badania na myszach jednej grupy
+    badawczej z 2015 r. wykazały, że polisorbat 80 w diecie zmieniał mikrobiotę jelitową i sprzyjał
+    niewielkiemu stanowi zapalnemu jelit oraz zmianom metabolicznym u podatnych myszy; nie potwierdzono
+    tego u ludzi przy dawkach pokarmowych, a regulatorzy nie podjęli w związku z tym żadnych działań.
+assertions:
+  - code: origin.chemical_synthesis
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Made by reacting sorbitol and oleic acid with ethylene oxide; a fully synthetic additive, not extracted or fermented from a single natural source."
+      pl: "Otrzymywany w reakcji sorbitolu i kwasu oleinowego z tlenkiem etylenu; w pełni syntetyczny dodatek, nieekstrahowany i niefermentowany z jednego naturalnego źródła."
+    sources: [{ id: efsa-polysorbates-2015 }]
+  - code: diet.vegan
+    certainty: maybe
+    kind: estimate
+    grade: B
+    note:
+      en: "The oleic acid feedstock is usually from vegetable oil but can also come from animal tallow; the label does not say which, and the finished additive contains no residual protein either way."
+      pl: "Surowcowy kwas oleinowy zwykle pochodzi z oleju roślinnego, ale może również pochodzić z łoju zwierzęcego; etykieta nie podaje, z którego, a gotowy dodatek nie zawiera resztkowego białka w żadnym przypadku."
+    sources: [{ id: efsa-polysorbates-2015 }]
+  - code: diet.vegetarian
+    certainty: maybe
+    kind: estimate
+    grade: B
+    note:
+      en: "Same reasoning as diet.vegan: non-vegetarian only if the oleic acid came from tallow, a slaughter by-product, which the label does not disclose either way."
+      pl: "To samo rozumowanie jak przy diet.vegan: niewegetariański tylko wtedy, gdy kwas oleinowy pochodził z łoju, produktu ubocznego uboju, czego etykieta nie ujawnia w żadnym przypadku."
+    sources: [{ id: efsa-polysorbates-2015 }]
+  - code: regulatory.eu_restricted
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Authorised only in specific food categories at maximum levels, not quantum satis (Reg 1333/2008 Annex II)."
+      pl: "Dopuszczony jedynie w określonych kategoriach żywności, przy maksymalnych poziomach, nie na zasadzie quantum satis (Reg 1333/2008 Aneks II)."
+    sources: [{ id: reg-1333-2008 }]
+  - code: health.inflammation_debate
+    certainty: maybe
+    kind: opinion
+    grade: D
+    note:
+      en: >-
+        Mice fed polysorbate 80 in one 2015 laboratory study showed altered gut microbiota, reduced
+        mucus-epithelial distance, low-grade inflammation and metabolic-syndrome features, and
+        susceptible mice developed colitis. This is a mouse-model finding; EFSA's own 2015 safety
+        re-evaluation, based on rodent toxicology studies at much higher doses, did not identify this as
+        a human dietary-dose safety concern.
+      pl: >-
+        Myszy karmione polisorbatem 80 w jednym badaniu laboratoryjnym z 2015 r. wykazywały zmienioną
+        mikrobiotę jelitową, zmniejszoną odległość mikrobiota–nabłonek, niewielki stan zapalny i cechy
+        zespołu metabolicznego, a u podatnych myszy rozwijało się zapalenie okrężnicy. To wynik z modelu
+        mysiego; własna ponowna ocena bezpieczeństwa EFSA z 2015 r., oparta na badaniach toksykologicznych
+        na gryzoniach przy znacznie wyższych dawkach, nie uznała tego za zagrożenie dla ludzi przy
+        dawkach pokarmowych.
+    sources: [{ id: chassaing-2015-emulsifiers-microbiota }, { id: efsa-polysorbates-2015 }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Authorised only in specific food categories (e.g. emulsified sauces, ice cream, food supplements, flavoured drinks) at maximum levels under Annex II to Reg 1333/2008.", pl: "Dopuszczony jedynie w określonych kategoriach żywności (np. sosy emulgowane, lody, suplementy diety, napoje aromatyzowane), przy maksymalnych poziomach, w Aneksie II do Reg 1333/2008." }
+    source: reg-1333-2008
+reference_values:
+  - type: group_ADI
+    value: 25
+    unit: "mg/kg bw/day"
+    body: EFSA
+    year: 2015
+    source: efsa-polysorbates-2015
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Group ADI of 25 mg/kg bw/day is shared with polysorbates 20, 40, 60 and 65 (E 432, E 434, E 435, E 436); check the combined exposure across all polysorbates in a product, not just E 433, before making an exposure claim."

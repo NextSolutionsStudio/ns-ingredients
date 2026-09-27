@@ -1,0 +1,52 @@
+id: rapeseed-oil
+type: fat
+names:
+  en: [rapeseed oil, canola oil]
+  pl: [olej rzepakowy]
+  de: [Rapsöl]
+summary:
+  en: >-
+    Oil pressed from rapeseed, low in saturated fat and (in the modern "canola"/00 cultivars) low in
+    erucic acid. One of the most widely used cooking and food-manufacturing oils in Poland and the wider
+    EU. Global rapeseed/canola breeding includes a very high share of GM herbicide-tolerant varieties, but
+    the crop actually crushed into EU food-grade oil is overwhelmingly non-GM: the EU does not authorise
+    commercial cultivation of GM rapeseed, and the GM Canadian canola that dominates world production is
+    mostly channelled to feed and biofuel rather than EU food use.
+  pl: >-
+    Olej wyciskany z rzepaku, niskotłuszczowy w sensie nasyconych kwasów tłuszczowych i (w nowoczesnych
+    odmianach "00"/"canola") niskoerukowy. Jeden z najczęściej używanych olejów kuchennych i przemysłowych
+    w Polsce i całej UE. Globalna hodowla rzepaku/canoli obejmuje bardzo wysoki udział odmian GMO
+    odpornych na herbicydy, ale surowiec faktycznie tłoczony na olej spożywczy w UE jest w większości
+    niemodyfikowany: UE nie zezwala na komercyjną uprawę GMO rzepaku, a kanadyjska canola GMO, dominująca
+    w produkcji światowej, trafia głównie na pasze i biopaliwa, a nie do żywności w UE.
+assertions:
+  - code: origin.vegetable_oil_derived
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "A pressed vegetable oil; EU labelling requires its specific plant origin to be named."
+      pl: "Wyciskany olej roślinny; przepisy UE o etykietowaniu wymagają podania jego konkretnego pochodzenia rośliny."
+    sources: [{ id: reg-1169-2011, locator: "Annex VII Part A, point 8" }]
+  - code: origin.gmo_derived
+    certainty: maybe
+    kind: estimate
+    grade: C
+    note:
+      en: >-
+        Rapeseed/canola is one of the crops most often genetically modified worldwide (about 95% of
+        Canadian/North American canola), but the EU does not commercially grow GM rapeseed and GM Canadian
+        canola imported into the EU is reported to go mainly to biofuel/feed rather than food-grade oil.
+        "Maybe" reflects a real global GM share alongside a low likelihood for oil actually sold as food
+        within the EU; an ingredient list alone cannot settle which applies to a given bottle.
+      pl: >-
+        Rzepak/canola jest jedną z roślin najczęściej modyfikowanych genetycznie na świecie (ok. 95%
+        kanadyjskiej/północnoamerykańskiej canoli), ale UE nie prowadzi komercyjnej uprawy GMO rzepaku, a
+        importowana do UE kanadyjska canola GMO trafia — jak podaje się — głównie na biopaliwa/pasze, a nie
+        na olej spożywczy. "Może" odzwierciedla realny globalny udział GMO przy niskim prawdopodobieństwie
+        dla oleju faktycznie sprzedawanego jako żywność w UE; samej listy składników nie da się jednoznacznie
+        przypisać do jednej z tych sytuacji.
+    sources: [{ id: cano-ela-canola-gmo }]
+review_status: draft
+provenance: ai-drafted
+review_notes: []

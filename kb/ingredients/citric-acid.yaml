@@ -1,0 +1,55 @@
+id: citric-acid
+type: additive
+e_number: E330
+ids: { cas: "77-92-9", wikidata: Q159683, chebi: "CHEBI:30769", pubchem: 311 }
+names:
+  en: [citric acid, anhydrous citric acid]
+  pl: [kwas cytrynowy, kwasek cytrynowy]
+  de: [Citronensäure, Zitronensäure]
+functions: [acid, acidity-regulator]
+summary:
+  en: >-
+    A fruit acid (the sour taste of citrus) used across drinks, sweets, jams, dairy and as a general
+    acidity regulator and chelating agent. Despite the name, almost none of the citric acid sold today is
+    squeezed from lemons: since around 1919, essentially the whole world supply has been made by fermenting
+    a sugar feedstock (molasses, glucose syrup or sucrose) with the mould Aspergillus niger, which is
+    cheaper and more consistent than fruit extraction. A small, uncontrolled case series has speculated
+    that residual mould antigens in this fermentation-derived citric acid could provoke inflammatory
+    symptoms in sensitised people; this is a hypothesis, not a regulatory finding, and is not the same as
+    an EU-declared allergen.
+  pl: >-
+    Kwas owocowy (kwaśny smak owoców cytrusowych) stosowany w napojach, słodyczach, dżemach, produktach
+    mlecznych oraz jako ogólny regulator kwasowości i czynnik chelatujący. Wbrew nazwie, praktycznie żaden
+    kwas cytrynowy sprzedawany obecnie nie jest wyciskany z cytryn: od około 1919 r. praktycznie cała
+    światowa produkcja powstaje przez fermentację surowca cukrowego (melasy, syropu glukozowego lub
+    sacharozy) z udziałem pleśni Aspergillus niger, co jest tańsze i bardziej powtarzalne niż ekstrakcja z
+    owoców. Niewielka, niekontrolowana seria przypadków wysunęła hipotezę, że resztkowe antygeny pleśni w
+    tak wytwarzanym kwasie cytrynowym mogą wywoływać objawy zapalne u osób uczulonych; to hipoteza, a nie
+    ustalenie regulatorowe, i nie jest to samo co zadeklarowany w UE alergen.
+assertions:
+  - code: origin.microbial_fermentation
+    certainty: yes
+    kind: estimate
+    grade: B
+    note:
+      en: "Aspergillus niger fermentation of a sugar feedstock (molasses, glucose syrup or sucrose) is described as the dominant industrial route, essentially since 1919; fruit extraction is not commercially significant. A label cannot show this either way, hence 'estimate' rather than a declared fact."
+      pl: "Fermentacja Aspergillus niger surowca cukrowego (melasy, syropu glukozowego lub sacharozy) jest opisywana jako dominująca metoda przemysłowa, praktycznie od 1919 r.; ekstrakcja z owoców nie ma istotnego znaczenia handlowego. Etykieta tego nie wskazuje, stąd „szacunek”, a nie zadeklarowany fakt."
+    sources: [{ id: col-latif-2025-citric-acid }]
+  - code: health.sensitivity_reported
+    certainty: maybe
+    kind: opinion
+    grade: D
+    population: [general]
+    note:
+      en: "A series of four uncontrolled case reports hypothesised that residual Aspergillus niger antigens in manufactured (fermentation-derived) citric acid could trigger inflammatory symptoms (respiratory, joint, gut) in sensitised individuals. Mechanism not established or endorsed by any regulator; weakest evidence tier."
+      pl: "Seria czterech niekontrolowanych opisów przypadków wysunęła hipotezę, że resztkowe antygeny Aspergillus niger w wytwarzanym fermentacyjnie kwasie cytrynowym mogą wywoływać objawy zapalne (oddechowe, stawowe, jelitowe) u osób uczulonych. Mechanizm nieustalony i niepotwierdzony przez żadnego regulatora; najsłabszy poziom dowodów."
+    sources: [{ id: col-sweis-2018-citric-acid }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Group I additive: quantum satis in most food categories.", pl: "Dodatek grupy I: quantum satis w większości kategorii żywności." }
+    source: reg-1333-2008
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "The specific EU/JECFA specification text for E330 manufacture (Reg 231/2012) was not successfully opened this session (page too large to reach the E330 entry); the fermentation-route claim is sourced to a 2025 peer-reviewed review instead, hence grade B/estimate rather than grade A/fact."

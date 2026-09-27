@@ -1,0 +1,104 @@
+id: gelatine
+type: protein
+ids: { cas: "9000-70-8", wikidata: "Q179254", chebi: "CHEBI:5291" }
+names:
+  en: [gelatine, gelatin]
+  pl: [żelatyna]
+  de: [Gelatine]
+summary:
+  en: >-
+    A protein obtained by partial hydrolysis of collagen from the bones, hides, skins, tendons and sinews
+    of slaughtered animals (EU Regulation 853/2004); used as a gelling agent in confectionery, gummies,
+    capsules and desserts. Depending on the animal source it may need to be declared as a fish allergen;
+    two narrow EU exemptions apply only when fish gelatine is used as a carrier for vitamin/carotenoid
+    preparations or as a fining agent in beer and wine, not for general gelling use.
+  pl: >-
+    Białko otrzymywane przez częściową hydrolizę kolagenu z kości, skór, ścięgien i tkanki łącznej
+    zwierząt poddanych ubojowi (Rozp. UE 853/2004); stosowane jako substancja żelująca w wyrobach
+    cukierniczych, żelkach, kapsułkach i deserach. W zależności od źródła zwierzęcego może wymagać
+    deklaracji jako alergen rybi; dwa wąskie wyłączenia UE dotyczą jedynie żelatyny rybnej stosowanej jako
+    nośnik preparatów witaminowych/karotenoidowych lub jako środek klarujący w piwie i winie, nie zaś
+    ogólnego zastosowania żelującego.
+  de: >-
+    Ein Protein, das durch teilweise Hydrolyse von Kollagen aus Knochen, Häuten, Sehnen und Bindegewebe
+    geschlachteter Tiere gewonnen wird (EU-Verordnung 853/2004); verwendet als Geliermittel in Süßwaren,
+    Fruchtgummi, Kapseln und Desserts.
+variants:
+  - id: bovine
+    names: { en: [bovine gelatine, beef gelatine], pl: [żelatyna wołowa], de: [Rindergelatine] }
+    process:
+      en: "From cattle hides/skins and bones; alongside porcine gelatine, the most widely used source globally."
+      pl: "Ze skór i kości bydła; obok żelatyny wieprzowej najbardziej powszechnie stosowane źródło na świecie."
+    tells: ["wolow", "bovine", "\\bbeef\\b", "rinder"]
+  - id: porcine
+    names: { en: [porcine gelatine, pork gelatine], pl: [żelatyna wieprzowa], de: [Schweinegelatine] }
+    process:
+      en: "From pig skin and bones; widely used, especially in confectionery gummies."
+      pl: "Ze skóry i kości świń; szeroko stosowana, zwłaszcza w żelkach cukierniczych."
+    tells: ["wieprzow", "porcine", "\\bpork\\b", "schwein"]
+  - id: fish
+    names: { en: [fish gelatine], pl: [żelatyna rybia], de: [Fischgelatine] }
+    process:
+      en: "From fish skin and bones; marketed as an alternative for people avoiding beef or pork on religious, dietary or ethical grounds."
+      pl: "Ze skóry i kości ryb; sprzedawana jako alternatywa dla osób unikających wołowiny lub wieprzowiny z powodów religijnych, dietetycznych lub etycznych."
+    tells: ["rybi", "rybia", "\\bfish\\b", "fisch"]
+assertions:
+  - code: origin.animal
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Obtained from the bones, hides, skins, tendons and sinews of slaughtered animals."
+      pl: "Otrzymywana z kości, skór, ścięgien i tkanki łącznej zwierząt poddanych ubojowi."
+    sources: [{ id: ad-reg-853-2004 }]
+  - code: diet.vegan
+    certainty: "no"
+    kind: fact
+    grade: A
+    note: { en: "Animal-derived regardless of species.", pl: "Pochodzenie zwierzęce niezależnie od gatunku." }
+    sources: [{ id: ad-reg-853-2004 }]
+  - code: diet.vegetarian
+    certainty: "no"
+    kind: fact
+    grade: A
+    note: { en: "A slaughter by-product (bones, hides, skins, tendons, sinews).", pl: "Produkt uboczny uboju (kości, skóry, ścięgna, tkanka łączna)." }
+    sources: [{ id: ad-reg-853-2004 }]
+  - code: allergen.fish
+    variant: fish
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: >-
+        Fish-derived; declared as a fish allergen when listed as an ingredient. EU Annex II item 4 carries
+        two narrow exemptions from allergen declaration — fish gelatine used as a carrier for vitamin or
+        carotenoid preparations, and fish gelatine or isinglass used as a fining agent in beer or wine —
+        and neither covers fish gelatine used as a general gelling agent, so those narrow uses can leave an
+        undeclared trace of fish in an otherwise fish-free-looking product.
+      pl: >-
+        Pochodzi z ryb; deklarowana jako alergen rybi, gdy figuruje jako składnik. Aneks II UE, punkt 4,
+        przewiduje dwa wąskie wyłączenia z obowiązku deklaracji — żelatynę rybną jako nośnik preparatów
+        witaminowych lub karotenoidowych oraz żelatynę rybną lub mączkę rybią (klej rybi) jako środek
+        klarujący w piwie lub winie — żadne z nich nie obejmuje żelatyny rybnej jako ogólnej substancji
+        żelującej, więc te wąskie zastosowania mogą pozostawić niezadeklarowany ślad ryby w produkcie
+        wyglądającym na bezrybny.
+    sources: [{ id: reg-1169-2011, locator: "Annex II item 4" }]
+  - code: origin.fish
+    variant: fish
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Obtained from fish skin and bones.", pl: "Otrzymywana ze skóry i kości ryb." }
+    sources: [{ id: ad-reg-853-2004 }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: "A food of animal origin, produced under the hygiene rules of Reg (EC) 853/2004. It is not a listed food additive in the EU (Reg 1333/2008 has no E 428; INS 428 is its Codex number only)."
+      pl: "Żywność pochodzenia zwierzęcego, wytwarzana zgodnie z przepisami higieny Rozporządzenia (WE) 853/2004. W UE nie jest wymienionym dodatkiem do żywności (w Rozporządzeniu 1333/2008 nie ma E 428; INS 428 to wyłącznie numer Codex)."
+    source: ad-reg-853-2004
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "No prior/prior_rationale set for the bovine/porcine/fish variants: did not open a citable, current market-share breakdown this session (industry figures exist but were not verified directly), so the silent-label case is left unestimated rather than guessed, matching the precedent set in collagen-peptides.yaml."
+  - "Corrected 2026-09-27: an earlier draft gave gelatine e_number E428 and 'EU authorised additive (Reg 1333/2008)'. Reg 1333/2008 Annex II Part B (EU text at legislation.gov.uk, 2020-12-31) lists E 427 then E 431 — no E 428 — so the E-number was removed and the EU status restated under Reg 853/2004. The generated Wikidata entry e428 (Codex INS 428) remains as an identity-only record."

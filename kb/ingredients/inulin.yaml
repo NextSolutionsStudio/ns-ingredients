@@ -1,0 +1,47 @@
+id: inulin
+type: carbohydrate
+names:
+  en: [inulin, chicory root fibre, chicory fiber]
+  pl: [inulina, błonnik z cykorii, błonnik cykoriowy]
+  de: [Inulin]
+functions: [bulking-agent]
+summary:
+  en: >-
+    A storage carbohydrate (a chain of fructose units) extracted from chicory root, used as a fibre
+    supplement, a mild sweetness/bulk replacer for sugar, or a prebiotic ingredient. Not digested in the
+    small intestine, so at higher intakes it can cause gas or bloating in some people — an unremarkable,
+    dose-dependent digestive effect of a fermentable fibre rather than a hazard.
+  pl: >-
+    Węglowodan zapasowy (łańcuch jednostek fruktozy) ekstrahowany z korzenia cykorii, stosowany jako
+    suplement błonnika, łagodny zamiennik słodkości/objętości cukru lub składnik prebiotyczny. Nie jest
+    trawiony w jelicie cienkim, więc przy większych dawkach u niektórych osób może powodować wzdęcia lub
+    gazy — zwykły, zależny od dawki efekt trawienny błonnika fermentowanego, a nie zagrożenie.
+assertions:
+  - code: origin.plant
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Extracted from chicory root (Cichorium intybus)."
+      pl: "Ekstrahowana z korzenia cykorii (Cichorium intybus)."
+    sources: [{ id: efsa-frutalose-chicory-2021 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "A plant-root extract; no animal material."
+      pl: "Ekstrakt z korzenia rośliny; brak surowców zwierzęcych."
+    sources: [{ id: efsa-frutalose-chicory-2021 }]
+  - code: diet.gluten_free
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Chicory is not a gluten-containing cereal; inulin itself carries no gluten."
+      pl: "Cykoria nie jest zbożem glutenowym; sama inulina nie zawiera glutenu."
+    sources: [{ id: efsa-frutalose-chicory-2021 }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Left out a laxative-type health assertion: this database's health.laxative_polyol code is specifically about polyols under Reg 1169/2011 Annex III, and inulin is not a polyol, so applying that code here would misuse the taxonomy; the general fermentable-fibre digestive-tolerance point is stated in the summary only, not as a graded assertion, for lack of a fitting code."

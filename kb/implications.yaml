@@ -1,0 +1,378 @@
+# Implication taxonomy — the standardised list of what an ingredient can imply.
+# Codes are stable API identifiers: add new codes, never rename or reuse one.
+# kind: the default nature of claims under this code (fact = regulatory/declared,
+# estimate = inferred, opinion = weak or contested evidence). Individual assertions may be weaker.
+# severity: how prominently a client should surface it (info < notice < caution < warning).
+implications:
+  # ---------------------------------------------------------------- allergens (Reg 1169/2011 Annex II)
+  - code: allergen.gluten
+    group: allergen
+    severity: warning
+    kind: fact
+    label: { en: "Cereals containing gluten", pl: "Zboża zawierające gluten", de: "Glutenhaltiges Getreide" }
+    definition: { en: "Wheat, rye, barley, oats, spelt, kamut or their hybridised strains, or products thereof (EU Annex II item 1)." }
+    evidence_required: "Declared ingredient or derivative listed in Reg 1169/2011 Annex II item 1."
+  - code: allergen.crustaceans
+    group: allergen
+    severity: warning
+    kind: fact
+    label: { en: "Crustaceans", pl: "Skorupiaki", de: "Krebstiere" }
+    definition: { en: "Crustaceans and products thereof (EU Annex II item 2)." }
+    evidence_required: "Declared ingredient."
+  - code: allergen.eggs
+    group: allergen
+    severity: warning
+    kind: fact
+    label: { en: "Eggs", pl: "Jaja", de: "Eier" }
+    definition: { en: "Eggs and products thereof (EU Annex II item 3)." }
+    evidence_required: "Declared ingredient."
+  - code: allergen.fish
+    group: allergen
+    severity: warning
+    kind: fact
+    label: { en: "Fish", pl: "Ryby", de: "Fisch" }
+    definition: { en: "Fish and products thereof (EU Annex II item 4)." }
+    evidence_required: "Declared ingredient."
+  - code: allergen.peanuts
+    group: allergen
+    severity: warning
+    kind: fact
+    label: { en: "Peanuts", pl: "Orzeszki ziemne (arachidowe)", de: "Erdnüsse" }
+    definition: { en: "Peanuts and products thereof (EU Annex II item 5)." }
+    evidence_required: "Declared ingredient."
+  - code: allergen.soybeans
+    group: allergen
+    severity: warning
+    kind: fact
+    label: { en: "Soybeans", pl: "Soja", de: "Soja" }
+    definition: { en: "Soybeans and products thereof (EU Annex II item 6), with the listed exemptions for refined oil, tocopherols, phytosterols and stanol esters." }
+    evidence_required: "Declared ingredient or a declared soy source of a derivative (e.g. 'lecithin (soy)')."
+  - code: allergen.milk
+    group: allergen
+    severity: warning
+    kind: fact
+    label: { en: "Milk (including lactose)", pl: "Mleko (łącznie z laktozą)", de: "Milch (einschließlich Laktose)" }
+    definition: { en: "Milk and products thereof including lactose (EU Annex II item 7), with the listed exemptions for whey used in distillates and lactitol." }
+    evidence_required: "Declared ingredient."
+  - code: allergen.nuts
+    group: allergen
+    severity: warning
+    kind: fact
+    label: { en: "Tree nuts", pl: "Orzechy", de: "Schalenfrüchte" }
+    definition: { en: "Almonds, hazelnuts, walnuts, cashews, pecans, Brazil nuts, pistachios, macadamia nuts and products thereof (EU Annex II item 8)." }
+    evidence_required: "Declared ingredient."
+  - code: allergen.celery
+    group: allergen
+    severity: warning
+    kind: fact
+    label: { en: "Celery", pl: "Seler", de: "Sellerie" }
+    definition: { en: "Celery and products thereof (EU Annex II item 9)." }
+    evidence_required: "Declared ingredient."
+  - code: allergen.mustard
+    group: allergen
+    severity: warning
+    kind: fact
+    label: { en: "Mustard", pl: "Gorczyca", de: "Senf" }
+    definition: { en: "Mustard and products thereof (EU Annex II item 10)." }
+    evidence_required: "Declared ingredient."
+  - code: allergen.sesame
+    group: allergen
+    severity: warning
+    kind: fact
+    label: { en: "Sesame", pl: "Nasiona sezamu", de: "Sesamsamen" }
+    definition: { en: "Sesame seeds and products thereof (EU Annex II item 11)." }
+    evidence_required: "Declared ingredient."
+  - code: allergen.sulphites
+    group: allergen
+    severity: warning
+    kind: fact
+    label: { en: "Sulphur dioxide and sulphites", pl: "Dwutlenek siarki i siarczyny", de: "Schwefeldioxid und Sulphite" }
+    definition: { en: "At concentrations above 10 mg/kg or 10 mg/litre as SO2 (EU Annex II item 12). An ingredient list alone cannot show the concentration." }
+    evidence_required: "Declared sulphite additive (E220–E228)."
+  - code: allergen.lupin
+    group: allergen
+    severity: warning
+    kind: fact
+    label: { en: "Lupin", pl: "Łubin", de: "Lupinen" }
+    definition: { en: "Lupin and products thereof (EU Annex II item 13)." }
+    evidence_required: "Declared ingredient."
+  - code: allergen.molluscs
+    group: allergen
+    severity: warning
+    kind: fact
+    label: { en: "Molluscs", pl: "Mięczaki", de: "Weichtiere" }
+    definition: { en: "Molluscs and products thereof (EU Annex II item 14)." }
+    evidence_required: "Declared ingredient."
+  # ---------------------------------------------------------------- diets (four-state: yes/no/maybe/unknown)
+  - code: diet.vegan
+    group: diet
+    severity: notice
+    kind: estimate
+    label: { en: "Vegan", pl: "Wegańskie", de: "Vegan" }
+    definition: { en: "Whether the ingredient can be part of a product free of animal-derived ingredients. 'maybe' when the source is not disclosed (e.g. E471, vitamin D3)." }
+    evidence_required: "Origin of the ingredient; 'no' needs an animal origin, 'maybe' needs a plausible animal route."
+  - code: diet.vegetarian
+    group: diet
+    severity: notice
+    kind: estimate
+    label: { en: "Vegetarian", pl: "Wegetariańskie", de: "Vegetarisch" }
+    definition: { en: "Whether the ingredient is compatible with a lacto-ovo-vegetarian diet (no meat, fish, insects or slaughter by-products)." }
+    evidence_required: "Origin of the ingredient."
+  - code: diet.gluten_free
+    group: diet
+    severity: notice
+    kind: estimate
+    label: { en: "Gluten-free", pl: "Bezglutenowe", de: "Glutenfrei" }
+    definition: { en: "Compatibility with a gluten-free diet. A 'gluten-free' claim itself requires ≤ 20 mg/kg (Reg (EU) 828/2014), which a label list cannot prove." }
+    evidence_required: "Absence of gluten sources; wheat-derived but highly refined ingredients are 'maybe'."
+  - code: diet.lactose_free
+    group: diet
+    severity: notice
+    kind: estimate
+    label: { en: "Lactose-free", pl: "Bez laktozy", de: "Laktosefrei" }
+    definition: { en: "Whether the ingredient is expected to contribute lactose." }
+    evidence_required: "Dairy origin and typical composition."
+  # ---------------------------------------------------------------- origin
+  - code: origin.plant
+    group: origin
+    severity: info
+    kind: fact
+    label: { en: "Plant origin", pl: "Pochodzenie roślinne", de: "Pflanzlichen Ursprungs" }
+    definition: { en: "Obtained from plants or algae." }
+    evidence_required: "Specification, regulation or declared source."
+  - code: origin.animal
+    group: origin
+    severity: info
+    kind: fact
+    label: { en: "Animal origin (meat, fat, bone, skin)", pl: "Pochodzenie zwierzęce", de: "Tierischen Ursprungs" }
+    definition: { en: "Obtained from slaughtered animals (meat, fat, bone, skin, hide)." }
+    evidence_required: "Specification, regulation or declared source."
+  - code: origin.dairy
+    group: origin
+    severity: info
+    kind: fact
+    label: { en: "Dairy origin", pl: "Pochodzenie mleczne", de: "Aus Milch" }
+    definition: { en: "Obtained from milk." }
+    evidence_required: "Specification or declared source."
+  - code: origin.egg
+    group: origin
+    severity: info
+    kind: fact
+    label: { en: "Egg origin", pl: "Pochodzenie z jaj", de: "Aus Ei" }
+    definition: { en: "Obtained from eggs." }
+    evidence_required: "Specification or declared source."
+  - code: origin.fish
+    group: origin
+    severity: info
+    kind: fact
+    label: { en: "Fish or seafood origin", pl: "Pochodzenie z ryb lub owoców morza", de: "Aus Fisch oder Meeresfrüchten" }
+    definition: { en: "Obtained from fish, crustaceans or molluscs." }
+    evidence_required: "Specification or declared source."
+  - code: origin.insect
+    group: origin
+    severity: notice
+    kind: fact
+    label: { en: "Insect origin", pl: "Pochodzenie z owadów", de: "Aus Insekten" }
+    definition: { en: "Obtained from insects (e.g. carmine from cochineal, shellac)." }
+    evidence_required: "Specification."
+  - code: origin.microbial_fermentation
+    group: origin
+    severity: info
+    kind: fact
+    label: { en: "Microbial fermentation", pl: "Fermentacja mikrobiologiczna", de: "Mikrobielle Fermentation" }
+    definition: { en: "Produced by bacteria, yeasts or moulds on a carbohydrate feedstock." }
+    evidence_required: "Specification or manufacturing description."
+  - code: origin.mineral
+    group: origin
+    severity: info
+    kind: fact
+    label: { en: "Mineral origin", pl: "Pochodzenie mineralne", de: "Mineralischen Ursprungs" }
+    definition: { en: "Mined or mineral-derived (salts, oxides, silicates)." }
+    evidence_required: "Specification."
+  - code: origin.vegetable_oil_derived
+    group: origin
+    severity: notice
+    kind: fact
+    label: { en: "Vegetable-oil derived", pl: "Pochodna olejów roślinnych", de: "Aus Pflanzenöl gewonnen" }
+    definition: { en: "Made from vegetable oils or fats (oil powders and creamers, MCT, palm fractions, mono- and diglycerides of plant origin). An ethical/processing axis — not the same as 'synthetic'." }
+    evidence_required: "Specification or declared source."
+  - code: origin.petrochemical_synthetic
+    group: origin
+    severity: notice
+    kind: fact
+    label: { en: "Petrochemical synthesis", pl: "Synteza petrochemiczna", de: "Petrochemische Synthese" }
+    definition: { en: "Synthesised from petrochemical feedstocks (e.g. maleic anhydride, guaiacol, propylene). Says nothing by itself about safety: the molecule may be identical to the natural one." }
+    evidence_required: "Manufacturing description in a specification, regulatory opinion or monograph."
+  - code: origin.chemical_synthesis
+    group: origin
+    severity: info
+    kind: fact
+    label: { en: "Chemical synthesis", pl: "Synteza chemiczna", de: "Chemische Synthese" }
+    definition: { en: "Made by chemical synthesis from non-petrochemical or unspecified starting materials (e.g. creatine from sarcosine and cyanamide, sucralose from sucrose)." }
+    evidence_required: "Manufacturing description."
+  - code: origin.gmo_derived
+    group: origin
+    severity: notice
+    kind: estimate
+    label: { en: "May derive from GM crops", pl: "Może pochodzić z upraw GMO", de: "Kann aus GV-Pflanzen stammen" }
+    definition: { en: "Commonly produced from crops that are frequently genetically modified (soy, maize, rapeseed, sugar beet). EU GM labelling applies above 0.9 % adventitious presence." }
+    evidence_required: "Typical source crop."
+  # ---------------------------------------------------------------- processing
+  - code: processing.refined
+    group: processing
+    severity: info
+    kind: fact
+    label: { en: "Refined", pl: "Rafinowany", de: "Raffiniert" }
+    definition: { en: "Obtained by refining (bleaching, deodorising, fractionating) a raw material." }
+    evidence_required: "Manufacturing description."
+  - code: processing.hydrogenated
+    group: processing
+    severity: caution
+    kind: fact
+    label: { en: "Hydrogenated fat", pl: "Tłuszcz utwardzony", de: "Gehärtetes Fett" }
+    definition: { en: "Fully or partially hydrogenated. Partial hydrogenation creates industrial trans fat, capped in the EU at 2 g per 100 g of fat (Reg (EU) 2019/649)." }
+    evidence_required: "Declared hydrogenation ('utwardzony', 'uwodorniony', 'hydrogenated', 'gehärtet')."
+  - code: processing.interesterified
+    group: processing
+    severity: notice
+    kind: fact
+    label: { en: "Interesterified fat", pl: "Tłuszcz estryfikowany", de: "Umgeestertes Fett" }
+    definition: { en: "Fat whose fatty acids were rearranged to change melting behaviour; avoids trans fat, long-term metabolic effects less studied." }
+    evidence_required: "Declared process."
+  - code: processing.ultra_processed_marker
+    group: processing
+    severity: notice
+    kind: estimate
+    label: { en: "Ultra-processing marker", pl: "Wskaźnik wysokiego przetworzenia", de: "Marker für hochverarbeitete Lebensmittel" }
+    definition: { en: "An ingredient rarely used in home cooking that the NOVA classification treats as a marker of group 4 (e.g. protein isolates, maltodextrin, flavourings, emulsifiers, non-sugar sweeteners). NOVA is itself a contested methodology." }
+    evidence_required: "Ingredient identity."
+  # ---------------------------------------------------------------- health (always with population + grade)
+  - code: health.southampton_colour
+    group: health
+    severity: caution
+    kind: fact
+    label: { en: "Mandatory warning: activity and attention in children", pl: "Obowiązkowe ostrzeżenie: aktywność i uwaga u dzieci", de: "Pflichthinweis: Aktivität und Aufmerksamkeit bei Kindern" }
+    definition: { en: "One of the six colours (E102, E104, E110, E122, E124, E129) whose use requires the label statement 'may have an adverse effect on activity and attention in children' (Reg 1333/2008 Annex V)." }
+    evidence_required: "Reg 1333/2008 Annex V."
+  - code: health.laxative_polyol
+    group: health
+    severity: notice
+    kind: fact
+    label: { en: "Polyol — laxative at high intake", pl: "Poliol — działanie przeczyszczające przy dużym spożyciu", de: "Polyol — abführend bei hohem Verzehr" }
+    definition: { en: "Polyols added at more than 10 % require the statement 'excessive consumption may produce laxative effects' (Reg 1169/2011 Annex III)." }
+    evidence_required: "Reg 1169/2011 Annex III, or a regulatory opinion for the polyol."
+  - code: health.phenylalanine_source
+    group: health
+    severity: caution
+    kind: fact
+    label: { en: "Source of phenylalanine (PKU)", pl: "Źródło fenyloalaniny (fenyloketonuria)", de: "Phenylalaninquelle (PKU)" }
+    definition: { en: "Contains or releases phenylalanine; the label must say so (Reg 1169/2011 Annex III). Relevant to people with phenylketonuria." }
+    evidence_required: "Reg 1169/2011 Annex III."
+  - code: health.caffeine
+    group: health
+    severity: notice
+    kind: fact
+    label: { en: "Caffeine", pl: "Kofeina", de: "Koffein" }
+    definition: { en: "Contains caffeine. EFSA considers up to 400 mg/day safe for healthy adults and up to 200 mg/day in pregnancy; drinks above 150 mg/l must carry a warning (Reg 1169/2011 Annex III)." }
+    evidence_required: "Ingredient identity; intake thresholds from EFSA."
+  - code: health.iarc_group_2b
+    group: health
+    severity: caution
+    kind: fact
+    label: { en: "IARC Group 2B (possibly carcinogenic — hazard, not risk)", pl: "IARC grupa 2B (możliwie rakotwórczy — zagrożenie, nie ryzyko)", de: "IARC-Gruppe 2B (möglicherweise krebserregend — Gefahr, nicht Risiko)" }
+    definition: { en: "Classified by IARC as possibly carcinogenic to humans. IARC grades the strength of evidence for a hazard, not the risk at dietary doses; read with the regulator's ADI." }
+    evidence_required: "IARC Monographs list of classifications."
+  - code: health.no_safe_level_established
+    group: health
+    severity: caution
+    kind: fact
+    label: { en: "Regulator could not establish a safe intake", pl: "Regulator nie ustalił bezpiecznego poziomu spożycia", de: "Keine sichere Aufnahmemenge festgelegt" }
+    definition: { en: "A regulator could not set an ADI because a concern could not be ruled out (e.g. EFSA on titanium dioxide, 2021). 'No evidence of harm' is not the same as 'evidence of no harm'." }
+    evidence_required: "A regulatory opinion stating it."
+  - code: health.nitrosamine_precursor
+    group: health
+    severity: caution
+    kind: fact
+    label: { en: "Nitrosamine precursor", pl: "Prekursor nitrozoamin", de: "Nitrosaminvorstufe" }
+    definition: { en: "Nitrites/nitrates can form nitrosamines in meat products; EFSA (2017, 2023) weighed this exposure." }
+    evidence_required: "EFSA opinion."
+  - code: health.trans_fat_source
+    group: health
+    severity: caution
+    kind: fact
+    label: { en: "Possible industrial trans fat", pl: "Możliwe przemysłowe tłuszcze trans", de: "Mögliche industrielle Transfette" }
+    definition: { en: "Partially hydrogenated fats are the main source of industrial trans fat; EU limit 2 g per 100 g of fat in food for consumers (Reg (EU) 2019/649)." }
+    evidence_required: "Declared partial hydrogenation."
+  - code: health.inflammation_debate
+    group: health
+    severity: info
+    kind: opinion
+    label: { en: "Debated gut/inflammation effects", pl: "Dyskutowany wpływ na jelita/stan zapalny", de: "Diskutierte Darm-/Entzündungswirkungen" }
+    definition: { en: "Mechanistic or animal studies suggest gut-barrier or inflammation effects that regulators have not confirmed at dietary doses." }
+    evidence_required: "At least one cited study; always graded C or D."
+  - code: health.sensitivity_reported
+    group: health
+    severity: info
+    kind: opinion
+    label: { en: "Sensitivity reported by some people", pl: "Nietolerancja zgłaszana przez część osób", de: "Von manchen Menschen berichtete Unverträglichkeit" }
+    definition: { en: "Non-allergic intolerance reported in case reports or small studies (e.g. benzoates, MSG). Never merged with allergens." }
+    evidence_required: "Cited case reports or studies; graded C or D."
+  - code: health.high_dose_supplement_nutrient
+    group: health
+    severity: notice
+    kind: fact
+    label: { en: "Nutrient with a tolerable upper intake level", pl: "Składnik z górnym tolerowanym poziomem spożycia", de: "Nährstoff mit tolerierbarer Höchstmenge" }
+    definition: { en: "A vitamin or mineral for which EFSA set a tolerable upper intake level (UL); relevant when several supplements are stacked." }
+    evidence_required: "EFSA UL."
+  # ---------------------------------------------------------------- regulatory
+  - code: regulatory.eu_banned
+    group: regulatory
+    severity: warning
+    kind: fact
+    label: { en: "No longer authorised in the EU", pl: "Niedopuszczony w UE", de: "In der EU nicht mehr zugelassen" }
+    definition: { en: "Removed from the EU list of authorised food additives or never authorised; may still be legal elsewhere." }
+    evidence_required: "The removing regulation."
+  - code: regulatory.eu_restricted
+    group: regulatory
+    severity: notice
+    kind: fact
+    label: { en: "Restricted use in the EU", pl: "Ograniczone stosowanie w UE", de: "Eingeschränkte Verwendung in der EU" }
+    definition: { en: "Authorised only in specific food categories or at maximum levels." }
+    evidence_required: "Reg 1333/2008 Annex II conditions."
+  - code: regulatory.novel_food
+    group: regulatory
+    severity: info
+    kind: fact
+    label: { en: "EU novel food", pl: "Nowa żywność (UE)", de: "Neuartiges Lebensmittel (EU)" }
+    definition: { en: "Authorised under the Novel Food Regulation (EU) 2015/2283 with specific conditions of use." }
+    evidence_required: "Union list entry."
+  - code: regulatory.eu_warning_label
+    group: regulatory
+    severity: notice
+    kind: fact
+    label: { en: "Mandatory label statement", pl: "Obowiązkowa informacja na etykiecie", de: "Pflichtangabe auf dem Etikett" }
+    definition: { en: "Its presence triggers a mandatory statement on the label (Reg 1169/2011 Annex III or Reg 1333/2008 Annex V)." }
+    evidence_required: "The regulation."
+  # ---------------------------------------------------------------- ethics / environment
+  - code: ethics.palm_oil
+    group: ethics
+    severity: notice
+    kind: fact
+    label: { en: "Palm oil or palm-derived", pl: "Olej palmowy lub pochodne", de: "Palmöl oder Palmderivate" }
+    definition: { en: "Palm oil, palm kernel oil, or a fraction/derivative; deforestation concern unless certified sustainable (RSPO)." }
+    evidence_required: "Ingredient identity or declared palm source."
+  # ---------------------------------------------------------------- sport
+  - code: sport.stimulant
+    group: sport
+    severity: notice
+    kind: fact
+    label: { en: "Stimulant", pl: "Stymulant", de: "Stimulans" }
+    definition: { en: "A stimulant; check dose and, for tested athletes, the current WADA Prohibited List and monitoring programme." }
+    evidence_required: "Ingredient identity."
+  - code: sport.batch_quality_dependent
+    group: sport
+    severity: info
+    kind: estimate
+    label: { en: "Quality depends on the manufacturer", pl: "Jakość zależy od producenta", de: "Qualität herstellerabhängig" }
+    definition: { en: "Purity varies by manufacturer and batch (synthesis by-products, contamination); third-party testing matters more than the ingredient name." }
+    evidence_required: "A cited study or specification showing batch variability."

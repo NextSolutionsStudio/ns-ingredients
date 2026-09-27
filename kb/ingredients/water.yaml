@@ -1,0 +1,34 @@
+id: water
+type: ingredient
+names:
+  en: [water]
+  pl: [woda]
+  de: [Wasser]
+summary:
+  en: >-
+    Water added as an ingredient (as opposed to water already present in another ingredient). No
+    implication code in this database's controlled vocabulary fits a bare declaration of water: it is not
+    an allergen, a diet concern, a particular origin route, a processing marker or an ethics/health flag
+    on its own; it carries only the definitional diet statuses.
+  pl: >-
+    Woda dodana jako składnik (w odróżnieniu od wody obecnej już w innym składniku). Żaden kod implikacji
+    z kontrolowanego słownika tej bazy nie odpowiada samej deklaracji wody: to nie alergen, nie kwestia
+    diety, nie szczególna droga pochodzenia, nie znacznik przetworzenia i nie flaga etyczna/zdrowotna sama
+    w sobie; wpis zawiera tylko definicyjne statusy dietetyczne.
+assertions:
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Water contains no animal material.", pl: "Woda nie zawiera materiału zwierzęcego." }
+    sources: [{ id: reg-1169-2011, locator: "Annex VII Part A item 1 (added water as an ingredient)" }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Water contains no animal material.", pl: "Woda nie zawiera materiału zwierzęcego." }
+    sources: [{ id: reg-1169-2011, locator: "Annex VII Part A item 1 (added water as an ingredient)" }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Diet statuses added 2026-09-27 as definitional claims (water is not of animal origin) so products listing water are not marked 'unknown' for vegan/vegetarian; the cited regulation only establishes added water as a declared ingredient."

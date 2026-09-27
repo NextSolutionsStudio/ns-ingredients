@@ -1,0 +1,64 @@
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    # Private repo → a per-repo self-hosted runner.
+    # BEFORE the repo goes public, switch to `ubuntu-latest`: a self-hosted runner on a public repo
+    # executes code from fork pull requests on the VM.
+    runs-on: [self-hosted, linux, x64]
+    timeout-minutes: 20
+
+    services:
+      postgres:
+        # Test on the production major: behaviour has diverged between majors before.
+        image: postgres:17-alpine
+        env:
+          POSTGRES_USER: nsi
+          POSTGRES_PASSWORD: nsi_ci
+          POSTGRES_DB: nsi
+        # A host port no other repo's CI uses: runners share the VM.
+        ports:
+          - 55433:5432
+        options: >-
+          --health-cmd "pg_isready -U nsi -d nsi"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.9.x
+
+      - name: Format, lint, type-check
+        run: |
+          deno fmt --check
+          deno lint
+          deno task check
+
+      - name: Knowledge base validation
+        run: deno task kb:validate
+
+      - name: Tests (PGlite, in-process)
+        run: deno task test
+
+      - name: Tests against PostgreSQL 17
+        env:
+          # 127.0.0.1, not localhost: postgres.js may resolve localhost to ::1 while the service
+          # port is published on IPv4 only.
+          TEST_DATABASE_URL: postgresql://nsi:nsi_ci@127.0.0.1:55433/nsi
+        run: deno test --allow-read --allow-env --allow-net tests/integration/
+
+      - name: Golden corpus report
+        run: deno task test:golden

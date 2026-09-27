@@ -1,0 +1,87 @@
+id: oats
+type: ingredient
+names:
+  en: [oats, oat flakes, rolled oats]
+  pl: [owies, płatki owsiane]
+  de: [Hafer]
+summary:
+  en: >-
+    The cereal Avena sativa; named alongside wheat, rye and barley in EU Annex II item 1.
+    Oat avenin is biochemically milder than true gluten and a minority of oat protein, but
+    it still triggers a reaction in roughly 8% of coeliac patients, and ordinary oats are
+    routinely cross-contaminated with wheat/rye/barley during cultivation and handling -
+    specially produced, uncontaminated oats can be labelled gluten-free.
+  pl: >-
+    Zboże Avena sativa; wymienione razem z pszenicą, żytem i jęczmieniem w Aneksie II UE,
+    punkt 1. Awenina owsiana jest biochemicznie łagodniejsza niż prawdziwy gluten i stanowi
+    mniejszość białka owsa, ale u około 8% pacjentów z celiakią wciąż wywołuje reakcję, a
+    zwykły owies jest regularnie zanieczyszczany pszenicą/żytem/jęczmieniem podczas uprawy i
+    obróbki - specjalnie produkowany, nieskontaminowany owies może być oznaczony jako
+    bezglutenowy.
+variants:
+  - id: gluten-free-oats
+    names:
+      en: [gluten-free oats, gluten-free oat flakes]
+      pl: [owies bezglutenowy, płatki owsiane bezglutenowe]
+      de: [glutenfreier Hafer, glutenfreie Haferflocken]
+    process:
+      en: >-
+        Oats grown, harvested and milled apart from wheat, rye and barley so that gluten stays at or below
+        20 mg/kg; only such oats may carry a gluten-free claim.
+      pl: >-
+        Owies uprawiany, zbierany i mielony z dala od pszenicy, żyta i jęczmienia, tak by gluten nie
+        przekraczał 20 mg/kg; tylko taki owies może nosić oświadczenie „bezglutenowy”.
+    tells: ['bezglutenow', 'gluten ?free', 'glutenfrei']
+assertions:
+  - code: allergen.gluten
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Named in EU Annex II item 1.", pl: "Wymienione w Aneksie II UE, punkt 1." }
+    sources: [{ id: reg-1169-2011, locator: "Annex II item 1" }]
+  - code: origin.plant
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A cereal grain.", pl: "Zboże." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A plant food.", pl: "Produkt roślinny." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A plant food.", pl: "Produkt roślinny." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.gluten_free
+    certainty: "no"
+    kind: estimate
+    grade: B
+    note:
+      en: >-
+        Ordinary oats are usually cross-contaminated with wheat/rye/barley, so they are not
+        gluten-free. Specially produced, uncontaminated oats (<=20 mg/kg gluten) can be
+        labelled gluten-free, though roughly 8% of coeliac patients still react to oat
+        avenin itself even without contamination.
+      pl: >-
+        Zwykły owies jest zwykle zanieczyszczony pszenicą/żytem/jęczmieniem, więc nie jest
+        bezglutenowy. Specjalnie produkowany, nieskontaminowany owies (<=20 mg/kg glutenu)
+        może być oznaczony jako bezglutenowy, choć u około 8% pacjentów z celiakią reakcję
+        wywołuje sama awenina owsiana, nawet bez zanieczyszczenia.
+    sources: [{ id: faulkner-hogg-oats-2026 }]
+  - code: diet.gluten_free
+    variant: gluten-free-oats
+    certainty: maybe
+    kind: estimate
+    grade: C
+    population: [coeliac]
+    note:
+      en: "Uncontaminated oats meet the gluten-free limit, but roughly 8% of coeliac patients still react to oat avenin itself."
+      pl: "Nieskontaminowany owies spełnia limit dla żywności bezglutenowej, ale około 8% pacjentów z celiakią reaguje na samą aweninę owsianą."
+    sources: [{ id: faulkner-hogg-oats-2026 }]
+review_status: draft
+provenance: ai-drafted

@@ -1,0 +1,36 @@
+id: eggs
+type: ingredient
+names:
+  en: [eggs, egg]
+  pl: [jaja, jaj, jajo]
+  de: [Eier, Ei, Eiern]
+summary:
+  en: "Hen's (or other bird's) eggs and their products; one of the EU's fourteen regulated allergens, with no listed exemptions."
+  pl: "Jaja kurze (lub innego ptaka) i ich produkty; jeden z czternastu regulowanych alergenów UE, bez wyłączeń."
+assertions:
+  - code: allergen.eggs
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Declared ingredient; EU Annex II item 3.", pl: "Zadeklarowany składnik; Aneks II UE, punkt 3." }
+    sources: [{ id: reg-1169-2011, locator: "Annex II item 3" }]
+  - code: origin.egg
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Eggs are by definition of egg origin.", pl: "Jaja są z definicji pochodzenia jajecznego." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegan
+    certainty: "no"
+    kind: fact
+    grade: A
+    note: { en: "An animal product.", pl: "Produkt zwierzęcy." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Compatible with a lacto-ovo-vegetarian diet.", pl: "Zgodne z dietą laktoowowegetariańską." }
+    sources: [{ id: reg-1169-2011 }]
+review_status: draft
+provenance: ai-drafted

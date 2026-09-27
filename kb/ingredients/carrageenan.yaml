@@ -1,0 +1,78 @@
+id: carrageenan
+type: additive
+e_number: E407
+ids: { cas: "9000-07-1", wikidata: "Q421991", chebi: "CHEBI:3435" }
+names:
+  en: [carrageenan, carrageen]
+  pl: [karagen, karagenina]
+  de: [Carrageen, Carragaheen, Karrageen]
+functions: [thickener, gelling-agent, stabiliser]
+summary:
+  en: >-
+    A gelling and thickening polysaccharide extracted by hot alkaline treatment from red seaweeds
+    (genera including Chondrus, Gigartina, Eucheuma, Furcellaria and Hypnea), used in dairy desserts,
+    plant-based milks, deli meats and toothpaste. Food-grade carrageenan (native weight-average
+    molecular weight roughly 200–800 kDa) is a distinct substance from poligeenan, a much smaller
+    (10–20 kDa) polymer made by subjecting carrageenan to strong acid hydrolysis; poligeenan is not
+    authorised as an EU food additive and is not present in food-grade E 407 by specification. EFSA's
+    2018 re-evaluation kept the existing group ADI of 75 mg/kg body weight per day shared with processed
+    Eucheuma seaweed (E 407a), but downgraded its status to temporary pending a better analytical method
+    to quantify the low-molecular-weight fraction within five years.
+  pl: >-
+    Żelujący i zagęszczający polisacharyd otrzymywany przez gorącą ekstrakcję alkaliczną z czerwonych
+    wodorostów (rodzaje Chondrus, Gigartina, Eucheuma, Furcellaria, Hypnea), stosowany w deserach
+    mlecznych, napojach roślinnych, wędlinach i paście do zębów. Karagen spożywczy (natywna masa
+    molowa ok. 200–800 kDa) to inna substancja niż poligeenan — znacznie mniejszy polimer (10–20 kDa)
+    powstający przez silną hydrolizę kwasową karagenu; poligeenan nie jest dopuszczony jako dodatek do
+    żywności w UE i nie występuje w karagenie spożywczym zgodnym ze specyfikacją. Ponowna ocena EFSA z
+    2018 r. zachowała dotychczasowe grupowe ADI 75 mg/kg masy ciała na dobę, wspólne z przetworzonymi
+    wodorostami Eucheuma (E 407a), ale zmieniła jego status na tymczasowy do czasu opracowania lepszej
+    metody analitycznej dla frakcji niskomolekularnej w ciągu pięciu lat.
+assertions:
+  - code: origin.plant
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Extracted from red seaweed (algae), not a land plant, but the KB's plant-origin code covers algae by definition."
+      pl: "Ekstrahowany z czerwonych wodorostów (alg), nie z rośliny lądowej, ale kod pochodzenia roślinnego w tej bazie z definicji obejmuje algi."
+    sources: [{ id: efsa-carrageenan-2018 }]
+  - code: health.inflammation_debate
+    certainty: maybe
+    kind: opinion
+    grade: D
+    note:
+      en: >-
+        One widely cited review of animal experiments (guinea pig, rat, rabbit, mouse, hamster, rhesus
+        monkey) associates both poligeenan and undegraded, food-grade carrageenan with intestinal
+        inflammation and, in some models, tumours, and argues dietary use should be reconsidered.
+        EFSA's own 2018 regulatory re-evaluation reached a narrower conclusion: it kept the group ADI
+        (now temporary) rather than restricting use, and asked for better analytical methods rather than
+        citing a confirmed inflammatory mechanism in humans at dietary doses.
+      pl: >-
+        Często cytowany przegląd badań na zwierzętach (świnka morska, szczur, królik, mysz, chomik,
+        makak rezus) łączy zarówno poligeenan, jak i niezdegradowany karagen spożywczy z zapaleniem
+        jelit, a w niektórych modelach z nowotworami, i argumentuje za ponownym rozważeniem jego
+        stosowania w diecie. Własna, regulacyjna ponowna ocena EFSA z 2018 r. doszła do węższego
+        wniosku: zachowała grupowe ADI (obecnie tymczasowe), zamiast ograniczać stosowanie, i zażądała
+        lepszych metod analitycznych, a nie potwierdziła mechanizmu zapalnego u ludzi przy dawkach
+        pokarmowych.
+    sources: [{ id: tobacman-2001-carrageenan }, { id: efsa-carrageenan-2018 }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Authorised with a temporary group ADI shared with E 407a; specific category limits set in Annex II to Reg 1333/2008.", pl: "Dopuszczony z tymczasowym grupowym ADI, wspólnym z E 407a; szczegółowe limity kategorii żywności w Aneksie II do Reg 1333/2008." }
+    source: reg-1333-2008
+reference_values:
+  - type: group_ADI
+    value: 75
+    unit: "mg/kg bw/day"
+    body: EFSA
+    year: 2018
+    source: efsa-carrageenan-2018
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Poligeenan (acid-degraded carrageenan, 10–20 kDa) is NOT an authorised EU food additive and is a different substance from food-grade E 407/E 407a; do not conflate the two in any client-facing text."
+  - "EFSA's temporary group ADI (75 mg/kg bw/day) was set in 2018 pending a validated method to quantify the low-molecular-weight fraction within 5 years (i.e. due around 2023); check for a follow-up opinion before treating 75 mg/kg bw/day as final."
+  - "Did not find a source this session for any EU-specific restriction on carrageenan in infant formula; left out rather than asserted from memory."

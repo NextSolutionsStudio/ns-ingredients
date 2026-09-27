@@ -1,0 +1,62 @@
+id: cocoa-powder
+type: ingredient
+names:
+  en: [cocoa powder, cocoa]
+  pl: [kakao w proszku, kakao]
+  de: [Kakaopulver]
+summary:
+  en: >-
+    Ground, roasted cocoa beans with most of the cocoa butter removed. EU law (the cocoa and chocolate
+    directive) defines plain "cocoa powder" as at least 20% cocoa butter by dry-matter weight and at most
+    9% water; below 20% cocoa butter it must be called "fat-reduced". Used for flavour, colour and a mild
+    dose of caffeine/theobromine in drink mixes, baked goods and protein powders.
+  pl: >-
+    Zmielone, palone ziarna kakaowe z usuniętą większością masła kakaowego. Prawo UE (dyrektywa o kakao i
+    czekoladzie) definiuje samo "kakao w proszku" jako produkt z co najmniej 20% masła kakaowego w suchej
+    masie i co najwyżej 9% wody; poniżej 20% masła kakaowego musi być nazwane "o obniżonej zawartości
+    tłuszczu". Stosowane dla smaku, koloru i niewielkiej dawki kofeiny/teobrominy w mieszankach napojów,
+    wyrobach piekarniczych i odżywkach białkowych.
+variants:
+  - id: fat-reduced
+    names:
+      en: [fat-reduced cocoa powder, low-fat cocoa powder]
+      pl: [kakao w proszku o obniżonej zawartości tłuszczu, kakao o zmniejszonej zawartości tłuszczu]
+    process:
+      en: "Cocoa powder pressed further, or blended, to bring cocoa butter below the 20% (dry-matter) threshold that defines plain cocoa powder."
+      pl: "Kakao w proszku dodatkowo wytłoczone lub mieszane, tak by zawartość masła kakaowego spadła poniżej progu 20% (w suchej masie) definiującego zwykłe kakao w proszku."
+    tells: ['fat.?reduced cocoa', 'low.?fat cocoa', 'kakao.*obniz.*tluszcz', 'kakao.*zmniejszon.*tluszcz']
+assertions:
+  - code: origin.plant
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Made only from cocoa beans (Theobroma cacao); no dairy or other animal ingredient is part of the EU definition."
+      pl: "Produkowane wyłącznie z ziaren kakaowca (Theobroma cacao); definicja UE nie obejmuje mleka ani innego składnika zwierzęcego."
+    sources: [{ id: dir-2000-36 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Plain cocoa powder as defined in EU law contains only cocoa-bean material; no animal ingredient."
+      pl: "Kakao w proszku w rozumieniu prawa UE zawiera wyłącznie materiał z ziaren kakaowca; brak składnika zwierzęcego."
+    sources: [{ id: dir-2000-36 }]
+  - code: health.caffeine
+    certainty: yes
+    kind: fact
+    grade: B
+    note:
+      en: >-
+        Cocoa naturally contains caffeine alongside a larger amount of the related methylxanthine
+        theobromine; the dose per serving of a cocoa-flavoured product is much smaller than a cup of
+        coffee, but it still adds to a person's total caffeine intake for the day.
+      pl: >-
+        Kakao naturalnie zawiera kofeinę obok większej ilości pokrewnej metyloksantyny — teobrominy; dawka
+        na porcję produktu o smaku kakaowym jest znacznie mniejsza niż w filiżance kawy, ale wciąż dolicza
+        się do dziennego spożycia kofeiny.
+    sources: [{ id: efsa-caffeine-2015 }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Left out an exact caffeine/theobromine mg figure for cocoa powder: efsa-caffeine-2015 establishes cocoa as a caffeine-containing food in general terms but this session did not find a specific per-100g figure in a source opened directly; add one from a food-composition database (e.g. USDA FoodData Central) in a follow-up pass."

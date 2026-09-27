@@ -1,0 +1,76 @@
+id: xanthan-gum
+type: additive
+e_number: E415
+ids: { cas: "11138-66-2", wikidata: "Q410768" }
+names:
+  en: [xanthan gum]
+  pl: [guma ksantanowa]
+  de: [Xanthan, Xanthangummi]
+functions: [thickener, stabiliser, emulsifier]
+summary:
+  en: >-
+    A thickening and stabilising polysaccharide produced by fermenting a carbohydrate with the bacterium
+    Xanthomonas campestris, then precipitating the gum with ethanol or isopropanol and drying and
+    milling it. The EU specification (Reg 231/2012) defines the process this way but does not name which
+    carbohydrate is fermented, so the exact feedstock (commonly a corn-, wheat- or cane-derived sugar)
+    is not disclosed on labels. Used in sauces, dressings, gluten-free baking and drinks to thicken and
+    stabilise without heating. EFSA's 2017 re-evaluation found no need for a numerical ADI and no safety
+    concern at reported use levels; a 2023 follow-up reached the same conclusion for infant formula for
+    special medical purposes.
+  pl: >-
+    Zagęszczający i stabilizujący polisacharyd wytwarzany przez fermentację węglowodanu bakterią
+    Xanthomonas campestris, a następnie wytrącanie gumy etanolem lub izopropanolem, suszenie i mielenie.
+    Specyfikacja UE (Reg 231/2012) opisuje ten proces, ale nie wskazuje, jaki węglowodan jest
+    fermentowany, więc dokładny surowiec (najczęściej cukier z kukurydzy, pszenicy lub trzciny) nie jest
+    podawany na etykiecie. Stosowana w sosach, dressingach, pieczywie bezglutenowym i napojach do
+    zagęszczania i stabilizacji na zimno. Ponowna ocena EFSA z 2017 r. nie wykazała potrzeby ustalenia
+    liczbowego ADI i nie stwierdziła zagrożenia przy zgłoszonych poziomach stosowania; uzupełnienie z
+    2023 r. doszło do tego samego wniosku dla mleka dla niemowląt do specjalnych celów medycznych.
+assertions:
+  - code: origin.microbial_fermentation
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Produced by pure-culture fermentation of a carbohydrate with Xanthomonas campestris, per the EU specification."
+      pl: "Wytwarzana przez fermentację węglowodanu czystą kulturą Xanthomonas campestris, zgodnie ze specyfikacją UE."
+    sources: [{ id: reg-231-2012 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: estimate
+    grade: B
+    note:
+      en: >-
+        Vegan in practice: the bacterium is not an animal product, and every documented commercial
+        process ferments a plant carbohydrate (typically corn- or cane-derived sugar), though the EU
+        legal definition does not name the carbohydrate, so a dairy-derived feedstock cannot be
+        completely ruled out from the specification text alone.
+      pl: >-
+        W praktyce wegańska: bakteria nie jest produktem zwierzęcym, a każdy udokumentowany proces
+        handlowy fermentuje węglowodan roślinny (najczęściej cukier z kukurydzy lub trzciny), choć
+        prawna definicja UE nie wskazuje węglowodanu, więc surowca mlecznego nie można całkowicie
+        wykluczyć na podstawie samego tekstu specyfikacji.
+    sources: [{ id: reg-231-2012 }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: estimate
+    grade: B
+    note:
+      en: "Same reasoning as diet.vegan: no animal material in the documented production route."
+      pl: "To samo rozumowanie jak przy diet.vegan: brak surowców zwierzęcych w udokumentowanym procesie produkcji."
+    sources: [{ id: reg-231-2012 }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Group I additive: quantum satis in most food categories.", pl: "Dodatek grupy I: quantum satis w większości kategorii żywności." }
+    source: reg-1333-2008
+reference_values:
+  - type: ADI
+    value: "not specified"
+    body: EFSA
+    year: 2017
+    source: efsa-xanthan-2017
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "The carbohydrate feedstock fermented into xanthan gum is not named in Reg 231/2012 or in the 2017 EFSA opinion; treat any specific feedstock claim (e.g. 'corn-based') as unverified unless a manufacturer specification is checked directly."

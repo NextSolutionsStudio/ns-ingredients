@@ -1,0 +1,25 @@
+# Production on ns-main-fsn1: the `web` Docker network, behind Caddy, next to postgres-ns.
+# Run from the repo root:  docker compose -f deploy/compose.yml up -d --build
+services:
+  ns-ingredients:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    image: ns-ingredients:latest
+    container_name: ns-ingredients
+    restart: unless-stopped
+    # DATABASE_URL=postgresql://ns_ingredients:<password>@postgres-ns:5432/ns_ingredients (see docs/DEPLOY.md)
+    env_file: /srv/ns-ingredients/.env
+    environment:
+      PUBLIC_BASE_URL: https://ingredients.nextsolutions.studio
+      LOG_LEVEL: info
+    networks: [web]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 512m
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "5" }
+
+networks:
+  web:
+    external: true

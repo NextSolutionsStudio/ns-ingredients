@@ -1,0 +1,41 @@
+id: cocoa-mass
+type: ingredient
+names:
+  en: [cocoa mass, cocoa liquor]
+  pl: [miazga kakaowa, masa kakaowa]
+  de: [Kakaomasse]
+summary:
+  en: >-
+    Cocoa beans cleaned, roasted and ground into a paste containing both the non-fat cocoa solids and the
+    natural cocoa butter, without further pressing; called "cocoa paste" in EU law (the cocoa and
+    chocolate directive) and known commercially as cocoa mass or cocoa liquor. The base material chocolate
+    is made from, before any cocoa butter is removed or added back.
+  pl: >-
+    Ziarna kakaowe oczyszczone, palone i zmielone na pastę zawierającą zarówno beztłuszczowe składniki
+    kakao, jak i naturalny tłuszcz kakaowy, bez dalszego tłoczenia; w prawie UE (dyrektywa o kakao i
+    czekoladzie) nazywana "pastą kakaową", handlowo znana jako miazga lub masa kakaowa. Materiał
+    wyjściowy, z którego wytwarza się czekoladę, zanim tłuszcz kakaowy zostanie usunięty lub dodany
+    ponownie.
+  de: >-
+    Kakaobohnen, gereinigt, geröstet und zu einer Paste vermahlen, die sowohl die fettfreien
+    Kakaofeststoffe als auch die natürliche Kakaobutter enthält, ohne weiteres Pressen; im EU-Recht als
+    "Kakaopaste" bezeichnet, handelsüblich Kakaomasse.
+assertions:
+  - code: origin.plant
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Made only from cocoa beans (Theobroma cacao); no dairy or other animal ingredient is part of the EU definition."
+      pl: "Wytwarzana wyłącznie z ziaren kakaowca (Theobroma cacao); definicja UE nie obejmuje mleka ani innego składnika zwierzęcego."
+    sources: [{ id: dir-2000-36 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Cocoa mass/paste as defined in EU law contains only cocoa-bean material; no animal ingredient."
+      pl: "Miazga/pasta kakaowa w rozumieniu prawa UE zawiera wyłącznie materiał z ziaren kakaowca; brak składnika zwierzęcego."
+    sources: [{ id: dir-2000-36 }]
+review_status: draft
+provenance: ai-drafted

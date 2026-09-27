@@ -1,0 +1,36 @@
+id: celery
+type: ingredient
+names:
+  en: [celery]
+  pl: [seler]
+  de: [Sellerie]
+summary:
+  en: "Celery (stalk, root/celeriac, leaves, seed) and its products; one of the EU's fourteen regulated allergens, with no listed exemptions."
+  pl: "Seler (naciowy, korzeniowy, liście, siemię) i jego produkty; jeden z czternastu regulowanych alergenów UE, bez wyłączeń."
+assertions:
+  - code: allergen.celery
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Declared ingredient; EU Annex II item 9.", pl: "Zadeklarowany składnik; Aneks II UE, punkt 9." }
+    sources: [{ id: reg-1169-2011, locator: "Annex II item 9" }]
+  - code: origin.plant
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A vegetable.", pl: "Warzywo." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A plant food.", pl: "Produkt roślinny." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A plant food.", pl: "Produkt roślinny." }
+    sources: [{ id: reg-1169-2011 }]
+review_status: draft
+provenance: ai-drafted

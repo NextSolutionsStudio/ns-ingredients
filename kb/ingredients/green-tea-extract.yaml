@@ -1,0 +1,95 @@
+id: green-tea-extract
+type: ingredient
+names:
+  en: [green tea extract]
+  pl: [ekstrakt z zielonej herbaty, ekstrakt z liści zielonej herbaty]
+  de: [Grüntee-Extrakt, Grünteeextrakt]
+summary:
+  en: >-
+    A concentrated extract of Camellia sinensis (green tea) leaves, used in weight-management and
+    antioxidant supplements mainly for its catechin content, dominated by
+    (-)-epigallocatechin-3-gallate (EGCG). Since 2022 the EU restricts how much EGCG a food supplement's
+    daily portion may deliver, after clinical trials linked high intakes to a liver-enzyme signal;
+    catechins from ordinary brewed tea are treated separately and considered generally safe at typical
+    intakes.
+  pl: >-
+    Skoncentrowany ekstrakt z listków Camellia sinensis (zielonej herbaty), stosowany w suplementach na
+    redukcję masy ciała i o działaniu antyoksydacyjnym, głównie ze względu na zawartość katechin, wśród
+    których dominuje (-)-epigalokatechina-3-galusan (EGCG). Od 2022 r. UE ogranicza, jaką ilość EGCG może
+    dostarczać dzienna porcja suplementu, po tym jak badania kliniczne powiązały wysokie spożycie z
+    sygnałem wpływu na wątrobę; katechiny z zwykle parzonej herbaty są traktowane odrębnie i uważane za
+    ogólnie bezpieczne przy typowym spożyciu.
+  de: >-
+    Ein konzentrierter Extrakt aus Blättern von Camellia sinensis (grüner Tee), verwendet in
+    Gewichtsmanagement- und Antioxidans-Präparaten vor allem wegen seines Catechingehalts, dominiert von
+    (-)-Epigallocatechin-3-gallat (EGCG). Seit 2022 begrenzt die EU, wie viel EGCG die Tagesportion eines
+    Nahrungsergänzungsmittels liefern darf.
+assertions:
+  - code: origin.plant
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "An extract of green tea (Camellia sinensis) leaves.", pl: "Ekstrakt z listków zielonej herbaty (Camellia sinensis)." }
+    sources: [{ id: ad-reg-2022-2340 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A plant leaf extract.", pl: "Ekstrakt z listków rośliny." }
+    sources: [{ id: ad-reg-2022-2340 }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A plant leaf extract.", pl: "Ekstrakt z listków rośliny." }
+    sources: [{ id: ad-reg-2022-2340 }]
+  - code: health.caffeine
+    certainty: maybe
+    kind: fact
+    grade: A
+    note:
+      en: "Green tea naturally contains caffeine alongside its catechins, but some commercial extracts are decaffeinated; a label does not always say which, so check the declared caffeine content."
+      pl: "Zielona herbata naturalnie zawiera kofeinę obok katechin, ale niektóre ekstrakty handlowe są bezkofeinowe; etykieta nie zawsze to precyzuje, dlatego warto sprawdzić podaną zawartość kofeiny."
+    sources: [{ id: efsa-caffeine-2015 }]
+  - code: regulatory.eu_restricted
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: >-
+        Since Commission Regulation (EU) 2022/2340 (applicable from 21 June 2023), a food supplement's
+        labelled daily portion must supply less than 800 mg of EGCG and must state its EGCG content,
+        after EFSA (2018) found that food-supplement intakes at or above 800 mg EGCG/day were linked to a
+        statistically significant rise in serum transaminases (liver enzymes) in a minority of subjects
+        in clinical trials, while intakes at or below roughly 316 mg EGCG/day showed no such signal.
+        Aqueous extracts with a composition comparable to a traditional green tea infusion, once
+        reconstituted, fall outside this restriction.
+      pl: >-
+        Od Rozporządzenia Komisji (UE) 2022/2340 (obowiązującego od 21 czerwca 2023 r.) dzienna porcja
+        suplementu wskazana na etykiecie musi dostarczać mniej niż 800 mg EGCG i musi podawać jego
+        zawartość, po tym jak EFSA (2018) stwierdziła, że spożycie EGCG w suplementach na poziomie 800 mg
+        na dobę lub wyższym wiązało się w badaniach klinicznych ze statystycznie istotnym wzrostem
+        transaminaz (enzymów wątrobowych) u części badanych, podczas gdy spożycie na poziomie ok. 316 mg
+        EGCG/dobę lub niższym takiego sygnału nie wykazywało. Wodne ekstrakty o składzie porównywalnym z
+        tradycyjną infuzją zielonej herbaty, po rekonstytucji, nie podlegają temu ograniczeniu.
+    sources: [{ id: ad-reg-2022-2340 }, { id: ad-efsa-green-tea-catechins-2018 }]
+  - code: regulatory.eu_warning_label
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: >-
+        The label of a compliant supplement must carry a warning not to consume 800 mg EGCG/day or more
+        from all sources combined, alongside warnings against combining with other green-tea products and
+        on use in pregnancy, breastfeeding or by under-18s.
+      pl: >-
+        Etykieta zgodnego z przepisami suplementu musi nieść ostrzeżenie, by nie spożywać 800 mg EGCG na
+        dobę lub więcej ze wszystkich źródeł łącznie, a także ostrzeżenia przed łączeniem z innymi
+        produktami z zielonej herbaty oraz dotyczące stosowania w ciąży, podczas karmienia lub przez osoby
+        poniżej 18 lat.
+    sources: [{ id: ad-reg-2022-2340 }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Did not force the liver-effect finding into `health.high_dose_supplement_nutrient`: that code's controlled-vocabulary definition is scoped to 'a vitamin or mineral for which EFSA set a tolerable upper intake level', and EGCG is neither — using it would misstate the code. The finding is instead carried honestly inside the `regulatory.eu_restricted` note, which cites both the regulation and the EFSA (2018) opinion it rests on."
+  - "Did not add a `regulatory.novel_food` assertion for the separately authorised, highly purified (>=90%) EGCG novel-food extract capped at 150 mg extract/serving — that is a distinct product from a generic 'green tea extract', out of scope for this entry."

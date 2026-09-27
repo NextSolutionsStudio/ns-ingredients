@@ -1,0 +1,11 @@
+{
+  "match_precision": 1,
+  "match_recall": 1,
+  "unmatched_kept": 1,
+  "variant_accuracy": 1,
+  "flag_recall": 1,
+  "false_flags": 0,
+  "diet_accuracy": 0.97,
+  "may_contain_recall": 1,
+  "statement_accuracy": 1
+}

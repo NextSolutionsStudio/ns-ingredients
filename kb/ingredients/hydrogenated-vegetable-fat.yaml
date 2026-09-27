@@ -1,0 +1,78 @@
+id: hydrogenated-vegetable-fat
+type: fat
+names:
+  en: [hydrogenated vegetable fat, hydrogenated vegetable oil]
+  pl: [tłuszcz utwardzony, olej roślinny utwardzony, tłuszcz roślinny utwardzony]
+  de: [gehärtetes Pflanzenfett, gehärtetes Pflanzenöl]
+summary:
+  en: >-
+    A vegetable oil hardened by adding hydrogen across its double bonds, to raise its melting point and
+    shelf stability. Hydrogenation can be partial (some double bonds remain, in a mix of natural cis and
+    industrial trans configuration) or full/total (essentially no double bonds left, and no trans fat).
+    Since the EU's 2 g/100 g trans-fat cap took effect in 2021, manufacturers have shifted much of this
+    category toward full hydrogenation or interesterification, but partially hydrogenated fat under the
+    cap remains legal and is not always distinguished from fully hydrogenated fat on a plain "tłuszcz
+    utwardzony" label.
+  pl: >-
+    Olej roślinny utwardzony przez dodanie wodoru do jego wiązań podwójnych, co podnosi temperaturę
+    topnienia i stabilność. Utwardzanie może być częściowe (część wiązań podwójnych pozostaje, w mieszance
+    naturalnej formy cis i przemysłowej trans) albo całkowite (praktycznie bez wiązań podwójnych i bez
+    tłuszczów trans). Od wejścia w życie unijnego limitu 2 g/100 g tłuszczów trans w 2021 r. producenci w
+    dużej mierze przeszli na całkowite utwardzanie lub estryfikację, ale częściowe utwardzanie poniżej
+    limitu wciąż jest legalne i nie zawsze da się je odróżnić od pełnego utwardzenia na samym opisie
+    "tłuszcz utwardzony".
+variants:
+  - id: partially-hydrogenated
+    names:
+      en: [partially hydrogenated vegetable oil, partially hydrogenated vegetable fat]
+      pl: [olej roślinny częściowo utwardzony, tłuszcz częściowo utwardzony, częściowo utwardzony olej roślinny]
+      de: [teilweise gehärtetes Pflanzenöl, teilweise gehärtetes Pflanzenfett]
+    process:
+      en: "Some but not all double bonds are hydrogenated, leaving a mix of natural cis and industrially formed trans unsaturated fatty acids."
+      pl: "Utwardzeniu podlega część, nie wszystkie, wiązania podwójne, co pozostawia mieszankę naturalnych (cis) i powstałych przemysłowo (trans) nienasyconych kwasów tłuszczowych."
+    tells: ['czesciowo utwardzon', 'partially hydrogenated', 'teilweise gehartet']
+    prior: 0.45
+    prior_rationale:
+      en: >-
+        Still legal under the EU's 2 g/100 g trans-fat cap, so it has not disappeared, but many
+        manufacturers moved to full hydrogenation after 2021 specifically to avoid trans-fat testing and
+        the associated label risk.
+      pl: >-
+        Wciąż legalne w ramach unijnego limitu 2 g/100 g tłuszczów trans, więc nie zniknęło, ale wielu
+        producentów po 2021 r. przeszło na pełne utwardzanie właśnie, by uniknąć badania zawartości
+        tłuszczów trans i związanego z tym ryzyka na etykiecie.
+  - id: fully-hydrogenated
+    names:
+      en: [fully hydrogenated vegetable oil, totally hydrogenated vegetable fat]
+      pl: [olej roślinny całkowicie utwardzony, tłuszcz całkowicie utwardzony, w pełni utwardzony tłuszcz roślinny]
+      de: [vollständig gehärtetes Pflanzenöl]
+    process:
+      en: "All double bonds are hydrogenated; the fat is fully saturated, very hard, and contains essentially no trans fat."
+      pl: "Wszystkie wiązania podwójne są utwardzone; tłuszcz jest w pełni nasycony, bardzo twardy i praktycznie nie zawiera tłuszczów trans."
+    tells: ['calkowicie utwardzon', 'fully hydrogenated', 'totally hydrogenated', 'w pelni utwardzon', 'vollstandig gehartet']
+    prior: 0.5
+    prior_rationale:
+      en: "The post-2021 default for a 'fully hardened' commodity fat, usually blended or interesterified with a liquid oil to get a workable texture."
+      pl: "Domyślny wybór po 2021 r. dla masowego 'w pełni utwardzonego' tłuszczu, zwykle mieszanego lub estryfikowanego z olejem ciekłym w celu uzyskania odpowiedniej konsystencji."
+assertions:
+  - code: processing.hydrogenated
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Hydrogenated by definition, whether partial or full."
+      pl: "Z definicji utwardzony, częściowo lub całkowicie."
+    sources: [{ id: reg-2019-649 }]
+  - code: health.trans_fat_source
+    variant: partially-hydrogenated
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Partial hydrogenation is the main industrial source of trans fat; EU food sold to consumers is capped at 2 g trans fat per 100 g of fat."
+      pl: "Częściowe utwardzanie jest głównym przemysłowym źródłem tłuszczów trans; żywność sprzedawana konsumentom w UE ma limit 2 g tłuszczów trans na 100 g tłuszczu."
+    sources: [{ id: reg-2019-649 }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "No source-oil variant (palm/rapeseed/soy) was added on top of the hydrogenation-degree axis, to keep the single prior budget on the axis that carries the health-relevant distinction; the base oil is usually named separately on a real label (e.g. 'utwardzony olej rzepakowy')."

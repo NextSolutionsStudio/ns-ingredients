@@ -1,0 +1,48 @@
+id: bht
+type: additive
+e_number: E321
+ids: { cas: "128-37-0", wikidata: Q221945, chebi: "CHEBI:34247", pubchem: 31404 }
+names:
+  en: [butylated hydroxytoluene, BHT]
+  pl: [butylowany hydroksytoluen]
+  de: [Butylhydroxytoluol]
+functions: [antioxidant]
+summary:
+  en: >-
+    A synthetic antioxidant, often used together with BHA, to keep fats, oils and packaging from going
+    rancid. Made by reacting p-cresol with isobutylene under acid catalysis — a chemical-synthesis route,
+    not extracted from a natural source. EFSA's 2012 re-evaluation raised its ADI (versus the 1987 SCF
+    figure) after concluding BHT is not a genotoxicity concern and that any carcinogenicity seen in
+    long-term rodent studies is a threshold effect, not a mutagenic one.
+  pl: >-
+    Syntetyczny przeciwutleniacz, często stosowany razem z BHA, aby zapobiec jełczeniu tłuszczów, olejów
+    i materiałów opakowaniowych. Wytwarzany w reakcji p-krezolu z izobutylenem w obecności katalizatora
+    kwasowego — metodą syntezy chemicznej, a nie ekstrahowany z naturalnego źródła. Reocena EFSA z 2012 r.
+    podniosła jego ADI (względem wartości SCF z 1987 r.) po uznaniu, że BHT nie stanowi zagrożenia
+    genotoksycznego i że ewentualna rakotwórczość obserwowana w długoterminowych badaniach na gryzoniach
+    jest efektem progowym, a nie mutagennym.
+assertions:
+  - code: origin.chemical_synthesis
+    certainty: yes
+    kind: fact
+    grade: B
+    note:
+      en: "Made industrially by reacting p-cresol (4-methylphenol) with isobutylene, catalysed by sulfuric acid; not extracted from a plant, animal or microbial source."
+      pl: "Wytwarzany przemysłowo w reakcji p-krezolu (4-metylofenolu) z izobutylenem, katalizowanej kwasem siarkowym; nie jest ekstrahowany z surowca roślinnego, zwierzęcego czy mikrobiologicznego."
+    sources: [{ id: col-wikipedia-bht }]
+reference_values:
+  - type: ADI
+    value: 0.25
+    unit: "mg/kg bw/day"
+    body: EFSA
+    year: 2012
+    source: col-efsa-bht-2012
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Authorised in specific food categories with maximum levels (Annex II); often used together with BHA and/or gallates.", pl: "Dopuszczony w określonych kategoriach żywności z maksymalnymi poziomami (Załącznik II); często stosowany razem z BHA i/lub galusanami." }
+    source: reg-1333-2008
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Per-category Annex II maximum levels for E321 not transcribed here (avoid a wrong number)."

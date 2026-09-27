@@ -1,0 +1,111 @@
+id: vegetable-fat-powder
+type: fat
+names:
+  en: [vegetable fat powder, non-dairy creamer, vegetable creamer powder, powdered vegetable fat]
+  pl: [tłuszcz roślinny w proszku, śmietanka roślinna w proszku, śmietanka roślinna, proszek śmietankowy roślinny]
+  de: [pflanzliches Fettpulver, pflanzlicher Kaffeeweißer]
+summary:
+  en: >-
+    A spray-dried powder that delivers vegetable fat in a free-flowing form: an emulsion of vegetable oil
+    (commonly palm, coconut or sunflower) and a carbohydrate carrier (typically glucose syrup solids), plus
+    an emulsifier system that very often includes a milk-protein derivative (sodium caseinate) even in
+    products marketed "non-dairy". Used as a coffee whitener/creamer and, in the fitness-nutrition context
+    this database's example started from, as a fat-and-mouthfeel ingredient inside protein powders and
+    ready-to-mix drink formulas.
+  pl: >-
+    Proszek otrzymywany metodą suszenia rozpyłowego, dostarczający tłuszcz roślinny w sypkiej formie:
+    emulsja oleju roślinnego (najczęściej palmowego, kokosowego lub słonecznikowego) z nośnikiem
+    węglowodanowym (zwykle syropem glukozowym w proszku) oraz układem emulgatorów, który bardzo często
+    zawiera derywat białka mleka (kazeinian sodu) — nawet w produktach oznaczonych jako "bez laktozy"/
+    "non-dairy". Stosowany jako zamiennik śmietanki do kawy oraz — w kontekście odżywek sportowych — jako
+    składnik dodający tłuszcz i "kremowość" odżywkom białkowym i proszkom do napojów.
+variants:
+  - id: palm
+    names:
+      en: [vegetable fat powder (palm oil)]
+      pl: [tłuszcz roślinny w proszku (olej palmowy), śmietanka roślinna z oleju palmowego]
+    process:
+      en: "Palm oil (or a palm fraction) emulsified with a carrier and spray-dried."
+      pl: "Olej palmowy (lub jego frakcja) emulgowany z nośnikiem i suszony rozpyłowo."
+    tells: ['palm']
+    prior: 0.55
+    prior_rationale:
+      en: >-
+        Palm oil/fat is the cheapest, most available feedstock for a commodity fat powder; makers who pay
+        for coconut or sunflower usually say so on the front of pack.
+      pl: >-
+        Olej/tłuszcz palmowy jest najtańszym i najbardziej dostępnym surowcem dla masowego tłuszczu w
+        proszku; producenci płacący za olej kokosowy lub słonecznikowy zwykle to zaznaczają na etykiecie.
+  - id: coconut
+    names:
+      en: [vegetable fat powder (coconut oil)]
+      pl: [tłuszcz roślinny w proszku (olej kokosowy), śmietanka roślinna z oleju kokosowego]
+    process:
+      en: "Coconut oil emulsified with a carrier and spray-dried."
+      pl: "Olej kokosowy emulgowany z nośnikiem i suszony rozpyłowo."
+    tells: ['kokos', 'coconut']
+    prior: 0.25
+    prior_rationale:
+      en: "A cleaner-label, MCT-adjacent option manufacturers tend to name explicitly when used."
+      pl: "Opcja o czystszej etykiecie (bliska MCT), którą producenci zwykle wskazują wprost, gdy jej używają."
+  - id: sunflower
+    names:
+      en: [vegetable fat powder (sunflower oil)]
+      pl: [tłuszcz roślinny w proszku (olej słonecznikowy), śmietanka roślinna z oleju słonecznikowego]
+    process:
+      en: "Sunflower oil emulsified with a carrier and spray-dried."
+      pl: "Olej słonecznikowy emulgowany z nośnikiem i suszony rozpyłowo."
+    tells: ['slonecznik', 'sunflower', 'sonnenblumen']
+    prior: 0.2
+    prior_rationale:
+      en: "A no-palm-oil formulation choice that is, again, usually called out on the label when used."
+      pl: "Wybór bez oleju palmowego, który — podobnie — jest zwykle zaznaczany na etykiecie, gdy zastosowany."
+assertions:
+  - code: origin.vegetable_oil_derived
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Definitionally a vegetable oil/fat emulsified and spray-dried; EU labelling requires the specific vegetable origin to be named next to a generic 'vegetable fat' grouping."
+      pl: "Z definicji jest to olej/tłuszcz roślinny zemulgowany i suszony rozpyłowo; przepisy UE wymagają podania konkretnego pochodzenia rośliny przy ogólnym określeniu 'tłuszcz roślinny'."
+    sources: [{ id: reg-1169-2011, locator: "Annex VII Part A, points 8-9" }]
+  - code: ethics.palm_oil
+    variant: palm
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "The palm variant carries the same deforestation-risk sourcing question as palm oil itself."
+      pl: "Wariant palmowy wiąże się z tym samym pytaniem o ryzyko wylesiania, co sam olej palmowy."
+    sources: [{ id: reg-2023-1115 }]
+  - code: allergen.milk
+    certainty: maybe
+    kind: estimate
+    grade: C
+    population: [general]
+    note:
+      en: >-
+        A US federal purchasing specification for dry non-dairy creamer lists sodium caseinate (a milk
+        protein derivative) alongside glucose-syrup solids as a standard component of the emulsifier/carrier
+        system — present in many "vegetable fat powder"/"non-dairy" products even though the front label
+        says non-dairy. Whether a given batch uses it is only knowable from its own ingredient list.
+      pl: >-
+        Amerykańska federalna specyfikacja zakupowa dla suchej śmietanki roślinnej wymienia kazeinian sodu
+        (derywat białka mleka) obok syropu glukozowego w proszku jako standardowy składnik układu
+        emulgator/nośnik — obecny w wielu produktach "tłuszcz roślinny w proszku"/"non-dairy", nawet gdy
+        etykieta z przodu opakowania mówi "bez laktozy". Czy dana partia go zawiera, wynika tylko z jej
+        własnego składu.
+    sources: [{ id: ams-nondairy-creamer }]
+  - code: processing.refined
+    certainty: yes
+    kind: fact
+    grade: B
+    note:
+      en: "The base oil is refined before emulsification/spray-drying (a food-grade requirement for a neutral-tasting powder)."
+      pl: "Olej bazowy jest rafinowany przed emulgowaniem/suszeniem rozpyłowym (wymóg dla neutralnego w smaku proszku spożywczego)."
+    sources: [{ id: reg-1169-2011, locator: "Annex VII Part A, points 8-9" }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "allergen.milk source (ams-nondairy-creamer, a US federal item description) was confirmed via a search-engine excerpt after this session's fetch tool got HTTP 403 from ams.usda.gov; a human reviewer should re-open the PDF directly, and ideally replace it with an EU-specific spec or a real Polish label ingredient list showing kazeinian sodu."
+  - "Left out: a dedicated variant for the carrier (glucose syrup vs milk-protein/caseinate system) as a second variant axis — the schema sums variant priors across the whole ingredient, so a second independent axis cannot coexist with the oil-source axis without double-counting; modelled the carrier point as a plain assertion instead."

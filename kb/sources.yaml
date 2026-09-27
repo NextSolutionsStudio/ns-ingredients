@@ -1,0 +1,146 @@
+# Core citations. Contributors add batch-specific sources in kb/sources/<batch>.yaml.
+# Rules: a source must be openly reachable at `url`; `licence` is the licence of the SOURCE
+# (we cite facts from it and write our own text — we never copy prose from NC/ND sources).
+sources:
+  - id: reg-1333-2008
+    type: regulation
+    title: "Regulation (EC) No 1333/2008 on food additives (consolidated)"
+    publisher: European Union
+    year: 2008
+    url: https://eur-lex.europa.eu/eli/reg/2008/1333/oj
+    licence: "EU reuse policy (Decision 2011/833/EU) — CC BY 4.0"
+    accessed: 2026-09-27
+  - id: reg-231-2012
+    type: regulation
+    title: "Commission Regulation (EU) No 231/2012 laying down specifications for food additives"
+    publisher: European Union
+    year: 2012
+    url: https://eur-lex.europa.eu/eli/reg/2012/231/oj
+    licence: "EU reuse policy (Decision 2011/833/EU) — CC BY 4.0"
+    accessed: 2026-09-27
+  - id: reg-1169-2011
+    type: regulation
+    title: "Regulation (EU) No 1169/2011 on the provision of food information to consumers (Annex II allergens, Annex III mandatory statements, Annex VII categories)"
+    publisher: European Union
+    year: 2011
+    url: https://eur-lex.europa.eu/eli/reg/2011/1169/oj
+    licence: "EU reuse policy (Decision 2011/833/EU) — CC BY 4.0"
+    accessed: 2026-09-27
+  - id: reg-1334-2008
+    type: regulation
+    title: "Regulation (EC) No 1334/2008 on flavourings (Article 16: 'natural' flavouring)"
+    publisher: European Union
+    year: 2008
+    url: https://eur-lex.europa.eu/eli/reg/2008/1334/oj
+    licence: "EU reuse policy (Decision 2011/833/EU) — CC BY 4.0"
+    accessed: 2026-09-27
+  - id: reg-2022-63
+    type: regulation
+    title: "Commission Regulation (EU) 2022/63 removing titanium dioxide (E 171) from the EU list of food additives"
+    publisher: European Union
+    year: 2022
+    url: https://eur-lex.europa.eu/eli/reg/2022/63/oj
+    licence: "EU reuse policy (Decision 2011/833/EU) — CC BY 4.0"
+    accessed: 2026-09-27
+  - id: reg-2019-649
+    type: regulation
+    title: "Commission Regulation (EU) 2019/649 limiting trans fat other than naturally occurring trans fat"
+    publisher: European Union
+    year: 2019
+    url: https://eur-lex.europa.eu/eli/reg/2019/649/oj
+    licence: "EU reuse policy (Decision 2011/833/EU) — CC BY 4.0"
+    accessed: 2026-09-27
+  - id: efsa-malic-call-2024
+    type: regulatory_opinion
+    title: "EFSA call for data for the re-evaluation of malic acid and malates (E 296; E 350–352)"
+    publisher: European Food Safety Authority
+    year: 2024
+    url: https://www.efsa.europa.eu/sites/default/files/2024-07/call-for-data-malic-acid-malates_0.pdf
+    licence: "EFSA — reuse with attribution"
+    accessed: 2026-09-27
+    note: "States the E 296 specification lists EINECS numbers for L- and DL-malic acid but a melting range set for the racemate; quotes EFSA FEEDAP 2014 on synthesis by hydration of maleic anhydride; recalls JECFA 1980 group ADI 'not specified' with no reason to distinguish L from DL."
+  - id: efsa-tio2-2021
+    type: regulatory_opinion
+    title: "Safety assessment of titanium dioxide (E171) as a food additive"
+    publisher: European Food Safety Authority
+    year: 2021
+    url: https://doi.org/10.2903/j.efsa.2021.6585
+    doi: 10.2903/j.efsa.2021.6585
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: 2026-09-27
+  - id: efsa-aspartame-2013
+    type: regulatory_opinion
+    title: "Scientific Opinion on the re-evaluation of aspartame (E 951) as a food additive"
+    publisher: European Food Safety Authority
+    year: 2013
+    url: https://doi.org/10.2903/j.efsa.2013.3496
+    doi: 10.2903/j.efsa.2013.3496
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: 2026-09-27
+  - id: efsa-carrageenan-2018
+    type: regulatory_opinion
+    title: "Re-evaluation of carrageenan (E 407) and processed Eucheuma seaweed (E 407a) as food additives"
+    publisher: European Food Safety Authority
+    year: 2018
+    url: https://doi.org/10.2903/j.efsa.2018.5238
+    doi: 10.2903/j.efsa.2018.5238
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: 2026-09-27
+  - id: efsa-caffeine-2015
+    type: regulatory_opinion
+    title: "Scientific Opinion on the safety of caffeine"
+    publisher: European Food Safety Authority
+    year: 2015
+    url: https://doi.org/10.2903/j.efsa.2015.4102
+    doi: 10.2903/j.efsa.2015.4102
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: 2026-09-27
+  - id: efsa-nitrites-2017
+    type: regulatory_opinion
+    title: "Re-evaluation of potassium nitrite (E 249) and sodium nitrite (E 250) as food additives"
+    publisher: European Food Safety Authority
+    year: 2017
+    url: https://doi.org/10.2903/j.efsa.2017.4786
+    doi: 10.2903/j.efsa.2017.4786
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: 2026-09-27
+  - id: iarc-classifications
+    type: monograph
+    title: "IARC Monographs — List of Classifications"
+    publisher: International Agency for Research on Cancer
+    url: https://monographs.iarc.who.int/list-of-classifications/
+    licence: "IARC — classification facts cited, text not reproduced"
+    accessed: 2026-09-27
+  - id: mccann-2007
+    type: rct
+    title: "Food additives and hyperactive behaviour in 3-year-old and 8/9-year-old children in the community: a randomised, double-blinded, placebo-controlled trial"
+    authors: "McCann D, Barrett A, Cooper A, et al."
+    publisher: The Lancet
+    year: 2007
+    url: https://doi.org/10.1016/S0140-6736(07)61306-3
+    doi: 10.1016/S0140-6736(07)61306-3
+    licence: "Cited, not reproduced"
+    accessed: 2026-09-27
+  - id: iom-dri-vitamin-e-2000
+    type: reference
+    title: "Dietary Reference Intakes for Vitamin C, Vitamin E, Selenium, and Carotenoids"
+    publisher: Institute of Medicine, National Academies Press
+    year: 2000
+    url: https://doi.org/10.17226/9810
+    doi: 10.17226/9810
+    licence: "Cited, not reproduced"
+    accessed: 2026-09-27
+  - id: usda-fdc
+    type: dataset
+    title: "USDA FoodData Central"
+    publisher: U.S. Department of Agriculture
+    url: https://fdc.nal.usda.gov/
+    licence: CC0-1.0
+    accessed: 2026-09-27
+  - id: wikidata
+    type: dataset
+    title: "Wikidata (E number property P628 and linked identifiers)"
+    publisher: Wikimedia Foundation
+    url: https://www.wikidata.org/wiki/Property:P628
+    licence: CC0-1.0
+    accessed: 2026-09-27

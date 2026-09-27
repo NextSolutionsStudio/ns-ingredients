@@ -1,0 +1,91 @@
+id: vanillin
+type: flavouring
+ids: { cas: "121-33-5", wikidata: Q33495, pubchem: 1183 }
+names:
+  en: [vanillin]
+  pl: [wanilina]
+  de: [Vanillin]
+summary:
+  en: >-
+    The dominant flavour compound in vanilla, and the world's most-used flavouring substance
+    because natural vanilla-bean extract cannot meet global demand. Distinct from vanilla extract
+    (an infusion of whole vanilla pods, not covered by this entry). Around 85% of global vanillin
+    is made by petrochemical synthesis from guaiacol; about 15% comes from lignosulfonates (a
+    paper-industry by-product of sulfite wood pulping) via chemical oxidation. Neither qualifies
+    as 'natural' under EU flavouring law, because the processes are chemical, not physical,
+    enzymatic or microbiological. A smaller but growing share is made by microbial bioconversion
+    of ferulic acid (extracted from rice or wheat bran), which does qualify as natural and is
+    sold as 'natural vanillin' (e.g. under names like Rhovanil Natural).
+  pl: >-
+    Główny związek odpowiedzialny za smak wanilii i najczęściej stosowana na świecie substancja
+    aromatyczna, ponieważ naturalny ekstrakt z fasoli wanilii nie zaspokaja globalnego popytu.
+    Odrębna od ekstraktu wanilii (napar z całych strąków wanilii, nieobjęty tym wpisem). Około
+    85% wanliny na świecie otrzymuje się w syntezie petrochemicznej z gwajakolu; około 15%
+    pochodzi z lignosulfonianów (produktu ubocznego przemysłu papierniczego, siarczynowego
+    roztwarzania drewna) poprzez chemiczne utlenianie. Żadna z tych metod nie kwalifikuje się
+    jako 'naturalna' w rozumieniu unijnego prawa aromatów, ponieważ procesy są chemiczne, a nie
+    fizyczne, enzymatyczne lub mikrobiologiczne. Mniejszy, lecz rosnący udział ma wanilina
+    otrzymywana przez mikrobiologiczną biokonwersję kwasu ferulowego (ekstrahowanego z otrębów
+    ryżowych lub pszennych), która kwalifikuje się jako naturalna i jest sprzedawana jako
+    'naturalna wanilina' (np. pod nazwami typu Rhovanil Natural).
+variants:
+  - id: synthetic-guaiacol
+    names: { en: ["synthetic vanillin", "vanillin from guaiacol"], pl: ["wanilina syntetyczna", "wanilina z gwajakolu"], de: ["synthetisches Vanillin"] }
+    process:
+      en: "Guaiacol reacts with glyoxylic acid (electrophilic aromatic substitution) to give vanillylmandelic acid, which is then oxidatively decarboxylated to vanillin; the dominant global route (~85% of production)."
+      pl: "Gwajakol reaguje z kwasem glioksalowym (elektrofilowe podstawienie aromatyczne), dając kwas wanilinomigdałowy, który następnie poddaje się oksydacyjnej dekarboksylacji do waniliny; dominująca globalna metoda (~85% produkcji)."
+    tells: ['wanilina syntetyczn', 'synthetic vanillin', 'vanillin.*guaiacol', 'gwajakol', 'synthetisch']
+    prior: 0.75
+    prior_rationale:
+      en: "The largest-volume, lowest-cost commercial route; plain 'vanillin' (not 'natural vanillin') on a label is usually this or the lignin route."
+      pl: "Największy wolumenowo i najtańszy szlak handlowy; samo 'wanilina' (nie 'naturalna wanilina') na etykiecie to zwykle ta metoda lub metoda ligninowa."
+  - id: lignin
+    names: { en: ["lignin vanillin", "vanillin from lignin"], pl: ["wanilina z ligniny"], de: ["Vanillin aus Lignin"] }
+    process:
+      en: "Lignosulfonates left over from sulfite pulping of wood are broken down by alkaline oxidation (air, metal catalyst) to release vanillin; plant-derived feedstock, but a chemical (not natural-qualifying) process."
+      pl: "Lignosulfoniany, pozostałe po siarczynowym roztwarzaniu drewna, są rozkładane przez alkaliczne utlenianie (powietrze, katalizator metaliczny) z uwolnieniem waniliny; surowiec roślinny, ale proces chemiczny (niekwalifikujący się jako naturalny)."
+    tells: ['lignin']
+    prior: 0.15
+    prior_rationale:
+      en: "A smaller, historically established share (~15%) tied to sulfite pulp mills; rarely distinguished from the guaiacol route on a retail label."
+      pl: "Mniejszy, historycznie ugruntowany udział (~15%), związany z zakładami celulozy siarczynowej; rzadko odróżniana od metody gwajakolowej na etykiecie detalicznej."
+    residues:
+      - substance: { en: "residual sulfonated lignin fragments", pl: "resztkowe fragmenty ligniny sulfonowanej" }
+        source: swt-wikipedia-vanillin
+  - id: natural-bioconversion
+    names: { en: ["natural vanillin", "vanillin from ferulic acid"], pl: ["naturalna wanilina", "wanilina z kwasu ferulowego"], de: ["natürliches Vanillin"] }
+    process:
+      en: "Ferulic acid, extracted from rice or wheat bran, is converted to vanillin by microbial fermentation (filamentous fungi or bacteria); qualifies as a natural flavouring substance under Reg 1334/2008 because the process is microbiological and the substrate is of vegetable origin."
+      pl: "Kwas ferulowy, ekstrahowany z otrębów ryżowych lub pszennych, jest przekształcany do waniliny przez fermentację mikrobiologiczną (grzyby strzępkowe lub bakterie); kwalifikuje się jako naturalna substancja aromatyczna na podstawie Rozporządzenia 1334/2008, ponieważ proces jest mikrobiologiczny, a substrat ma pochodzenie roślinne."
+    tells: ['naturaln.*wanilin', 'natural vanillin', 'naturlich.*vanillin', 'ferulow', 'ferulic']
+    prior: 0.1
+    prior_rationale:
+      en: "A smaller, premium/'natural'-labelled segment; makers who pay for it consistently say 'natural vanillin' because the natural claim carries marketing value."
+      pl: "Mniejszy, premiowy segment oznaczany jako 'naturalny'; producenci, którzy za niego płacą, konsekwentnie piszą 'naturalna wanilina', bo deklaracja naturalności ma wartość marketingową."
+assertions:
+  - code: origin.petrochemical_synthetic
+    variant: synthetic-guaiacol
+    certainty: yes
+    kind: fact
+    grade: B
+    note: { en: "Guaiacol, the starting material, is itself predominantly a petrochemical synthesis product (from catechol).", pl: "Gwajakol, surowiec wyjściowy, jest sam w sobie w większości produktem syntezy petrochemicznej (z katecholu)." }
+    sources: [{ id: swt-wikipedia-vanillin }]
+  - code: origin.plant
+    variant: lignin
+    certainty: yes
+    kind: fact
+    grade: B
+    note: { en: "Feedstock (lignosulfonates) comes from wood pulping, but the conversion to vanillin is a chemical oxidation, not a physical/enzymatic/microbiological process, so it does not qualify as a 'natural' flavouring despite the plant origin.", pl: "Surowiec (lignosulfoniany) pochodzi z roztwarzania drewna, ale przekształcenie do waniliny to chemiczne utlenianie, nie proces fizyczny/enzymatyczny/mikrobiologiczny, więc mimo roślinnego pochodzenia nie kwalifikuje się jako aromat 'naturalny'." }
+    sources: [{ id: swt-wikipedia-vanillin }]
+  - code: origin.microbial_fermentation
+    variant: natural-bioconversion
+    certainty: yes
+    kind: fact
+    grade: B
+    note: { en: "Ferulic acid is bioconverted to vanillin by microorganisms; this route is sold and labelled as 'natural vanillin'.", pl: "Kwas ferulowy jest biokonwertowany do waniliny przez mikroorganizmy; ta metoda jest sprzedawana i oznaczana jako 'naturalna wanilina'." }
+    sources: [{ id: swt-wikipedia-vanillin }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "ChEBI id not included: not confirmed against an opened source this session."
+  - "A further GMO-yeast route converting guaiacol/glucose to vanillin (marketed by Evolva) is contested as to EU 'natural' status and was left out pending a directly-opened regulatory source, rather than asserted from a tertiary summary."

@@ -1,0 +1,36 @@
+id: mustard
+type: ingredient
+names:
+  en: [mustard]
+  pl: [gorczyca, gorczycę, gorczycy]
+  de: [Senf]
+summary:
+  en: "Mustard (seed, flour, paste) and its products; one of the EU's fourteen regulated allergens, with no listed exemptions."
+  pl: "Gorczyca (siemię, mąka, pasta) i jej produkty; jeden z czternastu regulowanych alergenów UE, bez wyłączeń."
+assertions:
+  - code: allergen.mustard
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Declared ingredient; EU Annex II item 10.", pl: "Zadeklarowany składnik; Aneks II UE, punkt 10." }
+    sources: [{ id: reg-1169-2011, locator: "Annex II item 10" }]
+  - code: origin.plant
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A seed/spice crop.", pl: "Roślina przyprawowa/siemię." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A plant food.", pl: "Produkt roślinny." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A plant food.", pl: "Produkt roślinny." }
+    sources: [{ id: reg-1169-2011 }]
+review_status: draft
+provenance: ai-drafted

@@ -1,0 +1,61 @@
+id: gum-arabic
+type: additive
+e_number: E414
+ids: { cas: "9000-01-5", wikidata: "Q535814" }
+names:
+  en: [gum arabic, acacia gum]
+  pl: [guma arabska]
+  de: [Gummi arabicum, Gummiarabikum]
+functions: [emulsifier, stabiliser, thickener, glazing-agent]
+summary:
+  en: >-
+    A plant exudate tapped from the bark of Acacia senegal and closely related Acacia species, mostly
+    harvested across the African Sahel. Used as an emulsifier in soft drinks and confectionery, a
+    stabiliser for flavour oils, and a glaze on sweets, chewing gum and pills. Almost none of it is
+    absorbed intact: it passes through mostly unchanged and is fermented by gut bacteria, and human
+    tolerance studies found only mild flatulence at doses up to 30 g per person per day. EFSA's 2017
+    re-evaluation set no numerical ADI and found no safety concern at reported use levels.
+  pl: >-
+    Wysięk roślinny zbierany z kory Acacia senegal i blisko spokrewnionych gatunków Acacia, głównie na
+    obszarze afrykańskiego Sahelu. Stosowana jako emulgator w napojach i wyrobach cukierniczych,
+    stabilizator olejków aromatycznych oraz glazura do słodyczy, gum do żucia i tabletek. Prawie w
+    całości nie jest wchłaniana w niezmienionej formie: przechodzi przez organizm w dużej mierze bez
+    zmian i jest fermentowana przez bakterie jelitowe, a badania tolerancji u ludzi wykazały jedynie
+    łagodne wzdęcia przy dawkach do 30 g na osobę dziennie. Ponowna ocena EFSA z 2017 r. nie ustaliła
+    liczbowego ADI i nie stwierdziła zagrożenia przy zgłoszonych poziomach stosowania.
+assertions:
+  - code: origin.plant
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "A dried exudate from the stems and branches of Acacia senegal or closely related Acacia species."
+      pl: "Wysuszony wysięk ze stempli i pędów Acacia senegal lub blisko spokrewnionych gatunków Acacia."
+    sources: [{ id: efsa-acacia-gum-2017 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A tree exudate; no animal material in the production route.", pl: "Wysięk z drzewa; brak surowców zwierzęcych w procesie produkcji." }
+    sources: [{ id: efsa-acacia-gum-2017 }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Same reasoning as diet.vegan.", pl: "To samo rozumowanie jak przy diet.vegan." }
+    sources: [{ id: efsa-acacia-gum-2017 }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Group I additive: quantum satis in most food categories.", pl: "Dodatek grupy I: quantum satis w większości kategorii żywności." }
+    source: reg-1333-2008
+reference_values:
+  - type: ADI
+    value: "not specified"
+    body: EFSA
+    year: 2017
+    source: efsa-acacia-gum-2017
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "EFSA's follow-up opinion on acacia gum in infant formula below 16 weeks (10.2903/j.efsa.2019.5922) was not opened this session; check it before making any infant-specific claim."

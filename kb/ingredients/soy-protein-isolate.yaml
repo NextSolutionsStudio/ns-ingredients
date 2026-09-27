@@ -1,0 +1,78 @@
+id: soy-protein-isolate
+type: protein
+names:
+  en: [soy protein isolate, soya protein isolate, soy protein, soya protein, SPI]
+  pl: [izolat białka sojowego, izolat białka soi, izolat białek sojowych, białko sojowe, białka sojowego]
+  de: [Sojaproteinisolat, Sojaprotein, Sojaeiweiß]
+summary:
+  en: >-
+    The most refined soy protein product (typically 90%+ protein), made by alkaline extraction of defatted
+    soy flakes/flour followed by isoelectric precipitation. The main non-dairy protein base in sports
+    nutrition and plant-based blends before pea protein became popular. Almost always triggers the EU
+    soybean allergen declaration, and soy is one of the most commonly genetically modified crops worldwide,
+    which supplement labels rarely disclose either way.
+  pl: >-
+    Najbardziej oczyszczony produkt białka sojowego (zwykle 90%+ białka), otrzymywany przez alkaliczną
+    ekstrakcję odtłuszczonych płatków/mąki sojowej, a następnie wytrącanie izoelektryczne. Główna
+    niemleczna baza białkowa w suplementacji sportowej i blendach roślinnych, zanim popularność zdobyło
+    białko grochu. Prawie zawsze wymaga deklaracji alergenu sojowego w UE, a soja jest jedną z najczęściej
+    modyfikowanych genetycznie roślin uprawnych na świecie, czego etykiety suplementów zwykle nie
+    ujawniają w żadną stronę.
+  de: >-
+    Das am stärksten aufgereinigte Sojaprotein-Produkt (meist 90%+ Protein), durch alkalische Extraktion
+    entfetteter Sojaflocken/-mehl und anschließende isoelektrische Fällung hergestellt. Löst fast immer die
+    EU-Sojaallergen-Kennzeichnung aus.
+assertions:
+  - code: origin.plant
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Made from soybeans (defatted flakes or flour).", pl: "Wytwarzany z ziaren soi (odtłuszczonych płatków lub mąki)." }
+    sources: [{ id: prot-du-2020-gm-soy-protein }]
+  - code: allergen.soybeans
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Soy-derived; declared as a soy allergen.", pl: "Pochodzi z soi; deklarowany jako alergen sojowy." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Made entirely from soybeans; no animal material in the alkaline-extraction/isoelectric-precipitation process.", pl: "Wytwarzany wyłącznie z ziaren soi; w procesie alkalicznej ekstrakcji/wytrącania izoelektrycznego nie ma surowców zwierzęcych." }
+    sources: [{ id: prot-du-2020-gm-soy-protein }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Same plant-only basis as the vegan assessment.", pl: "Ta sama, wyłącznie roślinna podstawa co w ocenie wegańskiej." }
+    sources: [{ id: prot-du-2020-gm-soy-protein }]
+  - code: origin.gmo_derived
+    certainty: maybe
+    kind: estimate
+    grade: C
+    note:
+      en: >-
+        Much of the world's soybean crop is genetically modified (e.g. herbicide-tolerant event GTS 40-3-2
+        and successors). A 2020 tracer study found that processing GM-spiked raw soybean (0.9-10%
+        admixture) into protein concentrate/isolate can leave the finished product testing at an even
+        higher transgenic share than the raw material, and a supplement label rarely names the soy's
+        country of origin or non-GM status.
+      pl: >-
+        Duża część światowych zbiorów soi jest genetycznie modyfikowana (np. odmiana odporna na herbicydy
+        GTS 40-3-2 i jej następcy). Badanie znacznikowe z 2020 r. wykazało, że przetworzenie surowej soi z
+        domieszką GMO (0,9-10%) w koncentrat/izolat białkowy może dać produkt finalny o jeszcze wyższym
+        udziale transgenicznym niż surowiec, a etykieta suplementu rzadko podaje kraj pochodzenia soi lub
+        status niemodyfikowany.
+    sources: [{ id: prot-du-2020-gm-soy-protein }]
+  - code: processing.ultra_processed_marker
+    certainty: yes
+    kind: opinion
+    grade: D
+    note:
+      en: "NOVA explicitly lists 'soya protein isolate' among the substances of no/rare culinary use that mark a food as ultra-processed."
+      pl: "NOVA wyraźnie wymienia 'izolat białka sojowego' wśród substancji o zerowym/rzadkim zastosowaniu kulinarnym, które oznaczają żywność jako wysoko przetworzoną."
+    sources: [{ id: prot-monteiro-2019-nova }]
+review_status: draft
+provenance: ai-drafted
+review_notes: []

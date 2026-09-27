@@ -1,0 +1,75 @@
+id: erythritol
+type: additive
+e_number: E968
+ids: { cas: "149-32-6", wikidata: Q421873, chebi: "CHEBI:17113", pubchem: 222285 }
+names:
+  en: [erythritol]
+  pl: [erytrytol, erytritol]
+  de: [Erythrit, Erythritol]
+functions: [sweetener]
+summary:
+  en: >-
+    A sugar alcohol as sweet as sucrose but with almost no calories (0.2 kcal/g), mostly absorbed
+    in the small intestine and excreted unchanged, so it causes less digestive upset at moderate
+    intake than other polyols. Made by fermenting a carbohydrate feedstock (corn steep liquor or
+    powder, glucose, glucose syrup or sucrose) with the filamentous fungi Moniliella pollinis or
+    M. megachiliensis, then purified by filtration, double crystallisation and chromatography.
+    EFSA's 2023 re-evaluation set the first-ever numerical ADI for a polyol, 0.5 g/kg bw/day,
+    specifically to guard against the immediate laxative effect and secondary effects of diarrhoea
+    (electrolyte imbalance); it found that typical intake already exceeds this ADI in several
+    population groups, especially children, and confirmed the laxative warning label remains
+    warranted.
+  pl: >-
+    Alkohol cukrowy o słodkości zbliżonej do sacharozy, ale z prawie zerową wartością energetyczną
+    (0,2 kcal/g), wchłaniany w większości w jelicie cienkim i wydalany w niezmienionej formie, co
+    powoduje mniej problemów żołądkowo-jelitowych przy umiarkowanym spożyciu niż inne poliole.
+    Otrzymywany przez fermentację surowca węglowodanowego (ług lub proszek z namaczania
+    kukurydzy, glukoza, syrop glukozowy lub sacharoza) przy użyciu grzybów strzępkowych
+    Moniliella pollinis lub M. megachiliensis, następnie oczyszczany filtracją, podwójną
+    krystalizacją i chromatografią. Reocena EFSA z 2023 r. ustaliła pierwsze w historii liczbowe
+    ADI dla poliolu, 0,5 g/kg m.c./dobę, specjalnie w celu ochrony przed natychmiastowym efektem
+    przeczyszczającym i wtórnymi skutkami biegunki (zaburzenia elektrolitowe); wykazała, że
+    typowe spożycie już przekracza to ADI w kilku grupach populacji, zwłaszcza u dzieci, i
+    potwierdziła, że ostrzeżenie o działaniu przeczyszczającym na etykiecie wciąż jest uzasadnione.
+assertions:
+  - code: health.laxative_polyol
+    certainty: yes
+    kind: fact
+    grade: A
+    dose: "EFSA set an ADI of 0.5 g/kg bw/day (2023); typical chronic exposure already exceeds this in children and adolescents at the high end of intake."
+    note: { en: "Food containing more than 10% added polyols must carry the statement 'excessive consumption may produce laxative effects'; EFSA's 2023 opinion confirmed this remains warranted for erythritol and declined to exempt it.", pl: "Żywność zawierająca ponad 10% dodanych polioli musi zawierać informację 'nadmierne spożycie może mieć efekt przeczyszczający'; opinia EFSA z 2023 r. potwierdziła, że dla erytrytolu jest to wciąż uzasadnione i odmówiła zwolnienia z tego wymogu." }
+    sources: [{ id: reg-1169-2011, locator: "Annex III, point 2.4" }, { id: swt-efsa-erythritol-2023 }]
+  - code: regulatory.eu_warning_label
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "The laxative statement above is a mandatory label statement under Annex III of Reg 1169/2011.", pl: "Powyższa informacja o działaniu przeczyszczającym jest obowiązkową informacją na etykiecie na podstawie Załącznika III Rozporządzenia 1169/2011." }
+    sources: [{ id: reg-1169-2011, locator: "Annex III, point 2.4" }]
+  - code: origin.microbial_fermentation
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Made by fermenting a carbohydrate feedstock with the filamentous fungi Moniliella pollinis or M. megachiliensis.", pl: "Otrzymywany przez fermentację surowca węglowodanowego przy użyciu grzybów strzępkowych Moniliella pollinis lub M. megachiliensis." }
+    sources: [{ id: swt-efsa-erythritol-2023 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Produced by fungal fermentation of a carbohydrate feedstock; no animal-derived inputs in the described route.", pl: "Otrzymywany przez fermentację grzybową surowca węglowodanowego; opisany proces nie wykorzystuje surowców zwierzęcych." }
+    sources: [{ id: swt-efsa-erythritol-2023 }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Group I polyol additive, quantum satis in most categories where polyols are permitted (not permitted in non-alcoholic beverages).", pl: "Dodatek poliolowy grupy I, quantum satis w większości kategorii, w których poliole są dozwolone (niedozwolony w napojach bezalkoholowych)." }
+    source: reg-1333-2008
+reference_values:
+  - type: ADI
+    value: 0.5
+    unit: "g/kg bw/day"
+    body: EFSA
+    year: 2023
+    source: swt-efsa-erythritol-2023
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Erythritol has separately been the subject of observational studies linking higher blood erythritol levels to cardiovascular events (2023-2024); not asserted here because this session did not open a primary study, and EFSA's 2023 re-evaluation (the source used) addressed laxative/GI risk, not the cardiovascular signal. Worth a follow-up batch once a primary source is opened."

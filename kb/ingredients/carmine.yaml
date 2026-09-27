@@ -1,0 +1,62 @@
+id: carmine
+type: additive
+e_number: E120
+ids: { cas: "1390-65-4", wikidata: Q320617, pubchem: 14950 }
+names:
+  en: [carmine, cochineal, carminic acid]
+  pl: [karmin, koszenila, kwas karminowy]
+  de: [Karmin, Cochenille, Echtes Karmin]
+functions: [colour]
+summary:
+  en: >-
+    A red colour extracted from the dried bodies of the female cochineal insect (Dactylopius coccus),
+    farmed mainly on prickly-pear cactus in Peru and the Canary Islands. Used in drinks, sausages,
+    confectionery and cosmetics. Because the source is an insect, it is not compatible with vegan or
+    vegetarian diets, and it is one of the few food colours with published case reports of IgE-mediated
+    allergic reactions.
+  pl: >-
+    Czerwony barwnik otrzymywany z wysuszonych ciał samic czerwca kaktusowego (Dactylopius coccus),
+    hodowanego głównie na opuncji w Peru i na Wyspach Kanaryjskich. Stosowany w napojach, wędlinach,
+    słodyczach i kosmetykach. Ze względu na pochodzenie owadzie nie jest zgodny z dietą wegańską ani
+    wegetariańską i jest jednym z niewielu barwników spożywczych, dla których opisano przypadki reakcji
+    alergicznych zależnych od IgE.
+assertions:
+  - code: origin.insect
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "The EU specification defines carmine/carminic acid as an aqueous, aqueous-alcoholic or alcoholic extract of dried Cochineal — the dried bodies of the female insect Dactylopius coccus Costa."
+      pl: "Specyfikacja UE definiuje karmin/kwas karminowy jako wodny, wodno-alkoholowy lub alkoholowy ekstrakt z koszenili — wysuszonych ciał samic Dactylopius coccus Costa."
+    sources: [{ id: reg-231-2012, locator: "Annex, E 120 definition" }]
+  - code: diet.vegan
+    certainty: "no"
+    kind: fact
+    grade: A
+    note: { en: "Made from an insect; no plant or microbial route exists.", pl: "Wytwarzany z owada; nie istnieje roślinna lub mikrobiologiczna metoda otrzymywania." }
+    sources: [{ id: reg-231-2012, locator: "Annex, E 120 definition" }]
+  - code: diet.vegetarian
+    certainty: "no"
+    kind: fact
+    grade: A
+    note: { en: "An animal (insect) product by any common definition of vegetarian.", pl: "Produkt pochodzenia zwierzęcego (owadziego) według każdej powszechnej definicji wegetarianizmu." }
+    sources: [{ id: reg-231-2012, locator: "Annex, E 120 definition" }]
+  - code: health.sensitivity_reported
+    certainty: maybe
+    kind: opinion
+    grade: D
+    population: [general]
+    note:
+      en: "Case reports describe IgE-mediated anaphylaxis after ingesting carmine-coloured foods and drinks; carmine is not one of the EU's 14 declared allergens, so a label will not flag this. Reactions appear rare and are documented only in small, uncontrolled case series."
+      pl: "Opisano przypadki anafilaksji zależnej od IgE po spożyciu żywności lub napojów zabarwionych karminem; karmin nie jest jednym z 14 alergenów wymienianych obowiązkowo w UE, więc etykieta tego nie zasygnalizuje. Reakcje wydają się rzadkie i są opisane jedynie w małych, niekontrolowanych seriach przypadków."
+    sources: [{ id: col-wuthrich-1997-carmine }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Group III colour: authorised only in specific food categories, each with its own maximum level (Annex II).", pl: "Barwnik grupy III: dopuszczony jedynie w określonych kategoriach żywności, każda z własnym poziomem maksymalnym (Załącznik II)." }
+    source: reg-1333-2008
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Per-category Annex II maximum levels for E120 not transcribed here (avoid a wrong number); add if a specific product category needs it."
+  - "Carmine (the Al/Ca lake of carminic acid) and plain carminic acid are both covered by this one specification entry in Reg 231/2012; not modelled as separate variants here."

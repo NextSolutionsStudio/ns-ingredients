@@ -1,0 +1,76 @@
+id: palm-oil
+type: fat
+names:
+  en: [palm oil]
+  pl: [olej palmowy, tłuszcz palmowy]
+  de: [Palmöl]
+summary:
+  en: >-
+    Oil pressed from the fruit (mesocarp) of the oil palm (Elaeis guineensis). High in saturated fat, solid
+    at room temperature without hydrogenation, cheap and versatile, so it appears widely in baked goods,
+    spreads, instant noodles and confectionery. EU labelling rules require the specific plant to be named
+    ("palm oil"), which is why it is visible on ingredient lists rather than hidden inside "vegetable oil".
+    Its main documented concern is not food safety but land use: palm cultivation is one of the commodities
+    the EU treats as a deforestation risk.
+  pl: >-
+    Olej wyciskany z owocu (miąższu) palmy olejowej (Elaeis guineensis). Bogaty w tłuszcze nasycone, stały
+    w temperaturze pokojowej bez utwardzania, tani i wszechstronny — stąd jego obecność w wyrobach
+    piekarniczych, margarynach, zupach instant i słodyczach. Przepisy UE o etykietowaniu wymagają podania
+    konkretnej rośliny ("olej palmowy"), dlatego widać go na liście składników, a nie krył się pod "olejem
+    roślinnym". Głównym udokumentowanym zastrzeżeniem wobec niego nie jest bezpieczeństwo żywności, lecz
+    użytkowanie gruntów: uprawa palmy jest jednym z surowców, które UE traktuje jako ryzyko wylesiania.
+variants:
+  - id: refined
+    names:
+      en: [refined palm oil, RBD palm oil]
+      pl: [olej palmowy rafinowany, rafinowany olej palmowy]
+    process:
+      en: "Refined, bleached and deodorised (RBD) — the standard food-industry form, pale and near-flavourless."
+      pl: "Rafinowany, odbarwiany i dezodoryzowany (RBD) — standardowa forma przemysłowa, blada i praktycznie bez smaku/zapachu."
+    tells: ['rafinowan.*palmow', 'palmow.*rafinowan', 'refined palm oil', 'rbd palm oil']
+    prior: 0.9
+    prior_rationale:
+      en: "Almost all palm oil in manufactured food is RBD; unrefined/red palm oil is a small specialty niche always marketed as such."
+      pl: "Niemal cały olej palmowy w żywności przetworzonej to RBD; nierafinowany/czerwony olej palmowy to niewielka niszowa specjalność, zawsze tak oznaczana."
+  - id: red
+    names:
+      en: [red palm oil, virgin palm oil]
+      pl: [czerwony olej palmowy, olej palmowy nierafinowany]
+    process:
+      en: "Unrefined or minimally refined; keeps the carotenoids that give it a red-orange colour and a stronger flavour."
+      pl: "Nierafinowany lub minimalnie rafinowany; zachowuje karotenoidy dające czerwono-pomarańczowy kolor i wyraźniejszy smak."
+    tells: ['czerwony olej palmowy', 'red palm oil', 'virgin palm oil', 'olej palmowy nierafinowany']
+    prior: 0.1
+    prior_rationale:
+      en: "A specialty product always sold on its colour/flavour, so it is named when present."
+      pl: "Produkt specjalny, sprzedawany właśnie ze względu na kolor/smak, więc gdy jest obecny — jest nazwany."
+assertions:
+  - code: ethics.palm_oil
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Palm oil is one of the seven commodities the EU deforestation regulation requires traders to show is not linked to post-2020 deforestation."
+      pl: "Olej palmowy jest jednym z siedmiu surowców, dla których unijne rozporządzenie o wylesianiu wymaga od podmiotów wykazania braku związku z wylesianiem po 2020 r."
+    sources: [{ id: reg-2023-1115 }]
+  - code: origin.vegetable_oil_derived
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "A pressed vegetable oil; EU labelling requires its specific plant origin to be named."
+      pl: "Wyciskany olej roślinny; przepisy UE o etykietowaniu wymagają podania jego konkretnego pochodzenia rośliny."
+    sources: [{ id: reg-1169-2011, locator: "Annex VII Part A, point 8" }]
+  - code: processing.refined
+    variant: refined
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Refined, bleached and deodorised before food use."
+      pl: "Rafinowany, odbarwiany i dezodoryzowany przed użyciem w żywności."
+    sources: [{ id: reg-1169-2011, locator: "Annex VII Part A, point 8" }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Left out RSPO/certification status as a per-batch fact: whether a given palm oil is RSPO-certified is not something an ingredient list can show, and belongs to product-level sourcing data rather than this ingredient entry."

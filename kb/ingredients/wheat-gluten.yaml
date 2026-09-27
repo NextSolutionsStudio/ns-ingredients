@@ -1,0 +1,43 @@
+id: wheat-gluten
+type: protein
+parent: wheat
+names:
+  en: [wheat gluten, vital wheat gluten]
+  pl: [gluten pszenny]
+  de: [Weizengluten]
+summary:
+  en: "The protein isolated from wheat (mainly gliadin and glutenin), used as a dough strengthener or meat-analogue base; the concentrated form of wheat's own gluten allergen."
+  pl: "Białko wyizolowane z pszenicy (głównie gliadyna i glutenina), stosowane jako wzmacniacz ciasta lub baza analogów mięsa; skoncentrowana forma glutenu obecnego w pszenicy."
+assertions:
+  - code: allergen.gluten
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A wheat-derived product; EU Annex II item 1 covers products of wheat.", pl: "Produkt pochodzący z pszenicy; Aneks II UE, punkt 1, obejmuje produkty z pszenicy." }
+    sources: [{ id: reg-1169-2011, locator: "Annex II item 1" }]
+  - code: origin.plant
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Isolated from wheat grain.", pl: "Wyizolowany z ziarna pszenicy." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A plant protein.", pl: "Białko roślinne." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A plant protein.", pl: "Białko roślinne." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.gluten_free
+    certainty: "no"
+    kind: fact
+    grade: A
+    note: { en: "Gluten itself, concentrated.", pl: "Sam gluten, w postaci skoncentrowanej." }
+    sources: [{ id: reg-1169-2011 }]
+review_status: draft
+provenance: ai-drafted

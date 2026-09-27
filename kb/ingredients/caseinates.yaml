@@ -1,0 +1,53 @@
+id: caseinates
+type: protein
+names:
+  en: [sodium caseinate, calcium caseinate, caseinate, caseinates]
+  pl: [kazeinian sodu, kazeinian wapnia, kazeiniany, kazeinian]
+  de: [Natriumkaseinat, Calciumkaseinat, Kaseinat]
+summary:
+  en: >-
+    Milk casein precipitated with acid and then neutralised with an alkali (sodium or calcium hydroxide)
+    to make a highly soluble milk-protein salt, used as an emulsifier and protein source in coffee
+    creamers, processed cheese, meat products and protein supplements. Unlike cheese, caseinate manufacture
+    does not use rennet.
+  pl: >-
+    Kazeina mleczna wytrącana kwasem, a następnie neutralizowana zasadą (wodorotlenkiem sodu lub wapnia),
+    dająca silnie rozpuszczalną sól białka mlecznego, stosowaną jako emulgator i źródło białka w
+    śmietankach do kawy, serze przetworzonym, produktach mięsnych i suplementach białkowych. W
+    przeciwieństwie do produkcji sera, wytwarzanie kazeinianów nie wykorzystuje podpuszczki.
+  de: >-
+    Milchkasein wird mit Säure ausgefällt und anschließend mit einer Lauge (Natrium- oder
+    Calciumhydroxid) neutralisiert, wodurch ein gut lösliches Milchproteinsalz entsteht, das als
+    Emulgator und Proteinquelle in Kaffeeweißern, Schmelzkäse, Fleischerzeugnissen und
+    Proteinpräparaten verwendet wird.
+assertions:
+  - code: allergen.milk
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Milk-derived; declared as a milk allergen. EU Annex II item 7.", pl: "Pochodzi z mleka; deklarowana jako alergen mleczny. Aneks II UE, punkt 7." }
+    sources: [{ id: reg-1169-2011, locator: "Annex II item 7" }]
+  - code: origin.dairy
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Made from milk casein.", pl: "Wytwarzana z kazeiny mlecznej." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegan
+    certainty: "no"
+    kind: fact
+    grade: A
+    note: { en: "Dairy-derived.", pl: "Pochodzenie mleczne." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: fact
+    grade: B
+    note:
+      en: "Made by acid precipitation of casein followed by neutralisation with an alkali, not by rennet coagulation as in cheesemaking."
+      pl: "Wytwarzana przez wytrącanie kazeiny kwasem, a następnie neutralizację zasadą, a nie przez koagulację podpuszczką jak w produkcji sera."
+    sources: [{ id: ad-wikipedia-sodium-caseinate }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Left diet.lactose_free out: caseinate is a washed, purified casein salt with little lactose, but no numeric composition source was opened this session to state a certainty either way."

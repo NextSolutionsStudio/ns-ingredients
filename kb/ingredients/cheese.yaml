@@ -1,0 +1,59 @@
+id: cheese
+type: ingredient
+names:
+  en: [cheese]
+  pl: [ser, ser żółty, sery]
+  de: [Käse, Hartkäse]
+summary:
+  en: >-
+    Milk curd, typically coagulated and then ripened; one of the EU's fourteen regulated allergens (milk).
+    The coagulant may be animal rennet or a microbial/fermentation-produced chymosin, and a label does not
+    say which.
+  pl: >-
+    Skrzep mleka, zwykle skoagulowany i następnie dojrzewający; jeden z czternastu regulowanych alergenów
+    UE (mleko). Koagulant może być podpuszczką zwierzęcą lub chymozyną mikrobiologiczną/fermentacyjną, a
+    etykieta nie mówi, którą zastosowano.
+  de: >-
+    Milchgerinnung, in der Regel geronnen und anschließend gereift; eines der vierzehn geregelten
+    EU-Allergene (Milch).
+assertions:
+  - code: allergen.milk
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A milk product; EU Annex II item 7.", pl: "Produkt mleczny; Aneks II UE, punkt 7." }
+    sources: [{ id: reg-1169-2011, locator: "Annex II item 7" }]
+  - code: origin.dairy
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Made from milk curd.", pl: "Wytwarzany ze skrzepu mleka." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegan
+    certainty: "no"
+    kind: fact
+    grade: A
+    note: { en: "An animal (dairy) product.", pl: "Produkt zwierzęcy (mleczny)." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegetarian
+    certainty: maybe
+    kind: estimate
+    grade: C
+    note:
+      en: >-
+        Cheesemaking coagulates the milk with either animal rennet or a microbial/fermentation-produced
+        chymosin (not animal-derived). Enzyme-industry estimates put fermentation-produced chymosin at
+        roughly 65-90% of commercial cheese production in the US/Europe, but a "cheese" ingredient label
+        does not disclose which coagulant made the source cheese, so a minority animal-rennet route cannot
+        be ruled out.
+      pl: >-
+        Produkcja sera koaguluje mleko podpuszczką zwierzęcą albo chymozyną mikrobiologiczną/fermentacyjną
+        (niepochodzenia zwierzęcego). Szacunki przemysłu enzymatycznego wskazują na ok. 65-90% produkcji
+        sera w USA/Europie z użyciem chymozyny fermentacyjnej, ale etykieta składnika "ser" nie mówi, jaki
+        koagulant zastosowano w serze źródłowym, więc mniejszościowej podpuszczki zwierzęcej nie można
+        wykluczyć.
+    sources: [{ id: prot-vrg-fpc-rennet }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Left diet.lactose_free out: lactose content varies hugely by cheese type (fresh vs hard/ripened) and no source specific to a generic 'cheese' ingredient was opened this session."

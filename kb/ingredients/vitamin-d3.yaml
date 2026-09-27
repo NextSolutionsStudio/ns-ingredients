@@ -1,0 +1,102 @@
+id: vitamin-d3
+type: nutrient
+ids: { cas: "67-97-0" }
+names:
+  en: [vitamin d3, cholecalciferol]
+  pl: [witamina d3, cholekalcyferol]
+  de: [Vitamin D3, Cholecalciferol]
+summary:
+  en: >-
+    The animal/fungal-active form of vitamin D. Most commercial cholecalciferol is extracted
+    from lanolin (sheep wool grease); a newer, minority route extracts the same molecule from
+    lichen, which is marketed specifically because it is the only known non-animal source and
+    lets a product carry a vegan claim. As with E 471, when a label just says "vitamin D3"
+    without naming the source, the route is undisclosed.
+  pl: >-
+    Aktywna zwierzęco-grzybowa forma witaminy D. Większość handlowego cholekalcyferolu
+    pochodzi z lanoliny (tłuszczu z wełny owczej); nowsza, mniejszościowa metoda otrzymuje tę
+    samą molekułę z porostów, co jest reklamowane właśnie dlatego, że to jedyne znane
+    niezwierzęce źródło i pozwala oznaczyć produkt jako wegański. Podobnie jak w przypadku
+    E 471, gdy etykieta podaje tylko „witamina D3" bez wskazania źródła, metoda pozostaje
+    nieujawniona.
+variants:
+  - id: lanolin
+    names:
+      en: [Vitamin D3 from lanolin]
+      de: [Vitamin D3 aus Lanolin]
+    process:
+      en: >-
+        Cholesterol from sheep wool grease (lanolin) is converted to 7-dehydrocholesterol,
+        then to cholecalciferol by UV irradiation; the majority commercial route.
+      pl: >-
+        Cholesterol z tłuszczu wełny owczej (lanoliny) przekształcany jest do
+        7-dehydrocholesterolu, a następnie do cholekalcyferolu przez napromienianie UV;
+        większościowa metoda handlowa.
+    tells: ['\blanolin']
+    prior: 0.85
+    prior_rationale:
+      en: >-
+        Lanolin is the default, lower-cost route. Makers who pay for lichen extraction almost
+        always print "vegan", "lichen" or "plant-based" on the label, so silence leans toward
+        the traditional animal-derived route.
+      pl: >-
+        Lanolina to domyślna, tańsza metoda. Producenci płacący za ekstrakcję z porostów
+        prawie zawsze piszą na etykiecie „wegańska", „z porostów" lub „roślinna", więc brak
+        takiego oznaczenia wskazuje na tradycyjną metodę zwierzęcą.
+  - id: lichen
+    names:
+      en: [Vitamin D3 from lichen, lichen-derived vitamin D3]
+      pl: [witamina D3 z porostów]
+      de: [Vitamin D3 aus Flechten]
+    process:
+      en: >-
+        Extracted from lichen (e.g. Cladonia rangiferina), described by suppliers as the only
+        known non-animal source of cholecalciferol; delivers the same molecule as the lanolin
+        route and is used specifically to support a vegan claim.
+      pl: >-
+        Otrzymywana z porostów (np. Cladonia rangiferina), opisywana przez dostawców jako
+        jedyne znane niezwierzęce źródło cholekalcyferolu; dostarcza tę samą molekułę co
+        metoda z lanoliny i jest stosowana właśnie w celu potwierdzenia oznaczenia
+        wegańskiego.
+    tells: ['z porostow', '\blichen\b', '\bflechte']
+    prior: 0.15
+    prior_rationale:
+      en: "A minority, premium route; almost always labelled, so silence leans toward lanolin."
+      pl: "Mniejszościowa, premium metoda; prawie zawsze oznaczana, więc brak oznaczenia wskazuje na lanolinę."
+assertions:
+  - code: diet.vegan
+    variant: lanolin
+    certainty: "no"
+    kind: fact
+    grade: A
+    note:
+      en: "Lanolin is sheep wool grease; an animal-derived starting material."
+      pl: "Lanolina to tłuszcz z wełny owczej; surowiec pochodzenia zwierzęcego."
+    sources: [{ id: biovit-vitamin-d3-lichen }]
+  - code: diet.vegan
+    variant: lichen
+    certainty: yes
+    kind: estimate
+    grade: C
+    note:
+      en: "Lichen is described as the only non-animal source of cholecalciferol; the extraction itself uses no animal material."
+      pl: "Porosty opisywane są jako jedyne niezwierzęce źródło cholekalcyferolu; sama ekstrakcja nie wykorzystuje surowców zwierzęcych."
+    sources: [{ id: biovit-vitamin-d3-lichen }]
+  - code: diet.vegan
+    certainty: maybe
+    kind: estimate
+    grade: D
+    note:
+      en: >-
+        When a label just says "vitamin D3" with no source named, the route is undisclosed;
+        lanolin remains the majority route, so this leans toward "no" without being certain.
+      pl: >-
+        Gdy etykieta podaje tylko „witamina D3" bez wskazania źródła, metoda nie jest
+        ujawniona; lanolina wciąż jest metodą większościową, więc bardziej prawdopodobne jest
+        „nie", choć bez pewności.
+    sources: [{ id: biovit-vitamin-d3-lichen }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "EFSA's 2023 tolerable-upper-intake-level opinion for vitamin D (with the calcidiol-monohydrate conversion factor) was located but not opened this session, so no reference_values entry is recorded here yet."
+  - "No EU novel-food or other EU-jurisdiction regulatory determination for the lichen route was found this session; the diet.vegan claims above rest on a single manufacturer source, hence the estimate/lower grades rather than fact/A."

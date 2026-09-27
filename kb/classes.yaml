@@ -1,0 +1,80 @@
+# Functional classes of food additives, as they appear before additive names on EU labels
+# ("emulgator: lecytyny", "Säureregulator: Citronensäure"). Category names from
+# Reg (EU) 1169/2011 Annex VII Part C, with the plural forms labels actually use.
+# provenance: ai-drafted from the regulation; review_status: draft (names need a native check).
+classes:
+  - id: acid
+    names: { en: [acid, acids], pl: [kwas, kwasy], de: [säuerungsmittel] }
+    source: reg-1169-2011
+  - id: acidity-regulator
+    names: { en: [acidity regulator, acidity regulators], pl: [regulator kwasowości, regulatory kwasowości], de: [säureregulator, säureregulatoren] }
+    source: reg-1169-2011
+  - id: anti-caking-agent
+    names: { en: [anti-caking agent, anti-caking agents, anticaking agent], pl: [substancja przeciwzbrylająca, substancje przeciwzbrylające], de: [trennmittel, rieselhilfe] }
+    source: reg-1169-2011
+  - id: anti-foaming-agent
+    names: { en: [anti-foaming agent, anti-foaming agents], pl: [substancja przeciwpieniąca, substancje przeciwpieniące], de: [schaumverhüter] }
+    source: reg-1169-2011
+  - id: antioxidant
+    names: { en: [antioxidant, antioxidants], pl: [przeciwutleniacz, przeciwutleniacze], de: [antioxidationsmittel, antioxidans] }
+    source: reg-1169-2011
+  - id: bulking-agent
+    names: { en: [bulking agent, bulking agents], pl: [substancja wypełniająca, substancje wypełniające], de: [füllstoff, füllstoffe] }
+    source: reg-1169-2011
+  - id: colour
+    names: { en: [colour, colours, color, colors, colouring], pl: [barwnik, barwniki], de: [farbstoff, farbstoffe] }
+    source: reg-1169-2011
+  - id: emulsifier
+    names: { en: [emulsifier, emulsifiers], pl: [emulgator, emulgatory], de: [emulgator, emulgatoren] }
+    source: reg-1169-2011
+  - id: emulsifying-salts
+    names: { en: [emulsifying salt, emulsifying salts], pl: [sól emulgująca, sole emulgujące], de: [schmelzsalz, schmelzsalze] }
+    source: reg-1169-2011
+  - id: firming-agent
+    names: { en: [firming agent, firming agents], pl: [substancja wiążąca, substancje wiążące], de: [festigungsmittel] }
+    source: reg-1169-2011
+  - id: flavour-enhancer
+    names: { en: [flavour enhancer, flavour enhancers, flavor enhancer], pl: [wzmacniacz smaku, wzmacniacze smaku, wzmacniacz smaku i zapachu], de: [geschmacksverstärker] }
+    source: reg-1169-2011
+  - id: flour-treatment-agent
+    names: { en: [flour treatment agent, flour treatment agents], pl: [środek do przetwarzania mąki], de: [mehlbehandlungsmittel] }
+    source: reg-1169-2011
+  - id: foaming-agent
+    names: { en: [foaming agent, foaming agents], pl: [substancja spieniająca, substancje spieniające], de: [schaummittel] }
+    source: reg-1169-2011
+  - id: gelling-agent
+    names: { en: [gelling agent, gelling agents], pl: [substancja żelująca, substancje żelujące], de: [geliermittel] }
+    source: reg-1169-2011
+  - id: glazing-agent
+    names: { en: [glazing agent, glazing agents], pl: [substancja glazurująca, substancje glazurujące, środek glazurujący], de: [überzugsmittel] }
+    source: reg-1169-2011
+  - id: humectant
+    names: { en: [humectant, humectants], pl: [substancja utrzymująca wilgoć, substancje utrzymujące wilgoć], de: [feuchthaltemittel] }
+    source: reg-1169-2011
+  - id: modified-starch
+    names: { en: [modified starch, modified starches], pl: [skrobia modyfikowana, skrobie modyfikowane], de: [modifizierte stärke] }
+    source: reg-1169-2011
+  - id: preservative
+    names: { en: [preservative, preservatives], pl: [substancja konserwująca, substancje konserwujące, konserwant, konserwanty], de: [konservierungsstoff, konservierungsstoffe] }
+    source: reg-1169-2011
+  - id: propellant-gas
+    names: { en: [propellant gas, propellant], pl: [gaz nośny], de: [treibgas] }
+    source: reg-1169-2011
+  - id: raising-agent
+    names: { en: [raising agent, raising agents], pl: [substancja spulchniająca, substancje spulchniające], de: [backtriebmittel] }
+    source: reg-1169-2011
+  - id: sequestrant
+    names: { en: [sequestrant, sequestrants], pl: [sekwestrant, sekwestranty], de: [komplexbildner] }
+    source: reg-1169-2011
+  - id: stabiliser
+    names: { en: [stabiliser, stabilisers, stabilizer, stabilizers], pl: [stabilizator, stabilizatory], de: [stabilisator, stabilisatoren] }
+    source: reg-1169-2011
+  - id: sweetener
+    names: { en: [sweetener, sweeteners], pl: [substancja słodząca, substancje słodzące, słodzik, słodziki], de: [süßungsmittel, süssungsmittel] }
+    source: reg-1169-2011
+  - id: thickener
+    names: { en: [thickener, thickeners], pl: [substancja zagęszczająca, substancje zagęszczające], de: [verdickungsmittel] }
+    source: reg-1169-2011
+  - id: carrier
+    names: { en: [carrier, carriers], pl: [nośnik, nośniki], de: [trägerstoff, trägerstoffe] }
+    source: reg-1333-2008

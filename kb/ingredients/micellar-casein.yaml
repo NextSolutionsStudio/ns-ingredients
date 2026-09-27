@@ -1,0 +1,67 @@
+id: micellar-casein
+type: protein
+names:
+  en: [micellar casein, micellar casein concentrate, micellar casein isolate, MCC]
+  pl: [kazeina micelarna, kazeina micelarna w postaci koncentratu, izolat kazeiny micelarnej]
+  de: [mizellares Kasein, natives Kasein]
+summary:
+  en: >-
+    Casein purified from skim milk by microfiltration and diafiltration, which retains the protein's native
+    micelle structure without using acid or rennet — unlike traditional acid casein or rennet casein.
+    Digests more slowly than whey, marketed as a "night-time" or slow-release protein, and has a milder
+    flavour and better heat stability than acid-precipitated casein.
+  pl: >-
+    Kazeina oczyszczona z mleka odtłuszczonego przez mikrofiltrację i diafiltrację, co zachowuje naturalną
+    strukturę micelarną białka bez użycia kwasu czy podpuszczki — w odróżnieniu od tradycyjnej kazeiny
+    kwasowej czy podpuszczkowej. Trawi się wolniej niż serwatka, sprzedawana jako białko "na noc" lub o
+    przedłużonym uwalnianiu, ma łagodniejszy smak i lepszą stabilność termiczną niż kazeina wytrącana kwasem.
+  de: >-
+    Aus Magermilch durch Mikrofiltration und Diafiltration gewonnenes Kasein, das die native Mizellstruktur
+    ohne Säure oder Lab erhält — anders als klassisches Säure- oder Labkasein. Wird als langsam
+    verdauliches "Nacht"-Protein vermarktet.
+assertions:
+  - code: origin.dairy
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Purified directly from cow's skim milk by membrane filtration.", pl: "Oczyszczana bezpośrednio z odtłuszczonego mleka krowiego przez filtrację membranową." }
+    sources: [{ id: usda-fdc }]
+  - code: allergen.milk
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Milk-derived; declared as a milk allergen.", pl: "Pochodzi z mleka; deklarowana jako alergen mleczny." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegan
+    certainty: no
+    kind: fact
+    grade: A
+    note: { en: "Dairy-derived.", pl: "Pochodzenie mleczne." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: estimate
+    grade: B
+    note:
+      en: "Made by microfiltration/diafiltration alone, without the acid or rennet coagulation used for acid casein or rennet casein — no animal-derived coagulant enzyme is involved in making the micellar form itself."
+      pl: "Powstaje wyłącznie przez mikrofiltrację/diafiltrację, bez koagulacji kwasem lub podpuszczką stosowanej przy kazeinie kwasowej czy podpuszczkowej — do wytworzenia samej formy micelarnej nie jest potrzebny żaden enzym koagulujący pochodzenia zwierzęcego."
+    sources: [{ id: prot-gea-micellar-casein }]
+  - code: diet.lactose_free
+    certainty: maybe
+    kind: estimate
+    grade: C
+    note:
+      en: "Diafiltration during microfiltration removes most of the lactose along with the whey proteins and minerals, but residual amounts remain and content is not guaranteed to be zero."
+      pl: "Diafiltracja w trakcie mikrofiltracji usuwa większość laktozy wraz z białkami serwatkowymi i minerałami, ale pozostają śladowe ilości i zawartość nie jest gwarantowana jako zerowa."
+    sources: [{ id: prot-gea-micellar-casein }]
+  - code: processing.ultra_processed_marker
+    certainty: yes
+    kind: opinion
+    grade: D
+    note:
+      en: "NOVA explicitly lists 'casein' among the substances of no/rare culinary use that mark a food as ultra-processed."
+      pl: "NOVA wyraźnie wymienia 'kazeinę' wśród substancji o zerowym/rzadkim zastosowaniu kulinarnym, które oznaczają żywność jako wysoko przetworzoną."
+    sources: [{ id: prot-monteiro-2019-nova }]
+review_status: draft
+provenance: ai-drafted
+review_notes: []

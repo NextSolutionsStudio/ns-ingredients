@@ -1,0 +1,62 @@
+id: maltitol
+type: additive
+e_number: E965
+ids: { cas: "585-88-6", wikidata: Q423882, chebi: "CHEBI:68428", pubchem: 493591 }
+names:
+  en: [maltitol, maltitol syrup, D-maltitol]
+  pl: [maltitol, syrop maltitolowy]
+  de: [Maltit]
+functions: [sweetener]
+summary:
+  en: >-
+    A sugar alcohol about 75-90% as sweet as sucrose (2.1 kcal/g), widely used in sugar-free
+    chocolate, chewing gum and confectionery for its low glycaemic impact and non-cariogenic
+    properties. Made in two steps: starch (mainly corn, also tapioca, potato or wheat) is
+    hydrolysed to a high-maltose glucose syrup, which is then catalytically hydrogenated;
+    maltitol is either crystallised out or kept as maltitol syrup (a mixture of maltitol and
+    higher hydrogenated saccharides). Like other polyols it triggers the EU's laxative warning
+    above 10% added polyol.
+  pl: >-
+    Alkohol cukrowy o słodkości ok. 75-90% sacharozy (2,1 kcal/g), szeroko stosowany w
+    bezcukrowej czekoladzie, gumie do żucia i wyrobach cukierniczych ze względu na niski wpływ
+    na glikemię i niekariogenność. Otrzymywany w dwóch etapach: skrobia (głównie kukurydziana,
+    także tapiokowa, ziemniaczana lub pszenna) jest hydrolizowana do syropu glukozowego
+    wysokomaltozowego, który następnie poddaje się katalitycznemu uwodornieniu; maltitol jest
+    albo krystalizowany, albo pozostaje jako syrop maltitolowy (mieszanina maltitolu i wyżej
+    uwodornionych sacharydów). Podobnie jak inne poliole wywołuje obowiązek ostrzeżenia UE o
+    działaniu przeczyszczającym powyżej 10% dodanego poliolu.
+assertions:
+  - code: health.laxative_polyol
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Food containing more than 10% added polyols must carry the statement 'excessive consumption may produce laxative effects'.", pl: "Żywność zawierająca ponad 10% dodanych polioli musi zawierać informację 'nadmierne spożycie może mieć efekt przeczyszczający'." }
+    sources: [{ id: reg-1169-2011, locator: "Annex III, point 2.4" }]
+  - code: regulatory.eu_warning_label
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "The laxative statement above is a mandatory label statement under Annex III of Reg 1169/2011.", pl: "Powyższa informacja o działaniu przeczyszczającym jest obowiązkową informacją na etykiecie na podstawie Załącznika III Rozporządzenia 1169/2011." }
+    sources: [{ id: reg-1169-2011, locator: "Annex III, point 2.4" }]
+  - code: origin.chemical_synthesis
+    certainty: yes
+    kind: fact
+    grade: B
+    note: { en: "Made by catalytic hydrogenation of a high-maltose glucose syrup obtained from starch hydrolysis.", pl: "Otrzymywany przez katalityczne uwodornienie syropu glukozowego wysokomaltozowego, uzyskanego z hydrolizy skrobi." }
+    sources: [{ id: swt-foodadditives-maltitol }]
+  - code: origin.gmo_derived
+    certainty: maybe
+    kind: estimate
+    grade: D
+    note: { en: "Corn is the most common feedstock and is frequently genetically modified in major growing regions; the label rarely says which starch source was used.", pl: "Kukurydza jest najczęstszym surowcem i jest często modyfikowana genetycznie w głównych regionach uprawy; etykieta rzadko podaje, jaki surowiec skrobiowy zastosowano." }
+    sources: [{ id: swt-foodadditives-maltitol }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Group I polyol additive, quantum satis in most categories where polyols are permitted (not permitted in non-alcoholic beverages).", pl: "Dodatek poliolowy grupy I, quantum satis w większości kategorii, w których poliole są dozwolone (niedozwolony w napojach bezalkoholowych)." }
+    source: reg-1333-2008
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "No opened source this session confirms whether wheat-derived maltose syrup retains enough protein to require a gluten declaration — left out pending a directly-opened source."
+  - "EFSA's individual re-evaluation of maltitol (E 965) is still pending as of 2026; the only opinion opened this session (2006, on a new maltitol syrup production process) predates the current re-evaluation programme."

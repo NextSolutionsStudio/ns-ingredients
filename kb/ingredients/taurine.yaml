@@ -1,0 +1,52 @@
+id: taurine
+type: nutrient
+ids: { cas: "107-35-7", chebi: "CHEBI:15891", pubchem: 1123 }
+names:
+  en: [taurine]
+  pl: [tauryna]
+  de: [Taurin]
+summary:
+  en: >-
+    A sulfonic "amino acid" (it carries a sulfonic, not a carboxylic, acid group, and is not used to build
+    proteins) abundant in meat, fish and dairy but essentially absent from plants. Widely added to energy
+    drinks and pre-workouts, often alongside caffeine. Despite its natural presence in animal tissue,
+    commercial supplement- and food-grade taurine today is manufactured by chemical synthesis rather than
+    extracted from animals, because synthesis is far cheaper at scale.
+  pl: >-
+    Sulfonowy "aminokwas" (zawiera grupę sulfonową, nie karboksylową, i nie jest wykorzystywany do budowy
+    białek), obfity w mięsie, rybach i mleku, a praktycznie nieobecny w roślinach. Powszechnie dodawana do
+    napojów energetycznych i przedtreningówek, często razem z kofeiną. Mimo naturalnej obecności w tkance
+    zwierzęcej, tauryna o czystości handlowej/spożywczej jest dziś produkowana syntezą chemiczną, a nie
+    ekstrahowana ze zwierząt, bo synteza jest przy tej skali znacznie tańsza.
+  de: >-
+    Eine sulfonhaltige "Aminosäure" (trägt eine Sulfon- statt einer Carbonsäuregruppe und wird nicht in
+    Proteine eingebaut), reichlich in Fleisch, Fisch und Milch, in Pflanzen aber praktisch abwesend. Wird
+    häufig Energydrinks und Pre-Workouts zugesetzt, oft zusammen mit Koffein. Handelsübliches Taurin wird
+    heute chemisch synthetisiert, nicht aus Tieren gewonnen.
+assertions:
+  - code: origin.chemical_synthesis
+    certainty: yes
+    kind: fact
+    grade: B
+    note:
+      en: "Industrial routes react ethylene oxide with sodium bisulfite (via sodium isethionate) or sulfonate ethanolamine; essentially all commercial supplement/food-grade taurine is made this way rather than extracted from animal tissue, on cost grounds."
+      pl: "Przemysłowe drogi to reakcja tlenku etylenu z wodorosiarczynem sodu (przez izetionian sodu) lub sulfonowanie etanolaminy; praktycznie cała handlowa tauryna spożywcza/suplementowa powstaje tak, a nie przez ekstrakcję z tkanki zwierzęcej, z powodów kosztowych."
+    sources: [{ id: prot-taurine-synthesis-newsmedical }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: B
+    note:
+      en: "As supplied, taurine is a synthetic chemical, not an animal extract — even though the same molecule occurs naturally in meat and fish as a dietary source."
+      pl: "W dostarczanej postaci tauryna jest związkiem syntetycznym, a nie ekstraktem zwierzęcym — mimo że ta sama molekuła występuje naturalnie w mięsie i rybach jako składnik diety."
+    sources: [{ id: prot-taurine-synthesis-newsmedical }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: fact
+    grade: B
+    note: { en: "Same chemical-synthesis basis as the vegan assessment.", pl: "Ta sama podstawa (synteza chemiczna) co w ocenie wegańskiej." }
+    sources: [{ id: prot-taurine-synthesis-newsmedical }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Did not open an EFSA opinion specific to taurine (e.g. its safety in combination with caffeine in energy drinks) this session, so no health.* assertion or reference_value is made for it — left out rather than cited from memory."

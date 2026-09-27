@@ -1,0 +1,39 @@
+id: butter
+type: fat
+names:
+  en: [butter]
+  pl: [masło]
+  de: [Butter]
+summary:
+  en: "Fat churned and separated from cream or milk; one of the EU's fourteen regulated allergens (milk), used across baking, confectionery and cooking."
+  pl: "Tłuszcz uzyskiwany przez ubijanie i oddzielanie ze śmietanki lub mleka; jeden z czternastu regulowanych alergenów UE (mleko), stosowany w piekarstwie, cukiernictwie i kuchni."
+  de: "Aus Sahne oder Milch gebuttertes und abgetrenntes Fett; eines der vierzehn geregelten EU-Allergene (Milch)."
+assertions:
+  - code: allergen.milk
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A milk product; EU Annex II item 7.", pl: "Produkt mleczny; Aneks II UE, punkt 7." }
+    sources: [{ id: reg-1169-2011, locator: "Annex II item 7" }]
+  - code: origin.dairy
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Churned from cream or milk.", pl: "Uzyskiwane przez ubijanie śmietanki lub mleka." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegan
+    certainty: "no"
+    kind: fact
+    grade: A
+    note: { en: "An animal (dairy) product.", pl: "Produkt zwierzęcy (mleczny)." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Compatible with a lacto-ovo-vegetarian diet.", pl: "Zgodne z dietą laktoowowegetariańską." }
+    sources: [{ id: reg-1169-2011 }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Left diet.lactose_free out: butter is mostly fat with only a trace of lactose, but no numeric composition source was opened this session to state a certainty either way."

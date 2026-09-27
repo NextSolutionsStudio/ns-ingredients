@@ -1,0 +1,337 @@
+# Sports nutrition: protein powders, gainers, pre-workouts and bars — the wedge.
+# Composite labels written for this corpus in the style of real EU/US packs; no brand's list is copied.
+
+- id: pl-wpc-cocoa-soy
+  lang: pl
+  category: protein_powder
+  note: The commonest Polish WPC pattern — allergen in capitals, soy lecithin named, trace clause.
+  text: >-
+    Składniki: koncentrat białek serwatkowych (z MLEKA) 80%, kakao o obniżonej zawartości tłuszczu 7%,
+    aromat, zagęstnik: guma ksantanowa, emulgator: lecytyna sojowa, substancja słodząca: sukraloza, sól.
+    Produkt może zawierać JAJA i ORZECHY.
+  expect:
+    match:
+      koncentrat białek serwatkowych: whey-protein-concentrate
+      kakao o obniżonej zawartości tłuszczu: cocoa-powder
+      guma ksantanowa: xanthan-gum
+      lecytyna sojowa: lecithins
+      sukraloza: sucralose
+      sól: salt
+    variant: { lecithins: soy }
+    flags: [allergen.milk=yes, allergen.soybeans=yes]
+    absent: [
+      origin.petrochemical_synthetic,
+      ethics.palm_oil,
+      health.southampton_colour,
+      allergen.eggs,
+      allergen.nuts,
+    ]
+    diets: { vegan: "no", lactose_free: "no" }
+    may_contain: [allergen.eggs, allergen.nuts]
+    statements: []
+
+- id: pl-wpi-sunflower
+  lang: pl
+  category: protein_powder
+  note: Two-ingredient isolate. Sunflower lecithin must NOT raise soy.
+  text: "Składniki: izolat białek serwatkowych (z MLEKA) 97%, emulgator: lecytyna słonecznikowa."
+  expect:
+    match:
+      izolat białek serwatkowych: whey-protein-isolate
+      lecytyna słonecznikowa: lecithins
+    variant: { lecithins: sunflower }
+    flags: [allergen.milk=yes]
+    absent: [allergen.soybeans, origin.gmo_derived, allergen.gluten]
+    diets: { vegan: "no", gluten_free: "yes" }
+
+- id: pl-gainer-fat-powder
+  lang: pl
+  category: protein_powder
+  note: >-
+    Gainer with a vegetable-fat powder whose oil is named — the operator's "oil derivatives in protein
+    powder" case. Wheat-based glucose syrups and maltodextrins are exempt from gluten labelling
+    (Reg 1169/2011 Annex II 1(a)(b)), so no gluten flag.
+  text: >-
+    Składniki: maltodekstryna, koncentrat białek serwatkowych (z MLEKA) 20%, dekstroza, kakao w proszku o
+    obniżonej zawartości tłuszczu, tłuszcz roślinny w proszku (olej kokosowy, syrop glukozowy, kazeinian
+    sodu (z MLEKA)), aromat, sól, zagęstnik: guma guar, substancje słodzące: acesulfam K, sukraloza.
+  expect:
+    match:
+      maltodekstryna: maltodextrin
+      koncentrat białek serwatkowych: whey-protein-concentrate
+      dekstroza: dextrose
+      tłuszcz roślinny w proszku: vegetable-fat-powder
+      olej kokosowy: coconut-oil
+      syrop glukozowy: glucose-syrup
+      kazeinian sodu: caseinates
+      guma guar: guar-gum
+      acesulfam K: acesulfame-k
+      sukraloza: sucralose
+    variant: { vegetable-fat-powder: coconut }
+    flags: [allergen.milk=yes, origin.vegetable_oil_derived]
+    absent: [ethics.palm_oil, health.trans_fat_source, allergen.gluten, allergen.soybeans]
+    diets: { vegan: "no" }
+
+- id: pl-whey-mct-palm
+  lang: pl
+  category: protein_powder
+  note: MCT powder whose oil is declared palm-derived; E471 by number only.
+  text: >-
+    Składniki: koncentrat białek serwatkowych (z MLEKA) 70%, olej MCT w proszku (olej MCT z oleju
+    palmowego, maltodekstryna, kazeinian sodu (z MLEKA), dwutlenek krzemu), inulina, aromat, emulgator:
+    E471, substancja słodząca: sukraloza.
+  expect:
+    match:
+      koncentrat białek serwatkowych: whey-protein-concentrate
+      maltodekstryna: maltodextrin
+      kazeinian sodu: caseinates
+      dwutlenek krzemu: silicon-dioxide
+      inulina: inulin
+      E471: mono-and-diglycerides
+      sukraloza: sucralose
+    variant: { mono-and-diglycerides: ~plant }
+    flags: [allergen.milk=yes, origin.vegetable_oil_derived=yes, ethics.palm_oil=yes]
+    absent: [allergen.soybeans, health.trans_fat_source]
+    diets: { vegan: "no" }
+
+- id: en-us-whey-blend
+  lang: en
+  category: protein_powder
+  note: US layout — "Protein Blend" header, bare "Lecithin", and a "Contains:" allergen statement naming soy.
+  text: >-
+    Ingredients: Protein Blend (Whey Protein Isolate, Whey Protein Concentrate, Whey Peptides), Cocoa
+    (Processed with Alkali), Natural and Artificial Flavors, Lecithin, Salt, Acesulfame Potassium,
+    Sucralose. Contains: Milk, Soy.
+  expect:
+    match:
+      whey protein isolate: whey-protein-isolate
+      whey protein concentrate: whey-protein-concentrate
+      whey peptides: whey-protein-hydrolysate
+      lecithin: lecithins
+      salt: salt
+      acesulfame potassium: acesulfame-k
+      sucralose: sucralose
+    flags: [allergen.milk=yes, allergen.soybeans]
+    absent: [origin.petrochemical_synthetic, health.southampton_colour]
+    diets: { vegan: "no" }
+
+- id: de-whey-vanilla
+  lang: de
+  category: protein_powder
+  text: >-
+    Zutaten: Molkenproteinkonzentrat (MILCH) 75 %, Molkenproteinisolat (MILCH) 20 %, Aroma,
+    Verdickungsmittel: Xanthan, Emulgator: Sojalecithin, Süßungsmittel: Sucralose. Kann Spuren von Ei,
+    Gluten und Erdnüssen enthalten.
+  expect:
+    match:
+      Molkenproteinkonzentrat: whey-protein-concentrate
+      Molkenproteinisolat: whey-protein-isolate
+      Xanthan: xanthan-gum
+      Sojalecithin: lecithins
+      Sucralose: sucralose
+    variant: { lecithins: soy }
+    flags: [allergen.milk=yes, allergen.soybeans=yes]
+    absent: [allergen.eggs, allergen.gluten, allergen.peanuts]
+    diets: { vegan: "no" }
+    may_contain: [allergen.eggs, allergen.gluten, allergen.peanuts]
+
+- id: pl-vegan-pea
+  lang: pl
+  category: protein_powder
+  note: >-
+    Plant protein. Brown-rice protein is not in the KB yet and must stay unmatched rather than fuzzy-match
+    into pea protein. Soy is a trace only.
+  text: >-
+    Składniki: izolat białka grochu 60%, białko ryżu brązowego 25%, kakao w proszku, aromat naturalny,
+    zagęstnik: guma guar, substancja słodząca: glikozydy stewiolowe ze stewii, sól. Może zawierać SOJĘ.
+  expect:
+    match:
+      izolat białka grochu: pea-protein
+      białko ryżu brązowego: null
+      kakao w proszku: cocoa-powder
+      aromat naturalny: natural-flavouring
+      guma guar: guar-gum
+      glikozydy stewiolowe ze stewii: steviol-glycosides
+      sól: salt
+    variant: { steviol-glycosides: leaf-extract }
+    absent: [allergen.milk, allergen.soybeans, origin.petrochemical_synthetic, origin.animal]
+    may_contain: [allergen.soybeans]
+
+- id: pl-collagen-bovine
+  lang: pl
+  category: protein_powder
+  text: >-
+    Składniki: hydrolizat kolagenu wołowego 95%, kwas cytrynowy, aromat, substancja słodząca: sukraloza,
+    witamina C (kwas L-askorbinowy).
+  expect:
+    match:
+      hydrolizat kolagenu wołowego: collagen-peptides
+      kwas cytrynowy: citric-acid
+      sukraloza: sucralose
+      kwas L-askorbinowy: ascorbic-acid
+    variant: { collagen-peptides: bovine }
+    absent: [allergen.fish, allergen.milk]
+    diets: { vegan: "no", vegetarian: "no" }
+
+- id: en-micellar-casein
+  lang: en
+  category: protein_powder
+  text: >-
+    Ingredients: Micellar Casein (Milk) 92%, Fat Reduced Cocoa Powder, Flavouring, Thickener (Xanthan
+    Gum), Sweetener (Sucralose), Emulsifier (Sunflower Lecithin). May contain traces of egg, gluten and soy.
+  expect:
+    match:
+      micellar casein: micellar-casein
+      fat reduced cocoa powder: cocoa-powder
+      flavouring: flavouring
+      xanthan gum: xanthan-gum
+      sucralose: sucralose
+      sunflower lecithin: lecithins
+    variant: { lecithins: sunflower }
+    flags: [allergen.milk=yes]
+    absent: [allergen.soybeans, allergen.eggs, allergen.gluten]
+    diets: { vegan: "no" }
+    may_contain: [allergen.eggs, allergen.gluten, allergen.soybeans]
+
+- id: pl-pre-workout-allura
+  lang: pl
+  category: pre_workout
+  note: >-
+    Bare "kwas jabłkowy" → the DL (petrochemical) prior; Southampton colour with its mandatory sentence;
+    the high-caffeine statement. L-citrulline is not in the KB.
+  text: >-
+    Składniki: monohydrat kreatyny, beta-alanina, L-cytrulina, regulatory kwasowości: kwas jabłkowy, kwas
+    cytrynowy; tauryna, kofeina bezwodna, aromat, substancje słodzące: sukraloza, acesulfam K; barwnik:
+    czerwień allura AC. Barwnik czerwień allura AC może mieć szkodliwy wpływ na aktywność i skupienie
+    uwagi u dzieci. Wysoka zawartość kofeiny. Nie zaleca się dla dzieci i kobiet w ciąży lub karmiących
+    piersią (320 mg/100 g).
+  expect:
+    match:
+      monohydrat kreatyny: creatine-monohydrate
+      beta-alanina: beta-alanine
+      kwas jabłkowy: malic-acid
+      kwas cytrynowy: citric-acid
+      tauryna: taurine
+      kofeina bezwodna: caffeine
+      sukraloza: sucralose
+      acesulfam K: acesulfame-k
+      czerwień allura AC: allura-red
+    variant: { malic-acid: ~dl }
+    flags: [
+      health.caffeine=yes,
+      sport.stimulant,
+      health.southampton_colour=yes,
+      origin.petrochemical_synthetic,
+    ]
+    absent: [allergen.milk, allergen.soybeans]
+    statements: [caffeine_high, southampton]
+
+- id: en-pre-workout-dl-malic
+  lang: en
+  category: pre_workout
+  note: >-
+    The label itself says DL-malic acid — petrochemical becomes a label fact, not a prior. Added caffeine
+    in a food triggers the Annex III caffeine statement, so that warning-label flag is expected.
+  text: >-
+    Ingredients: L-Citrulline DL-Malate (2:1), Beta-Alanine, Creatine Monohydrate, Acid: DL-Malic Acid,
+    Caffeine Anhydrous (200 mg per serving), Natural Flavouring, Sweeteners: Sucralose, Acesulfame K,
+    Anti-caking Agent: Silicon Dioxide, Colour: Beetroot Red.
+  expect:
+    match:
+      beta-alanine: beta-alanine
+      creatine monohydrate: creatine-monohydrate
+      dl-malic acid: malic-acid
+      caffeine anhydrous: caffeine
+      natural flavouring: natural-flavouring
+      sucralose: sucralose
+      acesulfame k: acesulfame-k
+      silicon dioxide: silicon-dioxide
+      beetroot red: beetroot-red
+    variant: { malic-acid: dl }
+    flags: [
+      origin.petrochemical_synthetic=yes,
+      health.caffeine=yes,
+      sport.stimulant,
+      regulatory.eu_warning_label,
+    ]
+    absent: [health.southampton_colour]
+
+- id: de-pre-workout-l-malic
+  lang: de
+  category: pre_workout
+  note: L-malic acid read from the label → the L variant, not the DL prior.
+  text: >-
+    Zutaten: Beta-Alanin, Kreatin-Monohydrat, Säuerungsmittel: Citronensäure, L-Äpfelsäure; Taurin,
+    Koffein, Aroma, Süßungsmittel: Sucralose, Acesulfam K. Erhöhter Koffeingehalt. Für Kinder und
+    schwangere oder stillende Frauen nicht empfohlen.
+  expect:
+    match:
+      Beta-Alanin: beta-alanine
+      Kreatin-Monohydrat: creatine-monohydrate
+      Citronensäure: citric-acid
+      L-Äpfelsäure: malic-acid
+      Taurin: taurine
+      Koffein: caffeine
+      Sucralose: sucralose
+      Acesulfam K: acesulfame-k
+    variant: { malic-acid: l }
+    flags: [health.caffeine=yes, sport.stimulant]
+    absent: [origin.petrochemical_synthetic, health.southampton_colour]
+    statements: [caffeine_high]
+
+- id: pl-bar-maltitol-palm
+  lang: pl
+  category: bar
+  note: Nested coating with ";" separators, polyol laxative statement, collagen making it non-vegetarian.
+  text: >-
+    Składniki: izolat białek mleka (z MLEKA) 25%, polewa kakaowa 20% (substancja słodząca: maltitol;
+    tłuszcz palmowy; kakao w proszku o obniżonej zawartości tłuszczu; emulgator: lecytyny (z SOI)),
+    substancja utrzymująca wilgoć: glicerol, kolagen wołowy, orzechy laskowe 5%, błonnik (inulina), olej
+    rzepakowy, aromat, sól, substancja słodząca: sukraloza. Może zawierać inne orzechy, GLUTEN i JAJA.
+    Spożycie w nadmiernych ilościach może mieć efekt przeczyszczający.
+  expect:
+    match:
+      maltitol: maltitol
+      tłuszcz palmowy: palm-oil
+      lecytyny: lecithins
+      kolagen wołowy: collagen-peptides
+      orzechy laskowe: hazelnuts
+      inulina: inulin
+      olej rzepakowy: rapeseed-oil
+      sól: salt
+      sukraloza: sucralose
+    variant: { lecithins: soy, collagen-peptides: bovine }
+    flags: [
+      allergen.milk=yes,
+      allergen.soybeans=yes,
+      allergen.nuts=yes,
+      health.laxative_polyol,
+      ethics.palm_oil=yes,
+    ]
+    absent: [allergen.gluten, allergen.eggs]
+    diets: { vegan: "no", vegetarian: "no" }
+    may_contain: [allergen.nuts, allergen.gluten, allergen.eggs]
+    statements: [laxative]
+
+- id: en-bar-peanut-pko
+  lang: en
+  category: bar
+  text: >-
+    Ingredients: Milk Protein Isolate, Humectant: Glycerol, Soy Protein Isolate, Palm Kernel Oil,
+    Sweetener: Sucralose, Peanuts (8%), Rapeseed Oil, Salt, Emulsifier: Soya Lecithin, Flavouring. May
+    contain traces of other nuts and sesame.
+  expect:
+    match:
+      soy protein isolate: soy-protein-isolate
+      palm kernel oil: palm-kernel-oil
+      sucralose: sucralose
+      peanuts: peanuts
+      rapeseed oil: rapeseed-oil
+      salt: salt
+      soya lecithin: lecithins
+      flavouring: flavouring
+    variant: { lecithins: soy }
+    flags: [allergen.milk=yes, allergen.soybeans=yes, allergen.peanuts=yes, ethics.palm_oil=yes]
+    absent: [allergen.nuts, allergen.sesame, health.southampton_colour]
+    diets: { vegan: "no" }
+    may_contain: [allergen.nuts, allergen.sesame]

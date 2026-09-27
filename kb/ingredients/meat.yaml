@@ -1,0 +1,66 @@
+id: meat
+type: ingredient
+names:
+  en: [meat]
+  pl: [mięso]
+  de: [Fleisch]
+summary:
+  en: >-
+    The EU's legal term for the edible parts of slaughtered mammals and birds (EU Regulation 853/2004),
+    which for labelling purposes must be qualified by the species it comes from — e.g. beef, pork, poultry
+    meat — and covers skeletal muscle with its naturally occurring fat and connective tissue within set
+    limits (up to 25% for most mammals, 30% for pork, 15% for poultry and rabbit; EU Regulation 1169/2011
+    Annex VII).
+  pl: >-
+    Prawny termin UE oznaczający jadalne części zwierząt poddanych ubojowi — ssaków i ptaków (Rozp. UE
+    853/2004) — który dla celów etykietowania musi być uzupełniony nazwą gatunku, z którego pochodzi, np.
+    wołowina, wieprzowina, mięso drobiowe, i obejmuje tkankę mięśniową z naturalnie występującym tłuszczem
+    i tkanką łączną w ustalonych granicach (do 25% dla większości ssaków, 30% dla wieprzowiny, 15% dla
+    drobiu i królika; Rozp. UE 1169/2011, Aneks VII).
+  de: >-
+    Der EU-Rechtsbegriff für die essbaren Teile geschlachteter Säugetiere und Vögel (EU-Verordnung
+    853/2004), der zur Kennzeichnung mit der Tierart benannt werden muss, von der er stammt — z. B.
+    Rindfleisch, Schweinefleisch, Geflügelfleisch.
+variants:
+  - id: pork
+    names: { en: [pork], pl: [mięso wieprzowe, wieprzowina], de: [Schweinefleisch] }
+    process: { en: "Meat from the domestic pig (Sus domesticus).", pl: "Mięso ze świni domowej (Sus domesticus)." }
+    tells: ["wieprzow", "\\bpork\\b", "schweinefleisch"]
+  - id: beef
+    names: { en: [beef], pl: [mięso wołowe, wołowina], de: [Rindfleisch] }
+    process: { en: "Meat from cattle (Bos taurus).", pl: "Mięso z bydła (Bos taurus)." }
+    tells: ["wolow", "\\bbeef\\b", "rindfleisch"]
+  - id: poultry
+    names:
+      en: [chicken, chicken meat, turkey meat]
+      pl: [mięso drobiowe, mięso z kurczaka, filet z kurczaka, mięso z indyka]
+      de: [Hähnchenfleisch, Geflügelfleisch, Putenfleisch]
+    process: { en: "Meat from farmed birds — chicken, turkey and other poultry.", pl: "Mięso z ptaków hodowlanych — kurczaka, indyka i innego drobiu." }
+    tells: ["drobiow", "kurczak", "indyk", "\\bchicken\\b", "\\bturkey\\b", "hahnchenfleisch", "geflugelfleisch", "putenfleisch"]
+  - id: lamb
+    names: { en: [lamb] }
+    process: { en: "Meat from young sheep (Ovis aries).", pl: "Mięso z młodej owcy (Ovis aries)." }
+    tells: ["\\blamb\\b"]
+assertions:
+  - code: origin.animal
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Edible parts of slaughtered mammals or birds.", pl: "Jadalne części zwierząt poddanych ubojowi — ssaków lub ptaków." }
+    sources: [{ id: ad-reg-853-2004 }]
+  - code: diet.vegan
+    certainty: "no"
+    kind: fact
+    grade: A
+    note: { en: "An animal product.", pl: "Produkt zwierzęcy." }
+    sources: [{ id: ad-reg-853-2004 }]
+  - code: diet.vegetarian
+    certainty: "no"
+    kind: fact
+    grade: A
+    note: { en: "Slaughtered-animal flesh; not compatible with a vegetarian diet.", pl: "Mięso zwierząt poddanych ubojowi; niezgodne z dietą wegetariańską." }
+    sources: [{ id: ad-reg-853-2004 }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "No Polish or German label form was given for the 'lamb' variant in this batch's brief, so only the English name is recorded; add pl/de forms (e.g. jagnięcina/Lammfleisch) in a follow-up pass with their own tells rather than guessing spellings here."

@@ -1,0 +1,117 @@
+id: vitamin-b12
+type: nutrient
+names:
+  en: [vitamin b12, cobalamin]
+  pl: [witamina b12, kobalamina]
+  de: [Vitamin B12, Cobalamin]
+summary:
+  en: >-
+    A family of cobalamin forms, all produced industrially by microbial fermentation.
+    Cyanocobalamin - made from the fermentation broth by treatment with cyanide or
+    thiocyanate for stability - is the dominant commercial and supplement form.
+    Methylcobalamin, hydroxocobalamin and adenosylcobalamin occur naturally in the same
+    fermentation and are sometimes marketed as "active" or superior alternatives, but the
+    best available comparison found no good evidence that they correct or prevent B12
+    deficiency any better than cyanocobalamin.
+  pl: >-
+    Rodzina form kobalaminy, wszystkie wytwarzane przemysłowo metodą fermentacji
+    mikrobiologicznej. Cyjanokobalamina - otrzymywana z brzeczki fermentacyjnej przez
+    działanie cyjanku lub tiocyjanianu dla stabilności - jest dominującą formą handlową i
+    suplementową. Metylokobalamina, hydroksokobalamina i adenozylokobalamina powstają
+    naturalnie w tej samej fermentacji i bywają reklamowane jako „aktywne" lub lepsze
+    alternatywy, ale najlepsze dostępne porównanie nie znalazło dobrych dowodów, że
+    korygują lub zapobiegają niedoborowi B12 skuteczniej niż cyjanokobalamina.
+variants:
+  - id: cyanocobalamin
+    names:
+      en: [cyanocobalamin]
+      pl: [cyjanokobalamina]
+      de: [Cyanocobalamin]
+    process:
+      en: >-
+        Produced by fermentation with Pseudomonas denitrificans or Propionibacterium
+        freudenreichii; the mixture of natural corrinoids is then converted to the stable
+        cyanocobalamin form by treatment with potassium cyanide or thiocyanate.
+      pl: >-
+        Wytwarzana metodą fermentacji z użyciem Pseudomonas denitrificans lub
+        Propionibacterium freudenreichii; mieszanina naturalnych korynoidów jest następnie
+        przekształcana w stabilną cyjanokobalaminę przez działanie cyjanku potasu lub
+        tiocyjanianu.
+    tells: ['cyanocobalamin', 'cyjanokobalamin']
+    prior: 0.6
+    prior_rationale:
+      en: "The default, most stable and cheapest form in fortified food and most supplements."
+      pl: "Domyślna, najbardziej stabilna i najtańsza forma w żywności wzbogacanej i większości suplementów."
+  - id: methylcobalamin
+    names:
+      en: [methylcobalamin]
+      pl: [metylokobalamina]
+      de: [Methylcobalamin]
+    process:
+      en: "One of the coenzyme forms occurring naturally in the fermentation broth; used directly without cyanide conversion."
+      pl: "Jedna z form koenzymatycznych powstających naturalnie w brzeczce fermentacyjnej; stosowana bezpośrednio, bez konwersji cyjankiem."
+    tells: ['methylcobalamin', 'metylokobalamin']
+    prior: 0.25
+    prior_rationale:
+      en: "An actively marketed, higher-priced alternative; brands almost always name it rather than staying silent."
+      pl: "Aktywnie reklamowana, droższa alternatywa; producenci prawie zawsze ją nazywają, rzadko przemilczają."
+  - id: hydroxocobalamin
+    names:
+      en: [hydroxocobalamin]
+      pl: [hydroksokobalamina]
+      de: [Hydroxocobalamin]
+    process:
+      en: "The other main coenzyme-precursor form from fermentation; also used pharmaceutically (injectable B12, cyanide-poisoning antidote)."
+      pl: "Druga główna forma prekursorowa koenzymu z fermentacji; stosowana też farmaceutycznie (iniekcje B12, antidotum na zatrucie cyjankiem)."
+    tells: ['hydroxocobalamin', 'hydroksokobalamin']
+    prior: 0.1
+    prior_rationale:
+      en: "Seen mostly in pharmacy/injectable contexts rather than on food labels."
+      pl: "Spotykana głównie w kontekście farmaceutycznym/iniekcyjnym, rzadziej na etykietach żywności."
+  - id: adenosylcobalamin
+    names:
+      en: [adenosylcobalamin, 5'-deoxyadenosylcobalamin]
+      pl: [adenozylokobalamina]
+      de: [Adenosylcobalamin]
+    process:
+      en: "The remaining naturally occurring coenzyme form from fermentation; the least common in food supplements."
+      pl: "Pozostała naturalnie powstająca forma koenzymatyczna z fermentacji; najrzadsza w suplementach diety."
+    tells: ['adenosylcobalamin', 'deoxyadenosylcobalamin', 'adenozylokobalamin']
+    prior: 0.05
+    prior_rationale:
+      en: "Rarely used alone in food supplements; mostly a research/pharmaceutical form."
+      pl: "Rzadko stosowana samodzielnie w suplementach diety; głównie forma badawcza/farmaceutyczna."
+assertions:
+  - code: origin.microbial_fermentation
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "All commercial cobalamin forms start from bacterial fermentation (Pseudomonas denitrificans or Propionibacterium freudenreichii); cyanocobalamin is then made from the fermentation product by cyanide/thiocyanate treatment."
+      pl: "Wszystkie handlowe formy kobalaminy pochodzą z fermentacji bakteryjnej (Pseudomonas denitrificans lub Propionibacterium freudenreichii); cyjanokobalaminę otrzymuje się następnie z produktu fermentacji przez działanie cyjanku/tiocyjanianu."
+    sources: [{ id: calvillo-b12-fermentation-2022 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "A bacterial fermentation product; no animal material in the process."
+      pl: "Produkt fermentacji bakteryjnej; proces nie wykorzystuje surowców zwierzęcych."
+    sources: [{ id: calvillo-b12-fermentation-2022 }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: "Permitted vitamin-B12 source substances for food supplements (Annex II): cyanocobalamin, hydroxocobalamin, 5'-deoxyadenosylcobalamin, methylcobalamin."
+      pl: "Dopuszczone substancje źródłowe witaminy B12 w suplementach diety (Aneks II): cyjanokobalamina, hydroksokobalamina, 5'-deoksyadenozylokobalamina, metylokobalamina."
+    source: dir-2002-46-annex2
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    "No good evidence that methylcobalamin/adenosylcobalamin outperform cyanocobalamin or
+    hydroxocobalamin for preventing or treating B12 deficiency" is grounded in Obeid R,
+    Fedosov SN, Nexo E. Mol Nutr Food Res. 2015;59(7):1364-72, doi:10.1002/mnfr.201500019
+    (opened this session). It is not recorded as a graded `assertions` entry because the
+    current implication taxonomy has no code for form-to-form efficacy-equivalence claims;
+    add one before promoting this from the summary into a formal assertion.

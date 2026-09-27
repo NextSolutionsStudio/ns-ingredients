@@ -1,0 +1,140 @@
+# Batch-specific citations for the "sweeteners" ingredient batch (sucralose, acesulfame K,
+# aspartame, steviol glycosides, sorbitol, maltitol, xylitol, erythritol, flavourings,
+# vanillin, propylene glycol). Same schema as kb/sources.yaml.
+sources:
+  - id: swt-who-jecfa-iarc-aspartame-2023
+    type: reference
+    title: "Aspartame hazard and risk assessment results released"
+    publisher: "World Health Organization / FAO"
+    year: 2023
+    url: https://www.who.int/news/item/14-07-2023-aspartame-hazard-and-risk-assessment-results-released
+    licence: "WHO — reuse with attribution (CC BY-NC-SA 3.0 IGO)"
+    accessed: 2026-09-27
+    note: "Joint WHO/FAO summary of IARC Monographs Vol. 134 (aspartame classified IARC Group 2B, limited evidence for liver cancer) and the 96th JECFA meeting (ADI 0-40 mg/kg bw reaffirmed, evidence for a human cancer association 'not convincing')."
+  - id: swt-efsa-acesulfame-2025
+    type: regulatory_opinion
+    title: "Re-evaluation of acesulfame K (E 950) as food additive"
+    publisher: European Food Safety Authority
+    year: 2025
+    url: https://doi.org/10.2903/j.efsa.2025.9317
+    doi: 10.2903/j.efsa.2025.9317
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: 2026-09-27
+    note: "Chemical synthesis route (acetoacetamide-N-sulfonate salt, cyclisation/hydrolysis, KOH neutralisation, dichloromethane solvent); raises the ADI from 9 to 15 mg/kg bw/day (NOAEL 1500 mg/kg bw/day in rats); tightens the 5-chloro-acesulfame impurity limit to 0.1 mg/kg on a genotoxicity (QSAR) concern."
+  - id: swt-efsa-erythritol-2023
+    type: regulatory_opinion
+    title: "Re-evaluation of erythritol (E 968) as a food additive"
+    publisher: European Food Safety Authority
+    year: 2023
+    url: https://doi.org/10.2903/j.efsa.2023.8430
+    doi: 10.2903/j.efsa.2023.8430
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: 2026-09-27
+    note: "Sets the first numerical ADI for a polyol, 0.5 g/kg bw/day, to protect against the immediate laxative effect and secondary effects of diarrhoea (electrolyte imbalance); production by fermentation of a carbohydrate feedstock (corn steep liquor/powder, glucose, glucose syrup or sucrose) by the filamentous fungi Moniliella pollinis or M. megachiliensis; states typical exposure already exceeds the ADI in several groups and the laxative warning label remains warranted."
+  - id: swt-efsa-sucralose-2026
+    type: regulatory_opinion
+    title: "Re-evaluation of sucralose (E 955) as a food additive and evaluation of a new application on extension of use of sucralose (E 955) in fine bakery wares"
+    publisher: European Food Safety Authority
+    year: 2026
+    url: https://doi.org/10.2903/j.efsa.2026.9854
+    doi: 10.2903/j.efsa.2026.9854
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: 2026-09-27
+    note: "Confirms sucralose synthesis by three-step selective chlorination of sucrose (sucrose-6-acetate -> chlorination -> de-acylation); reaffirms ADI 15 mg/kg bw/day; found no significant PCDD/PCDF or 3-MCPD formation in tested baking trials but could not confirm safety of the proposed fine-bakery-wares extension because of uncertainty over chlorinated-compound formation under wider/'overcooking' baking conditions."
+  - id: swt-bfr-sucralose-2019
+    type: reference
+    title: "Sucralose - heating above 120 degC can produce substances that are harmful to health"
+    publisher: "Bundesinstitut fur Risikobewertung (BfR)"
+    year: 2019
+    url: https://www.bfr.bund.de/en/notification/sucralose-heating-above-120c-can-produce-substances-that-are-harmful-to-health/
+    licence: "BfR — public communication, reuse with attribution"
+    accessed: 2026-09-27
+    note: "BfR flagged that heating sucralose-containing food above ~120-150 degC (industrial baking/frying/roasting) may dechlorinate it, potentially forming chlorinated organic compounds (dioxins/furans, chloropropanols); advised not to heat sucralose-containing food or to add sucralose only after heating, and referred the question to EFSA's re-evaluation."
+  - id: swt-efsa-steviol-adi-2024
+    type: regulatory_opinion
+    title: "Scientific opinion on the extension of the authorisation of use of the food additive steviol glycosides (E 960a-d) and the modification of the acceptable daily intake (ADI) for steviol"
+    publisher: European Food Safety Authority
+    year: 2024
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11533382/
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: 2026-09-27
+    note: "Confirms the group ADI for steviol glycosides (E 960a-d) stays at 4 mg/kg bw/day as steviol equivalents (EFSA ANS Panel 2010, from a rat carcinogenicity study; JECFA set the same figure 2008-2009); declines the applicant's request to raise it to 6 or 16 mg/kg bw/day."
+  - id: swt-efsa-e960c-2022
+    type: regulatory_opinion
+    title: "Safety of the proposed amendment of the specifications for enzymatically produced steviol glycosides (E 960c): Rebaudioside D produced via enzymatic bioconversion of purified stevia leaf extract"
+    publisher: European Food Safety Authority
+    year: 2022
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9109230/
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: 2026-09-27
+    note: "Describes the E 960c process: a UDP-glucosyltransferase + sucrose synthase enzyme pair (expressed in genetically modified Komagataella phaffii) glucosylates rebaudioside A in purified stevia leaf extract (>=95% steviol glycosides) to rebaudioside D; enzymes are removed by heat/filtration before crystallisation of the product."
+  - id: swt-reg-2021-1156
+    type: reference
+    title: "Commission Regulation (EU) 2021/1156 — renaming of steviol glycosides (E 960) to 'steviol glycosides from Stevia (E 960a)' and introduction of enzymatically produced steviol glycosides (E 960c)"
+    publisher: "Reading Foodlaw (Bryant Research), summarising Commission Regulation (EU) 2021/1156"
+    year: 2021
+    url: https://bryantresearch.co.uk/foodlaw/news/22096.htm
+    licence: "News summary — facts cited, not reproduced"
+    accessed: 2026-09-27
+    note: "In force 3 August 2021 with an 18-month transition (to 2 February 2023): the additive previously listed as 'steviol glycosides (E 960)' is renamed 'steviol glycosides from Stevia (E 960a)'; 'enzymatically produced steviol glycosides (E 960c)' is added as a distinct entry in Annex II to Reg 1333/2008."
+  - id: swt-reg-2025-652
+    type: reference
+    title: "Commission Regulation (EU) 2025/652 — authorisation of steviol glycosides from fermentation using Yarrowia lipolytica (E 960b(i))"
+    publisher: "Food Compliance International, summarising Commission Regulation (EU) 2025/652"
+    year: 2025
+    url: https://foodcomplianceinternational.com/industry-insight/news/5321-commission-authorizes-the-use-of-rebaudioside-m-produced-by-yarrowia-lipolytica-through-fermentation
+    licence: "News summary — facts cited, not reproduced"
+    accessed: 2026-09-27
+    note: "Applicable from 23 April 2025: authorises 'steviol glycosides from fermentation' (E 960b(i)), >=95% rebaudioside M+D+A+B, made by fermenting a simple-sugar feedstock with the genetically modified Yarrowia lipolytica strain VRM; combinable with E 960a-d under the same maximum levels (as steviol equivalents); EFSA found no safety concern at the existing 4 mg/kg bw/day ADI (opinion of 24 October 2023)."
+  - id: swt-efsa-e1520-2018
+    type: regulatory_opinion
+    title: "Re-evaluation of propane-1,2-diol (E 1520) as a food additive"
+    publisher: European Food Safety Authority
+    year: 2018
+    url: https://doi.org/10.2903/j.efsa.2018.5235
+    doi: 10.2903/j.efsa.2018.5235
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: 2026-09-27
+    note: "Describes manufacture as propylene oxide reacted with water (non-catalytic or catalytic hydrolysis), then distilled from the co-produced di-/tri-glycols; keeps the ADI of 25 mg/kg bw/day (JECFA 1973, SCF 1996, no reason to revise in 2018); exposure did not exceed the ADI in any population group at reported use levels."
+  - id: swt-ncbi-propylene-oxide-iarc
+    type: monograph
+    title: "Propylene Oxide (Some Industrial Chemicals) — IARC Monographs, NCBI Bookshelf edition"
+    publisher: "International Agency for Research on Cancer / NCBI Bookshelf"
+    url: https://www.ncbi.nlm.nih.gov/books/NBK507443/
+    licence: "IARC — facts cited, text not reproduced"
+    accessed: 2026-09-27
+    note: "Propylene oxide is manufactured from propylene (a petrochemical light olefin) predominantly via the chlorohydrin process (propylene + chlorine + water, then dehydrochlorination) or by catalytic hydroperoxidation; propylene oxide is then hydrated to propane-1,2-diol (E1520)."
+  - id: swt-wikipedia-vanillin
+    type: reference
+    title: "Vanillin (production section)"
+    publisher: Wikipedia
+    url: https://en.wikipedia.org/wiki/Vanillin
+    licence: "Wikipedia — CC BY-SA 4.0 (cite facts, do not adapt text)"
+    accessed: 2026-09-27
+    note: "~85% of world vanillin is made by petrochemical synthesis from guaiacol (electrophilic substitution with glyoxylic acid, then oxidative decarboxylation), not considered 'natural' under EU rules; ~15% comes from lignosulfonates (paper-industry sulfite pulping by-product) via alkaline oxidation, also not 'natural' (the process is chemical, not physical/enzymatic/microbiological); 'Rhovanil Natural' and similar products use microbial bioconversion of ferulic acid (from rice/wheat bran) and qualify as natural flavouring."
+  - id: swt-foodadditives-sorbitol
+    type: reference
+    title: "Sorbitol (E420) in Food: Uses, Safety and Side Effects"
+    publisher: foodadditives.net
+    url: https://foodadditives.net/sugar-alcohols/sorbitol/
+    licence: "Website — facts cited, not reproduced"
+    accessed: 2026-09-27
+    note: "Sorbitol is made by catalytic hydrogenation of glucose (starch enzymatically broken down to glucose, then hydrogenated with a metal catalyst); feedstock is mainly corn starch, also tapioca, potato or wheat starch; functions as sweetener (~60% as sweet as sucrose, 2.6 kcal/g) and humectant."
+  - id: swt-foodadditives-maltitol
+    type: reference
+    title: "What is Maltitol (E965) in Food? Uses, Health Benefits, Safety, Side Effects"
+    publisher: foodadditives.net
+    url: https://foodadditives.net/sugar-alcohols/maltitol/
+    licence: "Website — facts cited, not reproduced"
+    accessed: 2026-09-27
+    note: "Maltitol/maltitol syrup is made by catalytic hydrogenation of maltose or high-maltose glucose syrup (itself from starch hydrolysis); feedstock mainly corn starch, also tapioca, potato or wheat starch; ~75-90% as sweet as sucrose, 2.1 kcal/g, non-cariogenic, lower glycaemic impact."
+  - id: swt-frontiers-xylitol-2022
+    type: review
+    title: "Xylitol: Bioproduction and Applications — A Review"
+    publisher: "Frontiers in Sustainability"
+    year: 2022
+    url: https://doi.org/10.3389/frsus.2022.826190
+    doi: 10.3389/frsus.2022.826190
+    licence: "Frontiers — CC BY 4.0"
+    accessed: 2026-09-27
+    note: "Describes the traditional route (acid hydrolysis of birch or corn-cob xylan to xylose, then Raney-nickel catalytic hydrogenation, ~50-60% conversion) and an emerging fermentation route (yeasts, chiefly Candida and Debaryomyces species, ferment xylose directly to xylitol under milder conditions)."

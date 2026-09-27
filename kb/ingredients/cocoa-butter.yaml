@@ -1,0 +1,39 @@
+id: cocoa-butter
+type: fat
+names:
+  en: [cocoa butter]
+  pl: [tłuszcz kakaowy, masło kakaowe]
+  de: [Kakaobutter]
+summary:
+  en: >-
+    The fat pressed from cocoa beans, defined in EU law (the cocoa and chocolate directive) as the fat
+    obtained from cocoa beans or parts thereof; gives chocolate and confectionery their characteristic
+    melt and mouthfeel, and is added back to cocoa powder to control its fat content.
+  pl: >-
+    Tłuszcz wytłaczany z ziaren kakaowych, zdefiniowany w prawie UE (dyrektywa o kakao i czekoladzie) jako
+    tłuszcz otrzymywany z ziaren kakaowych lub ich części; nadaje czekoladzie i wyrobom cukierniczym
+    charakterystyczne topnienie i teksturę, a jest też dodawany z powrotem do kakao w proszku w celu
+    regulacji jego zawartości tłuszczu.
+  de: >-
+    Das aus Kakaobohnen gepresste Fett, im EU-Recht (der Kakao- und Schokoladenrichtlinie) definiert als
+    das aus Kakaobohnen oder Teilen davon gewonnene Fett; verantwortlich für das charakteristische
+    Schmelzverhalten von Schokolade.
+assertions:
+  - code: origin.plant
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Pressed only from cocoa beans (Theobroma cacao); no dairy or other animal ingredient is part of the EU definition."
+      pl: "Wytłaczany wyłącznie z ziaren kakaowca (Theobroma cacao); definicja UE nie obejmuje mleka ani innego składnika zwierzęcego."
+    sources: [{ id: dir-2000-36 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Cocoa butter as defined in EU law is pressed only from cocoa-bean material; no animal ingredient."
+      pl: "Tłuszcz kakaowy w rozumieniu prawa UE jest wytłaczany wyłącznie z materiału ziarna kakaowego; brak składnika zwierzęcego."
+    sources: [{ id: dir-2000-36 }]
+review_status: draft
+provenance: ai-drafted

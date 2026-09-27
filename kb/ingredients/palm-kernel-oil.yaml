@@ -1,0 +1,40 @@
+id: palm-kernel-oil
+type: fat
+names:
+  en: [palm kernel oil]
+  pl: [olej z ziaren palmowych, tłuszcz z ziaren palmowych]
+  de: [Palmkernöl]
+summary:
+  en: >-
+    Oil pressed from the kernel (seed) inside the fruit of the oil palm — a different product from palm
+    oil (which comes from the fruit's fleshy mesocarp), sharing the same tree and the same land-use
+    footprint. Its fatty-acid profile is closer to coconut oil than to palm oil: rich in lauric and myristic
+    acid, so it is solid at room temperature and is a common feedstock for cocoa-butter substitutes and for
+    fractionated MCT oil.
+  pl: >-
+    Olej wyciskany z jądra (pestki) znajdującego się wewnątrz owocu palmy olejowej — inny produkt niż olej
+    palmowy (który powstaje z miękkiego miąższu owocu), pochodzący z tego samego drzewa i wiążący się z tym
+    samym śladem gruntowym. Profil kwasów tłuszczowych jest bliższy olejowi kokosowemu niż olejowi
+    palmowemu: bogaty w kwas laurynowy i mirystynowy, stąd stały w temperaturze pokojowej i częsty surowiec
+    do zamienników masła kakaowego oraz do frakcjonowanego oleju MCT.
+assertions:
+  - code: ethics.palm_oil
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "A palm derivative in scope of the EU deforestation regulation, on the same footing as palm oil itself."
+      pl: "Derywat palmowy objęty unijnym rozporządzeniem o wylesianiu, na tych samych zasadach co sam olej palmowy."
+    sources: [{ id: reg-2023-1115 }]
+  - code: origin.vegetable_oil_derived
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "A pressed vegetable oil; EU labelling requires its specific plant origin to be named."
+      pl: "Wyciskany olej roślinny; przepisy UE o etykietowaniu wymagają podania jego konkretnego pochodzenia rośliny."
+    sources: [{ id: reg-1169-2011, locator: "Annex VII Part A, point 8" }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Kept this entry simple (no refined/unrefined variant, unlike palm-oil and coconut-oil) since food-grade palm kernel oil is almost always sold refined/fractionated; a variant can be added if a real label shows otherwise."

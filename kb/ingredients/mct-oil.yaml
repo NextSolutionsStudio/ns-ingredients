@@ -1,0 +1,91 @@
+id: mct-oil
+type: fat
+names:
+  en: [MCT oil, medium chain triglycerides, medium-chain triglyceride oil]
+  pl: [olej MCT, trójglicerydy średniołańcuchowe, olej z trójglicerydów średniołańcuchowych]
+  de: [MCT-Öl, mittelkettige Triglyceride]
+summary:
+  en: >-
+    A fat fractionated from a lauric vegetable oil (coconut or palm kernel oil) to concentrate the
+    medium-chain fatty acids caprylic (C8:0) and capric (C10:0), removing the longer-chain fatty acids.
+    Sold as a standalone "MCT oil" supplement and used as a functional fat in sports-nutrition and
+    keto-marketed products. Marketed for fast, ketone-yielding energy; the evidence for a meaningful
+    effect on body weight specifically is mixed and not settled.
+  pl: >-
+    Tłuszcz otrzymywany przez frakcjonowanie oleju laurynowego (kokosowego lub z ziaren palmowych) w celu
+    zatężenia średniołańcuchowych kwasów tłuszczowych: kaprylowego (C8:0) i kaprynowego (C10:0), przy
+    usunięciu dłuższych łańcuchów. Sprzedawany jako samodzielny suplement "olej MCT" oraz stosowany jako
+    funkcjonalny tłuszcz w odżywkach sportowych i produktach "keto". Reklamowany jako szybka energia i
+    źródło ciał ketonowych; dowody na wyraźny wpływ akurat na masę ciała są niejednoznaczne.
+variants:
+  - id: coconut
+    names:
+      en: [coconut MCT oil]
+      pl: [olej MCT z oleju kokosowego, kokosowy olej MCT]
+    process:
+      en: "Fractionated from coconut oil, which is naturally rich in C8-C12 fatty acids."
+      pl: "Frakcjonowany z oleju kokosowego, naturalnie bogatego w kwasy tłuszczowe C8-C12."
+    tells: ['kokos', 'coconut']
+    prior: 0.5
+    prior_rationale:
+      en: >-
+        When a label says only "MCT oil"/"olej MCT" with no declared source: coconut is the source most
+        consumer-facing MCT products advertise (it carries a "natural"/keto marketing halo), but bulk MCT
+        used as a functional ingredient inside a formulated product is often the cheaper palm-kernel
+        fraction that a maker has less reason to name. Treated as roughly even odds absent a declared source.
+      pl: >-
+        Gdy etykieta podaje tylko "olej MCT" bez podania źródła: kokos jest źródłem, które najczęściej
+        reklamują produkty konsumenckie (marketing "naturalności"/keto), ale masowy olej MCT używany jako
+        funkcjonalny składnik wewnątrz złożonego produktu bywa tańszą frakcją z ziaren palmowych, którą
+        producent ma mniej powodów, by nazywać. Bez zadeklarowanego źródła przyjęto szanse zbliżone do 50/50.
+  - id: palm-kernel
+    names:
+      en: [palm kernel MCT oil]
+      pl: [olej MCT z oleju z ziaren palmowych, palmowy olej MCT]
+    process:
+      en: "Fractionated from palm kernel oil, the other common lauric-oil feedstock for MCT."
+      pl: "Frakcjonowany z oleju z ziaren palmowych — drugiego typowego surowca laurynowego dla MCT."
+    tells: ['palm']
+    prior: 0.5
+    prior_rationale:
+      en: "Minority-or-even share when the label is silent (see the coconut variant's rationale)."
+      pl: "Udział zbliżony lub mniejszościowy, gdy etykieta milczy (zob. uzasadnienie dla wariantu kokosowego)."
+assertions:
+  - code: origin.vegetable_oil_derived
+    certainty: yes
+    kind: fact
+    grade: B
+    note:
+      en: "MCT oil is a fractionation product of a vegetable oil (coconut or palm kernel), not a distinct crop extract."
+      pl: "Olej MCT jest produktem frakcjonowania oleju roślinnego (kokosowego lub z ziaren palmowych), a nie osobnym wyciągiem z innej rośliny."
+    sources: [{ id: pmc-mct-2022 }]
+  - code: processing.refined
+    certainty: yes
+    kind: fact
+    grade: B
+    note:
+      en: "Fractionation/distillation to isolate the C8/C10 fraction is itself a refining step."
+      pl: "Frakcjonowanie/destylacja w celu wyizolowania frakcji C8/C10 jest samo w sobie etapem rafinacji."
+    sources: [{ id: pmc-mct-2022 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: estimate
+    grade: B
+    note:
+      en: "Both feedstock oils (coconut, palm kernel) are plant oils; no animal material is used in fractionation."
+      pl: "Oba surowce (kokosowy, z ziaren palmowych) to oleje roślinne; frakcjonowanie nie wykorzystuje surowców zwierzęcych."
+    sources: [{ id: pmc-mct-2022 }]
+  - code: ethics.palm_oil
+    variant: palm-kernel
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "The palm-kernel variant is, by definition, a palm derivative and carries the same deforestation-risk sourcing question as palm oil."
+      pl: "Wariant z ziaren palmowych jest z definicji derywatem palmowym i wiąże się z tym samym pytaniem o ryzyko wylesiania, co olej palmowy."
+    sources: [{ id: reg-2023-1115 }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "No EU specification or novel-food entry was found specifically for 'MCT oil' as such (it is treated as a traditional fractionated fat, not a novel food); the origin/refining assertions lean on a peer-reviewed background section rather than a regulation. A stronger regulatory source (e.g. an EU infant-formula delegated act listing permitted MCT use) may exist — worth a follow-up search."
+  - "Left out: any claim about MCT and weight loss or ketone production, since EFSA's 2011 opinion on MCT and body-weight reduction (found via search, not fully opened this session due to a Wiley 403) reportedly found the evidence inconsistent — a human reviewer should open it directly and add a properly graded opinion-kind assertion if warranted."

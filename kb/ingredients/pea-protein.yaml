@@ -1,0 +1,55 @@
+id: pea-protein
+type: protein
+names:
+  en: [pea protein, pea protein isolate]
+  pl: [białko grochu, izolat białka grochu, białko z grochu]
+  de: [Erbsenprotein, Erbsenproteinisolat]
+summary:
+  en: >-
+    A plant protein made mainly from yellow split peas by alkaline or salt extraction followed by
+    isoelectric precipitation. A popular dairy-free and soy-free base for vegan protein blends. Peas are
+    not genetically modified in commercial food production, unlike soy or maize. Pea protein is not a
+    priority/regulated allergen in the EU, Canada or the US, but a small number of people with peanut
+    allergy have had allergic reactions to it, which a plain ingredient list does not flag.
+  pl: >-
+    Białko roślinne wytwarzane głównie z żółtego grochu łupanego przez alkaliczną lub solną ekstrakcję, a
+    następnie wytrącanie izoelektryczne. Popularna baza bez mleka i soi dla wegańskich blendów białkowych.
+    Groch nie jest genetycznie modyfikowany w komercyjnej produkcji żywności, w odróżnieniu od soi czy
+    kukurydzy. Białko grochu nie jest priorytetowym/regulowanym alergenem w UE, Kanadzie ani USA, ale u
+    niewielkiej liczby osób z alergią na orzeszki ziemne odnotowano reakcje alergiczne po jego spożyciu,
+    czego sam wykaz składników nie sygnalizuje.
+  de: >-
+    Ein Pflanzenprotein, hauptsächlich aus gelben, geschälten Erbsen durch alkalische oder Salzextraktion
+    und anschließende isoelektrische Fällung hergestellt. Erbsenprotein ist in der EU, Kanada und den USA
+    kein vorrangig geregeltes Allergen.
+assertions:
+  - code: origin.plant
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Made from yellow split peas.", pl: "Wytwarzane z żółtego grochu łupanego." }
+    sources: [{ id: usda-fdc }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Plant-only extraction process; no animal material involved.", pl: "Wyłącznie roślinny proces ekstrakcji; brak surowców zwierzęcych." }
+    sources: [{ id: usda-fdc }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Same plant-only basis as the vegan assessment.", pl: "Ta sama, wyłącznie roślinna podstawa co w ocenie wegańskiej." }
+    sources: [{ id: usda-fdc }]
+  - code: processing.ultra_processed_marker
+    certainty: maybe
+    kind: opinion
+    grade: D
+    note:
+      en: "Not itself named on NOVA's published list, but it is the same kind of engineered, rarely-home-cooked plant protein isolate as the isolates NOVA does name (soy, whey) — an extension by analogy, not a direct citation."
+      pl: "Nie jest wprost wymieniane na opublikowanej liście NOVA, ale jest tym samym rodzajem inżynieryjnie wytwarzanego, rzadko domowo gotowanego izolatu białka roślinnego jak izolaty wymieniane przez NOVA (soja, serwatka) — rozszerzenie przez analogię, nie cytat wprost."
+    sources: [{ id: prot-monteiro-2019-nova }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "No implication code exists for a non-Annex-II, jurisdiction-specific cross-reactivity concern like pea/peanut, so it stays as prose rather than a coded assertion. Health Canada, 'Information about pea protein for people with peanut allergy' (canada.ca, updated April 2022, opened this session): 'some people with peanut allergy may also have allergic reactions if they eat pea protein', though 'the risk of experiencing a severe reaction is expected to be low'; peas are explicitly not a Canadian priority allergen."

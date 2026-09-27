@@ -1,0 +1,57 @@
+id: allura-red
+type: additive
+e_number: E129
+ids: { cas: "25956-17-6", wikidata: Q419895, pubchem: 33258 }
+names:
+  en: [Allura Red AC, red 40, food red 17]
+  pl: [czerwień allura, czerwień allura AC]
+  de: [Allurarot AC, Allurarot]
+functions: [colour]
+summary:
+  en: >-
+    A synthetic red azo dye made by chemical synthesis, used in drinks, sweets, sauces and snacks. It is
+    one of the "Southampton six" colours that must carry the EU label warning about activity and
+    attention in children, and is one of the six remaining US-approved synthetic dyes (as FD&C Red No.
+    40) the FDA asked industry to phase out from 2025.
+  pl: >-
+    Syntetyczny czerwony barwnik azowy otrzymywany syntezą chemiczną, stosowany w napojach, słodyczach,
+    sosach i przekąskach. Jest jednym z „sześciu z Southampton” barwników, które muszą nosić na etykiecie
+    w UE ostrzeżenie o wpływie na aktywność i uwagę dzieci, oraz jednym z sześciu wciąż dopuszczonych w
+    USA syntetycznych barwników (jako FD&C Red No. 40), których wycofania z rynku FDA zażądała od
+    przemysłu od 2025 r.
+assertions:
+  - code: health.southampton_colour
+    certainty: yes
+    kind: fact
+    grade: A
+    population: [children]
+    note:
+      en: "One of six colours (with E102, E104, E110, E122, E124) that trigger the mandatory EU label statement, following the 2007 McCann RCT that found a mixture of these colours (plus sodium benzoate) increased hyperactive behaviour in young children."
+      pl: "Jeden z sześciu barwników (wraz z E102, E104, E110, E122, E124) wymagających obowiązkowego oświadczenia na etykiecie w UE, w związku z badaniem RCT McCann z 2007 r., które wykazało, że mieszanka tych barwników (i benzoesanu sodu) zwiększała nadpobudliwość u małych dzieci."
+    sources: [{ id: reg-1333-2008, locator: "Annex V" }, { id: mccann-2007 }]
+  - code: regulatory.eu_warning_label
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Label must state '[name/E-number]: may have an adverse effect on activity and attention in children.'"
+      pl: "Etykieta musi zawierać zapis: „[nazwa/numer E]: może mieć szkodliwy wpływ na aktywność i skupienie uwagi u dzieci”."
+    sources: [{ id: reg-1333-2008, locator: "Annex V" }]
+  - code: origin.petrochemical_synthetic
+    certainty: yes
+    kind: fact
+    grade: B
+    note:
+      en: "Made by azo coupling of diazotised cresidinesulfonic acid with 2-naphthol-6-sulfonic acid; named by US HHS/FDA (April 2025) among the 'petroleum-based synthetic dyes' being phased out (as FD&C Red No. 40)."
+      pl: "Otrzymywany przez sprzęganie azowe zdiazotowanego kwasu kresydynosulfonowego z kwasem 2-naftol-6-sulfonowym; wymieniony przez amerykańskie HHS/FDA (kwiecień 2025) wśród „syntetycznych barwników pochodzenia petrochemicznego” wycofywanych z rynku (jako FD&C Red No. 40)."
+    sources: [{ id: col-wikipedia-allura-red }, { id: col-fda-dye-phaseout-2025 }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Authorised in specific food categories under Annex II conditions; triggers the Annex V children's attention/activity warning.", pl: "Dopuszczony w określonych kategoriach żywności zgodnie z Załącznikiem II; wymaga ostrzeżenia z Załącznika V o wpływie na aktywność i uwagę dzieci." }
+    source: reg-1333-2008
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Per-category Annex II maximum levels for E129 not transcribed here (avoid a wrong number)."
+  - "US FDA's 2025 phase-out is a voluntary industry request, not a ban — regulatory status there is still 'authorised'; not modelled as a separate `regulatory` row for that reason."

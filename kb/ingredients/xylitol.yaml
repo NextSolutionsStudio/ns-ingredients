@@ -1,0 +1,113 @@
+id: xylitol
+type: additive
+e_number: E967
+ids: { cas: "87-99-0", wikidata: Q212093, chebi: "CHEBI:17151", pubchem: 6912 }
+names:
+  en: [xylitol]
+  pl: [ksylitol]
+  de: [Xylit, Birkenzucker]
+functions: [sweetener]
+summary:
+  en: >-
+    A sugar alcohol as sweet as sucrose but with about 2.4 kcal/g, popular in sugar-free chewing
+    gum and toothpaste for its non-cariogenic, tooth-friendly reputation. Made from xylan-rich
+    plant hemicellulose: acid hydrolysis releases xylose, which is then catalytically hydrogenated
+    (Raney nickel catalyst) to xylitol. Birch wood was historically the main commercial source
+    (hence the German name 'Birkenzucker', birch sugar); corn cobs are now a major, cheaper
+    alternative source, though their hydrolysate needs more purification. A newer, lower-energy
+    fermentation route uses xylose-fermenting yeasts (Candida, Debaryomyces) to make xylitol
+    directly, but chemical hydrogenation still dominates commercial supply. Like other polyols it
+    triggers the EU's laxative warning above 10% added polyol.
+  pl: >-
+    Alkohol cukrowy o słodkości zbliżonej do sacharozy, ale z ok. 2,4 kcal/g, popularny w
+    bezcukrowej gumie do żucia i paście do zębów ze względu na reputację "przyjaznego zębom"
+    i niekariogennego. Otrzymywany z bogatej w ksylan hemicelulozy roślinnej: hydroliza kwasowa
+    uwalnia ksylozę, którą następnie poddaje się katalitycznemu uwodornieniu (katalizator
+    niklowy Raneya) do ksylitolu. Drewno brzozowe było historycznie głównym surowcem handlowym
+    (stąd niemiecka nazwa "Birkenzucker", cukier brzozowy); kolby kukurydzy są obecnie ważnym,
+    tańszym surowcem alternatywnym, choć ich hydrolizat wymaga większego oczyszczania. Nowsza,
+    mniej energochłonna metoda fermentacyjna wykorzystuje drożdże fermentujące ksylozę (Candida,
+    Debaryomyces) do wytwarzania ksylitolu bezpośrednio, ale to hydrogenacja chemiczna wciąż
+    dominuje w produkcji handlowej. Podobnie jak inne poliole wywołuje obowiązek ostrzeżenia UE
+    o działaniu przeczyszczającym powyżej 10% dodanego poliolu.
+variants:
+  - id: birch
+    names: { en: ["birch xylitol", "xylitol from birch"], pl: ["ksylitol brzozowy", "ksylitol z brzozy"], de: ["Birkenzucker", "Xylit aus Birke"] }
+    process:
+      en: "Xylan hydrolysed from birch wood hemicellulose (a pulping-industry by-product), then catalytically hydrogenated to xylitol; historically the main economic route because birch hydrolysate is comparatively low in competing sugars."
+      pl: "Ksylan hydrolizowany z hemicelulozy drewna brzozowego (produkt uboczny przemysłu celulozowego), następnie poddawany katalitycznemu uwodornieniu do ksylitolu; historycznie główna ekonomiczna metoda, ponieważ hydrolizat brzozowy zawiera stosunkowo mało konkurujących cukrów."
+    tells: ['brzoz', '\bbirch\b', 'birk']
+    prior: 0.3
+    prior_rationale:
+      en: "Marketed as the premium, 'natural birch' variant in Western health-food contexts; makers who use it tend to say so."
+      pl: "Marketowany jako premiowy wariant 'z naturalnej brzozy' w zachodnich kontekstach zdrowej żywności; producenci, którzy go stosują, zwykle to zaznaczają."
+  - id: corn
+    names: { en: ["corn xylitol", "xylitol from corn cob"], pl: ["ksylitol kukurydziany", "ksylitol z kolb kukurydzy"], de: ["Mais-Xylit"] }
+    process:
+      en: "Xylan hydrolysed from corn cob hemicellulose, then catalytically hydrogenated; cheaper feedstock but the hydrolysate carries more non-xylose sugars (notably arabinose), which complicates purification."
+      pl: "Ksylan hydrolizowany z hemicelulozy kolb kukurydzy, następnie poddawany katalitycznemu uwodornieniu; tańszy surowiec, ale hydrolizat zawiera więcej cukrów innych niż ksyloza (zwłaszcza arabinozę), co komplikuje oczyszczanie."
+    tells: ['kukurydz', '\bcorn\b', 'maiskolben', 'mais.?xylit']
+    prior: 0.6
+    prior_rationale:
+      en: "The larger-volume, lower-cost commercial route today (much global supply is corn-cob-based); makers of the commodity form rarely name the source on a Polish or German label."
+      pl: "Obecnie większy wolumenowo, tańszy szlak handlowy (znaczna część globalnej podaży opiera się na kolbach kukurydzy); producenci wersji komodytyzowanej rzadko podają surowiec na etykiecie polskiej lub niemieckiej."
+  - id: fermentation
+    names: { en: ["bio-based xylitol", "fermented xylitol"], pl: ["ksylitol fermentacyjny", "ksylitol biotechnologiczny"], de: ["fermentativ hergestelltes Xylit"] }
+    process:
+      en: "Xylose-containing hydrolysate is fermented directly to xylitol by yeasts (chiefly Candida or Debaryomyces species) under milder conditions than chemical hydrogenation; an emerging route, not yet dominant in commercial supply."
+      pl: "Hydrolizat zawierający ksylozę jest fermentowany bezpośrednio do ksylitolu przez drożdże (głównie z rodzaju Candida lub Debaryomyces) w łagodniejszych warunkach niż hydrogenacja chemiczna; metoda wschodząca, jeszcze nie dominująca w podaży handlowej."
+    tells: ['fermentacyjn', 'biotechnologiczn', 'bio.?based', 'fermentacj.*ksylitol', 'ferment.*xylit']
+    prior: 0.1
+    prior_rationale:
+      en: "Described in the literature as an emerging alternative; chemical hydrogenation still supplies most of the commercial market as of the reviewed source (2022)."
+      pl: "Opisywana w literaturze jako wschodząca alternatywa; hydrogenacja chemiczna wciąż zapewnia większość rynku handlowego według przeglądanego źródła (2022)."
+assertions:
+  - code: health.laxative_polyol
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Food containing more than 10% added polyols must carry the statement 'excessive consumption may produce laxative effects'.", pl: "Żywność zawierająca ponad 10% dodanych polioli musi zawierać informację 'nadmierne spożycie może mieć efekt przeczyszczający'." }
+    sources: [{ id: reg-1169-2011, locator: "Annex III, point 2.4" }]
+  - code: regulatory.eu_warning_label
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "The laxative statement above is a mandatory label statement under Annex III of Reg 1169/2011.", pl: "Powyższa informacja o działaniu przeczyszczającym jest obowiązkową informacją na etykiecie na podstawie Załącznika III Rozporządzenia 1169/2011." }
+    sources: [{ id: reg-1169-2011, locator: "Annex III, point 2.4" }]
+  - code: origin.chemical_synthesis
+    variant: birch
+    certainty: yes
+    kind: fact
+    grade: B
+    note: { en: "Xylose from birch hemicellulose hydrolysis is chemically hydrogenated (Raney nickel) to xylitol.", pl: "Ksyloza z hydrolizy hemicelulozy brzozowej jest chemicznie uwodorniana (katalizator niklowy Raneya) do ksylitolu." }
+    sources: [{ id: swt-frontiers-xylitol-2022 }]
+  - code: origin.chemical_synthesis
+    variant: corn
+    certainty: yes
+    kind: fact
+    grade: B
+    note: { en: "Xylose from corn cob hemicellulose hydrolysis is chemically hydrogenated to xylitol.", pl: "Ksyloza z hydrolizy hemicelulozy kolb kukurydzy jest chemicznie uwodorniana do ksylitolu." }
+    sources: [{ id: swt-frontiers-xylitol-2022 }]
+  - code: origin.microbial_fermentation
+    variant: fermentation
+    certainty: yes
+    kind: estimate
+    grade: C
+    note: { en: "Xylose is fermented directly to xylitol by xylose-utilising yeasts.", pl: "Ksyloza jest fermentowana bezpośrednio do ksylitolu przez drożdże wykorzystujące ksylozę." }
+    sources: [{ id: swt-frontiers-xylitol-2022 }]
+  - code: origin.gmo_derived
+    variant: corn
+    certainty: maybe
+    kind: estimate
+    grade: D
+    note: { en: "Corn is frequently genetically modified in major growing regions; the label rarely says which hemicellulose source was used.", pl: "Kukurydza jest często modyfikowana genetycznie w głównych regionach uprawy; etykieta rzadko podaje, jaki surowiec hemicelulozowy zastosowano." }
+    sources: [{ id: swt-frontiers-xylitol-2022 }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Group I polyol additive, quantum satis in most categories where polyols are permitted (not permitted in non-alcoholic beverages).", pl: "Dodatek poliolowy grupy I, quantum satis w większości kategorii, w których poliole są dozwolone (niedozwolony w napojach bezalkoholowych)." }
+    source: reg-1333-2008
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "EFSA's individual re-evaluation of xylitol (E 967) was not located as a published opinion this session; production and laxative-threshold notes rely on Reg 1169/2011 and a 2022 bioproduction review, not an EFSA specification opinion. Revisit when EFSA publishes."

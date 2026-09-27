@@ -1,0 +1,95 @@
+id: dextrose
+type: carbohydrate
+names:
+  en: [dextrose, glucose]
+  pl: [dekstroza, glukoza]
+  de: [Dextrose, Traubenzucker]
+summary:
+  en: >-
+    Crystalline D-glucose, made by fully hydrolysing starch — from wheat, maize or potato — then
+    purifying and crystallising it. EU sugars law defines "dextrose" (monohydrate or anhydrous) by its
+    minimum glucose content. EU allergen law explicitly names dextrose within the wheat-based-glucose-syrup
+    exemption, so wheat-derived dextrose does not need a mandatory gluten warning.
+  pl: >-
+    Krystaliczna D-glukoza, otrzymywana przez pełną hydrolizę skrobi — pszennej, kukurydzianej lub
+    ziemniaczanej — a następnie oczyszczana i krystalizowana. Unijne prawo o cukrach definiuje "dekstrozę"
+    (monohydrat lub bezwodną) przez minimalną zawartość glukozy. Unijne prawo o alergenach wprost wymienia
+    dekstrozę w ramach zwolnienia dla syropu glukozowego na bazie pszenicy, więc dekstroza pszenna nie
+    wymaga obowiązkowego ostrzeżenia o glutenie.
+variants:
+  - id: wheat
+    names:
+      en: [wheat dextrose, wheat glucose]
+      pl: [dekstroza pszenna, glukoza pszenna, dekstroza z pszenicy]
+    process:
+      en: "Fully hydrolysed and crystallised from wheat starch."
+      pl: "W pełni zhydrolizowana i skrystalizowana ze skrobi pszennej."
+    tells: ['wheat dextrose', 'wheat glucose', 'dekstroza pszenn', 'glukoza pszenn', 'dekstroza z pszenicy']
+    prior: 0.1
+    prior_rationale:
+      en: "Legally exempt from a gluten warning, but maize remains the dominant, cheaper commodity feedstock for dextrose."
+      pl: "Prawnie zwolniona z ostrzeżenia o glutenie, ale kukurydza pozostaje dominującym, tańszym surowcem towarowym dla dekstrozy."
+  - id: maize
+    names:
+      en: [maize dextrose, corn dextrose]
+      pl: [dekstroza kukurydziana, glukoza kukurydziana]
+    process:
+      en: "Fully hydrolysed and crystallised from maize (corn) starch — the dominant commodity feedstock for dextrose worldwide."
+      pl: "W pełni zhydrolizowana i skrystalizowana ze skrobi kukurydzianej — dominującego surowca towarowego dla dekstrozy na świecie."
+    tells: ['maize dextrose', 'corn dextrose', 'dekstroza kukurydzian', 'glukoza kukurydzian']
+    prior: 0.7
+    prior_rationale:
+      en: "The default global commodity feedstock, cheaper and more available than wheat or potato."
+      pl: "Domyślny globalny surowiec towarowy, tańszy i łatwiej dostępny niż pszenica czy ziemniak."
+  - id: potato
+    names:
+      en: [potato dextrose]
+      pl: [dekstroza ziemniaczana, glukoza ziemniaczana]
+    process:
+      en: "Fully hydrolysed and crystallised from potato starch — a European (incl. Polish) alternative feedstock."
+      pl: "W pełni zhydrolizowana i skrystalizowana ze skrobi ziemniaczanej — europejskiej (w tym polskiej) alternatywy surowcowej."
+    tells: ['potato dextrose', 'dekstroza ziemniaczan', 'glukoza ziemniaczan']
+    prior: 0.2
+    prior_rationale:
+      en: "A real but smaller European feedstock choice next to maize."
+      pl: "Realny, choć mniejszy, europejski wybór surowca obok kukurydzy."
+assertions:
+  - code: allergen.gluten
+    variant: wheat
+    certainty: maybe
+    kind: fact
+    grade: A
+    population: [coeliac]
+    note:
+      en: >-
+        EU law's wheat-based-glucose-syrup exemption explicitly includes dextrose ("wheat based glucose
+        syrups including dextrose", Annex II point 1(a)). "Maybe" rather than "no": the exemption is a
+        regulatory judgement about typical refining, not a zero-residue guarantee for every batch.
+      pl: >-
+        Unijne zwolnienie dla syropu glukozowego na bazie pszenicy wprost obejmuje dekstrozę ("syropy
+        glukozowe na bazie pszenicy, łącznie z dekstrozą", Załącznik II pkt 1(a)). "Może", nie "nie":
+        zwolnienie to ocena regulacyjna typowej rafinacji, a nie gwarancja zerowej pozostałości dla każdej
+        partii.
+    sources: [{ id: reg-1169-2011, locator: "Annex II, point 1(a)" }]
+  - code: diet.gluten_free
+    variant: wheat
+    certainty: maybe
+    kind: estimate
+    grade: C
+    population: [coeliac]
+    note:
+      en: "Legally exempt from a gluten warning, but the same processing-not-guarantee caveat applies for someone avoiding gluten strictly."
+      pl: "Prawnie zwolniona z ostrzeżenia o glutenie, ale to samo zastrzeżenie o procesie (a nie gwarancji) dotyczy osoby ściśle unikającej glutenu."
+    sources: [{ id: reg-1169-2011, locator: "Annex II, point 1(a)" }]
+  - code: origin.gmo_derived
+    variant: maize
+    certainty: maybe
+    kind: estimate
+    grade: C
+    note:
+      en: "Maize is one of the crops most often genetically modified worldwide (about 92% of US corn acreage); a label alone does not say which maize the dextrose was made from."
+      pl: "Kukurydza jest jedną z roślin najczęściej modyfikowanych genetycznie na świecie (ok. 92% powierzchni uprawy kukurydzy w USA); sama etykieta nie mówi, z jakiej kukurydzy otrzymano dekstrozę."
+    sources: [{ id: usda-ers-ge-crops }]
+review_status: draft
+provenance: ai-drafted
+review_notes: []

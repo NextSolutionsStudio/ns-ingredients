@@ -1,0 +1,56 @@
+id: sodium-benzoate
+type: additive
+e_number: E211
+ids: { cas: "532-32-1", wikidata: Q423971, chebi: "CHEBI:113455", pubchem: 517055 }
+names:
+  en: [sodium benzoate]
+  pl: [benzoesan sodu]
+  de: [Natriumbenzoat]
+functions: [preservative]
+summary:
+  en: >-
+    The sodium salt of benzoic acid, used against yeasts and moulds in acidic foods and drinks (soft
+    drinks, fruit juices, pickles, dressings). Made by neutralising benzoic acid — itself made
+    industrially by oxidising toluene — with sodium hydroxide; not extracted from the berries that
+    naturally contain benzoic acid. A minority of people report non-allergic (pseudoallergic) reactions
+    such as urticaria to benzoates. Separately, in soft drinks that also contain ascorbic acid (vitamin
+    C), heat and light can trigger a reaction between the two that forms trace benzene; the FDA's testing
+    found this does not reach a level of concern in most products, and manufacturers have reformulated
+    to minimise it.
+  pl: >-
+    Sól sodowa kwasu benzoesowego, stosowana przeciw drożdżom i pleśniom w kwaśnych produktach żywnościowych
+    i napojach (napoje bezalkoholowe, soki owocowe, marynaty, sosy sałatkowe). Wytwarzana przez
+    zobojętnienie kwasu benzoesowego — który sam jest wytwarzany przemysłowo przez utlenianie toluenu —
+    wodorotlenkiem sodu; nie jest ekstrahowana z owoców naturalnie zawierających kwas benzoesowy. Część
+    osób zgłasza niealergiczne (rzekomoalergiczne) reakcje, takie jak pokrzywka, na benzoesany. Odrębnie,
+    w napojach zawierających jednocześnie kwas askorbinowy (witaminę C), ciepło i światło mogą wywołać
+    między nimi reakcję tworzącą śladowy benzen; badania FDA wykazały, że w większości produktów nie
+    sięga to poziomu niepokojącego, a producenci zmodyfikowali receptury, aby go ograniczyć.
+assertions:
+  - code: origin.chemical_synthesis
+    certainty: yes
+    kind: fact
+    grade: B
+    note:
+      en: "Made by neutralising benzoic acid with sodium hydroxide; benzoic acid itself is produced commercially by partial oxidation of toluene, not extracted from plants."
+      pl: "Wytwarzany przez zobojętnienie kwasu benzoesowego wodorotlenkiem sodu; sam kwas benzoesowy jest wytwarzany przemysłowo przez częściowe utlenianie toluenu, a nie ekstrahowany z roślin."
+    sources: [{ id: col-wikipedia-sodium-benzoate }]
+  - code: health.sensitivity_reported
+    certainty: maybe
+    kind: opinion
+    grade: C
+    population: [general]
+    note:
+      en: "A placebo-controlled oral-challenge trial found a subset of people with chronic urticaria reacted reproducibly to sodium benzoate — a non-allergic (pseudoallergic), not IgE-mediated, mechanism. Affects a minority; not the same as a declared allergen."
+      pl: "Badanie z prowokacją doustną kontrolowane placebo wykazało, że u części osób z przewlekłą pokrzywką dochodziło do powtarzalnej reakcji na benzoesan sodu — mechanizm niealergiczny (rzekomoalergiczny), niezależny od IgE. Dotyczy mniejszości osób; to nie to samo co zadeklarowany alergen."
+    sources: [{ id: col-nettis-2004-benzoate }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Authorised in specific food categories with maximum levels (Annex II); no quantum satis.", pl: "Dopuszczony w określonych kategoriach żywności z maksymalnymi poziomami (Załącznik II); brak dawki quantum satis." }
+    source: reg-1333-2008
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Benzene formation with ascorbic acid under heat/light (FDA, fda.gov 'Questions and Answers on the Occurrence of Benzene in Soft Drinks and Other Beverages', accessed 2026-09-27) is described only in the summary text: no implications.yaml code covers a co-formulation reaction risk, so it was not encoded as a formal assertion rather than stretching an existing code."
+  - "Per-category Annex II maximum levels for E211 not transcribed here (avoid a wrong number)."

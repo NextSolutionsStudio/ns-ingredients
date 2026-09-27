@@ -1,0 +1,86 @@
+# Batch sources for the animal/dairy/plant-caffeine ingredient batch (gluten, tree-nuts, rye, spelt,
+# gelatine, meat, caseinates, dairy derivatives, cocoa, guarana, green tea extract). ids prefixed "ad-".
+sources:
+  - id: ad-reg-853-2004
+    type: regulation
+    title: "Regulation (EC) No 853/2004 laying down specific hygiene rules for food of animal origin (Annex I: definitions of meat, gelatine and collagen)"
+    publisher: European Union
+    year: 2004
+    url: https://eur-lex.europa.eu/eli/reg/2004/853/oj
+    licence: "EU reuse policy (Decision 2011/833/EU) — CC BY 4.0"
+    accessed: 2026-09-27
+    note: >-
+      Annex I point 1.1: "meat" = edible parts of the animals referred to in points 1.2 to 1.8 of the same
+      Annex (domestic ungulates, poultry and lagomorphs, farmed and wild game), including blood. Point 7.7:
+      "gelatine" = natural, soluble protein, gelling or non-gelling, obtained by the partial hydrolysis of
+      collagen produced from bones, hides and skins, tendons and sinews of animals. Point 7.8: "collagen" =
+      the protein-based product derived from animal bones, hides, skins and tendons. Verified via the UK's
+      retained-EU-law mirror (legislation.gov.uk) after the EUR-Lex page returned no extractable text to
+      this session's fetch tool.
+  - id: ad-reg-2022-2340
+    type: regulation
+    title: "Commission Regulation (EU) 2022/2340 amending Annex III to Regulation (EC) No 1925/2006 as regards green tea catechins from Camellia sinensis"
+    publisher: European Union
+    year: 2022
+    url: https://eur-lex.europa.eu/eli/reg/2022/2340/oj
+    licence: "EU reuse policy (Decision 2011/833/EU) — CC BY 4.0"
+    accessed: 2026-09-27
+    note: >-
+      Food supplements supplying (-)-epigallocatechin-3-gallate (EGCG) from green tea catechins must have a
+      labelled maximum daily portion supplying less than 800 mg EGCG, must state the EGCG content of that
+      portion, and must carry a warning not to consume 800 mg EGCG/day or more from all sources combined,
+      plus warnings against combining with other green-tea products and on use in pregnancy, breastfeeding
+      or under-18s. Aqueous green tea extracts whose EGCG composition, once reconstituted in a beverage, is
+      comparable to a traditional green tea infusion fall outside this restriction; a separately authorised
+      novel-food, highly purified (>=90%) EGCG extract is capped at 150 mg extract per serving. Applies from
+      21 June 2023. Verified via secondary regulatory-affairs summaries (CIRS Group; Mérieux NutriSciences)
+      quoting the operative text, after the EUR-Lex page itself returned no extractable text to this
+      session's fetch tool.
+  - id: ad-efsa-green-tea-catechins-2018
+    type: regulatory_opinion
+    title: "Scientific opinion on the safety of green tea catechins"
+    publisher: European Food Safety Authority
+    year: 2018
+    url: https://doi.org/10.2903/j.efsa.2018.5239
+    doi: 10.2903/j.efsa.2018.5239
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: 2026-09-27
+    note: >-
+      Found that food-supplement intake of EGCG at or above 800 mg/day for several months was associated
+      with a statistically significant increase in serum transaminases (liver enzymes) in a minority
+      (usually under 10%) of treated subjects, more pronounced in people with higher BMI; intervention
+      studies at or below roughly 316 mg EGCG/day showed no such increase. Catechins from traditionally
+      prepared green tea infusions, and reconstituted drinks of equivalent composition, were considered
+      generally safe at reported EU intakes (roughly 90-300 mg EGCG/day), though the panel noted rare
+      case reports of liver injury after green tea infusions, most likely idiosyncratic reactions. The
+      clinical trials reviewed did not include pregnant women, breastfeeding infants or children. Read via
+      the PMC open-access mirror (PMC7009618) of the EFSA Journal article.
+  - id: ad-talik-2024-guarana-caffeine
+    type: rct
+    title: "Effects of Acute Guarana (Paullinia cupana) Ingestion on Mental Performance and Vagal Modulation Compared to a Low Dose of Caffeine"
+    authors: "Talik TN, Penna EM, Hack BP, Harp A, Millard-Stafford M"
+    publisher: "Nutrients (MDPI)"
+    year: 2024
+    url: https://doi.org/10.3390/nu16121892
+    doi: 10.3390/nu16121892
+    pmid: "38931247"
+    licence: "CC BY 4.0"
+    accessed: 2026-09-27
+    note: >-
+      Background section states guarana seeds typically contain about 4-8% caffeine by dry weight, and
+      commercial seed extracts 5-10% (some concentrated extracts reported up to ~20%), several times the
+      roughly 1-3% typical of coffee beans, citing the wider guarana literature. The trial itself dosed
+      participants with 500 mg of a guarana seed extract standardised to 130 mg caffeine, versus 100 mg
+      caffeine alone and a placebo.
+  - id: ad-wikipedia-sodium-caseinate
+    type: reference
+    title: "Sodium caseinate"
+    publisher: Wikipedia
+    url: https://en.wikipedia.org/wiki/Sodium_caseinate
+    licence: "CC BY-SA 4.0"
+    accessed: 2026-09-27
+    note: >-
+      Describes sodium caseinate as made by precipitating milk casein with acid (isoelectric/acid casein),
+      then neutralising the acid-casein curd with an alkali (sodium hydroxide, or sodium/calcium hydroxide)
+      to form the caseinate salt — a different route from rennet-coagulated (rennet) casein used in
+      cheesemaking, where the enzyme chymosin clots the milk.

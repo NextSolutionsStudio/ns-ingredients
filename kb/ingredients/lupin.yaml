@@ -1,0 +1,36 @@
+id: lupin
+type: ingredient
+names:
+  en: [lupin, lupine]
+  pl: [łubin]
+  de: [Lupine, Lupinen]
+summary:
+  en: "The legume Lupinus spp., increasingly used as a protein source in baked goods and meat analogues; one of the EU's fourteen regulated allergens, with no listed exemptions."
+  pl: "Rośliny strączkowe z rodzaju Lupinus, coraz częściej stosowane jako źródło białka w wyrobach piekarskich i analogach mięsa; jeden z czternastu regulowanych alergenów UE, bez wyłączeń."
+assertions:
+  - code: allergen.lupin
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Declared ingredient; EU Annex II item 13.", pl: "Zadeklarowany składnik; Aneks II UE, punkt 13." }
+    sources: [{ id: reg-1169-2011, locator: "Annex II item 13" }]
+  - code: origin.plant
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A legume.", pl: "Roślina strączkowa." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A plant food.", pl: "Produkt roślinny." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A plant food.", pl: "Produkt roślinny." }
+    sources: [{ id: reg-1169-2011 }]
+review_status: draft
+provenance: ai-drafted

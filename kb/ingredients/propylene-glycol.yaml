@@ -1,0 +1,60 @@
+id: propylene-glycol
+type: additive
+e_number: E1520
+ids: { cas: "57-55-6", wikidata: Q161495, chebi: "CHEBI:16997", pubchem: 1030 }
+names:
+  en: ["propylene glycol", "propane-1,2-diol"]
+  pl: ["glikol propylenowy", "propano-1,2-diol"]
+  de: ["1,2-Propandiol", "Monopropylenglycol"]
+functions: [carrier, humectant]
+summary:
+  en: >-
+    A solvent and carrier used to dilute and disperse flavouring and colouring substances (common
+    in flavoured pre-workout powders and other supplements) and as a humectant; also widely used
+    outside food, e.g. in cosmetics and RV/marine antifreeze (unlike ethylene glycol). Industrially made by reacting
+    propylene oxide with water; propylene oxide is itself a petrochemical intermediate, made from
+    propylene (a light olefin from oil/gas cracking), predominantly via the chlorohydrin process.
+    EFSA's 2018 re-evaluation found no reason to change the long-standing ADI of 25 mg/kg bw/day
+    (set by JECFA in 1973 and confirmed by the SCF in 1996); exposure did not exceed the ADI in
+    any population group at reported use levels.
+  pl: >-
+    Rozpuszczalnik i nośnik stosowany do rozpuszczania i dyspersji substancji aromatycznych i
+    barwiących (typowy w aromatyzowanych odżywkach przedtreningowych i innych suplementach) oraz
+    substancja utrzymująca wilgoć; szeroko stosowany też poza żywnością, np. w kosmetykach i
+    nietoksycznych płynach niezamarzających. Przemysłowo otrzymywany w reakcji tlenku propylenu
+    z wodą; sam tlenek propylenu jest produktem petrochemicznym, otrzymywanym z propylenu
+    (lekkiej olefiny z krakingu ropy/gazu), głównie metodą chlorohydrynową. Reocena EFSA z 2018 r.
+    nie znalazła powodu do zmiany długoletniego ADI 25 mg/kg m.c./dobę (ustalonego przez JECFA w
+    1973 r. i potwierdzonego przez SCF w 1996 r.); narażenie nie przekroczyło ADI w żadnej grupie
+    populacji przy zgłoszonych poziomach stosowania.
+assertions:
+  - code: origin.petrochemical_synthetic
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Made by reacting propylene oxide with water; propylene oxide is manufactured from propylene, a petrochemical feedstock, mainly via the chlorohydrin process."
+      pl: "Otrzymywany w reakcji tlenku propylenu z wodą; tlenek propylenu jest wytwarzany z propylenu, surowca petrochemicznego, głównie metodą chlorohydrynową."
+    sources: [{ id: swt-efsa-e1520-2018 }, { id: swt-ncbi-propylene-oxide-iarc }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Produced entirely by chemical synthesis from petrochemical feedstocks; no animal-derived inputs.", pl: "Otrzymywany wyłącznie w procesie syntezy chemicznej z surowców petrochemicznych; brak surowców zwierzęcych." }
+    sources: [{ id: swt-efsa-e1520-2018 }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Authorised carrier/humectant under Reg 1333/2008 Annex II/III, subject to maximum levels per food category (notably flavourings and food supplements).", pl: "Dozwolony nośnik/substancja utrzymująca wilgoć na podstawie Rozporządzenia 1333/2008, Załącznik II/III, w ramach maksymalnych poziomów dla kategorii żywności (w szczególności aromatów i suplementów diety)." }
+    source: reg-1333-2008
+reference_values:
+  - type: ADI
+    value: 25
+    unit: "mg/kg bw/day"
+    body: EFSA
+    year: 2018
+    source: swt-efsa-e1520-2018
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "The EFSA opinion itself did not explicitly restate 'petrochemical' for propylene oxide's feedstock; that specific word is sourced from the IARC/NCBI Bookshelf monograph on propylene oxide, opened separately this session."

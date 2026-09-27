@@ -1,0 +1,162 @@
+# Batch-specific citations for "colours-preservatives" (carmine, beetroot red, titanium dioxide,
+# sunset yellow, tartrazine, allura red, sodium nitrite, potassium sorbate, sodium benzoate,
+# BHA, BHT, ascorbic acid, citric acid). Ids prefixed col- to avoid clashing with other batches.
+sources:
+  - id: col-efsa-bht-2012
+    type: regulatory_opinion
+    title: "Scientific Opinion on the re-evaluation of butylated hydroxytoluene BHT (E 321) as a food additive"
+    publisher: European Food Safety Authority
+    year: 2012
+    url: https://doi.org/10.2903/j.efsa.2012.2588
+    doi: 10.2903/j.efsa.2012.2588
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: 2026-09-27
+    note: "Sets ADI 0.25 mg/kg bw/day from a NOAEL of 25 mg/kg bw/day (two 2-generation rat studies) and an uncertainty factor of 100; concludes BHT is not of concern for genotoxicity and treats liver tumours seen in long-term rat studies as threshold-dependent, not genotoxic."
+  - id: col-wuthrich-1997-carmine
+    type: observational
+    title: "Anaphylactic reactions to ingested carmine (E120)"
+    authors: "Wüthrich B, Kägi MK, Stücker W"
+    publisher: Allergy
+    year: 1997
+    url: https://pubmed.ncbi.nlm.nih.gov/9404569/
+    doi: 10.1111/j.1398-9995.1997.tb00189.x
+    pmid: "9404569"
+    licence: "Cited, not reproduced"
+    accessed: 2026-09-27
+    note: "Case series (Allergy 52(11):1133-1137): anaphylactic reactions in patients after ingesting carmine-coloured food/drink; suspected IgE-mediated mechanism. Small, uncontrolled case series — grade D."
+  - id: col-nettis-2004-benzoate
+    type: rct
+    title: "Sodium benzoate-induced repeated episodes of acute urticaria/angio-oedema: randomized controlled trial"
+    authors: "Nettis E, Colanardi MC, Ferrannini A, Tursi A"
+    publisher: British Journal of Dermatology
+    year: 2004
+    url: https://doi.org/10.1111/j.1365-2133.2004.06095.x
+    doi: 10.1111/j.1365-2133.2004.06095.x
+    pmid: "15491435"
+    licence: "Cited, not reproduced"
+    accessed: 2026-09-27
+    note: "Placebo-controlled oral challenge in patients with chronic urticaria: a subset reacted reproducibly to sodium benzoate, consistent with non-allergic (pseudoallergic) sensitivity in a minority of people."
+  - id: col-pappenberger-2014-vitc
+    type: review
+    title: "Industrial production of L-ascorbic acid (vitamin C) and D-isoascorbic acid"
+    authors: "Pappenberger G, Hohmann HP"
+    publisher: "Advances in Biochemical Engineering/Biotechnology, Springer"
+    year: 2014
+    url: https://doi.org/10.1007/10_2013_243
+    doi: 10.1007/10_2013_243
+    pmid: "24258144"
+    licence: "Cited, not reproduced"
+    accessed: 2026-09-27
+    note: "Describes the classical Reichstein route (D-glucose → D-sorbitol → one bacterial fermentation step to L-sorbose → several chemical steps to L-ascorbic acid) and the newer two-step fermentation process (a second, microbial step replaces more of the chemical steps) used by most current manufacturers; the product is chemically identical regardless of route."
+  - id: col-latif-2025-citric-acid
+    type: review
+    title: "An overview of key industrial product citric acid production by Aspergillus niger and its application"
+    authors: "Latif A, Hassan N, Ali H, Niazi MBK, Jahan Z, Ghuman IL, Hassan F, Saqib A"
+    publisher: Journal of Industrial Microbiology and Biotechnology
+    year: 2025
+    url: https://doi.org/10.1093/jimb/kuaf007
+    doi: 10.1093/jimb/kuaf007
+    licence: "Cited, not reproduced"
+    accessed: 2026-09-27
+    note: "States Aspergillus niger is 'the main workhorse' for large-scale citric acid manufacture, by submerged fermentation of a sugar feedstock (sucrose, glucose syrup, molasses); this is the dominant commercial route, essentially since 1919."
+  - id: col-sweis-2018-citric-acid
+    type: observational
+    title: "Potential role of the common food additive manufactured citric acid in eliciting significant inflammatory reactions contributing to serious disease states: a series of four case reports"
+    authors: "Sweis IE, Cressey BC"
+    publisher: Toxicology Reports
+    year: 2018
+    url: https://doi.org/10.1016/j.toxrep.2018.08.002
+    doi: 10.1016/j.toxrep.2018.08.002
+    pmid: "30128297"
+    licence: "CC BY-NC-ND 4.0 — cited, not reproduced"
+    accessed: 2026-09-27
+    note: "Four uncontrolled case reports hypothesising that residual Aspergillus niger antigens in fermentation-derived citric acid trigger inflammatory symptoms (asthma, joint pain, IBS-type symptoms) in sensitised individuals. Mechanism not established by regulators; weakest evidence tier (grade D)."
+  - id: col-fda-dye-phaseout-2025
+    type: reference
+    title: "FDA Announces Plan to Phase Out Synthetic, Petroleum-Based Food Dyes From U.S. Food Supply"
+    publisher: "Food Safety Magazine (reporting the HHS/FDA announcement of 22 April 2025)"
+    year: 2025
+    url: https://www.food-safety.com/articles/10337-fda-announces-plan-to-phase-out-synthetic-petroleum-based-food-dyes-from-us-food-supply
+    licence: "Cited, not reproduced"
+    accessed: 2026-09-27
+    note: "Reports HHS/FDA's 22 April 2025 announcement naming the six remaining US-approved synthetic dyes — including FD&C Yellow No. 5 (tartrazine, E102), Yellow No. 6 (Sunset Yellow FCF, E110) and Red No. 40 (Allura Red AC, E129) — collectively as 'petroleum-based synthetic dyes' targeted for voluntary phase-out by end of 2026. A US policy document, not an EU/EFSA source; cited only for the production-route fact, not for safety."
+  - id: col-wikipedia-sunset-yellow
+    type: reference
+    title: "Sunset Yellow FCF"
+    publisher: Wikipedia
+    url: https://en.wikipedia.org/wiki/Sunset_Yellow_FCF
+    licence: "CC BY-SA 4.0"
+    accessed: 2026-09-27
+    note: "Describes Sunset Yellow FCF as 'a petroleum-derived orange azo dye'."
+  - id: col-wikipedia-tartrazine
+    type: reference
+    title: Tartrazine
+    publisher: Wikipedia
+    url: https://en.wikipedia.org/wiki/Tartrazine
+    licence: "CC BY-SA 4.0"
+    accessed: 2026-09-27
+    note: "Describes manufacture by azo coupling of a sulfanilic-acid-based diazonium salt with a sulfonated pyrazolone derivative."
+  - id: col-wikipedia-allura-red
+    type: reference
+    title: Allura Red AC
+    publisher: Wikipedia
+    url: https://en.wikipedia.org/wiki/Allura_Red_AC
+    licence: "CC BY-SA 4.0"
+    accessed: 2026-09-27
+    note: "Describes manufacture by azo coupling of diazotised cresidinesulfonic acid with 2-naphthol-6-sulfonic acid."
+  - id: col-wikipedia-bha
+    type: reference
+    title: Butylated hydroxyanisole
+    publisher: Wikipedia
+    url: https://en.wikipedia.org/wiki/Butylated_hydroxyanisole
+    licence: "CC BY-SA 4.0"
+    accessed: 2026-09-27
+    note: "Describes BHA as 'a synthetic, waxy, solid petrochemical' prepared from 4-methoxyphenol and isobutylene."
+  - id: col-wikipedia-bht
+    type: reference
+    title: Butylated hydroxytoluene
+    publisher: Wikipedia
+    url: https://en.wikipedia.org/wiki/Butylated_hydroxytoluene
+    licence: "CC BY-SA 4.0"
+    accessed: 2026-09-27
+    note: "Describes industrial synthesis of BHT by reacting p-cresol (4-methylphenol) with isobutylene, catalysed by sulfuric acid."
+  - id: col-wikipedia-sodium-benzoate
+    type: reference
+    title: Sodium benzoate
+    publisher: Wikipedia
+    url: https://en.wikipedia.org/wiki/Sodium_benzoate
+    licence: "CC BY-SA 4.0"
+    accessed: 2026-09-27
+    note: "Describes manufacture by neutralising benzoic acid with sodium hydroxide; benzoic acid itself is produced commercially by partial oxidation of toluene."
+  - id: col-wikipedia-potassium-sorbate
+    type: reference
+    title: Potassium sorbate
+    publisher: Wikipedia
+    url: https://en.wikipedia.org/wiki/Potassium_sorbate
+    licence: "CC BY-SA 4.0"
+    accessed: 2026-09-27
+    note: "States virtually all of the world's sorbic acid (from which potassium sorbate is made by neutralisation with potassium hydroxide) is manufactured synthetically, via condensation of crotonaldehyde and ketene, rather than extracted from rowan berries."
+  - id: col-fda-cfr-73-575-tio2
+    type: regulation
+    title: "21 CFR 73.575 — Titanium dioxide"
+    publisher: "U.S. Food and Drug Administration — Code of Federal Regulations"
+    url: https://www.law.cornell.edu/cfr/text/21/73.575
+    licence: "U.S. Government work — public domain"
+    accessed: 2026-09-27
+    note: "Lists titanium dioxide as a colour additive exempt from certification for food use in the US, capped at not more than 1% by weight of the food; remains authorised there, unlike the EU (Reg 2022/63)."
+  - id: col-food-gov-uk-e162
+    type: reference
+    title: "Beetroot Red, betanin (E 162) — regulated product entry"
+    publisher: "Food Standards Agency (data.food.gov.uk)"
+    url: https://data.food.gov.uk/regulated-products/food_authorisations/e-162
+    licence: "Open Government Licence v3.0"
+    accessed: 2026-09-27
+    note: "Confirms E162 is a Group II food colour (authorised at quantum satis under Reg 1333/2008 Annex II), with purity criteria in Reg 231/2012."
+  - id: col-natcol-betanin
+    type: reference
+    title: "Betanin (INS 162, E162)"
+    publisher: "NATCOL — Natural Food Colours Association"
+    url: https://natcol.org/betanin-ins-162-e-162/
+    licence: "Cited, not reproduced"
+    accessed: 2026-09-27
+    note: "Industry reference describing betanin as the red-violet betalain pigment of beetroot (Beta vulgaris), water-soluble, extracted from the root."

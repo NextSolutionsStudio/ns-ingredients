@@ -1,0 +1,100 @@
+id: carboxymethyl-cellulose
+type: additive
+e_number: E466
+ids: { cas: "9004-32-4", wikidata: "Q21012207" }
+names:
+  en: [carboxymethyl cellulose, sodium carboxymethyl cellulose, cellulose gum, CMC]
+  pl: [karboksymetyloceluloza, sól sodowa karboksymetylocelulozy]
+  de: [Carboxymethylcellulose, Natriumcarboxymethylcellulose]
+functions: [thickener, stabiliser, emulsifier]
+summary:
+  en: >-
+    A cellulose gum made by treating plant cellulose (fibrous plant material) with alkali and then
+    monochloroacetic acid or its sodium salt, which grafts carboxymethyl groups onto the cellulose
+    backbone — the plant fibre is chemically modified, not just extracted or refined. Used to thicken
+    ice cream, sauces and gluten-free baked goods and to stabilise emulsions. EFSA's 2018 re-evaluation
+    set an ADI of "not specified" for E 466, consistent with JECFA's 1989 assessment, and found no safety
+    concern for the general population, though it flagged insufficient data for infants and young
+    children on specialised medical foods. Separately, mouse studies from one 2015 research group found
+    that dietary carboxymethylcellulose altered gut bacteria and promoted low-grade gut inflammation and
+    metabolic changes in susceptible mice; this has not been confirmed in humans at dietary doses or
+    acted on by regulators.
+  pl: >-
+    Guma celulozowa otrzymywana przez traktowanie celulozy roślinnej (włóknistego materiału roślinnego)
+    zasadą, a następnie kwasem monochlorooctowym lub jego solą sodową, co wprowadza grupy
+    karboksymetylowe do szkieletu celulozy — włókno roślinne jest chemicznie modyfikowane, a nie tylko
+    ekstrahowane lub rafinowane. Stosowana do zagęszczania lodów, sosów i pieczywa bezglutenowego oraz
+    do stabilizacji emulsji. Ponowna ocena EFSA z 2018 r. ustaliła ADI „nie określone” dla E 466, zgodnie
+    z oceną JECFA z 1989 r., i nie stwierdziła zagrożenia dla populacji ogólnej, choć zwróciła uwagę na
+    niewystarczające dane dla niemowląt i małych dzieci spożywających specjalistyczną żywność medyczną.
+    Niezależnie od tego badania na myszach jednej grupy badawczej z 2015 r. wykazały, że
+    karboksymetyloceluloza w diecie zmieniała mikrobiotę jelitową i sprzyjała niewielkiemu stanowi
+    zapalnemu jelit oraz zmianom metabolicznym u podatnych myszy; nie potwierdzono tego u ludzi przy
+    dawkach pokarmowych, a regulatorzy nie podjęli w związku z tym żadnych działań.
+assertions:
+  - code: origin.plant
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "The cellulose backbone is obtained directly from fibrous plant material before being chemically modified."
+      pl: "Szkielet celulozowy otrzymywany jest bezpośrednio z włóknistego materiału roślinnego, przed chemiczną modyfikacją."
+    sources: [{ id: efsa-celluloses-2018 }]
+  - code: origin.chemical_synthesis
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: >-
+        The cellulose is not just extracted: it is chemically reacted with alkali and monochloroacetic
+        acid (or its sodium salt) to graft on carboxymethyl groups. This is a chemical modification of a
+        plant polymer, distinct from a petrochemical starting material.
+      pl: >-
+        Celuloza nie jest jedynie ekstrahowana: reaguje chemicznie z zasadą i kwasem monochlorooctowym
+        (lub jego solą sodową), co wprowadza grupy karboksymetylowe. To chemiczna modyfikacja polimeru
+        roślinnego, odrębna od surowca petrochemicznego.
+    sources: [{ id: efsa-celluloses-2018 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Plant cellulose base; no animal material in the production route.", pl: "Podstawa z celulozy roślinnej; brak surowców zwierzęcych w procesie produkcji." }
+    sources: [{ id: efsa-celluloses-2018 }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Same reasoning as diet.vegan.", pl: "To samo rozumowanie jak przy diet.vegan." }
+    sources: [{ id: efsa-celluloses-2018 }]
+  - code: health.inflammation_debate
+    certainty: maybe
+    kind: opinion
+    grade: D
+    note:
+      en: >-
+        Mice fed carboxymethylcellulose in one 2015 laboratory study showed altered gut microbiota,
+        reduced mucus-epithelial distance, low-grade inflammation and metabolic-syndrome features, and
+        susceptible mice developed colitis. This is a mouse-model finding; EFSA's own 2018 safety
+        re-evaluation of E 466 did not identify a human dietary-dose safety concern.
+      pl: >-
+        Myszy karmione karboksymetylocelulozą w jednym badaniu laboratoryjnym z 2015 r. wykazywały
+        zmienioną mikrobiotę jelitową, zmniejszoną odległość mikrobiota–nabłonek, niewielki stan zapalny
+        i cechy zespołu metabolicznego, a u podatnych myszy rozwijało się zapalenie okrężnicy. To wynik z
+        modelu mysiego; własna, regulacyjna ponowna ocena bezpieczeństwa E 466 przez EFSA z 2018 r. nie
+        wykazała zagrożenia dla ludzi przy dawkach pokarmowych.
+    sources: [{ id: chassaing-2015-emulsifiers-microbiota }, { id: efsa-celluloses-2018 }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Permitted in a wide range of food categories at specific maximum levels under Annex II to Reg 1333/2008.", pl: "Dopuszczona w szerokim zakresie kategorii żywności, przy określonych maksymalnych poziomach, w Aneksie II do Reg 1333/2008." }
+    source: reg-1333-2008
+reference_values:
+  - type: ADI
+    value: "not specified"
+    body: EFSA
+    year: 2018
+    source: efsa-celluloses-2018
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "EFSA's 2022 follow-up opinion on E 466 for infants below 16 weeks (10.2903/j.efsa.2022.7665) found the database 'almost unchanged' and could not adequately assess safety for that specific population; not opened this session in full, flagged here rather than asserted."
