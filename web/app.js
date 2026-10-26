@@ -359,7 +359,9 @@ async function showProduct(ean, seq) {
           <dt>NOVA</dt><dd>${esc(p.nova ?? "—")}</dd>
           <dt>Sugars</dt><dd>${
     p.nutrition
-      ? `${esc(p.nutrition.sugars_g)} g / ${esc(p.nutrition.basis.slice(3))} (sent with the analysis)`
+      ? `${esc(p.nutrition.sugars_g)} g / ${
+        esc(p.nutrition.basis.replace("100", "100 "))
+      } (sent with the analysis)`
       : "—"
   }</dd>
           <dt>Allergens</dt><dd>${offTags(p.off_allergens)}</dd>

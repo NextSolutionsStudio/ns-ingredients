@@ -67,3 +67,9 @@ Deno.test("a serving unit that contradicts the basis is rejected", () => {
   assert(AnalyzeRequest.safeParse({ text: "x", nutrition: { basis: "100ml", sugars_g: 10 } }).success);
   assertFalse(AnalyzeRequest.safeParse({ text: "x", nutrition: { basis: "100g", sugars_g: 120 } }).success);
 });
+
+Deno.test("the portion rule compares the unrounded portion", () => {
+  // 10.4 g × 260 g / 100 = 27.04 g, over 27 g, though it displays as 27 g.
+  const s = assessNutrition({ basis: "100g", sugars_g: 10.4, serving: { amount: 260, unit: "g" } }).sugars;
+  assertEquals([s.band, s.band_by, s.per_serving], ["high", "per_portion", 27]);
+});

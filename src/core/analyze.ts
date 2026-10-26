@@ -6,7 +6,6 @@ import { baseENumber, findENumbers, guessLang, normName } from "./normalize.ts";
 import {
   assessNutrition,
   type GiCarrier,
-  GL_BANDS,
   highGlNote,
   highSugarNote,
   type NutritionInput,
@@ -452,7 +451,7 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
     }
     // Only when the whole range is high: an uncertain range never raises the flag.
     const gl = nutrition.glycemic_load;
-    if (gl?.status === "estimated" && gl.per === "serving" && gl.range![0] >= GL_BANDS.high) {
+    if (gl?.status === "estimated" && gl.band?.[0] === "high") {
       nutritionFlag("health.high_glycemic_load", "nutrition.carbohydrate_g", {
         kind: "estimate",
         grade: "D",

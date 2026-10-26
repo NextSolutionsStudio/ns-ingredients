@@ -5,7 +5,7 @@ import type { z } from "@hono/zod-openapi";
 
 const MAX_DEPTH = 4;
 const MAX_PATHS = 50;
-const PATH_RE = /^[a-z_]+(?:\.[a-z_]+)*$/;
+const PATH_RE = /^[a-z_][a-z0-9_]*(?:\.[a-z_][a-z0-9_]*)*$/;
 
 type Def = {
   type: string;

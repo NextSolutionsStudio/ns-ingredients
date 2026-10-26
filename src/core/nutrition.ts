@@ -76,7 +76,11 @@ const SOURCES = [
 ];
 
 const round1 = (n: number) => Math.round(n * 10) / 10;
-const round2 = (n: number) => Math.round(n * 100) / 100;
+// Displayed ranges round outward and coverage rounds down, so a shown number never crosses a threshold the
+// unrounded value did not. The epsilon keeps 20 from flooring to 19.9 through float error.
+const floor1 = (n: number) => Math.floor(n * 10 + 1e-9) / 10;
+const ceil1 = (n: number) => Math.ceil(n * 10 - 1e-9) / 10;
+const floor2 = (n: number) => Math.floor(n * 100 + 1e-9) / 100;
 
 // GL = GI × available carbohydrate (g) / 100, per serving: low at 10 or less, high at 20 or more.
 export const GL_METHOD = "gl-weighted-range/1";
@@ -154,7 +158,7 @@ export function estimateGlycemicLoad(
   let mapped = 0, lo = 0, hi = 0;
   const fractions: GlycemicLoad["fractions"] = [];
   for (const fraction of FRACTIONS) {
-    const g = round1(grams[fraction] * scale);
+    const g = grams[fraction] * scale;
     if (g <= 0) continue;
     const feeds = carriers.flatMap((c) =>
       c.glycemic.filter((x) => x.fraction === fraction).map((x) => ({ id: c.ingredient_id, x }))
@@ -169,13 +173,14 @@ export function estimateGlycemicLoad(
     // A fraction with no GI source counts as GI 0–100: the range widens instead of guessing.
     lo += gi ? g * gi[0] / 100 : 0;
     hi += g * (gi ? gi[1] : 100) / 100;
-    fractions.push({ fraction, grams: g, gi, from: [...new Set(feeds.map((f) => f.id))] });
+    fractions.push({ fraction, grams: round1(g), gi, from: [...new Set(feeds.map((f) => f.id))] });
   }
-  const coverage = available ? round2(mapped / available) : 1;
+  const covered = available ? mapped / available : 1;
+  const coverage = floor2(covered);
   const assumptions = [a.calculated, a.range, a.bias];
   if (coverage < 1) assumptions.push(a.unmapped(Math.round((1 - coverage) * 100)));
   for (const s of GL_SOURCES) sources.set(s.id, s);
-  if (coverage < GL_MIN_COVERAGE) {
+  if (covered < GL_MIN_COVERAGE) {
     return {
       ...base,
       status: "unknown",
@@ -188,12 +193,11 @@ export function estimateGlycemicLoad(
       sources: [...sources.values()],
     };
   }
-  const range: [number, number] = [round1(lo), round1(hi)];
   return {
     ...base,
     status: "estimated",
-    range,
-    band: per === "serving" ? [glBand(range[0]), glBand(range[1])] : null,
+    range: [floor1(lo), ceil1(hi)],
+    band: per === "serving" ? [glBand(lo), glBand(hi)] : null,
     coverage,
     fractions,
     assumptions,
@@ -228,10 +232,11 @@ export function assessNutrition(
   lang: Lang = "en",
 ): NutritionResult {
   const c = SUGAR_CRITERIA[n.basis];
-  const perServing = n.serving ? round1(n.sugars_g * n.serving.amount / 100) : null;
+  const portion = n.serving ? n.sugars_g * n.serving.amount / 100 : null;
+  const perServing = portion === null ? null : round1(portion);
   const band100: Band = n.sugars_g > c.high ? "high" : n.sugars_g > c.low ? "medium" : "low";
   const byPortion = band100 !== "high" && n.serving && n.serving.amount > c.portionOver &&
-    perServing! > c.portionHigh;
+    portion! > c.portionHigh;
   return {
     basis: n.basis,
     sugars: {
@@ -240,7 +245,7 @@ export function assessNutrition(
       band: byPortion ? "high" : band100,
       band_by: byPortion ? "per_portion" : "per_100",
       ri_percent_per_100: Math.round(n.sugars_g / SUGARS_RI_G * 100),
-      ri_percent_per_serving: perServing === null ? null : Math.round(perServing / SUGARS_RI_G * 100),
+      ri_percent_per_serving: portion === null ? null : Math.round(portion / SUGARS_RI_G * 100),
       criteria: "uk-fop-2016",
       kind: "fact",
       sources: SOURCES,

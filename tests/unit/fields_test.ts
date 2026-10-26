@@ -47,3 +47,8 @@ Deno.test("unknown, malformed, empty or too many paths are rejected with the off
   const many = parseFields(Array(51).fill("summary").join(","), PATHS);
   assert("invalid" in many && many.invalid[0].startsWith("(51 paths"));
 });
+
+Deno.test("paths with digits in a key are valid (per_100)", () => {
+  assert(PATHS.includes("nutrition.sugars.per_100"));
+  assert("tree" in parseFields("nutrition.sugars.per_100,nutrition.sugars.ri_percent_per_100", PATHS));
+});
