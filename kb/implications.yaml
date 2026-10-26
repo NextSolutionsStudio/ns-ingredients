@@ -105,6 +105,14 @@ implications:
     label: { en: "Sulphur dioxide and sulphites", pl: "Dwutlenek siarki i siarczyny", de: "Schwefeldioxid und Sulphite" }
     definition: { en: "At concentrations above 10 mg/kg or 10 mg/litre as SO2 (EU Annex II item 12). An ingredient list alone cannot show the concentration." }
     evidence_required: "Declared sulphite additive (E220–E228)."
+  - code: allergen.unrecognised_emphasis
+    group: allergen
+    severity: notice
+    concern: sensitivity
+    kind: estimate
+    label: { en: "Possible allergen (emphasised, not recognised)", pl: "Możliwy alergen (wyróżniony, nierozpoznany)", de: "Mögliches Allergen (hervorgehoben, nicht erkannt)" }
+    definition: { en: "The label emphasises this item, as EU law requires for the 14 allergens, but the knowledge base does not recognise it, so it cannot say which allergen it is.", pl: "Etykieta wyróżnia ten składnik, jak prawo UE wymaga dla 14 alergenów, ale baza wiedzy go nie rozpoznaje, więc nie wskazuje, który to alergen." }
+    evidence_required: "Emphasised text in a list that is not printed entirely in capitals, with no allergen recognised for the item."
   - code: allergen.lupin
     group: allergen
     severity: warning

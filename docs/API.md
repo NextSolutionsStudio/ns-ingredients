@@ -120,7 +120,8 @@ The response:
 - **`flags`**: one per implication code, with severity, certainty, kind, grade and the **triggers** that
   raised it. Each trigger gives the item path, ingredient, variant, basis (`ingredient`, `label_variant`,
   `prior_variant`, `qualifier`, `emphasis`, `nutrition`), note and sources. A `nutrition` trigger has the path
-  `nutrition.sugars_g` and no ingredient.
+  `nutrition.sugars_g` and no ingredient. `allergen.unrecognised_emphasis` (basis `emphasis`) marks a capitalised
+  item the knowledge base does not recognise; its trigger has no ingredient when the item is unmatched.
 - **`nutrition`**: `null` unless nutrition was sent. Sugars per 100 and per serving, the band (`low`/`medium`/
   `high`, UK front-of-pack criteria), `band_by`, and the percentage of the 90 g reference intake; with
   carbohydrate declared, `glycemic_load`: status, range, band per serving, coverage, the per-fraction GI ranges
