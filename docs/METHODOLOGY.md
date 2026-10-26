@@ -143,7 +143,9 @@ When `carbohydrate_g` is declared, `nutrition.glycemic_load` estimates GL = GI �
    counts as GI 0–100, which widens the range rather than guessing. Below 70% coverage the estimate is
    `unknown`.
 4. **Bands**, per serving only: low at 10 or less, high at 20 or more. Without a serving the range is per 100
-   and has no band.
+   and has no band. Bands, the coverage gate and the flag use unrounded values; the published range is
+   rounded outward to 0.1 and coverage down to 0.01, so a shown number never crosses a threshold the real one
+   did not.
 5. **Known bias.** Calculated GI overestimates measured GI: by 22–50% for mixed meals (Dodd et al. 2011).
    The estimate is reported uncorrected, with that assumption stated in the response.
 6. **Flag.** `health.high_glycemic_load` (notice, sensitivity, estimate) only when the low end of the range

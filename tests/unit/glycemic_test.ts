@@ -46,7 +46,7 @@ Deno.test("a fraction with no GI source widens the range as GI 0–100 and lower
 
 Deno.test("below 70% coverage, or total carbohydrate without fibre, the estimate is unknown", () => {
   const low = estimateGlycemicLoad({ basis: "100g", sugars_g: 50, carbohydrate_g: 90 }, [sucrose], "en")!;
-  assertEquals([low.status, low.reason, low.range, low.coverage], ["unknown", "low_coverage", null, 0.56]);
+  assertEquals([low.status, low.reason, low.range, low.coverage], ["unknown", "low_coverage", null, 0.55]);
   const us = estimateGlycemicLoad(
     { basis: "100g", sugars_g: 10, carbohydrate_g: 60, carbohydrate_definition: "total" },
     [sucrose],
@@ -103,4 +103,36 @@ Deno.test("an uncertain range never raises the flag", () => {
   });
   assertEquals(r.nutrition?.glycemic_load?.status, "estimated");
   assertEquals(r.flags.some((x) => x.code === "health.high_glycemic_load"), false);
+});
+
+Deno.test("thresholds see unrounded amounts: the range rounds outward, coverage rounds down", () => {
+  const wide: GiCarrier = {
+    ingredient_id: "sugar",
+    glycemic: [{ range: [59, 91], fraction: "sugars", method: "iso", source: src }],
+  };
+  // 33.85 g × 59 / 100 = 19.97: just under high, so no flag even though 33.85 g displays as 33.9 g.
+  const edge = {
+    basis: "100g",
+    sugars_g: 33.85,
+    carbohydrate_g: 33.85,
+    serving: { amount: 100, unit: "g" },
+  } as const;
+  const gl = estimateGlycemicLoad(edge, [wide], "en")!;
+  assertEquals([gl.range, gl.band], [[19.9, 30.9], ["medium", "high"]]);
+  // Through analyze, with the fixture sugar at GI 61: 32.75 g × 61 / 100 = 19.98, displayed grams 32.8 would give 20.01.
+  const r = analyze(idx, "Ingredients: sugar", {
+    nutrition: { basis: "100g", sugars_g: 32.75, carbohydrate_g: 32.75, serving: { amount: 100, unit: "g" } },
+  });
+  assertEquals(r.nutrition!.glycemic_load!.band, ["medium", "high"]);
+  assert(!r.flags.some((f) => f.code === "health.high_glycemic_load"), "19.98 raised the high-GL flag");
+  // 69.6% covered is below 70%, not "70%".
+  const low = estimateGlycemicLoad({ basis: "100g", sugars_g: 69.6, carbohydrate_g: 100 }, [sucrose], "en")!;
+  assertEquals([low.status, low.coverage], ["unknown", 0.69]);
+  // A tiny but fully sourced fraction still counts as covered.
+  const tiny = estimateGlycemicLoad(
+    { basis: "100g", sugars_g: 0.04, carbohydrate_g: 0.04, serving: { amount: 100, unit: "g" } },
+    [sucrose],
+    "en",
+  )!;
+  assertEquals([tiny.status, tiny.coverage], ["estimated", 1]);
 });
