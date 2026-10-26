@@ -1,0 +1,48 @@
+id: litholrubine-bk
+type: additive
+e_number: E180
+ids: { cas: "5281-04-9", wikidata: Q27095541, pubchem: 9571018 }
+names:
+  en: [Litholrubine BK, lithol rubine BK, Lithol Rubine B, Pigment Red 57:1, D&C Red No. 7]
+  pl: [czerwień litolowa BK, litolorubina BK, litolrubina BK, rubin litolowy BK]
+  de: [Litholrubin BK, Litholrubin B]
+functions: [colour]
+summary:
+  en: >-
+    A synthetic red azo pigment, usually the calcium salt, made by azo coupling with
+    3-hydroxy-2-naphthoic acid. In the EU it is authorised as E180 for a single use, colouring the rind
+    (edible coating) of cheese; outside food the same pigment colours printing inks, plastics and paints.
+  pl: >-
+    Syntetyczny czerwony pigment azowy, zwykle w postaci soli wapniowej, otrzymywany przez sprzęganie
+    azowe z kwasem 3-hydroksy-2-naftoesowym. W UE dopuszczony jako E180 do jednego zastosowania:
+    barwienia skórki (jadalnej powłoki) sera; poza żywnością ten sam pigment barwi farby drukarskie,
+    tworzywa sztuczne i farby.
+assertions:
+  - code: origin.petrochemical_synthetic
+    certainty: yes
+    kind: estimate
+    grade: B
+    note:
+      en: "Made by diazotising 2-amino-5-methylbenzenesulfonic acid (dissolved in sodium hydroxide, treated with sodium nitrite and acidified with hydrochloric acid) and coupling the diazonium salt with 3-hydroxy-2-naphthoic acid; the resulting sodium salt is converted to the calcium salt with calcium chloride. This describes the production route only and implies nothing about safety. No opened source names the feedstock (petroleum or coal tar), hence estimate."
+      pl: "Otrzymywany przez diazowanie kwasu 2-amino-5-metylobenzenosulfonowego (rozpuszczonego w wodorotlenku sodu, traktowanego azotynem sodu i zakwaszanego kwasem solnym) i sprzęganie soli diazoniowej z kwasem 3-hydroksy-2-naftoesowym; powstałą sól sodową przekształca się w sól wapniową za pomocą chlorku wapnia. Opis dotyczy wyłącznie drogi produkcji i nie oznacza niczego w kwestii bezpieczeństwa. Żadne otwarte źródło nie wskazuje surowca (ropa naftowa lub smoła węglowa), stąd szacunek."
+    sources: [{ id: cs-wikipedia-de-litholrubin-bk, locator: "Herstellung" }, { id: cs-wikipedia-lithol-rubine-bk }]
+  - code: regulatory.eu_restricted
+    certainty: yes
+    kind: fact
+    grade: B
+    note:
+      en: "In the EU the only permitted food use of E180 is colouring cheese rind (the edible coating of cheese). Reported by trade press on EFSA's 2010 re-evaluation and by German Wikipedia; the Annex II entry itself was not opened."
+      pl: "W UE jedynym dozwolonym zastosowaniem E180 w żywności jest barwienie skórki sera (jadalnej powłoki sera). Informacja pochodzi z prasy branżowej o ponownej ocenie EFSA z 2010 r. i z niemieckiej Wikipedii; sam wpis w Załączniku II nie był otwierany."
+    sources: [{ id: cs-dairyreporter-efsa-e180-2010 }, { id: cs-wikipedia-de-litholrubin-bk }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Authorised for a single use only: colouring the rind (edible coating) of cheese.", pl: "Dopuszczony tylko do jednego zastosowania: barwienia skórki (jadalnej powłoki) sera." }
+    source: reg-1333-2008
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Cheese-rind restriction comes from a 2010 DairyReporter article on EFSA's opinion and from German Wikipedia (edible cheese coating, quantum satis), both secondary; EUR-Lex returns empty to WebFetch and the EFSA opinion pages return HTTP 403. Verify against the current Annex II entry, then upgrade the `regulatory.eu_restricted` assertion to grade A."
+  - "Route is from German Wikipedia (full sequence) and English Wikipedia (azo coupling with 3-hydroxy-2-naphthoic acid, calcium salt); no JECFA or EU specification page was opened. No opened source says 'petroleum' for this dye, so the code rests on the synthetic azo route."
+  - "Polish label spelling not verified: Polish Wikipedia uses 'czerwień litolowa BK' (synonym 'rubin litolowy BK'); 'litolorubina BK' and 'litolrubina BK' come from the task brief and were not confirmed by any source opened; check them against a Polish label or the Polish text of Reg 1333/2008."
+  - "EFSA's 2010 opinion reportedly withdrew the old SCF ADI for this colour because no suitable NOAEL could be identified, while judging the single cheese-rind use unlikely to be a safety concern; not modelled as `reference_values` or an assertion because the opinion could not be opened and the detail comes from trade press."

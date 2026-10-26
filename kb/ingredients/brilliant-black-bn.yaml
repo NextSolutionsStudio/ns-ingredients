@@ -1,0 +1,39 @@
+id: brilliant-black-bn
+type: additive
+e_number: E151
+ids: { cas: "2519-30-4", wikidata: Q420079, pubchem: 17293 }
+names:
+  en: [Brilliant Black BN, Brilliant Black PN, Black PN, Food Black 1, C.I. 28440]
+  pl: [czerń brylantowa BN, czerń brylantowa PN, czerń BN, czerń PN]
+  de: [Brillantschwarz BN, Brillantschwarz, Schwarz PN]
+functions: [colour]
+summary:
+  en: >-
+    A synthetic, water-soluble black disazo dye authorised in the EU as the food colour E151, usually
+    supplied as the tetrasodium salt. It is also sold as Brilliant Black PN or Black PN, and is made by
+    chemical synthesis, not extracted from a plant or animal.
+  pl: >-
+    Syntetyczny, rozpuszczalny w wodzie czarny barwnik dwuazowy, dopuszczony w UE jako barwnik
+    spożywczy E151, zwykle dostarczany w postaci soli tetrasodowej. Spotykany też pod nazwami czerń
+    brylantowa PN i czerń PN; otrzymywany drogą syntezy chemicznej, a nie ekstrahowany z roślin ani
+    zwierząt.
+assertions:
+  - code: origin.petrochemical_synthetic
+    certainty: yes
+    kind: estimate
+    grade: B
+    note:
+      en: "A synthetic disazo dye assembled from naphthalene- and benzene-sulfonic acid building blocks: German Wikipedia lists the precursor chain as 4-aminobenzenesulfonic acid, 1-aminonaphthalene-7-sulfonic acid and 1-acetylamino-8-naphthol-4,6-disulfonic acid, joined through its two azo links (the article names the precursors but does not spell out the coupling steps). This describes the production route only and implies nothing about safety. No opened source names the feedstock (petroleum or coal tar), hence estimate."
+      pl: "Syntetyczny barwnik dwuazowy zbudowany z pochodnych kwasów sulfonowych benzenu i naftalenu: niemiecka Wikipedia podaje ciąg prekursorów: kwas 4-aminobenzenosulfonowy, kwas 1-aminonaftaleno-7-sulfonowy i kwas 1-acetyloamino-8-naftolo-4,6-disulfonowy, połączonych dwoma wiązaniami azowymi (artykuł wymienia prekursory, ale nie opisuje etapów sprzęgania). Opis dotyczy wyłącznie drogi produkcji i nie oznacza niczego w kwestii bezpieczeństwa. Żadne otwarte źródło nie wskazuje surowca (ropa naftowa lub smoła węglowa), stąd szacunek."
+    sources: [{ id: cs-wikipedia-de-brillantschwarz-bn }, { id: cs-wikipedia-brilliant-black-bn }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Authorised in specific food categories under Annex II conditions; maximum levels not transcribed here.", pl: "Dopuszczony w określonych kategoriach żywności na warunkach Załącznika II; maksymalne poziomy nie zostały tu przepisane." }
+    source: reg-1333-2008
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Route rests on German Wikipedia's precursor chain. A JECFA specification monograph for Brilliant Black PN (openknowledge.fao.org) reportedly describes the diazotisation/coupling sequence in detail but returned HTTP 403 and the EFSA 2010 opinion pages return 403 too, so neither was opened; replace the note when one can be read. No opened source says 'petroleum' for this dye, so the code rests on the synthetic disazo route."
+  - "Per-category Annex II maximum levels for E151 not transcribed (German Wikipedia quotes 50-500 mg/kg; not used). EUR-Lex returns empty to WebFetch, so the regulatory row cites reg-1333-2008 as registered in the KB, not a page opened here."
+  - "Wikipedia lists US, Japan and Norway as not permitting it (partly 'citation needed') and the IACM profile says it was never authorised in the US; not modelled as a US `regulatory` row, as no US regulation page was opened."

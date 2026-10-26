@@ -1,0 +1,70 @@
+id: erythrosine
+type: additive
+e_number: E127
+ids: { cas: "16423-68-0", wikidata: Q420101, pubchem: 3259 }
+names:
+  en: [erythrosine, erythrosin B, FD&C red no. 3, red 3]
+  pl: [erytrozyna]
+  de: [Erythrosin]
+functions: [colour]
+summary:
+  en: >-
+    A synthetic cherry-pink colour, chemically an iodinated fluorescein. In the EU it is allowed only in
+    cocktail and candied cherries. In January 2025 the US FDA revoked its use in food and ingested drugs
+    (food deadline 15 January 2027) under the Delaney Clause, because high doses caused cancer in male rats;
+    the FDA says that mechanism does not occur in humans, but the law bars any additive shown to cause
+    cancer in animals.
+  pl: >-
+    Syntetyczny wiśniowo-różowy barwnik, chemicznie jodowana fluoresceina. W UE dozwolony wyłącznie w
+    wiśniach koktajlowych i kandyzowanych. W styczniu 2025 r. amerykańska FDA cofnęła jego dopuszczenie w
+    żywności i lekach doustnych (termin dla żywności: 15 stycznia 2027 r.) na podstawie klauzuli Delaneya,
+    ponieważ duże dawki wywoływały nowotwory u samców szczurów; FDA zaznacza, że ten mechanizm nie występuje
+    u ludzi, ale prawo zakazuje każdego dodatku, który wywołuje raka u zwierząt.
+assertions:
+  - code: regulatory.revoked_elsewhere
+    certainty: yes
+    kind: fact
+    grade: A
+    jurisdiction: US
+    note:
+      en: "The FDA revoked the food and ingested-drug authorisation of FD&C Red No. 3 on 15 January 2025, as a matter of law under the Delaney Clause (cancer in male rats at high exposure). Compliance: 15 January 2027 for food, 18 January 2028 for ingested drugs. The FDA states the male-rat mechanism does not occur in humans."
+      pl: "FDA cofnęła 15 stycznia 2025 r. dopuszczenie FD&C Red No. 3 w żywności i lekach doustnych z mocy prawa, na podstawie klauzuli Delaneya (nowotwory u samców szczurów przy dużej ekspozycji). Terminy: 15 stycznia 2027 r. dla żywności, 18 stycznia 2028 r. dla leków doustnych. FDA zaznacza, że mechanizm obserwowany u samców szczurów nie występuje u ludzi."
+    sources: [{ id: csh-fda-red3-revocation-2025 }]
+  - code: regulatory.eu_restricted
+    certainty: yes
+    kind: fact
+    grade: B
+    note:
+      en: "In the EU authorised only in cocktail cherries, candied cherries and Bigarreaux cherries."
+      pl: "W UE dopuszczony wyłącznie w wiśniach koktajlowych, kandyzowanych i typu Bigarreaux."
+    sources: [{ id: csh-wikipedia-erythrosine }]
+  - code: origin.petrochemical_synthetic
+    certainty: yes
+    kind: fact
+    grade: B
+    note:
+      en: "Made from resorcinol and phthalic anhydride, which give fluorescein, which is then iodinated; the JECFA specification limits leftover fluorescein and tri-iodoresorcinol. The FDA counts it among the petroleum-based certified colour additives. How it is made says nothing about safety by itself."
+      pl: "Otrzymywany z rezorcynolu i bezwodnika ftalowego, z których powstaje fluoresceina, następnie jodowana; specyfikacja JECFA ogranicza pozostałości fluoresceiny i trijodorezorcynolu. FDA zalicza go do certyfikowanych barwników pochodzenia petrochemicznego. Sposób produkcji sam w sobie nie mówi nic o bezpieczeństwie."
+    sources: [{ id: csh-wikipedia-erythrosine }, { id: csh-jecfa-erythrosine-1993, locator: "Definition; Purity" }, { id: csh-fda-petroleum-dye-pledges }]
+regulatory:
+  - jurisdiction: EU
+    status: restricted
+    conditions: { en: "Only in cocktail, candied and Bigarreaux cherries.", pl: "Wyłącznie w wiśniach koktajlowych, kandyzowanych i typu Bigarreaux." }
+    source: csh-wikipedia-erythrosine
+  - jurisdiction: US
+    status: banned
+    conditions: { en: "Food authorisation revoked on 15 January 2025 (Delaney Clause); food must comply by 15 January 2027, ingested drugs by 18 January 2028.", pl: "Dopuszczenie w żywności cofnięte 15 stycznia 2025 r. (klauzula Delaneya); żywność musi spełnić wymóg do 15 stycznia 2027 r., leki doustne do 18 stycznia 2028 r." }
+    since: "2025-01-15"
+    source: csh-fda-red3-revocation-2025
+reference_values:
+  - type: ADI
+    value: 0.1
+    unit: "mg/kg bw/day"
+    body: JECFA
+    year: 1991
+    source: csh-jecfa-erythrosine-1993
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "EU restriction to cherries rests on Wikipedia (citing EFSA 2011); Reg 1333/2008 Annex II was not opened. EFSA's 2011 re-evaluation (ADI 0.1 mg/kg bw) was not opened."
+  - "Not a Southampton colour: no EU activity-and-attention warning."

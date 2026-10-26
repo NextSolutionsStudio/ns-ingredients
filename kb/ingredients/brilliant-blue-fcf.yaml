@@ -1,0 +1,40 @@
+id: brilliant-blue-fcf
+type: additive
+e_number: E133
+ids: { cas: "3844-45-9", wikidata: Q420093, chebi: "CHEBI:82411", pubchem: 19700 }
+names:
+  en: [brilliant blue FCF, brilliant blue, FD&C Blue No. 1, Blue 1, Acid Blue 9, C.I. 42090]
+  pl: [błękit brylantowy FCF, błękit brylantowy]
+  de: [Brillantblau FCF, Brillantblau]
+functions: [colour]
+summary:
+  en: >-
+    A synthetic blue dye made by condensing a benzaldehyde sulfonic acid with an aniline derivative and
+    oxidising the product; authorised in the EU as the food colour E133. In the US it is certified as
+    FD&C Blue No. 1, one of the six remaining US-approved synthetic dyes the FDA asked industry to phase
+    out by the end of 2026.
+  pl: >-
+    Syntetyczny niebieski barwnik otrzymywany przez kondensację kwasu sulfonowego benzaldehydu z pochodną
+    aniliny i utlenienie produktu; w UE dopuszczony jako barwnik spożywczy E133. W USA jest certyfikowany
+    jako FD&C Blue No. 1 i należy do sześciu wciąż dopuszczonych tam syntetycznych barwników, o których
+    wycofanie z rynku FDA poprosiła przemysł do końca 2026 r.
+assertions:
+  - code: origin.petrochemical_synthetic
+    certainty: yes
+    kind: fact
+    grade: B
+    note:
+      en: "Made by condensing 2-formylbenzenesulfonic acid with an N-ethyl, N-(3-sulfobenzyl) aniline derivative to a colourless leuco compound, which is then oxidised to the dye. Named by US HHS/FDA (April 2025) among the 'petroleum-based synthetic dyes' it asked industry to phase out (as 'blue dye 1'). This describes the production route only and implies nothing about safety."
+      pl: "Otrzymywany przez kondensację kwasu 2-formylobenzenosulfonowego z pochodną N-etylo-N-(3-sulfobenzylo)aniliny do bezbarwnego związku leuko, który następnie utlenia się do barwnika. Wymieniony przez amerykańskie HHS/FDA (kwiecień 2025) wśród „syntetycznych barwników pochodzenia petrochemicznego”, o których wycofanie z rynku poproszono przemysł (jako „blue dye 1”). Opis dotyczy wyłącznie drogi produkcji i nie oznacza niczego w kwestii bezpieczeństwa."
+    sources: [{ id: cs-wikipedia-brilliant-blue-fcf }, { id: cs-pubchem-brilliant-blue-manufacture, locator: "Methods of Manufacturing" }, { id: col-fda-dye-phaseout-2025 }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Authorised in specific food categories under Annex II conditions; maximum levels not transcribed here.", pl: "Dopuszczony w określonych kategoriach żywności na warunkach Załącznika II; maksymalne poziomy nie zostały tu przepisane." }
+    source: reg-1333-2008
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Route rests on English Wikipedia (citing a handbook of industrial chemistry) and a PubChem/HSDB extract (citing Ullmann's); no JECFA or EU specification page was opened. The PubChem record is titled FD&C Blue No. 1 and the HSDB reference 'Brilliant Blue'; treated as the same dye as E133."
+  - "Per-category Annex II maximum levels for E133 not transcribed (Wikipedia quotes a 150-300 mg/kg range; not used). EUR-Lex returns empty to WebFetch, so the regulatory row cites reg-1333-2008 as registered in the KB, not a page opened here."
+  - "US FDA's 2025 phase-out is a voluntary industry request, not a ban; FD&C Blue No. 1 remains authorised there, so no separate US `regulatory` row is modelled (same as tartrazine)."

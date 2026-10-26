@@ -1,0 +1,40 @@
+id: indigotine
+type: additive
+e_number: E132
+ids: { cas: "860-22-0", wikidata: Q410120, chebi: "CHEBI:31695", pubchem: 5284351 }
+names:
+  en: [indigotine, indigo carmine, FD&C Blue No. 2, Blue 2, Acid Blue 74, C.I. 73015]
+  pl: [indygotyna, indygokarmin, indygokarmina, karmin indygo]
+  de: [Indigotin, Indigokarmin, Indigocarmin]
+functions: [colour]
+summary:
+  en: >-
+    A synthetic blue dye made by sulfonating indigo (the disodium salt of indigo disulfonic acid), used
+    in the EU as the food colour E132. In the US it is certified as FD&C Blue No. 2, one of the six
+    remaining US-approved synthetic dyes the FDA asked industry to phase out by the end of 2026.
+  pl: >-
+    Syntetyczny niebieski barwnik otrzymywany przez sulfonowanie indygo (sól disodowa kwasu
+    indygodisulfonowego), stosowany w UE jako barwnik spożywczy E132. W USA jest certyfikowany jako
+    FD&C Blue No. 2 i należy do sześciu wciąż dopuszczonych tam syntetycznych barwników, o których
+    wycofanie z rynku FDA poprosiła przemysł do końca 2026 r.
+assertions:
+  - code: origin.petrochemical_synthetic
+    certainty: yes
+    kind: fact
+    grade: B
+    note:
+      en: "Made by heating indigo with sulfuric acid to sulfonate it. In the US specification for FD&C Blue No. 2 the indigo itself is synthetic, produced by fusing N-phenylglycine (an aniline derivative) in molten alkali under ammonia. Named by US HHS/FDA (April 2025) among the 'petroleum-based synthetic dyes' it asked industry to phase out (as 'blue dye 2'). This describes the production route only and implies nothing about safety."
+      pl: "Otrzymywany przez ogrzewanie indygo z kwasem siarkowym (sulfonowanie). W amerykańskiej specyfikacji FD&C Blue No. 2 samo indygo jest syntetyczne i powstaje przez stapianie N-fenyloglicyny (pochodnej aniliny) w stopionej zasadzie pod ciśnieniem amoniaku. Wymieniony przez amerykańskie HHS/FDA (kwiecień 2025) wśród „syntetycznych barwników pochodzenia petrochemicznego”, o których wycofanie z rynku poproszono przemysł (jako „blue dye 2”). Opis dotyczy wyłącznie drogi produkcji i nie oznacza niczego w kwestii bezpieczeństwa."
+    sources: [{ id: cs-cfr-74-102-fdc-blue-2, locator: "74.102(a)" }, { id: cs-wikipedia-indigo-carmine }, { id: col-fda-dye-phaseout-2025 }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Authorised in specific food categories under Annex II conditions; maximum levels not transcribed here.", pl: "Dopuszczony w określonych kategoriach żywności na warunkach Załącznika II; maksymalne poziomy nie zostały tu przepisane." }
+    source: reg-1333-2008
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "The route is the US-certified FD&C Blue No. 2 specification (21 CFR 74.102). The EU E132 specification (Reg 231/2012) was not opened, so whether every EU supplier uses synthetic indigo is not shown here."
+  - "Per-category Annex II maximum levels for E132 not transcribed. EUR-Lex returns empty to WebFetch, so the regulatory row cites reg-1333-2008 as registered in the KB, not a page opened here."
+  - "US FDA's 2025 phase-out is a voluntary industry request, not a ban; 21 CFR 74.102 still lists FD&C Blue No. 2 for food use, so no separate US `regulatory` row is modelled (same as tartrazine)."
+  - "English Wikipedia mentions genotoxicity and developmental findings in studies without a primary source in the page; not modelled."

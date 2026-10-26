@@ -1,0 +1,108 @@
+# Citations for the remaining Southampton colours (E104, E122, E124) and erythrosine (E127), added
+# 2026-10-26. Ids prefixed csh-. JECFA specifications were read from the FAO PDFs (text extracted
+# locally); EU acts from the legislation.gov.uk copy, because EUR-Lex pages come back empty to the
+# fetcher used.
+sources:
+  - id: csh-jecfa-quinoline-yellow-2011
+    type: monograph
+    title: "Quinoline Yellow (tentative specifications)"
+    publisher: "FAO/WHO JECFA — FAO JECFA Monographs 11 (74th meeting)"
+    year: 2011
+    url: https://www.fao.org/fileadmin/user_upload/jecfa_additives/docs/monograph11/additive-371-m11.pdf
+    licence: "FAO/WHO — facts cited, text not reproduced"
+    accessed: 2026-10-26
+    note: "Definition: prepared by sulfonating 2-(2-quinolyl)-1,3-indandione; a mixture of mono-, di- and trisulfonated sodium salts with subsidiary colouring matters. Records a temporary ADI of 0-5 mg/kg bw (2011) and supersedes the 1984 specification."
+  - id: csh-jecfa-db-quinoline-yellow
+    type: monograph
+    title: "Quinoline Yellow — JECFA evaluations"
+    publisher: "WHO — Evaluations of the Joint FAO/WHO Expert Committee on Food Additives"
+    url: https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/3466
+    licence: "WHO — facts cited, text not reproduced"
+    accessed: 2026-10-26
+    note: "Lists evaluations: ADI 0-10 mg/kg bw (28th meeting, 1984), temporary ADI 0-5 (2011), ADI 0-3 mg/kg bw (82nd meeting, 2016)."
+  - id: csh-jecfa-azorubine-1984
+    type: monograph
+    title: "Azorubine (specifications)"
+    publisher: "FAO/WHO JECFA — FNP 31/1 (1984) and FNP 52 (1992); metals revised 2002"
+    year: 1984
+    url: https://www.fao.org/fileadmin/user_upload/jecfa_additives/docs/Monograph1/Additive-050.pdf
+    licence: "FAO/WHO — facts cited, text not reproduced"
+    accessed: 2026-10-26
+    note: "Definition: essentially disodium 4-hydroxy-3-(4-sulfonato-1-naphthylazo)-1-naphthalenesulfonate (synonym carmoisine, INS 122). Purity limits include 4-amino-1-naphthalenesulfonic acid and 4-hydroxy-1-naphthalenesulfonic acid (0.5% together) and unsulfonated primary aromatic amines (0.01% as aniline)."
+  - id: csh-jecfa-ponceau-4r-1984
+    type: monograph
+    title: "Ponceau 4R (specifications)"
+    publisher: "FAO/WHO JECFA — FNP 31/1 (1984) and FNP 52 (1992); metals revised 2002"
+    year: 1984
+    url: https://www.fao.org/fileadmin/user_upload/jecfa_additives/docs/Monograph1/Additive-329.pdf
+    licence: "FAO/WHO — facts cited, text not reproduced"
+    accessed: 2026-10-26
+    note: "Definition: essentially trisodium 2-hydroxy-1-(4-sulfonato-1-naphthylazo)-6,8-naphthalenedisulfonate (synonyms Cochineal Red A, New Coccine; INS 124). Purity limits name naphthalenesulfonic-acid intermediates (0.5% in sum) and unsulfonated primary aromatic amines (0.01% as aniline)."
+  - id: csh-jecfa-erythrosine-1993
+    type: monograph
+    title: "Erythrosine (specifications)"
+    publisher: "FAO/WHO JECFA — FNP 52 Add 2 (41st meeting); metals revised 2002"
+    year: 1993
+    url: https://www.fao.org/fileadmin/user_upload/jecfa_additives/docs/Monograph1/Additive-174.pdf
+    licence: "FAO/WHO — facts cited, text not reproduced"
+    accessed: 2026-10-26
+    note: "Definition: essentially the disodium salt of a tetraiodinated fluorescein (9-(o-carboxyphenyl)-6-hydroxy-2,4,5,7-tetraiodo-3-isoxanthone), synonym FD&C Red No. 3, INS 127. Limits fluorescein (20 mg/kg), inorganic iodides and tri-iodoresorcinol. Records an ADI of 0-0.1 mg/kg bw (37th meeting, 1991)."
+  - id: csh-reg-232-2012
+    type: regulation
+    title: "Commission Regulation (EU) No 232/2012 amending Annex II to Regulation (EC) No 1333/2008 as regards the conditions of use and the use levels for Quinoline Yellow (E 104), Sunset Yellow FCF/Orange Yellow S (E 110) and Ponceau 4R, Cochineal Red A (E 124)"
+    publisher: European Union
+    year: 2012
+    url: https://eur-lex.europa.eu/eli/reg/2012/232/oj
+    licence: "EU reuse policy (Decision 2011/833/EU) — CC BY 4.0"
+    accessed: 2026-10-26
+    note: "Read via the legislation.gov.uk copy. Recitals 3 and 5: EFSA opinions of 23 September 2009 lowered the ADI of Quinoline Yellow from 10 to 0.5 mg/kg bw/day and of Ponceau 4R from 4 to 0.7 mg/kg bw/day; the Regulation cut their permitted use levels accordingly."
+  - id: csh-fda-red3-revocation-2025
+    type: regulation
+    title: "FDA to Revoke Authorization for the Use of Red No. 3 in Food and Ingested Drugs"
+    publisher: "U.S. Food and Drug Administration (constituent update)"
+    year: 2025
+    url: https://www.fda.gov/food/hfp-constituent-updates/fda-revoke-authorization-use-red-no-3-food-and-ingested-drugs
+    licence: "U.S. Government work — public domain"
+    accessed: 2026-10-26
+    note: "15 January 2025: FDA revokes the authorisation of FD&C Red No. 3 in food and ingested drugs as a matter of law under the Delaney Clause (cancer in male rats at high exposure). Compliance dates 15 January 2027 (food) and 18 January 2028 (ingested drugs). FDA states the male-rat mechanism does not occur in humans. Calls it 'a synthetic food dye'."
+  - id: csh-fda-petroleum-dye-pledges
+    type: reference
+    title: "Tracking Food Industry Pledges to Remove Petroleum Based Food Dyes"
+    publisher: U.S. Food and Drug Administration
+    year: 2026
+    url: https://www.fda.gov/food/color-additives-information-consumers/tracking-food-industry-pledges-remove-petroleum-based-food-dyes
+    licence: "U.S. Government work — public domain"
+    accessed: 2026-10-26
+    note: "Equates 'petroleum-based food dyes' with certified color additives, and lists FD&C Red No. 3 among them with its 15 January 2025 revocation. Content current as of 16 October 2026."
+  - id: csh-wikipedia-erythrosine
+    type: reference
+    title: Erythrosine
+    publisher: Wikipedia
+    url: https://en.wikipedia.org/wiki/Erythrosine
+    licence: "CC BY-SA 4.0"
+    accessed: 2026-10-26
+    note: "Made from resorcinol and phthalic anhydride, which give fluorescein, then iodinated. In the EU authorised only in processed (cocktail, candied and Bigarreaux) cherries since 1994; FDA revoked US food use in January 2025 with enforcement from 15 January 2027."
+  - id: csh-wikipedia-quinoline-yellow
+    type: reference
+    title: Quinoline Yellow WS
+    publisher: Wikipedia
+    url: https://en.wikipedia.org/wiki/Quinoline_Yellow_WS
+    licence: "CC BY-SA 4.0"
+    accessed: 2026-10-26
+    note: "A mixture of (mainly) disulfonates with mono- and trisulfonates of 2-(2-quinolyl)indan-1,3-dione, derived from the spirit-soluble Quinoline Yellow SS. Not listed as a permitted food additive in the US or Canada; permitted in US drugs and cosmetics as D&C Yellow No. 10."
+  - id: csh-wikipedia-carmoisine
+    type: reference
+    title: Carmoisine
+    publisher: Wikipedia
+    url: https://en.wikipedia.org/wiki/Carmoisine
+    licence: "CC BY-SA 4.0"
+    accessed: 2026-10-26
+    note: "An azo dye of two naphthalene subunits. Not used in US food; listed in 1939 as Ext. D&C Red No. 10 for external drugs and cosmetics and delisted in 1963. EU foods containing it carry the activity-and-attention warning."
+  - id: csh-wikipedia-ponceau-4r
+    type: reference
+    title: Ponceau 4R
+    publisher: Wikipedia
+    url: https://en.wikipedia.org/wiki/Ponceau_4R
+    licence: "CC BY-SA 4.0"
+    accessed: 2026-10-26
+    note: "A strawberry-red azo dye 'usually synthesized from aromatic hydrocarbons'. Not approved for human consumption by the US FDA."

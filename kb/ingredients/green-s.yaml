@@ -1,0 +1,39 @@
+id: green-s
+type: additive
+e_number: E142
+ids: { cas: "3087-16-9", wikidata: Q420143, pubchem: 91525 }
+names:
+  en: [Green S, lissamine green, Food Green 4, C.I. 44090]
+  pl: [zieleń S, zieleń brylantowa BS]
+  de: [Grün S, Brillantsäuregrün, Brillantsäuregrün BS]
+functions: [colour]
+summary:
+  en: >-
+    A synthetic green triarylmethane dye, described as a coal-tar dye, authorised in the EU as the food
+    colour E142 (also known as lissamine green). It is made by chemical synthesis, not extracted from
+    plants.
+  pl: >-
+    Syntetyczny zielony barwnik triarylometanowy, opisywany jako barwnik smołowy, dopuszczony w UE jako
+    barwnik spożywczy E142 (znany też jako zieleń brylantowa BS lub lissamine green). Otrzymywany drogą
+    syntezy chemicznej, a nie ekstrahowany z roślin.
+assertions:
+  - code: origin.petrochemical_synthetic
+    certainty: yes
+    kind: estimate
+    grade: B
+    note:
+      en: "Described as a synthetic coal-tar triarylmethane dye, i.e. built by chemical synthesis from fossil-derived aromatic chemicals rather than extracted from a natural source. The individual synthesis steps were not found in a source that was opened. This describes the production route only and implies nothing about safety. No opened source names the feedstock (petroleum or coal tar), hence estimate."
+      pl: "Opisywany jako syntetyczny smołowy barwnik triarylometanowy, czyli otrzymywany syntezą chemiczną z kopalnych związków aromatycznych, a nie ekstrahowany ze źródła naturalnego. Poszczególnych etapów syntezy nie znaleziono w żadnym otwartym źródle. Opis dotyczy wyłącznie drogi produkcji i nie oznacza niczego w kwestii bezpieczeństwa. Żadne otwarte źródło nie wskazuje surowca (ropa naftowa lub smoła węglowa), stąd szacunek."
+    sources: [{ id: cs-wikipedia-green-s }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Authorised in specific food categories under Annex II conditions; maximum levels not transcribed here.", pl: "Dopuszczony w określonych kategoriach żywności na warunkach Załącznika II; maksymalne poziomy nie zostały tu przepisane." }
+    source: reg-1333-2008
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Manufacturing steps not sourced: English Wikipedia and the IACM profile give the dye class and composition only, and no JECFA/EFSA/Reg 231/2012 text describing the route could be opened (EFSA Wiley pages return HTTP 403, EUR-Lex returns empty). The `petrochemical_synthetic` code rests on 'synthetic coal tar triarylmethane dye'; replace with a route description when a specification page is available."
+  - "Per-category Annex II maximum levels for E142 not transcribed. The regulatory row cites reg-1333-2008 as registered in the KB, not a page opened here."
+  - "Wikipedia lists the US, Canada, Japan and Norway as not permitting it as a food additive, and the IACM profile says it was never authorised in the US; not modelled as a US `regulatory` row (no US regulation page opened)."
+  - "Not the same colour as FD&C Green No. 3 (Fast Green FCF, E143); the 2025 FDA phase-out list therefore does not apply here and is not cited."

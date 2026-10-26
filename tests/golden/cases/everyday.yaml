@@ -325,3 +325,47 @@
     ]
     absent: [allergen.milk, health.southampton_colour]
     statements: [laxative, phenylalanine]
+
+- id: pl-jelly-sweets-southampton-four
+  lang: pl
+  category: confectionery
+  note: >-
+    Four Southampton colours on one label, three of which (E104, E122, E124) had identity data only until
+    2026-10-26 and raised no warning. All four must flag.
+  text: >-
+    Skład: cukier, syrop glukozowy, żelatyna wieprzowa, kwas cytrynowy, aromaty, barwniki: żółcień
+    chinolinowa, azorubina, czerwień koszenilowa A, czerwień allura AC. Barwniki: żółcień chinolinowa,
+    azorubina, czerwień koszenilowa A, czerwień allura AC mogą mieć szkodliwy wpływ na aktywność i
+    skupienie uwagi u dzieci.
+  expect:
+    match:
+      cukier: sugar
+      syrop glukozowy: glucose-syrup
+      kwas cytrynowy: citric-acid
+      żółcień chinolinowa: quinoline-yellow
+      azorubina: azorubine
+      czerwień koszenilowa A: ponceau-4r
+      czerwień allura AC: allura-red
+    flags: [health.southampton_colour=yes, regulatory.eu_warning_label=yes, origin.petrochemical_synthetic]
+    absent: [allergen.milk, regulatory.revoked_elsewhere]
+    statements: [southampton]
+
+- id: en-cocktail-cherries-erythrosine
+  lang: en
+  category: confectionery
+  note: >-
+    Erythrosine is authorised in the EU only in cocktail and candied cherries; the US FDA revoked its food
+    use in 2025.
+  text: >-
+    Ingredients: cherries, sugar, water, glucose syrup, acid: citric acid, colour: erythrosine,
+    preservative: potassium sorbate.
+  expect:
+    match:
+      sugar: sugar
+      water: water
+      glucose syrup: glucose-syrup
+      citric acid: citric-acid
+      erythrosine: erythrosine
+      potassium sorbate: potassium-sorbate
+    flags: [regulatory.revoked_elsewhere=yes, regulatory.eu_restricted, origin.petrochemical_synthetic]
+    absent: [health.southampton_colour]
