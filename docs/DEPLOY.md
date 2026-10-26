@@ -92,3 +92,34 @@ live.
   or put the limit in the proxy.
 - A self-hosted CI runner must not serve a public repository: it would run code from fork pull requests on
   your host. The workflow in `.github/workflows/ci.yml` says where to switch.
+
+## Cloudflare Workers (the public keyless demo)
+
+`wrangler.toml` deploys the API and the explorer page (`web/`) as one Worker. There is no database, so
+there are no API keys: the Worker opens `kb:read` and `analyze` to anyone, limited per IP address, and
+`/v1/meta` reports the limits (`keyless.per_minute`). Keyed access with daily quotas is the container above.
+
+```bash
+npx wrangler dev        # local, on workerd, http://127.0.0.1:8787
+npx wrangler deploy     # needs CLOUDFLARE_API_TOKEN (Workers Scripts: Edit) and CLOUDFLARE_ACCOUNT_ID
+```
+
+Both run `deno task build:worker` first: it validates the knowledge base, bakes it into
+`dist/kb-bundle.json` and bundles `src/worker.ts` for workerd (about 1.1 MB, 300 KB gzipped).
+
+- **Limits** are `ANON_RATES` in `src/worker-limits.ts`, mirrored by the `[[ratelimits]]` blocks in
+  `wrangler.toml` (a unit test keeps the two in step). Each request is checked against a per-isolate bucket,
+  then Cloudflare's rate-limit binding. Both are approximate: the binding counts per Cloudflare location and
+  syncs between machines asynchronously, and a burst spreads across isolates. Measured on 2026-10-26, about
+  120 analyses from one IP passed in the first minute against a limit of 30 before denials began; sustained
+  traffic is then denied with `429` and `Retry-After: 60`. Treat the limits as abuse protection, not metering.
+- **Static assets** (`web/`) are served before the Worker runs and do not count against the limits.
+  `web/_headers` sets their CSP (`script-src 'self'`, `connect-src` to Open Food Facts); the Worker's own
+  responses (API, `/docs`) do not get those headers.
+- **Open Food Facts.** The page fetches products from OFF directly in the visitor's browser, so OFF's
+  per-IP limit (about 15 product reads a minute) applies to each visitor, not to us. `/off/product` and
+  `/off/search` on the Worker are the fallback and the search (OFF search has no CORS); they cache for
+  10 minutes per isolate and count against the `off` bucket.
+- **Logs.** Workers Logs are on (`[observability]`): route templates, status and latency, never bodies.
+  Cloudflare's invocation logs also record request URLs, so search terms in `/v1/ingredients?q=` and
+  `/off/search?q=` appear there; ingredient lists sent to `/v1/analyze` do not.

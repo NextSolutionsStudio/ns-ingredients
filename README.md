@@ -18,6 +18,20 @@ It is built for the questions most ingredient apps can't answer:
 > assistance from sources that were opened and cited, and none has had specialist review yet. Responses say
 > so (`ai_generated_content: true`). Informational only, not medical advice.
 
+## Try it
+
+**Live demo: <https://ns-ingredients.YOUR-ACCOUNT.workers.dev>**. Look up a barcode, search an
+ingredient (try E171, citric acid or xylitol) or paste a label. The same deployment is the API, open without
+a key and limited per IP address ([reference](https://ns-ingredients.YOUR-ACCOUNT.workers.dev/docs)):
+
+```bash
+curl -s https://ns-ingredients.YOUR-ACCOUNT.workers.dev/v1/analyze -H 'content-type: application/json' \
+  -d '{"text":"Ingredients: sugar, palm oil, colour: E129, E171, citric acid","lang":"en"}'
+```
+
+The demo runs on Cloudflare Workers ([docs/DEPLOY.md](docs/DEPLOY.md#cloudflare-workers-the-public-keyless-demo));
+self-host the container for API keys and quotas.
+
 ## What's inside
 
 | Part | What |
@@ -69,8 +83,8 @@ deno task test:golden     # golden-corpus report: metrics, ratchet hints, every 
 deno task kb:validate     # schema, cross-references, tells, name collisions
 deno task bench           # analysis and search latency on the real KB
 deno task openapi         # print the OpenAPI document
-deno task explorer        # local UI on http://127.0.0.1:8030: look up an EAN or product name on Open Food Facts,
-                          # search the KB, paste a label; runs the API in-process with a throwaway key
+deno task explorer        # the demo page (web/) on http://127.0.0.1:8030 against an in-process API
+npx wrangler dev          # the Cloudflare Worker locally on http://127.0.0.1:8787
 ```
 
 Contributing to the knowledge base: [docs/CONTRIBUTING-KB.md](docs/CONTRIBUTING-KB.md). Architecture:
