@@ -1,9 +1,9 @@
 id: milk
 type: ingredient
 names:
-  en: [milk, milk powder]
-  pl: [mleko, mleka, mleko w proszku]
-  de: [Milch]
+  en: [milk, milk powder, skimmed milk, skimmed milk powder, skim milk powder, whole milk, whole milk powder]
+  pl: [mleko, mleka, mleko w proszku, mleko odtłuszczone, mleko odtłuszczone w proszku, mleko pełne w proszku]
+  de: [Milch, Milchpulver, Magermilch, Magermilchpulver, Vollmilch, Vollmilchpulver]
 summary:
   en: "Cow's (or other mammal's) milk, including lactose; one of the EU's fourteen regulated allergens, with narrow exemptions for whey used in alcoholic distillates and for lactitol."
   pl: "Mleko krowie (lub innego ssaka), łącznie z laktozą; jeden z czternastu regulowanych alergenów UE, z wąskimi wyłączeniami dla serwatki stosowanej w destylatach alkoholowych i dla laktitolu."
