@@ -284,6 +284,14 @@ implications:
     label: { en: "Ultra-processing marker", pl: "Wskaźnik wysokiego przetworzenia", de: "Marker für hochverarbeitete Lebensmittel" }
     definition: { en: "An ingredient rarely used in home cooking that the NOVA classification treats as a marker of group 4 (e.g. protein isolates, maltodextrin, flavourings, emulsifiers, non-sugar sweeteners). NOVA is itself a contested methodology." }
     evidence_required: "Ingredient identity."
+  - code: processing.non_sugar_sweetener
+    group: processing
+    severity: notice
+    concern: quality
+    kind: fact
+    label: { en: "Non-sugar sweetener", pl: "Substancja słodząca niecukrowa", de: "Süßstoff (kein Zucker)" }
+    definition: { en: "A non-sugar sweetener in the sense of WHO's 2023 guideline: any synthetic, naturally occurring or modified non-nutritive sweetener not classified as a sugar. WHO names acesulfame K, aspartame, advantame, cyclamates, neotame, saccharin, sucralose, stevia and stevia derivatives as the common ones. WHO conditionally recommends against using them for weight control; the recommendation does not apply to people with pre-existing diabetes. Polyols and low-calorie sugars are outside the definition. Marks the ingredient's role, not a safety finding." }
+    evidence_required: "WHO guideline on the use of non-sugar sweeteners (2023). A sweetener WHO does not name is an estimate."
   # ---------------------------------------------------------------- health (always with population + grade)
   - code: health.southampton_colour
     group: health
@@ -293,6 +301,22 @@ implications:
     label: { en: "Mandatory warning: activity and attention in children", pl: "Obowiązkowe ostrzeżenie: aktywność i uwaga u dzieci", de: "Pflichthinweis: Aktivität und Aufmerksamkeit bei Kindern" }
     definition: { en: "One of the six colours (E102, E104, E110, E122, E124, E129) whose use requires the label statement 'may have an adverse effect on activity and attention in children' (Reg 1333/2008 Annex V)." }
     evidence_required: "Reg 1333/2008 Annex V."
+  - code: health.added_sugar
+    group: health
+    severity: notice
+    concern: quality
+    kind: fact
+    label: { en: "Added sugar", pl: "Cukier dodany", de: "Zugesetzter Zucker" }
+    definition: { en: "A sugar or sugary syrup added as an ingredient: a free sugar in WHO's sense (monosaccharides and disaccharides added to food or drink, plus sugars naturally in honey, syrups and fruit juices). Sugars in fresh fruit, vegetables and milk are not free sugars. WHO strongly recommends keeping free sugars under 10% of energy intake. Says nothing about the amount: without declared nutrition, the trigger notes give only position facts (place in the list, declared percentage, number of different sugars)." }
+    evidence_required: "Ingredient identity; WHO guideline on sugars intake (2015) for the definition."
+  - code: health.high_sugar
+    group: health
+    severity: caution
+    concern: hazard
+    kind: fact
+    label: { en: "High in sugars", pl: "Wysoka zawartość cukrów", de: "Hoher Zuckergehalt" }
+    definition: { en: "Declared total sugars above the UK front-of-pack 'high' criteria: more than 22.5 g per 100 g of food or 11.25 g per 100 ml of drink, or, for portions over 100 g (food) or 150 ml (drinks), more than 27 g or 13.5 g per portion. EU law defines only 'low sugars'. Computed from the nutrition the caller declares, never from the ingredient list; total sugars include those naturally in milk and fruit." }
+    evidence_required: "Declared nutrition; DHSC front-of-pack guidance (2016)."
   - code: health.laxative_polyol
     group: health
     severity: notice

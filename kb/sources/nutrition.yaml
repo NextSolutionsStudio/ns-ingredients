@@ -1,0 +1,11 @@
+# Criteria applied to declared nutrition (src/core/nutrition.ts), added 2026-10-26. Ids prefixed nut-.
+sources:
+  - id: nut-uk-fop-2016
+    type: standard
+    title: "Guide to creating a front of pack (FoP) nutrition label for pre-packed products sold through retail outlets"
+    publisher: "Department of Health and Social Care (with the FSA and devolved administrations)"
+    year: 2016
+    url: https://assets.publishing.service.gov.uk/media/5a80cd03ed915d74e33fc7c5/FoP_Nutrition_labelling_UK_guidance.pdf
+    licence: "Open Government Licence v3.0"
+    accessed: 2026-10-26
+    note: "Table 2 (food, per 100 g): total sugars low at 5.0 g or less, high above 22.5 g, or above 27 g per portion for portions over 100 g. Table 3 (drinks, per 100 ml): low at 2.5 g or less, high above 11.25 g, or above 13.5 g per portion for portions over 150 ml. Voluntary UK scheme under Article 35 of Reg 1169/2011."
