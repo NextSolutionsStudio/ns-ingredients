@@ -369,3 +369,55 @@
       potassium sorbate: potassium-sorbate
     flags: [regulatory.revoked_elsewhere=yes, regulatory.eu_restricted, origin.petrochemical_synthetic]
     absent: [health.southampton_colour]
+
+- id: pl-diet-cola-three-sweeteners
+  lang: pl
+  category: drink
+  note: Three WHO-named non-sugar sweeteners under one class header, two given by their salt names.
+  text: >-
+    Skład: woda, dwutlenek węgla, barwnik: karmel amoniakalno-siarczynowy, regulator kwasowości: kwas
+    fosforowy, substancje słodzące: cyklaminian sodu, acesulfam K, sacharynian sodu, aromat, kofeina.
+  expect:
+    match:
+      cyklaminian sodu: cyclamates
+      acesulfam K: acesulfame-k
+      sacharynian sodu: saccharin
+      kofeina: caffeine
+    flags: [processing.non_sugar_sweetener=yes, health.caffeine=yes]
+    absent: [health.added_sugar, health.laxative_polyol]
+
+- id: en-granola-bar-four-sugars
+  lang: en
+  category: confectionery
+  note: Sugar split across four names; honey is vegetarian but not vegan.
+  text: >-
+    Ingredients: Oats (45%), Glucose-Fructose Syrup, Honey (8%), Sugar, Palm Oil, Brown Sugar, Salt,
+    Emulsifier: Sunflower Lecithin.
+  expect:
+    match:
+      oats: oats
+      glucose-fructose syrup: glucose-fructose-syrup
+      honey: honey
+      sugar: sugar
+      brown sugar: brown-sugar
+    flags: [health.added_sugar=yes, allergen.gluten=yes]
+    absent: [processing.non_sugar_sweetener, origin.insect]
+    diets: { vegan: "no", vegetarian: "yes" }
+
+- id: pl-sugar-free-gum-polyols
+  lang: pl
+  category: confectionery
+  note: Polyols and intense sweeteners side by side; only the intense ones are non-sugar sweeteners.
+  text: >-
+    Skład: substancje słodzące (sorbitol, izomalt, mannitol, ksylitol, aspartam, acesulfam K), substancja
+    zagęszczająca: guma arabska, aromaty, emulgator: lecytyny sojowe, substancja glazurująca: wosk carnauba.
+    Zawiera źródło fenyloalaniny. Spożycie w nadmiernych ilościach może mieć efekt przeczyszczający.
+  expect:
+    match:
+      izomalt: isomalt
+      mannitol: mannitol
+      ksylitol: xylitol
+      aspartam: aspartame
+    flags: [health.laxative_polyol=yes, processing.non_sugar_sweetener=yes, health.phenylalanine_source=yes]
+    absent: [health.added_sugar]
+    statements: [phenylalanine, laxative]

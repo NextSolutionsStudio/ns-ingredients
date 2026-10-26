@@ -1,0 +1,94 @@
+id: cyclamates
+type: additive
+e_number: E952
+ids: {}
+names:
+  en:
+  - cyclamates
+  - cyclamic acid
+  - sodium cyclamate
+  - calcium cyclamate
+  pl:
+  - cyklaminiany
+  - kwas cyklaminowy
+  - cyklaminian sodu
+  - cyklaminian wapnia
+  de:
+  - Cyclamate
+  - Cyclaminsäure
+  - Natriumcyclamat
+  - Calciumcyclamat
+functions:
+- sweetener
+summary:
+  en: E952 covers cyclamic acid and its sodium and calcium salts, used as intense sweeteners, including in
+    sweetener blends. The described chemical route reacts cyclohexylamine with a sulfamating reagent to obtain
+    cyclamic acid, from which salts are prepared. EU use is restricted to authorised categories and limits;
+    FDA prohibits cyclamates and their salts in US food.
+  pl: E952 obejmuje kwas cyklaminowy oraz jego sole sodową i wapniową, stosowane jako intensywne substancje
+    słodzące, także w mieszankach słodzików. Opisana droga chemiczna polega na reakcji cykloheksyloaminy z
+    odczynnikiem wprowadzającym grupę sulfaminową, prowadzącej do kwasu cyklaminowego, z którego otrzymuje
+    się sole. W UE stosowanie podlega warunkom dla dozwolonych kategorii żywności i limitom; FDA zakazuje stosowania
+    cyklaminianów i ich soli w żywności w USA.
+assertions:
+- code: origin.chemical_synthesis
+  certainty: 'yes'
+  kind: estimate
+  grade: D
+  note:
+    en: The opened secondary reference describes reaction of cyclohexylamine with sulfamic acid or sulfur trioxide
+      to form cyclamic acid, used to prepare sodium or calcium salts. This does not verify every manufacturer's
+      process.
+    pl: Otwarte źródło wtórne opisuje reakcję cykloheksyloaminy z kwasem sulfaminowym lub trójtlenkiem siarki,
+      prowadzącą do kwasu cyklaminowego używanego do otrzymywania soli sodowej lub wapniowej. Nie potwierdza
+      to procesu każdego producenta.
+  sources:
+  - id: swm-wikipedia-cyclamate
+- code: processing.non_sugar_sweetener
+  certainty: 'yes'
+  kind: fact
+  grade: A
+  note:
+    en: 'Named by WHO as a common non-sugar sweetener. WHO''s 2023 guideline conditionally recommends against
+      using non-sugar sweeteners for weight control; it does not apply to people with pre-existing diabetes.
+      This marks the ingredient''s role, not a safety finding: the authorised use limits are set by the ADI.'
+    pl: 'WHO wymienia go wśród typowych substancji słodzących niecukrowych. Wytyczna WHO z 2023 r. warunkowo
+      odradza stosowanie substancji słodzących niecukrowych w celu kontroli masy ciała; nie dotyczy osób z
+      cukrzycą. Oznacza rolę składnika, nie ocenę bezpieczeństwa: limity stosowania wynikają z ADI.'
+  sources:
+  - id: who-nss-guideline-2023
+regulatory:
+- jurisdiction: EU
+  status: authorised
+  conditions:
+    en: Listed in Annex II to Regulation 1333/2008; use is subject to food-category conditions and applicable
+      limits.
+    pl: Wymieniony w załączniku II do rozporządzenia 1333/2008; stosowanie podlega warunkom i limitom dla kategorii
+      żywności.
+  source: swm-reg-1129-2011
+- jurisdiction: US
+  status: banned
+  conditions:
+    en: FDA prohibits cyclamates and their salts in US food.
+    pl: FDA zakazuje stosowania cyklaminianów i ich soli w żywności w USA.
+  source: swm-fda-high-intensity
+reference_values:
+- type: group_ADI
+  value: 11
+  unit: mg/kg bw/day as cyclamic acid
+  body: JECFA
+  year: 1982
+  source: swm-jecfa-cyclamates
+review_status: draft
+provenance: ai-drafted
+review_notes:
+- Individual current food-category maximum levels were not exhaustively checked or transcribed; consult the
+  consolidated EU list for a particular product.
+- 'No diet, GMO, feedstock-country or general health-benefit assertions: the opened sources do not verify these
+  for a particular supplier.'
+- 'Production is an estimate, grade D: only a secondary chemistry reference was opened, not an official manufacturing
+  specification.'
+- No single CAS or PubChem identifier assigned to this acid-and-salts family; the opened sodium and calcium
+  identifiers refer to individual salts.
+- 'No EFSA ADI added: the commonly quoted EU value comes from SCF, outside the requested EFSA/JECFA-only reference
+  values.'

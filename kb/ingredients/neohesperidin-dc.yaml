@@ -1,0 +1,80 @@
+id: neohesperidin-dc
+type: additive
+e_number: E959
+ids:
+  cas: 20702-77-6
+names:
+  en:
+  - neohesperidin DC
+  - neohesperidine DC
+  - neohesperidin dihydrochalcone
+  - neohesperidine dihydrochalcone
+  pl:
+  - neohesperydyna DC
+  - dihydrochalkon neohesperydyny
+  de:
+  - Neohesperidin DC
+  - Neohesperidindihydrochalcon
+functions:
+- sweetener
+summary:
+  en: An intense sweetener produced by catalytic hydrogenation of neohesperidin, a flavonoid extracted from
+    bitter oranges in the process reviewed by EFSA. It is used in products including drinks, confectionery
+    and food supplements. E959 is authorised in specified EU categories, and EFSA established an ADI of 20
+    mg/kg body weight/day in 2022.
+  pl: Intensywna substancja słodząca otrzymywana przez katalityczne uwodornienie neohesperydyny, flawonoidu
+    ekstrahowanego z gorzkich pomarańczy w procesie ocenionym przez EFSA. Jest stosowana między innymi w napojach,
+    wyrobach cukierniczych i suplementach diety. E959 jest dopuszczony w określonych kategoriach żywności w
+    UE, a w 2022 r. EFSA ustaliła ADI na 20 mg/kg masy ciała na dobę.
+assertions:
+- code: origin.chemical_synthesis
+  certainty: 'yes'
+  kind: fact
+  grade: A
+  note:
+    en: The EU specification requires catalytic hydrogenation of neohesperidin. In the process reported to
+      EFSA, neohesperidin is first extracted from bitter oranges with alcohol; chemical conversion follows
+      extraction.
+    pl: Specyfikacja UE wymaga katalitycznego uwodornienia neohesperydyny. W procesie zgłoszonym EFSA neohesperydynę
+      najpierw ekstrahuje się alkoholem z gorzkich pomarańczy; po ekstrakcji następuje przemiana chemiczna.
+  sources:
+  - id: swm-efsa-neohesperidin-2022
+- code: processing.non_sugar_sweetener
+  certainty: 'yes'
+  kind: estimate
+  grade: B
+  note:
+    en: WHO's definition covers any non-nutritive sweetener not classified as a sugar. WHO does not name neohesperidin
+      DC; counting it as a non-sugar sweetener is our reading of that definition, not an explicit WHO classification.
+    pl: Definicja WHO obejmuje każdą nieodżywczą substancję słodzącą niezaliczaną do cukrów. WHO nie wymienia
+      neohesperydyny DC; zaliczenie jej do niecukrowych substancji słodzących jest naszą interpretacją tej
+      definicji, a nie wyraźną klasyfikacją WHO.
+  sources:
+  - id: who-nss-guideline-2023
+regulatory:
+- jurisdiction: EU
+  status: authorised
+  conditions:
+    en: Listed in Annex II to Regulation 1333/2008; use is subject to food-category conditions and applicable
+      limits.
+    pl: Wymieniony w załączniku II do rozporządzenia 1333/2008; stosowanie podlega warunkom i limitom dla kategorii
+      żywności.
+  source: swm-reg-1129-2011
+reference_values:
+- type: ADI
+  value: 20
+  unit: mg/kg bw/day
+  body: EFSA
+  year: 2022
+  source: swm-efsa-neohesperidin-2022
+review_status: draft
+provenance: ai-drafted
+review_notes:
+- Individual current food-category maximum levels were not exhaustively checked or transcribed; consult the
+  consolidated EU list for a particular product.
+- 'No diet, GMO, feedstock-country or general health-benefit assertions: the opened sources do not verify these
+  for a particular supplier.'
+- 'NSS classification is estimate B: WHO does not explicitly name neohesperidin DC.'
+- US status not verified from an opened authoritative source; no US regulatory row.
+- Alternative precursor routes are discussed by EFSA, but no assertion that every manufacturer uses the same
+  source crop; the reported route uses bitter oranges.

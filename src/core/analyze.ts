@@ -623,7 +623,8 @@ function toMatch(index: KbIndex, id: string, type: MatchType, confidence: number
 }
 
 const ORIGIN_ANIMAL = ["origin.animal", "origin.fish", "origin.insect"];
-const ORIGIN_ANIMAL_PRODUCT = ["origin.dairy", "origin.egg"];
+// Made by animals, not from them: not vegan, still vegetarian.
+const ORIGIN_ANIMAL_PRODUCT = ["origin.dairy", "origin.egg", "origin.bee_product"];
 
 /**
  * Parent nouns a bracketed part leans on. EU labels may group refined oils as "oleje roślinne (palmowy,

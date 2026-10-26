@@ -1,0 +1,40 @@
+id: honey
+type: carbohydrate
+names:
+  en: ["honey"]
+  pl: ["miód","miodu","miód pszczeli"]
+  de: ["Honig","Bienenhonig"]
+summary:
+  en: "A bee-produced food consisting mainly of fructose and glucose in water. Bees collect nectar or honeydew, transform it with their own substances, dehydrate it and let it mature in combs. Directive 2001/110/EC defines this product as honey."
+  pl: "Produkt pszczeli złożony głównie z fruktozy i glukozy w wodzie. Pszczoły zbierają nektar lub spadź, przetwarzają je z udziałem własnych substancji, odwadniają i pozostawiają do dojrzewania w plastrach. Dyrektywa 2001/110/WE definiuje taki produkt jako miód."
+assertions:
+  - code: health.added_sugar
+    certainty: yes
+    kind: fact
+    grade: A
+    population: [general]
+    note:
+      en: "Added as an ingredient, it counts as a free sugar in WHO's sense. WHO strongly recommends keeping free sugars under 10% of energy intake. The ingredient list does not show how much is in the product."
+      pl: "Dodany jako składnik, jest cukrem wolnym w rozumieniu WHO. WHO zdecydowanie zaleca, by cukry wolne stanowiły mniej niż 10% energii z diety. Lista składników nie pokazuje, ile go jest w produkcie."
+    sources: [{ id: who-free-sugars-2015 }]
+  - code: origin.bee_product
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Bees collect nectar or honeydew, transform it with their own substances and dehydrate and mature it in combs."
+      pl: "Pszczoły zbierają nektar lub spadź, przetwarzają je z udziałem własnych substancji, odwadniają i pozostawiają do dojrzewania w plastrach."
+    sources: [{ id: sug-honey-directive }]
+  - code: diet.vegan
+    certainty: no
+    kind: estimate
+    grade: D
+    note:
+      en: "Honey is produced and processed by bees; its insect origin excludes it from a diet without animal-derived ingredients."
+      pl: "Miód jest wytwarzany i przetwarzany przez pszczoły; pochodzenie od owadów wyklucza go z diety bez składników pochodzenia zwierzęcego."
+    sources: [{ id: sug-honey-directive }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "No botanical or geographical variant priors were verified."
+  - "Curator review (2026-10-26): origin.insect replaced by origin.bee_product. Honey is made by bees, not from them, so like milk it is vegetarian; origin.insect made every honey label non-vegetarian."

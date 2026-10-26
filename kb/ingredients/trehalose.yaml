@@ -1,0 +1,32 @@
+id: trehalose
+type: carbohydrate
+names:
+  en: ["trehalose","trehalose dihydrate"]
+  pl: ["trehaloza","trehalozy","dwuwodna trehaloza"]
+  de: ["Trehalose","Trehalose-Dihydrat"]
+summary:
+  en: "A disaccharide composed of two glucose units linked differently from maltose. The EU specification permits production from liquefied starch or sucrose through a multistep enzymatic process. The commercial crystalline form is the dihydrate."
+  pl: "Dwucukier zbudowany z dwóch jednostek glukozy połączonych inaczej niż w maltozie. Unijna specyfikacja przewiduje produkcję ze skrobi upłynnionej lub sacharozy w wieloetapowym procesie enzymatycznym. Handlową postacią krystaliczną jest dwuwodzian."
+assertions:
+  - code: health.added_sugar
+    certainty: yes
+    kind: fact
+    grade: A
+    population: [general]
+    note:
+      en: "Added as an ingredient, it counts as a free sugar in WHO's sense. WHO strongly recommends keeping free sugars under 10% of energy intake. The ingredient list does not show how much is in the product."
+      pl: "Dodany jako składnik, jest cukrem wolnym w rozumieniu WHO. WHO zdecydowanie zaleca, by cukry wolne stanowiły mniej niż 10% energii z diety. Lista składników nie pokazuje, ile go jest w produkcie."
+    sources: [{ id: who-free-sugars-2015 }]
+  - code: origin.plant
+    certainty: yes
+    kind: estimate
+    grade: D
+    note:
+      en: "The feedstock varies: liquefied starch or sucrose is converted through a multistep enzymatic process to trehalose dihydrate."
+      pl: "Surowiec jest zmienny: upłynniona skrobia lub sacharoza jest przekształcana w wieloetapowym procesie enzymatycznym do dwuwodzianu trehalozy."
+    sources: [{ id: sug-trehalose-spec }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "No numerical route priors: the opened sources do not establish probabilities for an undisclosed label. No blanket vegan or gluten-free claim: processing aids and batch certification were not verified."
+  - "The enzymatic starch/sucrose routes are regulatory specifications; plant origin is an inference graded D. No microbial-fermentation assertion: enzyme manufacture does not establish fermentation of the final sugar. Crop and wheat-derived allergen status were not verified."

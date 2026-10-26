@@ -1,0 +1,82 @@
+id: thaumatin
+type: additive
+e_number: E957
+ids:
+  cas: 53850-34-3
+names:
+  en:
+  - thaumatin
+  pl:
+  - taumatyna
+  de:
+  - Thaumatin
+functions:
+- sweetener
+- flavour-enhancer
+summary:
+  en: A mixture of intensely sweet plant proteins obtained by aqueous extraction of the fruit arils of Thaumatococcus
+    daniellii. It is used as a sweetener and flavour enhancer in products such as chewing gum and confectionery.
+    E957 is authorised subject to EU category conditions; FDA has not questioned GRAS conclusions for the intended
+    uses in submitted thaumatin notices.
+  pl: Mieszanina intensywnie słodkich białek roślinnych otrzymywana przez wodną ekstrakcję osnówek owoców Thaumatococcus
+    daniellii. Jest stosowana jako substancja słodząca i wzmacniacz smaku, między innymi w gumach do żucia
+    i wyrobach cukierniczych. E957 jest dopuszczony w UE na warunkach dla kategorii żywności; FDA nie zakwestionowała
+    wniosków GRAS dla zamierzonych zastosowań w zgłoszeniach dotyczących taumatyny.
+assertions:
+- code: origin.plant
+  certainty: 'yes'
+  kind: fact
+  grade: A
+  note:
+    en: The EU specification defines extraction with water from the arils of Thaumatococcus daniellii fruit.
+      The assessed material is a mixture of sweet proteins with small amounts of other plant constituents.
+    pl: Specyfikacja UE określa ekstrakcję wodną z osnówek owoców Thaumatococcus daniellii. Oceniany materiał
+      jest mieszaniną słodkich białek z niewielką ilością innych składników roślinnych.
+  sources:
+  - id: swm-efsa-thaumatin-2021
+- code: processing.non_sugar_sweetener
+  certainty: 'yes'
+  kind: estimate
+  grade: B
+  note:
+    en: WHO's definition covers any non-nutritive sweetener not classified as a sugar. WHO does not name thaumatin;
+      counting it as a non-sugar sweetener is our reading of that definition, not an explicit WHO classification.
+    pl: Definicja WHO obejmuje każdą nieodżywczą substancję słodzącą niezaliczaną do cukrów. WHO nie wymienia
+      taumatyny; zaliczenie jej do niecukrowych substancji słodzących jest naszą interpretacją tej definicji,
+      a nie wyraźną klasyfikacją WHO.
+  sources:
+  - id: who-nss-guideline-2023
+regulatory:
+- jurisdiction: EU
+  status: authorised
+  conditions:
+    en: Listed in Annex II to Regulation 1333/2008; use is subject to food-category conditions and applicable
+      limits.
+    pl: Wymieniony w załączniku II do rozporządzenia 1333/2008; stosowanie podlega warunkom i limitom dla kategorii
+      żywności.
+  source: swm-reg-1129-2011
+- jurisdiction: US
+  status: authorised
+  conditions:
+    en: FDA has no questions about the GRAS conclusions in submitted notices for their intended uses; this
+      is not blanket food-additive approval.
+    pl: FDA nie zgłosiła zastrzeżeń do wniosków GRAS w przekazanych zgłoszeniach dla zamierzonych zastosowań;
+      nie jest to ogólne zatwierdzenie dodatku do żywności.
+  source: swm-fda-sweeteners
+reference_values:
+- type: group_ADI
+  value: not specified
+  body: JECFA
+  year: 2025
+  source: swm-jecfa-thaumatin
+review_status: draft
+provenance: ai-drafted
+review_notes:
+- Individual current food-category maximum levels were not exhaustively checked or transcribed; consult the
+  consolidated EU list for a particular product.
+- 'No diet, GMO, feedstock-country or general health-benefit assertions: the opened sources do not verify these
+  for a particular supplier.'
+- 'NSS classification is estimate B: WHO''s definition is broad but its release does not name thaumatin.'
+- JECFA's 2025 group ADI also includes recombinant thaumatin II. No claim that recombinant production is covered
+  by the opened EU E957 specification.
+- No universal allergy-free or vegan assertion; extraction route alone does not document all processing aids.

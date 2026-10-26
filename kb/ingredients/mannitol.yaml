@@ -1,0 +1,119 @@
+id: mannitol
+type: additive
+e_number: E421
+ids:
+  cas: 69-65-8
+names:
+  en:
+  - mannitol
+  - D-mannitol
+  pl:
+  - mannitol
+  - mannit
+  de:
+  - Mannit
+  - Mannitol
+functions:
+- sweetener
+- humectant
+- bulking-agent
+summary:
+  en: A sugar alcohol used as a bulk sweetener in products such as sugar-free confectionery and chewing gum.
+    EU specifications cover both catalytic hydrogenation of glucose/fructose solutions and yeast fermentation,
+    so the route depends on the product and manufacturer. E421 is authorised subject to EU use conditions,
+    and foods with more than 10% added polyols require a laxative statement.
+  pl: Alkohol cukrowy stosowany jako substancja słodząca nadająca objętość, między innymi w wyrobach cukierniczych
+    i gumach do żucia bez cukru. Specyfikacje UE obejmują zarówno katalityczne uwodornienie roztworów glukozy
+    lub fruktozy, jak i fermentację drożdżową, więc droga zależy od produktu i producenta. E421 jest dopuszczony
+    na określonych warunkach w UE, a żywność zawierająca ponad 10% dodanych polioli wymaga informacji o działaniu
+    przeczyszczającym.
+assertions:
+- code: origin.chemical_synthesis
+  certainty: 'yes'
+  kind: fact
+  grade: A
+  variant: hydrogenation
+  note:
+    en: E421(i) is defined as mannitol made by catalytic hydrogenation of solutions containing glucose and/or
+      fructose. E421 alone does not identify which specified route was used.
+    pl: E421(i) jest zdefiniowany jako mannitol otrzymany przez katalityczne uwodornienie roztworów zawierających
+      glukozę lub fruktozę. Sam numer E421 nie wskazuje, którą z dróg określonych w specyfikacji zastosowano.
+  sources:
+  - id: swm-reg-231-2012
+- code: origin.microbial_fermentation
+  certainty: 'yes'
+  kind: fact
+  grade: A
+  variant: fermentation
+  note:
+    en: E421(ii) is defined as mannitol made by aerobic batch fermentation with a conventional Zygosaccharomyces
+      rouxii yeast strain. The generic label does not distinguish this route from hydrogenation.
+    pl: E421(ii) jest zdefiniowany jako mannitol otrzymany przez okresową fermentację tlenową z użyciem konwencjonalnego
+      szczepu drożdży Zygosaccharomyces rouxii. Ogólna nazwa na etykiecie nie odróżnia tej drogi od uwodornienia.
+  sources:
+  - id: swm-reg-231-2012
+- code: health.laxative_polyol
+  certainty: 'yes'
+  kind: fact
+  grade: A
+  note:
+    en: Food containing more than 10% added polyols must carry the statement 'excessive consumption may produce
+      laxative effects'.
+    pl: Żywność zawierająca ponad 10% dodanych polioli musi zawierać informację 'nadmierne spożycie może mieć
+      efekt przeczyszczający'.
+  sources:
+  - id: swm-reg-1169-2011
+    locator: Annex III, point 2.4
+- code: regulatory.eu_warning_label
+  certainty: 'yes'
+  kind: fact
+  grade: A
+  note:
+    en: The laxative statement above is a mandatory label statement under Annex III of Reg 1169/2011.
+    pl: Powyższa informacja o działaniu przeczyszczającym jest obowiązkową informacją na etykiecie na podstawie
+      załącznika III rozporządzenia 1169/2011.
+  sources:
+  - id: swm-reg-1169-2011
+    locator: Annex III, point 2.4
+regulatory:
+- jurisdiction: EU
+  status: authorised
+  conditions:
+    en: Listed in Annex II to Regulation 1333/2008; use is subject to food-category conditions and applicable
+      limits.
+    pl: Wymieniony w załączniku II do rozporządzenia 1333/2008; stosowanie podlega warunkom i limitom dla kategorii
+      żywności.
+  source: swm-reg-1129-2011
+- jurisdiction: US
+  status: authorised
+  conditions:
+    en: FDA lists this sugar alcohol among permitted sugar substitutes; detailed product-specific conditions
+      were not transcribed.
+    pl: FDA wymienia ten alkohol cukrowy wśród dozwolonych zamienników cukru; nie przepisano szczegółowych
+      warunków dla poszczególnych produktów.
+  source: swm-fda-sweeteners
+reference_values:
+- type: ADI
+  value: not specified
+  body: JECFA
+  year: 1986
+  source: swm-jecfa-mannitol
+review_status: draft
+provenance: ai-drafted
+review_notes:
+- Individual current food-category maximum levels were not exhaustively checked or transcribed; consult the
+  consolidated EU list for a particular product.
+- 'No diet, GMO, feedstock-country or general health-benefit assertions: the opened sources do not verify these
+  for a particular supplier.'
+- 'No route prevalence or numerical priors assigned: the specification describes two routes but does not establish
+  their market shares.'
+- JECFA's ADI not specified is not a numerical gastrointestinal tolerance threshold.
+variants:
+- id: hydrogenation
+  process:
+    en: Catalytic hydrogenation of glucose and/or fructose solutions.
+    pl: Katalityczne uwodornienie roztworów glukozy lub fruktozy.
+- id: fermentation
+  process:
+    en: Aerobic batch fermentation using Zygosaccharomyces rouxii.
+    pl: Okresowa fermentacja tlenowa z użyciem Zygosaccharomyces rouxii.

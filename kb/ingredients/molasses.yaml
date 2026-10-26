@@ -1,0 +1,31 @@
+id: molasses
+type: carbohydrate
+names:
+  en: ["molasses","blackstrap molasses","black treacle"]
+  pl: ["melasa","melasy","melasa trzcinowa","melasa buraczana"]
+  de: ["Melasse","Zuckerrohrmelasse","Zuckerrübenmelasse"]
+summary:
+  en: "A thick syrup left after sugar crystallisation from cane or beet juice. Juice is extracted, concentrated and crystallised, and the remaining liquid is separated. Its sugars include sucrose, glucose and fructose; composition varies with crop and processing."
+  pl: "Gęsty syrop pozostający po krystalizacji cukru z soku trzcinowego lub buraczanego. Sok jest wydobywany, zagęszczany i poddawany krystalizacji, a pozostałą ciecz oddziela się. Zawiera sacharozę, glukozę i fruktozę; skład zależy od rośliny i procesu."
+assertions:
+  - code: health.added_sugar
+    certainty: yes
+    kind: fact
+    grade: A
+    population: [general]
+    note:
+      en: "Added as an ingredient, it counts as a free sugar in WHO's sense. WHO strongly recommends keeping free sugars under 10% of energy intake. The ingredient list does not show how much is in the product."
+      pl: "Dodany jako składnik, jest cukrem wolnym w rozumieniu WHO. WHO zdecydowanie zaleca, by cukry wolne stanowiły mniej niż 10% energii z diety. Lista składników nie pokazuje, ile go jest w produkcie."
+    sources: [{ id: who-free-sugars-2015 }]
+  - code: origin.plant
+    certainty: yes
+    kind: estimate
+    grade: D
+    note:
+      en: "The feedstock varies between sugar cane and sugar beet. Juice extraction, evaporation and sugar crystallisation leave the sugar-containing mother liquor called molasses."
+      pl: "Surowiec jest zmienny: trzcina cukrowa lub burak cukrowy. Po ekstrakcji soku, odparowaniu wody i krystalizacji cukru pozostaje zawierający cukry ług macierzysty, czyli melasa."
+    sources: [{ id: sug-molasses }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "No numerical route priors: the opened sources do not establish probabilities for an undisclosed label. No blanket vegan or gluten-free claim: processing aids and batch certification were not verified."

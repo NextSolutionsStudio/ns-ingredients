@@ -1,0 +1,227 @@
+sources:
+- id: swm-reg-231-2012
+  type: regulation
+  title: Regulation (EU) No 231/2012 — additive specifications
+  publisher: European Union
+  year: 2012
+  url: https://eur-lex.europa.eu/eli/reg/2012/231/oj
+  licence: Facts cited; source text not reproduced or adapted
+  accessed: '2026-10-26'
+  note: 'Annex: manufacturing definitions for E421(i)/(ii), E953, E957, E959, E961, E962 and E966. Opened copy:
+    https://www.legislation.gov.uk/eur/2012/231/pdfs/eur_20120231_adopted_en.pdf'
+- id: swm-reg-1169-2011
+  type: regulation
+  title: Regulation (EU) No 1169/2011 — Annex III labelling
+  publisher: European Union
+  year: 2011
+  url: https://eur-lex.europa.eu/eli/reg/2011/1169/oj
+  licence: Facts cited; source text not reproduced or adapted
+  accessed: '2026-10-26'
+  note: 'Annex III 2.3 expressly includes aspartame-acesulfame salt; 2.4 concerns foods with more than 10%
+    added polyols. Opened copy: https://www.legislation.gov.uk/eur/2011/1169/pdfs/eur_20111169_adopted_en.pdf'
+- id: swm-reg-1129-2011
+  type: regulation
+  title: Regulation (EU) No 1129/2011 — Union list of additives
+  publisher: European Union
+  year: 2011
+  url: https://eur-lex.europa.eu/eli/reg/2011/1129/oj
+  licence: Facts cited; source text not reproduced or adapted
+  accessed: '2026-10-26'
+  note: 'Annex establishes Annex II to Regulation 1333/2008, including the sweeteners list and category conditions.
+    Historical authorising instrument; subsequent amendments are not exhaustively transcribed. Opened copy:
+    https://www.legislation.gov.uk/eur/2011/1129/pdfs/eur_20111129_adopted_en.pdf'
+- id: swm-reg-497-2014
+  type: regulation
+  title: Regulation (EU) No 497/2014 — advantame authorisation and specification
+  publisher: European Union
+  year: 2014
+  url: https://eur-lex.europa.eu/eli/reg/2014/497/oj
+  licence: Facts cited; source text not reproduced or adapted
+  accessed: '2026-10-26'
+  note: 'Annex I authorises E969 in listed categories; Annex II describes three-step chemical synthesis and
+    CAS 714229-20-6. Opened copy: https://www.legislation.gov.uk/eur/2014/497/pdfs/eur_20140497_adopted_en.pdf'
+- id: swm-reg-1049-2012
+  type: regulation
+  title: Regulation (EU) No 1049/2012 — polyglycitol syrup
+  publisher: European Union
+  year: 2012
+  url: https://eur-lex.europa.eu/eli/reg/2012/1049/oj
+  licence: Facts cited; source text not reproduced or adapted
+  accessed: '2026-10-26'
+  note: 'E964 authorisation in specified foods, including confectionery and chewing gum, with category limits.
+    Opened copy: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R1049'
+- id: swm-fda-sweeteners
+  type: reference
+  title: Aspartame and Other Sweeteners in Food
+  publisher: US Food and Drug Administration
+  url: https://www.fda.gov/food/food-additives-petitions/aspartame-and-other-sweeteners-food
+  licence: Facts cited; source text not reproduced or adapted
+  accessed: '2026-10-26'
+  note: US status of advantame, neotame, saccharin and thaumatin; permits sugar alcohols including mannitol
+    and lactitol. Thaumatin notices received no questions; this is not food additive approval.
+- id: swm-fda-high-intensity
+  type: reference
+  title: High-Intensity Sweeteners
+  publisher: US Food and Drug Administration
+  year: 2014
+  url: https://www.fda.gov/food/food-additives-petitions/high-intensity-sweeteners
+  licence: Facts cited; source text not reproduced or adapted
+  accessed: '2026-10-26'
+  note: FDA explicitly prohibits cyclamates and their salts in US food.
+- id: swm-efsa-advantame-2013
+  type: regulatory_opinion
+  title: Scientific Opinion on the safety of advantame for the proposed uses as a food additive
+  publisher: European Food Safety Authority
+  year: 2013
+  url: https://doi.org/10.2903/j.efsa.2013.3301
+  licence: EFSA Journal ? CC BY-ND 4.0; facts cited, no text reproduced or adapted
+  accessed: '2026-10-26'
+  note: 'ADI 5 mg/kg body weight/day. Opened copy: https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2013.3301'
+  doi: 10.2903/j.efsa.2013.3301
+- id: swm-efsa-neotame-2025
+  type: regulatory_opinion
+  title: Re-evaluation of neotame (E 961) as food additive
+  publisher: European Food Safety Authority
+  year: 2025
+  url: https://doi.org/10.2903/j.efsa.2025.9480
+  licence: EFSA Journal ? CC BY-ND 4.0; facts cited, no text reproduced or adapted
+  accessed: '2026-10-26'
+  note: 'ADI 10 mg/kg body weight/day replaces 2 mg/kg from 2007; confirms EU authorisation. Opened copy: https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2025.9480'
+  doi: 10.2903/j.efsa.2025.9480
+- id: swm-efsa-saccharin-2024
+  type: regulatory_opinion
+  title: Re-evaluation of saccharin and its sodium, potassium and calcium salts (E 954) as food additives
+  publisher: European Food Safety Authority
+  year: 2024
+  url: https://doi.org/10.2903/j.efsa.2024.9044
+  licence: EFSA Journal ? CC BY-ND 4.0; facts cited, no text reproduced or adapted
+  accessed: '2026-10-26'
+  note: 'ADI 9 mg/kg body weight/day expressed as free imide. Manufacturing routes differ; assessment supported
+    Remsen-Fahlberg products, with insufficient impurity data for the Maumee route. CAS identifiers refer to
+    individual forms. Opened copy: https://efsa.onlinelibrary.wiley.com/doi/full/10.2903/j.efsa.2024.9044'
+  doi: 10.2903/j.efsa.2024.9044
+- id: swm-efsa-thaumatin-2021
+  type: regulatory_opinion
+  title: Re-evaluation of thaumatin (E 957) as food additive
+  publisher: European Food Safety Authority
+  year: 2021
+  url: https://doi.org/10.2903/j.efsa.2021.6884
+  licence: EFSA Journal ? CC BY-ND 4.0; facts cited, no text reproduced or adapted
+  accessed: '2026-10-26'
+  note: 'EU specification describes aqueous extraction of fruit arils. No numerical ADI needed; EU authorised
+    sweetener and flavour enhancer. Opened copy: https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2021.6884'
+  doi: 10.2903/j.efsa.2021.6884
+- id: swm-efsa-neohesperidin-2022
+  type: regulatory_opinion
+  title: Re-evaluation of neohesperidine dihydrochalcone (E 959) as a food additive
+  publisher: European Food Safety Authority
+  year: 2022
+  url: https://doi.org/10.2903/j.efsa.2022.7595
+  licence: EFSA Journal ? CC BY-ND 4.0; facts cited, no text reproduced or adapted
+  accessed: '2026-10-26'
+  note: 'ADI 20 mg/kg body weight/day; manufacture by hydrogenation of neohesperidin extracted from bitter
+    oranges; CAS 20702-77-6. Opened copy: https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2022.7595'
+  doi: 10.2903/j.efsa.2022.7595
+- id: swm-efsa-salt-2026
+  type: regulatory_opinion
+  title: Re-evaluation of salt of aspartame-acesulfame (E 962) as food additive
+  publisher: European Food Safety Authority
+  year: 2026
+  url: https://doi.org/10.2903/j.efsa.2026.10259
+  licence: EFSA Journal ? CC BY-ND 4.0; facts cited, no text reproduced or adapted
+  accessed: '2026-10-26'
+  note: 'Respective component ADIs apply: aspartame 40 and acesulfame K 15 mg/kg body weight/day, not a standalone
+    E962 ADI; describes manufacture, dissociation and CAS 106372-55-8. Opened copy: https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2026.10259'
+  doi: 10.2903/j.efsa.2026.10259
+- id: swm-jecfa-mannitol
+  type: monograph
+  title: JECFA database — Mannitol
+  publisher: WHO / JECFA
+  year: 1986
+  url: https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/5119
+  licence: FAO/WHO JECFA ? facts cited, no text reproduced or adapted
+  accessed: '2026-10-26'
+  note: ADI not specified; CAS 69-65-8.
+- id: swm-jecfa-isomalt
+  type: monograph
+  title: JECFA database — Isomalt
+  publisher: WHO / JECFA
+  year: 1985
+  url: https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/1289
+  licence: FAO/WHO JECFA ? facts cited, no text reproduced or adapted
+  accessed: '2026-10-26'
+  note: ADI not specified; CAS 64519-82-0.
+- id: swm-jecfa-cyclamates
+  type: monograph
+  title: JECFA database — Calcium cyclamate
+  publisher: WHO / JECFA
+  year: 1982
+  url: https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/837
+  licence: FAO/WHO JECFA ? facts cited, no text reproduced or adapted
+  accessed: '2026-10-26'
+  note: Group cyclamates ADI 0–11 mg/kg body weight, expressed as cyclamic acid.
+- id: swm-jecfa-thaumatin
+  type: monograph
+  title: JECFA database — Thaumatin
+  publisher: WHO / JECFA
+  year: 2025
+  url: https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/4169
+  licence: FAO/WHO JECFA ? facts cited, no text reproduced or adapted
+  accessed: '2026-10-26'
+  note: Group ADI not specified includes thaumatin and recombinant thaumatin II; CAS 53850-34-3. This does
+    not establish EU authorisation for recombinant production.
+- id: swm-jecfa-lactitol
+  type: monograph
+  title: JECFA evaluations — Lactitol
+  publisher: WHO / JECFA (IPCS INCHEM)
+  year: 1983
+  url: https://www.inchem.org/documents/jecfa/jeceval/jec_1254.htm
+  licence: FAO/WHO JECFA ? facts cited, no text reproduced or adapted
+  accessed: '2026-10-26'
+  note: ADI not specified.
+- id: swm-fao-lactitol
+  type: monograph
+  title: FAO JECFA specification record — Lactitol
+  publisher: FAO / JECFA
+  year: 2006
+  url: https://www.fao.org/food/food-safety-quality/scientific-advice/jecfa/jecfa-additives/detail/en/c/290/
+  licence: FAO/WHO JECFA ? facts cited, no text reproduced or adapted
+  accessed: '2026-10-26'
+  note: CAS 585-86-4.
+- id: swm-jecfa-polyglycitol
+  type: monograph
+  title: JECFA database — Polyglycitol syrup
+  publisher: WHO / JECFA
+  year: 1998
+  url: https://apps.who.int/food-additives-contaminants-jecfa-database/Home/Chemical/3167
+  licence: FAO/WHO JECFA ? facts cited, no text reproduced or adapted
+  accessed: '2026-10-26'
+  note: Group ADI not specified covers materials meeting polyglycitol syrup and maltitol syrup specifications.
+- id: swm-jecfa-polyglycitol-spec
+  type: monograph
+  title: Polyglycitol syrup — JECFA specification
+  publisher: FAO / JECFA
+  year: 1998
+  url: https://www.fao.org/fileadmin/user_upload/jecfa_additives/docs/Monograph1/Additive-319.pdf
+  licence: FAO/WHO JECFA ? facts cited, no text reproduced or adapted
+  accessed: '2026-10-26'
+  note: Definition describes catalytic hydrogenation of glucose, maltose and higher glucose polymers; functions
+    include sweetener, humectant, stabilizer and bulking agent.
+- id: swm-wikipedia-cyclamate
+  type: reference
+  title: Cyclamate — chemistry and identity
+  publisher: Wikipedia
+  url: https://en.wikipedia.org/wiki/Sodium_cyclamate
+  licence: Wikipedia ? CC BY-SA 4.0; facts cited in own words
+  accessed: '2026-10-26'
+  note: Describes cyclamic acid synthesis from cyclohexylamine with sulfamic acid or sulfur trioxide. Secondary
+    reference; production assertion is an estimate, not an official specification.
+- id: swm-pl-sweetener-names
+  type: reference
+  title: Żywienie dzieci i młodzieży — table of sweetener names
+  publisher: gov.pl
+  url: https://www.gov.pl/attachment/19cc6f28-dcf4-41b8-8dd9-837ca16af20d
+  licence: Facts cited; source text not reproduced or adapted
+  accessed: '2026-10-26'
+  note: Page 16 (PDF page index 15) lists Polish additive names; used for identity terminology, not current
+    school food requirements.
