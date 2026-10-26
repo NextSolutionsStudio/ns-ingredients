@@ -241,6 +241,18 @@ Deno.test("rate limit returns 429 with Retry-After; quota is enforced per day", 
   } finally {
     await q.close();
   }
+  // Each request spends one unit, on every keyed route: "/v1/ingredients/*" once also matched the search
+  // route, so a search was limited and counted twice.
+  const once = await startApi({ rate: 100, quota: 1000 });
+  try {
+    for (const path of ["/v1/ingredients?q=cukier", "/v1/ingredients?q=cukier", "/v1/ingredients/E330"]) {
+      await (await once.req(path)).body?.cancel();
+    }
+    const r = await once.req("/v1/implications");
+    assertEquals(r.headers.get("ratelimit-remaining"), "96");
+  } finally {
+    await once.close();
+  }
 });
 
 Deno.test("usage is persisted per key/day/route and survives a flush error", async () => {

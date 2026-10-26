@@ -19,13 +19,22 @@ import * as S from "./schemas.ts";
 
 export interface AppDeps {
   index: () => KbIndex;
-  db: Db;
-  keys: KeyStore;
-  limiter: RateLimiter;
-  quota: DailyQuota;
-  usage: UsageRecorder;
+  /** Absent at the edge (Cloudflare Worker), which has no database: /ready then reports the KB only. */
+  db?: Pick<Db, "query">;
+  keys: Pick<KeyStore, "verify">;
+  limiter: Pick<RateLimiter, "take">;
+  quota: Pick<DailyQuota, "take">;
+  usage: Pick<UsageRecorder, "record">;
   log: Logger;
   config: Pick<Config, "CORS_ORIGINS" | "PUBLIC_BASE_URL">;
+  /** Keyless access (the public demo). Without it, every keyed route needs a bearer key. */
+  anonymous?: AnonymousAccess;
+}
+
+export interface AnonymousAccess {
+  scopes: readonly Scope[];
+  /** Decides one keyless request. `client` is the caller's IP address as the edge reports it. */
+  take(client: string, scope: Scope): Promise<LimitDecision>;
 }
 
 type Env = { Variables: { reqId: string; key?: ApiKey } };
@@ -240,6 +249,8 @@ const problemResponses = (...codes: number[]) =>
   }]));
 
 export function createApp(deps: AppDeps) {
+  // With keyless access on, the key is optional: `{}` is the OpenAPI way to say "no auth also works".
+  const security = deps.anonymous ? [...bearer, {}] : bearer;
   const app = new OpenAPIHono<Env>({
     defaultHook: (result, c) => {
       if (!result.success) {
@@ -281,9 +292,30 @@ export function createApp(deps: AppDeps) {
     app.use("/v1/*", cors({ origin: origins, allowHeaders: ["authorization", "content-type"], maxAge: 600 }));
   }
 
+  const limitHeaders = (c: C, d: LimitDecision) => {
+    c.header("ratelimit-limit", String(d.limit));
+    c.header("ratelimit-remaining", String(d.remaining));
+    c.header("ratelimit-reset", String(d.resetSeconds));
+    if (!d.allowed) c.header("retry-after", String(d.resetSeconds));
+  };
+
   const requireScope = (scope: Scope): MiddlewareHandler<Env> => async (c, next) => {
     const auth = c.req.header("authorization") ?? "";
     const token = auth.match(/^Bearer\s+(\S+)$/i)?.[1];
+    if (!token && !auth && deps.anonymous?.scopes.includes(scope)) {
+      const d = await deps.anonymous.take(c.req.header("cf-connecting-ip") ?? "unknown", scope);
+      limitHeaders(c, d);
+      if (!d.allowed) {
+        return problem(
+          c,
+          429,
+          "rate-limited",
+          "Too many requests",
+          `Keyless access allows ${d.limit} requests a minute per IP address. Try again in ${d.resetSeconds} s.`,
+        );
+      }
+      return await next();
+    }
     if (!token) {
       c.header("www-authenticate", 'Bearer realm="ns-ingredients"');
       return problem(c, 401, "unauthorized", "Missing API key", "Send Authorization: Bearer <key>.");
@@ -307,11 +339,8 @@ export function createApp(deps: AppDeps) {
       : rate.remaining <= quota.remaining
       ? rate
       : quota;
-    c.header("ratelimit-limit", String(binding.limit));
-    c.header("ratelimit-remaining", String(binding.remaining));
-    c.header("ratelimit-reset", String(binding.resetSeconds));
+    limitHeaders(c, { ...binding, allowed: rate.allowed && quota.allowed });
     if (!rate.allowed || !quota.allowed) {
-      c.header("retry-after", String(binding.resetSeconds));
       deps.usage.record(key.id, c.req.routePath, true);
       return problem(
         c,
@@ -340,7 +369,8 @@ export function createApp(deps: AppDeps) {
     }
   };
 
-  for (const p of ["/v1/ingredients", "/v1/ingredients/*", "/v1/implications", "/v1/sources/*"]) {
+  // "/v1/ingredients/*" would also match "/v1/ingredients" and run the limiter twice per search.
+  for (const p of ["/v1/ingredients", "/v1/ingredients/:id", "/v1/implications", "/v1/sources/:id"]) {
     app.use(p, requireScope("kb:read"), etag);
   }
   app.use("/v1/analyze", requireScope("analyze"));
@@ -364,7 +394,7 @@ export function createApp(deps: AppDeps) {
 
   app.get("/ready", async (c) => {
     try {
-      await deps.db.query("select 1");
+      await deps.db?.query("select 1");
       return c.json({ status: "ready", kb_version: deps.index().version });
     } catch {
       return problem(c, 503, "not-ready", "Database unavailable");
@@ -420,7 +450,7 @@ export function createApp(deps: AppDeps) {
       path: "/v1/ingredients",
       tags: ["knowledge base"],
       summary: "Search ingredients by name (PL/EN/DE), E-number or keywords, with facet filters",
-      security: bearer,
+      security,
       request: { query: S.SearchQuery },
       responses: {
         200: { description: "Ranked results", content: { "application/json": { schema: S.SearchResponse } } },
@@ -488,7 +518,7 @@ export function createApp(deps: AppDeps) {
       path: "/v1/ingredients/{id}",
       tags: ["knowledge base"],
       summary: "Full ingredient record: identity, production variants, cited assertions, regulatory status",
-      security: bearer,
+      security,
       request: {
         params: z.object({
           id: z.string().max(80).openapi({ description: "Ingredient id or E-number", example: "E296" }),
@@ -517,7 +547,7 @@ export function createApp(deps: AppDeps) {
       path: "/v1/implications",
       tags: ["knowledge base"],
       summary: "The implication taxonomy (standardised codes an ingredient can imply)",
-      security: bearer,
+      security,
       request: { query: z.object({ lang: S.LangParam }) },
       responses: {
         200: { description: "Taxonomy", content: { "application/json": { schema: S.ImplicationsResponse } } },
@@ -549,7 +579,7 @@ export function createApp(deps: AppDeps) {
       path: "/v1/sources/{id}",
       tags: ["knowledge base"],
       summary: "A cited source",
-      security: bearer,
+      security,
       request: { params: z.object({ id: z.string().max(80) }) },
       responses: {
         200: { description: "Source", content: { "application/json": { schema: S.SourceResponse } } },
@@ -572,7 +602,7 @@ export function createApp(deps: AppDeps) {
       summary:
         "Analyse an ingredient list: matches, production variants, flags with sources, diets, optional profile check",
       description: "The optional `profile` is evaluated for this request only. It is never stored or logged.",
-      security: bearer,
+      security,
       request: { body: { required: true, content: { "application/json": { schema: S.AnalyzeRequest } } } },
       responses: {
         200: { description: "Analysis", content: { "application/json": { schema: S.AnalysisResponse } } },

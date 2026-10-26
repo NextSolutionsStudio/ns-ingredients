@@ -16,6 +16,7 @@
     "openapi": "deno run --allow-read --allow-env scripts/openapi.ts",
     "smoke": "deno run --allow-net --allow-env scripts/smoke.ts",
     "bench": "deno bench --allow-read",
+    "build:worker": "deno run --allow-read --allow-write=dist scripts/build-kb-bundle.ts && deno bundle --platform browser --minify -o dist/worker.js src/worker.ts",
     "explorer": "deno run --allow-read --allow-env --allow-net=127.0.0.1,world.openfoodfacts.org,search.openfoodfacts.org scripts/explorer.ts"
   },
   "imports": {
