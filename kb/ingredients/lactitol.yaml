@@ -92,6 +92,13 @@ reference_values:
   body: JECFA
   year: 1983
   source: swm-jecfa-lactitol
+glycemic:
+  - range: [3, 7]
+    fraction: polyols
+    method: non_iso
+    note: { en: "Study-level relative glucose responses.", pl: "Względne odpowiedzi glikemiczne z poszczególnych badań." }
+    source: gi-livesey-2003
+    locator: "Table 4, lactitol"
 review_status: draft
 provenance: ai-drafted
 review_notes:

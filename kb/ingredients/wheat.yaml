@@ -38,5 +38,12 @@ assertions:
     grade: A
     note: { en: "Wheat is a gluten-containing cereal.", pl: "Pszenica jest zbożem zawierającym gluten." }
     sources: [{ id: reg-1169-2011 }]
+glycemic:
+  - range: [38, 88]
+    fraction: starch
+    method: iso
+    note: { en: "White wheat breads, including varied proving.", pl: "Białe pieczywo pszenne, także przy różnym wyrastaniu." }
+    source: gi-atkinson-2021
+    locator: "Supplemental Table 1, foods 234-268, 283-286, 306-308"
 review_status: draft
 provenance: ai-drafted

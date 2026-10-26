@@ -1,0 +1,26 @@
+id: potato-starch
+type: carbohydrate
+names:
+  en: ["potato starch"]
+  pl: ["skrobia ziemniaczana"]
+  de: ["Kartoffelstärke"]
+functions: [thickener]
+summary:
+  en: "Native (unmodified) starch washed out of potatoes; thickens when heated in water. Not an E-number additive."
+  pl: "Skrobia natywna (niemodyfikowana) wypłukiwana z ziemniaków; zagęszcza po podgrzaniu w wodzie. Nie jest dodatkiem z numerem E."
+assertions:
+  - code: origin.plant
+    certainty: yes
+    kind: estimate
+    grade: B
+    note: { en: "Potato is the named starch source.", pl: "Wskazanym surowcem skrobi są ziemniaki." }
+    sources: [{ id: gi-atkinson-2021, locator: "Supplemental Table 2, food 3660" }]
+glycemic:
+  - range: [53, 53]
+    fraction: starch
+    method: non_iso
+    note: { en: "Water paste steamed for 25 min; wide variability.", pl: "Pasta z wodą gotowana na parze 25 min; duża zmienność." }
+    source: gi-atkinson-2021
+    locator: "Supplemental Table 2, food 3660"
+review_status: draft
+provenance: ai-drafted

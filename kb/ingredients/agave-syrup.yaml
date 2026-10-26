@@ -25,6 +25,13 @@ assertions:
       en: "Agave extracts contain fructans that are hydrolysed using heat or enzymes, then concentrated by evaporation; the species and processing route vary."
       pl: "Ekstrakty agawy zawierają fruktany hydrolizowane z użyciem ogrzewania lub enzymów, a następnie zagęszczane przez odparowanie; gatunek i proces są zmienne."
     sources: [{ id: sug-agave }]
+glycemic:
+  - range: [10, 19]
+    fraction: sugars
+    method: iso
+    note: { en: "Agave nectars.", pl: "Syropy z agawy." }
+    source: gi-atkinson-2021
+    locator: "Supplemental Table 1, foods 1740-1742"
 review_status: draft
 provenance: ai-drafted
 review_notes:

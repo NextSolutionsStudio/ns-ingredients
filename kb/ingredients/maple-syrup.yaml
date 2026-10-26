@@ -25,6 +25,13 @@ assertions:
       en: "Maple sap is collected from tapped trees and concentrated by water removal, including evaporation during boiling."
       pl: "Sok klonowy zbiera się z nawierconych drzew i zagęszcza przez usuwanie wody, w tym odparowanie podczas gotowania."
     sources: [{ id: sug-maple }]
+glycemic:
+  - range: [54, 54]
+    fraction: sugars
+    method: iso
+    note: { en: "Pure Canadian maple syrup.", pl: "Czysty kanadyjski syrop klonowy." }
+    source: gi-atkinson-2021
+    locator: "Supplemental Table 1, food 1785"
 review_status: draft
 provenance: ai-drafted
 review_notes:

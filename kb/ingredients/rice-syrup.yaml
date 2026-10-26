@@ -34,6 +34,19 @@ assertions:
       en: "Rice syrup has no blanket Annex II exemption. Where barley malt is used and barley-derived material remains, barley declaration rules apply; the exemption for barley glucose syrup does not automatically extend to malt-containing rice syrup."
       pl: "Syrop ryżowy nie ma ogólnego zwolnienia w załączniku II. Jeśli zastosowano słód jęczmienny i pozostaje materiał pochodzący z jęczmienia, obowiązują zasady deklarowania jęczmienia; zwolnienie dla jęczmiennego syropu glukozowego nie obejmuje automatycznie syropu ryżowego ze słodem."
     sources: [{ id: sug-allergens }, { id: sug-rice }]
+glycemic:
+  - range: [98, 98]
+    fraction: sugars
+    method: iso
+    note: { en: "Pure Harvest rice malt syrup.", pl: "Syrop ryżowy Pure Harvest." }
+    source: gi-atkinson-2021
+    locator: "Supplemental Table 1, food 1786"
+  - range: [98, 98]
+    fraction: starch
+    method: iso
+    note: { en: "Whole-syrup GI applied to longer chains.", pl: "IG całego syropu przypisany dłuższym łańcuchom." }
+    source: gi-atkinson-2021
+    locator: "Supplemental Table 1, food 1786"
 review_status: draft
 provenance: ai-drafted
 review_notes:

@@ -48,5 +48,12 @@ assertions:
     grade: A
     note: { en: "Lactose itself.", pl: "Sama laktoza." }
     sources: [{ id: reg-1169-2011 }]
+glycemic:
+  - range: [46, 46]
+    fraction: sugars
+    method: iso
+    note: { en: "Lactose.", pl: "Laktoza." }
+    source: gi-atkinson-2021
+    locator: "Supplemental Table 1, food 1765"
 review_status: draft
 provenance: ai-drafted

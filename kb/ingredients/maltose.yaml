@@ -34,6 +34,13 @@ assertions:
       en: "A wheat- or barley-derived malt product remaining in food falls under Annex II unless a specific exemption applies. Maltose or malt sugar is not itself a named exemption; an exemption for qualifying glucose syrup cannot be inferred just from this sugar name."
       pl: "Pozostający w żywności produkt słodowy z pszenicy lub jęczmienia podlega załącznikowi II, chyba że ma zastosowanie szczególne zwolnienie. Maltoza ani cukier słodowy nie są samodzielnie wymienionymi wyjątkami; nazwa cukru nie potwierdza zwolnienia dla odpowiedniego syropu glukozowego."
     sources: [{ id: sug-allergens }]
+glycemic:
+  - range: [75, 105]
+    fraction: sugars
+    method: iso
+    note: { en: "Maltose.", pl: "Maltoza." }
+    source: gi-atkinson-2021
+    locator: "Supplemental Table 1, foods 1766-1767"
 review_status: draft
 provenance: ai-drafted
 review_notes:

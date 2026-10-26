@@ -95,6 +95,13 @@ assertions:
         być niemodyfikowany; oczyszczona sacharoza i tak nie zawiera resztkowego DNA czy białka, niezależnie
         od genetyki buraka.
     sources: [{ id: usda-ers-sugarbeet-2013 }]
+glycemic:
+  - range: [59, 91]
+    fraction: sugars
+    method: iso
+    note: { en: "Sucrose products.", pl: "Produkty sacharozowe." }
+    source: gi-atkinson-2021
+    locator: "Supplemental Table 1, foods 1768-1777"
 review_status: draft
 provenance: ai-drafted
 review_notes: []

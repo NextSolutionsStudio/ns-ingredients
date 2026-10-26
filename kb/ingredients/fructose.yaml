@@ -25,6 +25,13 @@ assertions:
       en: "Plant feedstock varies: starch, sucrose or inulin. Starch is hydrolysed to glucose before enzymatic isomerisation; sucrose and inulin are hydrolysed to release fructose."
       pl: "Surowiec roślinny jest zmienny: skrobia, sacharoza lub inulina. Skrobia jest hydrolizowana do glukozy przed izomeryzacją enzymatyczną; hydroliza sacharozy i inuliny uwalnia fruktozę."
     sources: [{ id: sug-fructose }, { id: sug-sugars-directive }]
+glycemic:
+  - range: [23, 25]
+    fraction: sugars
+    method: iso
+    note: { en: "Fructose.", pl: "Fruktoza." }
+    source: gi-atkinson-2021
+    locator: "Supplemental Table 1, foods 1743-1744"
 review_status: draft
 provenance: ai-drafted
 review_notes:

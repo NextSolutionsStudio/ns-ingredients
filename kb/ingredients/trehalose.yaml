@@ -25,6 +25,13 @@ assertions:
       en: "The feedstock varies: liquefied starch or sucrose is converted through a multistep enzymatic process to trehalose dihydrate."
       pl: "Surowiec jest zmienny: upłynniona skrobia lub sacharoza jest przekształcana w wieloetapowym procesie enzymatycznym do dwuwodzianu trehalozy."
     sources: [{ id: sug-trehalose-spec }]
+glycemic:
+  - range: [38, 38]
+    fraction: sugars
+    method: non_iso
+    note: { en: "25 g in 100 mL water; 20 adults.", pl: "25 g w 100 ml wody; 20 dorosłych." }
+    source: gi-yoshizane-2017
+    locator: "Discussion, page 4, mean individual 0-2 h glucose iAUC ratio"
 review_status: draft
 provenance: ai-drafted
 review_notes:

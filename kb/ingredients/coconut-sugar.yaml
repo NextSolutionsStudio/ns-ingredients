@@ -25,6 +25,13 @@ assertions:
       en: "Sap tapped from coconut flower stalks is heated to evaporate water and concentrated into syrup or solid sugar."
       pl: "Sok pozyskiwany z pędów kwiatostanowych palmy kokosowej ogrzewa się, odparowując wodę i otrzymując syrop lub stały cukier."
     sources: [{ id: sug-coconut }]
+glycemic:
+  - range: [54, 54]
+    fraction: sugars
+    method: iso
+    note: { en: "Loving Earth coconut sugar.", pl: "Cukier kokosowy Loving Earth." }
+    source: gi-atkinson-2021
+    locator: "Supplemental Table 1, food 1779"
 review_status: draft
 provenance: ai-drafted
 review_notes:

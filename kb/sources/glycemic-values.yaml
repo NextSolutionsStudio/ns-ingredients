@@ -1,0 +1,47 @@
+sources:
+- id: gi-atkinson-2021
+  type: systematic_review
+  title: 'International tables of glycemic index and glycemic load values 2021: a systematic review'
+  authors: Atkinson FS, Brand-Miller JC, Foster-Powell K, Buyken AE, Goletzke J
+  publisher: The American Journal of Clinical Nutrition 114:1625-1632
+  year: 2021
+  url: https://doi.org/10.1093/ajcn/nqab233
+  doi: 10.1093/ajcn/nqab233
+  licence: Journal copyright; facts paraphrased, no text reproduced
+  accessed: '2026-10-26'
+  note: Values are read from the online supplement. Supplemental Table 1 holds measurements consistent with the
+    ISO method; Supplemental Table 2 holds those with protocol deviations or wide variability, which the KB marks
+    non_iso.
+- id: gi-livesey-2003
+  type: review
+  title: Health potential of polyols as sugar replacers, with emphasis on low glycaemic properties
+  authors: Livesey G
+  publisher: Nutrition Research Reviews 16:163-191
+  year: 2003
+  url: https://doi.org/10.1079/NRR200371
+  doi: 10.1079/NRR200371
+  pmid: '19087388'
+  licence: Journal copyright; facts paraphrased, no text reproduced
+  accessed: '2026-10-26'
+  note: Entries use study-level relative glucose responses in Table 4 on the glucose scale, including displayed
+    zeroes for negative erythritol areas; pooled Table 5 statistics are not used.
+- id: gi-yoshizane-2017
+  type: rct
+  title: Glycemic, insulinemic and incretin responses after oral trehalose ingestion in healthy subjects
+  authors: Yoshizane C et al.
+  publisher: Nutrition Journal 16:9
+  year: 2017
+  url: https://nutritionj.biomedcentral.com/counter/pdf/10.1186/s12937-017-0233-x.pdf
+  doi: 10.1186/s12937-017-0233-x
+  licence: CC BY 4.0
+  accessed: '2026-10-26'
+  note: Crossover experiment; the authors report the mean individual two-hour glucose iAUC ratio as GI-equivalent.
+- id: gi-gl-bands
+  type: reference
+  title: Glycemic Index and Glycemic Load
+  publisher: Linus Pauling Institute, Micronutrient Information Center, Oregon State University
+  url: https://lpi.oregonstate.edu/mic/food-beverages/glycemic-index-glycemic-load
+  licence: Website copyright; facts paraphrased
+  accessed: '2026-10-26'
+  note: For a typical serving, the stated GL categories are low at 10 or below, intermediate from 11 through 19,
+    and high at 20 or above; the glucose reference GI is 100.
