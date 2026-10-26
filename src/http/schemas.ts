@@ -265,7 +265,10 @@ export const AnalysisResponse = z.object({
       path: z.string().openapi({
         description: 'A label item path, or "nutrition.<field>" on basis nutrition.',
       }),
-      ingredient_id: z.string().optional().openapi({ description: "Absent only on basis nutrition." }),
+      ingredient_id: z.string().optional().openapi({
+        description:
+          "Absent on basis nutrition, and on an emphasised item the knowledge base does not recognise.",
+      }),
       variant_id: z.string().optional(),
       basis: z.enum([
         "ingredient",

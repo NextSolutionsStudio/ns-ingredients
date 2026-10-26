@@ -250,7 +250,11 @@ function splitBrackets(s: string): { own: string; groups: string[] } {
 function emphasis(raw: string, allCaps: boolean): string[] {
   if (allCaps) return [];
   return [...raw.matchAll(/(?<![\p{L}])[\p{Lu}]{3,}(?![\p{L}])/gu)].map((m) => m[0])
-    .filter((w) => !/^E\d/.test(w) && !/^(?:INS|DL|RRR|MCT|WPC|WPI|BHA|BHT|CMC|UHT|GMO)$/.test(w));
+    .filter((w) =>
+      !/^E\d/.test(w) &&
+      // Acronyms, colour-name suffixes (FCF), organic and protected-origin markers are not allergen emphasis.
+      !/^(?:INS|DL|RRR|MCT|WPC|WPI|BHA|BHT|CMC|UHT|GMO|FCF|BIO|EKO|ÖKO|DOP|IGP|AOP|PDO|PGI)$/.test(w)
+    );
 }
 
 function parseItem(raw: string, path: string, allCaps: boolean, lessThan: boolean): ParsedItem {
@@ -342,8 +346,10 @@ export function parseLabel(input: string, opts: { lang?: string } = {}): ParsedL
   }
   list = list.replace(/\n+/g, ", ").replace(/[\s.,;]+$/, "").trim();
 
-  const letters = list.replace(/[^\p{L}]/gu, "");
-  const allCaps = letters.length > 0 && letters.replace(/[^\p{Lu}]/gu, "").length / letters.length > 0.6;
+  // A label printed in capitals emphasises nothing. Count words, not letters: one long emphasised word
+  // (MAGERMILCHPULVER) in a short list must not make the whole list read as capitals.
+  const words = list.match(/\p{L}{2,}/gu) ?? [];
+  const allCaps = words.length > 0 && words.filter((w) => !/\p{Ll}/u.test(w)).length / words.length >= 0.85;
 
   const items: ParsedItem[] = [];
   let lessThan = false;

@@ -98,6 +98,14 @@ How the variant is decided for one label item:
    add their allergen claims (`basis: "qualifier"` / `"emphasis"`). Triggers are grouped by code into flags; a
    flag's certainty, kind and grade are the strongest among its triggers. Diet codes never become flags;
    they feed the diet verdicts below.
+   - **Emphasis the KB cannot explain.** EU law requires the 14 allergens to stand out in the list (Reg
+     1169/2011 Art. 21(1)(b)), and capitals are the usual way. Suppose a capitalised word is neither recognised
+     nor a known non-allergen, and its item raised no allergen. The analysis then reports
+     `allergen.unrecognised_emphasis`: notice, sensitivity, `maybe`, estimate, grade B. It says "possibly an
+     allergen, check the pack" rather than nothing.
+   - **Exclusions.** A list where at least 85% of the words are in capitals counts as printed in capitals and
+     emphasises nothing. So do acronyms, colour-name suffixes (FCF), and organic or protected-origin markers
+     (BIO, DOP).
 4. **Traces.** Allergens in a precautionary statement ("może zawierać…", "may contain…", "kann Spuren von…
    enthalten") are reported under `may_contain`. They never raise flags. A profile that avoids that allergen
    gets a hit marked `trace: true`.
@@ -195,7 +203,8 @@ knowledge-base history with the new `kb_version`.
 
 ## Changelog
 
-- **2026-10-26**: `nutrition` input and the [Amounts](#amounts) section (sugar bands, reference intake,
+- **2026-10-26**: `allergen.unrecognised_emphasis` for capitalised items the KB does not know; "printed in
+  capitals" counts words, not letters; `nutrition` input and the [Amounts](#amounts) section (sugar bands, reference intake,
   `health.high_sugar`, the glycemic-load estimate and `health.high_glycemic_load`); position facts on added
   sugars; `origin.bee_product` (honey: not vegan, vegetarian); codes `processing.non_sugar_sweetener`,
   `health.added_sugar`, `health.high_sugar` and `regulatory.revoked_elsewhere`.

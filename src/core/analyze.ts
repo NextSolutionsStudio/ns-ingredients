@@ -58,7 +58,7 @@ export interface ItemResult {
 export interface FlagTrigger {
   /** A label item, or "nutrition.<field>" for a trigger computed from declared nutrition. */
   path: string;
-  /** Absent only on basis "nutrition". */
+  /** Absent on basis "nutrition", and on an emphasised item the KB does not recognise. */
   ingredient_id?: string;
   variant_id?: string;
   basis: "ingredient" | "label_variant" | "prior_variant" | "qualifier" | "emphasis" | "trace" | "nutrition";
@@ -182,6 +182,8 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
   const lang: Lang = opts.lang ?? parsed.lang ?? guessLang(text);
   const flags = new Map<string, Flag>();
   const citedSources = new Set<string>();
+  /** Label paths that raised a real allergen: emphasis there is accounted for. */
+  const allergenPaths = new Set<string>();
 
   const addFlag = (
     a: AssertionT,
@@ -191,6 +193,7 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
     if (!impl || impl.group === "diet") return;
     if (trigger.certainty !== "yes" && trigger.certainty !== "maybe") return;
     for (const s of a.sources) citedSources.add(s.id);
+    if (impl.group === "allergen" && a.code !== UNRECOGNISED_EMPHASIS) allergenPaths.add(trigger.path);
     const full: FlagTrigger = {
       ...trigger,
       ...(a.population ? { population: a.population } : {}),
@@ -395,10 +398,26 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
         if (c.role === "qualifier") dietInputs.push({ path: c.path, ingredient: q });
       }
     }
+    const unknownEmphasis: string[] = [];
     for (const w of item.emphasized) {
       const em = index.match(w);
       const q = em && em.confidence >= 0.9 ? index.get(em.ingredientId) : undefined;
       if (q) { for (const a of allergenAssertions(q)) addFlag(a, trig(item.path, q.id, "emphasis", a)); }
+      else unknownEmphasis.push(w);
+    }
+    // Emphasis the KB cannot explain: EU law emphasises allergens, so say "possibly one" rather than nothing.
+    // Not when this item or one inside it already raised an allergen, or when the emphasised word is known.
+    const explained = [...allergenPaths].some((p) => p === item.path || p.startsWith(`${item.path}.`));
+    if (unknownEmphasis.length && !explained) {
+      addFlag(EMPHASIS_ASSERTION, {
+        path: item.path,
+        ...(base.match ? { ingredient_id: base.match.ingredient_id } : {}),
+        basis: "emphasis",
+        certainty: "maybe",
+        kind: "estimate",
+        grade: "B",
+        note: emphasisNote(unknownEmphasis, lang),
+      });
     }
     return base;
   };
@@ -626,6 +645,32 @@ function noteSugarPositions(flag: Flag, items: ItemResult[], lang: Lang): boolea
     if (facts.length) trigger.note = [trigger.note, ...facts].filter(Boolean).join(" ");
   }
   return cited;
+}
+
+const UNRECOGNISED_EMPHASIS = "allergen.unrecognised_emphasis";
+// Reg 1169/2011 Art 21(1)(b): the 14 allergens must stand out in the list by typeset (here, capitals).
+const EMPHASIS_ASSERTION: AssertionT = {
+  code: UNRECOGNISED_EMPHASIS,
+  certainty: "maybe",
+  kind: "estimate",
+  grade: "B",
+  note: { en: "Emphasised on the label but not recognised." },
+  sources: [{ id: "reg-1169-2011", locator: "Article 21(1)(b)" }],
+};
+
+function emphasisNote(words: string[], lang: Lang): string {
+  const w = words.map((x) => `"${x}"`).join(", ");
+  return {
+    en:
+      `${w} is emphasised on the label, as EU law requires for the 14 allergens, but the knowledge base does not ` +
+      "recognise it, so it cannot say which allergen this is. Check the item on the pack.",
+    pl:
+      `${w} wyróżniono na etykiecie, jak prawo UE wymaga dla 14 alergenów, ale baza wiedzy tego nie rozpoznaje, ` +
+      "więc nie wskazuje, który to alergen. Sprawdź ten składnik na opakowaniu.",
+    de:
+      `${w} ist auf dem Etikett hervorgehoben, wie es das EU-Recht für die 14 Allergene verlangt, aber die ` +
+      "Wissensbasis erkennt es nicht und kann daher nicht sagen, welches Allergen es ist. Bitte auf der Packung prüfen.",
+  }[lang];
 }
 
 function trig(

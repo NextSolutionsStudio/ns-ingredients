@@ -38,7 +38,7 @@ Status: **shipped** (in the API today), **planned** (with the PR it lands in, se
 | Production and source | Variants with process, residues and limits, label tells, market prior and rationale; which variant the label names, or the likely one. | shipped; more variants are KB work (citric acid: fermentation vs fruit) |
 | Claims | Implication code, label, severity, concern, kind, grade, certainty, population, dose, jurisdiction, sources with locator. | shipped |
 | Diets | Vegan, vegetarian, gluten-free, lactose-free as yes / no / maybe / unknown, with the items that decide it. | shipped. Halal and kosher: **not planned**, they are certifications, not ingredient facts |
-| Allergens | The EU 14, including `(z MLEKA)`-style emphasis and may-contain clauses, reported separately from contents. | shipped |
+| Allergens | The EU 14, including `(z MLEKA)`-style emphasis and may-contain clauses, reported separately from contents. A capitalised item the KB does not know raises `allergen.unrecognised_emphasis` (possible allergen, check the pack) instead of nothing. | shipped |
 | Danger ranking | `ranking[]`, `summary.danger`; profile-aware (`avoid`, `diets`), never stored. | shipped |
 | Processing | Ultra-processing marker per ingredient. | shipped. A NOVA-style group estimate with its markers: **planned** later, labelled estimate |
 | Regulatory status | Per jurisdiction: status, conditions, date, legal source. | shipped for the EU; US rows where a source was opened, and `regulatory.revoked_elsewhere` (FDA Red No. 3, 2025) |
