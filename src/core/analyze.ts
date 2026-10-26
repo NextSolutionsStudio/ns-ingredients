@@ -59,10 +59,17 @@ export interface FlagTrigger {
   sources: { id: string; locator?: string }[];
 }
 
+export type Concern = "hazard" | "sensitivity" | "quality" | "preference" | "info";
+type Severity = "info" | "notice" | "caution" | "warning";
+
 export interface Flag {
   code: string;
   group: string;
-  severity: "info" | "notice" | "caution" | "warning";
+  severity: Severity;
+  /** Who it matters to. Severity says how serious; a warning-level allergen is no hazard to the non-allergic. */
+  concern: Concern;
+  /** Present when a profile was sent: the profile asked about this code. */
+  personal?: boolean;
   label: string;
   certainty: Certainty;
   kind: "fact" | "estimate" | "opinion";
@@ -75,11 +82,37 @@ export interface DietVerdict {
   because: { path: string; ingredient_id?: string; status: Certainty }[];
 }
 
+/** One line of the danger ranking: a label item and why it ranks where it does. */
+export interface RankedItem {
+  path: string;
+  /** The words on the label. */
+  name: string;
+  ingredient_id: string | null;
+  score: number;
+  /** Severity of the reason that ranks it. */
+  level: Severity;
+  personal: boolean;
+  reasons: {
+    code: string;
+    label: string;
+    concern: Concern;
+    severity: Severity;
+    /** For a diet.* reason: the diet's status for this item (no / maybe). */
+    certainty: Certainty;
+    /** Evidence grade of the claim; absent for diet reasons, which are derived. */
+    grade?: "A" | "B" | "C" | "D";
+    personal: boolean;
+  }[];
+}
+
 export interface AnalysisResult {
   kb_version: string;
   lang: Lang;
   items: ItemResult[];
   flags: Flag[];
+  /** Label items ordered by danger: hazards first, then quality markers; sensitivities and preferences
+   * count only when the profile asks about them. Items with nothing to rank are left out. */
+  ranking: RankedItem[];
   diets: Record<DietId, DietVerdict>;
   may_contain: { text: string; ingredient_id: string | null; allergens: string[] }[];
   label_statements: string[];
@@ -89,7 +122,10 @@ export interface AnalysisResult {
     caution: number;
     notice: number;
     info: number;
-    highest: Flag["severity"] | null;
+    /** Highest severity of any flag, including ones that only matter to some people (allergens). */
+    highest: Severity | null;
+    /** Highest severity among hazards and the profile's own concerns: the headline for "is this dangerous". */
+    danger: Severity | null;
   };
   profile?: {
     hits: { code: string; certainty: Certainty; paths: string[]; trace: boolean }[];
@@ -153,6 +189,7 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
         code: a.code,
         group: impl.group,
         severity: impl.severity,
+        concern: impl.concern,
         label: txt(impl.label, lang),
         certainty: full.certainty,
         kind: full.kind,
@@ -397,11 +434,31 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
   };
   count(items);
 
-  const summary = { warning: 0, caution: 0, notice: 0, info: 0, highest: null as Flag["severity"] | null };
+  const summary = {
+    warning: 0,
+    caution: 0,
+    notice: 0,
+    info: 0,
+    highest: null as Severity | null,
+    danger: null as Severity | null,
+  };
   for (const f of flagList) {
     summary[f.severity]++;
     if (!summary.highest || SEVERITY_RANK[f.severity] > SEVERITY_RANK[summary.highest]) {
       summary.highest = f.severity;
+    }
+  }
+  if (opts.profile) {
+    const wants = profileMatcher(opts.profile);
+    for (const f of flagList) f.personal = wants(f.code);
+  }
+  const ranking = rankByDanger(index, items, flagList, diets, opts.profile, lang);
+  for (const r of ranking) {
+    for (const why of r.reasons) {
+      if (why.concern !== "hazard" && !why.personal) continue;
+      if (!summary.danger || SEVERITY_RANK[why.severity] > SEVERITY_RANK[summary.danger]) {
+        summary.danger = why.severity;
+      }
     }
   }
 
@@ -410,6 +467,7 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
     lang,
     items,
     flags: flagList,
+    ranking,
     diets,
     may_contain: mayContain,
     label_statements: parsed.statements,
@@ -621,8 +679,7 @@ function evaluateProfile(
   mayContain: AnalysisResult["may_contain"],
   diets: Record<DietId, DietVerdict>,
 ): NonNullable<AnalysisResult["profile"]> {
-  const matches = (code: string) =>
-    (profile.avoid ?? []).some((p) => (p.endsWith(".*") ? code.startsWith(p.slice(0, -1)) : code === p));
+  const matches = profileMatcher(profile);
   const hits: NonNullable<AnalysisResult["profile"]>["hits"] = [];
   for (const f of flags) {
     if (matches(f.code)) {
@@ -646,6 +703,115 @@ function evaluateProfile(
       d.status !== "yes"
     ),
   };
+}
+
+const profileMatcher = (profile?: Profile) => (code: string) =>
+  (profile?.avoid ?? []).some((p) => (p.endsWith(".*") ? code.startsWith(p.slice(0, -1)) : code === p));
+
+// ---------------------------------------------------------------- danger ranking
+// score = concern × severity × certainty × grade, per reason; an item scores its strongest reason plus a
+// tenth of the rest. Severity weights double per step, so one caution outranks a notice with company.
+const SEVERITY_WEIGHT: Record<Severity, number> = { info: 1, notice: 2, caution: 4, warning: 8 };
+// Sensitivities and preferences rank only when the profile asks about them (then at weight 1): milk is a
+// danger to the allergic reader, not to everyone. A quality marker ranks below any hazard of equal severity.
+const CONCERN_WEIGHT: Record<Concern, number> = {
+  hazard: 1,
+  quality: 0.25,
+  sensitivity: 0,
+  preference: 0,
+  info: 0,
+};
+const CERTAINTY_WEIGHT: Partial<Record<Certainty, number>> = { yes: 1, maybe: 0.5 };
+const GRADE_WEIGHT = { A: 1, B: 0.85, C: 0.7, D: 0.55 } as const;
+
+function rankByDanger(
+  index: KbIndex,
+  items: ItemResult[],
+  flags: Flag[],
+  diets: Record<DietId, DietVerdict>,
+  profile: Profile | undefined,
+  lang: Lang,
+): RankedItem[] {
+  const wants = profileMatcher(profile);
+  const byPathItem = new Map<string, ItemResult>();
+  const visit = (list: ItemResult[]) => {
+    for (const it of list) {
+      byPathItem.set(it.path, it);
+      visit(it.children);
+    }
+  };
+  visit(items);
+
+  type Reason = RankedItem["reasons"][number] & { weight: number };
+  const byPath = new Map<string, { ingredientId: string | null; reasons: Map<string, Reason> }>();
+  const offer = (path: string, ingredientId: string | null, r: Reason) => {
+    if (r.weight <= 0) return;
+    const entry = byPath.get(path) ?? { ingredientId, reasons: new Map<string, Reason>() };
+    byPath.set(path, entry);
+    const prev = entry.reasons.get(r.code);
+    if (!prev || r.weight > prev.weight) entry.reasons.set(r.code, r);
+  };
+
+  for (const f of flags) {
+    const personal = wants(f.code);
+    const concernWeight = personal ? 1 : CONCERN_WEIGHT[f.concern];
+    if (!concernWeight) continue;
+    for (const t of f.triggers) {
+      offer(t.path, byPathItem.get(t.path)?.match?.ingredient_id ?? t.ingredient_id, {
+        code: f.code,
+        label: f.label,
+        concern: f.concern,
+        severity: f.severity,
+        certainty: t.certainty,
+        grade: t.grade,
+        personal,
+        weight: concernWeight * SEVERITY_WEIGHT[f.severity] * (CERTAINTY_WEIGHT[t.certainty] ?? 0) *
+          GRADE_WEIGHT[t.grade],
+      });
+    }
+  }
+  // A diet the profile keeps is personal as well: with "lactose_free", milk ranks as a danger for this
+  // reader. The reason's certainty is the diet status (no / maybe); "no" ranks as a warning.
+  for (const d of profile?.diets ?? []) {
+    const impl = index.implications.get(`diet.${d}`);
+    if (!impl) continue;
+    for (const b of diets[d].because) {
+      if (b.status !== "no" && b.status !== "maybe") continue;
+      const severity: Severity = b.status === "no" ? "warning" : "caution";
+      offer(b.path, byPathItem.get(b.path)?.match?.ingredient_id ?? b.ingredient_id ?? null, {
+        code: impl.code,
+        label: txt(impl.label, lang),
+        concern: impl.concern,
+        severity,
+        certainty: b.status,
+        personal: true,
+        weight: SEVERITY_WEIGHT[severity] * (CERTAINTY_WEIGHT[b.status === "no" ? "yes" : "maybe"] ?? 0),
+      });
+    }
+  }
+
+  const labelOrder = [...byPathItem.keys()];
+  return [...byPath].map(([path, e]): RankedItem => {
+    const reasons = [...e.reasons.values()].sort((a, b) => b.weight - a.weight);
+    const rest = reasons.slice(1).reduce((s, r) => s + r.weight, 0);
+    return {
+      path,
+      name: byPathItem.get(path)?.name ?? path,
+      ingredient_id: e.ingredientId,
+      score: round(reasons[0].weight + 0.1 * rest),
+      level: reasons[0].severity,
+      personal: reasons[0].personal,
+      reasons: reasons.map((r) => ({
+        code: r.code,
+        label: r.label,
+        concern: r.concern,
+        severity: r.severity,
+        certainty: r.certainty,
+        ...(r.grade ? { grade: r.grade } : {}),
+        personal: r.personal,
+      })),
+    };
+  }).sort((a, b) => b.score - a.score || labelOrder.indexOf(a.path) - labelOrder.indexOf(b.path));
 }
 
 const round = (n: number) => Math.round(n * 1000) / 1000;

@@ -74,6 +74,17 @@ Deno.test("source qualifiers and bare E-numbers get their own roles", () => {
   assert(sub.children.every((c) => c.role === "ingredient"));
 });
 
+Deno.test("a bare E-number is an annotation only when it is alone in the brackets besides qualifiers", () => {
+  const [lec] = parseLabel("lecytyny (z soi) (E322)").items;
+  assertEquals(lec.children.map((c) => c.role), ["qualifier", "e_number"]);
+  // Real label (Open Food Facts 5900617013064): E492 is one of the chocolate's ingredients.
+  const [choc] =
+    parseLabel("czekolada 25% (miazga kakaowa, cukier, emulgatory: lecytyny (z soi), E492)").items;
+  assertEquals(choc.children.map((c) => c.role), ["ingredient", "ingredient", "ingredient", "ingredient"]);
+  const [colours] = parseLabel("barwniki (E120, E110)").items;
+  assertEquals(colours.children.map((c) => c.role), ["ingredient", "ingredient"]);
+});
+
 Deno.test("CAPS emphasis is captured, but not on an all-caps label", () => {
   const [whey] = parseLabel("koncentrat białka serwatkowego (z MLEKA), cukier").items;
   assertEquals(whey.emphasized, ["MLEKA"]);

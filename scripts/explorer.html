@@ -1,0 +1,1268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ingredients Explorer</title>
+    <style>
+    :root {
+      --bg: #f6f7f9;
+      --panel: #fff;
+      --ink: #16181d;
+      --muted: #616875;
+      --line: #e2e5ea;
+      --soft: #f0f2f5;
+      --accent: #2458d6;
+      --accent-ink: #fff;
+      --warning: #c62828;
+      --warning-bg: #fdecea;
+      --caution: #b45309;
+      --caution-bg: #fff4e0;
+      --notice: #1d5fa8;
+      --notice-bg: #e8f1fc;
+      --info: #56606e;
+      --info-bg: #eef0f3;
+      --yes: #1e7a3c;
+      --yes-bg: #e6f4ea;
+      --no: #c62828;
+      --no-bg: #fdecea;
+      --maybe: #a15c00;
+      --maybe-bg: #fff4e0;
+      --unknown: #616875;
+      --unknown-bg: #eef0f3;
+      --mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
+      color-scheme: light;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111317;
+        --panel: #1a1d23;
+        --ink: #e8eaee;
+        --muted: #9aa1ad;
+        --line: #2c3038;
+        --soft: #22262d;
+        --accent: #6d9bff;
+        --accent-ink: #0b1020;
+        --warning: #ff7b72;
+        --warning-bg: #3a1d1d;
+        --caution: #f0a445;
+        --caution-bg: #36270f;
+        --notice: #79b0ff;
+        --notice-bg: #172a45;
+        --info: #a7afbb;
+        --info-bg: #262a31;
+        --yes: #5fcf80;
+        --yes-bg: #173222;
+        --no: #ff7b72;
+        --no-bg: #3a1d1d;
+        --maybe: #f0a445;
+        --maybe-bg: #36270f;
+        --unknown: #a7afbb;
+        --unknown-bg: #262a31;
+        color-scheme: dark;
+      }
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    code,
+    .mono {
+      font-family: var(--mono);
+      font-size: 0.88em;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      background: var(--panel);
+      border-bottom: 1px solid var(--line);
+    }
+    .bar {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 10px 16px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .brand {
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+    }
+    .brand small {
+      font-weight: 500;
+      color: var(--muted);
+    }
+    form.search {
+      flex: 1 1 380px;
+      display: flex;
+      gap: 8px;
+      min-width: 0;
+    }
+    input[type=search],
+    textarea,
+    select {
+      font: inherit;
+      color: var(--ink);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px 10px;
+    }
+    input[type=search] {
+      flex: 1;
+      min-width: 0;
+    }
+    textarea {
+      width: 100%;
+      min-height: 120px;
+      resize: vertical;
+      font-family: var(--mono);
+      font-size: 13px;
+    }
+    button,
+    .btn {
+      font: inherit;
+      font-weight: 600;
+      border: 0;
+      border-radius: 8px;
+      padding: 8px 14px;
+      cursor: pointer;
+      background: var(--accent);
+      color: var(--accent-ink);
+      white-space: nowrap;
+    }
+    button.ghost,
+    .btn.ghost {
+      background: var(--soft);
+      color: var(--ink);
+    }
+    button:disabled {
+      opacity: 0.6;
+      cursor: default;
+    }
+    nav.tabs {
+      display: flex;
+      gap: 4px;
+      font-size: 14px;
+    }
+    nav.tabs a {
+      padding: 6px 10px;
+      border-radius: 6px;
+      color: var(--muted);
+    }
+    nav.tabs a.on {
+      background: var(--soft);
+      color: var(--ink);
+      font-weight: 600;
+    }
+    .meta {
+      font-size: 12px;
+      color: var(--muted);
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-left: auto;
+    }
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 18px 16px 60px;
+    }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 14px;
+    }
+    .panel h2 {
+      font-size: 16px;
+      margin: 0 0 10px;
+    }
+    .panel h3 {
+      font-size: 14px;
+      margin: 16px 0 8px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .cols {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 14px;
+      align-items: start;
+    }
+    @media (max-width: 860px) {
+      .cols {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+    .muted {
+      color: var(--muted);
+    }
+    .small {
+      font-size: 13px;
+    }
+    .row {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .list > li {
+      border-top: 1px solid var(--line);
+    }
+    .list > li:first-child {
+      border-top: 0;
+    }
+    .hit {
+      display: block;
+      padding: 9px 4px;
+      color: var(--ink);
+    }
+    .hit:hover {
+      background: var(--soft);
+      text-decoration: none;
+      border-radius: 6px;
+    }
+    .hit .t {
+      font-weight: 600;
+    }
+    .chip {
+      display: inline-block;
+      font-size: 12px;
+      line-height: 1.6;
+      padding: 0 7px;
+      border-radius: 999px;
+      background: var(--soft);
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .chip.mono {
+      font-family: var(--mono);
+      font-size: 11px;
+    }
+    .s-warning {
+      color: var(--warning);
+      background: var(--warning-bg);
+    }
+    .s-caution {
+      color: var(--caution);
+      background: var(--caution-bg);
+    }
+    .s-notice {
+      color: var(--notice);
+      background: var(--notice-bg);
+    }
+    .s-info {
+      color: var(--info);
+      background: var(--info-bg);
+    }
+    .d-yes {
+      color: var(--yes);
+      background: var(--yes-bg);
+    }
+    .d-no {
+      color: var(--no);
+      background: var(--no-bg);
+    }
+    .d-maybe {
+      color: var(--maybe);
+      background: var(--maybe-bg);
+    }
+    .d-unknown {
+      color: var(--unknown);
+      background: var(--unknown-bg);
+    }
+    .product {
+      display: grid;
+      grid-template-columns: 120px minmax(0, 1fr);
+      gap: 16px;
+    }
+    .product img {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      background: #fff;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+    }
+    .product .noimg {
+      width: 120px;
+      height: 120px;
+      border-radius: 8px;
+      background: var(--soft);
+    }
+    @media (max-width: 520px) {
+      .product {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+    .product h1 {
+      font-size: 20px;
+      margin: 0 0 4px;
+    }
+    .kv {
+      display: grid;
+      grid-template-columns: max-content minmax(0, 1fr);
+      gap: 4px 12px;
+      font-size: 13px;
+    }
+    .kv dt {
+      color: var(--muted);
+    }
+    .kv dd {
+      margin: 0;
+    }
+    .summary {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: stretch;
+    }
+    .stat {
+      background: var(--soft);
+      border-radius: 10px;
+      padding: 8px 12px;
+      min-width: 120px;
+    }
+    .stat b {
+      display: block;
+      font-size: 18px;
+    }
+    .stat span {
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .diets {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
+    }
+    @media (max-width: 620px) {
+      .diets {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    .diet {
+      border-radius: 10px;
+      padding: 8px 10px;
+    }
+    .diet b {
+      display: block;
+      font-size: 13px;
+    }
+    .diet span {
+      font-size: 12px;
+    }
+    details.flag {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      margin-bottom: 8px;
+      overflow: hidden;
+    }
+    details.flag > summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 9px 12px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    details.flag > summary::-webkit-details-marker {
+      display: none;
+    }
+    details.flag > summary .lbl {
+      font-weight: 600;
+    }
+    details.flag[open] > summary {
+      border-bottom: 1px solid var(--line);
+      background: var(--soft);
+    }
+    details.flag ul {
+      margin: 0;
+      padding: 8px 12px 10px 30px;
+      font-size: 13px;
+    }
+    details.flag li {
+      margin: 4px 0;
+    }
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      flex: none;
+      background: currentColor;
+    }
+    ol.tree,
+    ol.tree ol {
+      list-style: none;
+      margin: 0;
+      padding-left: 0;
+    }
+    ol.tree ol {
+      padding-left: 18px;
+      border-left: 1px dashed var(--line);
+      margin-left: 6px;
+    }
+    ol.tree li {
+      padding: 3px 0;
+    }
+    .it {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      align-items: baseline;
+      font-size: 14px;
+    }
+    .it .src {
+      font-family: var(--mono);
+      font-size: 13px;
+    }
+    .it .arrow {
+      color: var(--muted);
+    }
+    .unmatched {
+      color: var(--muted);
+      font-style: italic;
+    }
+    .warnline {
+      font-size: 13px;
+      padding: 8px 10px;
+      border-radius: 8px;
+      background: var(--caution-bg);
+      color: var(--caution);
+    }
+    .err {
+      font-size: 14px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      background: var(--warning-bg);
+      color: var(--warning);
+    }
+    .spin {
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .spin::before {
+      content: "";
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      margin-right: 8px;
+      vertical-align: -1px;
+      border: 2px solid var(--line);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: r 0.8s linear infinite;
+    }
+    @keyframes r {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th,
+    td {
+      text-align: left;
+      vertical-align: top;
+      padding: 6px 8px;
+      border-top: 1px solid var(--line);
+    }
+    th {
+      color: var(--muted);
+      font-weight: 600;
+      border-top: 0;
+    }
+    .tablewrap {
+      overflow-x: auto;
+    }
+    pre {
+      background: var(--soft);
+      border-radius: 8px;
+      padding: 10px;
+      overflow: auto;
+      font-size: 12px;
+      max-height: 480px;
+    }
+    .langs {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+    .langs button {
+      padding: 4px 10px;
+      font-size: 13px;
+    }
+    .examples {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .examples a {
+      font-size: 13px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--soft);
+      color: var(--ink);
+    }
+    .foot {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="bar">
+        <a class="brand" href="#/">ns-ingredients <small>explorer</small></a>
+        <form class="search" id="search" autocomplete="off">
+          <input type="search" id="q" placeholder="EAN (5900617013064) or product / ingredient name"
+            aria-label="Search">
+          <button type="submit">Search</button>
+        </form>
+        <nav class="tabs" id="tabs">
+          <a href="#/" data-v="">Home</a>
+          <a href="#/paste" data-v="paste">Paste a label</a>
+        </nav>
+        <div class="meta">
+          <label>Answers in
+        <select id="lang" aria-label="Answer language"><option value="pl">PL</option><option value="en">EN</option><option value="de">DE</option></select>
+      </label>
+          <span id="kbv"></span>
+          <a href="/docs" target="_blank" rel="noopener">API docs</a>
+        </div>
+      </div>
+    </header>
+    <main id="view"></main>
+
+    <script>
+    "use strict";
+    const $ = (s, el = document) => el.querySelector(s);
+    const esc = (v) =>
+      String(v ?? "").replace(
+        /[&<>"']/g,
+        (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]),
+      );
+    const safeUrl = (u) => (/^https?:\/\//i.test(u ?? "") ? u : "#");
+    const pct = (x) => `${Math.round(x * 100)}%`;
+    const view = $("#view");
+    const SEVERITIES = ["warning", "caution", "notice", "info"];
+    const DIETS = {
+      vegan: "Vegan",
+      vegetarian: "Vegetarian",
+      gluten_free: "Gluten-free",
+      lactose_free: "Lactose-free",
+    };
+    const BASIS = {
+      ingredient: "the ingredient itself",
+      label_variant: "variant named on the label",
+      prior_variant: "likely variant (market prior)",
+      qualifier: "source named on the label",
+      emphasis: "allergen emphasis",
+      trace: "may-contain clause",
+    };
+
+    // ---------------------------------------------------------------- prefs (per-browser convenience only)
+    const store = {
+      get(k, d) {
+        try {
+          return localStorage.getItem(k) ?? d;
+        } catch {
+          return d;
+        }
+      },
+      set(k, v) {
+        try {
+          localStorage.setItem(k, v);
+        } catch { /* private mode */ }
+      },
+    };
+    const langSel = $("#lang");
+    langSel.value = store.get(
+      "nsi.lang",
+      (navigator.language || "en").slice(0, 2) === "pl"
+        ? "pl"
+        : (navigator.language || "").startsWith("de")
+        ? "de"
+        : "en",
+    );
+    langSel.addEventListener("change", () => {
+      store.set("nsi.lang", langSel.value);
+      route();
+    });
+    const lang = () => langSel.value;
+
+    // ---------------------------------------------------------------- fetch helpers
+    async function getJson(path, init) {
+      const res = await fetch(path, init);
+      const body = await res.json().catch(() => null);
+      if (!res.ok) {
+        const msg = body?.detail || body?.title || body?.error || `HTTP ${res.status}`;
+        const extra = body?.errors?.map((e) => `${e.path}: ${e.message}`).join("; ");
+        throw new Error(extra ? `${msg} (${extra})` : msg);
+      }
+      return body;
+    }
+    const errBox = (e) => `<div class="err">${esc(e.message || e)}</div>`;
+    const spinner = (t) => `<div class="spin">${esc(t)}</div>`;
+
+    // ---------------------------------------------------------------- routing
+    let navSeq = 0;
+    function parseHash() {
+      const h = location.hash.slice(1) || "/";
+      const [path, qs] = h.split("?");
+      return {
+        parts: path.split("/").filter(Boolean).map(decodeURIComponent),
+        params: new URLSearchParams(qs || ""),
+      };
+    }
+    window.addEventListener("hashchange", route);
+    $("#search").addEventListener("submit", (ev) => {
+      ev.preventDefault();
+      const q = $("#q").value.trim();
+      if (!q) return;
+      const digits = q.replace(/[\s-]/g, "");
+      location.hash = /^\d{8,14}$/.test(digits) ? `#/ean/${digits}` : `#/search?q=${encodeURIComponent(q)}`;
+    });
+
+    async function route() {
+      const seq = ++navSeq;
+      const { parts, params } = parseHash();
+      const [v, arg] = parts;
+      for (const a of document.querySelectorAll("#tabs a")) {
+        a.classList.toggle("on", (a.dataset.v || "") === (v === "paste" ? "paste" : v ? "-" : ""));
+      }
+      window.scrollTo(0, 0);
+      if (v === "ean" && arg) {
+        $("#q").value = arg;
+        return showProduct(arg, seq);
+      }
+      if (v === "search") {
+        $("#q").value = params.get("q") || "";
+        return showSearch(params.get("q") || "", seq);
+      }
+      if (v === "ing" && arg) return showIngredient(arg, seq);
+      if (v === "paste") return showPaste(seq);
+      return showHome();
+    }
+    const live = (seq) => seq === navSeq;
+
+    // ---------------------------------------------------------------- home
+    function showHome() {
+      view.innerHTML = `
+      <div class="panel">
+        <h2>Look up a product or an ingredient</h2>
+        <p class="muted small" style="margin-top:0">A barcode fetches the product from Open Food Facts and runs its ingredient list through
+        the local ns-ingredients API. Text searches both Open Food Facts products and our ingredient knowledge base.</p>
+        <h3>Barcodes</h3>
+        <div class="examples">
+          <a href="#/ean/5900617013064">5900617013064 · Sante protein bar</a>
+          <a href="#/ean/5907554476143">5907554476143 · vanilla protein bar</a>
+          <a href="#/ean/3017620422003">3017620422003 · Nutella</a>
+          <a href="#/ean/5449000000996">5449000000996 · Coca-Cola</a>
+        </div>
+        <h3>Searches</h3>
+        <div class="examples">
+          <a href="#/search?q=baton%20proteinowy">baton proteinowy</a>
+          <a href="#/search?q=whey%20protein">whey protein</a>
+          <a href="#/search?q=kwas%20jab%C5%82kowy">kwas jabłkowy</a>
+          <a href="#/search?q=E471">E471</a>
+          <a href="#/search?q=olej%20palmowy">olej palmowy</a>
+          <a href="#/search?q=sucralose">sucralose</a>
+        </div>
+        <h3>Or</h3>
+        <a class="btn ghost" href="#/paste">Paste a label you have in hand</a>
+      </div>`;
+    }
+
+    // ---------------------------------------------------------------- search
+    async function showSearch(q, seq) {
+      view.innerHTML = `
+      <div class="cols">
+        <div class="panel"><h2>Products <span class="muted small">· Open Food Facts</span></h2><div id="offres">${
+        spinner("Searching Open Food Facts…")
+      }</div></div>
+        <div class="panel"><h2>Ingredients <span class="muted small">· our knowledge base</span></h2><div id="kbres">${
+        spinner("Searching the knowledge base…")
+      }</div></div>
+      </div>`;
+      loadOffPage(q, 1, seq);
+      try {
+        const r = await getJson(`/v1/ingredients?q=${encodeURIComponent(q)}&limit=25&lang=${lang()}`);
+        if (!live(seq)) return;
+        $("#kbres").innerHTML = r.items.length
+          ? `
+          <div class="muted small">${r.total} match${r.total === 1 ? "" : "es"} · KB ${esc(r.kb_version)}</div>
+          <ul class="list">${
+            r.items.map((it) => `
+            <li><a class="hit" href="#/ing/${encodeURIComponent(it.id)}">
+              <div class="row"><span class="t">${esc(it.name)}</span>${
+              it.e_number ? `<span class="chip mono">${esc(it.e_number)}</span>` : ""
+            }
+                <span class="chip">${esc(it.type)}</span>${
+              it.review_status === "imported" ? `<span class="chip">identity only</span>` : ""
+            }</div>
+              <div class="muted small">${
+              it.match.matched
+                ? `matched “${esc(it.match.matched)}” · ${esc(it.match.type)}`
+                : "words found in its description"
+            } · ${it.match.score.toFixed(2)}</div>
+              ${
+              it.tags.length
+                ? `<div class="row" style="margin-top:4px">${
+                  it.tags.slice(0, 8).map((t) => `<span class="chip mono">${esc(t)}</span>`).join("")
+                }${it.tags.length > 8 ? `<span class="chip">+${it.tags.length - 8}</span>` : ""}</div>`
+                : ""
+            }
+            </a></li>`).join("")
+          }</ul>`
+          : `<div class="muted">No ingredient matches “${esc(q)}”.</div>`;
+      } catch (e) {
+        if (live(seq)) $("#kbres").innerHTML = errBox(e);
+      }
+    }
+
+    async function loadOffPage(q, page, seq) {
+      const box = $("#offres");
+      try {
+        const r = await getJson(`/off/search?q=${encodeURIComponent(q)}&page=${page}`);
+        if (!live(seq)) return;
+        const items = r.items.filter((p) => p.ean);
+        const html = items.map((p) => `
+          <li><a class="hit" href="#/ean/${encodeURIComponent(p.ean)}">
+            <div class="t">${p.name ? esc(p.name) : `<span class="muted">(no name)</span>`}</div>
+            <div class="muted small">${
+          [p.brands, p.quantity].filter(Boolean).map(esc).join(" · ")
+        } <span class="mono">${esc(p.ean)}</span></div>
+          </a></li>`).join("");
+        if (page === 1) {
+          box.innerHTML = items.length
+            ? `<div class="muted small">${r.count != null ? `${r.count} products` : ""}${
+              r.page_count > 1 ? ` · page 1 of ${r.page_count}` : ""
+            }</div><ul class="list" id="offlist">${html}</ul><div id="offmore"></div>`
+            : `<div class="muted">No products match “${esc(q)}”.</div>`;
+        } else {
+          $("#offlist").insertAdjacentHTML("beforeend", html);
+        }
+        const more = $("#offmore");
+        if (more) {
+          more.innerHTML = page < r.page_count
+            ? `<button class="ghost" style="margin-top:8px">Load more</button>`
+            : "";
+          more.querySelector("button")?.addEventListener("click", (ev) => {
+            ev.target.disabled = true;
+            ev.target.textContent = "Loading…";
+            loadOffPage(q, page + 1, seq);
+          });
+        }
+      } catch (e) {
+        if (live(seq)) (page === 1 ? box : $("#offmore")).innerHTML = errBox(e);
+      }
+    }
+
+    // ---------------------------------------------------------------- product
+    async function showProduct(ean, seq) {
+      view.innerHTML = spinner(`Fetching ${ean} from Open Food Facts…`);
+      let r;
+      try {
+        r = await getJson(`/off/product/${encodeURIComponent(ean)}`);
+      } catch (e) {
+        if (live(seq)) view.innerHTML = errBox(e);
+        return;
+      }
+      if (!live(seq)) return;
+      if (!r.found) {
+        view.innerHTML = `<div class="panel"><h2>${esc(ean)} is not on Open Food Facts</h2>
+          <p class="muted">Paste the ingredient list from the pack instead.</p><a class="btn" href="#/paste">Paste a label</a></div>`;
+        return;
+      }
+      const p = r.product;
+      const offTags = (xs) =>
+        xs.map((t) => `<span class="chip mono">${esc(t.replace(/^[a-z]{2}:/, ""))}</span>`).join(" ") ||
+        `<span class="muted">none listed</span>`;
+      view.innerHTML = `
+      <div class="panel product">
+        ${
+        p.image && p.image.startsWith("https://images.openfoodfacts.org/")
+          ? `<img src="${esc(p.image)}" alt="">`
+          : `<div class="noimg"></div>`
+      }
+        <div>
+          <h1>${esc(p.name || "(no name)")}</h1>
+          <div class="muted">${[p.brands, p.quantity].filter(Boolean).map(esc).join(" · ")}</div>
+          <div class="row small" style="margin-top:6px"><span class="mono">${esc(p.ean)}</span>
+            <a href="${esc(p.off_url)}" target="_blank" rel="noopener">Open Food Facts page ↗</a></div>
+          <details style="margin-top:8px"><summary class="small muted">What Open Food Facts says (for comparison)</summary>
+            <dl class="kv" style="margin-top:6px">
+              <dt>Nutri-Score</dt><dd>${esc((p.nutriscore || "—").toUpperCase())}</dd>
+              <dt>NOVA</dt><dd>${esc(p.nova ?? "—")}</dd>
+              <dt>Allergens</dt><dd>${offTags(p.off_allergens)}</dd>
+              <dt>Traces</dt><dd>${offTags(p.off_traces)}</dd>
+              <dt>Additives</dt><dd>${offTags(p.off_additives)}</dd>
+              ${p.categories ? `<dt>Categories</dt><dd>${esc(p.categories)}</dd>` : ""}
+            </dl></details>
+        </div>
+      </div>
+      <div class="panel">
+        <h2>Ingredient list</h2>
+        <div id="textpick"></div>
+        <textarea id="text" spellcheck="false"></textarea>
+        <div class="row" style="margin-top:8px"><button id="go">Analyse</button>
+          <span class="muted small">Edit the text first if Open Food Facts has it wrong. The list is sent only to the local API.</span></div>
+      </div>
+      <div id="result"></div>`;
+      const ta = $("#text");
+      if (!p.texts.length) {
+        $("#textpick").innerHTML =
+          `<div class="warnline">Open Food Facts has no ingredient list for this product. Type it from the pack${
+            p.ingredients_image ? " or from the photo below" : ""
+          }.</div>
+          ${
+            p.ingredients_image?.startsWith("https://images.openfoodfacts.org/")
+              ? `<p><img src="${
+                esc(p.ingredients_image)
+              }" alt="Ingredients photo" style="max-width:100%;border-radius:8px"></p>`
+              : ""
+          }`;
+      } else {
+        const pick = (i) => {
+          const t = p.texts[i];
+          ta.value = t.text;
+          for (const b of document.querySelectorAll("#textpick button")) {
+            b.classList.toggle("ghost", Number(b.dataset.i) !== i);
+          }
+          $("#textpick .warnline")?.remove();
+          if (!t.supported) {
+            $("#textpick").insertAdjacentHTML(
+              "beforeend",
+              `<div class="warnline" style="margin-bottom:8px">This text is in “${
+                esc(t.lang)
+              }”. The analyser reads Polish, English and German; expect many unmatched items.</div>`,
+            );
+          }
+        };
+        $("#textpick").innerHTML = `<div class="langs">${
+          p.texts.map((t, i) =>
+            `<button class="ghost" data-i="${i}">${esc(t.lang.toUpperCase())}${
+              t.supported ? "" : " (unsupported)"
+            }</button>`
+          ).join("")
+        }</div>`;
+        for (const b of document.querySelectorAll("#textpick button")) {
+          b.addEventListener("click", () => {
+            pick(Number(b.dataset.i));
+            analyseInto($("#result"), ta.value, seq);
+          });
+        }
+        pick(0);
+        analyseInto($("#result"), ta.value, seq);
+      }
+      $("#go").addEventListener("click", () => analyseInto($("#result"), ta.value, seq));
+    }
+
+    // ---------------------------------------------------------------- paste
+    const SAMPLE =
+      "Skład: koncentrat białek serwatkowych (z MLEKA) 80%, kakao o obniżonym udziale tłuszczu 8%, olej MCT (z kokosa), emulgator: lecytyny (z soi), kwas jabłkowy, aromat, substancja słodząca: sukraloza. Może zawierać JAJA i GLUTEN.";
+    function showPaste(seq) {
+      view.innerHTML = `
+      <div class="panel">
+        <h2>Paste an ingredient list</h2>
+        <textarea id="text" spellcheck="false"></textarea>
+        <div class="row" style="margin-top:8px"><button id="go">Analyse</button>
+          <button class="ghost" id="sample">Use the sample</button>
+          <span class="muted small">Polish, English or German. Headers like “Skład:” and “Może zawierać…” are understood.</span></div>
+      </div>
+      <div id="result"></div>`;
+      const ta = $("#text");
+      ta.value = store.get("nsi.paste", SAMPLE);
+      $("#go").addEventListener("click", () => {
+        store.set("nsi.paste", ta.value);
+        analyseInto($("#result"), ta.value, seq);
+      });
+      $("#sample").addEventListener("click", () => {
+        ta.value = SAMPLE;
+      });
+    }
+
+    // ---------------------------------------------------------------- analysis
+    async function analyseInto(box, text, seq) {
+      if (!text.trim()) {
+        box.innerHTML = errBox("The ingredient list is empty.");
+        return;
+      }
+      box.innerHTML = spinner("Analysing…");
+      try {
+        const a = await getJson("/v1/analyze", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ text: text.slice(0, 12000), lang: lang() }),
+        });
+        if (live(seq)) box.innerHTML = renderAnalysis(a);
+      } catch (e) {
+        if (live(seq)) box.innerHTML = errBox(e);
+      }
+    }
+
+    function walk(items, fn) {
+      for (const it of items) {
+        fn(it);
+        walk(it.children || [], fn);
+      }
+    }
+
+    function sourceLinks(refs, sources) {
+      return refs.map((r) => {
+        const s = sources[r.id];
+        if (!s) return `<span class="mono">${esc(r.id)}</span>`;
+        const short = s.publisher
+          ? `${s.publisher}${s.year ? ` ${s.year}` : ""}`
+          : s.title.length > 48
+          ? `${s.title.slice(0, 46)}…`
+          : s.title;
+        return `<a href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener" title="${esc(s.title)}${
+          r.locator ? ` — ${esc(r.locator)}` : ""
+        }">${esc(short)}</a>`;
+      }).join(", ");
+    }
+
+    function renderAnalysis(a) {
+      const names = new Map();
+      const labelText = new Map(); // path → the words on the label
+      walk(a.items, (it) => {
+        if (it.match) names.set(it.match.ingredient_id, it.match.name);
+        labelText.set(it.path, it.name);
+      });
+      const why = (b) => names.get(b.ingredient_id) || `“${labelText.get(b.path) || b.path}”`;
+      const s = a.summary;
+      const counts = SEVERITIES.filter((k) => s[k]).map((k) =>
+        `<span class="chip s-${k}">${s[k]} ${k}${s[k] > 1 ? "s" : ""}</span>`
+      ).join(" ");
+      const flags = [...a.flags].sort((x, y) => SEVERITIES.indexOf(x.severity) - SEVERITIES.indexOf(y.severity));
+
+      const flagHtml = flags.map((f) => `
+        <details class="flag" ${f.severity === "warning" || f.severity === "caution" ? "open" : ""}>
+          <summary><span class="dot s-${f.severity}" style="background:var(--${f.severity})"></span><span class="lbl">${
+        esc(f.label)
+      }</span>
+            <span class="chip mono">${esc(f.code)}</span><span class="chip d-${f.certainty}">${
+        esc(f.certainty)
+      }</span>
+            <span class="chip">${esc(f.kind)}</span><span class="chip" title="Evidence grade">grade ${
+        esc(f.grade)
+      }</span></summary>
+          <ul>${
+        f.triggers.map((t) => `
+            <li><a href="#/ing/${encodeURIComponent(t.ingredient_id)}"><b>${
+          esc(names.get(t.ingredient_id) || t.ingredient_id)
+        }</b></a>
+              <span class="muted">via ${esc(BASIS[t.basis] || t.basis)}${
+          t.variant_id ? ` (${esc(t.variant_id)})` : ""
+        }${t.probability != null ? `, p ≈ ${pct(t.probability)}` : ""}${
+          t.certainty !== f.certainty ? `, ${esc(t.certainty)}` : ""
+        }</span>
+              ${t.population?.length ? `<span class="chip">${t.population.map(esc).join(", ")}</span>` : ""}
+              <div>${esc(t.note)}${
+          t.sources.length ? ` <span class="muted small">— ${sourceLinks(t.sources, a.sources)}</span>` : ""
+        }</div></li>`).join("")
+      }</ul>
+        </details>`).join("");
+
+      const item = (it) => {
+        const m = it.match;
+        const conf = m && m.confidence < 0.9
+          ? `<span class="chip d-maybe" title="Match confidence">${esc(m.match_type)} ${
+            m.confidence.toFixed(2)
+          }</span>`
+          : m && m.match_type !== "exact"
+          ? `<span class="chip">${esc(m.match_type)}</span>`
+          : "";
+        let variant = "";
+        if (it.variant) {
+          if (it.variant.basis === "label") {
+            const ids = it.variant.candidates?.length > 1
+              ? it.variant.candidates.map((c) => c.id).join(" + ")
+              : it.variant.name || it.variant.id;
+            variant = `<span class="chip d-yes" title="Named on the label">variant: ${esc(ids)}</span>`;
+          } else if (it.variant.candidates?.length) {
+            const top = [...it.variant.candidates].sort((x, y) => y.probability - x.probability);
+            variant = `<span class="chip d-maybe" title="${
+              esc(top.map((c) => `${c.id} ${pct(c.probability)}`).join(", "))
+            }">likely ${esc(top[0].id)} ${pct(top[0].probability)} (estimate)</span>`;
+          }
+        }
+        const pctTxt = it.percent ? `<span class="chip">${esc(it.percent.raw)}</span>` : "";
+        const role = it.role !== "ingredient"
+          ? `<span class="chip">${esc(it.role === "class" ? "class" : it.role)}</span>`
+          : "";
+        const fn = it.function ? `<span class="chip">${esc(it.function.name)}</span>` : "";
+        const target = m
+          ? `<span class="arrow">→</span><a href="#/ing/${encodeURIComponent(m.ingredient_id)}">${
+            esc(m.name)
+          }</a>${m.e_number ? `<span class="chip mono">${esc(m.e_number)}</span>` : ""}${
+            m.review_status === "imported"
+              ? `<span class="chip" title="Identity data only, no curated claims">identity only</span>`
+              : ""
+          }`
+          : it.role !== "ingredient"
+          ? ""
+          : it.children?.some((c) => c.role === "ingredient")
+          ? `<span class="unmatched">compound: read through its parts</span>`
+          : `<span class="unmatched">not in the KB</span>`;
+        const kids = it.children?.length ? `<ol>${it.children.map(item).join("")}</ol>` : "";
+        return `<li><div class="it"><span class="src">${
+          esc(it.name)
+        }</span>${pctTxt}${role}${fn}${target}${conf}${variant}${
+          it.emphasized?.length
+            ? `<span class="chip s-caution" title="Emphasised on the label">${
+              it.emphasized.map(esc).join(", ")
+            }</span>`
+            : ""
+        }</div>${kids}</li>`;
+      };
+
+      return `
+      <div class="panel">
+        <div class="summary">
+          <div class="stat"><b class="${s.highest ? `s-${s.highest}` : ""}" style="background:none">${
+        esc(s.highest || "none")
+      }</b><span>highest severity</span></div>
+          <div class="stat"><b>${a.coverage.matched} / ${a.coverage.ingredients}</b><span>recognised (${
+        pct(a.coverage.ratio)
+      })${a.coverage.low_confidence ? ` · ${a.coverage.low_confidence} low-confidence` : ""}</span></div>
+          <div class="stat"><b>${a.flags.length}</b><span>flags</span></div>
+          <div class="row">${counts}</div>
+        </div>
+        ${
+        a.ai_generated_content
+          ? `<p class="small muted" style="margin:10px 0 0">Some matched entries are AI-drafted and not yet reviewed by a specialist.</p>`
+          : ""
+      }
+        <h3>Diets</h3>
+        <div class="diets">${
+        Object.entries(DIETS).map(([k, label]) => {
+          const d = a.diets[k];
+          const reasons = d.because.slice(0, 4).map((b) => `${why(b)}: ${b.status}`).join(", ");
+          return `<div class="diet d-${d.status}" title="${
+            esc(d.because.map((b) => `${why(b)} (item ${b.path}): ${b.status}`).join("\n"))
+          }"><b>${label}</b><span>${esc(d.status)}${reasons ? ` — ${esc(reasons)}` : ""}</span></div>`;
+        }).join("")
+      }</div>
+        <h3>Flags</h3>
+        ${flagHtml || `<div class="muted">No flags.</div>`}
+        ${
+        a.may_contain.length
+          ? `<h3>May contain</h3><div class="row">${
+            a.may_contain.map((m) =>
+              `<span class="chip s-caution">${
+                m.ingredient_id
+                  ? `<a href="#/ing/${encodeURIComponent(m.ingredient_id)}" style="color:inherit">${
+                    esc(m.text)
+                  }</a>`
+                  : esc(m.text)
+              }${m.allergens.length ? ` · ${m.allergens.map(esc).join(", ")}` : ""}</span>`
+            ).join("")
+          }</div>`
+          : ""
+      }
+        ${
+        a.label_statements.length
+          ? `<h3>Label statements</h3><div class="row">${
+            a.label_statements.map((x) => `<span class="chip">${esc(x)}</span>`).join("")
+          }</div>`
+          : ""
+      }
+      </div>
+      <div class="panel">
+        <h2>How the list was read</h2>
+        <ol class="tree">${a.items.map(item).join("")}</ol>
+        ${
+        a.unanalysed_text ? `<h3>Not analysed</h3><div class="muted small">${esc(a.unanalysed_text)}</div>` : ""
+      }
+        <p class="foot">${esc(a.disclaimer)} · KB ${esc(a.kb_version)}</p>
+        <details><summary class="small muted">Raw API response</summary><pre>${
+        esc(JSON.stringify(a, null, 2))
+      }</pre></details>
+      </div>`;
+    }
+
+    // ---------------------------------------------------------------- ingredient
+    async function showIngredient(id, seq) {
+      view.innerHTML = spinner("Loading ingredient…");
+      let d;
+      try {
+        d = await getJson(`/v1/ingredients/${encodeURIComponent(id)}?lang=${lang()}`);
+      } catch (e) {
+        if (live(seq)) view.innerHTML = errBox(e);
+        return;
+      }
+      if (!live(seq)) return;
+      const groups = new Map();
+      for (const a of d.assertions) {
+        if (!groups.has(a.group)) groups.set(a.group, []);
+        groups.get(a.group).push(a);
+      }
+      const srcList = Object.entries(d.sources);
+      view.innerHTML = `
+      <div class="panel">
+        <div class="row"><h2 style="margin:0;font-size:20px">${esc(d.name)}</h2>${
+        d.e_number ? `<span class="chip mono">${esc(d.e_number)}</span>` : ""
+      }
+          <span class="chip">${esc(d.type)}</span><span class="chip">${
+        esc(d.review_status)
+      }</span><span class="chip">${esc(d.provenance)}</span></div>
+        ${
+        d.summary ? `<p>${esc(d.summary)}</p>` : `<p class="muted">No curated summary — identity data only.</p>`
+      }
+        <dl class="kv">
+          <dt>Id</dt><dd class="mono">${esc(d.id)}</dd>
+          ${
+        d.functions.length ? `<dt>Functions</dt><dd>${d.functions.map((f) => esc(f.name)).join(", ")}</dd>` : ""
+      }
+          ${
+        Object.entries(d.names).map(([l, ns]) => `<dt>Names (${esc(l)})</dt><dd>${ns.map(esc).join(" · ")}</dd>`)
+          .join("")
+      }
+          ${
+        d.ids
+          ? Object.entries(d.ids).map(([k, v]) => `<dt>${esc(k)}</dt><dd class="mono">${esc(v)}</dd>`).join("")
+          : ""
+      }
+        </dl>
+      </div>
+      ${
+        d.variants.length
+          ? `<div class="panel"><h2>Production variants</h2>${
+            d.variants.map((v) => `
+        <div style="margin-bottom:12px">
+          <div class="row"><b>${esc(v.name || v.id)}</b><span class="chip mono">${esc(v.id)}</span>${
+              v.prior != null ? `<span class="chip d-maybe">market prior ${pct(v.prior)}</span>` : ""
+            }</div>
+          <div class="small">${esc(v.process)}</div>
+          ${v.prior_rationale ? `<div class="small muted">Prior: ${esc(v.prior_rationale)}</div>` : ""}
+          ${
+              v.residues.length
+                ? `<div class="small muted">Possible residues: ${
+                  v.residues.map((r) => `${esc(r.substance)}${r.limit ? ` (limit ${esc(r.limit)})` : ""}`).join(
+                    ", ",
+                  )
+                }</div>`
+                : ""
+            }
+        </div>`).join("")
+          }</div>`
+          : ""
+      }
+      ${
+        d.assertions.length
+          ? `<div class="panel"><h2>What it implies</h2>${
+            [...groups].map(([g, as]) => `
+        <h3>${esc(g)}</h3>
+        <div class="tablewrap"><table><thead><tr><th>Implication</th><th>Answer</th><th>Basis</th><th>Note</th><th>Sources</th></tr></thead><tbody>
+        ${
+              as.map((a) =>
+                `<tr>
+          <td><span class="dot" style="display:inline-block;color:var(--${a.severity})"></span> ${
+                  esc(a.label)
+                }<div class="mono muted">${esc(a.code)}</div></td>
+          <td><span class="chip d-${a.certainty}">${esc(a.certainty)}</span>${
+                  a.variant ? `<div class="small muted">variant ${esc(a.variant)}</div>` : ""
+                }${
+                  a.population?.length ? `<div class="small muted">${a.population.map(esc).join(", ")}</div>` : ""
+                }</td>
+          <td class="small">${esc(a.kind)} · grade ${esc(a.grade)}${
+                  a.jurisdiction ? `<div class="muted">${esc(a.jurisdiction)}</div>` : ""
+                }${a.dose ? `<div class="muted">${esc(a.dose)}</div>` : ""}</td>
+          <td class="small">${esc(a.note)}</td>
+          <td class="small">${sourceLinks(a.sources, d.sources)}</td></tr>`
+              ).join("")
+            }
+        </tbody></table></div>`).join("")
+          }</div>`
+          : ""
+      }
+      ${
+        d.regulatory.length || d.reference_values.length
+          ? `<div class="panel"><h2>Regulatory status and reference values</h2>
+        ${
+            d.regulatory.map((r) =>
+              `<div class="small" style="margin-bottom:6px"><b>${esc(r.jurisdiction)}</b> — ${esc(r.status)}${
+                r.conditions ? `; ${esc(r.conditions)}` : ""
+              }${r.since ? ` (since ${esc(r.since)})` : ""} <span class="muted">— ${
+                sourceLinks([{ id: r.source }], d.sources)
+              }</span></div>`
+            ).join("")
+          }
+        ${
+            d.reference_values.map((r) =>
+              `<div class="small" style="margin-bottom:6px"><b>${esc(r.type)}</b> ${esc(r.value)}${
+                r.unit ? ` ${esc(r.unit)}` : ""
+              } — ${esc(r.body)}${r.year ? ` ${r.year}` : ""} <span class="muted">— ${
+                sourceLinks([{ id: r.source }], d.sources)
+              }</span></div>`
+            ).join("")
+          }
+      </div>`
+          : ""
+      }
+      ${
+        d.review_notes.length
+          ? `<div class="panel"><h2>Open review notes</h2><ul class="small">${
+            d.review_notes.map((n) => `<li>${esc(n)}</li>`).join("")
+          }</ul></div>`
+          : ""
+      }
+      ${
+        srcList.length
+          ? `<div class="panel"><h2>Sources</h2><ol class="small">${
+            srcList.map(([sid, s]) =>
+              `<li><a href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener">${esc(s.title)}</a>${
+                s.publisher ? ` — ${esc(s.publisher)}` : ""
+              }${s.year ? `, ${s.year}` : ""} <span class="mono muted">${esc(sid)}</span></li>`
+            ).join("")
+          }</ol></div>`
+          : ""
+      }
+      <details class="panel"><summary class="small muted">Raw API response</summary><pre>${
+        esc(JSON.stringify(d, null, 2))
+      }</pre></details>`;
+    }
+
+    // ---------------------------------------------------------------- boot
+    getJson("/v1/meta").then((m) => {
+      $("#kbv").textContent = `KB ${m.kb_version} · ${m.counts.ingredients} ingredients`;
+    }).catch(() => {
+      $("#kbv").textContent = "API unreachable";
+    });
+    route();
+    </script>
+  </body>
+</html>

@@ -1,7 +1,7 @@
 // Reads kb/ from disk, validates schema + cross-references, and returns one bundle.
 // Pure apart from file reads: the loader, the validator script and the tests all call this.
 import { parse as parseYaml } from "@std/yaml";
-import { join } from "@std/path";
+import { join, relative } from "@std/path";
 import { encodeHex } from "@std/encoding/hex";
 import type { z } from "zod";
 import {
@@ -44,7 +44,8 @@ export async function readKb(root: string): Promise<KbReadResult> {
 
   const load = async (path: string): Promise<unknown> => {
     const text = await Deno.readTextFile(path);
-    hashParts.push(`${path.slice(root.length).replaceAll("\\", "/")}\n${text}`);
+    // Relative to the root however it was spelled ("./kb", "kb", absolute): the version names content only.
+    hashParts.push(`${relative(root, path).replaceAll("\\", "/")}\n${text}`);
     try {
       return parseYaml(text);
     } catch (e) {

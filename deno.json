@@ -15,7 +15,8 @@
     "keys": "deno run --allow-net --allow-env --allow-read src/cli/keys.ts",
     "openapi": "deno run --allow-read --allow-env scripts/openapi.ts",
     "smoke": "deno run --allow-net --allow-env scripts/smoke.ts",
-    "bench": "deno bench --allow-read"
+    "bench": "deno bench --allow-read",
+    "explorer": "deno run --allow-read --allow-env --allow-net=127.0.0.1,world.openfoodfacts.org,search.openfoodfacts.org scripts/explorer.ts"
   },
   "imports": {
     "@hono/zod-openapi": "npm:@hono/zod-openapi@^1.1.0",

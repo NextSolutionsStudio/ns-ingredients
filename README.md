@@ -69,6 +69,8 @@ deno task test:golden     # golden-corpus report: metrics, ratchet hints, every 
 deno task kb:validate     # schema, cross-references, tells, name collisions
 deno task bench           # analysis and search latency on the real KB
 deno task openapi         # print the OpenAPI document
+deno task explorer        # local UI on http://127.0.0.1:8030: look up an EAN or product name on Open Food Facts,
+                          # search the KB, paste a label; runs the API in-process with a throwaway key
 ```
 
 Contributing to the knowledge base: [docs/CONTRIBUTING-KB.md](docs/CONTRIBUTING-KB.md). Architecture:

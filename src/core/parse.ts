@@ -271,6 +271,7 @@ function parseItem(raw: string, path: string, allCaps: boolean, lessThan: boolea
     name = own.replace(pm[0], " ").replace(/\s+/g, " ").trim();
   }
   const children: ParsedItem[] = [];
+  const bareE: ParsedItem[] = [];
   let childIndex = 0;
   for (const g of groups) {
     const pOnly = g.match(PERCENT_ONLY_RE);
@@ -287,12 +288,18 @@ function parseItem(raw: string, path: string, allCaps: boolean, lessThan: boolea
         es.length === 1 &&
         normName(child.name.replace(/(?:e|ins)[\s-]*\d{3,4}\s*[a-h]?(?:\s*\([ivx]+\))?/giu, "")) === ""
       ) {
-        child.role = "e_number";
+        bareE.push(child);
       } else if (QUALIFIER_RE.test(n) && !child.children.length) {
         child.role = "qualifier";
       }
       children.push(child);
     }
+  }
+  // A bare E-number annotates its parent ("kwas cytrynowy (E330)", "lecytyny (z soi) (E322)", "barwnik (E120)")
+  // only when nothing but source qualifiers shares the brackets. In "czekolada (miazga kakaowa, …, E492, …)" it
+  // is one of the chocolate's ingredients: as an annotation it named the chocolate E492 and lost its own facts.
+  if (bareE.length === 1 && children.every((c) => c === bareE[0] || c.role === "qualifier")) {
+    bareE[0].role = "e_number";
   }
   if (lessThan && !percent) percent = { max: 2, raw: "≤2%" };
   return {

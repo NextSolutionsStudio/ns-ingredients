@@ -22,6 +22,8 @@ export const CERTAINTIES = ["yes", "no", "maybe", "unknown"] as const;
 export const KINDS = ["fact", "estimate", "opinion"] as const;
 export const GRADES = ["A", "B", "C", "D"] as const;
 export const SEVERITIES = ["info", "notice", "caution", "warning"] as const;
+/** Who a code matters to — see kb/implications.yaml. Severity says how serious, concern says for whom. */
+export const CONCERNS = ["hazard", "sensitivity", "quality", "preference", "info"] as const;
 export const REVIEW = ["draft", "reviewed", "imported"] as const;
 export const PROVENANCE = ["human", "ai-drafted", "wikidata"] as const;
 export const INGREDIENT_TYPES = [
@@ -69,6 +71,7 @@ export const Implication = z.object({
   code: z.string().regex(/^[a-z]+(?:\.[a-z0-9_]+)+$/, "group.name"),
   group: z.enum(["allergen", "diet", "origin", "processing", "health", "regulatory", "ethics", "sport"]),
   severity: z.enum(SEVERITIES),
+  concern: z.enum(CONCERNS),
   kind: z.enum(KINDS),
   label: Text,
   definition: Text,

@@ -20,6 +20,7 @@ const Certainty = z.enum(["yes", "no", "maybe", "unknown"]);
 const Kind = z.enum(["fact", "estimate", "opinion"]);
 const Grade = z.enum(["A", "B", "C", "D"]);
 const Severity = z.enum(["info", "notice", "caution", "warning"]);
+const Concern = z.enum(["hazard", "sensitivity", "quality", "preference", "info"]);
 const SourceRef = z.object({ id: z.string(), locator: z.string().optional() });
 
 export const SourceSummary = z.object({
@@ -211,6 +212,8 @@ export const AnalysisResponse = z.object({
     code: z.string(),
     group: z.string(),
     severity: Severity,
+    concern: Concern,
+    personal: z.boolean().optional(),
     label: z.string(),
     certainty: Certainty,
     kind: Kind,
@@ -229,6 +232,26 @@ export const AnalysisResponse = z.object({
       sources: z.array(SourceRef),
     })),
   })),
+  ranking: z.array(z.object({
+    path: z.string(),
+    name: z.string(),
+    ingredient_id: z.string().nullable(),
+    score: z.number(),
+    level: Severity,
+    personal: z.boolean(),
+    reasons: z.array(z.object({
+      code: z.string(),
+      label: z.string(),
+      concern: Concern,
+      severity: Severity,
+      certainty: Certainty,
+      grade: Grade.optional(),
+      personal: z.boolean(),
+    })),
+  })).openapi({
+    description:
+      "Label items ordered by danger. Hazards rank; sensitivities and preferences only when the profile asks.",
+  }),
   diets: z.object({
     vegan: DietVerdict,
     vegetarian: DietVerdict,
@@ -251,6 +274,10 @@ export const AnalysisResponse = z.object({
     notice: z.number().int(),
     info: z.number().int(),
     highest: Severity.nullable(),
+    danger: Severity.nullable().openapi({
+      description:
+        "Highest severity among hazards and the profile's own concerns (allergens alone do not raise it).",
+    }),
   }),
   profile: z.object({
     hits: z.array(
@@ -272,6 +299,7 @@ export const ImplicationsResponse = z.object({
     code: z.string(),
     group: z.string(),
     severity: Severity,
+    concern: Concern,
     kind: Kind,
     label: z.string(),
     definition: z.string(),

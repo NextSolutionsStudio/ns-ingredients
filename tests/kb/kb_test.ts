@@ -4,6 +4,7 @@ import { assert, assertEquals } from "@std/assert";
 import { KbIndex } from "../../src/core/kb-index.ts";
 import { normName } from "../../src/core/normalize.ts";
 import { readKb } from "../../src/kb/read.ts";
+import { relative } from "@std/path";
 import { KB_DIR } from "../helpers.ts";
 
 const { bundle, errors } = await readKb(KB_DIR);
@@ -76,4 +77,12 @@ Deno.test("the identity backbone covers the EU E-number range", () => {
   assert(withE >= 450, `only ${withE} E-numbers`);
   const pl = bundle!.ingredients.filter((i) => i.e_number && i.names.pl?.length).length;
   assert(pl / withE > 0.7, `Polish names on ${pl}/${withE}`);
+});
+
+Deno.test("kb_version names the content, not how the directory was spelled", async () => {
+  // It keys ETags; "./kb" (the server default) once hashed differently from the absolute path the tests use.
+  const rel = relative(Deno.cwd(), KB_DIR);
+  for (const dir of [rel, `./${rel}`, `${KB_DIR}/`]) {
+    assertEquals((await readKb(dir)).bundle?.version, bundle!.version, dir);
+  }
 });

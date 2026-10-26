@@ -531,6 +531,7 @@ export function createApp(deps: AppDeps) {
           code: i.code,
           group: i.group,
           severity: i.severity,
+          concern: i.concern,
           kind: i.kind,
           label: t(i.label, lang)!,
           definition: t(i.definition, lang)!,

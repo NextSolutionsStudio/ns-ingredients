@@ -49,6 +49,23 @@ Deno.test("E-number alone resolves the additive", () => {
   assertEquals(r.items[2].match?.ingredient_id, "lecithins");
 });
 
+Deno.test("an E-number inside a compound is analysed as its own ingredient, not as the compound", () => {
+  const r = run("Skład: czekolada (cukier, E955, E471), sól");
+  const choc = r.items[0];
+  const e955 = choc.children[1];
+  assertEquals(choc.match, null);
+  assertEquals([e955.role, e955.match?.ingredient_id], ["ingredient", "sucralose"]);
+  // Sucralose's own facts reach the analysis, attributed to the part and not to the chocolate.
+  assertEquals(flag(r, "origin.chemical_synthesis")?.triggers.map((t) => t.path), [e955.path]);
+  // …and an E-number part's diet status counts: E471 of undisclosed source keeps "vegan" at maybe.
+  const e471 = choc.children[2];
+  assertEquals(r.diets.vegan.because.find((b) => b.path === e471.path), {
+    path: e471.path,
+    ingredient_id: "mono-and-diglycerides",
+    status: "maybe",
+  });
+});
+
 Deno.test("source qualifier '(z soi)' picks the soy lecithin variant and adds the soy allergen", () => {
   const r = run("Skład: kakao, emulgator: lecytyny (z soi)");
   const lec = r.items[1];
