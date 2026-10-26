@@ -1,0 +1,22 @@
+# WHO definitions behind processing.non_sugar_sweetener and health.added_sugar, added 2026-10-26.
+# Ids prefixed who-. The NCBI Bookshelf copies of both guidelines sit behind a browser check, so the WHO
+# news releases (which state the definitions and recommendation strength) are what was opened.
+sources:
+  - id: who-nss-guideline-2023
+    type: reference
+    title: "WHO advises not to use non-sugar sweeteners for weight control in newly released guideline"
+    publisher: World Health Organization
+    year: 2023
+    url: https://www.who.int/news/item/15-05-2023-who-advises-not-to-use-non-sugar-sweeteners-for-weight-control-in-newly-released-guideline
+    licence: "WHO — facts cited, text not reproduced"
+    accessed: 2026-10-26
+    note: "Release of the 2023 NSS guideline. Defines NSS as synthetic, naturally occurring or modified non-nutritive sweeteners not classified as sugars; names acesulfame K, aspartame, advantame, cyclamates, neotame, saccharin, sucralose, stevia and stevia derivatives as common NSS; low-calorie sugars and sugar alcohols (polyols) are not NSS. The recommendation against NSS for weight control is conditional, does not apply to people with pre-existing diabetes, nor to toothpaste, skin cream or medicines."
+  - id: who-free-sugars-2015
+    type: reference
+    title: "WHO calls on countries to reduce sugars intake among adults and children"
+    publisher: World Health Organization
+    year: 2015
+    url: https://www.who.int/news/item/04-03-2015-who-calls-on-countries-to-reduce-sugars-intake-among-adults-and-children
+    licence: "WHO — facts cited, text not reproduced"
+    accessed: 2026-10-26
+    note: "Release of the 2015 sugars guideline. Free sugars are monosaccharides and disaccharides added to foods and drinks, plus sugars naturally in honey, syrups and fruit juices; sugars in fresh fruit, vegetables and milk are excluded. Free sugars under 10% of energy intake is a strong recommendation; under 5% (about 25 g a day) is conditional."

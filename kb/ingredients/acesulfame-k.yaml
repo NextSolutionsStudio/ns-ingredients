@@ -26,6 +26,14 @@ summary:
     5-chloroacesulfamu, do 0,1 mg/kg z powodu obaw o genotoksyczność zidentyfikowanych metodą
     obliczeniową (QSAR).
 assertions:
+  - code: processing.non_sugar_sweetener
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Named by WHO as a common non-sugar sweetener. WHO's 2023 guideline conditionally recommends against using non-sugar sweeteners for weight control; it does not apply to people with pre-existing diabetes. This marks the ingredient's role, not a safety finding: the authorised use limits are set by the ADI."
+      pl: "WHO wymienia go wśród typowych substancji słodzących niecukrowych. Wytyczna WHO z 2023 r. warunkowo odradza stosowanie substancji słodzących niecukrowych w celu kontroli masy ciała; nie dotyczy osób z cukrzycą. Oznacza rolę składnika, nie ocenę bezpieczeństwa: limity stosowania wynikają z ADI."
+    sources: [{ id: who-nss-guideline-2023 }]
   - code: origin.chemical_synthesis
     certainty: yes
     kind: fact

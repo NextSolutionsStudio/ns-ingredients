@@ -54,6 +54,15 @@ variants:
       en: "A significant European feedstock, though smaller globally than maize."
       pl: "Istotny surowiec europejski, choć w skali globalnej mniejszy niż kukurydza."
 assertions:
+  - code: health.added_sugar
+    certainty: yes
+    kind: fact
+    grade: A
+    population: [general]
+    note:
+      en: "Added as an ingredient, it counts as a free sugar in WHO's sense. WHO strongly recommends keeping free sugars under 10% of energy intake. The ingredient list does not show how much is in the product."
+      pl: "Dodany jako składnik, jest cukrem wolnym w rozumieniu WHO. WHO zdecydowanie zaleca, by cukry wolne stanowiły mniej niż 10% energii z diety. Lista składników nie pokazuje, ile go jest w produkcie."
+    sources: [{ id: who-free-sugars-2015 }]
   - code: allergen.gluten
     variant: wheat
     certainty: maybe
