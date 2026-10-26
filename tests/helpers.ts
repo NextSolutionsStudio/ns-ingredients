@@ -31,6 +31,8 @@ const fact = (code: string, source = "reg-1169-2011", extra: Partial<A> = {}): A
   ...extra,
 });
 
+const addedSugar = fact("health.added_sugar", "who-free-sugars-2015", { population: ["general"] });
+
 export const FIXTURE_INGREDIENTS: IngredientT[] = [
   {
     id: "whey-protein-concentrate",
@@ -95,7 +97,7 @@ export const FIXTURE_INGREDIENTS: IngredientT[] = [
     id: "sugar",
     type: "carbohydrate",
     names: { en: ["sugar"], pl: ["cukier"], de: ["Zucker"] },
-    assertions: [fact("origin.plant", "reg-1169-2011")],
+    assertions: [fact("origin.plant", "reg-1169-2011"), addedSugar],
     review_status: "draft",
     provenance: "human",
   },
@@ -265,6 +267,7 @@ export const FIXTURE_INGREDIENTS: IngredientT[] = [
       },
     ],
     assertions: [
+      addedSugar,
       {
         code: "allergen.gluten",
         variant: "wheat",
@@ -380,11 +383,22 @@ async function readYaml<T>(file: string, schema: { parse(v: unknown): T }): Prom
   return schema.parse(parseYaml(await Deno.readTextFile(`${KB_DIR}/${file}`)));
 }
 
+/** kb/sources.yaml plus kb/sources/*.yaml, as the real loader merges them. */
+async function allSources() {
+  const all = (await readYaml("sources.yaml", SourcesFile)).sources;
+  for await (const e of Deno.readDir(`${KB_DIR}/sources`)) {
+    if (e.isFile && e.name.endsWith(".yaml")) {
+      all.push(...(await readYaml(`sources/${e.name}`, SourcesFile)).sources);
+    }
+  }
+  return all;
+}
+
 let fixture: KbIndex | null = null;
 export async function fixtureIndex(): Promise<KbIndex> {
   if (fixture) return fixture;
   const bundle: KbBundle = {
-    sources: (await readYaml("sources.yaml", SourcesFile)).sources,
+    sources: await allSources(),
     implications: (await readYaml("implications.yaml", ImplicationsFile)).implications,
     classes: (await readYaml("classes.yaml", ClassesFile)).classes,
     ingredients: FIXTURE_INGREDIENTS.map((i) => Ingredient.parse(i)),

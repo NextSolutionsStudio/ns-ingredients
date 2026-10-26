@@ -1,6 +1,12 @@
 // The Open Food Facts product mapping the browser and the /off proxy share (web/off-product.js).
 import { assertEquals, assertThrows } from "@std/assert";
-import { offEmphasisToCaps, productUrl, readProductResponse, toProduct } from "../../web/off-product.js";
+import {
+  offEmphasisToCaps,
+  productUrl,
+  readProductResponse,
+  toNutrition,
+  toProduct,
+} from "../../web/off-product.js";
 import { createOffClient } from "../../src/off/off.ts";
 
 Deno.test("offEmphasisToCaps: OFF's _allergen_ marks become the CAPS the parser reads as emphasis", () => {
@@ -70,4 +76,33 @@ Deno.test("the /off/product proxy answers with the same mapping the browser uses
   } finally {
     globalThis.fetch = realFetch;
   }
+});
+
+Deno.test("toNutrition: OFF sugars become the API's nutrition input; drinks read per 100 ml", () => {
+  assertEquals(
+    toNutrition({ nutriments: { sugars_100g: 56.3 }, serving_quantity: 15, serving_quantity_unit: "g" }),
+    {
+      basis: "100g",
+      sugars_g: 56.3,
+      serving: { amount: 15, unit: "g" },
+    },
+  );
+  assertEquals(
+    toNutrition({
+      nutriments: { sugars_100g: 10.6 },
+      categories_tags: ["en:beverages"],
+      serving_quantity: 330,
+    }),
+    { basis: "100ml", sugars_g: 10.6, serving: { amount: 330, unit: "ml" } },
+  );
+  // A serving in the wrong unit is dropped rather than converted; missing or junk sugars give null.
+  assertEquals(
+    toNutrition({ nutriments: { sugars_100g: 5 }, serving_quantity: 250, serving_quantity_unit: "ml" }),
+    {
+      basis: "100g",
+      sugars_g: 5,
+    },
+  );
+  assertEquals(toNutrition({ nutriments: {} }), null);
+  assertEquals(toNutrition({ nutriments: { sugars_100g: "12" } }), null);
 });

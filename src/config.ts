@@ -28,4 +28,4 @@ export function loadConfig(env: Record<string, string | undefined> = Deno.env.to
 }
 
 export const SERVICE_VERSION = "0.1.0";
-export const METHODOLOGY_VERSION = "2026-09-27";
+export const METHODOLOGY_VERSION = "2026-10-26";

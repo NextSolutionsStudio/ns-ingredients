@@ -145,6 +145,23 @@ export const AnalyzeRequest = z.object({
     }),
     diets: z.array(z.enum(["vegan", "vegetarian", "gluten_free", "lactose_free"])).max(4).optional(),
   }).strict().optional(),
+  nutrition: z.object({
+    basis: z.enum(["100g", "100ml"]).openapi({ description: "100ml for drinks, 100g for everything else." }),
+    sugars_g: z.number().min(0).max(100).openapi({
+      description: 'Total sugars as declared ("of which sugars").',
+    }),
+    serving: z.object({
+      amount: z.number().positive().max(5000),
+      unit: z.enum(["g", "ml"]),
+    }).strict().optional(),
+  }).strict().refine((n) => !n.serving || n.serving.unit === n.basis.slice(3), {
+    message: "serving.unit must match the basis (g with 100g, ml with 100ml)",
+    path: ["serving", "unit"],
+  }).optional().openapi({
+    description:
+      "Declared nutrition from the label, the only source of amounts. Bands total sugars by the UK front-of-pack " +
+      "criteria and raises health.high_sugar; never inferred from the ingredient list.",
+  }),
 }).strict().openapi("AnalyzeRequest");
 
 const Match = z.object({
@@ -219,10 +236,20 @@ export const AnalysisResponse = z.object({
     kind: Kind,
     grade: Grade,
     triggers: z.array(z.object({
-      path: z.string(),
-      ingredient_id: z.string(),
+      path: z.string().openapi({
+        description: 'A label item path, or "nutrition.sugars_g" on basis nutrition.',
+      }),
+      ingredient_id: z.string().optional().openapi({ description: "Absent only on basis nutrition." }),
       variant_id: z.string().optional(),
-      basis: z.enum(["ingredient", "label_variant", "prior_variant", "qualifier", "emphasis", "trace"]),
+      basis: z.enum([
+        "ingredient",
+        "label_variant",
+        "prior_variant",
+        "qualifier",
+        "emphasis",
+        "trace",
+        "nutrition",
+      ]),
       certainty: Certainty,
       kind: Kind,
       grade: Grade,
@@ -285,6 +312,20 @@ export const AnalysisResponse = z.object({
     ),
     diets: z.array(z.object({ diet: z.string(), status: Certainty })),
   }).optional(),
+  nutrition: z.object({
+    basis: z.enum(["100g", "100ml"]),
+    sugars: z.object({
+      per_100: z.number(),
+      per_serving: z.number().nullable(),
+      band: z.enum(["low", "medium", "high"]),
+      band_by: z.enum(["per_100", "per_portion"]),
+      ri_percent_per_100: z.number().int(),
+      ri_percent_per_serving: z.number().int().nullable(),
+      criteria: z.literal("uk-fop-2016"),
+      kind: z.literal("fact"),
+      sources: z.array(SourceRef),
+    }),
+  }).nullable().openapi({ description: "Amounts from the declared nutrition; null when none was sent." }),
   unanalysed_text: z.string().nullable(),
   sources: z.record(z.string(), SourceSummary),
   disclaimer: z.string(),

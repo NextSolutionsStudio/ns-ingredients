@@ -1,6 +1,6 @@
 # Methodology
 
-**Version 2026-09-27.** `GET /v1/meta` returns `methodology_version`; every analysis is produced under the
+**Version 2026-10-26.** `GET /v1/meta` returns `methodology_version`; every analysis is produced under the
 version it names. Changes are listed at the end of this document.
 
 This document explains what the API asserts and how it gets from an ingredient list to a flag. It is a
@@ -13,11 +13,11 @@ origin, processing, regulatory status, published health assessments), with the e
 
 It does **not**:
 
-- **Score or rank products.** There is no healthiness grade and no traffic light, and no single number can
-  combine an allergen fact with a contested animal study.
-- **Judge amounts.** An ingredient list rarely states quantities, and a hazard is not a risk without exposure.
-  Where a published assessment sets an intake level (ADI, UL), the API cites it; it doesn't estimate your
-  intake.
+- **Score or rank products.** There is no healthiness grade and no overall traffic light, and no single
+  number can combine an allergen fact with a contested animal study.
+- **Guess amounts.** An ingredient list rarely states quantities, and a hazard is not a risk without exposure.
+  Amounts come only from nutrition the caller declares (see [Amounts](#amounts)). Where a published
+  assessment sets an intake level (ADI, UL), the API cites it; it doesn't estimate your intake.
 - **Detect cross-contamination**, beyond what the label's own precautionary statement says.
 - **Give medical advice.** "Contains X, which [source] flags for Y" is information. It is never "safe for your
   condition".
@@ -102,6 +102,32 @@ How the variant is decided for one label item:
    enthalten") are reported under `may_contain`. They never raise flags. A profile that avoids that allergen
    gets a hit marked `trace: true`.
 
+5. **Added sugars.** Each `health.added_sugar` trigger (a free sugar in WHO's sense, added as an
+   ingredient) also states what the list itself proves about amount, and nothing more: that it is the first
+   ingredient (EU lists run in descending order of weight, Reg 1169/2011 art. 18; ingredients under 2% may
+   close the list in any order), its place in the list, its declared percentage, and how many different added
+   sugars the label uses. Only top-level items get a place or percentage; a nested percentage is a share of
+   its compound.
+
+## Amounts
+
+Amounts are never inferred from the ingredient list. A request may carry `nutrition`: total sugars as
+declared on the label, per 100 g (food) or per 100 ml (drinks), and optionally a serving. The response's
+`nutrition` block is plain arithmetic on those numbers:
+
+- **Band**: low, medium or high by the UK front-of-pack criteria (DHSC 2016). Food: low at 5.0 g/100 g or
+  less, high above 22.5 g/100 g. Drinks: low at 2.5 g/100 ml or less, high above 11.25 g/100 ml. A portion
+  over 100 g (food) or 150 ml (drinks) is also high above 27 g or 13.5 g per portion. EU law defines only
+  "low sugars", so the UK tables are the published "high" criterion used.
+- **Reference intake**: the percentage of the adult reference intake for sugars, 90 g (Reg 1169/2011 Annex
+  XIII Part B), per 100 and per serving.
+- **High** raises `health.high_sugar` (caution, hazard, fact) with `basis: "nutrition"` and no
+  ingredient; it is not a label item, so it never ranks, but it does set `summary.danger`.
+
+Total sugars include those naturally in milk and fruit, so plain milk or juice can be "high" with nothing
+added; `health.added_sugar` is what tells the two apart. The analysis does not check that the declared
+numbers belong to the declared list.
+
 ## Diets
 
 Four diets are evaluated: vegan, vegetarian, gluten-free and lactose-free. Each is `yes`, `no`, `maybe` or
@@ -145,4 +171,7 @@ knowledge-base history with the new `kb_version`.
 
 ## Changelog
 
+- **2026-10-26**: `nutrition` input and the [Amounts](#amounts) section (sugar bands, reference intake,
+  `health.high_sugar`); position facts on added sugars; codes `processing.non_sugar_sweetener`,
+  `health.added_sugar`, `health.high_sugar` and `regulatory.revoked_elsewhere`.
 - **2026-09-27**: first published version.
