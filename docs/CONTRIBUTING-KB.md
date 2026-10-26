@@ -1,6 +1,6 @@
 # Contributing to the ingredient knowledge base
 
-The knowledge base (KB) is YAML in `kb/`, licensed **CC BY 4.0**. Every change is a pull request,
+The knowledge base (KB) is YAML in `kb/`, licensed **CC BY-SA 4.0**. Every change is a pull request,
 every claim carries a source, and CI runs `deno task kb:validate` on it. This page is the whole
 rulebook — for people and for AI drafting assistants alike.
 

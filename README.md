@@ -81,7 +81,12 @@ If you are a manufacturer or an expert and think an entry is wrong, open a
 
 ## Licences
 
-- Code: [Apache-2.0](LICENSE).
-- Curated knowledge base (`kb/` except `kb/generated/`): [CC BY 4.0](kb/LICENSE). Attribute "NextSolutions ns-ingredients".
-- `kb/generated/`: identity data derived from [Wikidata](https://www.wikidata.org) (CC0).
-- Cited sources keep their own licences; the KB links to them and does not reproduce them.
+- **Code:** [AGPL-3.0](LICENSE), with two additional terms in [NOTICE](NOTICE). A product built on this
+  code, including one offered over a network, must publish its source under the same licence and keep the
+  credit "Powered by ns-ingredients (NextSolutions)". The licence grants no trademark rights.
+- **Curated knowledge base** (`kb/` except `kb/generated/`): [CC BY-SA 4.0](kb/LICENSE). Copies must credit
+  the knowledge base and stay under the same licence.
+- **`kb/generated/`:** identity data derived from [Wikidata](https://www.wikidata.org) (CC0).
+- **Cited sources** keep their own licences. The KB links to them and does not reproduce them.
+
+Contributions are accepted under the same licences; see [NOTICE](NOTICE) for the contributor grant.

@@ -397,12 +397,13 @@ export function createApp(deps: AppDeps) {
           classes: idx.classes.size,
         },
         licences: {
-          code: "Apache-2.0",
-          knowledge_base: "CC-BY-4.0",
+          code: "AGPL-3.0-only",
+          knowledge_base: "CC-BY-SA-4.0",
           generated_identity: "CC0-1.0 (Wikidata)",
         },
         attribution: [
-          "Ingredient knowledge base © NextSolutions and contributors, CC BY 4.0.",
+          "Powered by ns-ingredients (NextSolutions): https://github.com/NextSolutionsStudio/ns-ingredients",
+          "Ingredient knowledge base © NextSolutions and contributors, CC BY-SA 4.0.",
           "Additive identity data from Wikidata (CC0).",
           "Regulatory facts cite EU legislation (EUR-Lex, reuse under Commission Decision 2011/833/EU).",
         ],
@@ -599,8 +600,9 @@ export function createApp(deps: AppDeps) {
         "Open ingredient knowledge base and label analysis: what an ingredient is, how it is made " +
         "(natural vs synthetic production variants), what it implies (allergens, diets, origin, processing, " +
         "regulatory status, health notes) — every claim with its kind, evidence grade and sources.\n\n" +
-        "Informational only, not medical advice. Code Apache-2.0; knowledge base CC BY 4.0.",
-      license: { name: "Apache-2.0", url: "https://www.apache.org/licenses/LICENSE-2.0" },
+        "Informational only, not medical advice. Code AGPL-3.0 (with an attribution term, see NOTICE); " +
+        "knowledge base CC BY-SA 4.0.",
+      license: { name: "AGPL-3.0-only", url: "https://www.gnu.org/licenses/agpl-3.0.html" },
     },
     servers: [{ url: deps.config.PUBLIC_BASE_URL }],
   });

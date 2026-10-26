@@ -23,7 +23,7 @@ Deno.test("public endpoints need no key", async () => {
     assertEquals(ready.status, 200);
     assertEquals((await ready.json()).kb_version, "kb-fixture");
     const meta = S.MetaResponse.parse(await (await api.req("/v1/meta", { auth: false })).json());
-    assertEquals(meta.licences.knowledge_base, "CC-BY-4.0");
+    assertEquals(meta.licences.knowledge_base, "CC-BY-SA-4.0");
     const spec = await (await api.req("/v1/openapi.json", { auth: false })).json();
     assertEquals(spec.openapi, "3.1.0");
     const docs = await api.req("/docs", { auth: false });

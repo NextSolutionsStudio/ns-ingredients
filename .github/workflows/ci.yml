@@ -11,10 +11,9 @@ concurrency:
 
 jobs:
   test:
-    # Private repo → a per-repo self-hosted runner.
-    # BEFORE the repo goes public, switch to `ubuntu-latest`: a self-hosted runner on a public repo
-    # executes code from fork pull requests on the VM.
-    runs-on: [self-hosted, linux, x64]
+    # Public repo → GitHub-hosted runners. Never a self-hosted runner here: it would execute code from
+    # fork pull requests on our own machine.
+    runs-on: ubuntu-latest
     timeout-minutes: 20
 
     services:
@@ -25,7 +24,6 @@ jobs:
           POSTGRES_USER: nsi
           POSTGRES_PASSWORD: nsi_ci
           POSTGRES_DB: nsi
-        # A host port no other repo's CI uses: runners share the VM.
         ports:
           - 55433:5432
         options: >-

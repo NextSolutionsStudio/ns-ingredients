@@ -1,0 +1,25 @@
+ns-ingredients — ingredient knowledge base and label-analysis API
+Copyright (C) 2026 NextSolutions and contributors
+https://github.com/NextSolutionsStudio/ns-ingredients
+
+CODE (everything outside kb/) is licensed under the GNU Affero General Public License, version 3
+(see LICENSE), with these additional terms under its section 7:
+
+  7(b) Attribution. A covered work, or a work based on it, that offers a user interface or an API
+       must keep the notice "Powered by ns-ingredients (NextSolutions)", linking to the repository
+       above, in its Appropriate Legal Notices: an "about", "licences" or "credits" page or screen,
+       and the API's documentation or metadata endpoint.
+
+  7(e) Trademarks. The licence grants no rights to use the names "NextSolutions", "ns-ingredients"
+       or any logo of NextSolutions, except as needed to give the attribution above. A modified
+       version must not be presented as the original.
+
+THE KNOWLEDGE BASE (kb/, except kb/generated/) is licensed under CC BY-SA 4.0 (see kb/LICENSE).
+kb/generated/ is derived from Wikidata and is CC0 1.0.
+
+Cited sources keep their own licences. The knowledge base references them and does not reproduce
+them.
+
+Contributions are accepted under the same licences: AGPL-3.0 for code and CC BY-SA 4.0 for the
+knowledge base. By contributing, you also grant NextSolutions a perpetual, worldwide, non-exclusive,
+royalty-free licence to use, modify and relicense your contribution under other terms.
