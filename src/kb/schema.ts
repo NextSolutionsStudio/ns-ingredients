@@ -128,6 +128,19 @@ export const ReferenceValue = z.object({
   source: slug,
 }).strict();
 
+/** Glycemic index of the carbohydrate an ingredient adds (glucose = 100), for the GL estimate. */
+export const Glycemic = z.object({
+  /** A single measured value is [v, v]; a spread across studies or products is [min, max]. */
+  range: z.tuple([z.number().min(0).max(150), z.number().min(0).max(150)]),
+  /** The declared-nutrition fraction this carbohydrate counts under (Reg 1169/2011 Annex I). */
+  fraction: z.enum(["sugars", "starch", "polyols"]),
+  /** iso: ISO 26642 in vivo; non_iso: in vivo by another protocol; definition: glucose is 100. */
+  method: z.enum(["iso", "non_iso", "definition"]),
+  note: Text.optional(),
+  source: slug,
+  locator: z.string().optional(),
+}).strict();
+
 export const Ingredient = z.object({
   id: slug,
   type: z.enum(INGREDIENT_TYPES),
@@ -147,6 +160,7 @@ export const Ingredient = z.object({
   assertions: z.array(Assertion).optional(),
   regulatory: z.array(Regulatory).optional(),
   reference_values: z.array(ReferenceValue).optional(),
+  glycemic: z.array(Glycemic).optional(),
   review_status: z.enum(REVIEW),
   provenance: z.enum(PROVENANCE),
   review_notes: z.array(z.string()).optional(),
@@ -158,6 +172,7 @@ export type FunctionClassT = z.infer<typeof FunctionClass>;
 export type VariantT = z.infer<typeof Variant>;
 export type AssertionT = z.infer<typeof Assertion>;
 export type IngredientT = z.infer<typeof Ingredient>;
+export type GlycemicT = z.infer<typeof Glycemic>;
 export type TextT = z.infer<typeof Text>;
 export type NamesT = z.infer<typeof Names>;
 

@@ -106,7 +106,12 @@ Title, publisher, year, URL and licence of a cited source.
 ```
 
 `nutrition` is optional: total sugars as declared, per `100g` or `100ml` (drinks), and an optional serving whose
-unit matches the basis.
+unit matches the basis. Add `carbohydrate_g` (and `polyols_g`, or `fibre_g` with
+`"carbohydrate_definition": "total"` for US-style labels) for the glycemic-load estimate.
+
+**Field selection.** `?fields=summary,flags.code,ranking.reasons.label` returns only those dot paths (arrays are
+implicit; a parent path returns the whole subtree). An unknown path is a 400 whose `valid_fields` lists every
+path. Also on `GET /v1/ingredients/{id}`.
 
 The response:
 
@@ -117,7 +122,9 @@ The response:
   `prior_variant`, `qualifier`, `emphasis`, `nutrition`), note and sources. A `nutrition` trigger has the path
   `nutrition.sugars_g` and no ingredient.
 - **`nutrition`**: `null` unless nutrition was sent. Sugars per 100 and per serving, the band (`low`/`medium`/
-  `high`, UK front-of-pack criteria), `band_by`, and the percentage of the 90 g reference intake.
+  `high`, UK front-of-pack criteria), `band_by`, and the percentage of the 90 g reference intake; with
+  carbohydrate declared, `glycemic_load`: status, range, band per serving, coverage, the per-fraction GI ranges
+  and their ingredients, assumptions and sources. Always an estimate.
 - **`diets`**: vegan, vegetarian, gluten-free and lactose-free, each `yes`/`no`/`maybe`/`unknown`, with the
   items responsible.
 - **`may_contain`**: the precautionary statement, resolved to allergens.

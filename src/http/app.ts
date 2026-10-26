@@ -7,6 +7,7 @@ import { cors } from "hono/cors";
 import { HTTPException } from "hono/http-exception";
 import type { Config } from "../config.ts";
 import { METHODOLOGY_VERSION, SERVICE_VERSION } from "../config.ts";
+import { parseFields, pick, schemaPaths } from "./fields.ts";
 import type { ApiKey, KeyStore, Scope } from "../auth/keys.ts";
 import type { Db } from "../db/client.ts";
 import { analyze } from "../core/analyze.ts";
@@ -186,6 +187,7 @@ export function presentIngredient(
   });
   (ing.regulatory ?? []).forEach((r) => cited.add(r.source));
   (ing.reference_values ?? []).forEach((r) => cited.add(r.source));
+  (ing.glycemic ?? []).forEach((g) => cited.add(g.source));
   const sources: Record<string, z.infer<typeof S.SourceSummary>> = {};
   for (const id of [...cited].sort()) {
     const s = index.sources.get(id);
@@ -227,6 +229,14 @@ export function presentIngredient(
       ...(r.year ? { year: r.year } : {}),
       source: r.source,
     })),
+    glycemic: (ing.glycemic ?? []).map((g) => ({
+      range: g.range,
+      fraction: g.fraction,
+      method: g.method,
+      ...(g.note ? { note: t(g.note, lang)! } : {}),
+      source: g.source,
+      ...(g.locator ? { locator: g.locator } : {}),
+    })),
     review_status: ing.review_status,
     provenance: ing.provenance,
     review_notes: ing.review_notes ?? [],
@@ -249,6 +259,16 @@ const problemResponses = (...codes: number[]) =>
     }[code] ?? "Error",
     content: { "application/problem+json": { schema: S.Problem } },
   }]));
+
+const ANALYSIS_PATHS = schemaPaths(S.AnalysisResponse);
+const INGREDIENT_PATHS = schemaPaths(S.Ingredient);
+
+function fieldsProblem(c: C, invalid: string[], valid: string[]) {
+  return problem(c, 400, "invalid-request", "Invalid request", "Unknown or malformed fields.", {
+    errors: invalid.map((p) => ({ path: "fields", message: `not a field: ${p}` })),
+    valid_fields: valid,
+  });
+}
 
 export function createApp(deps: AppDeps) {
   // With keyless access on, the key is optional: `{}` is the OpenAPI way to say "no auth also works".
@@ -528,7 +548,7 @@ export function createApp(deps: AppDeps) {
         params: z.object({
           id: z.string().max(80).openapi({ description: "Ingredient id or E-number", example: "E296" }),
         }),
-        query: z.object({ lang: S.LangParam }),
+        query: z.object({ lang: S.LangParam, fields: S.FieldsParam }),
       },
       responses: {
         200: { description: "Ingredient", content: { "application/json": { schema: S.Ingredient } } },
@@ -542,7 +562,12 @@ export function createApp(deps: AppDeps) {
       if (!ing) {
         return problem(c, 404, "not-found", "Unknown ingredient", `No ingredient or E-number "${id}".`);
       }
-      return c.json(presentIngredient(idx, ing, langOf(c, c.req.valid("query").lang)), 200);
+      const q = c.req.valid("query");
+      const sel = q.fields === undefined ? null : parseFields(q.fields, INGREDIENT_PATHS);
+      if (sel && "invalid" in sel) return fieldsProblem(c, sel.invalid, INGREDIENT_PATHS);
+      const body = presentIngredient(idx, ing, langOf(c, q.lang));
+      // A selection is a subset of the published shape; the OpenAPI text says so.
+      return c.json((sel ? pick(body, sel.tree) : body) as typeof body, 200);
     },
   );
 
@@ -608,7 +633,10 @@ export function createApp(deps: AppDeps) {
         "Analyse an ingredient list: matches, production variants, flags with sources, diets, optional profile check",
       description: "The optional `profile` is evaluated for this request only. It is never stored or logged.",
       security,
-      request: { body: { required: true, content: { "application/json": { schema: S.AnalyzeRequest } } } },
+      request: {
+        body: { required: true, content: { "application/json": { schema: S.AnalyzeRequest } } },
+        query: z.object({ fields: S.FieldsParam }),
+      },
       responses: {
         200: { description: "Analysis", content: { "application/json": { schema: S.AnalysisResponse } } },
         ...problemResponses(400, 401, 403, 413, 415, 429),
@@ -616,13 +644,16 @@ export function createApp(deps: AppDeps) {
     }),
     (c) => {
       const body = c.req.valid("json");
+      const { fields } = c.req.valid("query");
+      const sel = fields === undefined ? null : parseFields(fields, ANALYSIS_PATHS);
+      if (sel && "invalid" in sel) return fieldsProblem(c, sel.invalid, ANALYSIS_PATHS);
       const result = analyze(deps.index(), body.text, {
         lang: body.lang ?? langOf(c),
         profile: body.profile,
         nutrition: body.nutrition,
       });
       c.header("x-kb-version", result.kb_version);
-      return c.json(result, 200);
+      return c.json((sel ? pick(result, sel.tree) : result) as typeof result, 200);
     },
   );
 

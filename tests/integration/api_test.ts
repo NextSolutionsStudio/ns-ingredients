@@ -356,3 +356,30 @@ Deno.test("every problem type the code emits is registered, documented and serve
     await api.close();
   }
 });
+
+Deno.test("fields= trims the analysis and the ingredient record; an unknown field is a 400 listing valid ones", async () => {
+  const api = await startApi();
+  try {
+    const small = await api.req(
+      "/v1/analyze?fields=summary.danger,flags.code",
+      json({ text: LABEL, lang: "pl" }),
+    );
+    assertEquals(small.status, 200);
+    const body = await small.json();
+    assertEquals(Object.keys(body).sort(), ["flags", "summary"]);
+    assertEquals(Object.keys(body.summary), ["danger"]);
+    assert(body.flags.length > 0 && body.flags.every((f: object) => Object.keys(f).join() === "code"));
+
+    const bad = await api.req("/v1/analyze?fields=summary,flagz", json({ text: LABEL }));
+    assertEquals(bad.status, 400);
+    const problem = await bad.json();
+    assertEquals(problem.errors, [{ path: "fields", message: "not a field: flagz" }]);
+    assert(problem.valid_fields.includes("ranking.reasons.label"));
+
+    const ing = await (await api.req("/v1/ingredients/sugar?fields=id,assertions.code")).json();
+    assertEquals(Object.keys(ing).sort(), ["assertions", "id"]);
+    assertEquals((await api.req("/v1/ingredients/sugar?fields=nope")).status, 400);
+  } finally {
+    await api.close();
+  }
+});

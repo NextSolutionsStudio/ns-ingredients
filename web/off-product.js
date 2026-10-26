@@ -42,9 +42,11 @@ export function offEmphasisToCaps(text) {
 
 /**
  * Declared sugars in the API's nutrition shape, or null. OFF keeps liquids per 100 ml in its *_100g fields;
- * a product in en:beverages is read as a drink.
+ * a product in en:beverages is read as a drink. Carbohydrate is read as EU available carbohydrate (fibre
+ * excluded), which holds for EU labels; a US label's total carbohydrate would overstate the GL.
  * @param {any} p
- * @returns {{ basis: "100g" | "100ml"; sugars_g: number; serving?: { amount: number; unit: "g" | "ml" } } | null}
+ * @returns {{ basis: "100g" | "100ml"; sugars_g: number; carbohydrate_g?: number; polyols_g?: number;
+ *   fibre_g?: number; serving?: { amount: number; unit: "g" | "ml" } } | null}
  */
 export function toNutrition(p) {
   const sugars = p?.nutriments?.sugars_100g;
@@ -56,7 +58,20 @@ export function toNutrition(p) {
   const serving = amount > 0 && amount <= 5000 && unit === basis.slice(3)
     ? { amount, unit: /** @type {"g" | "ml"} */ (unit) }
     : undefined;
-  return { basis, sugars_g: sugars, ...(serving ? { serving } : {}) };
+  /** @param {unknown} v */
+  const grams = (v) => (typeof v === "number" && v >= 0 && v <= 100 ? v : undefined);
+  const nm = p.nutriments;
+  const carbohydrate = grams(nm.carbohydrates_100g);
+  const polyols = grams(nm.polyols_100g);
+  const fibre = grams(nm.fiber_100g);
+  return {
+    basis,
+    sugars_g: sugars,
+    ...(carbohydrate !== undefined && carbohydrate >= sugars ? { carbohydrate_g: carbohydrate } : {}),
+    ...(polyols !== undefined ? { polyols_g: polyols } : {}),
+    ...(fibre !== undefined ? { fibre_g: fibre } : {}),
+    ...(serving ? { serving } : {}),
+  };
 }
 
 /** @param {unknown} v */

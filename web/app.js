@@ -441,7 +441,9 @@ function showPaste(seq) {
       <span class="muted small">Polish, English or German. Headers like “Skład:” and “Może zawierać…” are understood.</span></div>
     <div class="row small" style="margin-top:8px"><label>Sugars from the nutrition table (optional)
       <input id="sugars" type="number" min="0" max="100" step="0.1" inputmode="decimal" style="width:6em"></label>
-      <select id="basis" aria-label="Per"><option value="100g">g per 100 g</option><option value="100ml">g per 100 ml (drink)</option></select></div>
+      <label>carbohydrate <input id="carbs" type="number" min="0" max="100" step="0.1" inputmode="decimal" style="width:6em"></label>
+      <select id="basis" aria-label="Per"><option value="100g">g per 100 g</option><option value="100ml">g per 100 ml (drink)</option></select>
+      <label>serving <input id="serving" type="number" min="1" max="5000" step="1" inputmode="numeric" style="width:5em"></label></div>
     ${profileControls()}
   </div>
   <div id="result"></div>`;
@@ -449,9 +451,16 @@ function showPaste(seq) {
   ta.value = store.get("nsi.paste", SAMPLE);
   const run = () => {
     store.set("nsi.paste", ta.value);
-    const sugars = $("#sugars").value === "" ? NaN : Number($("#sugars").value);
+    const num = (id) => ($(id).value === "" ? NaN : Number($(id).value));
+    const sugars = num("#sugars"), carbs = num("#carbs"), serving = num("#serving");
+    const basis = $("#basis").value;
     const nutrition = sugars >= 0 && sugars <= 100
-      ? { basis: $("#basis").value, sugars_g: sugars }
+      ? {
+        basis,
+        sugars_g: sugars,
+        ...(carbs >= sugars && carbs <= 100 ? { carbohydrate_g: carbs } : {}),
+        ...(serving > 0 && serving <= 5000 ? { serving: { amount: serving, unit: basis.slice(3) } } : {}),
+      }
       : undefined;
     analyseInto($("#result"), ta.value, seq, nutrition);
   };
@@ -510,6 +519,26 @@ function sourceLinks(refs, sources) {
       r.locator ? ` — ${esc(r.locator)}` : ""
     }">${esc(short)}</a>`;
   }).join(", ");
+}
+
+/** The glycemic-load estimate as a summary stat: always labelled an estimate. */
+function glStat(gl) {
+  if (!gl) return "";
+  if (gl.status === "unknown") {
+    const why = gl.reason === "low_coverage"
+      ? `only ${pct(gl.coverage)} of the carbohydrate has a GI source`
+      : "total carbohydrate needs fibre to subtract";
+    return `<div class="stat"><b>GL unknown</b><span>${esc(why)}</span></div>`;
+  }
+  const [lo, hi] = gl.range;
+  const band = gl.band ? (gl.band[0] === gl.band[1] ? gl.band[0] : gl.band.join("–")) : "";
+  return `<div class="stat"><b class="${
+    gl.band?.[0] === "high" ? "s-notice" : ""
+  }" style="background:none">GL ${esc(lo === hi ? lo : `${lo}–${hi}`)}</b><span>per ${
+    esc(gl.per === "serving" ? "serving" : gl.per.replace("100", "100 "))
+  }${band ? ` · ${esc(band)}` : ""} · estimate, not a measured GI${
+    gl.coverage < 1 ? ` · ${pct(gl.coverage)} covered` : ""
+  }</span></div>`;
 }
 
 function renderAnalysis(a) {
@@ -666,7 +695,7 @@ function renderAnalysis(a) {
         esc(a.nutrition.sugars.ri_percent_per_100)
       }% of RI · UK front-of-pack bands</span></div>`
       : ""
-  }
+  }${glStat(a.nutrition?.glycemic_load)}
       <div class="row">${counts}</div>
     </div>
     ${
