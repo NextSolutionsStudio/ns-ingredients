@@ -1,0 +1,32 @@
+id: isomaltulose
+type: carbohydrate
+names:
+  en: ["isomaltulose","Palatinose"]
+  pl: ["izomaltuloza","izomaltulozy","palatynoza"]
+  de: ["Isomaltulose","Palatinose"]
+summary:
+  en: "A disaccharide made of linked glucose and fructose units. It is manufactured by enzymatically rearranging sucrose. The EU specification describes the commercial crystalline monohydrate."
+  pl: "Dwucukier zbudowany z połączonych jednostek glukozy i fruktozy. Wytwarza się go przez enzymatyczne przegrupowanie sacharozy. Unijna specyfikacja opisuje handlowy krystaliczny monohydrat."
+assertions:
+  - code: health.added_sugar
+    certainty: yes
+    kind: fact
+    grade: A
+    population: [general]
+    note:
+      en: "Added as an ingredient, it counts as a free sugar in WHO's sense. WHO strongly recommends keeping free sugars under 10% of energy intake. The ingredient list does not show how much is in the product."
+      pl: "Dodany jako składnik, jest cukrem wolnym w rozumieniu WHO. WHO zdecydowanie zaleca, by cukry wolne stanowiły mniej niż 10% energii z diety. Lista składników nie pokazuje, ile go jest w produkcie."
+    sources: [{ id: who-free-sugars-2015 }]
+  - code: origin.plant
+    certainty: yes
+    kind: estimate
+    grade: D
+    note:
+      en: "Enzymatic conversion of sucrose produces isomaltulose. The plant crop supplying sucrose varies and is not identified by the ingredient name."
+      pl: "Enzymatyczne przekształcenie sacharozy daje izomaltulozę. Roślinny surowiec sacharozy jest zmienny i nie wynika z nazwy składnika."
+    sources: [{ id: sug-novel-spec }, { id: sug-isomaltulose }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "No numerical route priors: the opened sources do not establish probabilities for an undisclosed label. No blanket vegan or gluten-free claim: processing aids and batch certification were not verified."
+  - "Enzymatic sucrose conversion is specified in EU law; plant origin is graded D because crop attribution is from a reference article. No fermentation claim or crop probability was established."

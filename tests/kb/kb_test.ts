@@ -108,3 +108,43 @@ Deno.test("regulatory.revoked_elsewhere names a jurisdiction outside the EU and 
   }
   assertEquals(bad, []);
 });
+
+Deno.test("every sweetener WHO names carries processing.non_sugar_sweetener; no polyol does", () => {
+  const curated = bundle!.ingredients.filter((i) => i.provenance !== "wikidata");
+  const has = (i: (typeof curated)[number]) =>
+    (i.assertions ?? []).some((a) => a.code === "processing.non_sugar_sweetener" && a.certainty === "yes");
+  // WHO 2023: acesulfame K, aspartame, advantame, cyclamates, neotame, saccharin, sucralose, stevia.
+  const WHO = ["E950", "E951", "E969", "E952", "E961", "E954", "E955", "E960"];
+  // E960 is a family (E960a steviol glycosides, E960c enzymatically produced ones).
+  assertEquals(
+    WHO.filter((e) => !curated.some((i) => i.e_number?.replace(/[a-j]$/, "") === e && has(i))),
+    [],
+  );
+  const polyols = curated.filter((i) =>
+    (i.assertions ?? []).some((a) => a.code === "health.laxative_polyol")
+  );
+  assert(polyols.length >= 8, `only ${polyols.length} polyols curated`);
+  assertEquals(polyols.filter(has).map((i) => i.id), []);
+});
+
+Deno.test("health.added_sugar sits on free sugars only, never on a sweetener or a starch", () => {
+  const withCode = bundle!.ingredients.filter((i) =>
+    (i.assertions ?? []).some((a) => a.code === "health.added_sugar")
+  ).map((i) => i.id);
+  for (
+    const id of [
+      "sugar",
+      "dextrose",
+      "glucose-syrup",
+      "glucose-fructose-syrup",
+      "fructose",
+      "honey",
+      "lactose",
+    ]
+  ) {
+    assert(withCode.includes(id), `${id} lacks health.added_sugar`);
+  }
+  for (const id of ["maltodextrin", "sorbitol", "sucralose", "inulin"]) {
+    assert(!withCode.includes(id), `${id} must not carry health.added_sugar`);
+  }
+});

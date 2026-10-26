@@ -1,0 +1,31 @@
+id: invert-sugar-syrup
+type: carbohydrate
+names:
+  en: ["invert sugar syrup","inverted sugar syrup","invert sugar"]
+  pl: ["syrop cukru inwertowanego","syrop cukru inwertowanego częściowo","cukier inwertowany","syrop inwertowany"]
+  de: ["Invertzuckersirup","Invertzucker"]
+summary:
+  en: "An aqueous mixture of glucose, fructose and remaining sucrose produced by sucrose hydrolysis. Acid or invertase can catalyse inversion, after which the syrup can be concentrated. EU sugars law distinguishes invert sugar syrup from invert sugar solution by which fraction predominates."
+  pl: "Wodna mieszanina glukozy, fruktozy i pozostałej sacharozy, otrzymywana przez hydrolizę sacharozy. Inwersję może katalizować kwas lub inwertaza, po czym syrop można zagęścić. Unijne prawo o cukrach odróżnia syrop od roztworu cukru inwertowanego według przeważającej frakcji."
+assertions:
+  - code: health.added_sugar
+    certainty: yes
+    kind: fact
+    grade: A
+    population: [general]
+    note:
+      en: "Added as an ingredient, it counts as a free sugar in WHO's sense. WHO strongly recommends keeping free sugars under 10% of energy intake. The ingredient list does not show how much is in the product."
+      pl: "Dodany jako składnik, jest cukrem wolnym w rozumieniu WHO. WHO zdecydowanie zaleca, by cukry wolne stanowiły mniej niż 10% energii z diety. Lista składników nie pokazuje, ile go jest w produkcie."
+    sources: [{ id: who-free-sugars-2015 }]
+  - code: origin.plant
+    certainty: yes
+    kind: estimate
+    grade: D
+    note:
+      en: "Sucrose from plant sugar is hydrolysed with acid or invertase and the solution can be concentrated by evaporation; the crop and catalyst vary."
+      pl: "Sacharoza z cukru roślinnego jest hydrolizowana kwasem lub inwertazą, a roztwór można zagęścić przez odparowanie; roślina i katalizator są zmienne."
+    sources: [{ id: sug-invert }, { id: sug-sugars-directive }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "No numerical route priors: the opened sources do not establish probabilities for an undisclosed label. No blanket vegan or gluten-free claim: processing aids and batch certification were not verified."

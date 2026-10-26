@@ -1,0 +1,147 @@
+sources:
+  - id: sug-sugars-directive
+    type: regulation
+    title: "Council Directive 2001/111/EC relating to certain sugars intended for human consumption"
+    publisher: "Council of the European Union"
+    year: 2001
+    url: "https://eur-lex.europa.eu/eli/dir/2001/111/oj"
+    licence: "Facts cited in original wording; source text not reproduced"
+    accessed: 2026-10-26
+    note: "Canonical ELI identifier; official Spanish text actually opened at https://www.boe.es/buscar/doc.php?id=DOUE-L-2002-80035. Relevant definitions/specifications only; no claim that this is a complete current-law consolidation."
+  - id: sug-honey-directive
+    type: regulation
+    title: "Council Directive 2001/110/EC relating to honey"
+    publisher: "Council of the European Union"
+    year: 2001
+    url: "https://eur-lex.europa.eu/eli/dir/2001/110/oj"
+    licence: "Facts cited in original wording; source text not reproduced"
+    accessed: 2026-10-26
+    note: "Canonical ELI identifier; official Spanish text actually opened at https://www.boe.es/buscar/doc.php?id=DOUE-L-2002-80034. Relevant definitions/specifications only; no claim that this is a complete current-law consolidation."
+  - id: sug-juice-directive
+    type: regulation
+    title: "Council Directive 2001/112/EC relating to fruit juices and certain similar products"
+    publisher: "Council of the European Union"
+    year: 2001
+    url: "https://eur-lex.europa.eu/eli/dir/2001/112/oj"
+    licence: "Facts cited in original wording; source text not reproduced"
+    accessed: 2026-10-26
+    note: "Canonical ELI identifier; official Spanish text actually opened at https://www.boe.es/buscar/doc.php?id=DOUE-L-2002-80036&lang=es. Relevant definitions/specifications only; no claim that this is a complete current-law consolidation."
+  - id: sug-allergens
+    type: regulation
+    title: "Regulation (EU) No 1169/2011, Annex II"
+    publisher: "European Parliament and Council"
+    year: 2011
+    url: "https://eur-lex.europa.eu/eli/reg/2011/1169/oj"
+    licence: "Facts cited in original wording; source text not reproduced"
+    accessed: 2026-10-26
+    note: "Canonical ELI identifier; official Spanish text actually opened at https://www.boe.es/buscar/doc.php?id=DOUE-L-2011-82311. Relevant definitions/specifications only; no claim that this is a complete current-law consolidation."
+  - id: sug-novel-spec
+    type: regulation
+    title: "Implementing Regulation (EU) 2017/2470, isomaltulose specification"
+    publisher: "European Commission"
+    year: 2017
+    url: "https://eur-lex.europa.eu/eli/reg_impl/2017/2470/oj"
+    licence: "Facts cited in original wording; source text not reproduced"
+    accessed: 2026-10-26
+    note: "Canonical ELI identifier; official Spanish text actually opened at https://www.boe.es/buscar/doc.php?id=DOUE-L-2017-82618. Relevant definitions/specifications only; no claim that this is a complete current-law consolidation."
+  - id: sug-trehalose-spec
+    type: regulation
+    title: "Implementing Regulation (EU) 2018/1023 correcting the Union list of novel foods"
+    publisher: "European Commission"
+    year: 2018
+    url: "https://eur-lex.europa.eu/eli/reg_impl/2018/1023/oj"
+    licence: "Facts cited in original wording; source text not reproduced"
+    accessed: 2026-10-26
+    note: "Canonical ELI identifier; official Spanish text actually opened at https://www.boe.es/buscar/doc.php?id=DOUE-L-2018-81203&lang=es and https://www.boe.es/doue/2018/187/L00001-00133.pdf. Relevant definitions/specifications only; no claim that this is a complete current-law consolidation."
+  - id: sug-gfs-production
+    type: reference
+    title: "Factsheet on glucose fructose syrups, isoglucose and high fructose corn syrup"
+    publisher: "Starch Europe"
+    year: 2018
+    url: "https://starch.eu/priority/ttps-www-starch-eu-wp-content-uploads-2018-10-2018-07-update-factsheet-on-glucose-fructose-syrups-isoglucose-and-high-fructose-corn-syrup-pdf/"
+    licence: "Facts cited in original wording; source text not reproduced"
+    accessed: 2026-10-26
+  - id: sug-fructose
+    type: reference
+    title: "Fructose"
+    publisher: "Wikipedia contributors"
+    url: "https://en.wikipedia.org/wiki/Fructose"
+    licence: "CC BY-SA 4.0; facts paraphrased"
+    accessed: 2026-10-26
+  - id: sug-invert
+    type: reference
+    title: "Inverted sugar syrup"
+    publisher: "Wikipedia contributors"
+    url: "https://en.wikipedia.org/wiki/Inverted_sugar_syrup"
+    licence: "CC BY-SA 4.0; facts paraphrased"
+    accessed: 2026-10-26
+  - id: sug-brown
+    type: reference
+    title: "Brown sugar"
+    publisher: "Wikipedia contributors"
+    url: "https://en.wikipedia.org/wiki/Brown_sugar"
+    licence: "CC BY-SA 4.0; facts paraphrased"
+    accessed: 2026-10-26
+  - id: sug-molasses
+    type: reference
+    title: "Molasses"
+    publisher: "Wikipedia contributors"
+    url: "https://en.wikipedia.org/wiki/Molasses"
+    licence: "CC BY-SA 4.0; facts paraphrased"
+    accessed: 2026-10-26
+  - id: sug-agave
+    type: reference
+    title: "Agave syrup"
+    publisher: "Wikipedia contributors"
+    url: "https://en.wikipedia.org/wiki/Agave_syrup"
+    licence: "CC BY-SA 4.0; facts paraphrased"
+    accessed: 2026-10-26
+  - id: sug-maple
+    type: reference
+    title: "Maple syrup"
+    publisher: "Wikipedia contributors"
+    url: "https://en.wikipedia.org/wiki/Maple_syrup"
+    licence: "CC BY-SA 4.0; facts paraphrased"
+    accessed: 2026-10-26
+  - id: sug-isomaltulose
+    type: reference
+    title: "Isomaltulose"
+    publisher: "Wikipedia contributors"
+    url: "https://en.wikipedia.org/wiki/Isomaltulose"
+    licence: "CC BY-SA 4.0; facts paraphrased"
+    accessed: 2026-10-26
+  - id: sug-maltose
+    type: reference
+    title: "Maltose"
+    publisher: "Wikipedia contributors"
+    url: "https://en.wikipedia.org/wiki/Maltose"
+    licence: "CC BY-SA 4.0; facts paraphrased"
+    accessed: 2026-10-26
+  - id: sug-rice
+    type: reference
+    title: "Brown rice syrup"
+    publisher: "Wikipedia contributors"
+    url: "https://en.wikipedia.org/wiki/Brown_rice_syrup"
+    licence: "CC BY-SA 4.0; facts paraphrased"
+    accessed: 2026-10-26
+  - id: sug-coconut
+    type: reference
+    title: "Coconut sugar"
+    publisher: "Wikipedia contributors"
+    url: "https://en.wikipedia.org/wiki/Coconut_sugar"
+    licence: "CC BY-SA 4.0; facts paraphrased"
+    accessed: 2026-10-26
+  - id: sug-dates-fao
+    type: reference
+    title: "Date palm products, Chapter 3: date syrup"
+    publisher: "FAO"
+    url: "https://www.fao.org/4/t0681e/t0681e07.htm"
+    licence: "Facts cited in original wording; source text not reproduced"
+    accessed: 2026-10-26
+  - id: sug-juice-process
+    type: reference
+    title: "Fruit and vegetable processing, section 8.7: fruit juice technologies"
+    publisher: "FAO"
+    url: "https://www.fao.org/4/v5030e/V5030E0o.htm"
+    licence: "Facts cited in original wording; source text not reproduced"
+    accessed: 2026-10-26

@@ -1,0 +1,99 @@
+id: saccharin
+type: additive
+e_number: E954
+ids:
+  cas: 81-07-2
+names:
+  en:
+  - saccharin
+  - saccharins
+  - sodium saccharin
+  - calcium saccharin
+  - potassium saccharin
+  pl:
+  - sacharyna
+  - sacharyny
+  - sacharynian sodu
+  - sacharynian wapnia
+  - sacharynian potasu
+  de:
+  - Saccharin
+  - Saccharine
+  - Natriumsaccharin
+  - Calciumsaccharin
+  - Kaliumsaccharin
+functions:
+- sweetener
+summary:
+  en: E954 includes saccharin and its sodium, potassium and calcium salts, used to sweeten foods, drinks and
+    tabletop products. Chemical manufacture may use the Remsen-Fahlberg or Maumee route; the suppliers contributing
+    product data to EFSA's 2024 assessment used the former. EU and US uses are subject to conditions; EFSA's
+    2024 ADI is 9 mg/kg body weight/day expressed as saccharin free imide.
+  pl: E954 obejmuje sacharynę oraz jej sole sodową, potasową i wapniową, stosowane do słodzenia żywności, napojów
+    i słodzików stołowych. Produkcja chemiczna może wykorzystywać metodę Remsena-Fahlberga lub Maumee; dostawcy
+    przekazujący dane o produktach do oceny EFSA z 2024 r. stosowali pierwszą z nich. Stosowanie w UE i USA
+    podlega określonym warunkom; ADI EFSA z 2024 r. wynosi 9 mg/kg masy ciała na dobę w przeliczeniu na wolny
+    imid sacharyny.
+assertions:
+- code: origin.chemical_synthesis
+  certainty: 'yes'
+  kind: estimate
+  grade: B
+  note:
+    en: Routes differ between manufacturers. EFSA describes the Remsen-Fahlberg route from toluene through
+      sulfonamide intermediates, oxidation and ring closure, and an alternative Maumee route from anthranilate-related
+      intermediates. Route cannot be inferred from E954 alone.
+    pl: Drogi produkcji różnią się między producentami. EFSA opisuje metodę Remsena-Fahlberga z toluenu przez
+      półprodukty sulfonamidowe, utlenianie i zamknięcie pierścienia oraz alternatywną metodę Maumee z półproduktów
+      związanych z antranilanami. Sam numer E954 nie określa drogi produkcji.
+  sources:
+  - id: swm-efsa-saccharin-2024
+- code: processing.non_sugar_sweetener
+  certainty: 'yes'
+  kind: fact
+  grade: A
+  note:
+    en: 'Named by WHO as a common non-sugar sweetener. WHO''s 2023 guideline conditionally recommends against
+      using non-sugar sweeteners for weight control; it does not apply to people with pre-existing diabetes.
+      This marks the ingredient''s role, not a safety finding: the authorised use limits are set by the ADI.'
+    pl: 'WHO wymienia go wśród typowych substancji słodzących niecukrowych. Wytyczna WHO z 2023 r. warunkowo
+      odradza stosowanie substancji słodzących niecukrowych w celu kontroli masy ciała; nie dotyczy osób z
+      cukrzycą. Oznacza rolę składnika, nie ocenę bezpieczeństwa: limity stosowania wynikają z ADI.'
+  sources:
+  - id: who-nss-guideline-2023
+regulatory:
+- jurisdiction: EU
+  status: authorised
+  conditions:
+    en: Listed in Annex II to Regulation 1333/2008; use is subject to food-category conditions and applicable
+      limits.
+    pl: Wymieniony w załączniku II do rozporządzenia 1333/2008; stosowanie podlega warunkom i limitom dla kategorii
+      żywności.
+  source: swm-reg-1129-2011
+- jurisdiction: US
+  status: authorised
+  conditions:
+    en: FDA permits saccharin under conditions for beverages, tabletop and cooking sugar substitutes, processed
+      foods and certain technological uses.
+    pl: FDA zezwala na stosowanie sacharyny na określonych warunkach w napojach, zamiennikach cukru do stołu
+      i gotowania, żywności przetworzonej i niektórych zastosowaniach technologicznych.
+  source: swm-fda-sweeteners
+reference_values:
+- type: ADI
+  value: 9
+  unit: mg/kg bw/day as saccharin free imide
+  body: EFSA
+  year: 2024
+  source: swm-efsa-saccharin-2024
+review_status: draft
+provenance: ai-drafted
+review_notes:
+- Individual current food-category maximum levels were not exhaustively checked or transcribed; consult the
+  consolidated EU list for a particular product.
+- 'No diet, GMO, feedstock-country or general health-benefit assertions: the opened sources do not verify these
+  for a particular supplier.'
+- CAS 81-07-2 identifies saccharin itself, not every salt or hydrate in E954.
+- 'Production assertion is estimate B: manufacturer reports describe different processes, not a mandatory manufacturing
+  definition. EFSA''s 2024 evaluation supported Remsen-Fahlberg products; impurity data for Maumee products
+  were insufficient.'
+- No claim that an old US cancer warning is currently required; FDA states it is no longer required.

@@ -1,0 +1,41 @@
+id: maltose
+type: carbohydrate
+names:
+  en: ["maltose","malt sugar","maltobiose"]
+  pl: ["maltoza","maltozy","cukier słodowy"]
+  de: ["Maltose","Malzzucker"]
+summary:
+  en: "A disaccharide composed of two glucose units. It is formed when enzymes such as beta-amylase hydrolyse starch, including during grain germination. Maltose names the sugar, while malt extracts are mixtures."
+  pl: "Dwucukier zbudowany z dwóch jednostek glukozy. Powstaje podczas hydrolizy skrobi przez enzymy, takie jak beta-amylaza, także w trakcie kiełkowania zbóż. Maltoza oznacza cukier, a ekstrakty słodowe są mieszaninami."
+assertions:
+  - code: health.added_sugar
+    certainty: yes
+    kind: fact
+    grade: A
+    population: [general]
+    note:
+      en: "Added as an ingredient, it counts as a free sugar in WHO's sense. WHO strongly recommends keeping free sugars under 10% of energy intake. The ingredient list does not show how much is in the product."
+      pl: "Dodany jako składnik, jest cukrem wolnym w rozumieniu WHO. WHO zdecydowanie zaleca, by cukry wolne stanowiły mniej niż 10% energii z diety. Lista składników nie pokazuje, ile go jest w produkcie."
+    sources: [{ id: who-free-sugars-2015 }]
+  - code: origin.plant
+    certainty: yes
+    kind: estimate
+    grade: D
+    note:
+      en: "Enzymatic hydrolysis of plant starch releases maltose; beta-amylase also performs this reaction in germinating grain. The crop and purification route vary."
+      pl: "Enzymatyczna hydroliza skrobi roślinnej uwalnia maltozę; beta-amylaza prowadzi tę reakcję także w kiełkującym ziarnie. Roślina i sposób oczyszczania są zmienne."
+    sources: [{ id: sug-maltose }]
+  - code: allergen.gluten
+    certainty: maybe
+    kind: fact
+    grade: A
+    population: [coeliac]
+    note:
+      en: "A wheat- or barley-derived malt product remaining in food falls under Annex II unless a specific exemption applies. Maltose or malt sugar is not itself a named exemption; an exemption for qualifying glucose syrup cannot be inferred just from this sugar name."
+      pl: "Pozostający w żywności produkt słodowy z pszenicy lub jęczmienia podlega załącznikowi II, chyba że ma zastosowanie szczególne zwolnienie. Maltoza ani cukier słodowy nie są samodzielnie wymienionymi wyjątkami; nazwa cukru nie potwierdza zwolnienia dla odpowiedniego syropu glukozowego."
+    sources: [{ id: sug-allergens }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "No numerical route priors: the opened sources do not establish probabilities for an undisclosed label. No blanket vegan or gluten-free claim: processing aids and batch certification were not verified."
+  - "No equivalence with barley malt extract or malt syrup was assumed; a molecule name does not disclose the crop or residual protein."

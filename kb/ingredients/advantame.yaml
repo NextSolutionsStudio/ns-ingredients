@@ -1,0 +1,82 @@
+id: advantame
+type: additive
+e_number: E969
+ids:
+  cas: 714229-20-6
+names:
+  en:
+  - advantame
+  pl:
+  - adwantam
+  de:
+  - Advantam
+functions:
+- sweetener
+- flavour-enhancer
+summary:
+  en: An intense sweetener derived from aspartame, used in reduced-energy foods and tabletop sweeteners. Manufacture
+    combines aspartame with a hydrogenated aromatic aldehyde intermediate and uses a further hydrogenation
+    and crystallisation. E969 is authorised in specified EU food categories and FDA permits its use under defined
+    conditions.
+  pl: Intensywna substancja słodząca będąca pochodną aspartamu, stosowana w żywności o obniżonej wartości energetycznej
+    i słodzikach stołowych. Produkcja obejmuje połączenie aspartamu z uwodornionym półproduktem aldehydowym,
+    dalsze uwodornienie i krystalizację. E969 jest dopuszczony w określonych kategoriach żywności w UE, a FDA
+    zezwala na jego stosowanie na określonych warunkach.
+assertions:
+- code: origin.chemical_synthesis
+  certainty: 'yes'
+  kind: fact
+  grade: A
+  note:
+    en: The EU specification describes synthesis through HMCA and its hydrogenated aldehyde HMPA; HMPA reacts
+      with aspartame, followed by selective hydrogenation and crystallisation.
+    pl: Specyfikacja UE opisuje syntezę przez HMCA i jego uwodornioną pochodną aldehydową HMPA; HMPA reaguje
+      z aspartamem, po czym następują selektywne uwodornienie i krystalizacja.
+  sources:
+  - id: swm-reg-497-2014
+- code: processing.non_sugar_sweetener
+  certainty: 'yes'
+  kind: fact
+  grade: A
+  note:
+    en: 'Named by WHO as a common non-sugar sweetener. WHO''s 2023 guideline conditionally recommends against
+      using non-sugar sweeteners for weight control; it does not apply to people with pre-existing diabetes.
+      This marks the ingredient''s role, not a safety finding: the authorised use limits are set by the ADI.'
+    pl: 'WHO wymienia go wśród typowych substancji słodzących niecukrowych. Wytyczna WHO z 2023 r. warunkowo
+      odradza stosowanie substancji słodzących niecukrowych w celu kontroli masy ciała; nie dotyczy osób z
+      cukrzycą. Oznacza rolę składnika, nie ocenę bezpieczeństwa: limity stosowania wynikają z ADI.'
+  sources:
+  - id: who-nss-guideline-2023
+regulatory:
+- jurisdiction: EU
+  status: authorised
+  conditions:
+    en: Listed in Annex II to Regulation 1333/2008; use is subject to food-category conditions and applicable
+      limits.
+    pl: Wymieniony w załączniku II do rozporządzenia 1333/2008; stosowanie podlega warunkom i limitom dla kategorii
+      żywności.
+  source: swm-reg-497-2014
+- jurisdiction: US
+  status: authorised
+  conditions:
+    en: FDA permits general-purpose sweetener and flavour-enhancer uses under specified conditions, except
+      in meat and poultry.
+    pl: FDA zezwala na stosowanie jako substancji słodzącej i wzmacniacza smaku na określonych warunkach, z
+      wyjątkiem mięsa i drobiu.
+  source: swm-fda-sweeteners
+reference_values:
+- type: ADI
+  value: 5
+  unit: mg/kg bw/day
+  body: EFSA
+  year: 2013
+  source: swm-efsa-advantame-2013
+review_status: draft
+provenance: ai-drafted
+review_notes:
+- Individual current food-category maximum levels were not exhaustively checked or transcribed; consult the
+  consolidated EU list for a particular product.
+- 'No diet, GMO, feedstock-country or general health-benefit assertions: the opened sources do not verify these
+  for a particular supplier.'
+- CAS identifies the monohydrate specified in the opened EU act; Wikidata and PubChem identifiers were not
+  verified.

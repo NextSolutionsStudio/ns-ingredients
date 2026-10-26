@@ -1,0 +1,93 @@
+id: polyglycitol-syrup
+type: additive
+e_number: E964
+ids: {}
+names:
+  en:
+  - polyglycitol syrup
+  - polyglucitol
+  pl:
+  - syrop poliglucitolowy
+  de:
+  - Polyglycitolsirup
+  - Polyglycitol-Sirup
+functions:
+- sweetener
+- humectant
+- stabiliser
+- bulking-agent
+summary:
+  en: A bulk sweetener mixture containing maltitol, sorbitol and larger hydrogenated carbohydrates, used in
+    authorised confectionery, chewing gum and other foods. It is made by catalytic hydrogenation of a carbohydrate
+    mixture containing glucose, maltose and higher glucose polymers. EU authorisation sets category-specific
+    conditions and limits; foods with more than 10% added polyols require a laxative statement.
+  pl: Mieszanina substancji słodzących nadająca objętość, zawierająca maltitol, sorbitol i większe uwodornione
+    węglowodany, stosowana w dozwolonych wyrobach cukierniczych, gumach do żucia i innych produktach. Otrzymuje
+    się ją przez katalityczne uwodornienie mieszaniny węglowodanów zawierającej glukozę, maltozę i wyższe polimery
+    glukozy. Dopuszczenie w UE określa warunki i limity dla kategorii żywności; produkty zawierające ponad
+    10% dodanych polioli wymagają informacji o działaniu przeczyszczającym.
+assertions:
+- code: origin.chemical_synthesis
+  certainty: 'yes'
+  kind: fact
+  grade: A
+  note:
+    en: The JECFA specification describes catalytic hydrogenation of glucose, maltose and higher glucose polymers.
+      The resulting mixture contains maltitol, sorbitol and hydrogenated oligo- and polysaccharides.
+    pl: Specyfikacja JECFA opisuje katalityczne uwodornienie glukozy, maltozy i wyższych polimerów glukozy.
+      Otrzymana mieszanina zawiera maltitol, sorbitol oraz uwodornione oligo- i polisacharydy.
+  sources:
+  - id: swm-jecfa-polyglycitol-spec
+- code: health.laxative_polyol
+  certainty: 'yes'
+  kind: fact
+  grade: A
+  note:
+    en: Food containing more than 10% added polyols must carry the statement 'excessive consumption may produce
+      laxative effects'.
+    pl: Żywność zawierająca ponad 10% dodanych polioli musi zawierać informację 'nadmierne spożycie może mieć
+      efekt przeczyszczający'.
+  sources:
+  - id: swm-reg-1169-2011
+    locator: Annex III, point 2.4
+- code: regulatory.eu_warning_label
+  certainty: 'yes'
+  kind: fact
+  grade: A
+  note:
+    en: The laxative statement above is a mandatory label statement under Annex III of Reg 1169/2011.
+    pl: Powyższa informacja o działaniu przeczyszczającym jest obowiązkową informacją na etykiecie na podstawie
+      załącznika III rozporządzenia 1169/2011.
+  sources:
+  - id: swm-reg-1169-2011
+    locator: Annex III, point 2.4
+regulatory:
+- jurisdiction: EU
+  status: authorised
+  conditions:
+    en: E964 was added to Annex II by Regulation 1049/2012 for specified categories with maximum levels and
+      restrictions, including reduced-energy or no-added-sugar products.
+    pl: E964 dodano do załącznika II rozporządzeniem 1049/2012 dla określonych kategorii z limitami i ograniczeniami,
+      w tym dla produktów o obniżonej wartości energetycznej lub bez dodatku cukrów.
+  source: swm-reg-1049-2012
+reference_values:
+- type: group_ADI
+  value: not specified
+  body: JECFA
+  year: 1998
+  source: swm-jecfa-polyglycitol
+review_status: draft
+provenance: ai-drafted
+review_notes:
+- Individual current food-category maximum levels were not exhaustively checked or transcribed; consult the
+  consolidated EU list for a particular product.
+- 'No diet, GMO, feedstock-country or general health-benefit assertions: the opened sources do not verify these
+  for a particular supplier.'
+- 'No CAS, Wikidata or PubChem ID: no successfully opened identity page established an identifier for this
+  mixture.'
+- US status not verified; no US regulatory row.
+- The JECFA group ADI covers polyglycitol syrup and maltitol syrup meeting their specifications. This entry
+  does not equate E964 with E965(ii), and the broad alias hydrogenated starch hydrolysate is omitted to avoid
+  implying equivalence.
+- The EU specification amendment 1050/2012 was not readable through the attempted pages; production is sourced
+  to the successfully opened JECFA specification instead.

@@ -1,0 +1,41 @@
+id: rice-syrup
+type: carbohydrate
+names:
+  en: ["rice syrup","brown rice syrup","rice malt syrup"]
+  pl: ["syrop ryżowy","syropu ryżowego","syrop z ryżu","syrop z brązowego ryżu"]
+  de: ["Reissirup","Reismalzsirup"]
+summary:
+  en: "A syrup made by enzymatically breaking down rice starch, filtering the liquid and evaporating water. Its carbohydrates include maltose, maltotriose, glucose and dextrins. Traditional production can use barley malt, while other processes use isolated enzymes."
+  pl: "Syrop otrzymywany przez enzymatyczny rozkład skrobi ryżowej, filtrację cieczy i odparowanie wody. Jego węglowodany obejmują maltozę, maltotriozę, glukozę i dekstryny. Tradycyjna produkcja może wykorzystywać słód jęczmienny, a inne procesy enzymy izolowane."
+assertions:
+  - code: health.added_sugar
+    certainty: yes
+    kind: fact
+    grade: A
+    population: [general]
+    note:
+      en: "Added as an ingredient, it counts as a free sugar in WHO's sense. WHO strongly recommends keeping free sugars under 10% of energy intake. The ingredient list does not show how much is in the product."
+      pl: "Dodany jako składnik, jest cukrem wolnym w rozumieniu WHO. WHO zdecydowanie zaleca, by cukry wolne stanowiły mniej niż 10% energii z diety. Lista składników nie pokazuje, ile go jest w produkcie."
+    sources: [{ id: who-free-sugars-2015 }]
+  - code: origin.plant
+    certainty: yes
+    kind: estimate
+    grade: D
+    note:
+      en: "Rice starch is enzymatically hydrolysed, filtered and concentrated by evaporation. Enzymes may come from barley malt or isolated microbial preparations; the route varies."
+      pl: "Skrobia ryżowa jest enzymatycznie hydrolizowana, filtrowana i zagęszczana przez odparowanie. Enzymy mogą pochodzić ze słodu jęczmiennego lub izolowanych preparatów mikrobiologicznych; proces jest zmienny."
+    sources: [{ id: sug-rice }]
+  - code: allergen.gluten
+    certainty: maybe
+    kind: fact
+    grade: A
+    population: [coeliac]
+    note:
+      en: "Rice syrup has no blanket Annex II exemption. Where barley malt is used and barley-derived material remains, barley declaration rules apply; the exemption for barley glucose syrup does not automatically extend to malt-containing rice syrup."
+      pl: "Syrop ryżowy nie ma ogólnego zwolnienia w załączniku II. Jeśli zastosowano słód jęczmienny i pozostaje materiał pochodzący z jęczmienia, obowiązują zasady deklarowania jęczmienia; zwolnienie dla jęczmiennego syropu glukozowego nie obejmuje automatycznie syropu ryżowego ze słodem."
+    sources: [{ id: sug-allergens }, { id: sug-rice }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "No numerical route priors: the opened sources do not establish probabilities for an undisclosed label. No blanket vegan or gluten-free claim: processing aids and batch certification were not verified."
+  - "Barley-malt versus isolated-enzyme production is documented, but its prevalence and a specific product's residual cereal protein were not verified."

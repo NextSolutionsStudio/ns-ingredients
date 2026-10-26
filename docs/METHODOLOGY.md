@@ -140,7 +140,7 @@ For each item:
    from a silent label's top prior can only raise doubt: a `no` becomes `maybe`.
 2. Vegan `yes` implies vegetarian `yes`; vegetarian `no` implies vegan `no`.
 3. Otherwise the status is **derived**:
-   - **Vegan:** animal, dairy, egg, fish or insect origin, or an animal allergen (milk, eggs, fish,
+   - **Vegan:** animal, dairy, egg, bee-product, fish or insect origin, or an animal allergen (milk, eggs, fish,
      crustaceans, molluscs), makes it `no` (`maybe` if that claim is `maybe`).
    - **Vegetarian:** animal, fish or insect origin, or a fish, crustacean or mollusc allergen, makes it `no`.
    - With no such signal, an entry that states any origin is `yes` for both; one that doesn't is `unknown`.

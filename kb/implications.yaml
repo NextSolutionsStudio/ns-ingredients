@@ -187,6 +187,14 @@ implications:
     label: { en: "Egg origin", pl: "Pochodzenie z jaj", de: "Aus Ei" }
     definition: { en: "Obtained from eggs." }
     evidence_required: "Specification or declared source."
+  - code: origin.bee_product
+    group: origin
+    severity: info
+    concern: preference
+    kind: fact
+    label: { en: "Made by bees", pl: "Wytwarzany przez pszczoły", de: "Von Bienen erzeugt" }
+    definition: { en: "Produced by bees rather than obtained from their bodies (honey, beeswax, propolis, royal jelly). Like milk and eggs: an animal product, so not vegan, but vegetarian. Carmine and shellac are origin.insect." }
+    evidence_required: "Specification or legal definition."
   - code: origin.fish
     group: origin
     severity: info
