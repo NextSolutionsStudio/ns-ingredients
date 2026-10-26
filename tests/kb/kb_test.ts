@@ -1,6 +1,7 @@
 // The real knowledge base: schema, cross-references and editorial rules. This is what CI runs on
 // every KB pull request (in addition to deno task kb:validate).
 import { assert, assertEquals } from "@std/assert";
+import { analyze } from "../../src/core/analyze.ts";
 import { KbIndex } from "../../src/core/kb-index.ts";
 import { normName } from "../../src/core/normalize.ts";
 import { readKb } from "../../src/kb/read.ts";
@@ -147,4 +148,30 @@ Deno.test("health.added_sugar sits on free sugars only, never on a sweetener or 
   for (const id of ["maltodextrin", "sorbitol", "sucralose", "inulin"]) {
     assert(!withCode.includes(id), `${id} must not carry health.added_sugar`);
   }
+});
+
+Deno.test("every source the code cites for amounts and list order exists in the KB", () => {
+  // A missing id is dropped from `sources` without an error, so the citation would vanish quietly.
+  const r = analyze(new KbIndex(bundle!), "sugar, wheat flour, glucose syrup, palm oil", {
+    nutrition: { basis: "100g", sugars_g: 30, carbohydrate_g: 70, serving: { amount: 50, unit: "g" } },
+  });
+  const cited = [
+    ...r.nutrition!.sugars.sources,
+    ...(r.nutrition!.glycemic_load?.sources ?? []),
+    ...r.flags.flatMap((f) => f.triggers.flatMap((t) => t.sources)),
+  ].map((s) => s.id);
+  assert(cited.includes("gi-gl-bands") && cited.includes("reg-1169-2011"), "the probe label cites nothing");
+  const known = new Set(bundle!.sources.map((s) => s.id));
+  assertEquals([...new Set(cited)].filter((id) => !known.has(id)), []);
+});
+
+Deno.test("glycemic entries: one per fraction, and dextrose is the reference", () => {
+  const dupes: string[] = [];
+  for (const ing of bundle!.ingredients) {
+    const fr = (ing.glycemic ?? []).map((g) => g.fraction);
+    if (new Set(fr).size !== fr.length) dupes.push(ing.id);
+  }
+  assertEquals(dupes, []);
+  const dextrose = bundle!.ingredients.find((i) => i.id === "dextrose")!;
+  assertEquals(dextrose.glycemic?.map((g) => [g.fraction, g.range]), [["sugars", [100, 100]]]);
 });

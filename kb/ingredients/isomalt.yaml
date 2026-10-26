@@ -75,6 +75,13 @@ reference_values:
   body: JECFA
   year: 1985
   source: swm-jecfa-isomalt
+glycemic:
+  - range: [2, 12]
+    fraction: polyols
+    method: non_iso
+    note: { en: "Study-level relative glucose responses.", pl: "Względne odpowiedzi glikemiczne z poszczególnych badań." }
+    source: gi-livesey-2003
+    locator: "Table 4, isomalt"
 review_status: draft
 provenance: ai-drafted
 review_notes:

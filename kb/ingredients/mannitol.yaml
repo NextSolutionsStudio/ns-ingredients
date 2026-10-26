@@ -98,6 +98,13 @@ reference_values:
   body: JECFA
   year: 1986
   source: swm-jecfa-mannitol
+glycemic:
+  - range: [0, 0]
+    fraction: polyols
+    method: non_iso
+    note: { en: "Study-level relative glucose responses.", pl: "Względne odpowiedzi glikemiczne z poszczególnych badań." }
+    source: gi-livesey-2003
+    locator: "Table 4, mannitol"
 review_status: draft
 provenance: ai-drafted
 review_notes:

@@ -98,6 +98,19 @@ assertions:
       en: "Maize is one of the crops most often genetically modified worldwide (about 92% of US corn acreage); a label alone does not say which maize the syrup was hydrolysed from."
       pl: "Kukurydza jest jedną z roślin najczęściej modyfikowanych genetycznie na świecie (ok. 92% powierzchni uprawy kukurydzy w USA); sama etykieta nie mówi, z jakiej kukurydzy otrzymano syrop."
     sources: [{ id: usda-ers-ge-crops }]
+glycemic:
+  - range: [107, 107]
+    fraction: sugars
+    method: iso
+    note: { en: "Glucose syrup.", pl: "Syrop glukozowy." }
+    source: gi-atkinson-2021
+    locator: "Supplemental Table 1, food 1747"
+  - range: [107, 107]
+    fraction: starch
+    method: iso
+    note: { en: "Whole-syrup GI applied to longer chains.", pl: "IG całego syropu przypisany dłuższym łańcuchom." }
+    source: gi-atkinson-2021
+    locator: "Supplemental Table 1, food 1747"
 review_status: draft
 provenance: ai-drafted
 review_notes:

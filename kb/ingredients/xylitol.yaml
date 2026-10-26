@@ -107,6 +107,13 @@ regulatory:
     status: authorised
     conditions: { en: "Group I polyol additive, quantum satis in most categories where polyols are permitted (not permitted in non-alcoholic beverages).", pl: "Dodatek poliolowy grupy I, quantum satis w większości kategorii, w których poliole są dozwolone (niedozwolony w napojach bezalkoholowych)." }
     source: reg-1333-2008
+glycemic:
+  - range: [7, 18]
+    fraction: polyols
+    method: non_iso
+    note: { en: "Study-level relative glucose responses.", pl: "Względne odpowiedzi glikemiczne z poszczególnych badań." }
+    source: gi-livesey-2003
+    locator: "Table 4, xylitol"
 review_status: draft
 provenance: ai-drafted
 review_notes:

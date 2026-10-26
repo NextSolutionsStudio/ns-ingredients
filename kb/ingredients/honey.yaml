@@ -33,6 +33,13 @@ assertions:
       en: "Honey is produced and processed by bees; its insect origin excludes it from a diet without animal-derived ingredients."
       pl: "Miód jest wytwarzany i przetwarzany przez pszczoły; pochodzenie od owadów wyklucza go z diety bez składników pochodzenia zwierzęcego."
     sources: [{ id: sug-honey-directive }]
+glycemic:
+  - range: [35, 74]
+    fraction: sugars
+    method: iso
+    note: { en: "Honey varieties.", pl: "Odmiany miodu." }
+    source: gi-atkinson-2021
+    locator: "Supplemental Table 1, foods 1748-1764"
 review_status: draft
 provenance: ai-drafted
 review_notes:

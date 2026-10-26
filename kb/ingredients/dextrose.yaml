@@ -99,6 +99,13 @@ assertions:
       en: "Maize is one of the crops most often genetically modified worldwide (about 92% of US corn acreage); a label alone does not say which maize the dextrose was made from."
       pl: "Kukurydza jest jedną z roślin najczęściej modyfikowanych genetycznie na świecie (ok. 92% powierzchni uprawy kukurydzy w USA); sama etykieta nie mówi, z jakiej kukurydzy otrzymano dekstrozę."
     sources: [{ id: usda-ers-ge-crops }]
+glycemic:
+  - range: [100, 100]
+    fraction: sugars
+    method: definition
+    note: { en: "Glucose reference scale.", pl: "Skala odniesienia glukozy." }
+    source: gi-gl-bands
+    locator: "Glycemic index of individual foods"
 review_status: draft
 provenance: ai-drafted
 review_notes: []

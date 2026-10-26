@@ -83,5 +83,12 @@ assertions:
       en: "Uncontaminated oats meet the gluten-free limit, but roughly 8% of coeliac patients still react to oat avenin itself."
       pl: "Nieskontaminowany owies spełnia limit dla żywności bezglutenowej, ale około 8% pacjentów z celiakią reaguje na samą aweninę owsianą."
     sources: [{ id: faulkner-hogg-oats-2026 }]
+glycemic:
+  - range: [48, 87]
+    fraction: starch
+    method: iso
+    note: { en: "Steel-cut, rolled and instant oat porridges.", pl: "Owsianki z ciętego ziarna, płatków i błyskawiczne." }
+    source: gi-atkinson-2021
+    locator: "Supplemental Table 1, foods 426-436, 438-442"
 review_status: draft
 provenance: ai-drafted

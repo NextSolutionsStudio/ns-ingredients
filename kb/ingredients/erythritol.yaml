@@ -69,6 +69,13 @@ reference_values:
     body: EFSA
     year: 2023
     source: swt-efsa-erythritol-2023
+glycemic:
+  - range: [0, 21]
+    fraction: polyols
+    method: non_iso
+    note: { en: "Study responses, using displayed zeroes for negative areas.", pl: "Wyniki badań, z podanym zerem dla ujemnych pól." }
+    source: gi-livesey-2003
+    locator: "Table 4, erythritol"
 review_status: draft
 provenance: ai-drafted
 review_notes:

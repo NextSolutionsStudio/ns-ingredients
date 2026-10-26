@@ -34,6 +34,13 @@ assertions:
       en: "For wheat-derived glucose syrup and its derivatives, Annex II provides an exemption if further processing is unlikely to increase assessed allergenicity. Barley glucose syrup is also listed as exempt. Application depends on the actual route; the generic name does not prove zero gluten."
       pl: "Dla pszennego syropu glukozowego i jego pochodnych załącznik II przewiduje zwolnienie, jeśli dalsze przetwarzanie prawdopodobnie nie zwiększa ocenionej alergenności. Wymieniono też zwolnienie dla jęczmiennego syropu glukozowego. Zastosowanie zależy od procesu; ogólna nazwa nie dowodzi braku glutenu."
     sources: [{ id: sug-allergens }]
+glycemic:
+  - range: [56, 56]
+    fraction: sugars
+    method: iso
+    note: { en: "High-fructose corn syrup.", pl: "Kukurydziany syrop o wysokiej zawartości fruktozy." }
+    source: gi-atkinson-2021
+    locator: "Supplemental Table 1, food 1745"
 review_status: draft
 provenance: ai-drafted
 review_notes:
