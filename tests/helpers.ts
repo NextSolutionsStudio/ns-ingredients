@@ -98,6 +98,7 @@ export const FIXTURE_INGREDIENTS: IngredientT[] = [
     type: "carbohydrate",
     names: { en: ["sugar"], pl: ["cukier"], de: ["Zucker"] },
     assertions: [fact("origin.plant", "reg-1169-2011"), addedSugar],
+    glycemic: [{ range: [61, 69], fraction: "sugars", method: "iso", source: "gi-dodd-2011" }],
     review_status: "draft",
     provenance: "human",
   },
@@ -243,6 +244,10 @@ export const FIXTURE_INGREDIENTS: IngredientT[] = [
     id: "glucose-syrup",
     type: "ingredient",
     names: { en: ["glucose syrup"], pl: ["syrop glukozowy"], de: ["Glukosesirup"] },
+    glycemic: [
+      { range: [90, 100], fraction: "sugars", method: "non_iso", source: "gi-dodd-2011" },
+      { range: [90, 100], fraction: "starch", method: "non_iso", source: "gi-dodd-2011" },
+    ],
     variants: [
       {
         id: "wheat",

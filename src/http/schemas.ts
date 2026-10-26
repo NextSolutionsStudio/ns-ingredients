@@ -7,6 +7,13 @@ export const LangParam = z.enum(["en", "pl", "de"]).optional().openapi({
   example: "pl",
 });
 
+export const FieldsParam = z.string().max(2000).optional().openapi({
+  description:
+    "Comma-separated dot paths to return, e.g. summary,flags.code,ranking.reasons.label. Arrays are " +
+    "implicit. Omit for the full response; an unknown path is a 400 that lists the valid ones.",
+  example: "summary,flags.code,flags.severity,diets",
+});
+
 export const Problem = z.object({
   type: z.string(),
   title: z.string(),
@@ -123,6 +130,14 @@ export const Ingredient = z.object({
     year: z.number().int().optional(),
     source: z.string(),
   })),
+  glycemic: z.array(z.object({
+    range: z.tuple([z.number(), z.number()]),
+    fraction: z.enum(["sugars", "starch", "polyols"]),
+    method: z.enum(["iso", "non_iso", "definition"]),
+    note: z.string().optional(),
+    source: z.string(),
+    locator: z.string().optional(),
+  })).openapi({ description: "Glycemic index of the carbohydrate this ingredient adds (glucose = 100)." }),
   review_status: z.string(),
   provenance: z.string(),
   review_notes: z.array(z.string()),
@@ -150,6 +165,17 @@ export const AnalyzeRequest = z.object({
     sugars_g: z.number().min(0).max(100).openapi({
       description: 'Total sugars as declared ("of which sugars").',
     }),
+    carbohydrate_g: z.number().min(0).max(100).optional().openapi({
+      description:
+        "Carbohydrate as declared; enables the glycemic-load estimate. EU labels declare available " +
+        "carbohydrate (polyols in, fibre out).",
+    }),
+    carbohydrate_definition: z.enum(["available", "total"]).optional().openapi({
+      description:
+        '"total" when the carbohydrate includes fibre (US labels); then send fibre_g. Default "available".',
+    }),
+    polyols_g: z.number().min(0).max(100).optional(),
+    fibre_g: z.number().min(0).max(100).optional(),
     serving: z.object({
       amount: z.number().positive().max(5000),
       unit: z.enum(["g", "ml"]),
@@ -237,7 +263,7 @@ export const AnalysisResponse = z.object({
     grade: Grade,
     triggers: z.array(z.object({
       path: z.string().openapi({
-        description: 'A label item path, or "nutrition.sugars_g" on basis nutrition.',
+        description: 'A label item path, or "nutrition.<field>" on basis nutrition.',
       }),
       ingredient_id: z.string().optional().openapi({ description: "Absent only on basis nutrition." }),
       variant_id: z.string().optional(),
@@ -324,6 +350,30 @@ export const AnalysisResponse = z.object({
       criteria: z.literal("uk-fop-2016"),
       kind: z.literal("fact"),
       sources: z.array(SourceRef),
+    }),
+    glycemic_load: z.object({
+      status: z.enum(["estimated", "unknown"]),
+      reason: z.enum(["fibre_needed", "low_coverage"]).optional(),
+      per: z.enum(["serving", "100g", "100ml"]),
+      range: z.tuple([z.number(), z.number()]).nullable(),
+      band: z.tuple([z.enum(["low", "medium", "high"]), z.enum(["low", "medium", "high"])]).nullable()
+        .openapi({
+          description: "Band of each end of the range; per serving only.",
+        }),
+      coverage: z.number(),
+      fractions: z.array(z.object({
+        fraction: z.enum(["sugars", "starch", "polyols"]),
+        grams: z.number(),
+        gi: z.tuple([z.number(), z.number()]).nullable(),
+        from: z.array(z.string()),
+      })),
+      kind: z.literal("estimate"),
+      grade: z.literal("D"),
+      method: z.literal("gl-weighted-range/1"),
+      assumptions: z.array(z.string()),
+      sources: z.array(SourceRef),
+    }).nullable().openapi({
+      description: "Glycemic-load estimate, present when carbohydrate was declared. Never a measured GI.",
     }),
   }).nullable().openapi({ description: "Amounts from the declared nutrition; null when none was sent." }),
   unanalysed_text: z.string().nullable(),

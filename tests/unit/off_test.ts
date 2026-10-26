@@ -106,3 +106,20 @@ Deno.test("toNutrition: OFF sugars become the API's nutrition input; drinks read
   assertEquals(toNutrition({ nutriments: {} }), null);
   assertEquals(toNutrition({ nutriments: { sugars_100g: "12" } }), null);
 });
+
+Deno.test("toNutrition: carbohydrate, polyols and fibre pass through; a carbohydrate below sugars is dropped", () => {
+  assertEquals(
+    toNutrition({ nutriments: { sugars_100g: 20, carbohydrates_100g: 60, polyols_100g: 5, fiber_100g: 3 } }),
+    {
+      basis: "100g",
+      sugars_g: 20,
+      carbohydrate_g: 60,
+      polyols_g: 5,
+      fibre_g: 3,
+    },
+  );
+  assertEquals(toNutrition({ nutriments: { sugars_100g: 20, carbohydrates_100g: 12 } }), {
+    basis: "100g",
+    sugars_g: 20,
+  });
+});

@@ -199,6 +199,12 @@ export async function readKb(root: string): Promise<KbReadResult> {
     }
     for (const r of ing.regulatory ?? []) useSource(r.source, `${where} regulatory`);
     for (const r of ing.reference_values ?? []) useSource(r.source, `${where} reference value`);
+    for (const g of ing.glycemic ?? []) {
+      useSource(g.source, `${where} glycemic`);
+      if (g.range[0] > g.range[1]) errors.push(`${where} glycemic: range [${g.range}] is reversed`);
+    }
+    const fractions = (ing.glycemic ?? []).map((g) => g.fraction);
+    if (new Set(fractions).size < fractions.length) errors.push(`${where} glycemic: one entry per fraction`);
   }
   for (const g of kept) {
     for (const f of g.functions ?? []) {

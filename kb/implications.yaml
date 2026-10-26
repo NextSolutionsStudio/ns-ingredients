@@ -325,6 +325,14 @@ implications:
     label: { en: "High in sugars", pl: "Wysoka zawartość cukrów", de: "Hoher Zuckergehalt" }
     definition: { en: "Declared total sugars above the UK front-of-pack 'high' criteria: more than 22.5 g per 100 g of food or 11.25 g per 100 ml of drink, or, for portions over 100 g (food) or 150 ml (drinks), more than 27 g or 13.5 g per portion. EU law defines only 'low sugars'. Computed from the nutrition the caller declares, never from the ingredient list; total sugars include those naturally in milk and fruit." }
     evidence_required: "Declared nutrition; DHSC front-of-pack guidance (2016)."
+  - code: health.high_glycemic_load
+    group: health
+    severity: notice
+    concern: sensitivity
+    kind: estimate
+    label: { en: "High glycemic load (estimate)", pl: "Wysoki ładunek glikemiczny (szacunek)", de: "Hohe glykämische Last (Schätzung)" }
+    definition: { en: "Estimated glycemic load per serving of 20 or more across the whole estimated range. Calculated from declared carbohydrate and the GI of the label's carbohydrate sources (method gl-weighted-range/1); never a measured GI. Matters to people managing blood glucose, so it ranks only when a profile asks for it." }
+    evidence_required: "Declared carbohydrate and serving; curated GI values with sources."
   - code: health.laxative_polyol
     group: health
     severity: notice

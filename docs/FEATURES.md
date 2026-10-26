@@ -41,14 +41,14 @@ Status: **shipped** (in the API today), **planned** (with the PR it lands in, se
 | Allergens | The EU 14, including `(z MLEKA)`-style emphasis and may-contain clauses, reported separately from contents. | shipped |
 | Danger ranking | `ranking[]`, `summary.danger`; profile-aware (`avoid`, `diets`), never stored. | shipped |
 | Processing | Ultra-processing marker per ingredient. | shipped. A NOVA-style group estimate with its markers: **planned** later, labelled estimate |
-| Regulatory status | Per jurisdiction: status, conditions, date, legal source. | shipped for the EU. US entries and `regulatory.revoked_elsewhere` (FDA Red No. 3, 2025): **planned, PR A** |
+| Regulatory status | Per jurisdiction: status, conditions, date, legal source. | shipped for the EU; US rows where a source was opened, and `regulatory.revoked_elsewhere` (FDA Red No. 3, 2025) |
 | Reference values | ADI, TDI and the like, with body and year. | shipped |
-| Colours | Southampton-six warning; petrochemical origin. | shipped for E102, E110 and E129. E104, E122, E124 and more colours: **planned, PR A** |
-| Sweeteners | The WHO 2023 non-sugar-sweetener list as `processing.non_sugar_sweetener`; polyols keep their laxative statement. | **planned, PR B** |
-| Added sugar | Sugars and syrups named on the list (`health.added_sugar`). | **planned, PR C** |
-| Amount flags | Optional `nutrition` input (per 100 g): `health.high_sugar` on the UK front-of-pack threshold, sugar as % of the EU reference intake. | **planned, PR D** |
-| Glycaemic load | GL per 100 g and per portion from cited GI values and declared carbohydrate, always `kind: estimate`. | **planned, PR E** |
-| Field selection | `fields=` with dot paths (`ranking.reasons.label`), arrays implicit; unknown path → 400 listing valid ones. Default stays the full response. | **planned** next |
+| Colours | Southampton-six warning; petrochemical origin (an estimate where no source names the feedstock). | shipped: all six Southampton colours, erythrosine and seven more synthetic colours |
+| Sweeteners | WHO's 2023 non-sugar-sweetener definition as `processing.non_sugar_sweetener` (an estimate for ones WHO does not name); polyols keep their laxative statement. | shipped: every EU-authorised sweetener and polyol. A trigger for unmatched items under a sweetener header: **not planned**, it only catches misspellings |
+| Added sugar | Free sugars named on the list (`health.added_sugar`), with what the list proves: first ingredient, place, declared %, number of different sugars. | shipped: 19 sugars and syrups |
+| Amount flags | Optional `nutrition` input (per 100 g or 100 ml, optional serving): sugar band and `health.high_sugar` on the UK front-of-pack criteria, sugar as % of the EU reference intake. | shipped |
+| Glycaemic load | GL range per serving (or per 100) from cited GI values and declared carbohydrate, with coverage and assumptions; always `kind: estimate`, grade D. `health.high_glycemic_load` only when the whole range is high. | shipped |
+| Field selection | `fields=` with dot paths (`ranking.reasons.label`), arrays implicit; unknown path → 400 listing valid ones. Default stays the full response. | shipped on `/v1/analyze` and `/v1/ingredients/{id}` |
 | Evidence | Sources with title, publisher, year, URL, access date; claim-level locators. | shipped |
 | Caching | ETag and `If-None-Match` on knowledge-base reads. | shipped |
 | Nutri-Score, eco score | Product-level grades. | **not planned**: Open Food Facts computes them; the explorer shows theirs |

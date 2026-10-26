@@ -3,7 +3,15 @@
 import type { AssertionT, IngredientT, Lang, TextT } from "../kb/schema.ts";
 import type { KbIndex, MatchType } from "./kb-index.ts";
 import { baseENumber, findENumbers, guessLang, normName } from "./normalize.ts";
-import { assessNutrition, highSugarNote, type NutritionInput, type NutritionResult } from "./nutrition.ts";
+import {
+  assessNutrition,
+  type GiCarrier,
+  GL_BANDS,
+  highGlNote,
+  highSugarNote,
+  type NutritionInput,
+  type NutritionResult,
+} from "./nutrition.ts";
 import { type ParsedItem, parseLabel, type Percent, splitTopLevel } from "./parse.ts";
 
 export type Certainty = "yes" | "no" | "maybe" | "unknown";
@@ -49,7 +57,7 @@ export interface ItemResult {
 }
 
 export interface FlagTrigger {
-  /** A label item, or "nutrition.sugars_g" for a trigger computed from declared nutrition. */
+  /** A label item, or "nutrition.<field>" for a trigger computed from declared nutrition. */
   path: string;
   /** Absent only on basis "nutrition". */
   ingredient_id?: string;
@@ -399,30 +407,59 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
   const items = parsed.items.map((it) => resolveItem(it));
   const sugar = flags.get("health.added_sugar");
   if (sugar && noteSugarPositions(sugar, items, lang)) citedSources.add(ORDER_SOURCE.id);
-  const nutrition = opts.nutrition ? assessNutrition(opts.nutrition) : null;
-  const highSugar = index.implications.get("health.high_sugar");
-  if (nutrition) { for (const s of nutrition.sugars.sources) citedSources.add(s.id); }
-  if (nutrition?.sugars.band === "high" && highSugar) {
-    flags.set(highSugar.code, {
-      code: highSugar.code,
-      group: highSugar.group,
-      severity: highSugar.severity,
-      concern: highSugar.concern,
-      label: txt(highSugar.label, lang),
+  // Amounts: only from declared nutrition. GL reads the GI of every matched carbohydrate source.
+  const carriers: GiCarrier[] = [];
+  const collect = (list: ItemResult[]) => {
+    for (const it of list) {
+      const g = it.match ? index.get(it.match.ingredient_id)?.glycemic : undefined;
+      if (g?.length) carriers.push({ ingredient_id: it.match!.ingredient_id, glycemic: g });
+      collect(it.children);
+    }
+  };
+  if (opts.nutrition?.carbohydrate_g !== undefined) collect(items);
+  const nutrition = opts.nutrition ? assessNutrition(opts.nutrition, carriers, lang) : null;
+  const nutritionFlag = (
+    code: string,
+    path: string,
+    t: Pick<FlagTrigger, "kind" | "grade" | "note" | "sources" | "population">,
+  ) => {
+    const impl = index.implications.get(code);
+    if (!impl) return;
+    for (const s of t.sources) citedSources.add(s.id);
+    flags.set(code, {
+      code,
+      group: impl.group,
+      severity: impl.severity,
+      concern: impl.concern,
+      label: txt(impl.label, lang),
       certainty: "yes",
-      kind: "fact",
-      grade: "A",
-      triggers: [{
-        path: "nutrition.sugars_g",
-        basis: "nutrition",
-        certainty: "yes",
+      kind: t.kind,
+      grade: t.grade,
+      triggers: [{ path, basis: "nutrition", certainty: "yes", ...t }],
+    });
+  };
+  if (nutrition) {
+    for (const s of nutrition.sugars.sources) citedSources.add(s.id);
+    for (const s of nutrition.glycemic_load?.sources ?? []) citedSources.add(s.id);
+    if (nutrition.sugars.band === "high") {
+      nutritionFlag("health.high_sugar", "nutrition.sugars_g", {
         kind: "fact",
         grade: "A",
         population: ["general"],
         note: highSugarNote(nutrition, opts.nutrition!.serving, lang),
         sources: nutrition.sugars.sources,
-      }],
-    });
+      });
+    }
+    // Only when the whole range is high: an uncertain range never raises the flag.
+    const gl = nutrition.glycemic_load;
+    if (gl?.status === "estimated" && gl.per === "serving" && gl.range![0] >= GL_BANDS.high) {
+      nutritionFlag("health.high_glycemic_load", "nutrition.carbohydrate_g", {
+        kind: "estimate",
+        grade: "D",
+        note: highGlNote(gl, opts.nutrition!.serving!, lang),
+        sources: gl.sources,
+      });
+    }
   }
 
   // Precautionary allergen statement ("może zawierać orzechy, sezam").

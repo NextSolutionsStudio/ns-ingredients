@@ -128,6 +128,28 @@ Total sugars include those naturally in milk and fruit, so plain milk or juice c
 added; `health.added_sugar` is what tells the two apart. The analysis does not check that the declared
 numbers belong to the declared list.
 
+### Glycemic load (an estimate, never a measured GI)
+
+When `carbohydrate_g` is declared, `nutrition.glycemic_load` estimates GL = GI × available carbohydrate / 100
+(method `gl-weighted-range/1`, `kind: estimate`, grade D):
+
+1. **Fractions.** Available carbohydrate splits into sugars (declared), polyols (declared, else 0) and starch
+   and other carbohydrate (the rest). EU labels declare available carbohydrate; a label whose carbohydrate
+   includes fibre (`carbohydrate_definition: "total"`) needs `fibre_g`, or the estimate is `unknown`.
+2. **GI per fraction.** Each fraction takes the full range (lowest to highest) of the curated GI values of the
+   label ingredients that feed it. Each value cites its own study. No weights are guessed: a declared
+   percentage does not narrow the range yet.
+3. **Coverage.** The share of available carbohydrate whose fraction has a GI source. A fraction without one
+   counts as GI 0–100, which widens the range rather than guessing. Below 70% coverage the estimate is
+   `unknown`.
+4. **Bands**, per serving only: low at 10 or less, high at 20 or more. Without a serving the range is per 100
+   and has no band.
+5. **Known bias.** Calculated GI overestimates measured GI: by 22–50% for mixed meals (Dodd et al. 2011).
+   The estimate is reported uncorrected, with that assumption stated in the response.
+6. **Flag.** `health.high_glycemic_load` (notice, sensitivity, estimate) only when the low end of the range
+   is 20 or more per serving. As a sensitivity it ranks and sets `summary.danger` only when the profile asks
+   for it.
+
 ## Diets
 
 Four diets are evaluated: vegan, vegetarian, gluten-free and lactose-free. Each is `yes`, `no`, `maybe` or
@@ -172,6 +194,7 @@ knowledge-base history with the new `kb_version`.
 ## Changelog
 
 - **2026-10-26**: `nutrition` input and the [Amounts](#amounts) section (sugar bands, reference intake,
-  `health.high_sugar`); position facts on added sugars; codes `processing.non_sugar_sweetener`,
+  `health.high_sugar`, the glycemic-load estimate and `health.high_glycemic_load`); position facts on added
+  sugars; `origin.bee_product` (honey: not vegan, vegetarian); codes `processing.non_sugar_sweetener`,
   `health.added_sugar`, `health.high_sugar` and `regulatory.revoked_elsewhere`.
 - **2026-09-27**: first published version.
