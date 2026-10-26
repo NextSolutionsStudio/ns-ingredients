@@ -54,6 +54,14 @@ variants:
       en: "A significant European feedstock, though smaller globally than maize."
       pl: "Istotny surowiec europejski, choć w skali globalnej mniejszy niż kukurydza."
 assertions:
+  - code: origin.plant
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "EU sugars law defines glucose syrup as obtained from starch and/or inulin, both plant carbohydrates."
+      pl: "Unijne prawo o cukrach definiuje syrop glukozowy jako otrzymywany ze skrobi lub inuliny, czyli węglowodanów roślinnych."
+    sources: [{ id: dir-2001-111, locator: "Annex, Part A, point 7" }]
   - code: health.added_sugar
     certainty: yes
     kind: fact

@@ -421,3 +421,30 @@
     flags: [health.laxative_polyol=yes, processing.non_sugar_sweetener=yes, health.phenylalanine_source=yes]
     absent: [health.added_sugar]
     statements: [phenylalanine, laxative]
+
+- id: de-hazelnut-cocoa-spread
+  lang: de
+  category: confectionery
+  note: Milk powder named as a German compound (Magermilchpulver) must still raise the milk allergen and set diets.
+  text: >-
+    Zutaten: Zucker, Palmöl, HASELNÜSSE 13 %, MAGERMILCHPULVER 8,7 %, fettarmer Kakao, Emulgator: Lecithine
+    (Soja), Vanillin.
+  expect:
+    match:
+      Zucker: sugar
+      MAGERMILCHPULVER: milk
+    flags: [allergen.milk=yes, allergen.nuts=yes, allergen.soybeans=yes, health.added_sugar=yes]
+    diets: { vegan: "no", vegetarian: "yes", lactose_free: "no", gluten_free: "yes" }
+
+- id: en-boiled-sweets
+  lang: en
+  category: confectionery
+  note: Glucose syrup is made from starch or inulin (Directive 2001/111), so it does not leave the diets unknown.
+  text: >-
+    Ingredients: Sugar, Glucose Syrup, Citric Acid.
+  expect:
+    match:
+      glucose syrup: glucose-syrup
+    flags: [health.added_sugar=yes]
+    absent: [allergen.milk, allergen.gluten]
+    diets: { vegan: "yes", vegetarian: "yes" }
