@@ -35,11 +35,12 @@ export class UsageRecorder {
     const batch = [...this.pending.values()];
     this.pending.clear();
     try {
-      // jsonb_to_recordset keeps it one statement and identical on postgres.js and PGlite.
+      // jsonb_to_recordset keeps it one statement and identical on postgres.js and PGlite. The parameter is
+      // typed text: typed jsonb, postgres.js JSON-encodes the already-encoded string into a jsonb string scalar.
       await this.db.query(
         `insert into api_usage (key_id, day, route, count, errors)
          select key_id, day, route, count, errors
-         from jsonb_to_recordset($1::jsonb) as x(key_id bigint, day date, route text, count int, errors int)
+         from jsonb_to_recordset($1::text::jsonb) as x(key_id bigint, day date, route text, count int, errors int)
          on conflict (key_id, day, route) do update
          set count = api_usage.count + excluded.count, errors = api_usage.errors + excluded.errors`,
         [JSON.stringify(
