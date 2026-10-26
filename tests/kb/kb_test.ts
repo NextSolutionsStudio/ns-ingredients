@@ -86,3 +86,25 @@ Deno.test("kb_version names the content, not how the directory was spelled", asy
     assertEquals((await readKb(dir)).bundle?.version, bundle!.version, dir);
   }
 });
+
+Deno.test("all six Southampton colours carry the warning (Reg 1333/2008 Annex V)", () => {
+  const SIX = ["E102", "E104", "E110", "E122", "E124", "E129"];
+  const missing = SIX.filter((e) =>
+    !bundle!.ingredients.some((i) =>
+      i.e_number === e && i.provenance !== "wikidata" &&
+      (i.assertions ?? []).some((a) => a.code === "health.southampton_colour" && a.certainty === "yes")
+    )
+  );
+  assertEquals(missing, []);
+});
+
+Deno.test("regulatory.revoked_elsewhere names a jurisdiction outside the EU and a matching regulatory row", () => {
+  const bad: string[] = [];
+  for (const ing of bundle!.ingredients) {
+    for (const a of (ing.assertions ?? []).filter((a) => a.code === "regulatory.revoked_elsewhere")) {
+      const row = (ing.regulatory ?? []).find((r) => r.jurisdiction === a.jurisdiction);
+      if (!a.jurisdiction || a.jurisdiction === "EU" || row?.status !== "banned") bad.push(ing.id);
+    }
+  }
+  assertEquals(bad, []);
+});

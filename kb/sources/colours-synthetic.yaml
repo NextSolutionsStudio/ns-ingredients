@@ -1,0 +1,118 @@
+# Batch-specific citations for the "synthetic colours" batch (Patent Blue V E131, indigotine E132,
+# Brilliant Blue FCF E133, Green S E142, Brilliant Black BN E151, Brown HT E155, Litholrubine BK E180).
+# Ids prefixed cs- to avoid clashing with other batches. Every entry below was opened with WebFetch
+# on the accessed date; the note says what the page states, not what it is believed to say.
+sources:
+  - id: cs-wikipedia-patent-blue-v
+    type: reference
+    title: Patent Blue V
+    publisher: Wikipedia
+    url: https://en.wikipedia.org/wiki/Patent_Blue_V
+    licence: "CC BY-SA 4.0"
+    accessed: 2026-10-26
+    note: "Describes Patent Blue V (E131, CAS 3536-49-0) as a synthetic triphenylmethane (triarylmethane) acid dye. Gives no manufacturing route."
+  - id: cs-wikipedia-de-patentblau-v
+    type: reference
+    title: Patentblau V
+    publisher: Wikipedia (German)
+    url: https://de.wikipedia.org/wiki/Patentblau_V
+    licence: "CC BY-SA 4.0"
+    accessed: 2026-10-26
+    note: "Herstellung section: the original (1888) process heats 3-hydroxybenzaldehyde and diethylaniline in concentrated sulfuric acid, isolates a hydroxy leuco base after alkaline work-up, sulfonates it with sulfur trioxide, isolates the disulfonic acid as the calcium salt, then oxidises it with lead dioxide or manganese dioxide (later patents use quinones). States the calcium salt is the form mostly used, E 131 is a triphenylmethane acid dye."
+  - id: cs-cfr-74-102-fdc-blue-2
+    type: regulation
+    title: "21 CFR 74.102 — FD&C Blue No. 2"
+    publisher: "U.S. Food and Drug Administration — Code of Federal Regulations"
+    url: https://www.law.cornell.edu/cfr/text/21/74.102
+    licence: "U.S. Government work — public domain"
+    accessed: 2026-10-26
+    note: "Identity paragraph: FD&C Blue No. 2 is principally the disodium salt of indigo disulfonic acid, made by heating indigo (or indigo paste) with sulfuric acid; the indigo itself is made by fusing N-phenylglycine in molten alkali (sodamide with sodium and potassium hydroxides) under ammonia. Specification limits name isatin-5-sulfonic acid, 5-sulfoanthranilic acid, the 7-sulfo isomer and non-sulfonated indigo. Permits use in food in the US."
+  - id: cs-wikipedia-indigo-carmine
+    type: reference
+    title: Indigo carmine
+    publisher: Wikipedia
+    url: https://en.wikipedia.org/wiki/Indigo_carmine
+    licence: "CC BY-SA 4.0"
+    accessed: 2026-10-26
+    note: "Describes indigo carmine (indigotine, E132, CAS 860-22-0, FD&C Blue No. 2) as an organic salt derived from indigo by aromatic sulfonation (the statement carries a 'citation needed' tag on the page). Says it is approved for human consumption in the US and EU."
+  - id: cs-wikipedia-brilliant-blue-fcf
+    type: reference
+    title: Brilliant Blue FCF
+    publisher: Wikipedia
+    url: https://en.wikipedia.org/wiki/Brilliant_Blue_FCF
+    licence: "CC BY-SA 4.0"
+    accessed: 2026-10-26
+    note: "Describes Brilliant Blue FCF (E133, CAS 3844-45-9, FD&C Blue No. 1, Acid Blue 9) as a synthetic dye produced by condensing 2-formylbenzenesulfonic acid with the appropriate aniline and oxidising the product (citing a handbook of industrial chemistry). Does not name the aniline or mention petroleum."
+  - id: cs-pubchem-brilliant-blue-manufacture
+    type: dataset
+    title: "PubChem compound 19700 (FD&C Blue No. 1) — Methods of Manufacturing"
+    publisher: "PubChem (NCBI/NLM), HSDB extract citing Ullmann's Encyclopedia of Industrial Chemistry"
+    url: https://pubchem.ncbi.nlm.nih.gov/rest/pug_view/data/compound/19700/JSON?heading=Methods+of+Manufacturing
+    licence: "PubChem/NLM open data — cited, not reproduced"
+    accessed: 2026-10-26
+    note: "The Methods of Manufacturing section describes making the colourless leuco compound from 2-formylbenzenesulfonic acid and N-ethyl-N-(3-sulfobenzyl)aniline, then oxidising it to the dye (iron-complex catalyst with peroxomonosulfuric acid or hydrogen peroxide). No conditions or yields given. Record is titled FD&C Blue No. 1; the underlying HSDB reference is headed 'Brilliant Blue'."
+  - id: cs-wikipedia-green-s
+    type: reference
+    title: Green S
+    publisher: Wikipedia
+    url: https://en.wikipedia.org/wiki/Green_S
+    licence: "CC BY-SA 4.0"
+    accessed: 2026-10-26
+    note: "Describes Green S (E142, CAS 3087-16-9, lissamine green B, C.I. 44090) as a 'synthetic coal tar triarylmethane dye'. Gives no manufacturing route. Lists it as prohibited as a food additive in Canada, the US, Japan and Norway and approved in the EU, Australia and New Zealand."
+  - id: cs-wikipedia-brilliant-black-bn
+    type: reference
+    title: Brilliant Black BN
+    publisher: Wikipedia
+    url: https://en.wikipedia.org/wiki/Brilliant_Black_BN
+    licence: "CC BY-SA 4.0"
+    accessed: 2026-10-26
+    note: "Describes Brilliant Black BN (E151, CAS 2519-30-4, also Black PN, C.I. Food Black 1, C.I. 28440) as a synthetic black diazo (azo) dye, usually the tetrasodium salt. Gives no manufacturing route."
+  - id: cs-wikipedia-de-brillantschwarz-bn
+    type: reference
+    title: Brillantschwarz BN
+    publisher: Wikipedia (German)
+    url: https://de.wikipedia.org/wiki/Brillantschwarz_BN
+    licence: "CC BY-SA 4.0"
+    accessed: 2026-10-26
+    note: "Calls Brillantschwarz BN (E 151) a synthetic, water-soluble disazo dye and lists the chain of precursors 1-aminobenzene-4-sulfonic acid, 1-aminonaphthalene-7-sulfonic acid and 1-acetylamino-8-naphthol-4,6-disulfonic acid; does not spell out the coupling steps. States it is permitted as a food colour in the EU."
+  - id: cs-wikipedia-brown-ht
+    type: reference
+    title: Brown HT
+    publisher: Wikipedia
+    url: https://en.wikipedia.org/wiki/Brown_HT
+    licence: "CC BY-SA 4.0"
+    accessed: 2026-10-26
+    note: "Describes Brown HT (E155, CAS 4553-89-3, Chocolate Brown HT, Food Brown 3, C.I. 20285) as 'a brown synthetic coal tar diazo dye' used as a substitute for cocoa or caramel colour, mainly in chocolate cakes. Gives no manufacturing route."
+  - id: cs-inchem-jecfa-brown-ht
+    type: monograph
+    title: "JECFA Evaluations — Brown HT"
+    publisher: "WHO/IPCS INCHEM (Joint FAO/WHO Expert Committee on Food Additives)"
+    url: https://www.inchem.org/documents/jecfa/jeceval/jec_240.htm
+    licence: "WHO/IPCS INCHEM — JECFA texts CC BY-NC-SA (cited, not reproduced)"
+    accessed: 2026-10-26
+    note: "Evaluation summary page for Brown HT (INS 155): classifies it as a bisazo colour and gives its chemical name as a disodium bis-azo di-naphthalenesulfonate; synonyms Chocolate Brown HT and C.I. Food Brown 3 (C.I. 20285). Does not describe manufacture."
+  - id: cs-wikipedia-lithol-rubine-bk
+    type: reference
+    title: Lithol Rubine BK
+    publisher: Wikipedia
+    url: https://en.wikipedia.org/wiki/Lithol_Rubine_BK
+    licence: "CC BY-SA 4.0"
+    accessed: 2026-10-26
+    note: "Describes Lithol Rubine BK (E180, CAS 5281-04-9, C.I. Pigment Red 57:1, D&C Red No. 7) as a synthetic reddish azo dye prepared by azo coupling with 3-hydroxy-2-naphthoic acid, usually supplied as the calcium salt; used for plastics, paints, printing inks, textiles, cheese rind and some lip balms. Does not name the diazo component and does not state any EU restriction."
+  - id: cs-wikipedia-de-litholrubin-bk
+    type: reference
+    title: Litholrubin BK
+    publisher: Wikipedia (German)
+    url: https://de.wikipedia.org/wiki/Litholrubin_BK
+    licence: "CC BY-SA 4.0"
+    accessed: 2026-10-26
+    note: "Herstellung section: 2-amino-5-methylbenzenesulfonic acid is dissolved in sodium hydroxide, diazotised with sodium nitrite and hydrochloric acid, coupled with 3-hydroxy-2-naphthoic acid, and the sodium salt is converted to the calcium salt with calcium chloride (a laked azo pigment). Names the food authorisation (E 180) as colouring the edible coating of cheese, quantum satis; cites an EFSA 2010 re-evaluation. Does not itself say the use is restricted to cheese."
+  - id: cs-dairyreporter-efsa-e180-2010
+    type: reference
+    title: "EFSA finds no major safety concerns with cheese rind dye"
+    publisher: DairyReporter (William Reed)
+    year: 2010
+    url: https://www.dairyreporter.com/Article/2010/05/12/EFSA-finds-no-major-safety-concerns-with-cheese-rind-dye/
+    licence: "Cited, not reproduced"
+    accessed: 2026-10-26
+    note: "Trade-press report on EFSA's 2010 re-evaluation: calls Litholrubine BK (E180) a red mono-azo dye approved in the EU as a food additive whose only current permitted use is colouring cheese rind. Secondary source for the Annex II restriction; the regulation text itself was not opened."

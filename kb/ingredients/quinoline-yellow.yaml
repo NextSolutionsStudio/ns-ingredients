@@ -1,0 +1,84 @@
+id: quinoline-yellow
+type: additive
+e_number: E104
+ids: { cas: "8004-92-0", wikidata: Q420123, pubchem: 24671 }
+names:
+  en: [quinoline yellow, quinoline yellow WS, CI food yellow 13]
+  pl: [żółcień chinolinowa]
+  de: [Chinolingelb]
+functions: [colour]
+summary:
+  en: >-
+    A synthetic greenish-yellow colour used in drinks, sweets, sauces and decorations. It is not a single
+    molecule but a mixture of sulfonated forms of one quinophthalone dye. It is one of the "Southampton six"
+    colours that must carry the EU label warning about activity and attention in children, and in 2009 EFSA
+    lowered its acceptable daily intake twentyfold, which led the EU to cut its permitted use levels. It is
+    not permitted in food in the US.
+  pl: >-
+    Syntetyczny zielonkawożółty barwnik stosowany w napojach, słodyczach, sosach i dekoracjach. Nie jest
+    pojedynczym związkiem, lecz mieszaniną sulfonowanych form jednego barwnika chinoftalonowego. Należy do
+    „sześciu z Southampton” barwników, które w UE muszą nosić na etykiecie ostrzeżenie o wpływie na
+    aktywność i uwagę dzieci; w 2009 r. EFSA obniżyła jego dopuszczalne dzienne spożycie dwudziestokrotnie,
+    co skłoniło UE do zmniejszenia dozwolonych poziomów stosowania. W USA nie jest dopuszczony do żywności.
+assertions:
+  - code: health.southampton_colour
+    certainty: yes
+    kind: fact
+    grade: A
+    population: [children]
+    note:
+      en: "One of six colours (with E102, E110, E122, E124, E129) that trigger the mandatory EU label statement, following the 2007 McCann RCT that found a mixture of these colours (plus sodium benzoate) increased hyperactive behaviour in young children."
+      pl: "Jeden z sześciu barwników (wraz z E102, E110, E122, E124, E129) wymagających obowiązkowego oświadczenia na etykiecie w UE, w związku z badaniem RCT McCann z 2007 r., które wykazało, że mieszanka tych barwników (i benzoesanu sodu) zwiększała nadpobudliwość u małych dzieci."
+    sources: [{ id: reg-1333-2008, locator: "Annex V" }, { id: mccann-2007 }]
+  - code: regulatory.eu_warning_label
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Label must state '[name/E-number]: may have an adverse effect on activity and attention in children.'"
+      pl: "Etykieta musi zawierać zapis: „[nazwa/numer E]: może mieć szkodliwy wpływ na aktywność i skupienie uwagi u dzieci”."
+    sources: [{ id: reg-1333-2008, locator: "Annex V" }]
+  - code: regulatory.eu_restricted
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "After EFSA lowered the ADI from 10 to 0.5 mg/kg bw/day (2009), Reg 232/2012 reduced the permitted use levels and withdrew some uses."
+      pl: "Po obniżeniu przez EFSA ADI z 10 do 0,5 mg/kg mc./dzień (2009) rozporządzenie 232/2012 zmniejszyło dozwolone poziomy stosowania i wycofało część zastosowań."
+    sources: [{ id: csh-reg-232-2012, locator: "recital 3" }]
+  - code: origin.petrochemical_synthetic
+    certainty: yes
+    kind: estimate
+    grade: B
+    note:
+      en: "Made by sulfonating the synthetic aromatic dye 2-(2-quinolyl)-1,3-indandione (JECFA specification). Its aromatic building blocks are industrial chemicals from fossil feedstocks (petroleum or coal tar); the specification does not name the feedstock, hence estimate. How it is made says nothing about safety by itself."
+      pl: "Otrzymywany przez sulfonowanie syntetycznego barwnika aromatycznego 2-(2-chinolilo)-1,3-indandionu (specyfikacja JECFA). Jego aromatyczne składniki wyjściowe to chemikalia przemysłowe z surowców kopalnych (ropy naftowej lub smoły węglowej); specyfikacja nie wskazuje surowca, stąd szacunek. Sposób produkcji sam w sobie nie mówi nic o bezpieczeństwie."
+    sources: [{ id: csh-jecfa-quinoline-yellow-2011, locator: "Definition" }, { id: csh-wikipedia-quinoline-yellow }]
+regulatory:
+  - jurisdiction: EU
+    status: restricted
+    conditions: { en: "Authorised in specific food categories at reduced use levels since Reg 232/2012; triggers the Annex V children's activity and attention warning.", pl: "Dopuszczony w określonych kategoriach żywności na obniżonych poziomach od rozp. 232/2012; wymaga ostrzeżenia z Załącznika V o wpływie na aktywność i uwagę dzieci." }
+    since: "2012"
+    source: csh-reg-232-2012
+  - jurisdiction: US
+    status: not_authorised
+    conditions: { en: "Not a permitted food colour; allowed in drugs and cosmetics as D&C Yellow No. 10.", pl: "Niedopuszczony jako barwnik spożywczy; dozwolony w lekach i kosmetykach jako D&C Yellow No. 10." }
+    source: csh-wikipedia-quinoline-yellow
+reference_values:
+  - type: ADI
+    value: 0.5
+    unit: "mg/kg bw/day"
+    body: EFSA
+    year: 2009
+    source: csh-reg-232-2012
+  - type: ADI
+    value: 3
+    unit: "mg/kg bw/day"
+    body: JECFA
+    year: 2016
+    source: csh-jecfa-db-quinoline-yellow
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "EFSA's 2009 opinion (EFSA Journal 2009;7(11):1329) was not opened (HTTP 403); the EFSA ADI is taken from Reg 232/2012, which states it."
+  - "Per-category Annex II maximum levels not transcribed (avoid a wrong number)."

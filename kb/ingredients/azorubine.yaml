@@ -1,0 +1,58 @@
+id: azorubine
+type: additive
+e_number: E122
+ids: { cas: "3567-69-9", wikidata: Q409676, chebi: "CHEBI:82414", pubchem: 19118 }
+names:
+  en: [azorubine, carmoisine, CI food red 3]
+  pl: [azorubina, karmoizyna]
+  de: [Azorubin, Carmoisin]
+functions: [colour]
+summary:
+  en: >-
+    A synthetic red azo dye built from two naphthalene units, used in sweets, desserts, drinks and
+    jellies. It is one of the "Southampton six" colours that must carry the EU label warning about
+    activity and attention in children. It has never been used in food in the US.
+  pl: >-
+    Syntetyczny czerwony barwnik azowy zbudowany z dwóch jednostek naftalenu, stosowany w słodyczach,
+    deserach, napojach i galaretkach. Należy do „sześciu z Southampton” barwników, które w UE muszą nosić na
+    etykiecie ostrzeżenie o wpływie na aktywność i uwagę dzieci. W USA nigdy nie był stosowany w żywności.
+assertions:
+  - code: health.southampton_colour
+    certainty: yes
+    kind: fact
+    grade: A
+    population: [children]
+    note:
+      en: "One of six colours (with E102, E104, E110, E124, E129) that trigger the mandatory EU label statement, following the 2007 McCann RCT that found a mixture of these colours (plus sodium benzoate) increased hyperactive behaviour in young children."
+      pl: "Jeden z sześciu barwników (wraz z E102, E104, E110, E124, E129) wymagających obowiązkowego oświadczenia na etykiecie w UE, w związku z badaniem RCT McCann z 2007 r., które wykazało, że mieszanka tych barwników (i benzoesanu sodu) zwiększała nadpobudliwość u małych dzieci."
+    sources: [{ id: reg-1333-2008, locator: "Annex V" }, { id: mccann-2007 }, { id: csh-wikipedia-carmoisine }]
+  - code: regulatory.eu_warning_label
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Label must state '[name/E-number]: may have an adverse effect on activity and attention in children.'"
+      pl: "Etykieta musi zawierać zapis: „[nazwa/numer E]: może mieć szkodliwy wpływ na aktywność i skupienie uwagi u dzieci”."
+    sources: [{ id: reg-1333-2008, locator: "Annex V" }]
+  - code: origin.petrochemical_synthetic
+    certainty: yes
+    kind: estimate
+    grade: B
+    note:
+      en: "An azo dye made from naphthalene-sulfonic-acid intermediates: its JECFA specification limits leftover 4-amino- and 4-hydroxy-1-naphthalenesulfonic acid and unsulfonated aromatic amines. Those intermediates are industrial chemicals from fossil feedstocks (petroleum or coal tar); the specification does not name the feedstock, hence estimate. How it is made says nothing about safety by itself."
+      pl: "Barwnik azowy otrzymywany z półproduktów – kwasów naftalenosulfonowych: specyfikacja JECFA ogranicza pozostałości kwasu 4-amino- i 4-hydroksy-1-naftalenosulfonowego oraz niesulfonowanych amin aromatycznych. Te półprodukty to chemikalia przemysłowe z surowców kopalnych (ropy naftowej lub smoły węglowej); specyfikacja nie wskazuje surowca, stąd szacunek. Sposób produkcji sam w sobie nie mówi nic o bezpieczeństwie."
+    sources: [{ id: csh-jecfa-azorubine-1984, locator: "Definition; Purity" }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Authorised in specific food categories under Annex II conditions; triggers the Annex V children's activity and attention warning.", pl: "Dopuszczony w określonych kategoriach żywności zgodnie z Załącznikiem II; wymaga ostrzeżenia z Załącznika V o wpływie na aktywność i uwagę dzieci." }
+    source: reg-1333-2008
+  - jurisdiction: US
+    status: not_authorised
+    conditions: { en: "Never used in US food; listed in 1939 for externally applied drugs and cosmetics and delisted in 1963.", pl: "Nigdy nie stosowany w żywności w USA; wpisany w 1939 r. do leków i kosmetyków do użytku zewnętrznego i skreślony w 1963 r." }
+    source: csh-wikipedia-carmoisine
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "EFSA's 2009 re-evaluation of azorubine and the current JECFA ADI were not opened; no reference value is given until they are (the 1984 JECFA specification records an ADI of 0-4 mg/kg bw from 1983, which may be superseded)."
+  - "Per-category Annex II maximum levels not transcribed (avoid a wrong number)."

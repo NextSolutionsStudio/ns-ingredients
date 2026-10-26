@@ -1,0 +1,39 @@
+id: brown-ht
+type: additive
+e_number: E155
+ids: { cas: "4553-89-3", wikidata: Q424541, pubchem: 6536776 }
+names:
+  en: [Brown HT, Chocolate Brown HT, Food Brown 3, C.I. 20285]
+  pl: [brąz HT]
+  de: [Braun HT]
+functions: [colour]
+summary:
+  en: >-
+    A synthetic brown bisazo dye, described as a coal-tar dye, authorised in the EU as the food colour
+    E155 (also called Chocolate Brown HT). It is used as a brown colour, for example in place of cocoa
+    or caramel in chocolate-style cakes.
+  pl: >-
+    Syntetyczny brązowy barwnik dwuazowy, opisywany jako barwnik smołowy, dopuszczony w UE jako barwnik
+    spożywczy E155 (znany też jako Chocolate Brown HT). Stosowany jako brązowy kolor, na przykład zamiast
+    kakao lub karmelu w ciastach czekoladowych.
+assertions:
+  - code: origin.petrochemical_synthetic
+    certainty: yes
+    kind: estimate
+    grade: B
+    note:
+      en: "Described as a synthetic coal-tar bisazo dye (a disodium bis-azo naphthalenesulfonate), i.e. built by chemical synthesis from fossil-derived aromatic chemicals rather than extracted from a natural source. The synthesis steps were not found in a source that was opened. This describes the production route only and implies nothing about safety. No opened source names the feedstock (petroleum or coal tar), hence estimate."
+      pl: "Opisywany jako syntetyczny smołowy barwnik dwuazowy (disodowy bis-azowy naftalenosulfonian), czyli otrzymywany syntezą chemiczną z kopalnych związków aromatycznych, a nie ekstrahowany ze źródła naturalnego. Etapów syntezy nie znaleziono w żadnym otwartym źródle. Opis dotyczy wyłącznie drogi produkcji i nie oznacza niczego w kwestii bezpieczeństwa. Żadne otwarte źródło nie wskazuje surowca (ropa naftowa lub smoła węglowa), stąd szacunek."
+    sources: [{ id: cs-wikipedia-brown-ht }, { id: cs-inchem-jecfa-brown-ht }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Authorised in specific food categories under Annex II conditions; maximum levels not transcribed here.", pl: "Dopuszczony w określonych kategoriach żywności na warunkach Załącznika II; maksymalne poziomy nie zostały tu przepisane." }
+    source: reg-1333-2008
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Manufacturing steps not sourced: English Wikipedia, the JECFA evaluation page and the IACM profile give class, name and composition only. The `petrochemical_synthetic` code rests on 'synthetic coal tar diazo dye'; replace with a route description when a specification page that states one can be read (the FAO JECFA monograph PDF could not be read as text)."
+  - "Per-category Annex II maximum levels for E155 not transcribed. EUR-Lex returns empty to WebFetch, so the regulatory row cites reg-1333-2008 as registered in the KB, not a page opened here."
+  - "English Wikipedia lists many countries where it is said to be banned, citing an archived UK food guide; the IACM profile says it was never authorised in the US. Not modelled: no national regulation page was opened."
+  - "The EFSA 2010 re-evaluation lowered the ADI to 1.5 mg/kg bw/day (per an EFSA news item); not modelled as `reference_values` because the opinion itself could not be opened."

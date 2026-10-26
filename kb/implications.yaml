@@ -406,6 +406,14 @@ implications:
     label: { en: "Mandatory label statement", pl: "Obowiązkowa informacja na etykiecie", de: "Pflichtangabe auf dem Etikett" }
     definition: { en: "Its presence triggers a mandatory statement on the label (Reg 1169/2011 Annex III or Reg 1333/2008 Annex V)." }
     evidence_required: "The regulation."
+  - code: regulatory.revoked_elsewhere
+    group: regulatory
+    severity: caution
+    concern: hazard
+    kind: fact
+    label: { en: "Authorisation revoked by a major regulator outside the EU", pl: "Dopuszczenie cofnięte przez ważnego regulatora poza UE", de: "Zulassung von einer wichtigen Behörde außerhalb der EU widerrufen" }
+    definition: { en: "A major regulator outside the EU (for example the US FDA) revoked the ingredient's food authorisation, while it may still be authorised in the EU. A voluntary phase-out request is not a revocation and does not qualify. The note gives the regulator's reason and dates." }
+    evidence_required: "The revoking order or the regulator's own announcement."
   # ---------------------------------------------------------------- ethics / environment
   - code: ethics.palm_oil
     group: ethics
