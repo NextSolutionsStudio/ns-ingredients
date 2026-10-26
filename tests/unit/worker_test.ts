@@ -117,3 +117,37 @@ Deno.test("wrangler.toml declares one [[ratelimits]] per bucket with the limits 
   }
   assertEquals(new Set(blocks.map((b) => b.namespace)).size, blocks.length, "namespace ids must be unique");
 });
+
+Deno.test("keyless: /v1/meta states the per-IP limits it enforces, and only when keyless is on", async () => {
+  const keyed = await (await (await edgeApp()).fetch(new Request("https://edge.test/v1/meta"))).json();
+  assertEquals(keyed.keyless, undefined);
+  const index = await fixtureIndex();
+  const app = createApp({
+    index: () => index,
+    keys: { verify: () => Promise.resolve(null) },
+    limiter: new RateLimiter(),
+    quota: new DailyQuota(() => Promise.resolve(0)),
+    usage: { record() {} },
+    log: memoryLogger(),
+    config: { CORS_ORIGINS: "", PUBLIC_BASE_URL: "https://edge.test" },
+    anonymous: { scopes: ["kb:read", "analyze"], take: anonymousLimiter(bindings()), perMinute: ANON_RATES },
+  });
+  const meta = await (await app.fetch(new Request("https://edge.test/v1/meta"))).json();
+  assertEquals(meta.keyless, { scopes: ["kb:read", "analyze"], per_minute: { ...ANON_RATES } });
+});
+
+Deno.test("the page ships under a CSP with no inline script, and may call Open Food Facts directly", async () => {
+  const web = (f: string) => Deno.readTextFile(new URL(`../../web/${f}`, import.meta.url));
+  const csp = (await web("_headers")).match(/Content-Security-Policy:\s*(.+)/)?.[1] ?? "";
+  const directive = (name: string) =>
+    csp.split(";").map((d) => d.trim().split(/\s+/)).find(([n]) => n === name)?.slice(1) ?? [];
+  assertEquals(directive("script-src"), ["'self'"]);
+  assertEquals(directive("connect-src"), ["'self'", "https://world.openfoodfacts.org"]);
+  const html = await web("index.html");
+  assertEquals(
+    [...html.matchAll(/<script(?![^>]*\ssrc=)[^>]*>/g)].length,
+    0,
+    "inline <script> would be blocked",
+  );
+  assertMatch(await web("app.js"), /from "\.\/off-product\.js"/);
+});

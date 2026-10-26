@@ -338,6 +338,13 @@ export const MetaResponse = z.object({
   }),
   licences: z.object({ code: z.string(), knowledge_base: z.string(), generated_identity: z.string() }),
   attribution: z.array(z.string()),
+  keyless: z.object({
+    scopes: z.array(z.string()),
+    per_minute: z.record(z.string(), z.number().int()),
+  }).optional().openapi({
+    description:
+      "Present when this deployment answers without an API key: the scopes it opens and the requests a minute per IP address, by bucket.",
+  }),
   docs: z.string(),
   openapi: z.string(),
 }).openapi("Meta");

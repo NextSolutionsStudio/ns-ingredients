@@ -35,6 +35,8 @@ export interface AnonymousAccess {
   scopes: readonly Scope[];
   /** Decides one keyless request. `client` is the caller's IP address as the edge reports it. */
   take(client: string, scope: Scope): Promise<LimitDecision>;
+  /** Requests a minute per IP address, by bucket, as /v1/meta reports them. */
+  perMinute?: Readonly<Record<string, number>>;
 }
 
 type Env = { Variables: { reqId: string; key?: ApiKey } };
@@ -437,6 +439,9 @@ export function createApp(deps: AppDeps) {
           "Additive identity data from Wikidata (CC0).",
           "Regulatory facts cite EU legislation (EUR-Lex, reuse under Commission Decision 2011/833/EU).",
         ],
+        ...(deps.anonymous?.perMinute
+          ? { keyless: { scopes: [...deps.anonymous.scopes], per_minute: { ...deps.anonymous.perMinute } } }
+          : {}),
         docs: `${deps.config.PUBLIC_BASE_URL}/docs`,
         openapi: `${deps.config.PUBLIC_BASE_URL}/v1/openapi.json`,
       }, 200);

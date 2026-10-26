@@ -10,7 +10,7 @@ import { DailyQuota, RateLimiter } from "./http/limits.ts";
 import { jsonLogger } from "./http/log.ts";
 import type { KbBundle } from "./kb/schema.ts";
 import { createOffClient, routeOff } from "./off/off.ts";
-import { anonymousLimiter, type LimitBindings } from "./worker-limits.ts";
+import { ANON_RATES, anonymousLimiter, type LimitBindings } from "./worker-limits.ts";
 
 const index = new KbIndex(bundle as unknown as KbBundle);
 const off = createOffClient(
@@ -56,6 +56,7 @@ export default {
       anonymous: {
         scopes: ["kb:read", "analyze"] satisfies Scope[],
         take: (client, scope) => take!(client, scope),
+        perMinute: ANON_RATES,
       },
     });
     return await app.fetch(req);

@@ -40,24 +40,35 @@ async function toApi(req: Request, url: URL): Promise<Response> {
 }
 
 // ---------------------------------------------------------------- server
-const STATIC: Record<string, string> = {
-  "/": "index.html",
-  "/favicon.svg": "favicon.svg",
+const TYPES: Record<string, string> = {
+  html: "text/html; charset=utf-8",
+  js: "text/javascript; charset=utf-8",
+  svg: "image/svg+xml",
 };
-const TYPES: Record<string, string> = { html: "text/html; charset=utf-8", svg: "image/svg+xml" };
+
+/** The headers web/_headers gives every page on Cloudflare, so the page runs locally under the same CSP. */
+async function pageHeaders(): Promise<Record<string, string>> {
+  const out: Record<string, string> = {};
+  const text = await Deno.readTextFile(new URL("_headers", WEB));
+  for (const line of text.split("\n")) {
+    const m = line.match(/^\s+([A-Za-z-]+):\s*(.+)$/);
+    if (m) out[m[1].toLowerCase()] = m[2].trim();
+  }
+  return out;
+}
 
 async function handle(req: Request): Promise<Response> {
   const url = new URL(req.url);
-  const file = STATIC[url.pathname];
-  if (file && req.method === "GET") {
-    return new Response(await Deno.readTextFile(new URL(file, WEB)), {
-      headers: {
-        "content-type": TYPES[file.split(".").pop()!],
-        "cache-control": "no-store",
-        "content-security-policy":
-          "default-src 'self'; img-src 'self' https://images.openfoodfacts.org data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'",
-      },
-    });
+  const file = url.pathname === "/" ? "index.html" : url.pathname.slice(1);
+  const type = /^[\w-]+\.(\w+)$/.test(file) ? TYPES[file.split(".").pop()!] : undefined;
+  if (type && req.method === "GET") {
+    try {
+      return new Response(await Deno.readTextFile(new URL(file, WEB)), {
+        headers: { ...await pageHeaders(), "content-type": type, "cache-control": "no-store" },
+      });
+    } catch (e) {
+      if (!(e instanceof Deno.errors.NotFound)) throw e;
+    }
   }
   if (API_PATHS.test(url.pathname)) return await toApi(req, url);
   return await routeOff(off, req, url) ??
