@@ -619,6 +619,7 @@ export function createApp(deps: AppDeps) {
       const result = analyze(deps.index(), body.text, {
         lang: body.lang ?? langOf(c),
         profile: body.profile,
+        nutrition: body.nutrition,
       });
       c.header("x-kb-version", result.kb_version);
       return c.json(result, 200);

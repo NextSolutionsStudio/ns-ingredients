@@ -26,6 +26,10 @@ export const PRODUCT_FIELDS = [
   "traces_tags",
   "additives_tags",
   "categories",
+  "categories_tags",
+  "nutriments",
+  "serving_quantity",
+  "serving_quantity_unit",
 ].join(",");
 
 /**
@@ -34,6 +38,25 @@ export const PRODUCT_FIELDS = [
  */
 export function offEmphasisToCaps(text) {
   return text.replace(/_([^_\n]{1,60})_/g, (_, s) => s.toUpperCase());
+}
+
+/**
+ * Declared sugars in the API's nutrition shape, or null. OFF keeps liquids per 100 ml in its *_100g fields;
+ * a product in en:beverages is read as a drink.
+ * @param {any} p
+ * @returns {{ basis: "100g" | "100ml"; sugars_g: number; serving?: { amount: number; unit: "g" | "ml" } } | null}
+ */
+export function toNutrition(p) {
+  const sugars = p?.nutriments?.sugars_100g;
+  if (typeof sugars !== "number" || !(sugars >= 0 && sugars <= 100)) return null;
+  const drink = Array.isArray(p.categories_tags) && p.categories_tags.includes("en:beverages");
+  const basis = drink ? "100ml" : "100g";
+  const amount = Number(p.serving_quantity);
+  const unit = String(p.serving_quantity_unit ?? (drink ? "ml" : "g")).toLowerCase();
+  const serving = amount > 0 && amount <= 5000 && unit === basis.slice(3)
+    ? { amount, unit: /** @type {"g" | "ml"} */ (unit) }
+    : undefined;
+  return { basis, sugars_g: sugars, ...(serving ? { serving } : {}) };
 }
 
 /** @param {unknown} v */
@@ -83,6 +106,7 @@ export function toProduct(p) {
     off_traces: tags(p.traces_tags),
     off_additives: tags(p.additives_tags),
     categories: str(p.categories),
+    nutrition: toNutrition(p),
     texts,
     off_url: `https://world.openfoodfacts.org/product/${encodeURIComponent(code)}`,
   };

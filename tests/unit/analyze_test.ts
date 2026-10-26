@@ -325,3 +325,25 @@ Deno.test("a minority prior's diet doubt stays off a silent label (exempt wheat 
   assertEquals(run("Skład: syrop glukozowy").diets.gluten_free.status, "yes");
   assertEquals(run("Skład: syrop glukozowy pszenny").diets.gluten_free.status, "maybe");
 });
+
+Deno.test("added sugar: position facts from the list itself, and the order rule is cited", () => {
+  const r = run("Skład: cukier 40%, mleko w proszku, syrop glukozowy, soja");
+  const f = flag(r, "health.added_sugar")!;
+  assertEquals(f.triggers.map((t) => t.path), ["1", "3"]);
+  const [first, third] = f.triggers;
+  assert(first.note.includes("To pierwszy składnik"), first.note);
+  assert(first.note.includes("Zadeklarowano 40%"), first.note);
+  assert(first.note.includes("Jeden z 2 różnych cukrów"), first.note);
+  assert(third.note.includes("Na 3. miejscu z 4."), third.note);
+  assertFalse(third.note.includes("pierwszy"));
+  assertEquals(first.sources.map((s) => s.id), ["who-free-sugars-2015", "reg-1169-2011"]);
+  assertEquals(third.sources.map((s) => s.id), ["who-free-sugars-2015"]); // the KB's own source list is untouched
+  assert(r.sources["reg-1169-2011"]);
+});
+
+Deno.test("added sugar: a nested sugar gets no position, and one sugar is not 'one of 1'", () => {
+  const r = run("Ingredients: milk powder, coating (sugar 50%, soy)");
+  const f = flag(r, "health.added_sugar")!;
+  assertEquals(f.triggers.map((t) => t.path), ["2.1"]);
+  assertFalse(/first|Listed|Declared|One of/.test(f.triggers[0].note), f.triggers[0].note);
+});

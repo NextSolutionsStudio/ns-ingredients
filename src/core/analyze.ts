@@ -3,6 +3,7 @@
 import type { AssertionT, IngredientT, Lang, TextT } from "../kb/schema.ts";
 import type { KbIndex, MatchType } from "./kb-index.ts";
 import { baseENumber, findENumbers, guessLang, normName } from "./normalize.ts";
+import { assessNutrition, highSugarNote, type NutritionInput, type NutritionResult } from "./nutrition.ts";
 import { type ParsedItem, parseLabel, type Percent, splitTopLevel } from "./parse.ts";
 
 export type Certainty = "yes" | "no" | "maybe" | "unknown";
@@ -18,6 +19,8 @@ export interface Profile {
 export interface AnalyzeOptions {
   lang?: Lang;
   profile?: Profile;
+  /** Declared nutrition: the only source of amounts. */
+  nutrition?: NutritionInput;
 }
 
 export interface ItemResult {
@@ -46,10 +49,12 @@ export interface ItemResult {
 }
 
 export interface FlagTrigger {
+  /** A label item, or "nutrition.sugars_g" for a trigger computed from declared nutrition. */
   path: string;
-  ingredient_id: string;
+  /** Absent only on basis "nutrition". */
+  ingredient_id?: string;
   variant_id?: string;
-  basis: "ingredient" | "label_variant" | "prior_variant" | "qualifier" | "emphasis" | "trace";
+  basis: "ingredient" | "label_variant" | "prior_variant" | "qualifier" | "emphasis" | "trace" | "nutrition";
   certainty: Certainty;
   kind: "fact" | "estimate" | "opinion";
   grade: "A" | "B" | "C" | "D";
@@ -131,6 +136,8 @@ export interface AnalysisResult {
     hits: { code: string; certainty: Certainty; paths: string[]; trace: boolean }[];
     diets: { diet: DietId; status: Certainty }[];
   };
+  /** Amounts from the declared nutrition; null when none was sent. */
+  nutrition: NutritionResult | null;
   unanalysed_text: string | null;
   sources: Record<string, { title: string; url: string; year?: number; publisher?: string }>;
   disclaimer: string;
@@ -390,6 +397,33 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
   };
 
   const items = parsed.items.map((it) => resolveItem(it));
+  const sugar = flags.get("health.added_sugar");
+  if (sugar && noteSugarPositions(sugar, items, lang)) citedSources.add(ORDER_SOURCE.id);
+  const nutrition = opts.nutrition ? assessNutrition(opts.nutrition) : null;
+  const highSugar = index.implications.get("health.high_sugar");
+  if (nutrition) { for (const s of nutrition.sugars.sources) citedSources.add(s.id); }
+  if (nutrition?.sugars.band === "high" && highSugar) {
+    flags.set(highSugar.code, {
+      code: highSugar.code,
+      group: highSugar.group,
+      severity: highSugar.severity,
+      concern: highSugar.concern,
+      label: txt(highSugar.label, lang),
+      certainty: "yes",
+      kind: "fact",
+      grade: "A",
+      triggers: [{
+        path: "nutrition.sugars_g",
+        basis: "nutrition",
+        certainty: "yes",
+        kind: "fact",
+        grade: "A",
+        population: ["general"],
+        note: highSugarNote(nutrition, opts.nutrition!.serving, lang),
+        sources: nutrition.sugars.sources,
+      }],
+    });
+  }
 
   // Precautionary allergen statement ("może zawierać orzechy, sezam").
   const mayContain: AnalysisResult["may_contain"] = [];
@@ -462,6 +496,13 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
     }
   }
 
+  for (const f of flagList) {
+    if (!f.triggers.some((t) => t.basis === "nutrition") || (f.concern !== "hazard" && !f.personal)) continue;
+    if (!summary.danger || SEVERITY_RANK[f.severity] > SEVERITY_RANK[summary.danger]) {
+      summary.danger = f.severity;
+    }
+  }
+
   const result: AnalysisResult = {
     kb_version: index.version,
     lang,
@@ -473,6 +514,7 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
     label_statements: parsed.statements,
     coverage: { ingredients: total, matched, low_confidence: low, ratio: total ? round(matched / total) : 0 },
     summary,
+    nutrition,
     unanalysed_text: parsed.trailing,
     sources: {},
     disclaimer: DISCLAIMER[lang],
@@ -496,6 +538,58 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
   const touched = new Set(dietInputs.map((d) => d.ingredient?.id).filter(Boolean) as string[]);
   result.ai_generated_content = [...touched].some((id) => index.get(id)?.provenance === "ai-drafted");
   return result;
+}
+
+// Position is the only amount signal a bare list carries: it runs in descending order of weight, though
+// ingredients under 2% may close it in any order (Reg 1169/2011 art. 18(1), Annex VII Part A point 6).
+const ORDER_SOURCE = { id: "reg-1169-2011", locator: "Article 18(1); Annex VII Part A" };
+const SUGAR_FACTS: Record<Lang, {
+  first: string;
+  nth: (n: number, of: number) => string;
+  declared: (raw: string) => string;
+  kinds: (k: number) => string;
+}> = {
+  en: {
+    first: "It is the first ingredient: EU lists run in descending order of weight.",
+    nth: (n, of) => `Listed ${n} of ${of}.`,
+    declared: (raw) => `Declared at ${raw}.`,
+    kinds: (k) => `One of ${k} different added sugars on this label.`,
+  },
+  pl: {
+    first: "To pierwszy składnik: w UE skład podaje się w malejącej kolejności masy.",
+    nth: (n, of) => `Na ${n}. miejscu z ${of}.`,
+    declared: (raw) => `Zadeklarowano ${raw}.`,
+    kinds: (k) => `Jeden z ${k} różnych cukrów dodanych na tej etykiecie.`,
+  },
+  de: {
+    first: "Es ist die erste Zutat: In der EU stehen Zutaten in absteigender Reihenfolge des Gewichts.",
+    nth: (n, of) => `An ${n}. Stelle von ${of}.`,
+    declared: (raw) => `Angegeben mit ${raw}.`,
+    kinds: (k) => `Einer von ${k} verschiedenen zugesetzten Zuckern auf diesem Etikett.`,
+  },
+};
+
+/** Adds position facts to each added-sugar trigger; true when one rests on the order rule. */
+function noteSugarPositions(flag: Flag, items: ItemResult[], lang: Lang): boolean {
+  const t = SUGAR_FACTS[lang];
+  const kinds = new Set(flag.triggers.map((x) => x.ingredient_id)).size;
+  const tops = items.filter((it) => it.role === "ingredient" || it.role === "class");
+  let cited = false;
+  for (const trigger of flag.triggers) {
+    const facts: string[] = [];
+    // Only top-level items: a nested percentage is a share of its compound, not of the food.
+    const at = tops.findIndex((it) => it.path === trigger.path);
+    if (at === 0) {
+      facts.push(t.first);
+      trigger.sources = [...trigger.sources, ORDER_SOURCE];
+      cited = true;
+    } else if (at > 0) facts.push(t.nth(at + 1, tops.length));
+    const pct = at >= 0 ? tops[at].percent : undefined;
+    if (pct?.value !== undefined) facts.push(t.declared(pct.raw));
+    if (kinds > 1) facts.push(t.kinds(kinds));
+    if (facts.length) trigger.note = [trigger.note, ...facts].filter(Boolean).join(" ");
+  }
+  return cited;
 }
 
 function trig(
@@ -757,7 +851,8 @@ function rankByDanger(
     const concernWeight = personal ? 1 : CONCERN_WEIGHT[f.concern];
     if (!concernWeight) continue;
     for (const t of f.triggers) {
-      offer(t.path, byPathItem.get(t.path)?.match?.ingredient_id ?? t.ingredient_id, {
+      if (t.basis === "nutrition") continue; // not a label item
+      offer(t.path, byPathItem.get(t.path)?.match?.ingredient_id ?? t.ingredient_id ?? null, {
         code: f.code,
         label: f.label,
         concern: f.concern,

@@ -100,9 +100,13 @@ Title, publisher, year, URL and licence of a cited source.
 {
   "text": "Składniki: koncentrat białek serwatkowych (z MLEKA) 80%, kwas jabłkowy, emulgator: lecytyna sojowa. Może zawierać JAJA.",
   "lang": "pl",
-  "profile": { "avoid": ["allergen.*", "origin.petrochemical_synthetic"], "diets": ["vegan"] }
+  "profile": { "avoid": ["allergen.*", "origin.petrochemical_synthetic"], "diets": ["vegan"] },
+  "nutrition": { "basis": "100g", "sugars_g": 28, "serving": { "amount": 30, "unit": "g" } }
 }
 ```
+
+`nutrition` is optional: total sugars as declared, per `100g` or `100ml` (drinks), and an optional serving whose
+unit matches the basis.
 
 The response:
 
@@ -110,7 +114,10 @@ The response:
   (read from the label, or a prior distribution), `function` (additive class), `percent`, and children.
 - **`flags`**: one per implication code, with severity, certainty, kind, grade and the **triggers** that
   raised it. Each trigger gives the item path, ingredient, variant, basis (`ingredient`, `label_variant`,
-  `prior_variant`, `qualifier`, `emphasis`), note and sources.
+  `prior_variant`, `qualifier`, `emphasis`, `nutrition`), note and sources. A `nutrition` trigger has the path
+  `nutrition.sugars_g` and no ingredient.
+- **`nutrition`**: `null` unless nutrition was sent. Sugars per 100 and per serving, the band (`low`/`medium`/
+  `high`, UK front-of-pack criteria), `band_by`, and the percentage of the 90 g reference intake.
 - **`diets`**: vegan, vegetarian, gluten-free and lactose-free, each `yes`/`no`/`maybe`/`unknown`, with the
   items responsible.
 - **`may_contain`**: the precautionary statement, resolved to allergens.

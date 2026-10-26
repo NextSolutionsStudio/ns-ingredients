@@ -27,6 +27,7 @@ const BASIS = {
   qualifier: "source named on the label",
   emphasis: "allergen emphasis",
   trace: "may-contain clause",
+  nutrition: "declared nutrition",
 };
 
 // ---------------------------------------------------------------- prefs (per-browser convenience only)
@@ -356,6 +357,11 @@ async function showProduct(ean, seq) {
         <dl class="kv" style="margin-top:6px">
           <dt>Nutri-Score</dt><dd>${esc((p.nutriscore || "—").toUpperCase())}</dd>
           <dt>NOVA</dt><dd>${esc(p.nova ?? "—")}</dd>
+          <dt>Sugars</dt><dd>${
+    p.nutrition
+      ? `${esc(p.nutrition.sugars_g)} g / ${esc(p.nutrition.basis.slice(3))} (sent with the analysis)`
+      : "—"
+  }</dd>
           <dt>Allergens</dt><dd>${offTags(p.off_allergens)}</dd>
           <dt>Traces</dt><dd>${offTags(p.off_traces)}</dd>
           <dt>Additives</dt><dd>${offTags(p.off_additives)}</dd>
@@ -412,14 +418,14 @@ async function showProduct(ean, seq) {
     for (const b of document.querySelectorAll("#textpick button")) {
       b.addEventListener("click", () => {
         pick(Number(b.dataset.i));
-        analyseInto($("#result"), ta.value, seq);
+        analyseInto($("#result"), ta.value, seq, p.nutrition);
       });
     }
     pick(0);
-    analyseInto($("#result"), ta.value, seq);
+    analyseInto($("#result"), ta.value, seq, p.nutrition);
   }
-  $("#go").addEventListener("click", () => analyseInto($("#result"), ta.value, seq));
-  onProfileChange(() => analyseInto($("#result"), ta.value, seq));
+  $("#go").addEventListener("click", () => analyseInto($("#result"), ta.value, seq, p.nutrition));
+  onProfileChange(() => analyseInto($("#result"), ta.value, seq, p.nutrition));
 }
 
 // ---------------------------------------------------------------- paste
@@ -433,6 +439,9 @@ function showPaste(seq) {
     <div class="row" style="margin-top:8px"><button id="go">Analyse</button>
       <button class="ghost" id="sample">Use the sample</button>
       <span class="muted small">Polish, English or German. Headers like “Skład:” and “Może zawierać…” are understood.</span></div>
+    <div class="row small" style="margin-top:8px"><label>Sugars from the nutrition table (optional)
+      <input id="sugars" type="number" min="0" max="100" step="0.1" inputmode="decimal" style="width:6em"></label>
+      <select id="basis" aria-label="Per"><option value="100g">g per 100 g</option><option value="100ml">g per 100 ml (drink)</option></select></div>
     ${profileControls()}
   </div>
   <div id="result"></div>`;
@@ -440,7 +449,11 @@ function showPaste(seq) {
   ta.value = store.get("nsi.paste", SAMPLE);
   const run = () => {
     store.set("nsi.paste", ta.value);
-    analyseInto($("#result"), ta.value, seq);
+    const sugars = $("#sugars").value === "" ? NaN : Number($("#sugars").value);
+    const nutrition = sugars >= 0 && sugars <= 100
+      ? { basis: $("#basis").value, sugars_g: sugars }
+      : undefined;
+    analyseInto($("#result"), ta.value, seq, nutrition);
   };
   $("#go").addEventListener("click", run);
   onProfileChange(() => $("#result").innerHTML && run());
@@ -450,7 +463,7 @@ function showPaste(seq) {
 }
 
 // ---------------------------------------------------------------- analysis
-async function analyseInto(box, text, seq) {
+async function analyseInto(box, text, seq, nutrition) {
   if (!text.trim()) {
     box.innerHTML = errBox("The ingredient list is empty.");
     return;
@@ -464,7 +477,12 @@ async function analyseInto(box, text, seq) {
     const a = await getJson("/v1/analyze", {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ text: text.slice(0, 12000), lang: lang(), profile }),
+      body: JSON.stringify({
+        text: text.slice(0, 12000),
+        lang: lang(),
+        profile,
+        nutrition: nutrition ?? undefined,
+      }),
     });
     if (live(seq)) box.innerHTML = renderAnalysis(a);
   } catch (e) {
@@ -555,9 +573,13 @@ function renderAnalysis(a) {
   }</span></summary>
       <ul>${
     f.triggers.map((t) => `
-        <li><a href="#/ing/${encodeURIComponent(t.ingredient_id)}"><b>${
-      esc(names.get(t.ingredient_id) || t.ingredient_id)
-    }</b></a>
+        <li>${
+      t.ingredient_id
+        ? `<a href="#/ing/${encodeURIComponent(t.ingredient_id)}"><b>${
+          esc(names.get(t.ingredient_id) || t.ingredient_id)
+        }</b></a>`
+        : "<b>Nutrition table</b>"
+    }
           <span class="muted">via ${esc(BASIS[t.basis] || t.basis)}${
       t.variant_id ? ` (${esc(t.variant_id)})` : ""
     }${t.probability != null ? `, p ≈ ${pct(t.probability)}` : ""}${
@@ -634,7 +656,17 @@ function renderAnalysis(a) {
       <div class="stat"><b>${a.coverage.matched} / ${a.coverage.ingredients}</b><span>recognised (${
     pct(a.coverage.ratio)
   })${a.coverage.low_confidence ? ` · ${a.coverage.low_confidence} low-confidence` : ""}</span></div>
-      <div class="stat"><b>${a.flags.length}</b><span>flags</span></div>
+      <div class="stat"><b>${a.flags.length}</b><span>flags</span></div>${
+    a.nutrition
+      ? `<div class="stat"><b class="${
+        a.nutrition.sugars.band === "high" ? "s-caution" : ""
+      }" style="background:none">${esc(a.nutrition.sugars.band)} sugars</b><span>${
+        esc(a.nutrition.sugars.per_100)
+      } g / 100 ${esc(a.nutrition.basis.slice(3))} · ${
+        esc(a.nutrition.sugars.ri_percent_per_100)
+      }% of RI · UK front-of-pack bands</span></div>`
+      : ""
+  }
       <div class="row">${counts}</div>
     </div>
     ${
