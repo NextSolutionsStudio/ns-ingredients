@@ -448,3 +448,20 @@
     flags: [health.added_sugar=yes]
     absent: [allergen.milk, allergen.gluten]
     diets: { vegan: "yes", vegetarian: "yes" }
+
+- id: pl-cottage-cheese-off-marks
+  lang: pl
+  category: dairy
+  note: >-
+    Open Food Facts marks allergens with underscores. The marks are emphasis: an emphasised word the KB does
+    not know (twaróg) raises the possible-allergen notice, and the names match without the marks.
+  text: >-
+    Składniki: _twaróg_ ziarnisty, _śmietanka_ pasteryzowana, cukier, sól.
+  expect:
+    match:
+      twaróg ziarnisty: null
+      śmietanka pasteryzowana: cream
+      cukier: sugar
+      sól: salt
+    flags: [allergen.milk=yes, allergen.unrecognised_emphasis=maybe, health.added_sugar=yes]
+    absent: [allergen.gluten]

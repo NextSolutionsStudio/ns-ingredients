@@ -247,14 +247,27 @@ function splitBrackets(s: string): { own: string; groups: string[] } {
   return { own: own.replace(/\s+/g, " ").trim(), groups };
 }
 
+/**
+ * Open Food Facts marks the allergens of a typed-in list with underscores: "_mleko_", "_ser twarogowy_".
+ * The marks are explicit, so they count even on an all-caps label.
+ */
+const OFF_EMPHASIS_RE = /(?<![\p{L}\p{N}_])_+([^_]*?\p{L}[^_]*?)_+(?![\p{L}\p{N}_])/gu;
+
+/** The item's name without OFF's underscore marks: "_twaróg_ ziarnisty" → "twaróg ziarnisty". */
+function stripOffEmphasis(s: string): string {
+  return s.replace(OFF_EMPHASIS_RE, "$1");
+}
+
 function emphasis(raw: string, allCaps: boolean): string[] {
-  if (allCaps) return [];
-  return [...raw.matchAll(/(?<![\p{L}])[\p{Lu}]{3,}(?![\p{L}])/gu)].map((m) => m[0])
+  const marked = [...raw.matchAll(OFF_EMPHASIS_RE)].map((m) => m[1].trim()).filter(Boolean);
+  const caps = allCaps ? [] : [...raw.matchAll(/(?<![\p{L}])[\p{Lu}]{3,}(?![\p{L}])/gu)].map((m) => m[0])
     .filter((w) =>
       !/^E\d/.test(w) &&
       // Acronyms, colour-name suffixes (FCF), organic and protected-origin markers are not allergen emphasis.
       !/^(?:INS|DL|RRR|MCT|WPC|WPI|BHA|BHT|CMC|UHT|GMO|FCF|BIO|EKO|ÖKO|DOP|IGP|AOP|PDO|PGI)$/.test(w)
     );
+  // "_MLEKO_" is one emphasis, not two.
+  return [...new Set([...marked, ...caps.filter((w) => !marked.includes(w))])];
 }
 
 function parseItem(raw: string, path: string, allCaps: boolean, lessThan: boolean): ParsedItem {
@@ -309,7 +322,7 @@ function parseItem(raw: string, path: string, allCaps: boolean, lessThan: boolea
   return {
     path,
     raw: raw.trim(),
-    name: name.replace(/^[\s:*-]+|[\s:*.-]+$/g, ""),
+    name: stripOffEmphasis(name).replace(/^[\s:*-]+|[\s:*.-]+$/g, ""),
     role: "ingredient",
     ...(percent ? { percent } : {}),
     emphasized: emphasis(raw, allCaps),
