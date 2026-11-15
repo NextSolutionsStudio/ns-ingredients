@@ -94,6 +94,28 @@ Deno.test("CAPS emphasis is captured, but not on an all-caps label", () => {
   assertEquals(e.emphasized, []);
 });
 
+Deno.test("OFF underscore emphasis is captured and stripped from the name, also on an all-caps label", () => {
+  const items = parseLabel("_Śmietanka_, _ser twarogowy_ ziarnisty, białka _mleka_, sól").items;
+  assertEquals(items.map((i) => i.name), ["Śmietanka", "ser twarogowy ziarnisty", "białka mleka", "sól"]);
+  assertEquals(items.map((i) => i.emphasized), [["Śmietanka"], ["ser twarogowy"], ["mleka"], []]);
+  // The raw text stays as printed.
+  assertEquals(items[0].raw, "_Śmietanka_");
+  // Explicit marks count where capitals cannot: "_MLEKO_" is one emphasis, not two.
+  const caps = parseLabel("SKŁAD: CUKIER, _MLEKO_ W PROSZKU, SÓL").items;
+  assertEquals(caps.map((i) => i.emphasized), [[], ["MLEKO"], []]);
+  // A bracketed part carries its marks to the item, as CAPS emphasis does.
+  const [wsad] = parseLabel("wsad (cukier, _mleko_)").items;
+  assertEquals([wsad.emphasized, wsad.children[1].name], [["mleko"], "mleko"]);
+  // Underscores that are not marks are left alone.
+  assertEquals(parseLabel("aromat_naturalny, _ ").items.map((i) => [i.name, i.emphasized]), [[
+    "aromat_naturalny",
+    [],
+  ], [
+    "_",
+    [],
+  ]]);
+});
+
 Deno.test("precautionary clause is split off in PL, EN and DE", () => {
   const pl = parseLabel("Skład: cukier, kakao. Może zawierać orzechy laskowe i sezam.");
   assertEquals(pl.items.map((i) => i.name), ["cukier", "kakao"]);
