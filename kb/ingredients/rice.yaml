@@ -1,0 +1,32 @@
+id: rice
+type: ingredient
+names:
+  en:
+    - rice
+    - white rice
+    - brown rice
+    - long-grain rice
+  pl:
+    - ryż
+    - ryż biały
+    - ryż brązowy
+    - ryż długoziarnisty
+    - ryż długoziarnisty biały
+  de:
+    - Reis
+summary:
+  en: 'Rice (Oryza sativa) grain. Rice flour, rice starch and rice syrup have their own entries.'
+  pl: 'Ziarno ryżu (Oryza sativa). Mąka ryżowa, skrobia ryżowa i syrop ryżowy mają osobne wpisy.'
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A cereal.
+      pl: Zboże.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted

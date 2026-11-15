@@ -1,0 +1,39 @@
+id: potassium-citrates
+type: additive
+e_number: E332
+names:
+  en:
+    - potassium citrates
+    - potassium citrate
+    - tripotassium citrate
+    - monopotassium citrate
+  pl:
+    - cytryniany potasu
+    - cytrynian potasu
+    - cytrynian tripotasu
+    - cytrynian tripotasowy
+    - cytrynian monopotasowy
+  de:
+    - Kaliumcitrate
+    - Kaliumcitrat
+functions:
+  - acidity-regulator
+  - sequestrant
+summary:
+  en: 'Mono- and tripotassium salts of citric acid (E 332(i)–(ii)), used as acidity regulators.'
+  pl: 'Mono- i tripotasowe sole kwasu cytrynowego (E 332(i)–(ii)), stosowane jako regulatory kwasowości.'
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: >-
+        Group I additive (Reg 1333/2008 Annex II Part C, as set by Reg 1129/2011): quantum satis in most food
+        categories.
+      pl: >-
+        Dodatek grupy I (rozporządzenie 1333/2008, załącznik II część C, w brzmieniu rozporządzenia
+        1129/2011): quantum satis w większości kategorii żywności.
+    source: swm-reg-1129-2011
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - 'Identity-only: no EFSA re-evaluation of E 332 was found, so no assessment is recorded.'

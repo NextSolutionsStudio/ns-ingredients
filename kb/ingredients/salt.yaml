@@ -1,8 +1,8 @@
 id: salt
 type: ingredient
 names:
-  en: [salt, table salt, sodium chloride]
-  pl: [sól, sól kuchenna, chlorek sodu]
+  en: [salt, table salt, sodium chloride, sea salt, rock salt, iodised salt]
+  pl: [sól, sól kuchenna, chlorek sodu, sól morska, sól himalajska, sól kamienna, sól jodowana, sól spożywcza, sól biała]
   de: [Salz, Kochsalz, Natriumchlorid]
 summary:
   en: >-

@@ -1,0 +1,33 @@
+id: disodium-ribonucleotides
+type: additive
+e_number: E635
+names:
+  en:
+    - disodium 5'-ribonucleotides
+    - disodium ribonucleotides
+  pl:
+    - 5'-rybonukleotydy disodowe
+    - rybonukleotydy disodowe
+    - 5'-rybonukleotydy disodu
+  de:
+    - Dinatrium-5'-ribonukleotide
+functions:
+  - flavour-enhancer
+summary:
+  en: A flavour enhancer that is essentially a mixture of disodium inosinate and disodium guanylate.
+  pl: Wzmacniacz smaku będący w zasadzie mieszaniną inozynianu disodowego i guanylanu disodowego.
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: >-
+        Group I additive (Reg 1333/2008 Annex II Part C, as set by Reg 1129/2011): quantum satis in most food
+        categories.
+      pl: >-
+        Dodatek grupy I (rozporządzenie 1333/2008, załącznik II część C, w brzmieniu rozporządzenia
+        1129/2011): quantum satis w większości kategorii żywności.
+    source: swm-reg-1129-2011
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - 'Identity-only: no EFSA re-evaluation of E 626–635 was opened. Composition from Reg 231/2012.'

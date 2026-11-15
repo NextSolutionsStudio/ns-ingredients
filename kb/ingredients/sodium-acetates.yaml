@@ -1,0 +1,44 @@
+id: sodium-acetates
+type: additive
+e_number: E262
+names:
+  en:
+    - sodium acetates
+    - sodium acetate
+    - sodium diacetate
+  pl:
+    - octany sodu
+    - octan sodu
+    - octan sodowy
+    - dioctan sodu
+  de:
+    - Natriumacetate
+    - Natriumacetat
+    - Natriumdiacetat
+functions:
+  - preservative
+  - acidity-regulator
+summary:
+  en: >-
+    Sodium acetate (E 262(i)) and sodium diacetate, a compound of sodium acetate and acetic acid (E 262(ii));
+    used as acidity regulators and preservatives, for example in bread and meat products.
+  pl: >-
+    Octan sodu (E 262(i)) i dioctan sodu, związek octanu sodu z kwasem octowym (E 262(ii)); stosowane jako
+    regulatory kwasowości i substancje konserwujące, np. w pieczywie i przetworach mięsnych.
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: >-
+        Group I additive (Reg 1333/2008 Annex II Part C, as set by Reg 1129/2011): quantum satis in most food
+        categories.
+      pl: >-
+        Dodatek grupy I (rozporządzenie 1333/2008, załącznik II część C, w brzmieniu rozporządzenia
+        1129/2011): quantum satis w większości kategorii żywności.
+    source: swm-reg-1129-2011
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Identity-only: no EFSA re-evaluation of E 262 was opened, so no assessment is recorded. Composition from
+    Reg 231/2012.

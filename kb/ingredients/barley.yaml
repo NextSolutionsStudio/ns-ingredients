@@ -1,8 +1,8 @@
 id: barley
 type: ingredient
 names:
-  en: [barley, malted barley]
-  pl: [jęczmień, słód jęczmienny]
+  en: [barley, malted barley, barley malt extract]
+  pl: [jęczmień, słód jęczmienny, ekstrakt słodu jęczmiennego, ekstrakt ze słodu jęczmiennego, ekstrakt słodowy jęczmienny, kasza jęczmienna, płatki jęczmienne, mąka jęczmienna]
   de: [Gerste]
 summary:
   en: "The cereal Hordeum vulgare; named alongside wheat, rye and oats in EU Annex II item 1, including its malted form used in beer and malt extracts."

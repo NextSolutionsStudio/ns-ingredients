@@ -453,15 +453,17 @@
   lang: pl
   category: dairy
   note: >-
-    Open Food Facts marks allergens with underscores. The marks are emphasis: an emphasised word the KB does
-    not know (twaróg) raises the possible-allergen notice, and the names match without the marks.
+    Open Food Facts marks allergens with underscores. The marks are emphasis, and the names match without
+    them: twaróg ziarnisty is cheese, so the milk allergen explains the emphasis and no possible-allergen
+    notice is raised. (The notice for an emphasised word the KB does not know is covered by
+    tests/unit/off_test.ts against the fixture KB, which does not grow with kb/.)
   text: >-
     Składniki: _twaróg_ ziarnisty, _śmietanka_ pasteryzowana, cukier, sól.
   expect:
     match:
-      twaróg ziarnisty: null
+      twaróg ziarnisty: cheese
       śmietanka pasteryzowana: cream
       cukier: sugar
       sól: salt
-    flags: [allergen.milk=yes, allergen.unrecognised_emphasis=maybe, health.added_sugar=yes]
-    absent: [allergen.gluten]
+    flags: [allergen.milk=yes, health.added_sugar=yes]
+    absent: [allergen.gluten, allergen.unrecognised_emphasis]

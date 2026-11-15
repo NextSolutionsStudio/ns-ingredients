@@ -1,0 +1,34 @@
+id: garlic
+type: ingredient
+names:
+  en:
+    - garlic
+    - dried garlic
+    - garlic powder
+  pl:
+    - czosnek
+    - czosnek suszony
+    - suszony czosnek
+    - czosnek w proszku
+    - czosnek granulowany
+    - przecier z czosnku
+    - pasta czosnkowa
+  de:
+    - Knoblauch
+    - Knoblauchpulver
+summary:
+  en: 'Garlic (Allium sativum), fresh, dried or powdered.'
+  pl: 'Czosnek (Allium sativum), świeży, suszony lub w proszku.'
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A vegetable.
+      pl: Warzywo.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted

@@ -1,0 +1,27 @@
+id: dill
+type: ingredient
+names:
+  en:
+    - dill
+  pl:
+    - koper
+    - koperek
+    - koper ogrodowy
+  de:
+    - Dill
+summary:
+  en: Dill (Anethum graveolens) as a herb.
+  pl: Koper ogrodowy (Anethum graveolens) jako zioło.
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A culinary herb.
+      pl: Zioło kulinarne.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted

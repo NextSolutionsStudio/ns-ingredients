@@ -1,0 +1,62 @@
+id: polyphosphates
+type: additive
+e_number: E452
+names:
+  en:
+    - polyphosphates
+    - sodium polyphosphate
+    - sodium hexametaphosphate
+    - potassium polyphosphate
+    - sodium polyphosphates
+    - potassium polyphosphates
+  pl:
+    - polifosforany
+    - polifosforan
+    - polifosforan sodu
+    - polifosforany sodu
+    - polifosforan potasu
+    - metafosforan potasu
+    - polimetafosforan potasu
+    - heksametafosforan sodu
+  de:
+    - Polyphosphate
+functions:
+  - stabiliser
+  - emulsifying-salts
+  - sequestrant
+summary:
+  en: >-
+    Long-chain sodium, potassium and calcium polyphosphates made by fusing orthophosphates, used to hold water
+    and as emulsifying salts and sequestrants. EFSA (2019) set a group ADI of 40 mg/kg body weight a day,
+    expressed as phosphorus, for all phosphate additives (E 338–341, E 343, E 450–452), and noted that
+    estimated intake from the whole diet exceeded it on average for infants, toddlers and other children.
+  pl: >-
+    Długołańcuchowe polifosforany sodu, potasu i wapnia otrzymywane przez stapianie ortofosforanów, stosowane
+    do zatrzymywania wody oraz jako sole emulgujące i sekwestranty. EFSA (2019) ustaliła grupowe ADI 40 mg/kg
+    masy ciała na dzień, wyrażone jako fosfor, dla wszystkich fosforanów stosowanych jako dodatki (E 338–341,
+    E 343, E 450–452), i zauważyła, że szacowane spożycie z całej diety przekraczało je średnio u niemowląt,
+    małych dzieci i starszych dzieci.
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: >-
+        Authorised in listed food categories at maximum levels expressed as P2O5, individually or combined
+        with the other phosphates.
+      pl: >-
+        Dopuszczony w wymienionych kategoriach żywności w maksymalnych ilościach wyrażonych jako P2O5,
+        pojedynczo lub łącznie z innymi fosforanami.
+    source: swm-reg-1129-2011
+reference_values:
+  - type: group_ADI
+    value: 40
+    unit: mg/kg bw/day (as phosphorus)
+    body: EFSA
+    year: 2019
+    source: efsa-phosphates-2019
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Identity and assessment only: no origin claim, since the opened sources do not describe the phosphate raw
+    material route.

@@ -1,0 +1,35 @@
+id: banana
+type: ingredient
+names:
+  en:
+    - banana
+    - bananas
+    - banana purée
+  pl:
+    - banan
+    - banany
+    - przecier bananowy
+    - przecier z bananów
+  de:
+    - Banane
+    - Bananen
+summary:
+  en: 'Banana (Musa), fresh or as purée.'
+  pl: 'Banan (Musa), świeży lub jako przecier.'
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A fruit.
+      pl: Owoc.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Purées and whole fruit only: juices and juice concentrates are free sugars and belong to
+    kb/ingredients/fruit-juice-concentrate.yaml.

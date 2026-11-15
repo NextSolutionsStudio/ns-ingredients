@@ -1,0 +1,21 @@
+id: yeast-extract
+type: ingredient
+names:
+  en:
+    - yeast extract
+    - yeast extracts
+  pl:
+    - ekstrakt drożdżowy
+    - ekstrakty drożdżowe
+    - ekstrakt z drożdży
+    - ekstrakt drożdży
+    - ekstrakt drożdżowy suszony
+  de:
+    - Hefeextrakt
+summary:
+  en: 'The soluble contents of yeast cells after their walls are broken down, used for a savoury taste.'
+  pl: 'Rozpuszczalna zawartość komórek drożdży po rozłożeniu ścian komórkowych, stosowana dla wytrawnego smaku.'
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - 'Identity-only: no opened source. Candidate later: glutamate content and its NOVA treatment.'

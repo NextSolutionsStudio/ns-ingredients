@@ -1,0 +1,40 @@
+id: maize
+type: ingredient
+names:
+  en:
+    - maize
+    - corn
+    - sweet corn
+    - maize flour
+    - cornmeal
+    - maize grits
+  pl:
+    - kukurydza
+    - kukurydza słodka
+    - mąka kukurydziana
+    - kasza kukurydziana
+    - kaszka kukurydziana
+    - grys kukurydziany
+  de:
+    - Mais
+    - Maismehl
+summary:
+  en: >-
+    Maize (Zea mays): kernels, meal, grits and flour. Not a gluten-containing cereal under EU Annex II. Maize
+    starch has its own entry.
+  pl: >-
+    Kukurydza (Zea mays): ziarno, kasza, grys i mąka. Nie jest zbożem zawierającym gluten w rozumieniu
+    załącznika II UE. Skrobia kukurydziana ma osobny wpis.
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A cereal.
+      pl: Zboże.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted

@@ -1,0 +1,28 @@
+id: herbs
+type: ingredient
+names:
+  en:
+    - herbs
+    - mixed herbs
+  pl:
+    - zioła
+    - mieszanka ziół
+    - zioła prowansalskie
+  de:
+    - Kräuter
+summary:
+  en: The EU category name for herbs that together make up no more than 2% of the food.
+  pl: Nazwa kategorii UE dla ziół stanowiących łącznie nie więcej niż 2% żywności.
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A culinary herb.
+      pl: Zioło kulinarne.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Annex VII Part B, row 8'
+review_status: draft
+provenance: ai-drafted

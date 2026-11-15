@@ -1,0 +1,25 @@
+id: marjoram
+type: ingredient
+names:
+  en:
+    - marjoram
+  pl:
+    - majeranek
+  de:
+    - Majoran
+summary:
+  en: Marjoram (Origanum majorana) as a herb.
+  pl: Majeranek (Origanum majorana) jako zioło.
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A culinary herb.
+      pl: Zioło kulinarne.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted

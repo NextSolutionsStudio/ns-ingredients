@@ -25,12 +25,12 @@ variants:
   - id: partially-hydrogenated
     names:
       en: [partially hydrogenated vegetable oil, partially hydrogenated vegetable fat]
-      pl: [olej roślinny częściowo utwardzony, tłuszcz częściowo utwardzony, częściowo utwardzony olej roślinny]
+      pl: [olej roślinny częściowo utwardzony, tłuszcz częściowo utwardzony, częściowo utwardzony olej roślinny, olej roślinny częściowo uwodorniony, częściowo uwodorniony olej roślinny]
       de: [teilweise gehärtetes Pflanzenöl, teilweise gehärtetes Pflanzenfett]
     process:
       en: "Some but not all double bonds are hydrogenated, leaving a mix of natural cis and industrially formed trans unsaturated fatty acids."
       pl: "Utwardzeniu podlega część, nie wszystkie, wiązania podwójne, co pozostawia mieszankę naturalnych (cis) i powstałych przemysłowo (trans) nienasyconych kwasów tłuszczowych."
-    tells: ['czesciowo utwardzon', 'partially hydrogenated', 'teilweise gehartet']
+    tells: ['czesciowo (?:utwardzon|uwodorn)', 'partially hydrogenated', 'teilweise gehartet']
     prior: 0.45
     prior_rationale:
       en: >-
@@ -44,12 +44,12 @@ variants:
   - id: fully-hydrogenated
     names:
       en: [fully hydrogenated vegetable oil, totally hydrogenated vegetable fat]
-      pl: [olej roślinny całkowicie utwardzony, tłuszcz całkowicie utwardzony, w pełni utwardzony tłuszcz roślinny]
+      pl: [olej roślinny całkowicie utwardzony, tłuszcz całkowicie utwardzony, w pełni utwardzony tłuszcz roślinny, olej roślinny całkowicie uwodorniony, całkowicie uwodorniony olej roślinny]
       de: [vollständig gehärtetes Pflanzenöl]
     process:
       en: "All double bonds are hydrogenated; the fat is fully saturated, very hard, and contains essentially no trans fat."
       pl: "Wszystkie wiązania podwójne są utwardzone; tłuszcz jest w pełni nasycony, bardzo twardy i praktycznie nie zawiera tłuszczów trans."
-    tells: ['calkowicie utwardzon', 'fully hydrogenated', 'totally hydrogenated', 'w pelni utwardzon', 'vollstandig gehartet']
+    tells: ['calkowicie (?:utwardzon|uwodorn)', 'fully hydrogenated', 'totally hydrogenated', 'w pelni (?:utwardzon|uwodorn)', 'vollstandig gehartet']
     prior: 0.5
     prior_rationale:
       en: "The post-2021 default for a 'fully hardened' commodity fat, usually blended or interesterified with a liquid oil to get a workable texture."

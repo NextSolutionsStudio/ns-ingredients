@@ -1,0 +1,103 @@
+# Citations for the Polish-label coverage batch (2026-11). EFSA abstracts were opened via Europe PMC because
+# efsa.onlinelibrary.wiley.com returns 403 to the fetch tool; regulations were downloaded from EUR-Lex.
+sources:
+  - id: efsa-glutamates-2017
+    type: regulatory_opinion
+    title: >-
+      Re-evaluation of glutamic acid (E 620), sodium glutamate (E 621), potassium glutamate (E 622), calcium
+      glutamate (E 623), ammonium glutamate (E 624) and magnesium glutamate (E 625) as food additives
+    publisher: European Food Safety Authority
+    year: 2017
+    url: 'https://doi.org/10.2903/j.efsa.2017.4910'
+    doi: 10.2903/j.efsa.2017.4910
+    pmid: '32625571'
+    licence: 'EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)'
+    accessed: '2026-11-15'
+    note: >-
+      Abstract opened via Europe PMC (Wiley returned 403). Group ADI 30 mg/kg bw/day as glutamic acid for E
+      620–625; exposure exceeded the ADI and doses associated with adverse effects in humans for some
+      population groups; human data unsuitable for a no-effect dose.
+  - id: efsa-phosphates-2019
+    type: regulatory_opinion
+    title: >-
+      Re-evaluation of phosphoric acid–phosphates – di-, tri- and polyphosphates (E 338–341, E 343, E 450–452)
+      as food additives and the safety of proposed extension of use
+    publisher: European Food Safety Authority
+    year: 2019
+    url: 'https://doi.org/10.2903/j.efsa.2019.5674'
+    doi: 10.2903/j.efsa.2019.5674
+    pmid: '32626329'
+    licence: 'EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)'
+    accessed: '2026-11-15'
+    note: >-
+      Abstract opened via Europe PMC. Group ADI 40 mg/kg bw/day expressed as phosphorus; mean exposure
+      exceeded it for infants, toddlers and other children.
+  - id: efsa-carotenes-2012
+    type: regulatory_opinion
+    title: >-
+      Scientific Opinion on the re-evaluation of mixed carotenes (E 160a (i)) and beta-carotene (E 160a (ii))
+      as a food additive
+    publisher: European Food Safety Authority
+    year: 2012
+    url: 'https://doi.org/10.2903/j.efsa.2012.2593'
+    doi: 10.2903/j.efsa.2012.2593
+    pmid: '42112025'
+    licence: 'EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)'
+    accessed: '2026-11-15'
+    note: >-
+      Abstract opened via Europe PMC. No ADI could be established; no safety concern for colour use if intake
+      from colour and supplement use stays within 5–10 mg/day; JECFA (2001) and SCF had set 0–5 mg/kg bw;
+      beta-carotene covers synthetic and Blakeslea trispora fermentation.
+  - id: efsa-pectin-2017
+    type: regulatory_opinion
+    title: Re-evaluation of pectin (E 440i) and amidated pectin (E 440ii) as food additives
+    publisher: European Food Safety Authority
+    year: 2017
+    url: 'https://doi.org/10.2903/j.efsa.2017.4866'
+    doi: 10.2903/j.efsa.2017.4866
+    pmid: '32625540'
+    licence: 'EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)'
+    accessed: '2026-11-15'
+    note: >-
+      Abstract opened via Europe PMC. No safety concern for the general population; no need for a numerical
+      ADI.
+  - id: efsa-pgpr-2017
+    type: regulatory_opinion
+    title: Re-evaluation of polyglycerol polyricinoleate (E 476) as a food additive
+    publisher: European Food Safety Authority
+    year: 2017
+    url: 'https://doi.org/10.2903/j.efsa.2017.4743'
+    doi: 10.2903/j.efsa.2017.4743
+    pmid: '32625446'
+    licence: 'EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)'
+    accessed: '2026-11-15'
+    note: >-
+      Abstract opened via Europe PMC. ADI revised from 7.5 (SCF 1978) to 25 mg/kg bw/day; exposure estimates
+      did not exceed it.
+  - id: efsa-modified-starches-2017
+    type: regulatory_opinion
+    title: >-
+      Re-evaluation of oxidised starch (E 1404), monostarch phosphate (E 1410), distarch phosphate (E 1412),
+      phosphated distarch phosphate (E 1413), acetylated distarch phosphate (E 1414), acetylated starch (E
+      1420), acetylated distarch adipate (E 1422), hydroxypropyl starch (E 1440), hydroxypropyl distarch
+      phosphate (E 1442), starch sodium octenyl succinate (E 1450), acetylated oxidised starch (E 1451) and
+      starch aluminium octenyl succinate (E 1452) as food additives
+    publisher: European Food Safety Authority
+    year: 2017
+    url: 'https://doi.org/10.2903/j.efsa.2017.4911'
+    doi: 10.2903/j.efsa.2017.4911
+    pmid: '32625282'
+    licence: 'EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)'
+    accessed: '2026-11-15'
+    note: Abstract opened via Europe PMC. No safety concern at reported uses; no need for a numerical ADI.
+  - id: wikipedia-vinegar
+    type: reference
+    title: Vinegar
+    publisher: Wikipedia
+    url: 'https://en.wikipedia.org/wiki/Vinegar'
+    licence: CC BY-SA 4.0
+    accessed: '2026-11-15'
+    note: >-
+      Production: ethanol converted to acetic acid by acetic acid bacteria; cider vinegar from cider or apple
+      must, wine vinegar from wine; spirit vinegar sometimes from sugar cane or chemically produced acetic
+      acid.

@@ -1,0 +1,32 @@
+id: potato
+type: ingredient
+names:
+  en:
+    - potato
+    - potatoes
+    - dried potatoes
+    - potato flakes
+  pl:
+    - ziemniaki
+    - ziemniak
+    - ziemniaki suszone
+    - płatki ziemniaczane
+  de:
+    - Kartoffeln
+    - Kartoffel
+summary:
+  en: 'Potato (Solanum tuberosum), fresh or dried. Potato starch has its own entry.'
+  pl: 'Ziemniak (Solanum tuberosum), świeży lub suszony. Skrobia ziemniaczana ma osobny wpis.'
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A vegetable.
+      pl: Warzywo.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted
