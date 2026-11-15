@@ -1,0 +1,37 @@
+id: carrot
+type: ingredient
+names:
+  en:
+    - carrot
+    - carrots
+    - carrot concentrate
+  pl:
+    - marchew
+    - marchewka
+    - marchew suszona
+    - suszona marchew
+    - koncentrat z marchwi
+    - koncentrat marchwiowy
+    - koncentrat z czarnej marchwi
+    - koncentrat czarnej marchwi
+  de:
+    - Karotte
+    - Karotten
+    - Möhre
+    - Möhren
+summary:
+  en: 'Carrot (Daucus carota), including dried carrot and carrot concentrate.'
+  pl: 'Marchew (Daucus carota), także suszona i w postaci koncentratu.'
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A vegetable.
+      pl: Warzywo.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted

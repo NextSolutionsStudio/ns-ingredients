@@ -1,0 +1,32 @@
+id: buckwheat
+type: ingredient
+names:
+  en:
+    - buckwheat
+    - buckwheat groats
+    - buckwheat flour
+  pl:
+    - gryka
+    - kasza gryczana
+    - kasza gryczana prażona
+    - mąka gryczana
+  de:
+    - Buchweizen
+summary:
+  en: 'Buckwheat (Fagopyrum esculentum), a pseudocereal; not a gluten-containing cereal under EU Annex II.'
+  pl: >-
+    Gryka (Fagopyrum esculentum), pseudozboże; nie jest zbożem zawierającym gluten w rozumieniu załącznika II
+    UE.
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A pseudocereal.
+      pl: Pseudozboże.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted

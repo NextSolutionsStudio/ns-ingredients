@@ -1,0 +1,30 @@
+id: pork-protein
+type: protein
+names:
+  en:
+    - pork protein
+    - pork collagen protein
+  pl:
+    - białko wieprzowe
+    - białko wieprzowe kolagenowe
+    - białko kolagenowe wieprzowe
+  de:
+    - Schweineeiweiß
+summary:
+  en: 'Protein from pork, usually collagen from rind or connective tissue, used in meat products to bind water.'
+  pl: >-
+    Białko wieprzowe, zwykle kolagen ze skór lub tkanki łącznej, stosowane w przetworach mięsnych do wiązania
+    wody.
+assertions:
+  - code: origin.animal
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: From pigs.
+      pl: Ze świń.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted

@@ -1,0 +1,49 @@
+id: bacterial-cultures
+type: ingredient
+names:
+  en:
+    - bacterial cultures
+    - live cultures
+    - yoghurt cultures
+    - lactic acid bacteria
+  pl:
+    - kultury bakterii
+    - żywe kultury bakterii
+    - kultury bakterii jogurtowych
+    - żywe kultury bakterii jogurtowych
+    - żywe bakterie jogurtowe
+    - kultury jogurtowe
+    - kultury bakterii mlekowych
+    - żywe kultury bakterii mlekowych
+    - czyste kultury bakterii mlekowych
+    - kultury bakterii kwasu mlekowego
+    - bakterie fermentacji mlekowej
+    - bakterie fermentacji kwasu mlekowego
+    - kultury bakterii fermentacji mlekowej
+    - żywe kultury bakterii fermentacji mlekowej
+    - kultury bakterii fermentacji kwasu mlekowego
+    - kultury mleczarskie
+    - kultury kefirowe
+    - Streptococcus thermophilus
+    - Lactobacillus bulgaricus
+    - Lactobacillus delbrueckii subsp. bulgaricus
+    - Lactobacillus acidophilus
+    - Bifidobacterium lactis
+    - Bifidobacterium
+  de:
+    - Joghurtkulturen
+    - Milchsäurebakterien
+    - Bakterienkulturen
+summary:
+  en: >-
+    Starter or live cultures of lactic acid bacteria added to fermented milks, cheese, plant-based
+    alternatives or fermented meat.
+  pl: >-
+    Kultury starterowe lub żywe kultury bakterii fermentacji mlekowej dodawane do napojów fermentowanych,
+    serów, zamienników roślinnych czy fermentowanych wędlin.
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Identity-only. Not asserted: diet status (cultures for dairy are often propagated on milk-based media; no
+    source opened).

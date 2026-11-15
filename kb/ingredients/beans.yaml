@@ -1,0 +1,32 @@
+id: beans
+type: ingredient
+names:
+  en:
+    - beans
+    - red kidney beans
+    - white beans
+    - green beans
+  pl:
+    - fasola
+    - fasola czerwona
+    - fasola biała
+    - fasolka szparagowa
+    - fasolka szparagowa zielona
+  de:
+    - Bohnen
+summary:
+  en: 'Common beans (Phaseolus vulgaris): dried pulses or green pods.'
+  pl: 'Fasola zwykła (Phaseolus vulgaris): suche nasiona lub zielone strąki.'
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A pulse.
+      pl: Roślina strączkowa.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted

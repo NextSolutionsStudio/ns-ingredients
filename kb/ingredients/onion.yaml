@@ -1,0 +1,38 @@
+id: onion
+type: ingredient
+names:
+  en:
+    - onion
+    - onions
+    - dried onion
+    - onion powder
+  pl:
+    - cebula
+    - cebula suszona
+    - suszona cebula
+    - cebula w proszku
+    - cebula granulowana
+    - cebula czerwona
+    - cebula biała
+    - przecier z cebuli
+    - ekstrakt z cebuli
+  de:
+    - Zwiebel
+    - Zwiebeln
+    - Zwiebelpulver
+summary:
+  en: 'Onion (Allium cepa), fresh, dried or powdered.'
+  pl: 'Cebula (Allium cepa), świeża, suszona lub w proszku.'
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A vegetable.
+      pl: Warzywo.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted

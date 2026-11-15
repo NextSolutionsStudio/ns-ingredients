@@ -1,0 +1,38 @@
+id: disodium-guanylate
+type: additive
+e_number: E627
+names:
+  en:
+    - disodium guanylate
+    - disodium 5'-guanylate
+    - sodium 5'-guanylate
+  pl:
+    - guanylan disodowy
+    - 5'-guanylan disodowy
+    - guanozyno-5′-monofosforan disodu
+  de:
+    - Dinatriumguanylat
+functions:
+  - flavour-enhancer
+summary:
+  en: >-
+    Disodium guanosine-5'-monophosphate, a flavour enhancer usually used together with glutamate, which it
+    strengthens.
+  pl: >-
+    Sól disodowa guanozyno-5'-monofosforanu, wzmacniacz smaku stosowany zwykle razem z glutaminianem, którego
+    działanie wzmacnia.
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: >-
+        Group I additive (Reg 1333/2008 Annex II Part C, as set by Reg 1129/2011): quantum satis in most food
+        categories.
+      pl: >-
+        Dodatek grupy I (rozporządzenie 1333/2008, załącznik II część C, w brzmieniu rozporządzenia
+        1129/2011): quantum satis w większości kategorii żywności.
+    source: swm-reg-1129-2011
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - 'Identity-only: no EFSA re-evaluation of E 626–635 was opened.'

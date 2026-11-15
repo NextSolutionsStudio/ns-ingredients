@@ -1,0 +1,68 @@
+id: monosodium-glutamate
+type: additive
+e_number: E621
+names:
+  en:
+    - monosodium glutamate
+    - sodium glutamate
+    - monosodium L-glutamate
+    - sodium hydrogen glutamate
+    - MSG
+  pl:
+    - glutaminian monosodowy
+    - glutaminian sodu
+    - L-glutaminian sodu
+    - L-glutaminian monosodowy
+    - MSG
+  de:
+    - Mononatriumglutamat
+    - Natriumglutamat
+functions:
+  - flavour-enhancer
+summary:
+  en: >-
+    The sodium salt of glutamic acid, used as a flavour enhancer for a savoury (umami) taste. EFSA (2017) set
+    a group ADI of 30 mg/kg body weight a day, expressed as glutamic acid, for glutamic acid and its salts (E
+    620–625), and noted that some population groups were estimated to exceed both that ADI and doses linked to
+    adverse effects in humans.
+  pl: >-
+    Sól sodowa kwasu glutaminowego, stosowana jako wzmacniacz smaku dla smaku umami. EFSA (2017) ustaliła
+    grupowe ADI 30 mg/kg masy ciała na dzień, wyrażone jako kwas glutaminowy, dla kwasu glutaminowego i jego
+    soli (E 620–625), i zauważyła, że niektóre grupy ludności mogą przekraczać zarówno to ADI, jak i dawki
+    wiązane z działaniami niepożądanymi u ludzi.
+assertions:
+  - code: health.sensitivity_reported
+    certainty: 'yes'
+    kind: opinion
+    grade: C
+    note:
+      en: >-
+        EFSA identified effects in humans but could not use the human data to set a no-effect dose for lack of
+        dose-response data; it noted exposure in some groups above doses associated with adverse effects in
+        humans.
+      pl: >-
+        EFSA stwierdziła działania u ludzi, ale nie mogła na podstawie danych z badań na ludziach ustalić
+        dawki bez efektu z braku zależności dawka–odpowiedź; zauważyła, że w niektórych grupach narażenie
+        przekracza dawki wiązane z działaniami niepożądanymi u ludzi.
+    sources:
+      - id: efsa-glutamates-2017
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    source: reg-1333-2008
+reference_values:
+  - type: group_ADI
+    value: 30
+    unit: mg/kg bw/day (as glutamic acid)
+    body: EFSA
+    year: 2017
+    source: efsa-glutamates-2017
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    No origin claim: the opened EFSA abstract and the Reg 231/2012 E 621 entry do not describe the
+    manufacturing route (commercially bacterial fermentation, not sourced here).
+  - >-
+    No processing.ultra_processed_marker claim, consistent with the other additive classes in the KB; flavour
+    enhancers are a candidate when that policy is settled.

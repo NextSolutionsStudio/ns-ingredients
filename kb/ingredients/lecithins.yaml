@@ -26,7 +26,7 @@ variants:
   - id: soy
     names:
       en: [soy lecithin, lecithin (soy), soya lecithin]
-      pl: [lecytyna sojowa, lecytyna (z soi)]
+      pl: [lecytyna sojowa, lecytyna (z soi), lecytyny sojowe, lecytyny z soi]
       de: [Sojalecithin, Lecithin (Soja)]
     process:
       en: >-
@@ -55,7 +55,7 @@ variants:
   - id: sunflower
     names:
       en: [sunflower lecithin]
-      pl: [lecytyna słonecznikowa]
+      pl: [lecytyna słonecznikowa, lecytyny słonecznikowe, lecytyny ze słonecznika]
       de: [Sonnenblumenlecithin]
     process:
       en: "Extracted from sunflower seed oil; free of the major legal allergens, so makers market it explicitly."
@@ -74,7 +74,7 @@ variants:
   - id: rapeseed
     names:
       en: [rapeseed lecithin]
-      pl: [lecytyna rzepakowa]
+      pl: [lecytyna rzepakowa, lecytyny rzepakowe]
       de: [Rapslecithin]
     process:
       en: "Extracted from rapeseed (canola) oil; a European-grown, non-allergenic alternative to soy."

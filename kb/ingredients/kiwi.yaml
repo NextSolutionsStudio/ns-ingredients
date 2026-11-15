@@ -1,0 +1,32 @@
+id: kiwi
+type: ingredient
+names:
+  en:
+    - kiwi
+    - kiwifruit
+  pl:
+    - kiwi
+    - owoce kiwi
+  de:
+    - Kiwi
+summary:
+  en: Kiwifruit (Actinidia deliciosa).
+  pl: Kiwi (Actinidia deliciosa).
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A fruit.
+      pl: Owoc.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - 'Kiwi is not one of the 14 EU allergens, though allergy to it is reported; no allergen claim is made.'
+  - >-
+    Purées and whole fruit only: juices and juice concentrates are free sugars and belong to
+    kb/ingredients/fruit-juice-concentrate.yaml.

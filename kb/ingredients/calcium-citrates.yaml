@@ -1,0 +1,44 @@
+id: calcium-citrates
+type: additive
+e_number: E333
+names:
+  en:
+    - calcium citrates
+    - calcium citrate
+    - tricalcium citrate
+    - monocalcium citrate
+  pl:
+    - cytryniany wapnia
+    - cytrynian wapnia
+    - cytrynian triwapniowy
+    - cytrynian monowapniowy
+  de:
+    - Calciumcitrate
+    - Calciumcitrat
+    - Tricalciumcitrat
+functions:
+  - acidity-regulator
+  - firming-agent
+  - sequestrant
+summary:
+  en: >-
+    Mono-, di- and tricalcium salts of citric acid (E 333(i)–(iii)), used as acidity regulators and firming
+    agents, and as a calcium source.
+  pl: >-
+    Mono-, di- i triwapniowe sole kwasu cytrynowego (E 333(i)–(iii)), stosowane jako regulatory kwasowości i
+    substancje wiążące oraz jako źródło wapnia.
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: >-
+        Group I additive (Reg 1333/2008 Annex II Part C, as set by Reg 1129/2011): quantum satis in most food
+        categories.
+      pl: >-
+        Dodatek grupy I (rozporządzenie 1333/2008, załącznik II część C, w brzmieniu rozporządzenia
+        1129/2011): quantum satis w większości kategorii żywności.
+    source: swm-reg-1129-2011
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - 'Identity-only: no EFSA re-evaluation of E 333 was found.'

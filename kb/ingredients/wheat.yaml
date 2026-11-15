@@ -2,7 +2,7 @@ id: wheat
 type: ingredient
 names:
   en: [wheat, wheat flour]
-  pl: [pszenica, mąka pszenna]
+  pl: [pszenica, mąka pszenna, mąka pszenna pełnoziarnista, pełnoziarnista mąka pszenna, otręby pszenne, kasza manna, płatki pszenne, pszenica pełnoziarnista, ziarno pszenicy, kuskus, kasza kuskus, bulgur, kasza bulgur]
   de: [Weizen]
 summary:
   en: "The cereal Triticum spp. (including spelt and khorasan wheat); one of the cereals containing gluten regulated under EU Annex II item 1."

@@ -1,0 +1,27 @@
+id: citrus-fibre
+type: ingredient
+names:
+  en:
+    - citrus fibre
+    - citrus fiber
+  pl:
+    - błonnik cytrusowy
+    - włókno cytrusowe
+  de:
+    - Citrusfaser
+summary:
+  en: 'Fibre from citrus peel and pulp, used to bind water and add texture.'
+  pl: 'Błonnik ze skórek i miąższu cytrusów, stosowany do wiązania wody i nadawania konsystencji.'
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Made from citrus fruit.
+      pl: Otrzymywany z owoców cytrusowych.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted

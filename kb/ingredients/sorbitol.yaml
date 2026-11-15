@@ -4,7 +4,7 @@ e_number: E420
 ids: { cas: "50-70-4", wikidata: Q245280, chebi: "CHEBI:17924", pubchem: 5780 }
 names:
   en: [sorbitol, D-sorbitol, D-glucitol]
-  pl: [sorbitol]
+  pl: [sorbitol, sorbitole]
   de: [Sorbit, Glucitol]
 functions: [sweetener, humectant]
 summary:

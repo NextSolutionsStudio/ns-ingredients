@@ -3,7 +3,7 @@ type: protein
 parent: wheat
 names:
   en: [wheat gluten, vital wheat gluten]
-  pl: [gluten pszenny]
+  pl: [gluten pszenny, białko pszenne]
   de: [Weizengluten]
 summary:
   en: "The protein isolated from wheat (mainly gliadin and glutenin), used as a dough strengthener or meat-analogue base; the concentrated form of wheat's own gluten allergen."

@@ -1,0 +1,36 @@
+id: spices
+type: ingredient
+names:
+  en:
+    - spices
+    - mixed spices
+  pl:
+    - przyprawy
+    - mieszanka przypraw
+    - przyprawy naturalne
+  de:
+    - Gewürze
+summary:
+  en: >-
+    The EU category name for spices that together make up no more than 2% of the food; labels may then say
+    just 'spices'. Allergenic spices (celery, mustard) must still be named and emphasised.
+  pl: >-
+    Nazwa kategorii UE dla przypraw stanowiących łącznie nie więcej niż 2% żywności; etykieta może wtedy podać
+    samo „przyprawy”. Przyprawy alergenne (seler, gorczyca) nadal muszą być wymienione i wyróżnione.
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: 'A spice: dried plant parts.'
+      pl: 'Przyprawa: suszone części roślin.'
+    sources:
+      - id: reg-1169-2011
+        locator: 'Annex VII Part B, row 7'
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    'Przyprawa' (singular) is left out: Polish labels use it for seasoning blends that may contain salt, sugar
+    or flavour enhancers.

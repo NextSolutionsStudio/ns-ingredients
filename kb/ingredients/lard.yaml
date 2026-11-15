@@ -1,0 +1,30 @@
+id: lard
+type: ingredient
+names:
+  en:
+    - lard
+    - pork fat
+  pl:
+    - tłuszcz wieprzowy
+    - smalec
+    - smalec wieprzowy
+    - słonina
+  de:
+    - Schweineschmalz
+    - Schweinefett
+summary:
+  en: 'Fat from pigs: rendered lard, or back fat (słonina).'
+  pl: 'Tłuszcz ze świń: wytopiony smalec lub słonina.'
+assertions:
+  - code: origin.animal
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Fat from pigs.
+      pl: Tłuszcz ze świń.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Annex VII Part B, row 2 (fats of animal origin named with their animal origin)'
+review_status: draft
+provenance: ai-drafted

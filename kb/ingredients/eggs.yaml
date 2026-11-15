@@ -2,7 +2,7 @@ id: eggs
 type: ingredient
 names:
   en: [eggs, egg]
-  pl: [jaja, jaj, jajo]
+  pl: [jaja, jaj, jajo, jaja w proszku, jaja kurze, białko jaja, białko jaj, białko jaja w proszku, białko jaj w proszku, białka jaj w proszku, żółtko jaja, żółtka jaj, żółtko jaj w proszku, żółtka jaj w proszku, jaja gotowane]
   de: [Eier, Ei, Eiern]
 summary:
   en: "Hen's (or other bird's) eggs and their products; one of the EU's fourteen regulated allergens, with no listed exemptions."

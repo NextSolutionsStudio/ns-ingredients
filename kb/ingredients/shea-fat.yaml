@@ -1,0 +1,34 @@
+id: shea-fat
+type: fat
+names:
+  en:
+    - shea butter
+    - shea fat
+    - shea
+  pl:
+    - tłuszcz shea
+    - masło shea
+    - olej shea
+    - olej roślinny shea
+  de:
+    - Sheabutter
+summary:
+  en: >-
+    Fat pressed from the nuts of the shea tree (Vitellaria paradoxa), used in chocolate fillings and as a
+    cocoa butter equivalent. Not a tree nut under EU Annex II.
+  pl: >-
+    Tłuszcz wyciskany z orzechów masłosza (Vitellaria paradoxa), stosowany w nadzieniach czekoladowych i jako
+    ekwiwalent masła kakaowego. Nie jest orzechem w rozumieniu załącznika II UE.
+assertions:
+  - code: origin.vegetable_oil_derived
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A vegetable fat; EU labelling requires its plant origin to be named.
+      pl: Tłuszcz roślinny; przepisy UE wymagają podania jego pochodzenia roślinnego.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Annex VII Part A, point 9'
+review_status: draft
+provenance: ai-drafted

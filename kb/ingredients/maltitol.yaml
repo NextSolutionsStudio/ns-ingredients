@@ -4,7 +4,7 @@ e_number: E965
 ids: { cas: "585-88-6", wikidata: Q423882, chebi: "CHEBI:68428", pubchem: 493591 }
 names:
   en: [maltitol, maltitol syrup, D-maltitol]
-  pl: [maltitol, syrop maltitolowy]
+  pl: [maltitol, maltitole, syrop maltitolowy]
   de: [Maltit]
 functions: [sweetener]
 summary:

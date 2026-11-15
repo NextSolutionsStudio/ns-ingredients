@@ -2,7 +2,7 @@ id: cheese
 type: ingredient
 names:
   en: [cheese]
-  pl: [ser, ser żółty, sery]
+  pl: [ser, ser żółty, sery, twaróg, ser twarogowy, twaróg odtłuszczony, ser twarogowy odtłuszczony, twaróg ziarnisty, ser w proszku, ser mozzarella, mozzarella]
   de: [Käse, Hartkäse]
 summary:
   en: >-

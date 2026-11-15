@@ -1,0 +1,41 @@
+id: tomato
+type: ingredient
+names:
+  en:
+    - tomato
+    - tomatoes
+    - tomato paste
+    - tomato purée
+    - tomato concentrate
+    - dried tomatoes
+  pl:
+    - pomidory
+    - pomidor
+    - koncentrat pomidorowy
+    - przecier pomidorowy
+    - pomidory suszone
+    - suszone pomidory
+    - pomidory krojone
+    - pulpa pomidorowa
+    - passata pomidorowa
+    - pomidor w proszku
+    - pomidory w proszku
+  de:
+    - Tomaten
+    - Tomatenmark
+summary:
+  en: 'Tomato (Solanum lycopersicum) and its paste, purée and concentrate.'
+  pl: 'Pomidor (Solanum lycopersicum) i jego koncentrat, przecier i pulpa.'
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A vegetable.
+      pl: Warzywo.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted
