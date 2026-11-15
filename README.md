@@ -20,17 +20,19 @@ It is built for the questions most ingredient apps can't answer:
 
 ## Try it
 
-**Live demo: <https://ns-ingredients.YOUR-ACCOUNT.workers.dev>**. Look up a barcode, search an
-ingredient (try E171, citric acid or xylitol) or paste a label. The same deployment is the API, open without
-a key and limited per IP address ([reference](https://ns-ingredients.YOUR-ACCOUNT.workers.dev/docs)):
+Deploy the keyless demo to your own Cloudflare account (`npx wrangler deploy`, see
+[docs/DEPLOY.md](docs/DEPLOY.md#cloudflare-workers-the-public-keyless-demo)): it serves the explorer (look up a
+barcode, search an ingredient such as E171, citric acid or xylitol, or paste a label) and the API, open without a
+key and limited per IP address, with its reference at `/docs`:
 
 ```bash
-curl -s https://ns-ingredients.YOUR-ACCOUNT.workers.dev/v1/analyze -H 'content-type: application/json' \
+curl -s https://ns-ingredients.<your-account>.workers.dev/v1/analyze -H 'content-type: application/json' \
   -d '{"text":"Ingredients: sugar, palm oil, colour: E129, E171, citric acid","lang":"en"}'
 ```
 
-The demo runs on Cloudflare Workers ([docs/DEPLOY.md](docs/DEPLOY.md#cloudflare-workers-the-public-keyless-demo));
-self-host the container for API keys and quotas.
+A hosted site built on this engine: [airon skład](https://sklad.airon.app) (Polish labels; source at
+[Rippy1911/airon-sklad](https://github.com/Rippy1911/airon-sklad)). Self-host the container for API keys and
+quotas.
 
 ## What's inside
 
