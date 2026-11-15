@@ -1,0 +1,56 @@
+id: capsicum
+type: ingredient
+names:
+  en:
+    - bell pepper
+    - sweet pepper
+    - paprika
+    - chili
+    - chilli
+    - chili pepper
+  pl:
+    - papryka
+    - papryka czerwona
+    - czerwona papryka
+    - papryka zielona
+    - papryka żółta
+    - papryka słodka
+    - papryka ostra
+    - papryka w proszku
+    - papryka suszona
+    - suszona papryka
+    - papryka mielona
+    - papryka słodka mielona
+    - papryka wędzona
+    - papryka słodka wędzona
+    - papryka grillowana
+    - suszona papryka czerwona
+    - suszona czerwona papryka
+    - papryka chili
+    - papryka chilli
+    - papryczka chili
+    - chili
+    - chilli
+  de:
+    - Paprika
+    - Chili
+summary:
+  en: >-
+    Capsicum peppers: sweet (bell) peppers as a vegetable, and paprika and chili as spices. Paprika extract (E
+    160c) has its own entry.
+  pl: >-
+    Papryka (Capsicum): słodka jako warzywo oraz papryka mielona i chili jako przyprawy. Ekstrakt z papryki (E
+    160c) ma osobny wpis.
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A vegetable or spice from Capsicum peppers.
+      pl: Warzywo lub przyprawa z papryki (Capsicum).
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted

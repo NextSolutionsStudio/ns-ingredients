@@ -1,0 +1,57 @@
+id: titanium-dioxide
+type: additive
+e_number: E171
+ids: { cas: "13463-67-7", wikidata: Q193521, chebi: "CHEBI:32234", pubchem: 26042 }
+names:
+  en: [titanium dioxide, titanium oxide]
+  pl: [tlenek tytanu(IV), ditlenek tytanu, dwutlenek tytanu, biel tytanowa]
+  de: [Titandioxid, "Titan(IV)-oxid", Titanweiss]
+functions: [colour]
+summary:
+  en: >-
+    A white mineral pigment used to whiten and opacify sweets, chewing gum, sauces, food supplements and
+    coatings. In 2021 EFSA concluded it could no longer confirm titanium dioxide is safe as a food
+    additive, because a concern for genotoxicity (DNA and chromosomal damage from accumulating particles)
+    could not be ruled out — and it withdrew from the EU list of authorised additives in 2022. It remains
+    authorised for food use in some other jurisdictions, including the US and Great Britain, whose
+    regulators reviewed the same evidence and reached a different conclusion.
+  pl: >-
+    Biały pigment mineralny stosowany do wybielania i zapewniania nieprzezroczystości słodyczom, gumie do
+    żucia, sosom, suplementom diety i powłokom. W 2021 r. EFSA uznała, że nie może już potwierdzić
+    bezpieczeństwa dwutlenku tytanu jako dodatku do żywności, ponieważ nie można było wykluczyć obawy o
+    genotoksyczność (uszkodzenia DNA i chromosomów wynikające z gromadzenia się cząstek) — a w 2022 r.
+    został wycofany z unijnego wykazu dopuszczonych dodatków. Pozostaje dopuszczony do stosowania w
+    żywności w niektórych innych jurysdykcjach, m.in. w USA i Wielkiej Brytanii, których regulatorzy
+    ocenili te same dane i doszli do odmiennego wniosku.
+assertions:
+  - code: regulatory.eu_banned
+    certainty: yes
+    kind: fact
+    grade: A
+    jurisdiction: EU
+    note:
+      en: "Removed from the EU list of authorised food additives from 7 February 2022 (with a transition period for food already on the market)."
+      pl: "Wycofany z unijnego wykazu dopuszczonych dodatków do żywności od 7 lutego 2022 r. (z okresem przejściowym dla żywności już wprowadzonej do obrotu)."
+    sources: [{ id: reg-2022-63 }]
+  - code: health.no_safe_level_established
+    certainty: yes
+    kind: fact
+    grade: A
+    population: [general]
+    note:
+      en: "EFSA (2021) concluded titanium dioxide could no longer be considered safe as a food additive, mainly because a concern for genotoxicity of TiO2 particles could not be ruled out and no threshold below which this does not occur could be defined; it did not set an ADI."
+      pl: "EFSA (2021) uznała, że dwutlenku tytanu nie można już uznać za bezpieczny jako dodatek do żywności, głównie ponieważ nie można wykluczyć obawy o genotoksyczność cząstek TiO2 i nie udało się określić progu, poniżej którego nie występuje; nie ustalono ADI."
+    sources: [{ id: efsa-tio2-2021 }]
+regulatory:
+  - jurisdiction: EU
+    status: banned
+    conditions: { en: "No longer an authorised food additive since 2022 (Reg 2022/63); still permitted in cosmetics and medicines under separate rules.", pl: "Od 2022 r. nie jest już dopuszczonym dodatkiem do żywności (Rozp. 2022/63); wciąż dozwolony w kosmetykach i lekach na podstawie odrębnych przepisów." }
+    source: reg-2022-63
+  - jurisdiction: US
+    status: authorised
+    conditions: { en: "Authorised as a colour additive exempt from certification, capped at 1% by weight of the food (21 CFR 73.575).", pl: "Dopuszczony jako barwnik zwolniony z certyfikacji, w dawce ograniczonej do 1% masy żywności (21 CFR 73.575)." }
+    source: col-fda-cfr-73-575-tio2
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "UK (Great Britain) also kept E171 authorised after its own Committee on Toxicity review; not added as a separate `regulatory` row because its own regulation/consolidated citation was not opened this session — the fact is mentioned in summary only."

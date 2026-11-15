@@ -1,0 +1,29 @@
+id: peas
+type: ingredient
+names:
+  en:
+    - peas
+    - green peas
+  pl:
+    - groszek
+    - groszek zielony
+    - zielony groszek
+    - groch
+  de:
+    - Erbsen
+summary:
+  en: Peas (Pisum sativum). Pea protein and pea starch have their own entries.
+  pl: Groch (Pisum sativum). Białko grochu i skrobia grochowa mają osobne wpisy.
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A pulse.
+      pl: Roślina strączkowa.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted

@@ -1,0 +1,133 @@
+# Batch-specific citations for the "proteins" batch (sports-nutrition proteins and adjacent aminos/stimulants).
+# Prefixed prot- to avoid id clashes with other contributors' batch files.
+sources:
+  - id: prot-monteiro-2019-nova
+    type: review
+    title: "Ultra-processed foods: what they are and how to identify them"
+    authors: "Monteiro CA, Cannon G, Levy RB, Moubarac JC, Louzada ML, Rauber F, et al."
+    publisher: "Cambridge University Press (Public Health Nutrition)"
+    year: 2019
+    url: https://doi.org/10.1017/S1368980018003762
+    doi: 10.1017/S1368980018003762
+    licence: "© Cambridge University Press — cited, not reproduced"
+    accessed: 2026-09-27
+    note: "Public Health Nutrition 22(5):936-941. Lists 'hydrolysed proteins, soya protein isolate, gluten, casein, whey protein' among the food substances of no/rare culinary use that mark a product as NOVA group 4 (ultra-processed) when they appear in an ingredient list."
+  - id: prot-kreider-2022-creatine-review
+    type: review
+    title: "Bioavailability, Efficacy, Safety, and Regulatory Status of Creatine and Related Compounds: A Critical Review"
+    authors: "Kreider RB, Jäger R, Purpura M"
+    publisher: "MDPI (Nutrients)"
+    year: 2022
+    url: https://doi.org/10.3390/nu14051035
+    doi: 10.3390/nu14051035
+    licence: "MDPI — CC BY 4.0"
+    accessed: 2026-09-27
+    note: "Nutrients 14(5):1035. Describes the Pischel & Gastner sarcosine + cyanamide industrial synthesis of creatine monohydrate, and documents manufacturer-dependent purity (Creapure-brand ~99.9% pure vs some other sources carrying dicyandiamide, dihydrotriazine, thiourea, creatinine and heavy metals)."
+  - id: prot-moret-tubaro-2011-creatine-contaminants
+    type: observational
+    title: "Levels of creatine, organic contaminants and heavy metals in creatine dietary supplements"
+    authors: "Moret S, Prevarin A, Tubaro F"
+    publisher: "Elsevier (Food Chemistry)"
+    year: 2011
+    url: https://doi.org/10.1016/j.foodchem.2010.12.028
+    doi: 10.1016/j.foodchem.2010.12.028
+    licence: "Elsevier — cited, not reproduced"
+    accessed: 2026-09-27
+    note: "Food Chemistry 126(3):1232-1238. HPLC survey of 33 market creatine supplements: creatinine over 100 mg/kg in 44% of samples, dihydro-1,3,5-triazine over 4.5 mg/kg (max 8.0 mg/kg) and dicyandiamide over 50 mg/kg in ~15%; only mercury detectable among the heavy metals tested, below 1 mg/kg."
+  - id: prot-trexler-2015-beta-alanine-issn
+    type: review
+    title: "International society of sports nutrition position stand: Beta-Alanine"
+    authors: "Trexler ET, Smith-Ryan AE, Stout JR, Hoffman JR, Wilborn CD, et al."
+    publisher: "BioMed Central (Journal of the International Society of Sports Nutrition)"
+    year: 2015
+    url: https://doi.org/10.1186/s12970-015-0090-y
+    doi: 10.1186/s12970-015-0090-y
+    licence: "BioMed Central — CC BY 4.0"
+    accessed: 2026-09-27
+    note: "J Int Soc Sports Nutr 12:30. Recommends 4-6 g/day in divided doses for 2+ weeks; documents paresthesia (tingling) above ~800 mg in a single non-sustained-release dose, reduced by divided doses (~1.6 g) or sustained-release formulations; most pronounced ergogenic effect for 1-4 minute high-intensity efforts."
+  - id: prot-leon-lopez-2019-hydrolyzed-collagen
+    type: review
+    title: "Hydrolyzed Collagen—Sources and Applications"
+    authors: "León-López A, Morales-Peñaloza A, Martínez-Juárez VM, Vargas-Torres A, Zeugolis DI, Aguirre-Álvarez G"
+    publisher: "MDPI (Molecules)"
+    year: 2019
+    url: https://doi.org/10.3390/molecules24224031
+    doi: 10.3390/molecules24224031
+    licence: "MDPI — CC BY 4.0"
+    accessed: 2026-09-27
+    note: "Molecules 24(22):4031. Bovine (Achilles tendon, hide), porcine (skin) and marine/fish (scales, skin, bones, viscera) are the main commercial sources; hydrolysis reduces native collagen (~300 kDa) to peptides of ~3-6 kDa; all sources are animal-derived."
+  - id: prot-du-2020-gm-soy-protein
+    type: observational
+    title: "Monitoring and traceability of genetically modified soya bean event GTS 40-3-2 during soya bean protein concentrate and isolate preparation"
+    authors: "Du Y, Chen F, Chen C, Liu K"
+    publisher: "The Royal Society (Royal Society Open Science)"
+    year: 2020
+    url: https://doi.org/10.1098/rsos.201147
+    doi: 10.1098/rsos.201147
+    licence: "Royal Society — CC BY 4.0"
+    accessed: 2026-09-27
+    note: "R Soc Open Sci 7(10):201147. Soybean protein isolate/concentrate made from raw soybean spiked at 0.9-10% GM (GTS 40-3-2) content showed a higher transgenic signal (1.12-11.41%) in the finished protein than in the raw material, because processing degrades non-target DNA faster than the transgenic marker."
+  - id: prot-gea-micellar-casein
+    type: reference
+    title: "Making the most of micellar casein"
+    publisher: "GEA Group"
+    url: https://www.gea.com/en/stories/micellar-casein-isolates/
+    licence: "GEA Group — cited, not reproduced"
+    accessed: 2026-09-27
+    note: "Describes microfiltration (~0.1 µm membranes) plus diafiltration of skim milk as the modern route to native micellar casein, retaining the casein micelle without acid or rennet/enzyme coagulation, unlike acid casein or rennet casein."
+  - id: prot-wang-2026-wpc-mcc-characterization
+    type: observational
+    title: "Characterization and Comparison of Milk Fat Globule Membrane Proteins, Whey Protein Concentrate, and Micellar Casein Concentrate"
+    authors: "Wang J, Ji X, Bian Z, Liu Y, Chen W, Fan C, Li J"
+    publisher: "Wiley (Food Science & Nutrition)"
+    year: 2026
+    url: https://doi.org/10.1002/fsn3.71468
+    doi: 10.1002/fsn3.71468
+    licence: "Wiley — CC BY 4.0"
+    accessed: 2026-09-27
+    note: "Food Sci Nutr 14(1):e71468. Characterises commercial 'WPC 80' and 'MCC 1900' membrane-filtered dairy protein concentrates by their marketed protein-content grade."
+  - id: prot-adpi-whey-overview
+    type: reference
+    title: "Whey Ingredients Overview"
+    publisher: "American Dairy Products Institute"
+    url: https://adpi.org/ingredient-resources/whey-overview/
+    licence: "ADPI — cited, not reproduced"
+    accessed: 2026-09-27
+    note: "Trade-body description of whey fractionation by ultrafiltration/diafiltration into progressively higher-protein, lower-lactose grades (e.g. WPC34 vs more extensively filtered isolates)."
+  - id: prot-caffeine-synthesis-patent-cn104892611a
+    type: reference
+    title: "Synthetic method of caffeine (CN104892611A)"
+    publisher: "China National Intellectual Property Administration, via Google Patents"
+    year: 2015
+    url: https://patents.google.com/patent/CN104892611A/en
+    licence: "Patent publication — cited, not reproduced"
+    accessed: 2026-09-27
+    note: "Describes the industrial route from cyanoacetic acid and dimethylurea through condensation, cyclisation and a final methylation step to caffeine; background section confirms this route, not extraction, is standard industrial practice."
+  - id: prot-taurine-synthesis-newsmedical
+    type: reference
+    title: "Taurine Synthesis and Production"
+    publisher: AZoNetwork (News-Medical.Net)
+    url: https://www.news-medical.net/health/Taurine-Synthesis-and-Production.aspx
+    licence: "AZoNetwork — cited, not reproduced"
+    accessed: 2026-09-27
+    note: "Describes the ethylene-oxide/sodium-bisulfite and ethanolamine-sulfonation industrial routes to taurine, and states that essentially all commercial supplement/food-grade taurine today is chemically synthesised rather than extracted from animal tissue, on economic grounds."
+  - id: prot-yu-2026-beta-alanine-production
+    type: review
+    title: "Recent Advances in Beta-Alanine Production via Enzymatic Catalysis and Microbial Whole-Cell Catalysis"
+    authors: "Yu J, Ma P, Zhang J, Zhang H, Tie H, Ruan H"
+    publisher: "MDPI (Biology)"
+    year: 2026
+    url: https://doi.org/10.3390/biology15110885
+    doi: 10.3390/biology15110885
+    licence: "MDPI — CC BY 4.0"
+    accessed: 2026-09-27
+    note: "Biology 15(11):885. States that chemical synthesis from acrylonitrile/acrylic acid and ammonia, a 20th-century route, 'is still predominant' industrially, while enzymatic/fermentation routes (L-aspartate + aspartate decarboxylase) remain at laboratory scale."
+  - id: prot-vrg-fpc-rennet
+    type: reference
+    title: "Microbial Rennets and Fermentation Produced Chymosin (FPC): How Vegetarian Are They?"
+    publisher: "Vegetarian Resource Group"
+    year: 2012
+    url: https://www.vrg.org/blog/2012/08/21/microbial-rennets-and-fermentation-produced-chymosin-fpc-how-vegetarian-are-they/
+    licence: "Vegetarian Resource Group — cited, not reproduced"
+    accessed: 2026-09-27
+    note: "Reports enzyme-company/dairy-group estimates that fermentation-produced chymosin (a microbial rennet, not animal-derived) accounts for roughly 65-90% of commercial cheese production in the US/Europe, with the remainder still using animal rennet undisclosed to the ingredient buyer."

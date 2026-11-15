@@ -1,0 +1,66 @@
+id: whey-powder
+type: ingredient
+names:
+  en: [whey powder, sweet whey powder, whey]
+  pl: [serwatka, serwatka w proszku, serwatka słodka w proszku]
+  de: [Molkenpulver, Süßmolkenpulver]
+summary:
+  en: >-
+    The liquid left over from cheesemaking, dried to a powder without the protein-concentrating
+    ultrafiltration step used for whey protein concentrate/isolate, so it stays predominantly lactose with
+    only a modest protein content. One of the EU's fourteen regulated allergens (milk).
+  pl: >-
+    Płynny produkt pozostały po produkcji sera, suszony do postaci proszku bez etapu ultrafiltracji
+    zatężającej białko stosowanego przy koncentracie/izolacie białka serwatkowego, dlatego pozostaje w
+    większości laktozą, z umiarkowaną zawartością białka. Jeden z czternastu regulowanych alergenów UE
+    (mleko).
+  de: >-
+    Die flüssige Restfraktion der Käseherstellung, zu Pulver getrocknet, ohne den proteinkonzentrierenden
+    Ultrafiltrationsschritt von Molkenproteinkonzentrat/-isolat, bleibt daher überwiegend Lactose mit nur
+    mäßigem Proteingehalt.
+assertions:
+  - code: allergen.milk
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Milk-derived (a by-product of cheesemaking); declared as a milk allergen.", pl: "Pochodzenia mlecznego (produkt uboczny wytwarzania sera); deklarowana jako alergen mleczny." }
+    sources: [{ id: reg-1169-2011, locator: "Annex II item 7" }]
+  - code: origin.dairy
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A by-product of cheesemaking from cow's milk.", pl: "Produkt uboczny wytwarzania sera z mleka krowiego." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegan
+    certainty: "no"
+    kind: fact
+    grade: A
+    note: { en: "Dairy-derived.", pl: "Pochodzenie mleczne." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegetarian
+    certainty: maybe
+    kind: estimate
+    grade: C
+    note:
+      en: >-
+        Cheese whey follows rennet coagulation of the milk. Enzyme-industry estimates put
+        fermentation-produced chymosin (a microbial rennet, not animal-derived) at roughly 65-90% of
+        commercial cheese production in the US/Europe, but a whey powder label does not disclose which
+        coagulant made the source cheese, so a minority animal-rennet route cannot be ruled out.
+      pl: >-
+        Serwatka pochodzi z mleka skoagulowanego podpuszczką. Szacunki przemysłu enzymatycznego wskazują
+        na ok. 65-90% produkcji sera w USA/Europie z użyciem chymozyny fermentacyjnej (podpuszczki
+        mikrobiologicznej, niepochodzenia zwierzęcego), ale etykieta serwatki w proszku nie mówi, jaki
+        koagulant zastosowano w serze źródłowym, więc mniejszościowej podpuszczki zwierzęcej nie można
+        wykluczyć.
+    sources: [{ id: prot-vrg-fpc-rennet }]
+  - code: diet.lactose_free
+    certainty: "no"
+    kind: fact
+    grade: A
+    note:
+      en: "Whey powder is the dried, unconcentrated form of whey, which is predominantly lactose; not lactose-free."
+      pl: "Serwatka w proszku to suszona, niezatężona forma serwatki, będącej w większości laktozą; nie jest bez laktozy."
+    sources: [{ id: reg-1169-2011 }]
+review_status: draft
+provenance: ai-drafted

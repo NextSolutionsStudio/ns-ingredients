@@ -1,0 +1,45 @@
+id: rosemary-extract
+type: additive
+e_number: E392
+names:
+  en:
+    - extracts of rosemary
+    - rosemary extract
+  pl:
+    - ekstrakt z rozmarynu
+    - ekstrakty z rozmarynu
+    - ekstrakt rozmarynu
+    - wyciąg z rozmarynu
+  de:
+    - Rosmarinextrakt
+    - Extrakte aus Rosmarin
+functions:
+  - antioxidant
+summary:
+  en: >-
+    An antioxidant extracted from rosemary leaves; its active components are mainly phenolic acids, flavonoids
+    and diterpenoids. The same words can name a rosemary flavouring; it is rosemary either way.
+  pl: >-
+    Przeciwutleniacz ekstrahowany z liści rozmarynu; jego aktywne składniki to głównie kwasy fenolowe,
+    flawonoidy i diterpenoidy. Te same słowa mogą oznaczać aromat z rozmarynu; w obu przypadkach to rozmaryn.
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Extracted from rosemary leaves.
+      pl: Ekstrahowany z liści rozmarynu.
+    sources:
+      - id: reg-231-2012
+        locator: 'E 392, definition'
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    source: reg-1333-2008
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    The generated entry's Polish name 'rozmaryn lekarski' is the plant, not the additive; it moved to
+    kb/ingredients/rosemary.yaml.

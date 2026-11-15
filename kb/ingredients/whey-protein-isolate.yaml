@@ -1,0 +1,78 @@
+id: whey-protein-isolate
+type: protein
+names:
+  en: [whey protein isolate, WPI, WPI90]
+  pl: [izolat białka serwatkowego, izolaty białka serwatkowego, izolat białek serwatkowych, WPI]
+  de: [Molkenproteinisolat]
+summary:
+  en: >-
+    Whey filtered further than concentrate — by extended ultrafiltration/microfiltration or ion exchange —
+    to reach roughly 90% protein or higher, stripping out most of the fat and much of the lactose. Costs
+    more than concentrate and is marketed at people who want a "cleaner", lower-carb/lower-fat protein or
+    who are mildly lactose-sensitive, though it is not certified lactose-free.
+  pl: >-
+    Serwatka filtrowana dalej niż koncentrat — przez rozszerzoną ultrafiltrację/mikrofiltrację lub wymianę
+    jonową — do ok. 90% białka lub więcej, usuwając większość tłuszczu i dużą część laktozy. Droższy niż
+    koncentrat, kierowany do osób chcących "czystszego", niższowęglowodanowego/niższotłuszczowego białka lub
+    łagodnie nietolerujących laktozy, choć nie jest certyfikowany jako bez laktozy.
+  de: >-
+    Weiter filtrierte Molke (Ultrafiltration/Mikrofiltration oder Ionenaustausch) mit ca. 90% Protein oder
+    mehr, wobei der Großteil von Fett und Lactose entfernt wird. Nicht als laktosefrei zertifiziert.
+assertions:
+  - code: origin.dairy
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "By-product of cheesemaking from cow's milk, further filtered than concentrate.", pl: "Produkt uboczny wytwarzania sera z mleka krowiego, filtrowany dalej niż koncentrat." }
+    sources: [{ id: usda-fdc }]
+  - code: allergen.milk
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Milk-derived; declared as a milk allergen regardless of how little lactose remains.", pl: "Pochodzi z mleka; deklarowana jako alergen mleczny niezależnie od tego, jak mało laktozy pozostało." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegan
+    certainty: no
+    kind: fact
+    grade: A
+    note: { en: "Dairy-derived.", pl: "Pochodzenie mleczne." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegetarian
+    certainty: maybe
+    kind: estimate
+    grade: C
+    note:
+      en: >-
+        Same rennet-coagulation origin as concentrate: most, but not all, commercial cheese today uses
+        microbial (non-animal) chymosin, and the label does not say which was used for the source cheese.
+      pl: >-
+        To samo pochodzenie z koagulacji podpuszczkowej co koncentrat: większość, ale nie cała, dzisiejszej
+        produkcji sera używa podpuszczki mikrobiologicznej (nie zwierzęcej), a etykieta nie mówi, jaką
+        zastosowano w serze źródłowym.
+    sources: [{ id: prot-vrg-fpc-rennet }]
+  - code: diet.lactose_free
+    certainty: maybe
+    kind: estimate
+    grade: C
+    note:
+      en: >-
+        The extra filtration or ion-exchange step that raises protein above ~90% removes most of the
+        remaining lactose, but isolate is not certified or independently verified as lactose-free, and
+        trace amounts can remain depending on the process and manufacturer.
+      pl: >-
+        Dodatkowy etap filtracji lub wymiany jonowej podnoszący zawartość białka powyżej ~90% usuwa większość
+        pozostałej laktozy, ale izolat nie jest certyfikowany ani niezależnie zweryfikowany jako bez laktozy,
+        a śladowe ilości mogą pozostać w zależności od procesu i producenta.
+    sources: [{ id: prot-wang-2026-wpc-mcc-characterization }, { id: prot-adpi-whey-overview }]
+  - code: processing.ultra_processed_marker
+    certainty: maybe
+    kind: opinion
+    grade: D
+    note:
+      en: "NOVA lists 'whey protein' among the substances of no/rare culinary use that mark a food as ultra-processed; this describes the finished product it is added to, not a safety claim about the isolate itself."
+      pl: "NOVA wymienia 'białko serwatkowe' wśród substancji o zerowym/rzadkim zastosowaniu kulinarnym, które oznaczają żywność jako wysoko przetworzoną; to opisuje produkt finalny, do którego jest dodawane, nie bezpieczeństwo samego izolatu."
+    sources: [{ id: prot-monteiro-2019-nova }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Same lactose-figure caveat as whey-protein-concentrate: no opened source gives a verified numeric lactose percentage for isolate, so the claim stays qualitative."

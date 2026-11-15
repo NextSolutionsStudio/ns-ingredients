@@ -1,0 +1,38 @@
+id: patent-blue-v
+type: additive
+e_number: E131
+ids: { cas: "3536-49-0", wikidata: Q420087, chebi: "CHEBI:187511", pubchem: 77073 }
+names:
+  en: [Patent Blue V, Patent Blue, Acid Blue 3, C.I. 42051]
+  pl: [błękit patentowy V, błękit patentowy]
+  de: [Patentblau V, Patentblau]
+functions: [colour]
+summary:
+  en: >-
+    A synthetic blue triarylmethane dye authorised in the EU as the food colour E131; the calcium salt
+    is the form usually supplied. It is made by chemical synthesis (originally from 3-hydroxybenzaldehyde
+    and diethylaniline), not extracted from a plant or animal.
+  pl: >-
+    Syntetyczny niebieski barwnik triarylometanowy, dopuszczony w UE jako barwnik spożywczy E131; zwykle
+    dostarczany w postaci soli wapniowej. Otrzymywany drogą syntezy chemicznej (pierwotnie z
+    3-hydroksybenzaldehydu i dietyloaniliny), a nie ekstrahowany z roślin ani zwierząt.
+assertions:
+  - code: origin.petrochemical_synthetic
+    certainty: yes
+    kind: estimate
+    grade: B
+    note:
+      en: "A synthetic triarylmethane acid dye. In the original 1888 process 3-hydroxybenzaldehyde and diethylaniline are condensed in hot concentrated sulfuric acid to a colourless leuco intermediate, which is sulfonated, isolated as the calcium salt and then oxidised to the dye (first with lead or manganese dioxide, in later patents with quinones). This describes the production route only and implies nothing about safety. No opened source names the feedstock (petroleum or coal tar), hence estimate."
+      pl: "Syntetyczny kwasowy barwnik triarylometanowy. W pierwotnym procesie z 1888 r. 3-hydroksybenzaldehyd i dietyloanilinę kondensuje się w gorącym stężonym kwasie siarkowym do bezbarwnego związku leuko, który sulfonuje się, wydziela jako sól wapniową, a następnie utlenia do barwnika (najpierw ditlenkiem ołowiu lub manganu, w późniejszych patentach chinonami). Opis dotyczy wyłącznie drogi produkcji i nie oznacza niczego w kwestii bezpieczeństwa. Żadne otwarte źródło nie wskazuje surowca (ropa naftowa lub smoła węglowa), stąd szacunek."
+    sources: [{ id: cs-wikipedia-de-patentblau-v, locator: "Herstellung" }, { id: cs-wikipedia-patent-blue-v }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Authorised in specific food categories under Annex II conditions; maximum levels not transcribed here.", pl: "Dopuszczony w określonych kategoriach żywności na warunkach Załącznika II; maksymalne poziomy nie zostały tu przepisane." }
+    source: reg-1333-2008
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Manufacturing route is German Wikipedia's account of the original 1888 process; a current industrial route or an EU/JECFA specification page was not opened. No source opened says 'petroleum' for this dye, so the code rests on the route (aromatic aldehyde and aniline building blocks)."
+  - "Per-category Annex II maximum levels for E131 not transcribed (avoid a wrong number). EUR-Lex returns empty to WebFetch, so the regulatory row cites reg-1333-2008 as registered in the KB, not a page opened here."
+  - "Wikipedia (en/de) reports non-approval in the US, Canada and Australia, suspected allergic reactions, and a non-renewed EU feed-additive authorisation; none modelled, because no clinical, FDA or EU feed-regulation source was opened. No US `regulatory` row, matching the tartrazine pattern."

@@ -1,0 +1,132 @@
+id: mono-and-diglycerides
+type: additive
+e_number: E471
+ids: { wikidata: "Q416711" }
+names:
+  en: [mono- and diglycerides of fatty acids, monoglycerides, diglycerides]
+  pl: [mono- i diglicerydy kwasów tłuszczowych, monoglicerydy, diglicerydy]
+  de: [Mono- und Diglyceride von Speisefettsäuren]
+functions: [emulsifier]
+summary:
+  en: >-
+    A large family of fat-based emulsifiers made by reacting glycerol with fatty acids from any of a
+    long list of oils and fats — EFSA's re-evaluation names coconut, palm, palm kernel, soya, rapeseed,
+    sunflower, cottonseed, corn and olive oil, and also animal tallow and lard. Used in bread, margarine,
+    ice cream and whipped toppings to keep water and fat mixed and to give baked goods a softer crumb.
+    The label almost never says which fat was used. In the gut, lipases break E 471 down into glycerol
+    and fatty acids, both already-evaluated additives with no separate safety concern; EFSA's 2017
+    re-evaluation set no numerical ADI and found no safety concern at reported use levels.
+  pl: >-
+    Duża grupa emulgatorów tłuszczowych powstających w reakcji glicerolu z kwasami tłuszczowymi z
+    wielu olejów i tłuszczów — ponowna ocena EFSA wymienia olej kokosowy, palmowy, z ziarna palmowego,
+    sojowy, rzepakowy, słonecznikowy, z bawełny, kukurydziany i oliwę, a także łój i smalec zwierzęcy.
+    Stosowany w chlebie, margarynie, lodach i bitej śmietanie do utrzymania emulsji wody z tłuszczem i
+    zmiękczenia miękiszu. Etykieta prawie nigdy nie podaje, jaki tłuszcz został użyty. W jelicie lipazy
+    rozkładają E 471 na glicerol i kwasy tłuszczowe — oba to już oceniane dodatki bez odrębnego ryzyka;
+    ponowna ocena EFSA z 2017 r. nie ustaliła liczbowego ADI i nie stwierdziła zagrożenia przy
+    zgłoszonych poziomach stosowania.
+variants:
+  - id: plant
+    names:
+      en: [mono- and diglycerides of vegetable origin]
+      pl: [mono- i diglicerydy pochodzenia roślinnego]
+      de: [Mono- und Diglyceride pflanzlichen Ursprungs]
+    process:
+      en: >-
+        Made from vegetable oils — coconut, palm, palm kernel, soya, rapeseed, sunflower, cottonseed,
+        corn or olive — esterified with glycerol.
+      pl: >-
+        Wytwarzane z olejów roślinnych — kokosowego, palmowego, z ziarna palmowego, sojowego,
+        rzepakowego, słonecznikowego, z bawełny, kukurydzianego lub oliwy — zestryfikowanych glicerolem.
+    tells: ['pochodzenia roslinnego', 'vegetable origin', 'pflanzlich']
+    prior: 0.65
+    prior_rationale:
+      en: >-
+        Vegetable oils, above all palm and palm kernel, are the cheapest and most widely used industrial
+        feedstock, and cost pressure plus rising vegan/halal/kosher demand favour the plant route; still
+        an estimate since the label rarely says.
+      pl: >-
+        Oleje roślinne, przede wszystkim palmowy i z ziarna palmowego, są najtańszym i najczęściej
+        stosowanym surowcem przemysłowym, a presja kosztowa i rosnący popyt wegański/halal/koszerny
+        sprzyjają wariantowi roślinnemu; to wciąż szacunek, bo etykieta rzadko podaje szczegóły.
+  - id: animal
+    names:
+      en: [mono- and diglycerides of animal origin]
+      pl: [mono- i diglicerydy pochodzenia zwierzęcego]
+      de: [Mono- und Diglyceride tierischen Ursprungs]
+    process:
+      en: >-
+        Made from animal fat — beef or pork tallow or lard — esterified with glycerol; EFSA's opinion
+        lists both among the starting fats actually used.
+      pl: >-
+        Wytwarzane z tłuszczu zwierzęcego — łoju wołowego lub wieprzowego albo smalcu — zestryfikowanego
+        glicerolem; opinia EFSA wymienia oba tłuszcze jako realnie stosowane surowce.
+    tells: ['pochodzenia zwierzecego', 'animal origin', 'tierisch', 'tallow', 'lard']
+    prior: 0.1
+    prior_rationale:
+      en: >-
+        Cheaper in some markets historically, but disclosure matters commercially for halal, kosher and
+        vegetarian buyers, so an animal-fat product has some incentive to be named rather than silent;
+        a minority share of the undisclosed remainder.
+      pl: >-
+        Historycznie tańszy w niektórych rynkach, ale deklaracja ma znaczenie handlowe dla klientów
+        halal, koszernych i wegetariańskich, więc produkt na tłuszczu zwierzęcym ma pewną motywację, by
+        być oznaczony, a nie milczący; mniejszościowy udział w nieoznaczonej reszcie.
+assertions:
+  - code: diet.vegan
+    certainty: maybe
+    kind: estimate
+    grade: B
+    note:
+      en: "The source fat is not usually disclosed. EFSA's specification allows both vegetable oils and animal tallow/lard, so vegan status cannot be assumed from the name alone."
+      pl: "Źródło tłuszczu zwykle nie jest deklarowane. Specyfikacja EFSA dopuszcza zarówno oleje roślinne, jak i łój/smalec zwierzęcy, więc statusu wegańskiego nie można zakładać na podstawie samej nazwy."
+    sources: [{ id: efsa-e471-2017 }]
+  - code: diet.vegetarian
+    certainty: maybe
+    kind: estimate
+    grade: B
+    note:
+      en: "Vegetarian only if the plant variant was used; tallow and lard are slaughter by-products and would make it non-vegetarian, but the label does not say which was used."
+      pl: "Wegetariański tylko wtedy, gdy zastosowano wariant roślinny; łój i smalec są produktami ubocznymi uboju i wykluczają wegetarianizm, ale etykieta nie podaje, który wariant zastosowano."
+    sources: [{ id: efsa-e471-2017 }]
+  - code: origin.vegetable_oil_derived
+    variant: plant
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "EFSA's re-evaluation lists coconut, palm, palm kernel, soya, rapeseed, sunflower, cottonseed, corn and olive oil among the fats used to make E 471."
+      pl: "Ponowna ocena EFSA wymienia olej kokosowy, palmowy, z ziarna palmowego, sojowy, rzepakowy, słonecznikowy, z bawełny, kukurydziany i oliwę wśród tłuszczów używanych do produkcji E 471."
+    sources: [{ id: efsa-e471-2017 }]
+  - code: origin.animal
+    variant: animal
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "EFSA's re-evaluation lists tallow and lard among the fats used to make E 471."
+      pl: "Ponowna ocena EFSA wymienia łój i smalec wśród tłuszczów używanych do produkcji E 471."
+    sources: [{ id: efsa-e471-2017 }]
+  - code: ethics.palm_oil
+    certainty: maybe
+    kind: estimate
+    grade: C
+    note:
+      en: "Palm and palm kernel oil are among the cheapest industrial feedstocks for E 471 and are commonly used; the label does not say which oil, so palm origin can neither be confirmed nor excluded."
+      pl: "Olej palmowy i z ziarna palmowego są jednymi z najtańszych surowców przemysłowych do produkcji E 471 i są powszechnie stosowane; etykieta nie podaje, który olej zastosowano, więc pochodzenia palmowego nie można ani potwierdzić, ani wykluczyć."
+    sources: [{ id: efsa-e471-2017 }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Group I additive: quantum satis in most food categories.", pl: "Dodatek grupy I: quantum satis w większości kategorii żywności." }
+    source: reg-1333-2008
+reference_values:
+  - type: ADI
+    value: "not specified"
+    body: EFSA
+    year: 2017
+    source: efsa-e471-2017
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "EFSA's 2021 follow-up opinion on E 471 in infant formula below 16 weeks (10.2903/j.efsa.2021 series, PMC8573540) was not opened this session; check it before making any infant-specific claim."

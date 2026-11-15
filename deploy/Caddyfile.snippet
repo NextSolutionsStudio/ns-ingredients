@@ -1,0 +1,6 @@
+# Add to the Caddy config on ns-main-fsn1 (procedure: vm-ops skill — do not sed -i the bind-mounted file).
+ingredients.nextsolutions.studio {
+	encode zstd gzip
+	reverse_proxy ns-ingredients:8029
+	header -Server
+}

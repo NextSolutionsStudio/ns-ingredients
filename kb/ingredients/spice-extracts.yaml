@@ -1,0 +1,30 @@
+id: spice-extracts
+type: ingredient
+names:
+  en:
+    - spice extracts
+    - spice extract
+  pl:
+    - ekstrakty przypraw
+    - ekstrakt przypraw
+    - ekstrakty przypraw naturalnych
+    - ekstrakty z przypraw
+  de:
+    - Gewürzextrakte
+    - Gewürzextrakt
+summary:
+  en: 'Extracts of spices, used for flavour.'
+  pl: 'Ekstrakty przypraw, stosowane dla smaku.'
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Extracted from spices.
+      pl: Ekstrahowane z przypraw.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted

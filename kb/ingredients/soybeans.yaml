@@ -1,0 +1,36 @@
+id: soybeans
+type: ingredient
+names:
+  en: [soybeans, soy, soya beans]
+  pl: [soja, soi, soję, ziarna soi, mąka sojowa]
+  de: [Soja, Sojabohnen]
+summary:
+  en: "The legume Glycine max; one of the EU's fourteen regulated allergens, with exemptions for fully refined soybean oil/fat and for natural mixed tocopherols, phytosterols and stanol esters from soybean sources."
+  pl: "Rośliny strączkowe Glycine max; jeden z czternastu regulowanych alergenów UE, z wyłączeniami dla w pełni rafinowanego oleju/tłuszczu sojowego oraz naturalnych mieszanych tokoferoli, fitosteroli i estrów stanoli pochodzących z soi."
+assertions:
+  - code: allergen.soybeans
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Declared ingredient; EU Annex II item 6.", pl: "Zadeklarowany składnik; Aneks II UE, punkt 6." }
+    sources: [{ id: reg-1169-2011, locator: "Annex II item 6" }]
+  - code: origin.plant
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A legume.", pl: "Roślina strączkowa." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A plant food.", pl: "Produkt roślinny." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A plant food.", pl: "Produkt roślinny." }
+    sources: [{ id: reg-1169-2011 }]
+review_status: draft
+provenance: ai-drafted

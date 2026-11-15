@@ -1,0 +1,56 @@
+id: gluten
+type: ingredient
+names:
+  en: [gluten, cereals containing gluten]
+  pl: [gluten, zboża zawierające gluten, zbóż zawierających gluten]
+  de: [Gluten, glutenhaltiges Getreide, glutenhaltigem Getreide]
+summary:
+  en: >-
+    The generic allergen-category term for cereals containing gluten (wheat, rye, barley, oats, spelt,
+    kamut and their hybridised strains) and products thereof, as it appears in ingredient lists and "may
+    contain" statements without naming a specific cereal. A named derivative such as wheat gluten ("gluten
+    pszenny") is catalogued separately.
+  pl: >-
+    Ogólny, kategorialny termin alergenowy oznaczający zboża zawierające gluten (pszenicę, żyto, jęczmień,
+    owies, orkisz, kamut i ich odmiany hybrydowe) oraz produkty z nich, używany na etykietach i w
+    informacjach "może zawierać" bez wskazania konkretnego zboża. Nazwany produkt, taki jak gluten pszenny,
+    jest skatalogowany odrębnie.
+  de: >-
+    Der allgemeine Allergen-Sammelbegriff für glutenhaltiges Getreide (Weizen, Roggen, Gerste, Hafer,
+    Dinkel, Kamut und deren Hybridsorten) und daraus gewonnene Erzeugnisse, wie er in Zutatenlisten und
+    "kann enthalten"-Hinweisen ohne Nennung eines bestimmten Getreides erscheint.
+assertions:
+  - code: allergen.gluten
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Declared allergen category; EU Annex II item 1 (cereals containing gluten).", pl: "Zadeklarowana kategoria alergenu; Aneks II UE, punkt 1 (zboża zawierające gluten)." }
+    sources: [{ id: reg-1169-2011, locator: "Annex II item 1" }]
+  - code: diet.gluten_free
+    certainty: "no"
+    kind: fact
+    grade: A
+    note: { en: "Gluten itself.", pl: "Sam gluten." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: origin.plant
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A protein complex from cereal grains.", pl: "Kompleks białkowy pochodzący z ziaren zbóż." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A plant-derived protein.", pl: "Białko pochodzenia roślinnego." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A plant-derived protein.", pl: "Białko pochodzenia roślinnego." }
+    sources: [{ id: reg-1169-2011 }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "This entry is the generic 'gluten' / 'cereals containing gluten' label category. Wheat gluten ('gluten pszenny', 'wheat gluten', vital wheat gluten) is a distinct, named product already catalogued at kb/ingredients/wheat-gluten.yaml — deliberately not duplicated here."

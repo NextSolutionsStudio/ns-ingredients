@@ -1,0 +1,25 @@
+id: rice-flour
+type: ingredient
+names:
+  en: ["rice flour"]
+  pl: ["mąka ryżowa"]
+  de: ["Reismehl"]
+summary:
+  en: "Milled rice grain; naturally gluten-free and mostly starch."
+  pl: "Zmielone ziarno ryżu; naturalnie bezglutenowe, w większości skrobia."
+assertions:
+  - code: origin.plant
+    certainty: yes
+    kind: estimate
+    grade: B
+    note: { en: "The tested breads identify rice cultivars as their base.", pl: "W badanym pieczywie wskazano odmiany ryżu jako surowiec." }
+    sources: [{ id: gi-atkinson-2021, locator: "Supplemental Table 1, foods 210-211 and 50" }]
+glycemic:
+  - range: [41, 79]
+    fraction: starch
+    method: non_iso
+    note: { en: "Cooked rice-flour proxies: noodles, breads and muffin; mixed protocols.", pl: "Przybliżenie z makaronów, pieczywa i muffina z mąki ryżowej; różne protokoły." }
+    source: gi-atkinson-2021
+    locator: "Supplemental Table 1, foods 210-211 and 50; Supplemental Table 2, foods 3255-3257 and 3278-3280"
+review_status: draft
+provenance: ai-drafted

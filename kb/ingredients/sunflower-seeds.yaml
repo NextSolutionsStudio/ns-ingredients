@@ -1,0 +1,32 @@
+id: sunflower-seeds
+type: ingredient
+names:
+  en:
+    - sunflower seeds
+  pl:
+    - nasiona słonecznika
+    - ziarna słonecznika
+    - pestki słonecznika
+    - słonecznik łuskany
+  de:
+    - Sonnenblumenkerne
+summary:
+  en: >-
+    Sunflower seeds (Helianthus annuus). The bare word 'słonecznik' is left unmatched on purpose: in 'lecytyny
+    (słonecznik)' it names the lecithin's source.
+  pl: >-
+    Nasiona słonecznika (Helianthus annuus). Samo słowo „słonecznik” celowo nie jest tu nazwą: w „lecytyny
+    (słonecznik)” oznacza źródło lecytyny.
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A seed.
+      pl: Nasiona.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted

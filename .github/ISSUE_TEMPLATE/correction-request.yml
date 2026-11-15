@@ -1,0 +1,46 @@
+name: Correction request
+description: Report an entry that is wrong, outdated or unfairly worded — manufacturers and experts welcome.
+title: "[correction] <ingredient id>: <what is wrong>"
+labels: [kb-correction]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Corrections are assessed on evidence, whoever sends them. Please cite a source we can open: a
+        regulation, an official specification, a regulator's opinion or a peer-reviewed study. Accepted
+        corrections are published with the next knowledge-base version.
+  - type: input
+    id: ingredient
+    attributes:
+      label: Ingredient
+      description: The id or E-number, e.g. malic-acid or E296.
+    validations: { required: true }
+  - type: textarea
+    id: claim
+    attributes:
+      label: What the entry says now
+      description: Quote the claim (implication code, note or summary sentence).
+    validations: { required: true }
+  - type: textarea
+    id: correction
+    attributes:
+      label: What it should say, and why
+    validations: { required: true }
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: Links, with the article, annex or page that supports the correction.
+    validations: { required: true }
+  - type: dropdown
+    id: role
+    attributes:
+      label: You are
+      options: [Manufacturer or brand, Scientist or clinician, Regulator, Consumer, Other]
+    validations: { required: false }
+  - type: checkboxes
+    id: interest
+    attributes:
+      label: Disclosure
+      options:
+        - label: I have a commercial interest in this ingredient or a product containing it.

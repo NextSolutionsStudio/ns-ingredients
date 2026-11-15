@@ -1,0 +1,26 @@
+id: cumin
+type: ingredient
+names:
+  en:
+    - cumin
+  pl:
+    - kmin rzymski
+    - kumin
+  de:
+    - Kreuzkümmel
+summary:
+  en: Cumin seed (Cuminum cyminum) as a spice. Not caraway (kminek).
+  pl: Nasiona kminu rzymskiego (Cuminum cyminum) jako przyprawa. To nie kminek.
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: 'A spice: dried plant parts.'
+      pl: 'Przyprawa: suszone części roślin.'
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted

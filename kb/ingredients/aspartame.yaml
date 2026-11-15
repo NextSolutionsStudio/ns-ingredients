@@ -1,0 +1,95 @@
+id: aspartame
+type: additive
+e_number: E951
+ids: { cas: "22839-47-0", wikidata: Q182040, chebi: "CHEBI:195544", pubchem: 134601 }
+names:
+  en: [aspartame]
+  pl: [aspartam]
+  de: [Aspartam]
+functions: [sweetener]
+summary:
+  en: >-
+    An intense sweetener (about 200x as sweet as sucrose) used in diet drinks, chewing gum,
+    tabletop sweeteners and protein/sports products. Its two building blocks, L-aspartic acid
+    and L-phenylalanine, are chemically or enzymatically coupled and methyl-esterified.
+    Regulators have long set an ADI of 40 mg/kg bw/day; in July 2023 IARC separately classified
+    it as possibly carcinogenic (Group 2B, limited evidence, hazard not risk) while JECFA, reviewing
+    the same evidence, found it "not convincing" and reaffirmed the same ADI. It breaks down in the
+    body to release phenylalanine, so EU law requires a label warning for people with phenylketonuria.
+  pl: >-
+    Intensywny słodzik (ok. 200 razy słodszy od sacharozy) stosowany w napojach dietetycznych,
+    gumach do żucia, słodzikach stołowych oraz produktach białkowych/sportowych. Jego dwa elementy,
+    kwas L-asparaginowy i L-fenyloalanina, są łączone chemicznie lub enzymatycznie i estryfikowane
+    metanolem. Regulatorzy od dawna ustalają ADI na 40 mg/kg m.c./dobę; w lipcu 2023 r. IARC
+    niezależnie zaklasyfikowała aspartam jako możliwie rakotwórczy (grupa 2B, ograniczone dowody,
+    zagrożenie, nie ryzyko), natomiast JECFA, oceniając te same dane, uznał dowody za "nieprzekonujące"
+    i potwierdził to samo ADI. W organizmie rozkłada się z uwolnieniem fenyloalaniny, więc prawo UE
+    wymaga ostrzeżenia na etykiecie dla osób z fenyloketonurią.
+assertions:
+  - code: processing.non_sugar_sweetener
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Named by WHO as a common non-sugar sweetener. WHO's 2023 guideline conditionally recommends against using non-sugar sweeteners for weight control; it does not apply to people with pre-existing diabetes. This marks the ingredient's role, not a safety finding: the authorised use limits are set by the ADI."
+      pl: "WHO wymienia go wśród typowych substancji słodzących niecukrowych. Wytyczna WHO z 2023 r. warunkowo odradza stosowanie substancji słodzących niecukrowych w celu kontroli masy ciała; nie dotyczy osób z cukrzycą. Oznacza rolę składnika, nie ocenę bezpieczeństwa: limity stosowania wynikają z ADI."
+    sources: [{ id: who-nss-guideline-2023 }]
+  - code: health.phenylalanine_source
+    certainty: yes
+    kind: fact
+    grade: A
+    population: [pku]
+    note:
+      en: "Aspartame is metabolised to release phenylalanine; Reg 1169/2011 Annex III requires the statement 'contains aspartame (a source of phenylalanine)' (or 'contains a source of phenylalanine' when named, not E-numbered) on any food containing it."
+      pl: "Aspartam jest metabolizowany z uwolnieniem fenyloalaniny; Rozporządzenie 1169/2011, Załącznik III, wymaga informacji 'zawiera aspartam (źródło fenyloalaniny)' (lub 'zawiera źródło fenyloalaniny', gdy podano nazwę, a nie numer E) na każdej żywności, która go zawiera."
+    sources: [{ id: reg-1169-2011, locator: "Annex III, point 2.3" }]
+  - code: regulatory.eu_warning_label
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "The phenylalanine statement above is a mandatory label statement triggered by Annex III of Reg 1169/2011."
+      pl: "Powyższa informacja o fenyloalaninie jest obowiązkową informacją na etykiecie wynikającą z Załącznika III Rozporządzenia 1169/2011."
+    sources: [{ id: reg-1169-2011, locator: "Annex III, point 2.3" }]
+  - code: health.iarc_group_2b
+    certainty: yes
+    kind: fact
+    grade: B
+    note:
+      en: >-
+        IARC (July 2023, Monographs Vol. 134) classified aspartame as Group 2B on limited evidence
+        for liver cancer in humans; JECFA reviewed the same and other evidence at its 96th meeting
+        and called the human cancer association 'not convincing', reaffirming the ADI unchanged.
+        A hazard classification is not a risk assessment: JECFA and EFSA set the intake limit.
+      pl: >-
+        IARC (lipiec 2023, Monografie tom 134) zaklasyfikowała aspartam do grupy 2B na podstawie
+        ograniczonych dowodów dotyczących raka wątroby u ludzi; JECFA, oceniając te same i dodatkowe
+        dane na 96. posiedzeniu, określiła związek z rakiem u ludzi jako "nieprzekonujący" i
+        potwierdziła niezmienione ADI. Klasyfikacja zagrożenia nie jest oceną ryzyka: limit spożycia
+        ustalają JECFA i EFSA.
+    sources:
+      - { id: iarc-classifications }
+      - { id: swt-who-jecfa-iarc-aspartame-2023 }
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Authorised sweetener under Reg 1333/2008 Annex II, subject to maximum levels per food category.", pl: "Dozwolona substancja słodząca na podstawie Rozporządzenia 1333/2008, Załącznik II, w ramach maksymalnych poziomów dla kategorii żywności." }
+    source: reg-1333-2008
+reference_values:
+  - type: ADI
+    value: 40
+    unit: "mg/kg bw/day"
+    body: EFSA
+    year: 2013
+    source: efsa-aspartame-2013
+  - type: ADI
+    value: 40
+    unit: "mg/kg bw/day"
+    body: JECFA
+    year: 2023
+    source: swt-who-jecfa-iarc-aspartame-2023
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Production route (chemical synthesis of the two amino-acid-derived fragments vs the enzymatic/thermolysin coupling process used by some manufacturers) not verified against an opened source this session; left out rather than asserted from memory."
+  - "diet.vegan not asserted: no opened source this session confirms whether the phenylalanine/aspartic acid feedstocks are exclusively fermentation-derived."

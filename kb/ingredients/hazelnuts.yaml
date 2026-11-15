@@ -1,0 +1,36 @@
+id: hazelnuts
+type: ingredient
+names:
+  en: [hazelnuts, hazelnut]
+  pl: [orzechy laskowe, pasta z orzechów laskowych]
+  de: [Haselnüsse]
+summary:
+  en: "The tree nut Corylus avellana; part of the EU's regulated tree-nut group alongside almonds, walnuts, cashews, pecans, Brazil nuts, pistachios and macadamia nuts."
+  pl: "Orzech Corylus avellana; część regulowanej w UE grupy orzechów, wraz z migdałami, orzechami włoskimi, nerkowca, pekan, brazylijskimi, pistacjami i makadamia."
+assertions:
+  - code: allergen.nuts
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Declared ingredient; EU Annex II item 8.", pl: "Zadeklarowany składnik; Aneks II UE, punkt 8." }
+    sources: [{ id: reg-1169-2011, locator: "Annex II item 8" }]
+  - code: origin.plant
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A tree nut.", pl: "Orzech." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A plant food.", pl: "Produkt roślinny." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A plant food.", pl: "Produkt roślinny." }
+    sources: [{ id: reg-1169-2011 }]
+review_status: draft
+provenance: ai-drafted

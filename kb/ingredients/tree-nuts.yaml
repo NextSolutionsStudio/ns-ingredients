@@ -1,0 +1,52 @@
+id: tree-nuts
+type: ingredient
+names:
+  en: [nuts, tree nuts, other nuts, other tree nuts]
+  pl: [orzechy, inne orzechy, orzechy łupinowe, orzechów]
+  de: [Schalenfrüchte, andere Schalenfrüchte, Schalenfrüchten, Nüsse, Nüssen]
+summary:
+  en: >-
+    The generic allergen-category term for tree nuts (almonds, hazelnuts, walnuts, cashews, pecans, Brazil
+    nuts, pistachios and macadamia/Queensland nuts) and products thereof, as it appears on labels without
+    naming a specific nut, e.g. in "may contain" statements. Peanuts are a separate legume and a distinct
+    EU allergen (Annex II item 5), not part of this tree-nut category.
+  pl: >-
+    Ogólny, kategorialny termin alergenowy oznaczający orzechy łupinowe (migdały, orzechy laskowe,
+    włoskie, nerkowca, pekan, brazylijskie, pistacje i orzechy makadamia/Queensland) oraz produkty z nich,
+    używany na etykietach bez wskazania konkretnego orzecha, np. w informacjach "może zawierać". Orzeszki
+    ziemne (arachidowe) to odrębna roślina strączkowa i odrębny alergen UE (Aneks II, punkt 5), nienależący
+    do tej kategorii orzechów łupinowych.
+  de: >-
+    Der allgemeine Allergen-Sammelbegriff für Schalenfrüchte (Mandeln, Haselnüsse, Walnüsse, Cashewnüsse,
+    Pekannüsse, Paranüsse, Pistazien und Macadamianüsse) und daraus gewonnene Erzeugnisse, wie er auf
+    Etiketten ohne Nennung einer bestimmten Nuss erscheint. Erdnüsse sind eine eigene Hülsenfrucht und ein
+    eigenes EU-Allergen (Anhang II Nr. 5), nicht Teil dieser Kategorie.
+assertions:
+  - code: allergen.nuts
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Declared allergen category; EU Annex II item 8.", pl: "Zadeklarowana kategoria alergenu; Aneks II UE, punkt 8." }
+    sources: [{ id: reg-1169-2011, locator: "Annex II item 8" }]
+  - code: origin.plant
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Tree nuts.", pl: "Orzechy łupinowe." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A plant food.", pl: "Produkt roślinny." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A plant food.", pl: "Produkt roślinny." }
+    sources: [{ id: reg-1169-2011 }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Generic 'tree nuts' category only; individual named nuts (hazelnuts, almonds, ...) are catalogued as their own entries and are not duplicated here."

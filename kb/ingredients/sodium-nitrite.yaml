@@ -1,0 +1,56 @@
+id: sodium-nitrite
+type: additive
+e_number: E250
+ids: { cas: "7632-00-0", wikidata: Q339975, chebi: "CHEBI:78870", pubchem: 23668193 }
+names:
+  en: [sodium nitrite]
+  pl: [azotyn sodu, "azotan(III) sodu"]
+  de: [Natriumnitrit]
+functions: [preservative]
+summary:
+  en: >-
+    A curing salt used in cured meats (ham, bacon, sausages) and some cheeses, mainly to stop
+    Clostridium botulinum from growing and to fix the pink cured colour. Its drawback is the same
+    reaction that makes it work: under heat and in the presence of amines/amides from meat proteins,
+    nitrite can form nitrosamines, some of which are carcinogenic. EFSA weighed this in its 2017
+    re-evaluation and kept a restricted authorisation with maximum use levels rather than a ban.
+  pl: >-
+    Sól peklująca stosowana w wędlinach (szynka, bekon, kiełbasy) i niektórych serach, głównie w celu
+    zahamowania wzrostu Clostridium botulinum i utrwalenia różowej barwy peklowania. Jego wadą jest ta
+    sama reakcja, która sprawia, że działa: pod wpływem ciepła i w obecności amin/amidów z białek mięsa
+    azotyn może tworzyć nitrozoaminy, z których część jest rakotwórcza. EFSA rozważyła to w reoocenie z
+    2017 r. i pozostawiła ograniczone dopuszczenie z maksymalnymi poziomami stosowania, a nie zakaz.
+assertions:
+  - code: health.nitrosamine_precursor
+    certainty: yes
+    kind: fact
+    grade: A
+    population: [general]
+    note:
+      en: "Nitrite can react with amines/amides (from meat proteins) to form N-nitroso compounds, including nitrosamines, especially under heat (e.g. frying bacon); EFSA's 2017 re-evaluation weighed this exposure when re-setting the ADI."
+      pl: "Azotyn może reagować z aminami/amidami (z białek mięsa), tworząc związki N-nitrozowe, w tym nitrozoaminy, zwłaszcza pod wpływem ciepła (np. smażenie bekonu); reocena EFSA z 2017 r. uwzględniła tę ekspozycję przy ponownym ustalaniu ADI."
+    sources: [{ id: efsa-nitrites-2017 }]
+  - code: regulatory.eu_restricted
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Authorised only in specific categories (mainly cured/processed meat and some cheeses), each with its own maximum ingoing/residual level (Reg 1333/2008 Annex II) — not a general-purpose preservative."
+      pl: "Dopuszczony jedynie w określonych kategoriach (głównie mięso peklowane/przetworzone oraz niektóre sery), każda z własnym maksymalnym poziomem dodawanym/resztkowym (Rozp. 1333/2008 Załącznik II) — nie jest konserwantem ogólnego zastosowania."
+    sources: [{ id: reg-1333-2008, locator: "Annex II" }]
+reference_values:
+  - type: ADI
+    value: 0.07
+    unit: "mg nitrite ion/kg bw/day"
+    body: EFSA
+    year: 2017
+    source: efsa-nitrites-2017
+regulatory:
+  - jurisdiction: EU
+    status: restricted
+    conditions: { en: "Authorised only in specific meat, fish and cheese categories with maximum ingoing/residual levels (Annex II); always used with sodium chloride, never alone.", pl: "Dopuszczony jedynie w określonych kategoriach mięsa, ryb i sera z maksymalnymi poziomami dodawanymi/resztkowymi (Załącznik II); stosowany zawsze z chlorkiem sodu, nigdy samodzielnie." }
+    source: reg-1333-2008
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Exact per-category Annex II maximum/residual levels not transcribed here (avoid a wrong number)."

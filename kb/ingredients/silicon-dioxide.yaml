@@ -1,0 +1,97 @@
+id: silicon-dioxide
+type: additive
+e_number: E551
+ids: { cas: "7631-86-9", wikidata: "Q116269", chebi: "CHEBI:30563", pubchem: 24261 }
+names:
+  en: [silicon dioxide, silica]
+  pl: [ditlenek krzemu, dwutlenek krzemu, krzemionka]
+  de: [Siliciumdioxid]
+functions: [anti-caking-agent, carrier]
+summary:
+  en: >-
+    A mineral anti-caking agent used in powdered foods, spice blends, salt and supplement capsules to
+    stop clumping, and as a carrier for other additives and flavourings. It is manufactured, not mined,
+    as synthetic amorphous silica (fumed, or precipitated/gel silica) and is always produced with some
+    particles in the nanoscale range; the current EU specification does not set a limit on that
+    nanoparticle fraction or require it to be characterised. EFSA's 2018 re-evaluation could not confirm
+    the additive's existing "ADI not specified" status, because the toxicology database lacks long-term
+    studies using material representative of the nano fraction actually present in commercial silica —
+    a data gap, not a positive finding of harm. EFSA stated there was no indication of toxicity at the
+    reported uses and use levels, and asked for the specification to be tightened with proper
+    particle-size characterisation.
+  pl: >-
+    Mineralny środek przeciwzbrylający stosowany w produktach w proszku, mieszankach przypraw, soli i
+    kapsułkach suplementów, aby zapobiegać zbrylaniu, a także jako nośnik dla innych dodatków i
+    aromatów. Jest wytwarzany, a nie wydobywany, jako syntetyczna krzemionka amorficzna (dymiona lub
+    strącana/żelowa) i zawsze zawiera część cząstek w skali nanometrowej; obecna specyfikacja UE nie
+    ustala limitu dla tej frakcji nanoczęstek i nie wymaga jej charakteryzacji. Ponowna ocena EFSA z
+    2018 r. nie mogła potwierdzić dotychczasowego statusu „ADI nieokreślone” dla tego dodatku, ponieważ
+    baza toksykologiczna nie zawiera długoterminowych badań na materiale reprezentatywnym dla frakcji
+    nano faktycznie obecnej w handlowej krzemionce — to brak danych, a nie stwierdzenie szkodliwości.
+    EFSA stwierdziła brak wskazań toksyczności przy zgłoszonych zastosowaniach i poziomach stosowania,
+    prosząc jednocześnie o zaostrzenie specyfikacji poprzez właściwą charakteryzację rozmiaru cząstek.
+assertions:
+  - code: origin.mineral
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: >-
+        Chemically a mineral oxide (silicon dioxide); as a food additive it is manufactured as synthetic
+        amorphous silica rather than mined directly, but the starting materials are mineral (silicate
+        sand or similar). Origin is not the same as safety: the manufacturing route does not by itself
+        raise or lower any hazard.
+      pl: >-
+        Chemicznie tlenek mineralny (ditlenek krzemu); jako dodatek do żywności jest wytwarzany jako
+        syntetyczna krzemionka amorficzna, a nie wydobywany bezpośrednio, ale surowce wyjściowe są
+        mineralne (piasek krzemianowy lub podobny). Pochodzenie nie jest tym samym co bezpieczeństwo:
+        sama metoda wytwarzania nie zwiększa ani nie zmniejsza żadnego zagrożenia.
+    sources: [{ id: efsa-silicon-dioxide-2018 }]
+  - code: health.no_safe_level_established
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: >-
+        EFSA's 2018 re-evaluation could not confirm the previous "ADI not specified" status, because the
+        available toxicology studies do not adequately represent the nanoparticle fraction present in
+        commercial synthetic amorphous silica, and the EU specification does not bound or characterise
+        that fraction. This is a database gap EFSA asked to have closed, not a finding that the additive
+        is unsafe at reported use levels — EFSA explicitly found no indication of toxicity in the data it
+        did have.
+      pl: >-
+        Ponowna ocena EFSA z 2018 r. nie mogła potwierdzić dotychczasowego statusu „ADI nieokreślone”,
+        ponieważ dostępne badania toksykologiczne nie odpowiadają odpowiednio frakcji nanoczęstek
+        obecnej w handlowej syntetycznej krzemionce amorficznej, a specyfikacja UE nie ogranicza ani nie
+        charakteryzuje tej frakcji. To brak danych, o którego uzupełnienie poprosiła EFSA, a nie
+        stwierdzenie, że dodatek jest niebezpieczny przy zgłoszonych poziomach stosowania — EFSA wprost
+        stwierdziła brak wskazań toksyczności w danych, które miała.
+    sources: [{ id: efsa-silicon-dioxide-2018 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A mineral-derived additive; no animal material in the production route.", pl: "Dodatek pochodzenia mineralnego; brak surowców zwierzęcych w procesie produkcji." }
+    sources: [{ id: efsa-silicon-dioxide-2018 }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Same reasoning as diet.vegan.", pl: "To samo rozumowanie jak przy diet.vegan." }
+    sources: [{ id: efsa-silicon-dioxide-2018 }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Authorised as an anti-caking agent and carrier in specific food categories at maximum levels under Annex II to Reg 1333/2008.", pl: "Dopuszczony jako środek przeciwzbrylający i nośnik w określonych kategoriach żywności, przy maksymalnych poziomach, w Aneksie II do Reg 1333/2008." }
+    source: reg-1333-2008
+reference_values:
+  - type: ADI
+    value: "not established"
+    body: EFSA
+    year: 2018
+    source: efsa-silicon-dioxide-2018
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "EFSA's 2024 follow-up opinion on E 551 for infants below 16 weeks (10.2903/j.efsa.2024.8880) was not opened this session; check it before making any infant-specific claim."
+  - "Considered a note on the EU 'nano' ingredient-list labelling requirement (Reg 1169/2011 Art. 18(3)) but could not verify the exact wording against a directly opened source this session; left out rather than asserted from memory."

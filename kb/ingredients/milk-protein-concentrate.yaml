@@ -1,0 +1,73 @@
+id: milk-protein-concentrate
+type: protein
+names:
+  en: [milk protein concentrate, milk protein, milk proteins, milk protein isolate, MPC, MPC80, MPC85]
+  pl: [koncentrat białka mleka, koncentrat białek mleka, białka mleka, białko mleka, izolat białek mleka, izolat białka mleka, MPC]
+  de: [Milchproteinkonzentrat, Milcheiweiß, Milchprotein, Milcheiweißkonzentrat]
+summary:
+  en: >-
+    Made by ultrafiltering skim milk directly, rather than as a cheesemaking by-product like whey — so it
+    keeps milk's native mix of proteins, roughly 80% casein to 20% whey, just concentrated. Sold by protein
+    grade (e.g. "MPC80"); used in protein blends, bars and recombined dairy products for a slower-digesting
+    profile than whey alone at a lower cost than buying casein and whey separately.
+  pl: >-
+    Powstaje przez bezpośrednią ultrafiltrację mleka odtłuszczonego, a nie jako produkt uboczny wytwarzania
+    sera jak serwatka — zachowuje więc naturalny stosunek białek mleka, ok. 80% kazeiny do 20% serwatki,
+    jedynie zatężony. Sprzedawany według grupy białkowej (np. "MPC80"); używany w blendach białkowych,
+    batonach i rekombinowanych produktach mlecznych dla wolniej trawionego profilu niż samo białko
+    serwatkowe, przy niższym koszcie niż kupowanie kazeiny i serwatki osobno.
+  de: >-
+    Wird durch direkte Ultrafiltration von Magermilch hergestellt (kein Käsereinebenprodukt wie Molke) und
+    behält daher das native Verhältnis von ca. 80% Casein zu 20% Molkenprotein, nur konzentriert.
+assertions:
+  - code: origin.dairy
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Made directly from cow's milk by membrane filtration.", pl: "Powstaje bezpośrednio z mleka krowiego przez filtrację membranową." }
+    sources: [{ id: usda-fdc }]
+  - code: allergen.milk
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Contains both casein and whey; declared as a milk allergen.", pl: "Zawiera i kazeinę, i serwatkę; deklarowane jako alergen mleczny." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegan
+    certainty: no
+    kind: fact
+    grade: A
+    note: { en: "Dairy-derived.", pl: "Pochodzenie mleczne." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: estimate
+    grade: C
+    note:
+      en: >-
+        Made by direct membrane filtration of skim milk, the same acid-and-rennet-free logic used for
+        micellar casein — no coagulant is used to make MPC itself, unlike cheese-whey-derived proteins.
+      pl: >-
+        Powstaje przez bezpośrednią filtrację membranową mleka odtłuszczonego — tę samą logikę bez kwasu i
+        podpuszczki, co przy kazeinie micelarnej; do wytworzenia samego MPC nie używa się koagulantu, w
+        odróżnieniu od białek pochodzących z serwatki serowarskiej.
+    sources: [{ id: prot-gea-micellar-casein }]
+  - code: diet.lactose_free
+    certainty: "no"
+    kind: estimate
+    grade: D
+    note:
+      en: "Retains a meaningful share of milk's original lactose alongside the concentrated protein; not marketed as lactose-free, and lower-protein-grade MPCs (e.g. 42%) carry proportionally more."
+      pl: "Zachowuje istotną część oryginalnej laktozy mleka wraz ze zatężonym białkiem; nie jest sprzedawany jako produkt bez laktozy, a MPC o niższej grupie białkowej (np. 42%) zawiera jej proporcjonalnie więcej."
+    sources: [{ id: prot-wang-2026-wpc-mcc-characterization }]
+  - code: processing.ultra_processed_marker
+    certainty: maybe
+    kind: opinion
+    grade: D
+    note:
+      en: "Not itself named by NOVA, but it is essentially a concentrated blend of casein and whey protein, both of which NOVA does list as ultra-processing markers — an extension by analogy rather than a direct citation."
+      pl: "Nie jest bezpośrednio wymieniany przez NOVA, ale jest w istocie zatężoną mieszanką kazeiny i białka serwatkowego, które NOVA wymienia jako wskaźniki wysokiego przetworzenia — rozszerzenie przez analogię, nie wprost z cytowanej listy."
+    sources: [{ id: prot-monteiro-2019-nova }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "diet.vegetarian and processing.ultra_processed_marker both lean on sources written about a closely related product (micellar casein, or casein/whey generically) rather than MPC by name — flagged in each note as an extension by analogy."

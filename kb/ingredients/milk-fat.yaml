@@ -1,0 +1,39 @@
+id: milk-fat
+type: fat
+names:
+  en: [milk fat, butterfat, anhydrous milk fat]
+  pl: [tłuszcz mleczny, bezwodny tłuszcz mleczny]
+  de: [Milchfett, Butterreinfett]
+summary:
+  en: "The fat fraction of milk, isolated to near-pure fat (anhydrous milk fat/butterfat removes essentially all water and milk solids); one of the EU's fourteen regulated allergens (milk) regardless of how little non-fat milk solid remains."
+  pl: "Frakcja tłuszczowa mleka, wyodrębniona do postaci praktycznie czystego tłuszczu (bezwodny tłuszcz mleczny usuwa niemal całą wodę i suchą masę mleka); jeden z czternastu regulowanych alergenów UE (mleko), niezależnie od tego, jak mało beztłuszczowej suchej masy mleka pozostaje."
+  de: "Die Fettfraktion der Milch, isoliert zu nahezu reinem Fett (Butterreinfett entfernt praktisch alles Wasser und alle Milchfeststoffe); eines der vierzehn geregelten EU-Allergene (Milch)."
+assertions:
+  - code: allergen.milk
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Milk-derived; declared as a milk allergen regardless of fat purity.", pl: "Pochodzi z mleka; deklarowany jako alergen mleczny niezależnie od czystości tłuszczu." }
+    sources: [{ id: reg-1169-2011, locator: "Annex II item 7" }]
+  - code: origin.dairy
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "The fat fraction of milk.", pl: "Frakcja tłuszczowa mleka." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegan
+    certainty: "no"
+    kind: fact
+    grade: A
+    note: { en: "An animal (dairy) product.", pl: "Produkt zwierzęcy (mleczny)." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Compatible with a lacto-ovo-vegetarian diet.", pl: "Zgodne z dietą laktoowowegetariańską." }
+    sources: [{ id: reg-1169-2011 }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Left diet.lactose_free out: anhydrous milk fat is near-pure fat with only trace lactose, but no numeric composition source was opened this session to state a certainty either way."

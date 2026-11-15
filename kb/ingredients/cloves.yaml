@@ -1,0 +1,27 @@
+id: cloves
+type: ingredient
+names:
+  en:
+    - cloves
+  pl:
+    - goździki
+    - goździki mielone
+  de:
+    - Nelken
+    - Gewürznelken
+summary:
+  en: Clove buds (Syzygium aromaticum) as a spice.
+  pl: Pąki goździkowca (Syzygium aromaticum) jako przyprawa.
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: 'A spice: dried plant parts.'
+      pl: 'Przyprawa: suszone części roślin.'
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted

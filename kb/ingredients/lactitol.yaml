@@ -1,0 +1,112 @@
+id: lactitol
+type: additive
+e_number: E966
+ids:
+  cas: 585-86-4
+names:
+  en:
+  - lactitol
+  - lactit
+  pl:
+  - laktitol
+  de:
+  - Lactit
+  - Lactitol
+functions:
+- sweetener
+summary:
+  en: A sugar alcohol used as a bulk sweetener, including in sugar-free confectionery. It is made by catalytic
+    hydrogenation of lactose, with nickel used as a catalyst in the EU specification. E966 is authorised subject
+    to EU category conditions, FDA lists lactitol among permitted sugar substitutes, and EU foods with more
+    than 10% added polyols require a laxative statement.
+  pl: Alkohol cukrowy stosowany jako substancja słodząca nadająca objętość, między innymi w wyrobach cukierniczych
+    bez cukru. Otrzymuje się go przez katalityczne uwodornienie laktozy, z użyciem niklu jako katalizatora
+    według specyfikacji UE. E966 jest dopuszczony na warunkach dla kategorii żywności w UE, FDA wymienia laktitol
+    wśród dozwolonych zamienników cukru, a w UE żywność zawierająca ponad 10% dodanych polioli wymaga informacji
+    o działaniu przeczyszczającym.
+assertions:
+- code: origin.dairy
+  certainty: 'yes'
+  kind: fact
+  grade: A
+  note:
+    en: Made by hydrogenating lactose (EU specification), and lactose is obtained from milk, so lactitol is a milk-derived ingredient. This says nothing about residual lactose or the allergen declaration, which the specification does not settle.
+    pl: Otrzymywany przez uwodornienie laktozy (specyfikacja UE), a laktozę pozyskuje się z mleka, więc laktitol jest składnikiem pochodzenia mlecznego. Nie mówi to nic o resztkowej laktozie ani o deklaracji alergenów, których specyfikacja nie rozstrzyga.
+  sources:
+  - id: swm-reg-231-2012
+    locator: E 966 definition
+- code: origin.chemical_synthesis
+  certainty: 'yes'
+  kind: fact
+  grade: A
+  note:
+    en: The EU specification defines lactitol as the product of catalytic hydrogenation of lactose and identifies
+      nickel as the catalyst. Crystalline products can be anhydrous or hydrated.
+    pl: Specyfikacja UE określa laktitol jako produkt katalitycznego uwodornienia laktozy i wskazuje nikiel
+      jako katalizator. Produkty krystaliczne mogą występować w postaci bezwodnej lub uwodnionej.
+  sources:
+  - id: swm-reg-231-2012
+- code: health.laxative_polyol
+  certainty: 'yes'
+  kind: fact
+  grade: A
+  note:
+    en: Food containing more than 10% added polyols must carry the statement 'excessive consumption may produce
+      laxative effects'.
+    pl: Żywność zawierająca ponad 10% dodanych polioli musi zawierać informację 'nadmierne spożycie może mieć
+      efekt przeczyszczający'.
+  sources:
+  - id: swm-reg-1169-2011
+    locator: Annex III, point 2.4
+- code: regulatory.eu_warning_label
+  certainty: 'yes'
+  kind: fact
+  grade: A
+  note:
+    en: The laxative statement above is a mandatory label statement under Annex III of Reg 1169/2011.
+    pl: Powyższa informacja o działaniu przeczyszczającym jest obowiązkową informacją na etykiecie na podstawie
+      załącznika III rozporządzenia 1169/2011.
+  sources:
+  - id: swm-reg-1169-2011
+    locator: Annex III, point 2.4
+regulatory:
+- jurisdiction: EU
+  status: authorised
+  conditions:
+    en: Listed in Annex II to Regulation 1333/2008; use is subject to food-category conditions and applicable
+      limits.
+    pl: Wymieniony w załączniku II do rozporządzenia 1333/2008; stosowanie podlega warunkom i limitom dla kategorii
+      żywności.
+  source: swm-reg-1129-2011
+- jurisdiction: US
+  status: authorised
+  conditions:
+    en: FDA lists this sugar alcohol among permitted sugar substitutes; detailed product-specific conditions
+      were not transcribed.
+    pl: FDA wymienia ten alkohol cukrowy wśród dozwolonych zamienników cukru; nie przepisano szczegółowych
+      warunków dla poszczególnych produktów.
+  source: swm-fda-sweeteners
+reference_values:
+- type: ADI
+  value: not specified
+  body: JECFA
+  year: 1983
+  source: swm-jecfa-lactitol
+glycemic:
+  - range: [3, 7]
+    fraction: polyols
+    method: non_iso
+    note: { en: "Study-level relative glucose responses.", pl: "Względne odpowiedzi glikemiczne z poszczególnych badań." }
+    source: gi-livesey-2003
+    locator: "Table 4, lactitol"
+review_status: draft
+provenance: ai-drafted
+review_notes:
+- Individual current food-category maximum levels were not exhaustively checked or transcribed; consult the
+  consolidated EU list for a particular product.
+- 'No diet, GMO, feedstock-country or general health-benefit assertions: the opened sources do not verify these
+  for a particular supplier.'
+- 'No milk-allergen or lactose-free assertion made: lactose as a precursor alone does not establish the final
+  product''s allergen declaration or residual lactose level.'
+- CAS identifies anhydrous lactitol; separate hydrate identifiers were not verified.
+- No quantitative laxative dose added beyond the legal >10% added-polyol labelling condition.

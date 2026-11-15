@@ -1,0 +1,56 @@
+id: flavouring
+type: flavouring
+names:
+  en: ["flavouring", "flavour", "flavoring"]
+  pl: ["aromat", "aromaty", "substancja aromatyczna"]
+  de: ["Aroma"]
+summary:
+  en: >-
+    'Flavouring' or 'aromat' on its own, with no 'natural' qualifier, is the EU's generic term
+    for any product added to food to give or modify taste/smell (Reg 1334/2008 Art. 3). It covers
+    'flavouring substances' — defined chemical compounds with flavouring properties (Art. 3(2)(b))
+    — which may be produced by chemical synthesis (sometimes called nature-identical or
+    artificial), as well as flavouring preparations and smoke flavourings. Unlike 'natural
+    flavouring', this unqualified term gives no assurance about the production route: the same
+    molecule the ingredient list calls 'aromat' could be synthetic, or could be a natural
+    flavouring substance that simply was not advertised as such.
+  pl: >-
+    'Aromat' bez określenia 'naturalny' jest ogólnym terminem UE dla każdego produktu
+    dodawanego do żywności w celu nadania lub zmodyfikowania smaku/zapachu (art. 3 Rozporządzenia
+    1334/2008). Obejmuje 'substancje aromatyczne' — zdefiniowane związki chemiczne o
+    właściwościach aromatyzujących (art. 3(2)(b)) — które mogą być otrzymywane w procesie syntezy
+    chemicznej (czasem nazywane identycznymi z naturalnymi lub sztucznymi), a także preparaty
+    aromatyczne i aromaty dymu wędzarniczego. W przeciwieństwie do 'aromatu naturalnego', to
+    niekwalifikowane określenie nie daje żadnej gwarancji co do metody produkcji: ta sama
+    cząsteczka nazwana na etykiecie 'aromat' może być syntetyczna albo może być naturalną
+    substancją aromatyczną, która po prostu nie została tak zareklamowana.
+assertions:
+  - code: origin.chemical_synthesis
+    certainty: maybe
+    kind: estimate
+    grade: D
+    note:
+      en: "A 'flavouring substance' is defined only as 'a defined chemical substance with flavouring properties' (Art. 3(2)(b)); without the word 'natural' the label does not disclose whether it was made by chemical synthesis or another route."
+      pl: "'Substancja aromatyczna' jest zdefiniowana wyłącznie jako 'zdefiniowana substancja chemiczna o właściwościach aromatyzujących' (art. 3(2)(b)); bez słowa 'naturalny' etykieta nie ujawnia, czy została otrzymana w procesie syntezy chemicznej, czy inną metodą."
+    sources: [{ id: reg-1334-2008, locator: "Article 3(2)(b)" }]
+  - code: diet.vegan
+    certainty: maybe
+    kind: estimate
+    grade: A
+    note:
+      en: "Could be a synthetic flavouring substance or a natural flavouring substance from vegetable, animal or microbial material (Art. 3); the unqualified term discloses neither, so 'maybe' rather than 'yes' or 'no'."
+      pl: "Może być syntetyczną substancją aromatyczną albo naturalną substancją aromatyczną z materiału roślinnego, zwierzęcego lub mikrobiologicznego (art. 3); niekwalifikowane określenie nie ujawnia żadnej z tych informacji, dlatego 'maybe', a nie 'yes'/'no'."
+    sources: [{ id: reg-1334-2008, locator: "Article 3" }]
+  - code: processing.ultra_processed_marker
+    certainty: yes
+    kind: estimate
+    grade: D
+    note:
+      en: "NOVA explicitly lists flavourings among its markers of group-4 (ultra-processed) products — a weak, contested signal on its own."
+      pl: "NOVA wyraźnie wymienia aromaty wśród wskaźników produktów grupy 4 (wysoko przetworzonych) — sam w sobie słaby, dyskusyjny sygnał."
+    sources: [{ id: reg-1334-2008 }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "See kb/ingredients/natural-flavouring.yaml for the 'natural' / 'natural X flavouring' qualified forms and their 95% w/w rule (Reg 1334/2008 Art. 16)."
+  - "No E-number: flavourings are a separate EU legal category from food additives (Reg 1334/2008, not Reg 1333/2008), so no `functions` class from kb/classes.yaml applies."

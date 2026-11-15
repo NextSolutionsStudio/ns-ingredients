@@ -1,0 +1,55 @@
+id: bha
+type: additive
+e_number: E320
+ids: { cas: "25013-16-5", wikidata: Q409401, chebi: "CHEBI:76359", pubchem: 24667 }
+names:
+  en: [butylated hydroxyanisole, BHA]
+  pl: [butylowany hydroksyanizol, butylohydroksyanizol]
+  de: [Butylhydroxyanisol]
+functions: [antioxidant]
+summary:
+  en: >-
+    A synthetic antioxidant used to stop fats and oils in snacks, cereals, chewing gum and packaging
+    going rancid. Made by reacting 4-methoxyphenol with isobutylene — a petrochemical route, not extracted
+    from any natural source. IARC classified it Group 2B (possibly carcinogenic to humans) in 1986,
+    based on forestomach tumours in rats and hamsters at high dietary doses; IARC itself later judged the
+    forestomach-tumour mechanism may not apply to humans, though the classification has not been
+    withdrawn. EFSA has re-evaluated BHA and kept it authorised with an ADI rather than finding it
+    unsafe; the exact current ADI figure was not verified against an opened EFSA source in this batch
+    (see review_notes) so it is not stated here.
+  pl: >-
+    Syntetyczny przeciwutleniacz stosowany, by zapobiec jełczeniu tłuszczów i olejów w przekąskach,
+    płatkach zbożowych, gumie do żucia i materiałach opakowaniowych. Wytwarzany w reakcji
+    4-metoksyfenolu z izobutylenem — metodą petrochemiczną, a nie ekstrahowany z żadnego naturalnego
+    źródła. IARC zaklasyfikowała go w 1986 r. do grupy 2B (możliwie rakotwórczy dla ludzi) na podstawie
+    guzów przedżołądka u szczurów i chomików przy wysokich dawkach w diecie; sama IARC uznała później, że
+    mechanizm powstawania guzów przedżołądka może nie mieć zastosowania u ludzi, choć klasyfikacji nie
+    wycofano. EFSA po ponownej ocenie utrzymała dopuszczenie BHA z ustalonym ADI; dokładnej aktualnej wartości ADI nie zweryfikowano w tej partii wobec otwartego
+    źródła EFSA (zob. review_notes), więc nie podano jej tutaj.
+assertions:
+  - code: health.iarc_group_2b
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "IARC (Monographs Vol. 40, 1986; confirmed Supplement 7, 1987) found sufficient evidence of carcinogenicity in experimental animals (forestomach tumours in rats and hamsters) but no data in humans, and classified BHA as Group 2B, possibly carcinogenic to humans. IARC later noted the forestomach-tumour mechanism may not be relevant to humans; the classification itself was not revoked."
+      pl: "IARC (Monografie t. 40, 1986 r.; potwierdzone w Suplemencie 7, 1987 r.) uznała, że istnieją wystarczające dowody rakotwórczości u zwierząt doświadczalnych (guzy przedżołądka u szczurów i chomików), lecz brak danych u ludzi, i zaklasyfikowała BHA do grupy 2B — możliwie rakotwórczy dla ludzi. IARC zauważyła później, że mechanizm powstawania guzów przedżołądka może nie mieć zastosowania u ludzi; samej klasyfikacji jednak nie wycofano."
+    sources: [{ id: iarc-classifications }]
+  - code: origin.petrochemical_synthetic
+    certainty: yes
+    kind: fact
+    grade: B
+    note:
+      en: "Prepared from 4-methoxyphenol and isobutylene (a petrochemical olefin); described directly as 'a synthetic, waxy, solid petrochemical'. Says nothing by itself about safety at use levels."
+      pl: "Wytwarzany z 4-metoksyfenolu i izobutylenu (olefiny petrochemicznej); opisywany bezpośrednio jako „syntetyczny, woskowaty, stały petrochemikaliów”. Sama metoda produkcji nic nie mówi o bezpieczeństwie przy dawkach stosowanych w żywności."
+    sources: [{ id: col-wikipedia-bha }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Authorised in specific food categories with maximum levels (Annex II); often used together with BHT and/or gallates.", pl: "Dopuszczony w określonych kategoriach żywności z maksymalnymi poziomami (Załącznik II); często stosowany razem z BHT i/lub galusanami." }
+    source: reg-1333-2008
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "EFSA's own BHA re-evaluation opinion (2011/2012, DOI 10.2903/j.efsa.2011.2392) was not opened this session, so no ADI figure or `reference_values` entry is given for BHA here — add one only after opening that opinion."
+  - "Per-category Annex II maximum levels for E320 not transcribed here (avoid a wrong number)."

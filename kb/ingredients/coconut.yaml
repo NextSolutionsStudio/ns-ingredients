@@ -1,0 +1,38 @@
+id: coconut
+type: ingredient
+names:
+  en:
+    - coconut
+    - desiccated coconut
+    - coconut flakes
+    - coconut milk
+  pl:
+    - kokos
+    - wiórki kokosowe
+    - płatki kokosowe
+    - mleko kokosowe
+    - miąższ kokosa
+  de:
+    - Kokosraspeln
+    - Kokosmilch
+summary:
+  en: >-
+    Coconut flesh (Cocos nucifera): desiccated, flaked, or pressed as coconut milk. Not a tree nut under EU
+    Annex II. Listing 'mleko kokosowe' here also stops it being read as dairy milk.
+  pl: >-
+    Miąższ kokosa (Cocos nucifera): suszony, w płatkach lub wyciśnięty jako mleko kokosowe. Nie jest orzechem
+    w rozumieniu załącznika II UE. Wpisanie tu „mleka kokosowego” zapobiega też odczytywaniu go jako mleka
+    krowiego.
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: From the coconut palm.
+      pl: Z palmy kokosowej.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted

@@ -1,0 +1,26 @@
+id: chickpeas
+type: ingredient
+names:
+  en:
+    - chickpeas
+  pl:
+    - ciecierzyca
+    - cieciorka
+  de:
+    - Kichererbsen
+summary:
+  en: 'Chickpeas (Cicer arietinum), a pulse.'
+  pl: 'Ciecierzyca (Cicer arietinum), roślina strączkowa.'
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A pulse.
+      pl: Roślina strączkowa.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted

@@ -1,0 +1,36 @@
+id: peanuts
+type: ingredient
+names:
+  en: [peanuts, peanut]
+  pl: [orzeszki ziemne, orzeszki arachidowe, orzeszków ziemnych]
+  de: [Erdnüsse, Erdnüssen]
+summary:
+  en: "The legume Arachis hypogaea; one of the EU's fourteen regulated allergens and among the most common causes of severe food-allergic reactions."
+  pl: "Rośliny strączkowe Arachis hypogaea; jeden z czternastu regulowanych alergenów UE i jedna z najczęstszych przyczyn ciężkich reakcji alergicznych na żywność."
+assertions:
+  - code: allergen.peanuts
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Declared ingredient; EU Annex II item 5.", pl: "Zadeklarowany składnik; Aneks II UE, punkt 5." }
+    sources: [{ id: reg-1169-2011, locator: "Annex II item 5" }]
+  - code: origin.plant
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A legume, botanically not a tree nut.", pl: "Roślina strączkowa, botanicznie nie orzech." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A plant food.", pl: "Produkt roślinny." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A plant food.", pl: "Produkt roślinny." }
+    sources: [{ id: reg-1169-2011 }]
+review_status: draft
+provenance: ai-drafted

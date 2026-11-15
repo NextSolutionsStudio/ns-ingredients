@@ -1,0 +1,52 @@
+id: spelt
+type: ingredient
+names:
+  en: [spelt, spelt flour]
+  pl: [orkisz, mąka orkiszowa]
+  de: [Dinkel, Dinkelmehl]
+summary:
+  en: >-
+    The wheat species Triticum spelta; EU Annex II item 1 names wheat "(such as spelt and khorasan wheat)"
+    as one of the cereals containing gluten, so spelt is regulated as a wheat variety rather than a
+    separate cereal.
+  pl: >-
+    Odmiana pszenicy Triticum spelta; Aneks II UE, punkt 1, wymienia pszenicę "(taką jak orkisz i pszenica
+    khorasan)" jako jedno ze zbóż zawierających gluten, więc orkisz jest regulowany jako odmiana pszenicy,
+    a nie odrębne zboże.
+  de: >-
+    Die Weizenart Triticum spelta; Anhang II Nr. 1 der EU nennt Weizen "(wie Dinkel und Khorasan-Weizen)"
+    als eines der glutenhaltigen Getreide — Dinkel wird also als Weizensorte reguliert, nicht als
+    eigenständiges Getreide.
+assertions:
+  - code: allergen.gluten
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Named as an example of wheat in EU Annex II item 1.", pl: "Wymieniony jako przykład pszenicy w Aneksie II UE, punkt 1." }
+    sources: [{ id: reg-1169-2011, locator: "Annex II item 1" }]
+  - code: origin.plant
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A cereal grain (a wheat species).", pl: "Zboże (odmiana pszenicy)." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A plant food.", pl: "Produkt roślinny." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A plant food.", pl: "Produkt roślinny." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.gluten_free
+    certainty: "no"
+    kind: fact
+    grade: A
+    note: { en: "Spelt is a wheat species and therefore a gluten-containing cereal.", pl: "Orkisz jest odmianą pszenicy, a więc zbożem zawierającym gluten." }
+    sources: [{ id: reg-1169-2011 }]
+review_status: draft
+provenance: ai-drafted

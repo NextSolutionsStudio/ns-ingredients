@@ -1,0 +1,105 @@
+# New citations for the "emulsifiers" batch (lecithins, E471, carrageenan/E407a, xanthan, guar,
+# gum arabic, CMC, polysorbate 80, silicon dioxide). Opened and checked this session; DOIs resolve.
+sources:
+  - id: efsa-lecithins-2017
+    type: regulatory_opinion
+    title: "Re-evaluation of lecithins (E 322) as a food additive"
+    publisher: European Food Safety Authority
+    year: 2017
+    url: https://doi.org/10.2903/j.efsa.2017.4742
+    doi: 10.2903/j.efsa.2017.4742
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: 2026-09-27
+    note: "States commercial lecithin production is based mainly on soya bean oil, though sunflower, rapeseed, cottonseed, corn and egg yolk are also used; sets no numerical ADI; lists heavy-metal and solvent-residue specification limits."
+  - id: efsa-e471-2017
+    type: regulatory_opinion
+    title: "Re-evaluation of mono- and di-glycerides of fatty acids (E 471) as food additives"
+    publisher: European Food Safety Authority
+    year: 2017
+    url: https://doi.org/10.2903/j.efsa.2017.5045
+    doi: 10.2903/j.efsa.2017.5045
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: 2026-09-27
+    note: "Lists coconut, palm, palm kernel, soya, rapeseed, sunflower, cottonseed, corn, olive oil AND animal tallow and lard among the fats used to make E 471; states gut lipases hydrolyse it to glycerol and fatty acids, both already evaluated with no concern; sets no numerical ADI."
+  - id: efsa-xanthan-2017
+    type: regulatory_opinion
+    title: "Re-evaluation of xanthan gum (E 415) as a food additive"
+    publisher: European Food Safety Authority
+    year: 2017
+    url: https://doi.org/10.2903/j.efsa.2017.4909
+    doi: 10.2903/j.efsa.2017.4909
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: 2026-09-27
+    note: "Confirms production by pure-culture fermentation of a carbohydrate with Xanthomonas campestris (Reg 231/2012 does not name the carbohydrate); no need for a numerical ADI; no safety concern at reported use levels."
+  - id: efsa-guar-gum-2017
+    type: regulatory_opinion
+    title: "Re-evaluation of guar gum (E 412) as a food additive"
+    publisher: European Food Safety Authority
+    year: 2017
+    url: https://doi.org/10.2903/j.efsa.2017.4669
+    doi: 10.2903/j.efsa.2017.4669
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: 2026-09-27
+    note: "Guar gum is practically undigested but heavily fermented by colonic bacteria; no need for a numerical ADI; no general safety concern, though high intakes cause the mild reversible gas/bloating/softer-stool effects typical of fermentable fibres."
+  - id: efsa-acacia-gum-2017
+    type: regulatory_opinion
+    title: "Re-evaluation of acacia gum (E 414) as a food additive"
+    publisher: European Food Safety Authority
+    year: 2017
+    url: https://doi.org/10.2903/j.efsa.2017.4741
+    doi: 10.2903/j.efsa.2017.4741
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: 2026-09-27
+    note: "Acacia gum is dried exudate of Acacia senegal or closely related Acacia species; largely unabsorbed and fermented by gut bacteria; human tolerance studies found only flatulence up to 30 g/person/day; no numerical ADI needed, no safety concern."
+  - id: efsa-celluloses-2018
+    type: regulatory_opinion
+    title: "Re-evaluation of celluloses E 460(i), E 460(ii), E 461, E 462, E 463, E 464, E 465, E 466, E 468 and E 469 as food additives"
+    publisher: European Food Safety Authority
+    year: 2018
+    url: https://doi.org/10.2903/j.efsa.2018.5047
+    doi: 10.2903/j.efsa.2018.5047
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: 2026-09-27
+    note: "For E 466: partial sodium salt of a carboxymethyl ether of cellulose from fibrous plant material, made by treating cellulose with alkali and monochloroacetic acid (or its sodium salt); ADI 'not specified', consistent with JECFA 1989; no safety concern for the general population, but data insufficient for infants on specialised medical foods."
+  - id: efsa-polysorbates-2015
+    type: regulatory_opinion
+    title: "Scientific Opinion on the re-evaluation of polyoxyethylene sorbitan monolaurate (E 432), polyoxyethylene sorbitan monooleate (E 433), polyoxyethylene sorbitan monopalmitate (E 434), polyoxyethylene sorbitan monostearate (E 435) and polyoxyethylene sorbitan tristearate (E 436) as food additives"
+    publisher: European Food Safety Authority
+    year: 2015
+    url: https://doi.org/10.2903/j.efsa.2015.4152
+    doi: 10.2903/j.efsa.2015.4152
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: 2026-09-27
+    note: "Polysorbate 80 is made by reacting sorbitol and oleic acid with ethylene oxide. Group ADI of 25 mg/kg bw/day for the polysorbates (NOAEL 2,500 mg/kg bw/day, uncertainty factor 100); no concern for genotoxicity, carcinogenicity or developmental toxicity; toddlers' estimated intake can approach the group ADI."
+  - id: efsa-silicon-dioxide-2018
+    type: regulatory_opinion
+    title: "Re-evaluation of silicon dioxide (E 551) as a food additive"
+    publisher: European Food Safety Authority
+    year: 2018
+    url: https://doi.org/10.2903/j.efsa.2018.5088
+    doi: 10.2903/j.efsa.2018.5088
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: 2026-09-27
+    note: "E 551 is always produced as synthetic amorphous silica in the nanoform; the EU specification does not exclude or bound the nanoparticle fraction. The Panel could not confirm the existing ADI given database gaps (no long-term studies on material representative of the nano fraction actually present) but found no indication of toxicity at reported use levels."
+  - id: chassaing-2015-emulsifiers-microbiota
+    type: rct
+    title: "Dietary emulsifiers impact the mouse gut microbiota promoting colitis and metabolic syndrome"
+    authors: "Chassaing B, Koren O, Goodrich JK, et al."
+    publisher: Nature
+    year: 2015
+    url: https://doi.org/10.1038/nature14232
+    doi: 10.1038/nature14232
+    licence: "Cited, not reproduced"
+    accessed: 2026-09-27
+    note: "Mice fed carboxymethylcellulose or polysorbate-80 in their diet showed altered gut microbiota composition, reduced mucus-epithelial distance, low-grade inflammation and metabolic syndrome; susceptible mice developed colitis. Mouse model; not shown in humans at dietary doses."
+  - id: tobacman-2001-carrageenan
+    type: review
+    title: "Review of harmful gastrointestinal effects of carrageenan in animal experiments"
+    authors: "Tobacman JK"
+    publisher: Environmental Health Perspectives
+    year: 2001
+    url: https://doi.org/10.1289/ehp.01109983
+    doi: 10.1289/ehp.01109983
+    licence: "Cited, not reproduced"
+    accessed: 2026-09-27
+    note: "Reviews animal experiments (guinea pig, rat, rabbit, mouse, hamster, rhesus monkey) associating both degraded (poligeenan) and undegraded food-grade carrageenan with intestinal ulceration and, in some models, neoplasms; argues dietary use should be reconsidered. No human epidemiological data; not the position taken by EFSA's regulatory re-evaluation."

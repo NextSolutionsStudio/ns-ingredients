@@ -1,0 +1,165 @@
+id: starch
+type: carbohydrate
+names:
+  en:
+    - starch
+    - starches
+  pl:
+    - skrobia
+    - skrobie
+  de:
+    - Stärke
+summary:
+  en: >-
+    Native starch, or starch modified only by physical means or enzymes, which EU labels may declare simply as
+    'starch'. Maize and potato starch have their own entries; this one covers the bare word and the other
+    plant sources. Wheat starch is a gluten-containing cereal product and must be declared as such.
+  pl: >-
+    Skrobia natywna lub modyfikowana wyłącznie fizycznie albo enzymatycznie, którą etykieta w UE może podać po
+    prostu jako „skrobia”. Skrobia kukurydziana i ziemniaczana mają osobne wpisy; ten obejmuje samo słowo i
+    pozostałe źródła roślinne. Skrobia pszenna jest produktem ze zboża zawierającego gluten i musi być tak
+    oznaczona.
+variants:
+  - id: wheat
+    names:
+      en:
+        - wheat starch
+      pl:
+        - skrobia pszenna
+      de:
+        - Weizenstärke
+    process:
+      en: Starch separated from wheat flour.
+      pl: Skrobia oddzielona z mąki pszennej.
+    tells:
+      - pszen
+      - wheat
+      - weizen
+  - id: rice
+    names:
+      en:
+        - rice starch
+      pl:
+        - skrobia ryżowa
+      de:
+        - Reisstärke
+    process:
+      en: Starch separated from rice.
+      pl: Skrobia oddzielona z ryżu.
+    tells:
+      - ryz
+      - \brice\b
+      - reis
+  - id: tapioca
+    names:
+      en:
+        - tapioca starch
+        - cassava starch
+      pl:
+        - skrobia z tapioki
+        - skrobia tapiokowa
+        - skrobia z manioku
+    process:
+      en: Starch from cassava root (tapioca).
+      pl: Skrobia z korzenia manioku (tapioka).
+    tells:
+      - tapiok
+      - tapioca
+      - manio
+      - cassava
+  - id: pea
+    names:
+      en:
+        - pea starch
+      pl:
+        - skrobia grochowa
+    process:
+      en: Starch separated from field peas.
+      pl: Skrobia oddzielona z grochu.
+    tells:
+      - groch
+      - \bpea\b
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Plant starch.
+      pl: Skrobia roślinna.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Annex VII Part B, row 4 (''Starch'')'
+  - code: diet.gluten_free
+    certainty: unknown
+    kind: estimate
+    grade: D
+    note:
+      en: 'A bare ''starch'' does not name its plant source, and wheat is one of the possible sources.'
+      pl: 'Samo „skrobia” nie podaje źródła roślinnego, a jednym z możliwych źródeł jest pszenica.'
+    sources:
+      - id: reg-1169-2011
+        locator: 'Annex VII Part B, row 4'
+  - code: allergen.gluten
+    variant: wheat
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    population:
+      - coeliac
+    note:
+      en: 'Wheat starch: a product of a gluten-containing cereal; EU Annex II item 1.'
+      pl: 'Skrobia pszenna: produkt ze zboża zawierającego gluten; załącznik II UE, pkt 1.'
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 1
+  - code: diet.gluten_free
+    variant: wheat
+    certainty: 'no'
+    kind: fact
+    grade: A
+    note:
+      en: Wheat-based.
+      pl: Na bazie pszenicy.
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 1
+  - code: diet.gluten_free
+    variant: rice
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Made from a plant that is not a gluten-containing cereal in EU Annex II.
+      pl: 'Z rośliny, która nie jest zbożem zawierającym gluten w rozumieniu załącznika II UE.'
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 1
+  - code: diet.gluten_free
+    variant: tapioca
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Made from a plant that is not a gluten-containing cereal in EU Annex II.
+      pl: 'Z rośliny, która nie jest zbożem zawierającym gluten w rozumieniu załącznika II UE.'
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 1
+  - code: diet.gluten_free
+    variant: pea
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Made from a plant that is not a gluten-containing cereal in EU Annex II.
+      pl: 'Z rośliny, która nie jest zbożem zawierającym gluten w rozumieniu załącznika II UE.'
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 1
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Annex II item 1 exempts wheat-based glucose syrups and maltodextrins, not wheat starch; 'gluten-free wheat
+    starch' (Codex ≤20 mg/kg) would need its own variant if it shows up on labels.

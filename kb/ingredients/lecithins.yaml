@@ -1,0 +1,189 @@
+id: lecithins
+type: additive
+e_number: E322
+ids: { cas: "8002-43-5", wikidata: "Q241595", chebi: "CHEBI:61995" }
+names:
+  en: [lecithin, lecithins]
+  pl: [lecytyny, lecytyna]
+  de: [Lecithine]
+functions: [emulsifier]
+summary:
+  en: >-
+    A mixture of phospholipids left over from refining vegetable oils (or separated from egg yolk),
+    used as an emulsifier in chocolate, margarine, baked goods and supplements. Soya bean oil is still
+    the main commercial source worldwide, though sunflower, rapeseed, cottonseed, corn and egg-yolk
+    lecithin are also produced. Under EU allergen law, lecithin derived from soy or egg must say so on
+    the label; the additive itself has no numerical ADI and EFSA's 2017 re-evaluation found no safety
+    concern for people over one year of age.
+  pl: >-
+    Mieszanina fosfolipidów, pozostająca po rafinacji olejów roślinnych (lub oddzielana z żółtka jaja),
+    stosowana jako emulgator w czekoladzie, margarynie, wyrobach piekarskich i suplementach. Głównym
+    źródłem handlowym na świecie wciąż jest olej sojowy, choć produkuje się też lecytynę słonecznikową,
+    rzepakową, z bawełny, kukurydzy i z żółtka jaja. Prawo UE o alergenach wymaga podania na etykiecie,
+    że lecytyna pochodzi z soi lub jaj; sam dodatek nie ma liczbowego ADI, a ponowna ocena EFSA z 2017 r.
+    nie stwierdziła zagrożenia dla osób powyżej pierwszego roku życia.
+variants:
+  - id: soy
+    names:
+      en: [soy lecithin, lecithin (soy), soya lecithin]
+      pl: [lecytyna sojowa, lecytyna (z soi), lecytyny sojowe, lecytyny z soi]
+      de: [Sojalecithin, Lecithin (Soja)]
+    process:
+      en: >-
+        Recovered during degumming of crude soya bean oil; the world's dominant commercial source of
+        E 322 by volume.
+      pl: >-
+        Odzyskiwana podczas odgumowania surowego oleju sojowego; wciąż dominujące handlowe źródło E 322
+        na świecie.
+    tells: ['z soi', 'sojow', 'soy', 'soja']
+    prior: 0.4
+    prior_rationale:
+      en: >-
+        Soy remains the main commercial source by volume (EFSA 2017), but soy is an EU Annex II
+        allergen, so a compliant label carrying soy-derived lecithin is legally required to name it.
+        A label that stays completely silent (bare "lecithin"/E322, no source word at all) is therefore
+        somewhat less likely to be soy than raw production-share numbers would suggest — some of that
+        silence is sunflower or rapeseed instead, and some is non-compliant or informal soy labelling.
+        This is an estimate, not a declaration.
+      pl: >-
+        Soja wciąż jest głównym źródłem handlowym pod względem wolumenu (EFSA 2017), ale soja jest
+        alergenem z Aneksu II UE, więc zgodna z prawem etykieta zawierająca lecytynę sojową musi to
+        wskazać. Etykieta całkowicie milcząca (samo „lecytyny”/E322, bez żadnego słowa o źródle) jest
+        więc trochę mniej prawdopodobnie soją, niż wynikałoby z samych udziałów produkcyjnych — część
+        tej ciszy to słonecznik lub rzepak, a część to niezgodne z przepisami etykietowanie soi. To
+        szacunek, nie deklaracja.
+  - id: sunflower
+    names:
+      en: [sunflower lecithin]
+      pl: [lecytyna słonecznikowa, lecytyny słonecznikowe, lecytyny ze słonecznika]
+      de: [Sonnenblumenlecithin]
+    process:
+      en: "Extracted from sunflower seed oil; free of the major legal allergens, so makers market it explicitly."
+      pl: "Wytwarzana z oleju słonecznikowego; wolna od głównych alergenów prawnych, więc producenci wyraźnie ją reklamują."
+    tells: ['slonecznik', 'sunflower', 'sonnenblumen']
+    prior: 0.25
+    prior_rationale:
+      en: >-
+        A premium, allergen-free alternative to soy that manufacturers who pay for it usually advertise
+        by name on the front of pack and in the ingredient list, so a fully silent label is less likely
+        to be sunflower than the market share alone suggests.
+      pl: >-
+        Premium, bezalergenowa alternatywa dla soi, którą producenci płacący za nią zwykle reklamują z
+        nazwy na etykiecie, więc całkowicie milcząca etykieta jest mniej prawdopodobnie słonecznikiem,
+        niż wynikałoby z samego udziału rynkowego.
+  - id: rapeseed
+    names:
+      en: [rapeseed lecithin]
+      pl: [lecytyna rzepakowa, lecytyny rzepakowe]
+      de: [Rapslecithin]
+    process:
+      en: "Extracted from rapeseed (canola) oil; a European-grown, non-allergenic alternative to soy."
+      pl: "Wytwarzana z oleju rzepakowego; europejska, niealergenna alternatywa dla soi."
+    tells: ['rzepak', 'rapeseed', 'raps']
+    prior: 0.2
+    prior_rationale:
+      en: >-
+        A growing non-allergenic, often locally-sourced alternative in Poland and Germany; sometimes
+        named for its "no soy" marketing value, sometimes left silent because it carries no mandatory
+        disclosure — a plausible share of the unlabelled remainder.
+      pl: >-
+        Rosnąca, niealergenna i często lokalna alternatywa w Polsce i Niemczech; czasem nazywana ze
+        względu na wartość marketingową „bez soi”, czasem pozostawiana bez etykiety, bo nie podlega
+        obowiązkowej deklaracji — prawdopodobna część nieoznaczonej reszty.
+  - id: egg
+    names:
+      en: [egg lecithin, egg-yolk lecithin]
+      pl: [lecytyna z jaj, lecytyna jajeczna]
+      de: [Eilecithin]
+    process:
+      en: "Separated from egg yolk; used mainly in infant formula and premium/allergen-conscious products."
+      pl: "Wyodrębniana z żółtka jaja; stosowana głównie w mleku dla niemowląt i produktach premium/uwzględniających alergie."
+    tells: ['jaj', 'egg', '\bei(?:er|gelb|lecithin)?\b']
+    prior: 0.05
+    prior_rationale:
+      en: >-
+        A minority, higher-cost source used where soy must be avoided; egg is itself an EU Annex II
+        allergen, so it must also be named when used — rarely left silent.
+      pl: >-
+        Mniejszościowe, droższe źródło, stosowane, gdy trzeba uniknąć soi; jajo jest również alergenem
+        z Aneksu II UE, więc również musi być zadeklarowane — rzadko pozostaje nieoznaczone.
+assertions:
+  - code: allergen.soybeans
+    variant: soy
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "EU law requires the plant source to be named when an additive is soy-derived (Reg 1169/2011 Annex II item 6); 'lecithin (soy)' or 'lecytyna sojowa' is the compliant form."
+      pl: "Prawo UE wymaga podania źródła roślinnego, gdy dodatek pochodzi z soi (Reg 1169/2011 Aneks II pkt 6); zgodną z przepisami formą jest „lecytyna (z soi)” lub „lecytyna sojowa”."
+    sources: [{ id: reg-1169-2011 }]
+  - code: allergen.eggs
+    variant: egg
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "EU law requires eggs to be named as the source when the additive is egg-derived (Reg 1169/2011 Annex II item 3)."
+      pl: "Prawo UE wymaga podania jaj jako źródła, gdy dodatek pochodzi z jaj (Reg 1169/2011 Aneks II pkt 3)."
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegan
+    certainty: maybe
+    kind: estimate
+    grade: B
+    note:
+      en: "Most lecithin is plant-derived (soy, sunflower, rapeseed and so on) and vegan; egg-yolk lecithin, a minority source that must be named, is not."
+      pl: "Większość lecytyny pochodzi z roślin (soja, słonecznik, rzepak itd.) i jest wegańska; lecytyna z żółtka jaja, mniejszościowe źródło, które musi być zadeklarowane, nie jest."
+    sources: [{ id: efsa-lecithins-2017 }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Every documented commercial source — plant oils or egg yolk — is compatible with a lacto-ovo-vegetarian diet."
+      pl: "Każde udokumentowane handlowe źródło — oleje roślinne lub żółtko jaja — jest zgodne z dietą laktoowowegetariańską."
+    sources: [{ id: efsa-lecithins-2017 }]
+  # Once the label names the source, the vegan question is settled for that source.
+  - code: diet.vegan
+    variant: soy
+    certainty: yes
+    kind: fact
+    grade: B
+    note: { en: "Recovered from soya bean oil; no animal material.", pl: "Odzyskiwana z oleju sojowego; bez materiału zwierzęcego." }
+    sources: [{ id: efsa-lecithins-2017 }]
+  - code: diet.vegan
+    variant: sunflower
+    certainty: yes
+    kind: fact
+    grade: B
+    note: { en: "Recovered from sunflower oil; no animal material.", pl: "Odzyskiwana z oleju słonecznikowego; bez materiału zwierzęcego." }
+    sources: [{ id: efsa-lecithins-2017 }]
+  - code: diet.vegan
+    variant: rapeseed
+    certainty: yes
+    kind: fact
+    grade: B
+    note: { en: "Recovered from rapeseed oil; no animal material.", pl: "Odzyskiwana z oleju rzepakowego; bez materiału zwierzęcego." }
+    sources: [{ id: efsa-lecithins-2017 }]
+  - code: diet.vegan
+    variant: egg
+    certainty: "no"
+    kind: fact
+    grade: A
+    note: { en: "Made from egg yolk.", pl: "Wytwarzana z żółtka jaja." }
+    sources: [{ id: efsa-lecithins-2017 }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Group I additive: quantum satis in most food categories.", pl: "Dodatek grupy I: quantum satis w większości kategorii żywności." }
+    source: reg-1333-2008
+reference_values:
+  - type: ADI
+    value: "not specified"
+    body: EFSA
+    year: 2017
+    source: efsa-lecithins-2017
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Considered an origin.gmo_derived (maybe) assertion for the soy variant — soy is a commonly genetically modified crop and most EU-imported soy/soy products are GM — but could not pin down a specific, directly-opened, non-paywalled source with a citable figure this session (a USDA GAIN PDF and an EU DG AGRI PDF both resisted text extraction). Left out per the sourcing rule; revisit with a readable EU Commission or JRC figure."
+  - "EFSA's 2020 follow-up opinion (10.2903/j.efsa.2020.6266) covers lecithins in infant formula below 16 weeks specifically; not opened this session, so not cited — check it before making any infant-specific claim."

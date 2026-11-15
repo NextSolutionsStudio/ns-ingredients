@@ -1,0 +1,22 @@
+id: yeast
+type: ingredient
+names:
+  en:
+    - yeast
+    - baker's yeast
+  pl:
+    - drożdże
+    - drożdże piekarskie
+    - drożdże piekarskie prasowane
+    - drożdże w proszku
+    - drożdże suszone
+  de:
+    - Hefe
+    - Backhefe
+summary:
+  en: Baker's yeast (Saccharomyces cerevisiae).
+  pl: Drożdże piekarskie (Saccharomyces cerevisiae).
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - 'Identity-only: no source on growth media or diet status was opened.'

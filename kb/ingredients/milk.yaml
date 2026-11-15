@@ -1,0 +1,42 @@
+id: milk
+type: ingredient
+names:
+  en: [milk, milk powder, skimmed milk, skimmed milk powder, skim milk powder, whole milk, whole milk powder]
+  pl: [mleko, mleka, mleko w proszku, mleko odtłuszczone, mleko odtłuszczone w proszku, mleko pełne w proszku, odtłuszczone mleko w proszku, mleko w proszku odtłuszczone, pełne mleko w proszku, mleko pasteryzowane, pasteryzowane mleko, mleko pełne, mleko krowie, mleko częściowo odtłuszczone, mleko UHT]
+  de: [Milch, Milchpulver, Magermilch, Magermilchpulver, Vollmilch, Vollmilchpulver]
+summary:
+  en: "Cow's (or other mammal's) milk, including lactose; one of the EU's fourteen regulated allergens, with narrow exemptions for whey used in alcoholic distillates and for lactitol."
+  pl: "Mleko krowie (lub innego ssaka), łącznie z laktozą; jeden z czternastu regulowanych alergenów UE, z wąskimi wyłączeniami dla serwatki stosowanej w destylatach alkoholowych i dla laktitolu."
+assertions:
+  - code: allergen.milk
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Declared ingredient; EU Annex II item 7.", pl: "Zadeklarowany składnik; Aneks II UE, punkt 7." }
+    sources: [{ id: reg-1169-2011, locator: "Annex II item 7" }]
+  - code: origin.dairy
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Milk is by definition of dairy origin.", pl: "Mleko jest z definicji pochodzenia mlecznego." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegan
+    certainty: "no"
+    kind: fact
+    grade: A
+    note: { en: "An animal (mammary) product.", pl: "Produkt zwierzęcy (mleczny)." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Compatible with a lacto-ovo-vegetarian diet.", pl: "Zgodne z dietą laktoowowegetariańską." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.lactose_free
+    certainty: "no"
+    kind: fact
+    grade: A
+    note: { en: "Contains lactose by definition, unless separately labelled lactose-free.", pl: "Z definicji zawiera laktozę, o ile nie oznaczono odrębnie jako bez laktozy." }
+    sources: [{ id: reg-1169-2011 }]
+review_status: draft
+provenance: ai-drafted

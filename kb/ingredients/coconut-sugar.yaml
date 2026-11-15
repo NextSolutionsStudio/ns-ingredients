@@ -1,0 +1,38 @@
+id: coconut-sugar
+type: carbohydrate
+names:
+  en: ["coconut sugar","coconut palm sugar","coconut blossom sugar"]
+  pl: ["cukier kokosowy","cukru kokosowego","cukier z kwiatów palmy kokosowej"]
+  de: ["Kokosblütenzucker","Kokoszucker"]
+summary:
+  en: "Sugar made from sap collected from the flower stalks of coconut palms. Heating evaporates water to form syrup and then a solid sugar product. Sucrose is its principal sugar, with glucose and fructose also present."
+  pl: "Cukier otrzymywany z soku zbieranego z pędów kwiatostanowych palmy kokosowej. Ogrzewanie odparowuje wodę, dając syrop, a następnie stały cukier. Głównym cukrem jest sacharoza, obecne są też glukoza i fruktoza."
+assertions:
+  - code: health.added_sugar
+    certainty: yes
+    kind: fact
+    grade: A
+    population: [general]
+    note:
+      en: "Added as an ingredient, it counts as a free sugar in WHO's sense. WHO strongly recommends keeping free sugars under 10% of energy intake. The ingredient list does not show how much is in the product."
+      pl: "Dodany jako składnik, jest cukrem wolnym w rozumieniu WHO. WHO zdecydowanie zaleca, by cukry wolne stanowiły mniej niż 10% energii z diety. Lista składników nie pokazuje, ile go jest w produkcie."
+    sources: [{ id: who-free-sugars-2015 }]
+  - code: origin.plant
+    certainty: yes
+    kind: estimate
+    grade: D
+    note:
+      en: "Sap tapped from coconut flower stalks is heated to evaporate water and concentrated into syrup or solid sugar."
+      pl: "Sok pozyskiwany z pędów kwiatostanowych palmy kokosowej ogrzewa się, odparowując wodę i otrzymując syrop lub stały cukier."
+    sources: [{ id: sug-coconut }]
+glycemic:
+  - range: [54, 54]
+    fraction: sugars
+    method: iso
+    note: { en: "Loving Earth coconut sugar.", pl: "Cukier kokosowy Loving Earth." }
+    source: gi-atkinson-2021
+    locator: "Supplemental Table 1, food 1779"
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "No numerical route priors: the opened sources do not establish probabilities for an undisclosed label. No blanket vegan or gluten-free claim: processing aids and batch certification were not verified."

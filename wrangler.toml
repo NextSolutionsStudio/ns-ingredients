@@ -1,0 +1,41 @@
+# Cloudflare deployment: the keyless public API and the explorer UI (web/).
+#   npx wrangler dev       local, on workerd
+#   npx wrangler deploy    needs CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID
+# Both run `deno task build:worker` first, which validates the KB and bundles src/worker.ts.
+name = "ns-ingredients"
+main = "dist/worker.js"
+compatibility_date = "2026-09-01"
+no_bundle = true
+workers_dev = true
+
+[build]
+command = "deno task build:worker"
+
+[assets]
+directory = "./web"
+
+[observability]
+enabled = true
+
+# Requests a minute per IP address, per Cloudflare location (approximate by design). Keep in step with
+# ANON_RATES in src/worker.ts; tests/unit/worker_test.ts checks.
+[[ratelimits]]
+name = "ANON_READ"
+namespace_id = "7101"
+  [ratelimits.simple]
+  limit = 120
+  period = 60
+
+[[ratelimits]]
+name = "ANON_ANALYZE"
+namespace_id = "7102"
+  [ratelimits.simple]
+  limit = 30
+  period = 60
+
+[[ratelimits]]
+name = "ANON_OFF"
+namespace_id = "7103"
+  [ratelimits.simple]
+  limit = 20
+  period = 60

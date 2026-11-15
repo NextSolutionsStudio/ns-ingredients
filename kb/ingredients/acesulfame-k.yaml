@@ -1,0 +1,72 @@
+id: acesulfame-k
+type: additive
+e_number: E950
+ids: { cas: "55589-62-3", wikidata: Q132037, chebi: "CHEBI:184415", pubchem: 11074431 }
+names:
+  en: [acesulfame potassium, acesulfame K, Ace K]
+  pl: [acesulfam K]
+  de: [Acesulfam]
+functions: [sweetener]
+summary:
+  en: >-
+    A heat-stable intense sweetener (about 200x as sweet as sucrose), often blended with other
+    sweeteners because its own aftertaste is more noticeable alone. Made entirely by chemical
+    synthesis: an amide salt is cyclised and hydrolysed to acesulfame acid, then neutralised with
+    potassium hydroxide and purified by crystallisation. EFSA's 2025 re-evaluation raised the ADI
+    from 9 to 15 mg/kg bw/day (based on a rat NOAEL of 1500 mg/kg bw/day) while tightening the
+    specification limit on a manufacturing impurity, 5-chloro-acesulfame, to 0.1 mg/kg over a
+    genotoxicity concern flagged by computational (QSAR) screening.
+  pl: >-
+    Stabilny termicznie, intensywny słodzik (ok. 200 razy słodszy od sacharozy), często łączony z
+    innymi słodzikami, ponieważ jego posmak jest wyraźniejszy, gdy stosowany samodzielnie. Otrzymywany
+    w całości w procesie syntezy chemicznej: sól amidowa jest cyklizowana i hydrolizowana do kwasu
+    acesulfamowego, a następnie neutralizowana wodorotlenkiem potasu i oczyszczana przez krystalizację.
+    Reocena EFSA z 2025 r. podniosła ADI z 9 do 15 mg/kg m.c./dobę (na podstawie NOAEL 1500 mg/kg m.c.
+    u szczurów), jednocześnie zaostrzając limit specyfikacji zanieczyszczenia produkcyjnego,
+    5-chloroacesulfamu, do 0,1 mg/kg z powodu obaw o genotoksyczność zidentyfikowanych metodą
+    obliczeniową (QSAR).
+assertions:
+  - code: processing.non_sugar_sweetener
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Named by WHO as a common non-sugar sweetener. WHO's 2023 guideline conditionally recommends against using non-sugar sweeteners for weight control; it does not apply to people with pre-existing diabetes. This marks the ingredient's role, not a safety finding: the authorised use limits are set by the ADI."
+      pl: "WHO wymienia go wśród typowych substancji słodzących niecukrowych. Wytyczna WHO z 2023 r. warunkowo odradza stosowanie substancji słodzących niecukrowych w celu kontroli masy ciała; nie dotyczy osób z cukrzycą. Oznacza rolę składnika, nie ocenę bezpieczeństwa: limity stosowania wynikają z ADI."
+    sources: [{ id: who-nss-guideline-2023 }]
+  - code: origin.chemical_synthesis
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Synthesised from an acetoacetamide-N-sulfonate salt via cyclisation/hydrolysis to acesulfame acid, then neutralised with KOH; dichloromethane is used as solvent through the reaction steps."
+      pl: "Syntetyzowany z soli acetoacetamido-N-sulfonianowej poprzez cyklizację/hydrolizę do kwasu acesulfamowego, a następnie neutralizację KOH; dichlorometan jest stosowany jako rozpuszczalnik na etapach reakcji."
+    sources: [{ id: swt-efsa-acesulfame-2025 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Produced entirely by chemical synthesis; no animal-derived inputs in the described route.", pl: "Otrzymywany wyłącznie w procesie syntezy chemicznej; opisany proces nie wykorzystuje surowców zwierzęcych." }
+    sources: [{ id: swt-efsa-acesulfame-2025 }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Authorised sweetener under Reg 1333/2008 Annex II, subject to maximum levels per food category.", pl: "Dozwolona substancja słodząca na podstawie Rozporządzenia 1333/2008, Załącznik II, w ramach maksymalnych poziomów dla kategorii żywności." }
+    source: reg-1333-2008
+reference_values:
+  - type: ADI
+    value: 15
+    unit: "mg/kg bw/day"
+    body: EFSA
+    year: 2025
+    source: swt-efsa-acesulfame-2025
+  - type: ADI
+    value: 9
+    unit: "mg/kg bw/day"
+    body: SCF
+    year: 2000
+    source: swt-efsa-acesulfame-2025
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "The 9 mg/kg bw/day figure is the superseded SCF (2000) ADI, kept here only for historical context; the current figure is 15 mg/kg bw/day (EFSA 2025)."

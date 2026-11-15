@@ -1,0 +1,72 @@
+id: whey-protein-hydrolysate
+type: protein
+names:
+  en: [whey protein hydrolysate, hydrolyzed whey protein, hydrolysed whey protein, whey peptides, WPH]
+  pl: [hydrolizat białka serwatkowego, hydrolizaty białka serwatkowego, hydrolizat białek serwatkowych, peptydy serwatkowe, WPH]
+  de: [Molkenproteinhydrolysat, Molkenpeptide]
+summary:
+  en: >-
+    Whey protein concentrate or isolate broken down further by enzymes (partial hydrolysis) into shorter
+    peptides, marketed for faster digestion/absorption and used to reduce the bitterness that limits how
+    far hydrolysis can go. Enzymatic hydrolysis measurably lowers the protein's allergenic potential, but a
+    published lab study found even a well-optimised hydrolysis cut allergenicity by at most roughly 60%,
+    never eliminating it — a sports hydrolysate is not the same as a clinically hypoallergenic formula, and
+    still requires the same milk-allergen declaration.
+  pl: >-
+    Koncentrat lub izolat białka serwatkowego rozłożony dalej przez enzymy (częściowa hydroliza) na krótsze
+    peptydy, sprzedawany pod kątem szybszego trawienia/wchłaniania; hydroliza jest ograniczana goryczą
+    powstających peptydów. Hydroliza enzymatyczna wymiernie zmniejsza potencjał alergizujący białka, ale
+    opublikowane badanie laboratoryjne wykazało, że nawet dobrze zoptymalizowana hydroliza obniżyła
+    alergenność o maksymalnie ok. 60%, nigdy jej nie eliminując — sportowy hydrolizat to nie to samo co
+    klinicznie hipoalergiczna formuła, i wciąż wymaga tej samej deklaracji alergenu mlecznego.
+  de: >-
+    Molkenproteinkonzentrat oder -isolat, das enzymatisch weiter in kürzere Peptide zerlegt wird
+    (Teilhydrolyse), für schnellere Verdauung/Aufnahme. Die enzymatische Hydrolyse senkt das allergene
+    Potenzial messbar, eliminiert es aber laut einer Laborstudie nicht vollständig (max. ca. 60% Reduktion).
+assertions:
+  - code: origin.dairy
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Made from whey protein concentrate or isolate, both by-products of cheesemaking from cow's milk.", pl: "Produkowany z koncentratu lub izolatu białka serwatkowego, obu będących produktami ubocznymi wytwarzania sera z mleka krowiego." }
+    sources: [{ id: usda-fdc }]
+  - code: allergen.milk
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Milk-derived; hydrolysis reduces but does not remove the need to declare milk as an allergen.", pl: "Pochodzi z mleka; hydroliza zmniejsza, ale nie usuwa obowiązku deklaracji mleka jako alergenu." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegan
+    certainty: no
+    kind: fact
+    grade: A
+    note: { en: "Dairy-derived.", pl: "Pochodzenie mleczne." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegetarian
+    certainty: maybe
+    kind: estimate
+    grade: C
+    note:
+      en: "Inherits the rennet-coagulation question from its whey concentrate/isolate starting material (see those entries); the label rarely says which."
+      pl: "Dziedziczy kwestię koagulacji podpuszczkowej po wyjściowym koncentracie/izolacie serwatkowym (zob. te wpisy); etykieta rzadko podaje, jaką zastosowano."
+    sources: [{ id: prot-vrg-fpc-rennet }]
+  - code: diet.lactose_free
+    certainty: maybe
+    kind: estimate
+    grade: D
+    note:
+      en: "Lactose content tracks whichever base material (concentrate or isolate) was hydrolysed, which a hydrolysate label rarely specifies."
+      pl: "Zawartość laktozy zależy od tego, jaki materiał wyjściowy (koncentrat czy izolat) poddano hydrolizie, czego etykieta hydrolizatu rzadko podaje."
+    sources: [{ id: prot-adpi-whey-overview }]
+  - code: processing.ultra_processed_marker
+    certainty: yes
+    kind: opinion
+    grade: D
+    note:
+      en: "NOVA explicitly lists 'hydrolysed proteins' among the substances of no/rare culinary use that mark a food as ultra-processed."
+      pl: "NOVA wyraźnie wymienia 'hydrolizaty białkowe' wśród substancji o zerowym/rzadkim zastosowaniu kulinarnym, które oznaczają żywność jako wysoko przetworzoną."
+    sources: [{ id: prot-monteiro-2019-nova }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "The allergenicity-reduction finding (Lukose et al. 2024, up to ~60% reduction with trypsin + iron/ascorbic acid, never full elimination) doesn't match any implication code precisely (it is IgE-mediated, so health.sensitivity_reported's 'non-allergic intolerance' framing would misdescribe it) — kept as prose in the summary and cited here instead of forced into a mismatched code."

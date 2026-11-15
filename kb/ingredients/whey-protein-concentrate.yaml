@@ -1,0 +1,83 @@
+id: whey-protein-concentrate
+type: protein
+names:
+  en: [whey protein concentrate, WPC, WPC80]
+  pl: [koncentrat białka serwatkowego, koncentraty białka serwatkowego, koncentrat białek serwatkowych, WPC]
+  de: [Molkenproteinkonzentrat, Molkenprotein-Konzentrat]
+summary:
+  en: >-
+    Whey is the liquid left over from cheesemaking; ultrafiltration concentrates its protein while removing
+    some lactose, minerals and fat. Concentrate is the least-filtered, most affordable form sold in sports
+    nutrition — commonly labelled by its protein grade (e.g. "WPC80" for roughly 80% protein) — and retains
+    more lactose than an isolate. Marketed heavily for muscle recovery/growth alongside strength training.
+  pl: >-
+    Serwatka to płynny produkt pozostały po produkcji sera; ultrafiltracja zatęża jej białko, usuwając
+    część laktozy, minerałów i tłuszczu. Koncentrat to najmniej filtrowana, najbardziej dostępna cenowo
+    forma sprzedawana w suplementacji sportowej — często oznaczana grupą białkową (np. "WPC80" dla ok. 80%
+    białka) — i zawiera więcej laktozy niż izolat. Intensywnie promowana pod kątem regeneracji/wzrostu
+    mięśni w połączeniu z treningiem siłowym.
+  de: >-
+    Molke ist die flüssige Restfraktion der Käseherstellung; Ultrafiltration konzentriert ihr Protein und
+    entfernt einen Teil der Lactose, Mineralien und des Fetts. Konzentrat ist die am wenigsten filtrierte,
+    günstigste Form (z. B. "WPC80" für ca. 80% Protein) und behält mehr Lactose als ein Isolat.
+assertions:
+  - code: origin.dairy
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "By-product of cheesemaking from cow's milk.", pl: "Produkt uboczny wytwarzania sera z mleka krowiego." }
+    sources: [{ id: usda-fdc }]
+  - code: allergen.milk
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Milk-derived; declared as a milk allergen regardless of lactose content.", pl: "Pochodzi z mleka; deklarowana jako alergen mleczny niezależnie od zawartości laktozy." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegan
+    certainty: no
+    kind: fact
+    grade: A
+    note: { en: "Dairy-derived.", pl: "Pochodzenie mleczne." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegetarian
+    certainty: maybe
+    kind: estimate
+    grade: C
+    note:
+      en: >-
+        Cheese whey follows rennet coagulation of the milk. Roughly 65-90% of commercial cheese today is
+        made with fermentation-produced chymosin (a microbial rennet, not animal-derived), but a whey
+        protein label does not disclose which coagulant made the source cheese, so a minority animal-rennet
+        route cannot be ruled out.
+      pl: >-
+        Serwatka pochodzi z mleka skoagulowanego podpuszczką. Ok. 65-90% dzisiejszej produkcji sera powstaje
+        z użyciem podpuszczki mikrobiologicznej (fermentation-produced chymosin, nie pochodzenia
+        zwierzęcego), ale etykieta białka serwatkowego nie mówi, jaki koagulant zastosowano w serze
+        źródłowym, więc mniejszościowej podpuszczki zwierzęcej nie można wykluczyć.
+    sources: [{ id: prot-vrg-fpc-rennet }]
+  - code: diet.lactose_free
+    certainty: "no"
+    kind: estimate
+    grade: C
+    note:
+      en: >-
+        A commercial "WPC80" designation implies roughly 20% of the powder is not protein — lactose,
+        minerals and milkfat left behind by ultrafiltration alone; concentrate is filtered far less than an
+        isolate and is not marketed as lactose-free.
+      pl: >-
+        Handlowe oznaczenie "WPC80" oznacza, że ok. 20% proszku to nie białko — laktoza, minerały i tłuszcz
+        mleczny pozostałe po samej ultrafiltracji; koncentrat jest filtrowany znacznie mniej niż izolat i nie
+        jest sprzedawany jako produkt bez laktozy.
+    sources: [{ id: prot-wang-2026-wpc-mcc-characterization }, { id: prot-adpi-whey-overview }]
+  - code: processing.ultra_processed_marker
+    certainty: maybe
+    kind: opinion
+    grade: D
+    note:
+      en: "NOVA lists 'whey protein' among the substances of no/rare culinary use that mark a food as ultra-processed; this is about the finished product it is added to, not a safety claim about whey itself."
+      pl: "NOVA wymienia 'białko serwatkowe' wśród substancji o zerowym/rzadkim zastosowaniu kulinarnym, które oznaczają żywność jako wysoko przetworzoną; to stwierdzenie dotyczy produktu finalnego, do którego jest dodawane, nie bezpieczeństwa samej serwatki."
+    sources: [{ id: prot-monteiro-2019-nova }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Did not find an opened, authoritative numeric lactose/protein specification table for WPC vs WPI (Codex Alimentarius covers whey powder, not the concentrate/isolate grades used in sports nutrition); the lactose assertion is framed qualitatively rather than with an unverified percentage."

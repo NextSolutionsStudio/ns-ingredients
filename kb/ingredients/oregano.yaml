@@ -1,0 +1,30 @@
+id: oregano
+type: ingredient
+names:
+  en:
+    - oregano
+  pl:
+    - oregano suszone
+    - lebiodka
+  de:
+    - Oregano
+summary:
+  en: Oregano (Origanum vulgare) as a herb.
+  pl: 'Oregano (Origanum vulgare, lebiodka pospolita) jako zioło.'
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A culinary herb.
+      pl: Zioło kulinarne.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    The Polish label word 'oregano' is the same string as the English name, so it is listed once (under en):
+    one normalised name belongs to one entry.

@@ -1,0 +1,106 @@
+id: maltodextrin
+type: carbohydrate
+names:
+  en: [maltodextrin]
+  pl: [maltodekstryna]
+  de: [Maltodextrin]
+functions: [carrier]
+summary:
+  en: >-
+    A partially hydrolysed starch: shorter glucose chains than the parent starch, so it dissolves easily
+    and carries flavour, colour or a supplement dose without much sweetness of its own. Made from wheat,
+    maize or potato starch; EU allergen law exempts wheat-based maltodextrin from a mandatory gluten
+    warning because the hydrolysis and purification remove essentially all protein, but the crop itself is
+    the same wheat that carries gluten before processing.
+  pl: >-
+    Częściowo zhydrolizowana skrobia: krótsze łańcuchy glukozy niż w skrobi wyjściowej, dzięki czemu łatwo
+    się rozpuszcza i "przenosi" aromat, barwę lub dawkę suplementu bez większej własnej słodkości.
+    Produkowana ze skrobi pszennej, kukurydzianej lub ziemniaczanej; unijne prawo o alergenach zwalnia
+    maltodekstrynę pszenną z obowiązkowego ostrzeżenia o glutenie, bo hydroliza i oczyszczanie usuwają
+    praktycznie całe białko — ale surowcem wciąż jest ta sama pszenica, która przed przetworzeniem
+    zawiera gluten.
+variants:
+  - id: wheat
+    names:
+      en: [wheat maltodextrin]
+      pl: [maltodekstryna pszenna, maltodekstryna z pszenicy]
+    process:
+      en: "Hydrolysed from wheat starch."
+      pl: "Otrzymywana z hydrolizy skrobi pszennej."
+    tells: ['wheat maltodextrin', 'maltodekstryna pszenn', 'maltodekstryna z pszenicy']
+    prior: 0.15
+    prior_rationale:
+      en: >-
+        Legally exempt from gluten warning, but many EU manufacturers still prefer maize or potato starch
+        as the cheaper, more available feedstock and to sidestep consumer "may contain gluten" confusion
+        even where the law does not require a warning.
+      pl: >-
+        Prawnie zwolniona z ostrzeżenia o glutenie, ale wielu producentów w UE wciąż woli skrobię
+        kukurydzianą lub ziemniaczaną jako tańszy, łatwiej dostępny surowiec i by uniknąć konsumenckiej
+        obawy o gluten, nawet gdy prawo nie wymaga ostrzeżenia.
+  - id: maize
+    names:
+      en: [maize maltodextrin, corn maltodextrin]
+      pl: [maltodekstryna kukurydziana, maltodekstryna z kukurydzy]
+    process:
+      en: "Hydrolysed from maize (corn) starch — the most widely available commodity feedstock."
+      pl: "Otrzymywana z hydrolizy skrobi kukurydzianej — najbardziej dostępnego surowca towarowego."
+    tells: ['maize maltodextrin', 'corn maltodextrin', 'maltodekstryna kukurydzian', 'maltodekstryna z kukurydzy']
+    prior: 0.55
+    prior_rationale:
+      en: "The default global commodity feedstock for starch-derived ingredients, cheaper and more available than wheat or potato in most supply chains."
+      pl: "Domyślny globalny surowiec towarowy dla składników na bazie skrobi, tańszy i łatwiej dostępny niż pszenica czy ziemniak w większości łańcuchów dostaw."
+  - id: potato
+    names:
+      en: [potato maltodextrin]
+      pl: [maltodekstryna ziemniaczana, maltodekstryna z ziemniaków]
+    process:
+      en: "Hydrolysed from potato starch — a common European (incl. Polish) feedstock."
+      pl: "Otrzymywana z hydrolizy skrobi ziemniaczanej — powszechnego surowca europejskiego, w tym polskiego."
+    tells: ['potato maltodextrin', 'maltodekstryna ziemniaczan', 'maltodekstryna z ziemniak']
+    prior: 0.3
+    prior_rationale:
+      en: "A significant European feedstock (Poland, Germany, the Netherlands have large potato-starch industries), though smaller globally than maize."
+      pl: "Istotny surowiec europejski (Polska, Niemcy, Holandia mają duży przemysł skrobi ziemniaczanej), choć w skali globalnej mniejszy niż kukurydza."
+assertions:
+  - code: allergen.gluten
+    variant: wheat
+    certainty: maybe
+    kind: fact
+    grade: A
+    population: [coeliac]
+    note:
+      en: >-
+        EU law explicitly exempts "wheat based maltodextrins" from the mandatory gluten allergen
+        declaration (Annex II point 1(b)), on the basis that hydrolysis and purification remove the
+        protein to a level judged not to trigger a reaction. "Maybe" rather than "no": the exemption is a
+        regulatory judgement about typical processing, not a zero-residue guarantee for every batch.
+      pl: >-
+        Prawo UE wyraźnie zwalnia "maltodekstryny na bazie pszenicy" z obowiązkowej deklaracji alergenu
+        glutenowego (Załącznik II pkt 1(b)), uznając, że hydroliza i oczyszczanie usuwają białko do poziomu
+        ocenionego jako nie wywołujący reakcji. "Może", nie "nie": zwolnienie to ocena regulacyjna
+        typowego procesu, a nie gwarancja zerowej pozostałości dla każdej partii.
+    sources: [{ id: reg-1169-2011, locator: "Annex II, point 1(b)" }]
+  - code: diet.gluten_free
+    variant: wheat
+    certainty: maybe
+    kind: estimate
+    grade: C
+    population: [coeliac]
+    note:
+      en: "Legally exempt from a gluten warning, but the same processing-not-guarantee caveat applies for someone avoiding gluten strictly."
+      pl: "Prawnie zwolniona z ostrzeżenia o glutenie, ale to samo zastrzeżenie o procesie (a nie gwarancji) dotyczy osoby ściśle unikającej glutenu."
+    sources: [{ id: reg-1169-2011, locator: "Annex II, point 1(b)" }]
+  - code: origin.gmo_derived
+    variant: maize
+    certainty: maybe
+    kind: estimate
+    grade: C
+    note:
+      en: "Maize is one of the crops most often genetically modified worldwide (about 92% of US corn acreage); a label alone does not say which maize the maltodextrin was hydrolysed from."
+      pl: "Kukurydza jest jedną z roślin najczęściej modyfikowanych genetycznie na świecie (ok. 92% powierzchni uprawy kukurydzy w USA); sama etykieta nie mówi, z jakiej kukurydzy zhydrolizowano maltodekstrynę."
+    sources: [{ id: usda-ers-ge-crops }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Left out a NOVA/'ultra-processed marker' assertion: this database's implications.yaml already names maltodextrin as an example under processing.ultra_processed_marker, but this session could not get a clean read of the source FAO document past a 403 (only a search-engine excerpt) and chose not to force a citation through that; add it once a reviewer opens the FAO NOVA report directly."

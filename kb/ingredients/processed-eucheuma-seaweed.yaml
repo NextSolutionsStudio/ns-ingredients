@@ -1,0 +1,65 @@
+id: processed-eucheuma-seaweed
+type: additive
+e_number: E407a
+ids: { wikidata: "Q288867" }
+names:
+  en: [processed Eucheuma seaweed, PES]
+  pl: [przetworzone wodorosty Eucheuma]
+functions: [thickener, gelling-agent, stabiliser]
+summary:
+  en: >-
+    A cheaper, less refined relative of carrageenan (E 407), made by treating Eucheuma cottonii and
+    Eucheuma spinosum seaweed with potassium hydroxide instead of fully extracting and purifying the
+    carrageenan out of it; the leftover cellulose and other seaweed tissue give it a grainier texture
+    and make it unsuitable for clear gels. EFSA reviews it jointly with carrageenan under the same group
+    ADI, and the identity, poligeenan distinction and data gaps described for E 407 apply here too — see
+    the carrageenan entry.
+  pl: >-
+    Tańszy, mniej rafinowany odpowiednik karagenu (E 407), otrzymywany przez traktowanie wodorostów
+    Eucheuma cottonii i Eucheuma spinosum wodorotlenkiem potasu, a nie przez pełną ekstrakcję i
+    oczyszczenie karagenu; pozostała celuloza i inne tkanki wodorostu dają bardziej ziarnistą teksturę i
+    czynią go nieprzydatnym do przezroczystych żeli. EFSA ocenia go łącznie z karagenem, w ramach tego
+    samego grupowego ADI; opisana przy karagenie (E 407) tożsamość, rozróżnienie od poligeenanu i braki
+    danych dotyczą również tego dodatku — patrz wpis dla karagenu.
+assertions:
+  - code: origin.plant
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Made directly from red seaweed (Eucheuma cottonii and E. spinosum) by alkaline treatment, without full extraction of the carrageenan."
+      pl: "Wytwarzany bezpośrednio z czerwonych wodorostów (Eucheuma cottonii i E. spinosum) przez obróbkę alkaliczną, bez pełnej ekstrakcji karagenu."
+    sources: [{ id: efsa-carrageenan-2018 }]
+  - code: health.inflammation_debate
+    certainty: maybe
+    kind: opinion
+    grade: D
+    note:
+      en: >-
+        The same animal-experiment literature discussed for carrageenan (E 407) treats processed
+        Eucheuma seaweed as part of the same carrageenan family; EFSA's 2018 re-evaluation assessed both
+        substances together and reached the same temporary-ADI, more-data-needed conclusion rather than
+        confirming a human inflammatory effect at dietary doses.
+      pl: >-
+        Ta sama literatura badań na zwierzętach, opisana przy karagenie (E 407), traktuje przetworzone
+        wodorosty Eucheuma jako część tej samej rodziny karagenów; ponowna ocena EFSA z 2018 r. oceniła
+        obie substancje wspólnie i doszła do tego samego wniosku — tymczasowe ADI, potrzeba więcej
+        danych — nie potwierdzając efektu zapalnego u ludzi przy dawkach pokarmowych.
+    sources: [{ id: tobacman-2001-carrageenan }, { id: efsa-carrageenan-2018 }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Authorised with a temporary group ADI shared with E 407; specific category limits set in Annex II to Reg 1333/2008.", pl: "Dopuszczony z tymczasowym grupowym ADI, wspólnym z E 407; szczegółowe limity kategorii żywności w Aneksie II do Reg 1333/2008." }
+    source: reg-1333-2008
+reference_values:
+  - type: group_ADI
+    value: 75
+    unit: "mg/kg bw/day"
+    body: EFSA
+    year: 2018
+    source: efsa-carrageenan-2018
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "See carrageenan.yaml (E 407) for the poligeenan distinction — the same non-authorised, acid-degraded substance is not part of E 407a either."
+  - "No CAS/ChEBI identifier available from Wikidata for this entry (mixed seaweed-derived material, no single registry number)."

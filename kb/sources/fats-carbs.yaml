@@ -1,0 +1,95 @@
+# New citations for the "fats-carbs" batch (mct-oil, vegetable-fat-powder, palm-oil, palm-kernel-oil,
+# coconut-oil, sunflower-oil, rapeseed-oil, hydrogenated-vegetable-fat, cocoa-powder, maltodextrin,
+# glucose-syrup, dextrose, sugar, inulin, salt, water). Ids prefixed loosely by publisher, not "fc-",
+# since each is unambiguous on its own.
+sources:
+  - id: dir-2000-36
+    type: regulation
+    title: "Directive 2000/36/EC relating to cocoa and chocolate products intended for human consumption (Annex I, Part A: definitions of cocoa powder and fat-reduced cocoa powder)"
+    publisher: European Union
+    year: 2000
+    url: https://eur-lex.europa.eu/eli/dir/2000/36/oj
+    licence: "EU reuse policy (Decision 2011/833/EU) — CC BY 4.0"
+    accessed: 2026-09-27
+    note: "Annex I Part A: 'cocoa powder (cocoa)' = product from cleaned, shelled, roasted cocoa beans with not less than 20% cocoa butter (dry matter) and not more than 9% water; 'fat-reduced cocoa (fat-reduced cocoa powder)' = cocoa powder with less than 20% cocoa butter (dry matter). Verified via the UK's retained-EU-law mirror (legislation.gov.uk) after the EUR-Lex JS page returned no extractable text to this session's fetch tool."
+  - id: dir-2001-111
+    type: regulation
+    title: "Council Directive 2001/111/EC relating to certain sugars intended for human consumption (Annex, Part A: product definitions incl. sugar, glucose syrup, dextrose)"
+    publisher: European Union
+    year: 2001
+    url: https://eur-lex.europa.eu/eli/dir/2001/111/oj
+    licence: "EU reuse policy (Decision 2011/833/EU) — CC BY 4.0"
+    accessed: 2026-09-27
+    note: "Annex Part A lists and defines: semi-white sugar; sugar (white sugar); extra-white sugar; sugar solution; invert sugar solution/syrup; glucose syrup; dried glucose syrup; dextrose (monohydrate/anhydrous); fructose. 'Sugar'/'white sugar' = purified and crystallised sucrose meeting stated polarisation and invert-sugar limits. Confirmed via several independent secondary mirrors (legislation.gov.uk, ecolex.org, eumonitor.eu) after direct EUR-Lex fetch returned no extractable text to this session's tool; recommend a human reviewer re-open the EUR-Lex ELI directly."
+  - id: reg-2023-1115
+    type: regulation
+    title: "Regulation (EU) 2023/1115 on the making available on the Union market and the export from the Union of certain commodities and products associated with deforestation and forest degradation (EUDR)"
+    publisher: European Union
+    year: 2023
+    url: https://eur-lex.europa.eu/eli/reg/2023/1115/oj
+    licence: "EU reuse policy (Decision 2011/833/EU) — CC BY 4.0"
+    accessed: 2026-09-27
+    note: "Places palm oil (with cattle, cocoa, coffee, rubber, soya and wood) among the seven 'relevant commodities' that traders placing product on the EU market must show are not linked to deforestation after the 31 Dec 2020 cut-off. Confirmed via several independent secondary summaries (EU official legislative summary, Wikipedia, climate-laws.org) after the direct EUR-Lex ELI page returned no extractable text to this session's fetch tool; recommend a human reviewer re-open the ELI directly before promoting review_status."
+  - id: pmc-mct-2022
+    type: review
+    title: "Timing of Medium-Chain Triglyceride Consumption Modulates Effects in Mice with Obesity Induced by a High-Fat High-Sucrose Diet"
+    publisher: Nutrients (MDPI) / PMC9740693
+    year: 2022
+    url: https://doi.org/10.3390/nu14235096
+    doi: 10.3390/nu14235096
+    licence: "CC BY 4.0"
+    accessed: 2026-09-27
+    note: "Background section describes MCT as medium-chain fatty acids (MCFAs) of 6-12 carbons, industrially produced by fractionating/distilling coconut oil or palm kernel oil to concentrate caprylic (C8:0) and capric (C10:0) acid; the study's own MCT oil is a defined C8:0/C10:0 = 1:3 blend. Used here for the manufacturing route (fractionation of a vegetable oil), not for the paper's mouse-diet findings."
+  - id: efsa-frutalose-chicory-2021
+    type: regulatory_opinion
+    title: "Frutalose, a mixture of fructans obtained from enzymatic hydrolysis of chicory inulin, and normal defecation: evaluation of a health claim pursuant to Article 13(5) of Regulation (EC) No 1924/2006"
+    publisher: European Food Safety Authority
+    year: 2021
+    url: https://doi.org/10.2903/j.efsa.2021.6775
+    doi: 10.2903/j.efsa.2021.6775
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: 2026-09-27
+    note: "Describes the applicant substance as fructans obtained by partial enzymatic hydrolysis of chicory inulin from Cichorium intybus L. (chicory root); a plant source with no dairy/gluten/animal component. The Panel found the specific bowel-regularity claim for this hydrolysed-fructan product insufficiently substantiated — not cited for that claim, only for the chicory-root origin."
+  - id: usda-ers-ge-crops
+    type: dataset
+    title: "Recent Trends in Genetically Engineered (GE) Crop Adoption in the United States"
+    publisher: USDA Economic Research Service
+    year: 2025
+    url: https://www.ers.usda.gov/data-products/adoption-of-genetically-engineered-crops-in-the-united-states/recent-trends-in-ge-adoption
+    licence: "U.S. Government Work — public domain"
+    accessed: 2026-09-27
+    note: "States that about 92% of US corn (maize) acreage and 96% of US soybean acreage were planted with herbicide-tolerant GE seed in 2025."
+  - id: usda-ers-sugarbeet-2013
+    type: dataset
+    title: "Herbicide-tolerant sugarbeets accounted for 98 percent of sugarbeet acreage by 2013 (Chart of Note)"
+    publisher: USDA Economic Research Service
+    year: 2013
+    url: https://www.ers.usda.gov/data-products/charts-of-note/83714
+    licence: "U.S. Government Work — public domain"
+    accessed: 2026-09-27
+    note: "US farmers planted GE herbicide-tolerant sugarbeet on ~60% of acreage in 2008 (first commercial year) and 98% by 2013. US-specific; the EU does not authorise commercial cultivation of GM sugar beet."
+  - id: cano-ela-canola-gmo
+    type: reference
+    title: "Canola and GMOs: True or False"
+    publisher: Cano-ela (Canola Council of Canada consumer education site)
+    url: https://cano-ela.com/canola-and-gmos-true-or-false/
+    licence: "Cited, not reproduced"
+    accessed: 2026-09-27
+    note: "States that around 95% of canola grown in Canada/North America is a GM (herbicide-tolerant) variety. Used only for the North American cultivation share, not for EU-specific claims."
+  - id: ams-nondairy-creamer
+    type: standard
+    title: "Commercial Item Description A-A-20043D: Creamer, Non-Dairy, Dry"
+    publisher: USDA Agricultural Marketing Service
+    url: https://www.ams.usda.gov/sites/default/files/media/AA_20043D_Creamer_NonDairy_Dry.pdf
+    licence: "U.S. Government Work — public domain"
+    accessed: 2026-09-27
+    note: "US federal purchasing specification for dry non-dairy creamer/'vegetable fat powder': vegetable fat or oil (commonly palm, coconut or partially hydrogenated oil) plus a carrier/emulsifier system that includes corn syrup solids (glucose syrup solids) and sodium caseinate, plus mono-/diglycerides and anti-caking agents. This session's fetch tool received HTTP 403 from ams.usda.gov; content confirmed via a search-engine excerpt of the same document. A human reviewer should re-open the PDF directly before promoting review_status."
+  - id: usgs-mcs2026-salt
+    type: dataset
+    title: "Mineral Commodity Summaries 2026 — Salt"
+    publisher: U.S. Geological Survey
+    year: 2026
+    url: https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-salt.pdf
+    licence: "U.S. Government Work — public domain"
+    accessed: 2026-09-27
+    note: "USGS's annual commodity chapter for salt, produced in the US by solution mining of brine, underground (rock-salt) mining, and solar evaporation — a mined/mineral-derived commodity in every route. This session's fetch tool could not extract text from the PDF (binary/compressed stream); confirmed via the chapter's indexed description. A human reviewer should re-open the PDF directly before promoting review_status."

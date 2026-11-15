@@ -1,0 +1,26 @@
+id: leek
+type: ingredient
+names:
+  en:
+    - leek
+  pl:
+    - por
+  de:
+    - Lauch
+    - Porree
+summary:
+  en: Leek (Allium porrum).
+  pl: Por (Allium porrum).
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A vegetable.
+      pl: Warzywo.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted

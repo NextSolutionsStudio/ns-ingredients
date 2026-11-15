@@ -1,0 +1,31 @@
+id: mushrooms
+type: ingredient
+names:
+  en:
+    - mushrooms
+    - button mushrooms
+  pl:
+    - pieczarki
+    - pieczarki suszone
+  de:
+    - Champignons
+summary:
+  en: >-
+    Cultivated button mushrooms (Agaricus bisporus). Fungi, not plants, so no plant-origin claim; not of
+    animal origin either.
+  pl: >-
+    Pieczarki (Agaricus bisporus). To grzyby, nie rośliny, więc bez deklaracji pochodzenia roślinnego; nie są
+    też pochodzenia zwierzęcego.
+assertions:
+  - code: diet.vegan
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A fungus; no animal material.
+      pl: Grzyb; bez materiału zwierzęcego.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted

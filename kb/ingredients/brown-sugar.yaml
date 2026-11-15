@@ -1,0 +1,39 @@
+id: brown-sugar
+type: carbohydrate
+names:
+  en: ["brown sugar","muscovado","demerara","muscovado sugar","demerara sugar"]
+  pl: ["cukier brązowy","cukru brązowego","cukier muscovado","cukier demerara"]
+  de: ["brauner Zucker","Muscovadozucker","Demerarazucker"]
+summary:
+  en: "Sugar crystals consisting mainly of sucrose, coloured by molasses. Molasses may remain after crystallisation of cane juice or be added to refined sugar. Muscovado and demerara are named brown-sugar types."
+  pl: "Kryształy cukru złożone głównie z sacharozy, zabarwione melasą. Melasa może pozostać po krystalizacji soku trzcinowego albo zostać dodana do cukru rafinowanego. Muscovado i demerara to nazwane rodzaje cukru brązowego."
+assertions:
+  - code: health.added_sugar
+    certainty: yes
+    kind: fact
+    grade: A
+    population: [general]
+    note:
+      en: "Added as an ingredient, it counts as a free sugar in WHO's sense. WHO strongly recommends keeping free sugars under 10% of energy intake. The ingredient list does not show how much is in the product."
+      pl: "Dodany jako składnik, jest cukrem wolnym w rozumieniu WHO. WHO zdecydowanie zaleca, by cukry wolne stanowiły mniej niż 10% energii z diety. Lista składników nie pokazuje, ile go jest w produkcie."
+    sources: [{ id: who-free-sugars-2015 }]
+  - code: origin.plant
+    certainty: yes
+    kind: estimate
+    grade: D
+    note:
+      en: "Plant sugar is crystallised from concentrated juice with molasses retained, or refined beet/cane sugar is mixed with molasses. The route varies; brown colour alone does not establish it."
+      pl: "Cukier roślinny krystalizuje z zagęszczonego soku z zachowaniem melasy albo rafinowany cukier buraczany lub trzcinowy miesza się z melasą. Proces jest zmienny; sam brązowy kolor go nie określa."
+    sources: [{ id: sug-brown }]
+glycemic:
+  - range: [71, 71]
+    fraction: sugars
+    method: non_iso
+    note: { en: "HongMian brown sugar; six adults.", pl: "Cukier brązowy HongMian; sześcioro dorosłych." }
+    source: gi-atkinson-2021
+    locator: "Supplemental Table 2, food 3535"
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "No numerical route priors: the opened sources do not establish probabilities for an undisclosed label. No blanket vegan or gluten-free claim: processing aids and batch certification were not verified."
+  - "Brown colour does not establish an unrefined route. Muscovado and demerara names are included without a probability assignment; generic cane-sugar names are reserved for sugar.yaml."

@@ -1,0 +1,48 @@
+id: glucose-fructose-syrup
+type: carbohydrate
+names:
+  en: ["glucose-fructose syrup","fructose-glucose syrup","isoglucose","high-fructose corn syrup","HFCS"]
+  pl: ["syrop glukozowo-fruktozowy","syrop fruktozowo-glukozowy","izoglukoza","syrop wysokofruktozowy"]
+  de: ["Glukose-Fruktose-Sirup","Fruktose-Glukose-Sirup","Isoglukose"]
+summary:
+  en: "A syrup containing free glucose and fructose. Starch is hydrolysed and part of the glucose is enzymatically isomerised to fructose; the crop varies, including maize or wheat. EU naming puts the predominant sugar first; HFCS specifies the maize route."
+  pl: "Syrop zawierający wolną glukozę i fruktozę. Skrobia jest hydrolizowana, a część glukozy enzymatycznie izomeryzowana do fruktozy; surowiec jest zmienny, m.in. kukurydza lub pszenica. W unijnej nazwie pierwszy występuje cukier przeważający; HFCS oznacza wariant kukurydziany."
+assertions:
+  - code: health.added_sugar
+    certainty: yes
+    kind: fact
+    grade: A
+    population: [general]
+    note:
+      en: "Added as an ingredient, it counts as a free sugar in WHO's sense. WHO strongly recommends keeping free sugars under 10% of energy intake. The ingredient list does not show how much is in the product."
+      pl: "Dodany jako składnik, jest cukrem wolnym w rozumieniu WHO. WHO zdecydowanie zaleca, by cukry wolne stanowiły mniej niż 10% energii z diety. Lista składników nie pokazuje, ile go jest w produkcie."
+    sources: [{ id: who-free-sugars-2015 }]
+  - code: origin.plant
+    certainty: yes
+    kind: estimate
+    grade: D
+    note:
+      en: "Feedstock varies between wheat and maize starch in EU production. Hydrolysis releases glucose, followed by enzymatic isomerisation of part of it to fructose."
+      pl: "W produkcji unijnej surowiec jest zmienny: skrobia pszenna lub kukurydziana. Hydroliza uwalnia glukozę, po czym jej część jest enzymatycznie izomeryzowana do fruktozy."
+    sources: [{ id: sug-gfs-production }, { id: sug-sugars-directive }]
+  - code: allergen.gluten
+    certainty: maybe
+    kind: fact
+    grade: A
+    population: [coeliac]
+    note:
+      en: "For wheat-derived glucose syrup and its derivatives, Annex II provides an exemption if further processing is unlikely to increase assessed allergenicity. Barley glucose syrup is also listed as exempt. Application depends on the actual route; the generic name does not prove zero gluten."
+      pl: "Dla pszennego syropu glukozowego i jego pochodnych załącznik II przewiduje zwolnienie, jeśli dalsze przetwarzanie prawdopodobnie nie zwiększa ocenionej alergenności. Wymieniono też zwolnienie dla jęczmiennego syropu glukozowego. Zastosowanie zależy od procesu; ogólna nazwa nie dowodzi braku glutenu."
+    sources: [{ id: sug-allergens }]
+glycemic:
+  - range: [56, 56]
+    fraction: sugars
+    method: iso
+    note: { en: "High-fructose corn syrup.", pl: "Kukurydziany syrop o wysokiej zawartości fruktozy." }
+    source: gi-atkinson-2021
+    locator: "Supplemental Table 1, food 1745"
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "No numerical route priors: the opened sources do not establish probabilities for an undisclosed label. No blanket vegan or gluten-free claim: processing aids and batch certification were not verified."
+  - "EU naming is recorded by the directive's predominance rule, not by assuming a fixed composition. The name does not identify wheat versus maize; no unconditional allergen exemption or gluten-free claim was inferred."

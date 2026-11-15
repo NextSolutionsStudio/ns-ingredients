@@ -1,0 +1,71 @@
+id: sucralose
+type: additive
+e_number: E955
+ids: { cas: "56038-13-2", wikidata: Q410209, chebi: "CHEBI:32159", pubchem: 71485 }
+names:
+  en: [sucralose, trichlorosucrose]
+  pl: [sukraloza]
+  de: [Sucralose, Sukralose]
+functions: [sweetener]
+summary:
+  en: >-
+    An intense, heat-stable sweetener (about 600x as sweet as sucrose) made by selectively
+    replacing three hydroxyl groups on the sucrose molecule with chlorine — it does not occur in
+    nature. EFSA's 2026 re-evaluation reaffirmed the ADI of 15 mg/kg bw/day. Since 2019 the German
+    BfR has flagged that heating sucralose-containing food above roughly 120-150°C (as in industrial
+    baking, frying or roasting) may dechlorinate it and form chlorinated organic compounds, including
+    chloropropanols and, potentially, dioxins/furans; this is a contested, actively-studied concern
+    (opinion-grade), not an established risk at normal use temperatures. EFSA's 2026 opinion found no
+    significant formation in the baking trials it reviewed, but could not yet confirm the safety of a
+    proposed extension into fine bakery wares for exactly this reason.
+  pl: >-
+    Intensywny, stabilny termicznie słodzik (ok. 600 razy słodszy od sacharozy), otrzymywany przez
+    selektywne zastąpienie trzech grup hydroksylowych w cząsteczce sacharozy chlorem — nie występuje
+    w naturze. Reocena EFSA z 2026 r. potwierdziła ADI na poziomie 15 mg/kg m.c./dobę. Od 2019 r.
+    niemiecki BfR zwraca uwagę, że podgrzewanie żywności zawierającej sukralozę powyżej ok.
+    120-150°C (np. przemysłowe pieczenie, smażenie, pieczenie w piekarni) może powodować jej
+    dechlorowanie i tworzenie chlorowanych związków organicznych, w tym chloropropanoli, a
+    potencjalnie dioksyn/furanów; to sporna, aktywnie badana kwestia (poziom opinii), a nie
+    ustalone ryzyko przy normalnych temperaturach użycia. Opinia EFSA z 2026 r. nie wykazała
+    istotnego tworzenia się tych związków w badanych próbach pieczenia, ale z tego właśnie powodu
+    nie mogła jeszcze potwierdzić bezpieczeństwa proponowanego rozszerzenia stosowania na wyroby
+    piekarskie cukiernicze.
+assertions:
+  - code: processing.non_sugar_sweetener
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Named by WHO as a common non-sugar sweetener. WHO's 2023 guideline conditionally recommends against using non-sugar sweeteners for weight control; it does not apply to people with pre-existing diabetes. This marks the ingredient's role, not a safety finding: the authorised use limits are set by the ADI."
+      pl: "WHO wymienia go wśród typowych substancji słodzących niecukrowych. Wytyczna WHO z 2023 r. warunkowo odradza stosowanie substancji słodzących niecukrowych w celu kontroli masy ciała; nie dotyczy osób z cukrzycą. Oznacza rolę składnika, nie ocenę bezpieczeństwa: limity stosowania wynikają z ADI."
+    sources: [{ id: who-nss-guideline-2023 }]
+  - code: origin.chemical_synthesis
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Made from sucrose by a three-step process: conversion to sucrose-6-acetate, selective chlorination to sucralose-6-acetate, then de-acylation to sucralose."
+      pl: "Otrzymywana z sacharozy w trzech etapach: przekształcenie do octanu sacharozo-6, selektywne chlorowanie do octanu sukralozo-6, a następnie deacylacja do sukralozy."
+    sources: [{ id: swt-efsa-sucralose-2026 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Produced entirely by chemical synthesis from sucrose; no animal-derived inputs in the described route.", pl: "Otrzymywana wyłącznie w procesie syntezy chemicznej z sacharozy; opisany proces nie wykorzystuje surowców zwierzęcych." }
+    sources: [{ id: swt-efsa-sucralose-2026 }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Authorised sweetener under Reg 1333/2008 Annex II, subject to maximum levels per food category; a 2026 application to extend use into fine bakery wares (FC 7.2) was not yet confirmed safe.", pl: "Dozwolona substancja słodząca na podstawie Rozporządzenia 1333/2008, Załącznik II, w ramach maksymalnych poziomów dla kategorii żywności; wniosek z 2026 r. o rozszerzenie stosowania na wyroby piekarskie cukiernicze (kategoria 7.2) nie został jeszcze potwierdzony jako bezpieczny." }
+    source: reg-1333-2008
+reference_values:
+  - type: ADI
+    value: 15
+    unit: "mg/kg bw/day"
+    body: EFSA
+    year: 2026
+    source: swt-efsa-sucralose-2026
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "The BfR heating/chloropropanol concern has no matching code in kb/implications.yaml (nothing covers 'novel compounds formed by heating a food additive'); captured only in the summary as an opinion-grade note rather than forced into an ill-fitting assertion code."

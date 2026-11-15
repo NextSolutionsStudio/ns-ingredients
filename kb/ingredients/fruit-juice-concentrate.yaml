@@ -1,0 +1,40 @@
+id: fruit-juice-concentrate
+type: carbohydrate
+names:
+  en: ["fruit juice concentrate","concentrated fruit juice","concentrated apple juice","apple juice concentrate","concentrated grape juice","grape juice concentrate","concentrated pear juice","pear juice concentrate","juice from concentrate"]
+  pl: ["zagęszczony sok owocowy","zagęszczony sok jabłkowy","koncentrat soku jabłkowego","zagęszczonego soku jabłkowego","sok z zagęszczonego soku","sok jabłkowy z zagęszczonego soku","zagęszczony sok winogronowy","koncentrat soku winogronowego","zagęszczony sok gruszkowy","koncentrat soku gruszkowego"]
+  de: ["Fruchtsaftkonzentrat","Apfelsaftkonzentrat","Traubensaftkonzentrat","Birnensaftkonzentrat","Fruchtsaft aus Fruchtsaftkonzentrat"]
+summary:
+  en: "Fruit juice concentrated by physically removing water, as defined in Directive 2001/112/EC. It is a liquid containing water and dissolved fruit sugars and acids. Juice from concentrate is the reconstituted form made by replacing water, rather than the concentrate itself."
+  pl: "Sok owocowy zagęszczony przez fizyczne usunięcie wody, zdefiniowany w dyrektywie 2001/112/WE. Jest cieczą zawierającą wodę oraz rozpuszczone cukry i kwasy owocowe. Sok z zagęszczonego soku jest postacią odtworzoną przez dodanie wody, a nie samym koncentratem."
+assertions:
+  - code: health.added_sugar
+    certainty: yes
+    kind: fact
+    grade: A
+    population: [general]
+    note:
+      en: "Added as an ingredient, it counts as a free sugar in WHO's sense. WHO strongly recommends keeping free sugars under 10% of energy intake. The ingredient list does not show how much is in the product."
+      pl: "Dodany jako składnik, jest cukrem wolnym w rozumieniu WHO. WHO zdecydowanie zaleca, by cukry wolne stanowiły mniej niż 10% energii z diety. Lista składników nie pokazuje, ile go jest w produkcie."
+    sources: [{ id: who-free-sugars-2015 }]
+  - code: origin.plant
+    certainty: yes
+    kind: estimate
+    grade: D
+    note:
+      en: "Fruit juice is concentrated by physical water removal; evaporation is one route. Reconstitution restores water. The fruit and concentration process vary."
+      pl: "Sok owocowy zagęszcza się przez fizyczne usuwanie wody; jedną z metod jest odparowanie. Odtwarzanie przywraca wodę. Owoc i metoda zagęszczania są zmienne."
+    sources: [{ id: sug-juice-directive }, { id: sug-juice-process }]
+glycemic:
+  - range: [37, 67]
+    fraction: sugars
+    method: iso
+    note: { en: "Apple-juice proxy, including reconstituted juice.", pl: "Przybliżenie z soków jabłkowych, także odtworzonych." }
+    source: gi-atkinson-2021
+    locator: "Supplemental Table 1, foods 1180-1184"
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "The evaporation route is reference-supported and graded D, rather than treating every concentration process as a regulatory fact."
+  - "No numerical route priors: the opened sources do not establish probabilities for an undisclosed label. No blanket vegan or gluten-free claim: processing aids and batch certification were not verified."
+  - "Concentrate and reconstituted juice label forms are grouped for matching at the requested scope; they are legally different forms. No sugar ratio, animal-free clarification, or exact concentration method was verified for a particular product."

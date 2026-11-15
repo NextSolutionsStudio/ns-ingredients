@@ -1,0 +1,109 @@
+id: folic-acid
+type: nutrient
+ids: { cas: "59-30-3" }
+names:
+  en: [folic acid, folate]
+  pl: [kwas foliowy, foliany]
+  de: [Folsäure, Folat]
+summary:
+  en: >-
+    Folic acid (pteroylmonoglutamic acid) is the chemically synthesised, oxidised form used
+    in almost all fortified food and most supplements; the body must reduce and methylate it
+    before it becomes active. A pre-reduced alternative, (6S)-5-methyltetrahydrofolic acid
+    ("L-methylfolate"), is authorised in the EU as two salts and is marketed for people who
+    convert folic acid poorly. EFSA's upper intake level for folic acid/these salts is
+    considerably lower than for food folate, because excess synthetic folate can mask a
+    concurrent vitamin B12 deficiency.
+  pl: >-
+    Kwas foliowy (kwas pteroilomonoglutaminowy) to syntetycznie otrzymywana, utleniona
+    forma stosowana w prawie całej żywności wzbogacanej i większości suplementów; organizm
+    musi go zredukować i zmetylować, zanim stanie się aktywny. Alternatywa w formie
+    zredukowanej, kwas (6S)-5-metylotetrahydrofoliowy („L-metylofolian"), jest dopuszczona w
+    UE jako dwie sole i reklamowana dla osób słabo przekształcających kwas foliowy. Górny
+    tolerowany poziom spożycia ustalony przez EFSA dla kwasu foliowego/tych soli jest
+    znacznie niższy niż dla folianów z żywności, ponieważ nadmiar syntetycznego folianu może
+    maskować współistniejący niedobór witaminy B12.
+variants:
+  - id: folic-acid-form
+    names:
+      en: [folic acid, pteroylmonoglutamic acid]
+      pl: [kwas foliowy, kwas pteroilomonoglutaminowy]
+      de: [Pteroylmonoglutaminsäure]
+    process:
+      en: >-
+        The chemically synthesised, fully oxidised form (pteroylmonoglutamic acid); requires
+        reduction by DHFR and methylation by MTHFR in the body to become the metabolically
+        active 5-methyltetrahydrofolate.
+      pl: >-
+        Chemicznie syntetyzowana, w pełni utleniona forma (kwas pteroilomonoglutaminowy);
+        wymaga redukcji przez DHFR i metylacji przez MTHFR w organizmie, aby stać się
+        metabolicznie aktywnym 5-metylotetrahydrofolianem.
+    tells: ['kwas foliowy', 'folic acid', 'pteroylmonoglutam', 'pteroilomonoglutam']
+    prior: 0.85
+    prior_rationale:
+      en: "The default, cheapest form used in almost all fortified food and most supplements."
+      pl: "Domyślna, najtańsza forma stosowana w prawie całej żywności wzbogacanej i większości suplementów."
+  - id: methylfolate
+    names:
+      en: [calcium-L-methylfolate, (6S)-5-methyltetrahydrofolic acid glucosamine salt, L-methylfolate]
+      pl: [metylofolian]
+    process:
+      en: >-
+        The pre-reduced, directly active form; authorised in the EU as two salts
+        (calcium-L-methylfolate and the glucosamine salt), marketed for people with reduced
+        MTHFR conversion capacity.
+      pl: >-
+        Forma wcześniej zredukowana, bezpośrednio aktywna; dopuszczona w UE jako dwie sole
+        (wapniowa sól L-metylofolianu i sól glukozaminowa), reklamowana dla osób o
+        ograniczonej zdolności konwersji przez MTHFR.
+    tells: ['methylfolate', 'metylofolian', '5[ -]?mthf', 'methyltetrahydrofolic']
+    prior: 0.15
+    prior_rationale:
+      en: "A premium, actively marketed alternative; almost always named on the label."
+      pl: "Premium, aktywnie reklamowana alternatywa; prawie zawsze nazywana na etykiecie."
+assertions:
+  - code: diet.vegan
+    certainty: yes
+    kind: estimate
+    grade: C
+    note:
+      en: "A synthetic vitamin substance; no animal material in the chemically defined forms permitted in the EU."
+      pl: "Substancja witaminowa o charakterze syntetycznym; chemicznie zdefiniowane formy dopuszczone w UE nie wykorzystują surowców zwierzęcych."
+    sources: [{ id: dir-2002-46-annex2 }]
+  - code: health.high_dose_supplement_nutrient
+    certainty: yes
+    kind: fact
+    grade: A
+    population: [general, pregnancy, infants]
+    note:
+      en: >-
+        EFSA (2023) retains a tolerable upper intake level of 1000 µg/day for adults
+        (including pregnancy and lactation), down to 200 µg/day for infants aged 4-11 months,
+        for folic acid and the two authorised 5-methyltetrahydrofolate salts (not for food
+        folate). The limiting concern is that excess synthetic folate can mask or worsen
+        vitamin-B12-deficient neuropathy.
+      pl: >-
+        EFSA (2023) utrzymuje górny tolerowany poziom spożycia 1000 µg/dobę dla dorosłych
+        (w tym w ciąży i podczas laktacji), do 200 µg/dobę dla niemowląt w wieku 4-11 miesięcy,
+        dla kwasu foliowego i dwóch dopuszczonych soli 5-metylotetrahydrofolianu (nie dla
+        folianu z żywności). Ograniczeniem jest to, że nadmiar syntetycznego folianu może
+        maskować lub pogłębiać neuropatię związaną z niedoborem witaminy B12.
+    sources: [{ id: efsa-folate-ul-2023 }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: "Permitted folate source substances for food supplements (Annex II): pteroylmonoglutamic acid (folic acid), calcium-L-methylfolate, (6S)-5-methyltetrahydrofolic acid glucosamine salt."
+      pl: "Dopuszczone substancje źródłowe folianu w suplementach diety (Aneks II): kwas pteroilomonoglutaminowy (kwas foliowy), wapniowa sól L-metylofolianu, sól glukozaminowa kwasu (6S)-5-metylotetrahydrofoliowego."
+    source: dir-2002-46-annex2
+reference_values:
+  - type: UL
+    value: 1000
+    unit: "µg/day"
+    body: EFSA
+    year: 2023
+    source: efsa-folate-ul-2023
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "The chemical synthesis route for folic acid itself (starting materials, condensation steps) was not confirmed by an opened source this session, so no origin.chemical_synthesis assertion is recorded; only the methylfolate glucosamine salt's synthesis (from folic acid + glucosamine hydrochloride) turned up in search snippets, not in a page this session actually opened."

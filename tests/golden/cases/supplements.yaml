@@ -1,0 +1,121 @@
+# Food supplements: vitamin forms and sources are where "natural vs synthetic" questions live.
+
+- id: pl-vitamin-d-capsule
+  lang: pl
+  category: supplement
+  note: Bare cholecalciferol → the lanolin prior; the bovine gelatine shell makes it non-vegan.
+  text: >-
+    Składniki: olej słonecznikowy, żelatyna wołowa, substancja utrzymująca wilgoć: glicerol; witamina D3
+    (cholekalcyferol), przeciwutleniacz: ekstrakt bogaty w tokoferole.
+  expect:
+    match:
+      olej słonecznikowy: sunflower-oil
+      żelatyna wołowa: gelatine
+      witamina D3: vitamin-d3
+      ekstrakt bogaty w tokoferole: tocopherol-rich-extract
+    variant: { vitamin-d3: ~lanolin, gelatine: bovine }
+    absent: [allergen.fish, allergen.milk]
+    diets: { vegan: "no" }
+
+- id: en-vegan-d3-lichen
+  lang: en
+  category: supplement
+  text: >-
+    Ingredients: Medium Chain Triglycerides (from Coconut Oil), Vitamin D3 (Cholecalciferol from Lichen),
+    Antioxidant: Tocopherol-Rich Extract.
+  expect:
+    match:
+      medium chain triglycerides: mct-oil
+      vitamin d3: vitamin-d3
+      tocopherol-rich extract: tocopherol-rich-extract
+    variant: { mct-oil: coconut, vitamin-d3: lichen }
+    flags: [origin.vegetable_oil_derived=yes]
+    absent: [ethics.palm_oil, allergen.fish]
+    diets: { vegan: "yes", vegetarian: "yes" }
+
+- id: pl-multivitamin
+  lang: pl
+  category: supplement
+  note: >-
+    Chemical names as Polish supplement labels print them. Titanium dioxide has not been an authorised
+    EU food additive since 2022 — including in supplements.
+  text: >-
+    Składniki: substancja wypełniająca: celuloza mikrokrystaliczna; węglan wapnia, tlenek magnezu, kwas
+    L-askorbinowy, octan DL-alfa-tokoferylu, nikotynamid, substancje przeciwzbrylające: sole magnezowe
+    kwasów tłuszczowych, dwutlenek krzemu; kwas pteroilomonoglutaminowy, cyjanokobalamina, cholekalcyferol;
+    otoczka: hydroksypropylometyloceluloza, barwnik: dwutlenek tytanu.
+  expect:
+    match:
+      kwas L-askorbinowy: ascorbic-acid
+      octan DL-alfa-tokoferylu: vitamin-e
+      dwutlenek krzemu: silicon-dioxide
+      kwas pteroilomonoglutaminowy: folic-acid
+      cyjanokobalamina: vitamin-b12
+      cholekalcyferol: vitamin-d3
+      dwutlenek tytanu: titanium-dioxide
+    variant: { vitamin-e: synthetic, vitamin-b12: cyanocobalamin, folic-acid: folic-acid-form }
+    flags: [regulatory.eu_banned=yes]
+    absent: [allergen.milk, allergen.soybeans, health.southampton_colour]
+
+- id: en-methylfolate-b12
+  lang: en
+  category: supplement
+  note: The "active" forms read from the label, not the synthetic-form priors.
+  text: >-
+    Ingredients: Bulking Agent: Microcrystalline Cellulose; Calcium L-Methylfolate, Methylcobalamin,
+    Anti-caking Agents: Magnesium Salts of Fatty Acids, Silicon Dioxide; Capsule Shell: Hydroxypropyl
+    Methylcellulose.
+  expect:
+    match:
+      calcium l-methylfolate: folic-acid
+      methylcobalamin: vitamin-b12
+      silicon dioxide: silicon-dioxide
+    variant: { folic-acid: methylfolate, vitamin-b12: methylcobalamin }
+    absent: [allergen.milk, allergen.gluten]
+
+- id: en-fish-oil
+  lang: en
+  category: supplement
+  note: Fish oil is not exempt from the fish allergen (only fish gelatine as a carrier is).
+  text: >-
+    Ingredients: Fish Oil (Anchovy, Sardine), Capsule Shell (Gelatine (Bovine), Glycerol, Water),
+    Antioxidant: Mixed Tocopherols.
+  expect:
+    flags: [allergen.fish=yes]
+    absent: [allergen.milk, allergen.soybeans]
+    diets: { vegan: "no", vegetarian: "no" }
+
+- id: de-magnesium-effervescent
+  lang: de
+  category: supplement
+  text: >-
+    Zutaten: Säuerungsmittel: Citronensäure; Magnesiumcarbonat, Säureregulator: Natriumhydrogencarbonat;
+    Süßungsmittel: Sorbit, Sucralose, Acesulfam K; Aroma, Farbstoff: Beta-Carotin. Kann bei übermäßigem
+    Verzehr abführend wirken.
+  expect:
+    match:
+      Citronensäure: citric-acid
+      Sorbit: sorbitol
+      Sucralose: sucralose
+      Acesulfam K: acesulfame-k
+    flags: [health.laxative_polyol]
+    absent: [allergen.milk, health.southampton_colour, health.caffeine]
+    statements: [laxative]
+
+- id: pl-caffeine-guarana
+  lang: pl
+  category: pre_workout
+  note: Guarana extract is a caffeine source; the label's caffeine statement is detected.
+  text: >-
+    Składniki: ekstrakt z nasion guarany (źródło kofeiny) 40%, maltodekstryna, kwas cytrynowy, substancja
+    przeciwzbrylająca: dwutlenek krzemu. Wysoka zawartość kofeiny. Nie zaleca się dla dzieci i kobiet w
+    ciąży lub karmiących piersią.
+  expect:
+    match:
+      ekstrakt z nasion guarany: guarana
+      maltodekstryna: maltodextrin
+      kwas cytrynowy: citric-acid
+      dwutlenek krzemu: silicon-dioxide
+    flags: [sport.stimulant, health.caffeine]
+    absent: [allergen.gluten, allergen.milk]
+    statements: [caffeine_high]

@@ -1,0 +1,26 @@
+id: basil
+type: ingredient
+names:
+  en:
+    - basil
+  pl:
+    - bazylia
+    - bazylia suszona
+  de:
+    - Basilikum
+summary:
+  en: Basil (Ocimum basilicum) as a herb.
+  pl: Bazylia (Ocimum basilicum) jako zioło.
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A culinary herb.
+      pl: Zioło kulinarne.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted

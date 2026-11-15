@@ -1,0 +1,8 @@
+# Cloudflare Workers Static Assets headers for the explorer page. The Worker's own responses (the API,
+# /docs) do not get these. scripts/explorer.ts applies the same block locally, so the page is tested
+# under the policy it ships with.
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https://images.openfoodfacts.org data:; connect-src 'self' https://world.openfoodfacts.org; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()

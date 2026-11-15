@@ -1,0 +1,469 @@
+# Everyday groceries: drinks, confectionery, dairy, bakery and processed foods.
+
+- id: pl-isotonic
+  lang: pl
+  category: drink
+  text: >-
+    Składniki: woda, cukier, glukoza, regulatory kwasowości: kwas cytrynowy, cytryniany sodu; sól, aromat,
+    stabilizator: guma arabska; przeciwutleniacz: kwas askorbinowy; substancja konserwująca: benzoesan sodu.
+  expect:
+    match:
+      woda: water
+      cukier: sugar
+      glukoza: dextrose
+      kwas cytrynowy: citric-acid
+      sól: salt
+      guma arabska: gum-arabic
+      kwas askorbinowy: ascorbic-acid
+      benzoesan sodu: sodium-benzoate
+    absent: [allergen.milk, allergen.gluten, allergen.soybeans, health.southampton_colour]
+    diets: { lactose_free: "yes", gluten_free: "yes" }
+
+- id: en-energy-drink
+  lang: en
+  category: drink
+  text: >-
+    Ingredients: Carbonated Water, Sucrose, Glucose, Acid (Citric Acid), Taurine (0.4%), Acidity Regulators
+    (Sodium Citrates, Magnesium Carbonate), Caffeine (0.03%), Vitamins (Niacin, Pantothenic Acid, B6, B12),
+    Flavourings, Colours (Caramel, Riboflavin). High caffeine content. Not recommended for children or
+    pregnant or breast-feeding women (32 mg/100 ml).
+  expect:
+    match:
+      carbonated water: water
+      sucrose: sugar
+      glucose: dextrose
+      citric acid: citric-acid
+      taurine: taurine
+      caffeine: caffeine
+      vitamins: null
+      b12: vitamin-b12
+      flavourings: flavouring
+    flags: [health.caffeine=yes, sport.stimulant]
+    absent: [allergen.milk, health.southampton_colour]
+    statements: [caffeine_high]
+
+- id: pl-cola-aspartame
+  lang: pl
+  category: drink
+  text: >-
+    Składniki: woda, dwutlenek węgla, barwnik: karmel amoniakalno-siarczynowy; regulatory kwasowości: kwas
+    fosforowy, cytrynian sodu; substancje słodzące: aspartam, acesulfam K; aromaty, kofeina. Zawiera
+    źródło fenyloalaniny.
+  expect:
+    match:
+      woda: water
+      aspartam: aspartame
+      acesulfam K: acesulfame-k
+      kofeina: caffeine
+    flags: [health.phenylalanine_source=yes, health.caffeine=yes, regulatory.eu_warning_label]
+    absent: [health.southampton_colour, allergen.milk]
+    statements: [phenylalanine]
+
+- id: de-lemonade-azo
+  lang: de
+  category: drink
+  text: >-
+    Zutaten: Wasser, Zucker, Säuerungsmittel: Citronensäure, Aroma, Konservierungsstoff: Kaliumsorbat,
+    Farbstoffe: Gelborange S, Tartrazin. Gelborange S und Tartrazin können Aktivität und Aufmerksamkeit
+    bei Kindern beeinträchtigen.
+  expect:
+    match:
+      Wasser: water
+      Zucker: sugar
+      Citronensäure: citric-acid
+      Kaliumsorbat: potassium-sorbate
+      Gelborange S: sunset-yellow
+      Tartrazin: tartrazine
+    flags: [health.southampton_colour=yes, regulatory.eu_warning_label]
+    absent: [allergen.milk, health.caffeine]
+    statements: [southampton]
+
+- id: en-oat-drink
+  lang: en
+  category: drink
+  note: >-
+    Oats are an Annex II gluten cereal even though avenin differs from gluten. "Vitamins" is a group
+    header and must not be matched as a vitamin. Vitamin D2 is not in the KB yet, so lactose-free stays open.
+  text: >-
+    Ingredients: Water, Oats 10%, Rapeseed Oil, Acidity Regulator: Dipotassium Phosphate, Calcium
+    Carbonate, Salt, Vitamins (D2, Riboflavin, B12).
+  expect:
+    match:
+      water: water
+      oats: oats
+      rapeseed oil: rapeseed-oil
+      salt: salt
+      vitamins: null
+      b12: vitamin-b12
+    flags: [allergen.gluten=yes]
+    absent: [allergen.milk, ethics.palm_oil]
+    diets: { gluten_free: "no", lactose_free: "yes" }
+
+- id: pl-milk-chocolate
+  lang: pl
+  category: confectionery
+  note: Trailing "masa kakaowa minimum 30%" is not an ingredient; lecithin source given in brackets.
+  text: >-
+    Składniki: cukier, tłuszcz kakaowy, mleko w proszku pełne, miazga kakaowa, serwatka w proszku (z
+    mleka), tłuszcz mleczny, emulgator: lecytyny (soja), aromat. Masa kakaowa minimum 30%. Może zawierać
+    orzechy laskowe, migdały i gluten.
+  expect:
+    match:
+      cukier: sugar
+      tłuszcz kakaowy: cocoa-butter
+      miazga kakaowa: cocoa-mass
+      serwatka w proszku: whey-powder
+      tłuszcz mleczny: milk-fat
+      lecytyny: lecithins
+    variant: { lecithins: soy }
+    flags: [allergen.milk=yes, allergen.soybeans=yes]
+    absent: [allergen.nuts, allergen.gluten, ethics.palm_oil]
+    diets: { vegan: "no", lactose_free: "no" }
+    may_contain: [allergen.nuts, allergen.gluten]
+
+- id: en-gummies-carmine
+  lang: en
+  category: confectionery
+  text: >-
+    Ingredients: Glucose Syrup, Sugar, Dextrose, Acid: Citric Acid, Flavourings, Fruit and Plant
+    Concentrates (Spirulina, Carrot), Colour: Carmine, Glazing Agent: Carnauba Wax.
+  expect:
+    match:
+      glucose syrup: glucose-syrup
+      sugar: sugar
+      dextrose: dextrose
+      citric acid: citric-acid
+      carmine: carmine
+    flags: [origin.insect=yes]
+    absent: [health.southampton_colour, allergen.gluten]
+    diets: { vegan: "no", vegetarian: "no" }
+
+- id: pl-candy-azo
+  lang: pl
+  category: confectionery
+  note: Four synthetic colours, three of them Southampton, with the mandatory sentence after the list.
+  text: >-
+    Składniki: cukier, syrop glukozowy, kwasy: kwas cytrynowy, kwas jabłkowy; aromaty, barwniki:
+    tartrazyna, żółcień pomarańczowa FCF, czerwień allura AC, błękit brylantowy FCF. Barwniki: tartrazyna,
+    żółcień pomarańczowa FCF, czerwień allura AC mogą mieć szkodliwy wpływ na aktywność i skupienie
+    uwagi u dzieci.
+  expect:
+    match:
+      cukier: sugar
+      syrop glukozowy: glucose-syrup
+      kwas cytrynowy: citric-acid
+      kwas jabłkowy: malic-acid
+      tartrazyna: tartrazine
+      żółcień pomarańczowa FCF: sunset-yellow
+      czerwień allura AC: allura-red
+    flags: [health.southampton_colour=yes, regulatory.eu_warning_label=yes, origin.petrochemical_synthetic]
+    absent: [allergen.milk, allergen.gluten]
+    statements: [southampton]
+
+- id: en-biscuits-phvo
+  lang: en
+  category: bakery
+  note: Partially hydrogenated oil named on the label → the trans-fat variant as a label fact.
+  text: >-
+    Ingredients: Wheat Flour (with Calcium, Iron, Niacin, Thiamin), Sugar, Partially Hydrogenated
+    Vegetable Oil (Palm, Rapeseed), Glucose-Fructose Syrup, Raising Agents (Sodium Bicarbonate, Ammonium
+    Bicarbonate), Salt, Emulsifier (Soya Lecithin), Flavouring.
+  expect:
+    match:
+      wheat flour: wheat
+      sugar: sugar
+      partially hydrogenated vegetable oil: hydrogenated-vegetable-fat
+      salt: salt
+      soya lecithin: lecithins
+    variant: { hydrogenated-vegetable-fat: partially-hydrogenated, lecithins: soy }
+    flags: [
+      allergen.gluten=yes,
+      health.trans_fat_source=yes,
+      processing.hydrogenated=yes,
+      allergen.soybeans=yes,
+      ethics.palm_oil,
+    ]
+    absent: [allergen.milk]
+    diets: { gluten_free: "no" }
+
+- id: pl-bread-wheat-rye
+  lang: pl
+  category: bakery
+  note: Rye and wheat are separate gluten cereals; each must resolve to its own entry.
+  text: >-
+    Składniki: mąka pszenna, woda, mąka żytnia 10%, drożdże, sól, gluten pszenny, słód jęczmienny,
+    emulgator: E471, przeciwutleniacz: kwas askorbinowy. Może zawierać sezam.
+  expect:
+    match:
+      mąka pszenna: wheat
+      woda: water
+      mąka żytnia: rye
+      sól: salt
+      gluten pszenny: wheat-gluten
+      słód jęczmienny: barley
+      E471: mono-and-diglycerides
+      kwas askorbinowy: ascorbic-acid
+    variant: { mono-and-diglycerides: ~plant }
+    flags: [allergen.gluten=yes]
+    absent: [allergen.sesame, allergen.milk]
+    diets: { gluten_free: "no" }
+    may_contain: [allergen.sesame]
+
+- id: pl-yogurt-strawberry
+  lang: pl
+  category: dairy
+  text: >-
+    Składniki: mleko, truskawki 8%, cukier, śmietanka, żywe kultury bakterii jogurtowych, zagęstnik:
+    pektyny, aromat, barwnik: koncentrat z czarnej marchwi.
+  expect:
+    match:
+      mleko: milk
+      cukier: sugar
+    flags: [allergen.milk=yes]
+    absent: [health.southampton_colour, allergen.gluten]
+    diets: { vegan: "no", lactose_free: "no" }
+
+- id: pl-protein-pudding-carrageenan
+  lang: pl
+  category: dairy
+  note: Carrageenan carries the contested-evidence flag, graded as opinion — never as a harm finding.
+  text: >-
+    Składniki: mleko odtłuszczone, koncentrat białek mleka (z MLEKA), kakao o obniżonej zawartości
+    tłuszczu, zagęstniki: karagen, guma guar; substancja słodząca: sukraloza, aromat.
+  expect:
+    match:
+      mleko odtłuszczone: milk
+      koncentrat białek mleka: milk-protein-concentrate
+      kakao o obniżonej zawartości tłuszczu: cocoa-powder
+      karagen: carrageenan
+      guma guar: guar-gum
+      sukraloza: sucralose
+    flags: [allergen.milk=yes, health.inflammation_debate]
+    absent: [health.southampton_colour, allergen.soybeans]
+    diets: { vegan: "no" }
+
+- id: de-processed-cheese
+  lang: de
+  category: dairy
+  text: >-
+    Zutaten: Käse, Wasser, Butter, Milcheiweiß, Schmelzsalze: Natriumpolyphosphat, Natriumcitrate; Salz,
+    Konservierungsstoff: Sorbinsäure.
+  expect:
+    match:
+      Käse: cheese
+      Wasser: water
+      Butter: butter
+      Milcheiweiß: milk-protein-concentrate
+      Salz: salt
+    flags: [allergen.milk=yes]
+    absent: [allergen.soybeans, allergen.gluten]
+    diets: { vegan: "no" }
+
+- id: pl-sausage-nitrite
+  lang: pl
+  category: processed
+  note: Pork makes it non-vegetarian; soy protein carries the soy allergen.
+  text: >-
+    Składniki: mięso wieprzowe 70%, woda, skrobia ziemniaczana, sól, białko sojowe, stabilizatory:
+    difosforany, trifosforany; przeciwutleniacz: askorbinian sodu; wzmacniacz smaku: glutaminian
+    monosodowy; aromaty, substancja konserwująca: azotyn sodu. Może zawierać seler i gorczycę.
+  expect:
+    match:
+      mięso wieprzowe: meat
+      woda: water
+      sól: salt
+      białko sojowe: soy-protein-isolate
+      azotyn sodu: sodium-nitrite
+    flags: [allergen.soybeans=yes, health.nitrosamine_precursor, regulatory.eu_restricted]
+    absent: [allergen.celery, allergen.mustard, allergen.milk]
+    variant: { meat: pork }
+    diets: { vegan: "no", vegetarian: "no" }
+    may_contain: [allergen.celery, allergen.mustard]
+
+- id: en-crisps-seasoning
+  lang: en
+  category: processed
+  text: >-
+    Ingredients: Potatoes, Sunflower Oil (30%), Seasoning (Flavour Enhancers: Monosodium Glutamate,
+    Disodium 5'-Ribonucleotides; Salt, Dextrose, Onion Powder, Milk Powder, Acid: Citric Acid; Colour:
+    Paprika Extract).
+  expect:
+    match:
+      sunflower oil: sunflower-oil
+      salt: salt
+      dextrose: dextrose
+      milk powder: milk
+      citric acid: citric-acid
+    flags: [allergen.milk=yes]
+    absent: [ethics.palm_oil, health.southampton_colour, allergen.gluten]
+    diets: { vegan: "no" }
+
+- id: pl-chewing-gum
+  lang: pl
+  category: confectionery
+  text: >-
+    Składniki: substancje słodzące: ksylitol (z brzozy), sorbitol, maltitol, aspartam, acesulfam K; baza
+    gumowa, aromaty, zagęstnik: guma arabska, emulgator: lecytyna sojowa, substancja glazurująca: wosk
+    carnauba, przeciwutleniacz: BHA. Zawiera źródło fenyloalaniny. Spożycie w nadmiernych ilościach może
+    mieć efekt przeczyszczający.
+  expect:
+    match:
+      ksylitol: xylitol
+      sorbitol: sorbitol
+      maltitol: maltitol
+      aspartam: aspartame
+      acesulfam K: acesulfame-k
+      guma arabska: gum-arabic
+      lecytyna sojowa: lecithins
+      BHA: bha
+    variant: { xylitol: birch, lecithins: soy }
+    flags: [
+      health.laxative_polyol,
+      health.phenylalanine_source=yes,
+      health.iarc_group_2b,
+      allergen.soybeans=yes,
+    ]
+    absent: [allergen.milk, health.southampton_colour]
+    statements: [laxative, phenylalanine]
+
+- id: pl-jelly-sweets-southampton-four
+  lang: pl
+  category: confectionery
+  note: >-
+    Four Southampton colours on one label, three of which (E104, E122, E124) had identity data only until
+    2026-10-26 and raised no warning. All four must flag.
+  text: >-
+    Skład: cukier, syrop glukozowy, żelatyna wieprzowa, kwas cytrynowy, aromaty, barwniki: żółcień
+    chinolinowa, azorubina, czerwień koszenilowa A, czerwień allura AC. Barwniki: żółcień chinolinowa,
+    azorubina, czerwień koszenilowa A, czerwień allura AC mogą mieć szkodliwy wpływ na aktywność i
+    skupienie uwagi u dzieci.
+  expect:
+    match:
+      cukier: sugar
+      syrop glukozowy: glucose-syrup
+      kwas cytrynowy: citric-acid
+      żółcień chinolinowa: quinoline-yellow
+      azorubina: azorubine
+      czerwień koszenilowa A: ponceau-4r
+      czerwień allura AC: allura-red
+    flags: [health.southampton_colour=yes, regulatory.eu_warning_label=yes, origin.petrochemical_synthetic]
+    absent: [allergen.milk, regulatory.revoked_elsewhere]
+    statements: [southampton]
+
+- id: en-cocktail-cherries-erythrosine
+  lang: en
+  category: confectionery
+  note: >-
+    Erythrosine is authorised in the EU only in cocktail and candied cherries; the US FDA revoked its food
+    use in 2025.
+  text: >-
+    Ingredients: cherries, sugar, water, glucose syrup, acid: citric acid, colour: erythrosine,
+    preservative: potassium sorbate.
+  expect:
+    match:
+      sugar: sugar
+      water: water
+      glucose syrup: glucose-syrup
+      citric acid: citric-acid
+      erythrosine: erythrosine
+      potassium sorbate: potassium-sorbate
+    flags: [regulatory.revoked_elsewhere=yes, regulatory.eu_restricted, origin.petrochemical_synthetic]
+    absent: [health.southampton_colour]
+
+- id: pl-diet-cola-three-sweeteners
+  lang: pl
+  category: drink
+  note: Three WHO-named non-sugar sweeteners under one class header, two given by their salt names.
+  text: >-
+    Skład: woda, dwutlenek węgla, barwnik: karmel amoniakalno-siarczynowy, regulator kwasowości: kwas
+    fosforowy, substancje słodzące: cyklaminian sodu, acesulfam K, sacharynian sodu, aromat, kofeina.
+  expect:
+    match:
+      cyklaminian sodu: cyclamates
+      acesulfam K: acesulfame-k
+      sacharynian sodu: saccharin
+      kofeina: caffeine
+    flags: [processing.non_sugar_sweetener=yes, health.caffeine=yes]
+    absent: [health.added_sugar, health.laxative_polyol]
+
+- id: en-granola-bar-four-sugars
+  lang: en
+  category: confectionery
+  note: Sugar split across four names; honey is vegetarian but not vegan.
+  text: >-
+    Ingredients: Oats (45%), Glucose-Fructose Syrup, Honey (8%), Sugar, Palm Oil, Brown Sugar, Salt,
+    Emulsifier: Sunflower Lecithin.
+  expect:
+    match:
+      oats: oats
+      glucose-fructose syrup: glucose-fructose-syrup
+      honey: honey
+      sugar: sugar
+      brown sugar: brown-sugar
+    flags: [health.added_sugar=yes, allergen.gluten=yes]
+    absent: [processing.non_sugar_sweetener, origin.insect]
+    diets: { vegan: "no", vegetarian: "yes" }
+
+- id: pl-sugar-free-gum-polyols
+  lang: pl
+  category: confectionery
+  note: Polyols and intense sweeteners side by side; only the intense ones are non-sugar sweeteners.
+  text: >-
+    Skład: substancje słodzące (sorbitol, izomalt, mannitol, ksylitol, aspartam, acesulfam K), substancja
+    zagęszczająca: guma arabska, aromaty, emulgator: lecytyny sojowe, substancja glazurująca: wosk carnauba.
+    Zawiera źródło fenyloalaniny. Spożycie w nadmiernych ilościach może mieć efekt przeczyszczający.
+  expect:
+    match:
+      izomalt: isomalt
+      mannitol: mannitol
+      ksylitol: xylitol
+      aspartam: aspartame
+    flags: [health.laxative_polyol=yes, processing.non_sugar_sweetener=yes, health.phenylalanine_source=yes]
+    absent: [health.added_sugar]
+    statements: [phenylalanine, laxative]
+
+- id: de-hazelnut-cocoa-spread
+  lang: de
+  category: confectionery
+  note: Milk powder named as a German compound (Magermilchpulver) must still raise the milk allergen and set diets.
+  text: >-
+    Zutaten: Zucker, Palmöl, HASELNÜSSE 13 %, MAGERMILCHPULVER 8,7 %, fettarmer Kakao, Emulgator: Lecithine
+    (Soja), Vanillin.
+  expect:
+    match:
+      Zucker: sugar
+      MAGERMILCHPULVER: milk
+    flags: [allergen.milk=yes, allergen.nuts=yes, allergen.soybeans=yes, health.added_sugar=yes]
+    diets: { vegan: "no", vegetarian: "yes", lactose_free: "no", gluten_free: "yes" }
+
+- id: en-boiled-sweets
+  lang: en
+  category: confectionery
+  note: Glucose syrup is made from starch or inulin (Directive 2001/111), so it does not leave the diets unknown.
+  text: >-
+    Ingredients: Sugar, Glucose Syrup, Citric Acid.
+  expect:
+    match:
+      glucose syrup: glucose-syrup
+    flags: [health.added_sugar=yes]
+    absent: [allergen.milk, allergen.gluten]
+    diets: { vegan: "yes", vegetarian: "yes" }
+
+- id: pl-cottage-cheese-off-marks
+  lang: pl
+  category: dairy
+  note: >-
+    Open Food Facts marks allergens with underscores. The marks are emphasis, and the names match without
+    them: twaróg ziarnisty is cheese, so the milk allergen explains the emphasis and no possible-allergen
+    notice is raised. (The notice for an emphasised word the KB does not know is covered by
+    tests/unit/off_test.ts against the fixture KB, which does not grow with kb/.)
+  text: >-
+    Składniki: _twaróg_ ziarnisty, _śmietanka_ pasteryzowana, cukier, sól.
+  expect:
+    match:
+      twaróg ziarnisty: cheese
+      śmietanka pasteryzowana: cream
+      cukier: sugar
+      sól: salt
+    flags: [allergen.milk=yes, health.added_sugar=yes]
+    absent: [allergen.gluten, allergen.unrecognised_emphasis]

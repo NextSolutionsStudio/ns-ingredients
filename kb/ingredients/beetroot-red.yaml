@@ -1,0 +1,51 @@
+id: beetroot-red
+type: additive
+e_number: E162
+ids: { cas: "7659-95-2", wikidata: Q420138, chebi: "CHEBI:3080", pubchem: 441603 }
+names:
+  en: [beetroot red, betanin]
+  pl: [betanina, czerwień buraczana]
+  de: [Betanin, Beetenrot]
+functions: [colour]
+summary:
+  en: >-
+    A red-violet colour extracted from beetroot (Beta vulgaris), whose pigment (mainly betanin) is
+    water-soluble. Used in ice cream, yoghurt, desserts, drinks and confectionery. A Group II colour,
+    authorised at quantum satis (no numerical maximum — only as much as the intended effect needs), and
+    the only colour in this batch with a plant source and no children's-attention warning.
+  pl: >-
+    Czerwono-fioletowy barwnik otrzymywany z buraka czerwonego (Beta vulgaris), którego barwnik (głównie
+    betanina) jest rozpuszczalny w wodzie. Stosowany w lodach, jogurtach, deserach, napojach i słodyczach.
+    Barwnik grupy II, dopuszczony w dawce quantum satis (bez liczbowego limitu — tyle, ile potrzeba do
+    uzyskania zamierzonego efektu) i jedyny w tej partii barwnik pochodzenia roślinnego, bez ostrzeżenia
+    o wpływie na aktywność i uwagę dzieci.
+assertions:
+  - code: origin.plant
+    certainty: yes
+    kind: fact
+    grade: B
+    note:
+      en: "Extracted from the root of the beet plant (Beta vulgaris); the colouring pigment (betanin, a betalain) is water-soluble."
+      pl: "Ekstrahowany z korzenia buraka (Beta vulgaris); barwiący pigment (betanina, betalaina) jest rozpuszczalny w wodzie."
+    sources: [{ id: col-natcol-betanin }, { id: col-food-gov-uk-e162 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: B
+    note: { en: "Extracted from a vegetable; no animal material involved.", pl: "Ekstrahowany z warzywa; nie wykorzystuje się surowców zwierzęcych." }
+    sources: [{ id: col-natcol-betanin }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: fact
+    grade: B
+    note: { en: "Plant-derived; compatible with a vegetarian diet.", pl: "Pochodzenia roślinnego; zgodny z dietą wegetariańską." }
+    sources: [{ id: col-natcol-betanin }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Group II colour: quantum satis in the categories where colours are permitted (Annex II) — no numerical maximum.", pl: "Barwnik grupy II: dawka quantum satis w kategoriach, w których barwniki są dopuszczone (Załącznik II) — bez liczbowego limitu." }
+    source: reg-1333-2008
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "EFSA's 2015 re-evaluation (E 162) was not opened this session; add its opinion if a specific safety claim (e.g. an ADI question) is needed later."

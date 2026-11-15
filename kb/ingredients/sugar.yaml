@@ -1,0 +1,107 @@
+id: sugar
+type: carbohydrate
+names:
+  en: [sugar, white sugar, sucrose]
+  pl: [cukier, cukier biały, sacharoza]
+  de: [Zucker, Saccharose]
+summary:
+  en: >-
+    Purified, crystallised sucrose, defined in EU law by polarisation and invert-sugar limits rather than
+    by the plant it came from. Made from either sugar beet or sugar cane; the finished crystal is
+    chemically identical either way, so the crop only matters for origin/GMO and (for cane, in some
+    non-EU refineries) a historical decolorising-agent question.
+  pl: >-
+    Oczyszczona, skrystalizowana sacharoza, definiowana w prawie UE przez polaryzację i limit cukrów
+    inwertowanych, a nie przez roślinę, z której powstała. Produkowany z buraka cukrowego albo z trzciny
+    cukrowej; gotowy kryształ jest chemicznie identyczny niezależnie od surowca, więc roślina ma znaczenie
+    głównie dla pochodzenia/GMO oraz (dla trzciny, w niektórych rafineriach poza UE) historycznego pytania
+    o środek odbarwiający.
+variants:
+  - id: cane
+    names:
+      en: [cane sugar]
+      pl: [cukier trzcinowy]
+      de: [Rohrzucker]
+    process:
+      en: "Crystallised from sugar cane juice."
+      pl: "Krystalizowany z soku trzciny cukrowej."
+    tells: ['cane sugar', 'cukier trzcinow', 'rohrzucker']
+    prior: 0.25
+    prior_rationale:
+      en: "A minority of EU sugar; usually marketed and named explicitly as 'cane'/'trzcinowy' since it is positioned as a distinct origin."
+      pl: "Mniejszość cukru w UE; zwykle reklamowany i nazywany wprost jako 'trzcinowy', bo jest pozycjonowany jako odrębne pochodzenie."
+  - id: beet
+    names:
+      en: [beet sugar]
+      pl: [cukier buraczany, cukier z buraków cukrowych]
+    process:
+      en: "Crystallised from sugar beet juice — the dominant EU-grown feedstock."
+      pl: "Krystalizowany z soku buraka cukrowego — dominującego surowca uprawianego w UE."
+    tells: ['beet sugar', 'cukier buraczan', 'cukier z burakow']
+    prior: 0.75
+    prior_rationale:
+      en: "The large majority of EU-produced sugar is beet sugar; when a label is silent on origin, EU-market sugar defaults to beet."
+      pl: "Zdecydowana większość cukru produkowanego w UE to cukier buraczany; gdy etykieta milczy o pochodzeniu, cukier na rynku UE domyślnie jest buraczany."
+assertions:
+  - code: health.added_sugar
+    certainty: yes
+    kind: fact
+    grade: A
+    population: [general]
+    note:
+      en: "Added as an ingredient, it counts as a free sugar in WHO's sense. WHO strongly recommends keeping free sugars under 10% of energy intake. The ingredient list does not show how much is in the product."
+      pl: "Dodany jako składnik, jest cukrem wolnym w rozumieniu WHO. WHO zdecydowanie zaleca, by cukry wolne stanowiły mniej niż 10% energii z diety. Lista składników nie pokazuje, ile go jest w produkcie."
+    sources: [{ id: who-free-sugars-2015 }]
+  - code: origin.plant
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Sucrose is purified and crystallised from a plant juice (sugar beet or sugar cane) under EU sugars law."
+      pl: "Sacharoza jest oczyszczana i krystalizowana z soku roślinnego (buraka lub trzciny cukrowej) w rozumieniu unijnego prawa o cukrach."
+    sources: [{ id: dir-2001-111 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: B
+    note:
+      en: >-
+        Purified sucrose contains no animal material. Historically, some cane-sugar refineries elsewhere
+        in the world decolorised syrup with bone char rather than plant-based activated carbon or
+        ion-exchange resins; this is a refining-method question, not a property of sucrose itself, and an
+        ingredient list cannot show which method a given batch used.
+      pl: >-
+        Oczyszczona sacharoza nie zawiera surowców zwierzęcych. Historycznie niektóre rafinerie cukru
+        trzcinowego w innych częściach świata odbarwiały syrop kością zwierzęcą (bone char), a nie
+        roślinnym węglem aktywnym lub żywicami jonowymiennymi; to pytanie o metodę rafinacji, nie
+        właściwość samej sacharozy, a lista składników nie pokazuje, jakiej metody użyto w danej partii.
+    sources: [{ id: dir-2001-111 }]
+  - code: origin.gmo_derived
+    variant: beet
+    certainty: maybe
+    kind: estimate
+    grade: C
+    note:
+      en: >-
+        Sugar beet is one of the crops most often genetically modified worldwide — herbicide-tolerant GM
+        sugar beet reached 98% of US acreage by 2013 — but the EU does not authorise commercial GM
+        sugar-beet cultivation, so EU-grown beet sugar (the majority of the EU market) is expected to be
+        non-GM; refined sucrose in any case contains no residual DNA or protein regardless of the beet's
+        genetics.
+      pl: >-
+        Burak cukrowy jest jedną z roślin najczęściej modyfikowanych genetycznie na świecie — odporny na
+        herbicydy burak GMO objął w USA 98% powierzchni uprawy już w 2013 r. — ale UE nie zezwala na
+        komercyjną uprawę buraka GMO, więc cukier z buraka uprawianego w UE (większość rynku UE) powinien
+        być niemodyfikowany; oczyszczona sacharoza i tak nie zawiera resztkowego DNA czy białka, niezależnie
+        od genetyki buraka.
+    sources: [{ id: usda-ers-sugarbeet-2013 }]
+glycemic:
+  - range: [59, 91]
+    fraction: sugars
+    method: iso
+    note: { en: "Sucrose products.", pl: "Produkty sacharozowe." }
+    source: gi-atkinson-2021
+    locator: "Supplemental Table 1, foods 1768-1777"
+review_status: draft
+provenance: ai-drafted
+review_notes: []

@@ -1,0 +1,52 @@
+id: natural-flavouring
+type: flavouring
+names:
+  en: ["natural flavouring", "natural flavour", "natural vanilla flavouring"]
+  pl: ["aromat naturalny", "naturalny aromat", "naturalny aromat waniliowy", "aromaty naturalne", "naturalne aromaty"]
+  de: ["natürliches Aroma", "natürliches Vanillearoma"]
+summary:
+  en: >-
+    The word 'natural' on a flavouring is a legally defined claim, not a marketing word. Under
+    Reg 1334/2008 Art. 16, a flavouring may be called 'natural' only if it consists entirely of
+    natural flavouring substances and/or flavouring preparations. If the label names a specific
+    source ('natural vanilla flavouring'), at least 95% w/w of the flavouring component must come
+    from that named source; below that threshold, or when several sources contribute without one
+    being clearly recognisable, only the unqualified 'natural flavouring' wording is allowed.
+    Crucially, Art. 3 defines a 'natural flavouring substance' as one obtained by physical,
+    enzymatic or microbiological processes from material of vegetable, ANIMAL or microbial
+    origin — so 'natural' says nothing about whether the source was a plant, a microbe or an
+    animal, and the ingredient list is not required to say which.
+  pl: >-
+    Słowo 'naturalny' na aromacie jest prawnie zdefiniowanym określeniem, a nie sloganem
+    marketingowym. Na podstawie art. 16 Rozporządzenia 1334/2008 aromat może być nazwany
+    'naturalnym' tylko wtedy, gdy w całości składa się z naturalnych substancji aromatycznych
+    i/lub preparatów aromatycznych. Jeśli etykieta wskazuje konkretne źródło ('naturalny aromat
+    waniliowy'), co najmniej 95% w/w składnika aromatycznego musi pochodzić z tego wskazanego
+    źródła; poniżej tego progu, lub gdy kilka źródeł współtworzy aromat bez jednego wyraźnie
+    rozpoznawalnego, dozwolone jest tylko niekwalifikowane określenie 'aromat naturalny'. Co
+    istotne, art. 3 definiuje 'naturalną substancję aromatyczną' jako otrzymaną w procesach
+    fizycznych, enzymatycznych lub mikrobiologicznych z materiału pochodzenia roślinnego,
+    ZWIERZĘCEGO lub mikrobiologicznego — więc 'naturalny' nic nie mówi o tym, czy źródłem była
+    roślina, mikroorganizm czy zwierzę, a wykaz składników nie musi tego podawać.
+assertions:
+  - code: diet.vegan
+    certainty: maybe
+    kind: estimate
+    grade: A
+    note:
+      en: "Reg 1334/2008 Art. 3 explicitly allows a 'natural flavouring substance' to be obtained from material of animal origin (e.g. historically, substances from castoreum or civet); the label is not required to disclose vegetable vs. animal vs. microbial sourcing, so 'maybe' rather than 'yes' or 'no' when the source is unnamed."
+      pl: "Art. 3 Rozporządzenia 1334/2008 wprost dopuszcza, aby 'naturalna substancja aromatyczna' pochodziła z materiału zwierzęcego (historycznie np. substancje z kastoreum lub cybetu); etykieta nie musi ujawniać pochodzenia roślinnego, zwierzęcego czy mikrobiologicznego, dlatego 'maybe', a nie 'yes'/'no', gdy źródło nie jest nazwane."
+    sources: [{ id: reg-1334-2008, locator: "Article 3(2)(d)" }]
+  - code: processing.ultra_processed_marker
+    certainty: yes
+    kind: estimate
+    grade: D
+    note:
+      en: "NOVA explicitly lists flavourings among its markers of group-4 (ultra-processed) products, regardless of whether the flavouring itself is 'natural' — a weak, contested signal on its own."
+      pl: "NOVA wyraźnie wymienia aromaty wśród wskaźników produktów grupy 4 (wysoko przetworzonych), niezależnie od tego, czy sam aromat jest 'naturalny' — sam w sobie słaby, dyskusyjny sygnał."
+    sources: [{ id: reg-1334-2008 }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Distinct from vanilla extract (an infusion of vanilla pods/beans, not a manufactured flavouring substance) — not covered by this entry."
+  - "No E-number: flavourings are a separate EU legal category from food additives (Reg 1334/2008, not Reg 1333/2008), so no `functions` class from kb/classes.yaml applies."

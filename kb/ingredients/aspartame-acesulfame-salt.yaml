@@ -1,0 +1,99 @@
+id: aspartame-acesulfame-salt
+type: additive
+e_number: E962
+ids:
+  cas: 106372-55-8
+names:
+  en:
+  - aspartame-acesulfame salt
+  - salt of aspartame-acesulfame
+  pl:
+  - sól aspartamu i acesulfamu
+  - sól aspartamowo-acesulfamowa
+  de:
+  - Aspartam-Acesulfamsalz
+  - Aspartam-Acesulfam-Salz
+functions:
+- sweetener
+summary:
+  en: A salt combining aspartame and acesulfame, used as an intense sweetener in authorised foods and drinks.
+    It is prepared by heating aspartame and acesulfame K in an acidic solution, then crystallising the salt.
+    EU law expressly includes E962 in the phenylalanine label requirement; EFSA's 2026 assessment applies the
+    respective component ADIs rather than a separate ADI for the salt.
+  pl: Sól łącząca aspartam i acesulfam, stosowana jako intensywna substancja słodząca w dozwolonych rodzajach
+    żywności i napojów. Otrzymuje się ją przez ogrzewanie aspartamu i acesulfamu K w kwaśnym roztworze, a następnie
+    krystalizację soli. Prawo UE wyraźnie obejmuje E962 wymogiem informacji o fenyloalaninie; ocena EFSA z
+    2026 r. stosuje ADI poszczególnych składników zamiast odrębnego ADI dla soli.
+assertions:
+- code: origin.chemical_synthesis
+  certainty: 'yes'
+  kind: fact
+  grade: A
+  note:
+    en: The EU specification describes heating aspartame and acesulfame K in an acidic solution at about a
+      2:1 mass ratio, crystallising the salt and removing potassium and moisture.
+    pl: Specyfikacja UE opisuje ogrzewanie aspartamu i acesulfamu K w kwaśnym roztworze w stosunku masowym
+      około 2:1, krystalizację soli oraz usunięcie potasu i wody.
+  sources:
+  - id: swm-reg-231-2012
+- code: processing.non_sugar_sweetener
+  certainty: 'yes'
+  kind: fact
+  grade: A
+  note:
+    en: A salt of aspartame and acesulfame, whose corresponding sweeteners aspartame and acesulfame K are both
+      named by WHO as common non-sugar sweeteners. The EU specification establishes the salt's composition.
+    pl: Sól aspartamu i acesulfamu, których odpowiadające substancje słodzące, aspartam i acesulfam K, WHO
+      wymienia wśród typowych niecukrowych substancji słodzących. Specyfikacja UE określa skład soli.
+  sources:
+  - id: who-nss-guideline-2023
+  - id: swm-reg-231-2012
+- code: health.phenylalanine_source
+  certainty: 'yes'
+  kind: fact
+  grade: A
+  population:
+  - pku
+  note:
+    en: Its aspartame component supplies phenylalanine. Annex III 2.3 expressly includes aspartame-acesulfame
+      salt in the phenylalanine statement requirement, relevant to people with phenylketonuria.
+    pl: Składnik aspartamowy dostarcza fenyloalaniny. Punkt 2.3 załącznika III wyraźnie obejmuje sól aspartamu
+      i acesulfamu wymogiem informacji o fenyloalaninie, istotnej dla osób z fenyloketonurią.
+  sources:
+  - id: swm-reg-1169-2011
+  - id: swm-efsa-salt-2026
+- code: regulatory.eu_warning_label
+  certainty: 'yes'
+  kind: fact
+  grade: A
+  note:
+    en: Annex III 2.3 requires a phenylalanine statement for this salt. The wording depends on whether the
+      ingredient list identifies it by its E-number alone or by name; the E-number-only case must also identify
+      aspartame.
+    pl: Punkt 2.3 załącznika III wymaga informacji o fenyloalaninie dla tej soli. Brzmienie zależy od tego,
+      czy wykaz składników podaje sam numer E, czy nazwę; przy samym numerze E informacja musi także wskazywać
+      aspartam.
+  sources:
+  - id: swm-reg-1169-2011
+    locator: Annex III, point 2.3
+regulatory:
+- jurisdiction: EU
+  status: authorised
+  conditions:
+    en: Listed in Annex II to Regulation 1333/2008; use is subject to food-category conditions and applicable
+      limits.
+    pl: Wymieniony w załączniku II do rozporządzenia 1333/2008; stosowanie podlega warunkom i limitom dla kategorii
+      żywności.
+  source: swm-reg-1129-2011
+review_status: draft
+provenance: ai-drafted
+review_notes:
+- Individual current food-category maximum levels were not exhaustively checked or transcribed; consult the
+  consolidated EU list for a particular product.
+- 'No diet, GMO, feedstock-country or general health-benefit assertions: the opened sources do not verify these
+  for a particular supplier.'
+- 'No standalone E962 ADI entered: the opened 2026 EFSA opinion applies the aspartame ADI of 40 and acesulfame
+  K ADI of 15 mg/kg body weight/day to the respective components. The schema cannot attach a component identifier
+  to a reference value.'
+- US authorisation for this specific salt not verified; approval of the individual constituents was not treated
+  as approval of E962.

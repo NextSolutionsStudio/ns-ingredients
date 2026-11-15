@@ -1,0 +1,63 @@
+id: beta-alanine
+type: nutrient
+ids: { cas: "107-95-9", wikidata: "Q310919", chebi: "CHEBI:16958", pubchem: 239 }
+names:
+  en: [beta-alanine, β-alanine]
+  pl: [beta-alanina]
+  de: [Beta-Alanin]
+summary:
+  en: >-
+    A non-proteinogenic amino acid and the rate-limiting precursor for the body's synthesis of carnosine,
+    a muscle pH buffer. Supplemented at 4-6 g/day for at least two weeks, mainly in pre-workouts, to raise
+    muscle carnosine and support short, high-intensity efforts (roughly 1-4 minutes). Commercial supply is
+    currently mostly made by chemical synthesis, not fermentation. Its best-known side effect is a harmless
+    tingling sensation (paresthesia) at higher single doses.
+  pl: >-
+    Nieproteinogenny aminokwas i aminokwas ograniczający tempo syntezy karnozyny w organizmie — bufora pH
+    mięśni. Suplementowana w dawce 4-6 g/dobę przez co najmniej dwa tygodnie, głównie w przedtreningówkach,
+    by zwiększyć zawartość karnozyny w mięśniach i wspierać krótkie, intensywne wysiłki (ok. 1-4 minuty).
+    Obecnie w handlu pochodzi głównie z syntezy chemicznej, a nie fermentacji. Najbardziej znanym efektem
+    ubocznym jest niegroźne mrowienie (parestezje) przy wyższych jednorazowych dawkach.
+  de: >-
+    Eine nicht-proteinogene Aminosäure und die geschwindigkeitsbestimmende Vorstufe der körpereigenen
+    Carnosin-Synthese, eines Muskel-pH-Puffers. Supplementiert mit 4-6 g/Tag über mindestens zwei Wochen,
+    vor allem in Pre-Workouts. Der bekannteste Nebeneffekt ist ein harmloses Kribbeln (Parästhesie) bei
+    höheren Einzeldosen.
+assertions:
+  - code: origin.chemical_synthesis
+    certainty: yes
+    kind: fact
+    grade: B
+    note:
+      en: "A 2026 review states industrial production 'from the last century' — chemical synthesis from acrylonitrile/acrylic acid and ammonia — 'is still predominant'; enzymatic/fermentation routes from L-aspartate exist but remain at laboratory scale."
+      pl: "Przegląd z 2026 r. wskazuje, że przemysłowa produkcja 'z minionego wieku' — synteza chemiczna z akrylonitrylu/kwasu akrylowego i amoniaku — 'wciąż dominuje'; enzymatyczne/fermentacyjne drogi z L-asparaginianu istnieją, ale pozostają na etapie laboratoryjnym."
+    sources: [{ id: prot-yu-2026-beta-alanine-production }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: B
+    note:
+      en: "Commercial-grade beta-alanine is chemically synthesised, not extracted from meat or poultry (its main dietary sources)."
+      pl: "Beta-alanina o czystości handlowej jest syntetyzowana chemicznie, a nie ekstrahowana z mięsa czy drobiu (jej głównych źródeł w diecie)."
+    sources: [{ id: prot-yu-2026-beta-alanine-production }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: fact
+    grade: B
+    note: { en: "Same chemical-synthesis basis as the vegan assessment.", pl: "Ta sama podstawa (synteza chemiczna) co w ocenie wegańskiej." }
+    sources: [{ id: prot-yu-2026-beta-alanine-production }]
+  - code: health.sensitivity_reported
+    certainty: yes
+    kind: opinion
+    grade: C
+    population: [general]
+    dose: ">800 mg in a single non-sustained-release dose"
+    note:
+      en: "Paresthesia (tingling, face/hands/chest) is well documented above ~800 mg taken at once in ordinary (non-sustained-release) form; it is harmless and self-limiting, and is substantially reduced by splitting doses (~1.6 g) or using a sustained-release formulation."
+      pl: "Parestezje (mrowienie twarzy/rąk/klatki piersiowej) są dobrze udokumentowane powyżej ok. 800 mg przyjętych jednorazowo w zwykłej (nie o przedłużonym uwalnianiu) postaci; są niegroźne i przemijające, a ich częstość istotnie spada przy podzieleniu dawki (~1,6 g) lub użyciu formy o przedłużonym uwalnianiu."
+    sources: [{ id: prot-trexler-2015-beta-alanine-issn }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "No implication code fits an ergogenic-effect claim (dose, duration of benefit) — the ISSN position stand's dosing/efficacy findings are summarised in prose above rather than forced into an unrelated code."
+  - "Did not find and open a study on batch-to-batch impurity variation specific to beta-alanine (unlike creatine); sport.batch_quality_dependent is left out for this ingredient rather than asserted without a source."

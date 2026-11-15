@@ -1,0 +1,65 @@
+id: alpha-tocopherol
+type: additive
+e_number: E307
+names:
+  en: [alpha-tocopherol, synthetic alpha-tocopherol]
+  pl: [alfa-tokoferol syntetyczny]
+  de: [Alpha-Tocopherol]
+functions: [antioxidant]
+summary:
+  en: >-
+    The single-isomer synthetic antioxidant additive, described by EFSA as all-rac- (or
+    dl-)alpha-tocopherol: a racemic mixture of eight stereoisomers made by chemical
+    synthesis, unlike the natural-origin mixed extract E 306. Used to protect fats and oils
+    from oxidation; not the same regulatory entry as the "vitamin E" forms permitted in food
+    supplements, though the molecule overlaps.
+  pl: >-
+    Jednoizomerowy syntetyczny dodatek przeciwutleniający, opisywany przez EFSA jako
+    all-rac- (lub dl-)alfa-tokoferol: racemiczna mieszanina ośmiu stereoizomerów otrzymywana
+    syntezą chemiczną, w odróżnieniu od naturalnego ekstraktu mieszanych tokoferoli E 306.
+    Stosowany do ochrony tłuszczów i olejów przed utlenianiem; to inny wpis regulacyjny niż
+    formy „witaminy E" dopuszczone w suplementach diety, choć cząsteczka jest ta sama.
+assertions:
+  - code: origin.petrochemical_synthetic
+    certainty: yes
+    kind: estimate
+    grade: C
+    note:
+      en: >-
+        EFSA's re-evaluation describes E 307 as synthetic (all-rac-/dl-alpha-tocopherol); a
+        trade-press account of the manufacturing process names the petrochemical derivatives
+        trimethylhydroquinone and isophytol as the starting materials for the condensation
+        that makes it.
+      pl: >-
+        Ponowna ocena EFSA opisuje E 307 jako substancję syntetyczną (all-rac-/dl-alfa-
+        tokoferol); opis procesu produkcji z prasy branżowej wskazuje pochodzące z
+        petrochemii trimetylohydrochinon i izofitol jako surowce reakcji kondensacji, w
+        wyniku której powstaje.
+    sources: [{ id: efsa-tocopherols-2015 }, { id: chemanalyst-vitamin-e-2025 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "A fully synthetic chemical process; no animal material involved."
+      pl: "Proces w pełni syntetyczny; nie wykorzystuje surowców zwierzęcych."
+    sources: [{ id: efsa-tocopherols-2015 }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: "Group I additive (Reg 1333/2008 Annex II Part C): quantum satis in most food categories."
+      pl: "Dodatek grupy I (Rozporządzenie 1333/2008, Aneks II część C): quantum satis w większości kategorii żywności."
+    source: reg-1333-2008
+  - jurisdiction: UK
+    status: authorised
+    conditions:
+      en: "Listed under additive Group I; conditions of use per (assimilated) Reg 1333/2008 Annex II/III, specification per (assimilated) Reg 231/2012."
+      pl: "Wymieniony w grupie dodatków I; warunki stosowania wg (przejętego) Rozporządzenia 1333/2008 Aneks II/III, specyfikacja wg (przejętego) Rozporządzenia 231/2012."
+    source: fsa-e307-data
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "EU Group I membership (quantum satis) verified 2026-09-27 against the EU text of Reg 1333/2008 Annex II Part C as published by legislation.gov.uk at 2020-12-31 (EUR-Lex returned an empty body to the fetch tool); re-check against current EUR-Lex consolidation before promoting review_status."
+  - "Only a UK (post-Brexit assimilated-law) regulatory-status source was opened this session; the equivalent EU-jurisdiction confirmation was not re-opened."
+  - "No CAS recorded: catalogues disagreed on the final check digit for DL-alpha-tocopherol's CAS number (10191-41-0 vs 10191-41-1) and PubChem's 'all-rac-alpha-tocopherol' entry (CID 2116) resolves to the generic, non-stereo-specific alpha-tocopherol page, so neither was trustworthy enough to publish."

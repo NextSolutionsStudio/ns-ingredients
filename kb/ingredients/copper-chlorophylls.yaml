@@ -1,0 +1,51 @@
+id: copper-chlorophylls
+type: additive
+e_number: E141
+names:
+  en:
+    - copper complexes of chlorophylls and chlorophyllins
+    - copper complexes of chlorophylls
+    - copper complexes of chlorophyllins
+    - copper chlorophyll
+    - sodium copper chlorophyllin
+  pl:
+    - kompleksy miedziowe chlorofili i chlorofilin
+    - kompleksy miedziowe chlorofili
+    - kompleksy miedziowe chlorofilin
+    - miedziowe kompleksy chlorofili
+  de:
+    - Kupferkomplexe der Chlorophylle und Chlorophylline
+    - Kupferkomplexe der Chlorophylle
+functions:
+  - colour
+summary:
+  en: >-
+    Green colours made by adding a copper salt to chlorophyll extracted from edible plants, grass, lucerne or
+    nettle (E 141(i)), or to its saponified form, chlorophyllin (E 141(ii)).
+  pl: >-
+    Zielone barwniki otrzymywane przez dodanie soli miedzi do chlorofilu ekstrahowanego z roślin jadalnych,
+    trawy, lucerny lub pokrzywy (E 141(i)) albo do jego zmydlonej formy, chlorofiliny (E 141(ii)).
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: 'Chlorophyll extracted from plants, with copper added.'
+      pl: 'Chlorofil ekstrahowany z roślin, z dodatkiem miedzi.'
+    sources:
+      - id: reg-231-2012
+        locator: 'E 141(i) and E 141(ii), definitions'
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: >-
+        Group II colour (Reg 1333/2008 Annex II Part C, as set by Reg 1129/2011): quantum satis where colours
+        are allowed.
+      pl: >-
+        Barwnik grupy II (rozporządzenie 1333/2008, załącznik II część C, w brzmieniu rozporządzenia
+        1129/2011): quantum satis tam, gdzie barwniki są dozwolone.
+    source: swm-reg-1129-2011
+review_status: draft
+provenance: ai-drafted

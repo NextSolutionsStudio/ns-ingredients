@@ -1,0 +1,73 @@
+id: tocopherol-rich-extract
+type: additive
+e_number: E306
+ids: { cas: "1406-66-2", wikidata: "Q910277", chebi: "CHEBI:27013", pubchem: 14986 }
+names:
+  en: [tocopherol-rich extract, mixed tocopherols, natural mixed tocopherols]
+  pl: [tokoferole, mieszanina tokoferoli, ekstrakt bogaty w tokoferole]
+  de: [Tocopherolhaltige Extrakte, gemischte Tocopherole]
+functions: [antioxidant]
+summary:
+  en: >-
+    A natural-origin antioxidant recovered from the deodoriser distillate of vegetable oils; a
+    mixture of alpha-, beta-, gamma- and delta-tocopherol rather than one pure isomer, which is
+    what separates it from the single-isomer synthetic additives E 307-E 309. When made from
+    soybean, EU allergen law exempts the natural mixed-tocopherol fraction from the soy
+    declaration.
+  pl: >-
+    Przeciwutleniacz pochodzenia naturalnego, odzyskiwany z destylatu odwaniania olejów
+    roślinnych; mieszanina tokoferoli alfa, beta, gamma i delta, a nie jeden czysty izomer -
+    to odróżnia go od jednoizomerowych syntetycznych dodatków E 307-E 309. Gdy pochodzi z soi,
+    prawo UE dotyczące alergenów wyłącza naturalną frakcję mieszanych tokoferoli z obowiązku
+    deklarowania soi.
+assertions:
+  - code: origin.vegetable_oil_derived
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "EFSA's re-evaluation describes E 306 as of natural origin, with specifications set in Reg 231/2012."
+      pl: "Ponowna ocena EFSA opisuje E 306 jako substancję pochodzenia naturalnego, ze specyfikacją ustaloną w Rozporządzeniu 231/2012."
+    sources: [{ id: efsa-tocopherols-2015 }, { id: reg-231-2012 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Extracted from vegetable oil refining by-products; no animal material in the process."
+      pl: "Wytwarzany z produktów pobocznych rafinacji oleju roślinnego; proces nie wykorzystuje surowców zwierzęcych."
+    sources: [{ id: efsa-tocopherols-2015 }]
+  - code: allergen.soybeans
+    certainty: "no"
+    kind: fact
+    grade: A
+    note:
+      en: >-
+        EU Annex II item 6(b) exempts "natural mixed tocopherols (E 306), natural D-alpha
+        tocopherol, natural D-alpha tocopherol acetate, and natural D-alpha tocopherol
+        succinate from soybean sources" from the soy allergen declaration, even though the
+        starting oil was soybean.
+      pl: >-
+        Punkt 6(b) Aneksu II UE wyłącza „naturalne mieszane tokoferole (E 306), naturalny
+        D-alfa-tokoferol, naturalny octan D-alfa-tokoferolu i naturalny sukcynian
+        D-alfa-tokoferolu pochodzące z soi" z obowiązku deklarowania alergenu soi, nawet gdy
+        surowcem był olej sojowy.
+    sources: [{ id: reg-1169-2011, locator: "Annex II item 6(b)" }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: "Group I additive (Reg 1333/2008 Annex II Part C): quantum satis in most food categories."
+      pl: "Dodatek grupy I (Rozporządzenie 1333/2008, Aneks II część C): quantum satis w większości kategorii żywności."
+    source: reg-1333-2008
+  - jurisdiction: UK
+    status: authorised
+    conditions:
+      en: "Listed under additive Group I; specification per (assimilated) Reg 231/2012."
+      pl: "Wymieniony w grupie dodatków I; specyfikacja wg (przejętego) Rozporządzenia 231/2012."
+    source: fsa-e306-data
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "EU Group I membership (quantum satis) verified 2026-09-27 against the EU text of Reg 1333/2008 Annex II Part C as published by legislation.gov.uk at 2020-12-31 (EUR-Lex returned an empty body to the fetch tool); re-check against current EUR-Lex consolidation before promoting review_status."
+  - "Only a UK (post-Brexit assimilated-law) regulatory-status source was opened this session; the equivalent EU-jurisdiction confirmation (Reg 1333/2008 Annex II conditions of use) was not re-opened and should be added before claiming EU status directly."

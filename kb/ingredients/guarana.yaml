@@ -1,0 +1,70 @@
+id: guarana
+type: ingredient
+names:
+  en: [guarana, guarana extract, guarana seed extract]
+  pl: [guarana, ekstrakt z guarany, ekstrakt z nasion guarany, guarany]
+  de: [Guarana, Guaranaextrakt, Guaranasamenextrakt]
+summary:
+  en: >-
+    The seeds of the Amazonian vine Paullinia cupana, or an extract of them, used in energy drinks,
+    pre-workouts and weight-management supplements as a plant-based caffeine source. Guarana seeds are
+    among the most caffeine-dense plant material known — typically 4-8% caffeine by dry weight, and
+    commercial extracts often more concentrated still — several times the roughly 1-3% found in coffee
+    beans.
+  pl: >-
+    Nasiona amazońskiej liany Paullinia cupana lub ich ekstrakt, stosowane w napojach energetycznych,
+    przedtreningówkach i suplementach na redukcję masy ciała jako roślinne źródło kofeiny. Nasiona guarany
+    należą do najbardziej skoncentrowanych źródeł kofeiny w świecie roślin — typowo 4-8% kofeiny w suchej
+    masie, a ekstrakty handlowe bywają jeszcze bardziej skoncentrowane — kilkukrotnie więcej niż ok. 1-3%
+    w ziarnach kawy.
+  de: >-
+    Die Samen der amazonischen Liane Paullinia cupana, oder ein Extrakt davon, verwendet in
+    Energydrinks, Pre-Workouts und Gewichtsmanagement-Präparaten als pflanzliche Koffeinquelle.
+    Guaranasamen zählen zu den koffeinreichsten bekannten Pflanzenmaterialien.
+assertions:
+  - code: origin.plant
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Seeds of the vine Paullinia cupana.", pl: "Nasiona liany Paullinia cupana." }
+    sources: [{ id: ad-talik-2024-guarana-caffeine }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A plant seed/extract.", pl: "Nasiono/ekstrakt roślinny." }
+    sources: [{ id: ad-talik-2024-guarana-caffeine }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A plant seed/extract.", pl: "Nasiono/ekstrakt roślinny." }
+    sources: [{ id: ad-talik-2024-guarana-caffeine }]
+  - code: health.caffeine
+    certainty: yes
+    kind: fact
+    grade: B
+    note:
+      en: >-
+        Guarana seeds deliver caffeine naturally, typically around 4-8% by dry weight (commercial seed
+        extracts commonly 5-10%, some concentrated extracts higher); the actual dose per serving depends
+        on the specific product's standardisation, so check the label's declared caffeine or guarana
+        content.
+      pl: >-
+        Nasiona guarany naturalnie dostarczają kofeiny, typowo ok. 4-8% w suchej masie (ekstrakty
+        handlowe najczęściej 5-10%, niektóre skoncentrowane ekstrakty więcej); rzeczywista dawka na
+        porcję zależy od standaryzacji konkretnego produktu, dlatego warto sprawdzić zawartość kofeiny lub
+        guarany podaną na etykiecie.
+    sources: [{ id: ad-talik-2024-guarana-caffeine }]
+  - code: sport.stimulant
+    certainty: yes
+    kind: fact
+    grade: B
+    note:
+      en: "Delivers caffeine, a central nervous system stimulant; check dose and, for tested athletes, the current WADA Prohibited List and monitoring programme."
+      pl: "Dostarcza kofeiny, stymulantu ośrodkowego układu nerwowego; sprawdź dawkę oraz, w przypadku zawodników testowanych, aktualną Listę Zakazanych Substancji WADA i program monitorowania."
+    sources: [{ id: ad-talik-2024-guarana-caffeine }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "WADA's current Prohibited List and Monitoring Program were not opened this session; the sport.stimulant note deliberately stays generic, matching caffeine.yaml's own precedent."

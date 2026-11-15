@@ -1,0 +1,68 @@
+id: guar-gum
+type: additive
+e_number: E412
+ids: { cas: "9000-30-0", wikidata: "Q422071" }
+names:
+  en: [guar gum]
+  pl: [guma guar]
+  de: [Guaran, Guarkernmehl]
+functions: [thickener, stabiliser]
+summary:
+  en: >-
+    A thickener milled from the endosperm of guar bean seeds (Cyamopsis tetragonoloba), used in dairy,
+    sauces, gluten-free baking and as a soluble-fibre ingredient. It passes through the small intestine
+    largely undigested and is heavily fermented by bacteria in the colon. EFSA's 2017 re-evaluation set
+    no numerical ADI and found no general safety concern; it also noted that, like other fermentable
+    fibres, high intakes commonly cause mild, reversible gas, bloating or softer stools rather than
+    anything more serious.
+  pl: >-
+    Zagęszczacz otrzymywany z bielma ziaren guar (Cyamopsis tetragonoloba), stosowany w produktach
+    mlecznych, sosach, pieczywie bezglutenowym i jako składnik błonnika rozpuszczalnego. Przechodzi
+    przez jelito cienkie w dużej mierze nietrawiony i jest intensywnie fermentowany przez bakterie w
+    okrężnicy. Ponowna ocena EFSA z 2017 r. nie ustaliła liczbowego ADI i nie stwierdziła ogólnego
+    zagrożenia; zauważyła też, że — jak przy innych fermentowalnych błonnikach — duże dawki powodują
+    zwykle łagodne, odwracalne wzdęcia, gazy lub rozluźnienie stolca, a nie nic poważniejszego.
+assertions:
+  - code: origin.plant
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Milled from the endosperm of guar bean (Cyamopsis tetragonoloba) seeds, a legume."
+      pl: "Mielona z bielma ziaren guar (Cyamopsis tetragonoloba), rośliny strączkowej."
+    sources: [{ id: efsa-guar-gum-2017 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A plant seed product; no animal material in the production route.", pl: "Produkt z ziaren roślinnych; brak surowców zwierzęcych w procesie produkcji." }
+    sources: [{ id: efsa-guar-gum-2017 }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Same reasoning as diet.vegan.", pl: "To samo rozumowanie jak przy diet.vegan." }
+    sources: [{ id: efsa-guar-gum-2017 }]
+  - code: diet.gluten_free
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Guar is a legume, not one of the gluten-containing cereals listed in Reg 1169/2011 Annex II item 1."
+      pl: "Guar jest rośliną strączkową, a nie jednym ze zbóż zawierających gluten wymienionych w Reg 1169/2011 Aneks II pkt 1."
+    sources: [{ id: reg-1169-2011 }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Group I additive: quantum satis in most food categories.", pl: "Dodatek grupy I: quantum satis w większości kategorii żywności." }
+    source: reg-1333-2008
+reference_values:
+  - type: ADI
+    value: "not specified"
+    body: EFSA
+    year: 2017
+    source: efsa-guar-gum-2017
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "EFSA's 2024 follow-up opinion on guar gum in infant formula below 16 weeks (10.2903/j.efsa.2024.8748) was not opened this session; check it before making any infant-specific claim."

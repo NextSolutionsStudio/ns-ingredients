@@ -1,0 +1,67 @@
+id: sorbitol
+type: additive
+e_number: E420
+ids: { cas: "50-70-4", wikidata: Q245280, chebi: "CHEBI:17924", pubchem: 5780 }
+names:
+  en: [sorbitol, D-sorbitol, D-glucitol]
+  pl: [sorbitol, sorbitole]
+  de: [Sorbit, Glucitol]
+functions: [sweetener, humectant]
+summary:
+  en: >-
+    A sugar alcohol about 60% as sweet as sucrose (2.6 kcal/g) used as a bulk sweetener and as a
+    humectant that keeps baked goods, confectionery and toothpaste moist and soft. Made by
+    catalytic hydrogenation of glucose: starch (mainly corn, also tapioca, potato or wheat) is
+    enzymatically broken down to glucose, which is then hydrogenated with a metal catalyst. Like
+    other polyols it is not fully absorbed in the small intestine, so EU law requires a laxative
+    warning above 10% added polyol.
+  pl: >-
+    Alkohol cukrowy o słodkości ok. 60% sacharozy (2,6 kcal/g), stosowany jako słodzik
+    wypełniający oraz substancja utrzymująca wilgoć w wyrobach piekarskich, cukierniczych i
+    paście do zębów. Otrzymywany przez katalityczne uwodornienie glukozy: skrobia (głównie
+    kukurydziana, także tapiokowa, ziemniaczana lub pszenna) jest enzymatycznie rozkładana do
+    glukozy, którą następnie uwodornia się przy użyciu katalizatora metalicznego. Podobnie jak
+    inne poliole nie jest w pełni wchłaniany w jelicie cienkim, dlatego prawo UE wymaga
+    ostrzeżenia o działaniu przeczyszczającym powyżej 10% dodanego poliolu.
+assertions:
+  - code: health.laxative_polyol
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Food containing more than 10% added polyols must carry the statement 'excessive consumption may produce laxative effects'.", pl: "Żywność zawierająca ponad 10% dodanych polioli musi zawierać informację 'nadmierne spożycie może mieć efekt przeczyszczający'." }
+    sources: [{ id: reg-1169-2011, locator: "Annex III, point 2.4" }]
+  - code: regulatory.eu_warning_label
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "The laxative statement above is a mandatory label statement under Annex III of Reg 1169/2011.", pl: "Powyższa informacja o działaniu przeczyszczającym jest obowiązkową informacją na etykiecie na podstawie Załącznika III Rozporządzenia 1169/2011." }
+    sources: [{ id: reg-1169-2011, locator: "Annex III, point 2.4" }]
+  - code: origin.chemical_synthesis
+    certainty: yes
+    kind: fact
+    grade: B
+    note: { en: "Produced by catalytic hydrogenation of glucose derived from starch.", pl: "Otrzymywany przez katalityczne uwodornienie glukozy pochodzącej ze skrobi." }
+    sources: [{ id: swt-foodadditives-sorbitol }]
+  - code: origin.gmo_derived
+    certainty: maybe
+    kind: estimate
+    grade: D
+    note: { en: "Corn is the most common feedstock and is frequently genetically modified in major growing regions; the label rarely says which starch source was used.", pl: "Kukurydza jest najczęstszym surowcem i jest często modyfikowana genetycznie w głównych regionach uprawy; etykieta rzadko podaje, jaki surowiec skrobiowy zastosowano." }
+    sources: [{ id: swt-foodadditives-sorbitol }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Group I polyol additive, quantum satis in most categories where polyols are permitted (not permitted in non-alcoholic beverages).", pl: "Dodatek poliolowy grupy I, quantum satis w większości kategorii, w których poliole są dozwolone (niedozwolony w napojach bezalkoholowych)." }
+    source: reg-1333-2008
+glycemic:
+  - range: [3, 14]
+    fraction: polyols
+    method: non_iso
+    note: { en: "Study-level relative glucose responses.", pl: "Względne odpowiedzi glikemiczne z poszczególnych badań." }
+    source: gi-livesey-2003
+    locator: "Table 4, sorbitol"
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "No opened source this session confirms whether wheat-derived glucose syrup used for sorbitol retains enough protein to require a gluten allergen declaration or would qualify as 'gluten-free' under Reg 828/2014 — left out of assertions pending a directly-opened source; check before publishing a gluten claim."
+  - "EFSA's individual re-evaluation of sorbitol (E 420) is still pending as of 2026 (call for genotoxicity data issued); revisit the ADI/laxative-threshold notes once that opinion publishes."

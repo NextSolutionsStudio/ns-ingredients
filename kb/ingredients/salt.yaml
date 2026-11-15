@@ -1,0 +1,39 @@
+id: salt
+type: ingredient
+names:
+  en: [salt, table salt, sodium chloride, sea salt, rock salt, iodised salt]
+  pl: [sól, sól kuchenna, chlorek sodu, sól morska, sól himalajska, sól kamienna, sól jodowana, sól spożywcza, sól biała]
+  de: [Salz, Kochsalz, Natriumchlorid]
+summary:
+  en: >-
+    Sodium chloride, obtained by underground (rock-salt) mining, solution mining of brine, or solar
+    evaporation of seawater or brine — a mineral commodity by every production route, not a biological
+    product. Used for taste, preservation and texture; relevant mainly for sodium intake, which this
+    database treats as a nutrition-label fact rather than a per-ingredient implication.
+  pl: >-
+    Chlorek sodu, otrzymywany przez wydobycie podziemne (sól kamienna), wydobycie roztworowe z solanki lub
+    odparowanie słoneczne wody morskiej/solanki — surowiec mineralny niezależnie od metody produkcji, a nie
+    produkt biologiczny. Stosowana dla smaku, konserwacji i tekstury; istotna głównie ze względu na
+    spożycie sodu, co ta baza traktuje jako fakt z tabeli wartości odżywczych, a nie implikację na poziomie
+    składnika.
+assertions:
+  - code: origin.mineral
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Mined (rock salt or brine) or produced by solar evaporation — a mineral, not a biological, product."
+      pl: "Wydobywana (sól kamienna lub solanka) lub otrzymywana przez odparowanie słoneczne — produkt mineralny, nie biologiczny."
+    sources: [{ id: usgs-mcs2026-salt }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "A mineral; no animal or plant material."
+      pl: "Minerał; brak materiału zwierzęcego lub roślinnego."
+    sources: [{ id: usgs-mcs2026-salt }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "usgs-mcs2026-salt (a USGS government PDF) was confirmed via a search-engine index of its content after this session's fetch tool could not extract text from the compressed PDF stream; a human reviewer should re-open the PDF directly before promoting review_status."

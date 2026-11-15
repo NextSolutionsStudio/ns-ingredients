@@ -1,0 +1,39 @@
+id: agave-syrup
+type: carbohydrate
+names:
+  en: ["agave syrup","agave nectar","blue agave syrup"]
+  pl: ["syrop z agawy","syrop agawowy","nektar z agawy"]
+  de: ["Agavendicksaft","Agavensirup"]
+summary:
+  en: "A sweet syrup made from agave extracts by carbohydrate hydrolysis and concentration. Blue-agave syrup contains mainly fructose among its sugars, with glucose also present. Composition and processing vary with agave species."
+  pl: "Słodki syrop otrzymywany z ekstraktów agawy przez hydrolizę węglowodanów i zagęszczanie. Wśród cukrów syropu z niebieskiej agawy przeważa fruktoza, obecna jest też glukoza. Skład i proces zależą od gatunku agawy."
+assertions:
+  - code: health.added_sugar
+    certainty: yes
+    kind: fact
+    grade: A
+    population: [general]
+    note:
+      en: "Added as an ingredient, it counts as a free sugar in WHO's sense. WHO strongly recommends keeping free sugars under 10% of energy intake. The ingredient list does not show how much is in the product."
+      pl: "Dodany jako składnik, jest cukrem wolnym w rozumieniu WHO. WHO zdecydowanie zaleca, by cukry wolne stanowiły mniej niż 10% energii z diety. Lista składników nie pokazuje, ile go jest w produkcie."
+    sources: [{ id: who-free-sugars-2015 }]
+  - code: origin.plant
+    certainty: yes
+    kind: estimate
+    grade: D
+    note:
+      en: "Agave extracts contain fructans that are hydrolysed using heat or enzymes, then concentrated by evaporation; the species and processing route vary."
+      pl: "Ekstrakty agawy zawierają fruktany hydrolizowane z użyciem ogrzewania lub enzymów, a następnie zagęszczane przez odparowanie; gatunek i proces są zmienne."
+    sources: [{ id: sug-agave }]
+glycemic:
+  - range: [10, 19]
+    fraction: sugars
+    method: iso
+    note: { en: "Agave nectars.", pl: "Syropy z agawy." }
+    source: gi-atkinson-2021
+    locator: "Supplemental Table 1, foods 1740-1742"
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "No numerical route priors: the opened sources do not establish probabilities for an undisclosed label. No blanket vegan or gluten-free claim: processing aids and batch certification were not verified."
+  - "No universal fructose predominance: the opened reference distinguishes species, including sucrose-dominant agave syrup."

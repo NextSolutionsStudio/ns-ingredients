@@ -1,0 +1,49 @@
+id: wheat
+type: ingredient
+names:
+  en: [wheat, wheat flour]
+  pl: [pszenica, mąka pszenna, mąka pszenna pełnoziarnista, pełnoziarnista mąka pszenna, otręby pszenne, kasza manna, płatki pszenne, pszenica pełnoziarnista, ziarno pszenicy, kuskus, kasza kuskus, bulgur, kasza bulgur]
+  de: [Weizen]
+summary:
+  en: "The cereal Triticum spp. (including spelt and khorasan wheat); one of the cereals containing gluten regulated under EU Annex II item 1."
+  pl: "Zboże z rodzaju Triticum (łącznie z orkiszem i pszenicą khorasan); jedno ze zbóż zawierających gluten regulowanych w Aneksie II UE, punkt 1."
+assertions:
+  - code: allergen.gluten
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Named in EU Annex II item 1.", pl: "Wymienione w Aneksie II UE, punkt 1." }
+    sources: [{ id: reg-1169-2011, locator: "Annex II item 1" }]
+  - code: origin.plant
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A cereal grain.", pl: "Zboże." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A plant food.", pl: "Produkt roślinny." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A plant food.", pl: "Produkt roślinny." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.gluten_free
+    certainty: "no"
+    kind: fact
+    grade: A
+    note: { en: "Wheat is a gluten-containing cereal.", pl: "Pszenica jest zbożem zawierającym gluten." }
+    sources: [{ id: reg-1169-2011 }]
+glycemic:
+  - range: [38, 88]
+    fraction: starch
+    method: iso
+    note: { en: "White wheat breads, including varied proving.", pl: "Białe pieczywo pszenne, także przy różnym wyrastaniu." }
+    source: gi-atkinson-2021
+    locator: "Supplemental Table 1, foods 234-268, 283-286, 306-308"
+review_status: draft
+provenance: ai-drafted

@@ -1,0 +1,48 @@
+id: sunflower-oil
+type: fat
+names:
+  en: [sunflower oil, sunflower seed oil]
+  pl: [olej słonecznikowy]
+  de: [Sonnenblumenöl]
+summary:
+  en: >-
+    Oil pressed from sunflower seeds, mostly unsaturated (linoleic-type, high-oleic cultivars also exist).
+    Beyond the liquid oil, a spray-dried "sunflower oil powder" form exists, encapsulating the oil in a
+    carbohydrate/protein matrix so it can be added to a dry powder blend without adding a liquid — distinct
+    from the multi-oil "vegetable fat powder"/creamer entry in this database.
+  pl: >-
+    Olej wyciskany z ziaren słonecznika, w większości nienasycony (typ linolowy; istnieją też odmiany
+    wysokooleinowe). Poza formą ciekłą istnieje "olej słonecznikowy w proszku" otrzymywany suszeniem
+    rozpyłowym — olej otoczony matrycą węglowodanowo-białkową, tak by można go dodać do suchej mieszanki
+    bez wprowadzania cieczy. To inny produkt niż wielo-olejowy "tłuszcz roślinny w proszku"/śmietanka
+    roślinna opisana w osobnym wpisie tej bazy.
+variants:
+  - id: powder
+    names:
+      en: [sunflower oil powder, encapsulated sunflower oil]
+      pl: [olej słonecznikowy w proszku, słonecznikowy olej w proszku]
+    process:
+      en: "Sunflower oil encapsulated/spray-dried into a carbohydrate or protein matrix so it behaves as a dry powder."
+      pl: "Olej słonecznikowy otoczony matrycą (enkapsulacja)/suszony rozpyłowo, by zachowywał się jak suchy proszek."
+    tells: ['sunflower oil powder', 'encapsulated sunflower', 'olej slonecznikowy w proszku', 'slonecznikowy olej w proszku']
+assertions:
+  - code: origin.vegetable_oil_derived
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "A pressed vegetable oil; EU labelling requires its specific plant origin to be named. The powder form is still, by mass, the same oil."
+      pl: "Wyciskany olej roślinny; przepisy UE o etykietowaniu wymagają podania jego konkretnego pochodzenia rośliny. Forma w proszku to nadal, wagowo, ten sam olej."
+    sources: [{ id: reg-1169-2011, locator: "Annex VII Part A, point 8" }]
+  - code: processing.refined
+    certainty: yes
+    kind: fact
+    grade: B
+    note:
+      en: "Food-grade sunflower oil for a neutral-tasting product is refined, bleached and deodorised."
+      pl: "Olej słonecznikowy spożywczy o neutralnym smaku jest rafinowany, odbarwiany i dezodoryzowany."
+    sources: [{ id: reg-1169-2011, locator: "Annex VII Part A, point 8" }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Left out a high-oleic vs standard-linoleic variant: it is a real distinction (affects heat stability), but it carries no allergen/ethics/health implication this taxonomy tracks, and adding a second variant axis would need its own prior budget shared with the powder-form variant, which is not a like-for-like axis."

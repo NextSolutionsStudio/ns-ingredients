@@ -1,0 +1,53 @@
+id: potassium-sorbate
+type: additive
+e_number: E202
+ids: { cas: "24634-61-5", wikidata: Q410744, chebi: "CHEBI:77868", pubchem: 23676745 }
+names:
+  en: [potassium sorbate]
+  pl: [sorbinian potasu]
+  de: [Kaliumsorbat]
+functions: [preservative]
+summary:
+  en: >-
+    The potassium salt of sorbic acid, used to inhibit mould and yeast growth in cheese, wine, yoghurt,
+    dried fruit, baked goods and soft drinks. Sorbic acid occurs naturally in rowan berries, but virtually
+    the whole world supply used in food is made synthetically and then neutralised with potassium
+    hydroxide to give the potassium salt. Considered one of the milder, better-tolerated preservatives;
+    it has no children's-attention warning and no EU restriction beyond ordinary category maximum levels.
+  pl: >-
+    Sól potasowa kwasu sorbowego, stosowana do hamowania rozwoju pleśni i drożdży w serach, winie,
+    jogurtach, suszonych owocach, wyrobach piekarskich i napojach. Kwas sorbowy występuje naturalnie w
+    jagodach jarzębiny, jednak praktycznie cała ilość stosowana w żywności jest wytwarzana syntetycznie, a
+    następnie zobojętniana wodorotlenkiem potasu do soli potasowej. Uważany za jeden z łagodniejszych,
+    lepiej tolerowanych konserwantów; nie wymaga ostrzeżenia o wpływie na uwagę dzieci i nie podlega w UE
+    innym ograniczeniom niż zwykłe maksymalne poziomy w danej kategorii żywności.
+assertions:
+  - code: origin.chemical_synthesis
+    certainty: yes
+    kind: fact
+    grade: B
+    note:
+      en: "Sorbic acid (the parent acid) is made by condensing crotonaldehyde with ketene, then neutralised with potassium hydroxide to give potassium sorbate; essentially all of the world's commercial supply is made this way rather than extracted from rowan berries."
+      pl: "Kwas sorbowy (kwas macierzysty) otrzymuje się przez kondensację krotonaldehydu z ketenem, a następnie zobojętnia wodorotlenkiem potasu do sorbinianu potasu; praktycznie cała światowa produkcja handlowa powstaje w ten sposób, a nie przez ekstrakcję z jagód jarzębiny."
+    sources: [{ id: col-wikipedia-potassium-sorbate }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: B
+    note: { en: "Made by chemical synthesis from non-animal starting materials.", pl: "Wytwarzany syntezą chemiczną z surowców niezwierzęcych." }
+    sources: [{ id: col-wikipedia-potassium-sorbate }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: fact
+    grade: B
+    note: { en: "No animal material involved in manufacture.", pl: "Produkcja nie wykorzystuje surowców zwierzęcych." }
+    sources: [{ id: col-wikipedia-potassium-sorbate }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Authorised in specific food categories with maximum levels (Annex II); no quantum satis.", pl: "Dopuszczony w określonych kategoriach żywności z maksymalnymi poziomami (Załącznik II); brak dawki quantum satis." }
+    source: reg-1333-2008
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Per-category Annex II maximum levels for E202 not transcribed here (avoid a wrong number)."

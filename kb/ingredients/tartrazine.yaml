@@ -1,0 +1,57 @@
+id: tartrazine
+type: additive
+e_number: E102
+ids: { cas: "1934-21-0", wikidata: Q407158, chebi: "CHEBI:9405", pubchem: 164825 }
+names:
+  en: [tartrazine, yellow 5]
+  pl: [tartrazyna]
+  de: [Tartrazin]
+functions: [colour]
+summary:
+  en: >-
+    A synthetic lemon-yellow azo dye made by chemical synthesis, widely used in drinks, sweets, snacks
+    and sauces. It is one of the "Southampton six" colours that must carry the EU label warning about
+    activity and attention in children, and is one of the six remaining US-approved synthetic dyes (as
+    FD&C Yellow No. 5) the FDA asked industry to phase out from 2025.
+  pl: >-
+    Syntetyczny cytrynowożółty barwnik azowy otrzymywany syntezą chemiczną, powszechnie stosowany w
+    napojach, słodyczach, przekąskach i sosach. Jest jednym z „sześciu z Southampton” barwników, które
+    muszą nosić na etykiecie w UE ostrzeżenie o wpływie na aktywność i uwagę dzieci, oraz jednym z sześciu
+    wciąż dopuszczonych w USA syntetycznych barwników (jako FD&C Yellow No. 5), których wycofania z rynku
+    FDA zażądała od przemysłu od 2025 r.
+assertions:
+  - code: health.southampton_colour
+    certainty: yes
+    kind: fact
+    grade: A
+    population: [children]
+    note:
+      en: "One of six colours (with E104, E110, E122, E124, E129) that trigger the mandatory EU label statement, following the 2007 McCann RCT that found a mixture of these colours (plus sodium benzoate) increased hyperactive behaviour in young children."
+      pl: "Jeden z sześciu barwników (wraz z E104, E110, E122, E124, E129) wymagających obowiązkowego oświadczenia na etykiecie w UE, w związku z badaniem RCT McCann z 2007 r., które wykazało, że mieszanka tych barwników (i benzoesanu sodu) zwiększała nadpobudliwość u małych dzieci."
+    sources: [{ id: reg-1333-2008, locator: "Annex V" }, { id: mccann-2007 }]
+  - code: regulatory.eu_warning_label
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Label must state '[name/E-number]: may have an adverse effect on activity and attention in children.'"
+      pl: "Etykieta musi zawierać zapis: „[nazwa/numer E]: może mieć szkodliwy wpływ na aktywność i skupienie uwagi u dzieci”."
+    sources: [{ id: reg-1333-2008, locator: "Annex V" }]
+  - code: origin.petrochemical_synthetic
+    certainty: yes
+    kind: fact
+    grade: B
+    note:
+      en: "Made by azo coupling of a sulfanilic-acid-based diazonium salt with a sulfonated pyrazolone derivative; named by US HHS/FDA (April 2025) among the 'petroleum-based synthetic dyes' being phased out (as FD&C Yellow No. 5)."
+      pl: "Otrzymywany przez sprzęganie azowe soli diazoniowej na bazie kwasu sulfanilowego z sulfonowanym pochodnym pirazolonu; wymieniony przez amerykańskie HHS/FDA (kwiecień 2025) wśród „syntetycznych barwników pochodzenia petrochemicznego” wycofywanych z rynku (jako FD&C Yellow No. 5)."
+    sources: [{ id: col-wikipedia-tartrazine }, { id: col-fda-dye-phaseout-2025 }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Authorised in specific food categories under Annex II conditions; triggers the Annex V children's attention/activity warning.", pl: "Dopuszczony w określonych kategoriach żywności zgodnie z Załącznikiem II; wymaga ostrzeżenia z Załącznika V o wpływie na aktywność i uwagę dzieci." }
+    source: reg-1333-2008
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Per-category Annex II maximum levels for E102 not transcribed here (avoid a wrong number)."
+  - "US FDA's 2025 phase-out is a voluntary industry request, not a ban — regulatory status there is still 'authorised'; not modelled as a separate `regulatory` row for that reason."

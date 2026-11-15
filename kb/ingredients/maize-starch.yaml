@@ -1,0 +1,26 @@
+id: maize-starch
+type: carbohydrate
+names:
+  en: ["maize starch", "corn starch"]
+  pl: ["skrobia kukurydziana"]
+  de: ["Maisstärke"]
+functions: [thickener]
+summary:
+  en: "Native (unmodified) starch from maize (corn); thickens when heated in water. Not an E-number additive."
+  pl: "Skrobia natywna (niemodyfikowana) z kukurydzy; zagęszcza po podgrzaniu w wodzie. Nie jest dodatkiem z numerem E."
+assertions:
+  - code: origin.plant
+    certainty: yes
+    kind: estimate
+    grade: B
+    note: { en: "Maize is the named starch source.", pl: "Wskazanym surowcem skrobi jest kukurydza." }
+    sources: [{ id: gi-atkinson-2021, locator: "Supplemental Table 1, food 556; Supplemental Table 2, foods 2583 and 2589" }]
+glycemic:
+  - range: [50, 92]
+    fraction: starch
+    method: non_iso
+    note: { en: "Waxy maize: raw suspensions and microwaved gel; mixed protocols.", pl: "Kukurydza woskowa: surowe zawiesiny i żel z mikrofalówki; różne protokoły." }
+    source: gi-atkinson-2021
+    locator: "Supplemental Table 1, food 556; Supplemental Table 2, foods 2583 and 2589"
+review_status: draft
+provenance: ai-drafted

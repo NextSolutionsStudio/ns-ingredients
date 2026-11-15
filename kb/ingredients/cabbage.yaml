@@ -1,0 +1,29 @@
+id: cabbage
+type: ingredient
+names:
+  en:
+    - cabbage
+    - white cabbage
+  pl:
+    - kapusta
+    - kapusta biała
+    - kapusta czerwona
+  de:
+    - Kohl
+    - Weißkohl
+summary:
+  en: Cabbage (Brassica oleracea).
+  pl: Kapusta (Brassica oleracea).
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A vegetable.
+      pl: Warzywo.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted

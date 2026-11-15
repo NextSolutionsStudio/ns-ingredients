@@ -1,0 +1,56 @@
+id: sodium-carbonates
+type: additive
+e_number: E500
+names:
+  en:
+    - sodium carbonates
+    - sodium carbonate
+    - sodium hydrogen carbonate
+    - sodium bicarbonate
+    - bicarbonate of soda
+    - baking soda
+    - soda ash
+    - sodium sesquicarbonate
+  pl:
+    - węglany sodu
+    - węglan sodu
+    - wodorowęglan sodu
+    - kwaśny węglan sodu
+    - soda oczyszczona
+    - soda do pieczenia
+    - soda amoniakalna
+    - bikarbonat
+  de:
+    - Natriumcarbonate
+    - Natriumcarbonat
+    - Natriumhydrogencarbonat
+    - Natron
+functions:
+  - raising-agent
+  - acidity-regulator
+  - anti-caking-agent
+summary:
+  en: >-
+    Sodium carbonate (soda ash), sodium hydrogen carbonate (baking soda) and sodium sesquicarbonate: the
+    alkaline half of most baking powders, releasing carbon dioxide with an acid, and an acidity regulator.
+  pl: >-
+    Węglan sodu (soda kalcynowana), wodorowęglan sodu (soda oczyszczona) i seskwiwęglan sodu: zasadowy
+    składnik większości proszków do pieczenia, uwalniający dwutlenek węgla w reakcji z kwasem, a także
+    regulator kwasowości.
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: >-
+        Group I additive (Reg 1333/2008 Annex II Part C, as set by Reg 1129/2011): quantum satis in most food
+        categories.
+      pl: >-
+        Dodatek grupy I (rozporządzenie 1333/2008, załącznik II część C, w brzmieniu rozporządzenia
+        1129/2011): quantum satis w większości kategorii żywności.
+    source: swm-reg-1129-2011
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Identity-only: no EFSA food-additive re-evaluation of E 500 was found (only a 2010 feed opinion) and the
+    JECFA database was not reachable, so no assessment or reference value is recorded.

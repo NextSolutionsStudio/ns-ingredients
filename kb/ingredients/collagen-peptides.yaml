@@ -1,0 +1,84 @@
+id: collagen-peptides
+type: protein
+names:
+  en: [collagen peptides, hydrolyzed collagen, hydrolysed collagen, collagen hydrolysate]
+  pl: [peptydy kolagenowe, kolagen hydrolizowany, hydrolizat kolagenu]
+  de: [Kollagenpeptide, hydrolysiertes Kollagen]
+summary:
+  en: >-
+    Native collagen (~300 kDa) enzymatically broken down into small, water-soluble peptides (roughly 3-6
+    kDa) for better solubility and absorption. Sourced from the skin, bone, tendon or scales of
+    slaughtered/processed animals — mainly cattle (bovine), pigs (porcine) or fish/marine species — never
+    from a plant, so it is never vegan or vegetarian regardless of species. The species matters for
+    allergen and dietary-practice purposes (fish, halal/kosher, religious or ethical avoidance of a
+    particular animal) even though the peptides themselves are structurally similar across sources.
+  pl: >-
+    Naturalny kolagen (~300 kDa) rozłożony enzymatycznie na małe, rozpuszczalne w wodzie peptydy (ok. 3-6
+    kDa) dla lepszej rozpuszczalności i wchłaniania. Pochodzi ze skóry, kości, ścięgien lub łusek zwierząt
+    poddanych ubojowi/przetworzeniu — głównie bydła (wołowy), świń (wieprzowy) lub ryb/organizmów morskich
+    — nigdy z rośliny, więc nigdy nie jest wegański ani wegetariański, niezależnie od gatunku. Gatunek ma
+    znaczenie dla alergenów i praktyk dietetycznych (ryby, halal/koszer, religijne lub etyczne unikanie
+    konkretnego zwierzęcia), mimo że same peptydy są strukturalnie podobne niezależnie od źródła.
+  de: >-
+    Natives Kollagen (~300 kDa) wird enzymatisch in kleine, wasserlösliche Peptide (ca. 3-6 kDa) zerlegt.
+    Stammt von Haut, Knochen, Sehnen oder Schuppen geschlachteter/verarbeiteter Tiere — Rind, Schwein oder
+    Fisch/Meerestiere — nie von einer Pflanze, ist also nie vegan oder vegetarisch.
+variants:
+  - id: bovine
+    names: { en: [bovine collagen], pl: [kolagen wołowy], de: [Rinderkollagen] }
+    process:
+      en: "From cattle hide, Achilles tendon or bone; the most widely available source, providing collagen types I and III."
+      pl: "Ze skóry, ścięgna Achillesa lub kości bydła; najbardziej powszechnie dostępne źródło, dostarczające kolagen typu I i III."
+    tells: ["wolow", "bovine", "rinder"]
+  - id: porcine
+    names: { en: [porcine collagen], pl: [kolagen wieprzowy], de: [Schweinekollagen] }
+    process:
+      en: "From pig skin; a common, lower-cost source, structurally close to bovine collagen."
+      pl: "Ze skóry świń; powszechne, tańsze źródło, strukturalnie zbliżone do kolagenu wołowego."
+    tells: ["wieprzow", "porcine", "schwein"]
+  - id: fish
+    names: { en: [fish collagen, marine collagen], pl: [kolagen rybi, kolagen morski], de: [Fischkollagen, marines Kollagen] }
+    process:
+      en: "From the scales, skin, bones or viscera of fish (e.g. tilapia, tuna, cod); provides only collagen type I. Marketed as an alternative to bovine/porcine sources, including for people avoiding beef or pork on religious or dietary grounds."
+      pl: "Z łusek, skóry, kości lub wnętrzności ryb (np. tilapia, tuńczyk, dorsz); dostarcza jedynie kolagen typu I. Sprzedawany jako alternatywa dla źródeł wołowych/wieprzowych, w tym dla osób unikających wołowiny lub wieprzowiny z powodów religijnych lub dietetycznych."
+    tells: ["rybi", "rybim", "marine", "\\bfish\\b", "fisch", "morsk"]
+assertions:
+  - code: origin.animal
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Extracted from the hide/skin, tendon, bone or (for fish) scales of slaughtered or processed animals."
+      pl: "Ekstrahowany ze skóry, ścięgien, kości lub (w przypadku ryb) łusek zwierząt poddanych ubojowi lub przetworzeniu."
+    sources: [{ id: prot-leon-lopez-2019-hydrolyzed-collagen }]
+  - code: diet.vegan
+    certainty: no
+    kind: fact
+    grade: A
+    note: { en: "Animal-derived regardless of species.", pl: "Pochodzenie zwierzęce niezależnie od gatunku." }
+    sources: [{ id: prot-leon-lopez-2019-hydrolyzed-collagen }]
+  - code: diet.vegetarian
+    certainty: no
+    kind: fact
+    grade: A
+    note: { en: "A slaughter/processing by-product (hide, bone, tendon, scales) of cattle, pigs or fish.", pl: "Produkt uboczny uboju/przetwórstwa (skóra, kość, ścięgno, łuski) bydła, świń lub ryb." }
+    sources: [{ id: prot-leon-lopez-2019-hydrolyzed-collagen }]
+  - code: allergen.fish
+    variant: fish
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Sourced from fish (scales, skin, bones, viscera); declared as a fish allergen.", pl: "Pochodzi z ryb (łuski, skóra, kości, wnętrzności); deklarowany jako alergen rybi." }
+    sources: [{ id: reg-1169-2011 }, { id: prot-leon-lopez-2019-hydrolyzed-collagen }]
+  - code: origin.fish
+    variant: fish
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Obtained from fish.", pl: "Otrzymywany z ryb." }
+    sources: [{ id: prot-leon-lopez-2019-hydrolyzed-collagen }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "No prior/prior_rationale set for the bovine/porcine/fish variants: found no citable market-share breakdown for which species dominates an unlabelled 'collagen peptides' product on Polish shelves, so left the silent-label case unestimated rather than guessing."
+  - "Left out any efficacy claim for skin/joint benefits of oral collagen — did not open a systematic review/RCT on that question this session."

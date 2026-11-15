@@ -1,0 +1,65 @@
+id: paprika-extract
+type: additive
+e_number: E160c
+names:
+  en:
+    - paprika extract
+    - paprika oleoresin
+    - oleoresin paprika
+    - capsanthin
+    - capsorubin
+  pl:
+    - ekstrakt z papryki
+    - ekstrakt paprykowy
+    - ekstrakt papryki
+    - ekstrakt papryki słodkiej
+    - oleożywica z papryki
+    - oleożywica paprykowa
+    - kapsantyna
+    - kapsorubina
+  de:
+    - Paprikaextrakt
+    - Capsanthin
+    - Capsorubin
+functions:
+  - colour
+summary:
+  en: >-
+    A red-orange colour made by solvent extraction of ground paprika pods (Capsicum annuum); its main pigments
+    are capsanthin and capsorubin. The same words can name a spice extract used for flavour rather than
+    colour; it is paprika either way.
+  pl: >-
+    Czerwono-pomarańczowy barwnik otrzymywany przez ekstrakcję rozpuszczalnikiem z mielonych strąków papryki
+    (Capsicum annuum); główne barwniki to kapsantyna i kapsorubina. Te same słowa mogą oznaczać ekstrakt
+    przyprawowy dodany dla smaku, a nie koloru; w obu przypadkach to papryka.
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Extracted from paprika pods.
+      pl: Ekstrahowany ze strąków papryki.
+    sources:
+      - id: reg-231-2012
+        locator: 'E 160c, definition'
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: >-
+        Group II colour (Reg 1333/2008 Annex II Part C, as set by Reg 1129/2011): quantum satis where colours
+        are allowed.
+      pl: >-
+        Barwnik grupy II (rozporządzenie 1333/2008, załącznik II część C, w brzmieniu rozporządzenia
+        1129/2011): quantum satis tam, gdzie barwniki są dozwolone.
+    source: swm-reg-1129-2011
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    EFSA's re-evaluation of E 160c (2015) was not opened this session (Wiley returns 403; not indexed in
+    Europe PMC), so no reference value is recorded.
+  - >-
+    'Ekstrakt z papryki' without a colour header may be a flavouring preparation rather than E 160c; the
+    plant-origin claim holds for both, the E-number identity only for the colour.

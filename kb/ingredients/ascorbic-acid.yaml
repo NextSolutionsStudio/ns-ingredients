@@ -1,0 +1,56 @@
+id: ascorbic-acid
+type: additive
+e_number: E300
+ids: { wikidata: Q193598, chebi: "CHEBI:22652" }
+names:
+  en: [ascorbic acid, vitamin C, ascorbate]
+  pl: [kwas askorbowy, "kwas L-askorbinowy", kwas askorbinowy, witamina C]
+  de: [Ascorbinsäure, "L-Ascorbinsäure", "Vitamin C"]
+functions: [antioxidant]
+summary:
+  en: >-
+    L-ascorbic acid — vitamin C — used as an antioxidant (preventing browning, protecting fats and
+    flavours) and as a dough improver, as well as being added for its nutritional value. Almost none of
+    the ascorbic acid on the market is extracted from fruit: it is made industrially either by the
+    classical Reichstein route (chemical steps from D-glucose, with one bacterial fermentation step) or,
+    increasingly, by a fully fermentation-based two-step process. Either way the product is the same
+    molecule found in citrus and other fruit — "nature-identical" — so the production route says nothing
+    about safety, only about cost and, for some buyers, about process preferences.
+  pl: >-
+    Kwas L-askorbinowy — witamina C — stosowany jako przeciwutleniacz (zapobiega brunatnieniu, chroni
+    tłuszcze i aromaty) oraz jako polepszacz do wypieku, a także dodawany dla wartości odżywczej.
+    Praktycznie żaden kwas askorbowy dostępny na rynku nie jest ekstrahowany z owoców: wytwarza się go
+    przemysłowo albo klasyczną metodą Reichsteina (etapy chemiczne z D-glukozy, z jednym etapem
+    fermentacji bakteryjnej), albo — coraz częściej — w pełni fermentacyjnym procesie dwuetapowym. W
+    obu przypadkach produktem jest ta sama cząsteczka, która występuje w owocach cytrusowych i innych —
+    „identyczna z naturalną" — dlatego metoda produkcji nic nie mówi o bezpieczeństwie, a jedynie o
+    kosztach i, dla części odbiorców, o preferencjach dotyczących procesu.
+assertions:
+  - code: origin.microbial_fermentation
+    certainty: maybe
+    kind: estimate
+    grade: B
+    note:
+      en: "The classical Reichstein process uses one bacterial fermentation step (D-sorbitol to L-sorbose) inside an otherwise chemical synthesis from D-glucose; a newer two-step fermentation process used by many current manufacturers replaces more of the chemical steps with a second microbial step. A label cannot show which route was used, and the molecule is identical either way."
+      pl: "Klasyczny proces Reichsteina wykorzystuje jeden etap fermentacji bakteryjnej (D-sorbitolu do L-sorbozy) w ramach skądinąd chemicznej syntezy z D-glukozy; nowszy, dwuetapowy proces fermentacyjny stosowany przez wielu obecnych producentów zastępuje więcej etapów chemicznych drugim etapem mikrobiologicznym. Etykieta nie wskazuje, którą metodę zastosowano, a cząsteczka jest identyczna niezależnie od metody."
+    sources: [{ id: col-pappenberger-2014-vitc }]
+  - code: diet.vegan
+    certainty: yes
+    kind: estimate
+    grade: B
+    note:
+      en: "Both the Reichstein route and the two-step fermentation route use glucose-derived feedstocks and bacterial cultures, not animal material."
+      pl: "Zarówno metoda Reichsteina, jak i dwuetapowa fermentacja wykorzystują surowce pochodzące z glukozy oraz kultury bakteryjne, a nie surowce zwierzęce."
+    sources: [{ id: col-pappenberger-2014-vitc }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: "Group I additive (Reg 1333/2008 Annex II Part C): quantum satis in most food categories."
+      pl: "Dodatek grupy I (Rozporządzenie 1333/2008, Aneks II część C): quantum satis w większości kategorii żywności."
+    source: reg-1333-2008
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "EU Group I membership (quantum satis) verified 2026-09-27 against the EU text of Reg 1333/2008 Annex II Part C as published by legislation.gov.uk at 2020-12-31 (EUR-Lex returned an empty body to the fetch tool); re-check against current EUR-Lex consolidation before promoting review_status."
+  - "Wikidata's generated entry for e300 also lists 'DL-ascorbic acid' and 'D-isoascorbic acid' as names; the D-isoascorbic (erythorbic) acid is a distinct additive (E315) and DL-ascorbic acid has no real food use, so neither was carried into this curated file's names."

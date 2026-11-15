@@ -1,0 +1,42 @@
+id: barley
+type: ingredient
+names:
+  en: [barley, malted barley, barley malt extract]
+  pl: [jęczmień, słód jęczmienny, ekstrakt słodu jęczmiennego, ekstrakt ze słodu jęczmiennego, ekstrakt słodowy jęczmienny, kasza jęczmienna, płatki jęczmienne, mąka jęczmienna]
+  de: [Gerste]
+summary:
+  en: "The cereal Hordeum vulgare; named alongside wheat, rye and oats in EU Annex II item 1, including its malted form used in beer and malt extracts."
+  pl: "Zboże Hordeum vulgare; wymienione razem z pszenicą, żytem i owsem w Aneksie II UE, punkt 1, łącznie z formą słodowaną stosowaną w piwie i ekstraktach słodowych."
+assertions:
+  - code: allergen.gluten
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Named in EU Annex II item 1.", pl: "Wymienione w Aneksie II UE, punkt 1." }
+    sources: [{ id: reg-1169-2011, locator: "Annex II item 1" }]
+  - code: origin.plant
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A cereal grain.", pl: "Zboże." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A plant food.", pl: "Produkt roślinny." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A plant food.", pl: "Produkt roślinny." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.gluten_free
+    certainty: "no"
+    kind: fact
+    grade: A
+    note: { en: "Barley is a gluten-containing cereal.", pl: "Jęczmień jest zbożem zawierającym gluten." }
+    sources: [{ id: reg-1169-2011 }]
+review_status: draft
+provenance: ai-drafted

@@ -1,0 +1,60 @@
+id: creatine-monohydrate
+type: nutrient
+ids: { cas: "6020-87-7", wikidata: "Q27271832", pubchem: 80116 }
+names:
+  en: [creatine monohydrate, creatine]
+  pl: [monohydrat kreatyny, kreatyna]
+  de: [Kreatin-Monohydrat, Kreatin]
+summary:
+  en: >-
+    The body makes creatine from arginine, glycine and methionine, and it is also found in meat and fish;
+    supplement-grade creatine is the monohydrate salt, made by chemical synthesis. It is one of the most
+    studied ergogenic aids in sports nutrition, with a strong safety record at standard doses. Purity
+    varies significantly by manufacturer: a well-controlled synthesis yields a very pure product, while
+    poorly controlled routes can leave behind measurable synthesis by-products.
+  pl: >-
+    Organizm wytwarza kreatynę z argininy, glicyny i metioniny; znajduje się też w mięsie i rybach.
+    Kreatyna o czystości suplementowej to sól monohydratu, otrzymywana syntezą chemiczną. To jeden z
+    najlepiej przebadanych środków wspomagających wydolność w suplementacji sportowej, z dobrym profilem
+    bezpieczeństwa przy standardowych dawkach. Czystość istotnie różni się między producentami: dobrze
+    kontrolowana synteza daje bardzo czysty produkt, a słabo kontrolowane metody mogą pozostawiać wykrywalne
+    produkty poboczne syntezy.
+  de: >-
+    Der Körper bildet Kreatin aus Arginin, Glycin und Methionin; es kommt auch in Fleisch und Fisch vor.
+    Kreatin in Supplement-Qualität ist das Monohydrat-Salz, hergestellt durch chemische Synthese. Die
+    Reinheit unterscheidet sich deutlich je Hersteller.
+assertions:
+  - code: origin.chemical_synthesis
+    certainty: yes
+    kind: fact
+    grade: B
+    note:
+      en: "Industrial route (developed by Pischel & Gastner) reacts sodium sarcosinate with cyanamide at controlled pH and temperature; the crystallised product is filtered, separated and dried to creatine monohydrate."
+      pl: "Przemysłowa droga (opracowana przez Pischel i Gastnera) łączy sarkozynian sodu z cyjanamidem w kontrolowanym pH i temperaturze; skrystalizowany produkt jest filtrowany, odseparowywany i suszony do monohydratu kreatyny."
+    sources: [{ id: prot-kreider-2022-creatine-review }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: B
+    note:
+      en: "Supplement creatine monohydrate is made by chemical synthesis, not extracted from meat or fish (its main dietary sources)."
+      pl: "Suplementowy monohydrat kreatyny powstaje syntezą chemiczną, a nie ekstrakcją z mięsa czy ryb (jego głównych źródeł w diecie)."
+    sources: [{ id: prot-kreider-2022-creatine-review }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: fact
+    grade: B
+    note: { en: "Same chemical-synthesis basis as the vegan assessment.", pl: "Ta sama podstawa (synteza chemiczna) co w ocenie wegańskiej." }
+    sources: [{ id: prot-kreider-2022-creatine-review }]
+  - code: sport.batch_quality_dependent
+    certainty: yes
+    kind: estimate
+    grade: B
+    note:
+      en: "A 2011 market survey of 33 creatine supplements found creatinine, dihydrotriazine and/or dicyandiamide synthesis by-products in a meaningful share of samples; a 2022 review contrasts a German-made brand documented at ~99.9% purity with contaminants against supplies from less-controlled synthesis routes. Third-party-tested products vary more by manufacturer than by the 'creatine monohydrate' name on the label."
+      pl: "Ankieta rynkowa z 2011 r. obejmująca 33 suplementy kreatynowe wykryła produkty poboczne syntezy — kreatyninę, dihydrotriazynę i/lub dicyjanodiamid — w istotnej części próbek; przegląd z 2022 r. przeciwstawia niemiecką markę o dokumentowanej czystości ~99,9% dostawom z mniej kontrolowanych dróg syntezy. Produkty testowane przez niezależne laboratoria różnią się bardziej między producentami niż wynikałoby z samej nazwy 'monohydrat kreatyny' na etykiecie."
+    sources: [{ id: prot-kreider-2022-creatine-review }, { id: prot-moret-tubaro-2011-creatine-contaminants }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Kept the safety summary general (no adverse effects beyond desired weight gain, per Kreider 2022) rather than asserting a formal 'no safe level established' or similar health code, which would misrepresent creatine's actually strong safety record."

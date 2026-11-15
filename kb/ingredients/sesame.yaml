@@ -1,0 +1,36 @@
+id: sesame
+type: ingredient
+names:
+  en: [sesame, sesame seeds]
+  pl: [sezam, nasiona sezamu, olej sezamowy, rafinowany olej sezamowy, pasta sezamowa, tahini, pasta sezamowa tahini]
+  de: [Sesam, Sesamsamen]
+summary:
+  en: "Seeds of Sesamum indicum; one of the EU's fourteen regulated allergens, with no listed exemptions."
+  pl: "Ziarna Sesamum indicum; jeden z czternastu regulowanych alergenów UE, bez wyłączeń."
+assertions:
+  - code: allergen.sesame
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Declared ingredient; EU Annex II item 11.", pl: "Zadeklarowany składnik; Aneks II UE, punkt 11." }
+    sources: [{ id: reg-1169-2011, locator: "Annex II item 11" }]
+  - code: origin.plant
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A seed.", pl: "Ziarno." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A plant food.", pl: "Produkt roślinny." }
+    sources: [{ id: reg-1169-2011 }]
+  - code: diet.vegetarian
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "A plant food.", pl: "Produkt roślinny." }
+    sources: [{ id: reg-1169-2011 }]
+review_status: draft
+provenance: ai-drafted

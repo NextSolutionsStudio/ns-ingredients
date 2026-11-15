@@ -1,0 +1,117 @@
+id: malic-acid
+type: additive
+e_number: E296
+ids: { cas: "6915-15-7" }
+names:
+  en: [malic acid]
+  pl: [kwas jabłkowy]
+  de: [Äpfelsäure, Apfelsäure]
+functions: [acid, acidity-regulator]
+summary:
+  en: >-
+    A fruit acid (the sour taste of apples) used as an acidifier in drinks, sweets, protein powders and
+    pre-workouts. Fruit contains the L-form. The additive E 296 is mostly the racemic DL-form made by
+    chemical synthesis from maleic anhydride, a petrochemical. Regulators found no reason to treat the
+    forms differently for safety: both are readily metabolised, and no limit on intake is considered
+    necessary.
+  pl: >-
+    Kwas owocowy (kwaśny smak jabłek) stosowany jako zakwaszacz w napojach, słodyczach, odżywkach białkowych
+    i przedtreningówkach. Owoce zawierają formę L. Dodatek E 296 to najczęściej racemiczna forma DL
+    otrzymywana syntezą chemiczną z bezwodnika maleinowego (surowca petrochemicznego). Organy oceniające
+    nie widzą powodu, by formy te traktować różnie pod względem bezpieczeństwa: obie są łatwo metabolizowane,
+    a limitu spożycia nie uznano za potrzebny.
+variants:
+  - id: dl
+    names: { en: [DL-malic acid], pl: [kwas DL-jabłkowy], de: [DL-Äpfelsäure] }
+    process:
+      en: >-
+        Racemic mixture of L- and D-malic acid, synthesised by hydration of maleic anhydride (or maleic/fumaric
+        acid) under high temperature and pressure; the reaction also yields fumaric acid, which is removed.
+        Does not occur in fruit as such.
+      pl: >-
+        Mieszanina racemiczna kwasu L- i D-jabłkowego, syntetyzowana przez hydratację bezwodnika maleinowego
+        (lub kwasu maleinowego/fumarowego) w wysokiej temperaturze i pod ciśnieniem; powstający kwas fumarowy
+        jest usuwany. W takiej postaci nie występuje w owocach.
+    residues:
+      - substance: { en: fumaric acid, pl: kwas fumarowy }
+        limit: "specification limit in Reg 231/2012 (E 296)"
+        source: reg-231-2012
+      - substance: { en: maleic acid, pl: kwas maleinowy }
+        limit: "specification limit in Reg 231/2012 (E 296)"
+        source: reg-231-2012
+    tells: ['\bdl (?:malic|jablkow|apfel)', '\bdl kwas jablkow']
+    prior: 0.8
+    prior_rationale:
+      en: >-
+        When a label says only "malic acid" or "E296": the EU specification's melting range fits the racemate,
+        EFSA describes chemical synthesis as the known route, and makers who pay for the L-form usually say so.
+        This is an estimate, not a declaration.
+      pl: >-
+        Gdy etykieta podaje tylko „kwas jabłkowy” lub „E296”: zakres temperatury topnienia w specyfikacji UE
+        odpowiada racematowi, EFSA opisuje syntezę chemiczną jako znaną metodę, a producenci stosujący formę L
+        zwykle to zaznaczają. To szacunek, nie deklaracja producenta.
+  - id: l
+    names: { en: [L-malic acid], pl: [kwas L-jabłkowy], de: [L-Äpfelsäure] }
+    process:
+      en: >-
+        The form found in fruit. Produced industrially by enzymatic hydration of fumaric acid or by microbial
+        fermentation. "L-" names the molecule, not the route: enzymatic L-malic acid can still start from
+        petrochemical fumaric acid.
+      pl: >-
+        Forma występująca w owocach. Przemysłowo otrzymywana przez enzymatyczną hydratację kwasu fumarowego
+        lub fermentację mikrobiologiczną. „L-” opisuje cząsteczkę, a nie metodę: enzymatyczny kwas L-jabłkowy
+        może nadal powstawać z petrochemicznego kwasu fumarowego.
+    tells: ['(?<!d)\bl (?:malic|jablkow|apfel)', '\bkwas l jablkow']
+    prior: 0.2
+    prior_rationale:
+      en: "Minority share when the label is silent (see the DL rationale)."
+      pl: "Mniejszościowy udział, gdy etykieta milczy (zob. uzasadnienie dla DL)."
+assertions:
+  - code: origin.petrochemical_synthetic
+    variant: dl
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "EFSA (quoting its 2014 FEEDAP opinion) describes synthesis by hydration of maleic anhydride under high temperature and pressure."
+      pl: "EFSA (cytując opinię FEEDAP z 2014 r.) opisuje syntezę przez hydratację bezwodnika maleinowego w wysokiej temperaturze i pod ciśnieniem."
+    sources: [{ id: efsa-malic-call-2024, locator: "section 3.1" }]
+  - code: origin.microbial_fermentation
+    variant: l
+    certainty: maybe
+    kind: estimate
+    grade: B
+    note:
+      en: "L-malic acid may come from fermentation or from enzymatic conversion of fumaric acid; the label does not say which. EFSA lists fermentation among the routes it asks manufacturers to document."
+      pl: "Kwas L-jabłkowy może pochodzić z fermentacji lub z enzymatycznej konwersji kwasu fumarowego; etykieta tego nie mówi. EFSA wymienia fermentację wśród metod, które producenci mają udokumentować."
+    sources: [{ id: efsa-malic-call-2024 }]
+  - code: diet.vegan
+    certainty: yes
+    kind: fact
+    grade: A
+    note: { en: "Neither production route uses animal material.", pl: "Żadna z metod produkcji nie wykorzystuje surowców zwierzęcych." }
+    sources: [{ id: efsa-malic-call-2024 }]
+  - code: processing.ultra_processed_marker
+    certainty: maybe
+    kind: opinion
+    grade: D
+    note:
+      en: "Common in ultra-processed drinks and confectionery, but also a normal fruit constituent; weak signal on its own."
+      pl: "Częsty w wysoko przetworzonych napojach i słodyczach, ale to też naturalny składnik owoców; sam w sobie słaby sygnał."
+    sources: [{ id: reg-1333-2008 }]
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions: { en: "Group I additive: quantum satis in most food categories.", pl: "Dodatek grupy I: quantum satis w większości kategorii żywności." }
+    source: reg-1333-2008
+reference_values:
+  - type: group_ADI
+    value: "not specified"
+    body: JECFA
+    year: 1980
+    source: efsa-malic-call-2024
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "EFSA re-evaluation of E 296 in progress (call for data 2024): revisit the origin notes and specification limits when the opinion is published."
+  - "Exact fumaric/maleic acid limits: copy from the consolidated Reg 231/2012 text after checking it (not transcribed here to avoid a wrong number)."

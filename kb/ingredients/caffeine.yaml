@@ -1,0 +1,143 @@
+id: caffeine
+type: nutrient
+ids: { cas: "58-08-2", wikidata: "Q60235", chebi: "CHEBI:27732", pubchem: 2519 }
+names:
+  en: [caffeine]
+  pl: [kofeina]
+  de: [Koffein]
+summary:
+  en: >-
+    A central nervous system stimulant found naturally in coffee, tea, guarana and cacao, and added on
+    its own to pre-workouts, thermogenics and energy drinks. Most added caffeine is synthetic ("caffeine
+    anhydrous"), made by chemical synthesis rather than extracted from a plant; some products instead use
+    a plant extract (guarana, green coffee, green tea) and usually say so, since it costs more. EFSA sets
+    the intake levels it does not consider a safety concern; a caffeinated drink above 150 mg/l must carry
+    a warning statement.
+  pl: >-
+    Stymulant ośrodkowego układu nerwowego, naturalnie występujący w kawie, herbacie, guaranie i kakao,
+    dodawany samodzielnie do przedtreningówek, spalaczy i napojów energetycznych. Większość dodawanej
+    kofeiny jest syntetyczna ("kofeina bezwodna"), otrzymywana syntezą chemiczną, a nie ekstrakcją z
+    rośliny; niektóre produkty stosują za to ekstrakt roślinny (guarana, zielona kawa, zielona herbata) i
+    zwykle to zaznaczają, bo jest droższy. EFSA wskazuje poziomy spożycia, które nie budzą jej obaw; napój
+    z zawartością kofeiny powyżej 150 mg/l musi nieść ostrzeżenie na etykiecie.
+  de: >-
+    Ein Stimulans des zentralen Nervensystems, natürlich enthalten in Kaffee, Tee, Guarana und Kakao, und
+    eigenständig zugesetzt in Pre-Workouts, Fettverbrennern und Energydrinks. Meist zugesetztes Koffein ist
+    synthetisch ("wasserfreies Koffein"); manche Produkte nutzen stattdessen einen Pflanzenextrakt
+    (Guarana, grüner Kaffee, grüner Tee) und geben das meist an.
+variants:
+  - id: synthetic
+    names: { en: [caffeine anhydrous, synthetic caffeine], pl: [kofeina bezwodna, kofeina syntetyczna], de: [wasserfreies Koffein, synthetisches Koffein] }
+    process:
+      en: >-
+        Made by chemical synthesis, not extracted from a plant. Industrial routes react cyanoacetic acid
+        (or chloroacetic acid) with dimethylurea (or urea) through condensation, cyclisation and a final
+        methylation step to build the purine ring system; the product is dried to "caffeine anhydrous"
+        powder.
+      pl: >-
+        Otrzymywana syntezą chemiczną, a nie ekstrakcją z rośliny. Przemysłowe metody łączą kwas
+        cyjanoacetowy (lub kwas chlorooctowy) z dimetylomocznikiem (lub mocznikiem) poprzez kondensację,
+        cyklizację i końcowe metylowanie, budując układ purynowy; produkt suszy się do postaci "kofeiny
+        bezwodnej".
+    tells: ["anhydrous", "synthetic", "bezwodna", "syntetyczna", "wasserfrei", "synthetisches"]
+    prior: 0.85
+    prior_rationale:
+      en: >-
+        When a label just says "caffeine" or "kofeina" with no botanical qualifier: bulk caffeine used in
+        supplements is overwhelmingly synthetic, and makers who pay for a plant-extract source (guarana,
+        green coffee, green tea) almost always name it, since it is the more expensive, marketable option.
+      pl: >-
+        Gdy etykieta podaje tylko "kofeina" bez określenia botanicznego: kofeina używana w suplementach jest
+        w większości syntetyczna, a producenci płacący za ekstrakt roślinny (guarana, zielona kawa, zielona
+        herbata) prawie zawsze to nazywają, bo to droższa, marketingowo atrakcyjna opcja.
+  - id: natural
+    names:
+      en: [natural caffeine, caffeine from guarana, caffeine from green coffee, caffeine from green tea]
+      pl: [kofeina naturalna, kofeina z guarany, kofeina z zielonej kawy, kofeina z zielonej herbaty]
+      de: [natürliches Koffein, Koffein aus Guarana, Koffein aus grünem Kaffee, Koffein aus grünem Tee]
+    process:
+      en: >-
+        Extracted from a caffeine-bearing plant (guarana seeds, unroasted green coffee beans, or tea
+        leaves) rather than built up from simple chemical precursors. The caffeine molecule itself is
+        identical either way; what differs is the accompanying plant matrix (e.g. chlorogenic acids,
+        theobromine, polyphenols) carried through a partial extract.
+      pl: >-
+        Ekstrahowana z rośliny zawierającej kofeinę (ziarna guarany, niepalone ziarna zielonej kawy lub
+        listki herbaty), a nie budowana z prostych prekursorów chemicznych. Sama molekuła kofeiny jest
+        identyczna w obu przypadkach; różni się towarzysząca matryca roślinna (np. kwasy chlorogenowe,
+        teobromina, polifenole) obecna w częściowym ekstrakcie.
+    tells: ["guaran", "zielonej kawy", "zielonej herbaty", "green coffee", "green tea", "natural caffeine", "kofeina naturalna", "naturlich", "grunem kaffee", "grunem tee"]
+    prior: 0.15
+    prior_rationale:
+      en: "Minority share when the label is silent (see the synthetic-form rationale)."
+      pl: "Mniejszościowy udział, gdy etykieta milczy (zob. uzasadnienie dla formy syntetycznej)."
+assertions:
+  - code: origin.chemical_synthesis
+    variant: synthetic
+    certainty: yes
+    kind: fact
+    grade: B
+    note:
+      en: "Industrial route from cyanoacetic/chloroacetic acid and dimethylurea/urea via condensation, cyclisation and methylation; a documented, patented process, not natural extraction."
+      pl: "Przemysłowa droga z kwasu cyjanoacetowego/chlorooctowego i dimetylomocznika/mocznika przez kondensację, cyklizację i metylowanie; udokumentowany, opatentowany proces, nie ekstrakcja naturalna."
+    sources: [{ id: prot-caffeine-synthesis-patent-cn104892611a }]
+  - code: origin.plant
+    variant: natural
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Extracted from guarana seeds, green coffee beans or tea leaves rather than synthesised."
+      pl: "Ekstrahowana z ziaren guarany, ziaren zielonej kawy lub listków herbaty, a nie syntetyzowana."
+    sources: [{ id: usda-fdc }]
+  - code: health.caffeine
+    certainty: yes
+    kind: fact
+    grade: A
+    population: [general]
+    dose: "up to 400 mg/day (single doses up to 200 mg)"
+    note:
+      en: "EFSA (2015): habitual intake up to 400 mg/day, and single doses up to 200 mg, do not raise safety concerns for healthy, non-pregnant adults."
+      pl: "EFSA (2015): zwyczajowe spożycie do 400 mg/dobę oraz jednorazowe dawki do 200 mg nie budzą obaw o bezpieczeństwo u zdrowych, nie będących w ciąży osób dorosłych."
+    sources: [{ id: efsa-caffeine-2015 }]
+  - code: health.caffeine
+    certainty: yes
+    kind: fact
+    grade: A
+    population: [pregnancy]
+    dose: "up to 200 mg/day"
+    note:
+      en: "EFSA (2015): habitual intake up to 200 mg/day by pregnant or breastfeeding women does not raise safety concerns for the fetus or breastfed infant."
+      pl: "EFSA (2015): zwyczajowe spożycie do 200 mg/dobę przez kobiety w ciąży lub karmiące nie budzi obaw o bezpieczeństwo płodu lub dziecka karmionego naturalnie."
+    sources: [{ id: efsa-caffeine-2015 }]
+  - code: health.caffeine
+    certainty: yes
+    kind: fact
+    grade: A
+    population: [children]
+    dose: "up to 3 mg/kg bw/day"
+    note:
+      en: "EFSA (2015) proposed a conservative habitual-intake level of 3 mg/kg body weight/day for children and adolescents; data were otherwise judged insufficient for a precise threshold."
+      pl: "EFSA (2015) zaproponowała zachowawczy poziom zwyczajowego spożycia 3 mg/kg masy ciała/dobę dla dzieci i młodzieży; dane uznano poza tym za niewystarczające do wyznaczenia precyzyjnego progu."
+    sources: [{ id: efsa-caffeine-2015 }]
+  - code: sport.stimulant
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "A central nervous system stimulant with dose-dependent performance effects; not on the WADA Prohibited List, but monitored — check the current programme before competition."
+      pl: "Stymulant ośrodkowego układu nerwowego o zależnym od dawki wpływie na wyniki; nie znajduje się na Liście Zakazanych Substancji WADA, ale jest monitorowany — przed zawodami sprawdź aktualny program."
+    sources: [{ id: efsa-caffeine-2015 }]
+  - code: regulatory.eu_warning_label
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "A drink containing caffeine above 150 mg/l (other than tea/coffee-based drinks named as such) must carry the statement 'high caffeine content' plus the amount per 100 ml, and is not recommended for children or pregnant/breastfeeding women (Reg 1169/2011 Annex III)."
+      pl: "Napój zawierający kofeinę powyżej 150 mg/l (inny niż napoje na bazie kawy/herbaty tak nazwane) musi nieść informację 'wysoka zawartość kofeiny' wraz z zawartością na 100 ml oraz że nie jest polecany dzieciom i kobietom w ciąży lub karmiącym (Rozp. 1169/2011 Załącznik III)."
+    sources: [{ id: reg-1169-2011 }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "EFSA's 2015 opinion judged data on children/adolescents less robust than for adults; the 3 mg/kg bw/day figure is explicitly a conservative proposal, not a definitive ADI-like value — worth revisiting if EFSA issues an update."
+  - "WADA's current Prohibited List and Monitoring Program were not opened this session; the sport.stimulant note deliberately stays generic and points to the current list rather than citing a specific WADA document."

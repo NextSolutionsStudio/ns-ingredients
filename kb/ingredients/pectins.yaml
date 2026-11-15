@@ -1,0 +1,60 @@
+id: pectins
+type: additive
+e_number: E440
+names:
+  en:
+    - pectins
+    - pectin
+    - amidated pectin
+  pl:
+    - pektyny
+    - pektyna
+    - pektyna amidowana
+    - pektyny amidowane
+  de:
+    - Pektine
+    - Pektin
+    - amidiertes Pektin
+functions:
+  - gelling-agent
+  - thickener
+  - stabiliser
+summary:
+  en: >-
+    A gelling agent extracted with water from plant material, usually citrus peel or apple pomace (E 440(i));
+    amidated pectin is further treated with ammonia (E 440(ii)). EFSA (2017) found no safety concern for the
+    general population and no need for a numerical ADI.
+  pl: >-
+    Substancja żelująca ekstrahowana wodą z materiału roślinnego, zwykle ze skórek cytrusów lub wytłoków
+    jabłkowych (E 440(i)); pektyna amidowana jest dodatkowo poddawana działaniu amoniaku (E 440(ii)). EFSA
+    (2017) nie stwierdziła zagrożenia dla ogółu ludności ani potrzeby ustalania liczbowego ADI.
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: 'Extracted from edible plant material, usually citrus fruit or apples.'
+      pl: 'Ekstrahowana z jadalnego materiału roślinnego, zwykle z cytrusów lub jabłek.'
+    sources:
+      - id: reg-231-2012
+        locator: 'E 440(i) and E 440(ii), definitions'
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: >-
+        Group I additive (Reg 1333/2008 Annex II Part C, as set by Reg 1129/2011): quantum satis in most food
+        categories.
+      pl: >-
+        Dodatek grupy I (rozporządzenie 1333/2008, załącznik II część C, w brzmieniu rozporządzenia
+        1129/2011): quantum satis w większości kategorii żywności.
+    source: swm-reg-1129-2011
+reference_values:
+  - type: ADI
+    value: not specified
+    body: EFSA
+    year: 2017
+    source: efsa-pectin-2017
+review_status: draft
+provenance: ai-drafted
