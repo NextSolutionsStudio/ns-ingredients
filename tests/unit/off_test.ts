@@ -1,17 +1,21 @@
 // The Open Food Facts product mapping the browser and the /off proxy share (web/off-product.js).
-import { assertEquals, assertThrows } from "@std/assert";
-import {
-  offEmphasisToCaps,
-  productUrl,
-  readProductResponse,
-  toNutrition,
-  toProduct,
-} from "../../web/off-product.js";
+import { assert, assertEquals, assertThrows } from "@std/assert";
+import { productUrl, readProductResponse, toNutrition, toProduct } from "../../web/off-product.js";
 import { createOffClient } from "../../src/off/off.ts";
+import { analyze } from "../../src/core/analyze.ts";
+import { fixtureIndex } from "../helpers.ts";
 
-Deno.test("offEmphasisToCaps: OFF's _allergen_ marks become the CAPS the parser reads as emphasis", () => {
-  assertEquals(offEmphasisToCaps("mąka _pszenna_, _mleko_ w proszku"), "mąka PSZENNA, MLEKO w proszku");
-  assertEquals(offEmphasisToCaps("snake_case_name"), "snakeCASEname", "only paired marks within a line");
+Deno.test("toProduct keeps OFF's _allergen_ marks; the parser reads them, also on an all-caps label", async () => {
+  const p = toProduct({
+    code: "5900000000002",
+    lang: "pl",
+    ingredients_text_pl: "SKŁAD: CUKIER, _PSZENNA_, SÓL",
+  });
+  assertEquals(p.texts[0].text, "SKŁAD: CUKIER, _PSZENNA_, SÓL");
+  // Turned into capitals, the mark would vanish under the all-caps rule; read as a mark, it stays.
+  const r = analyze(await fixtureIndex(), p.texts[0].text, { lang: "pl" });
+  assertEquals(r.items[1].emphasized, ["PSZENNA"]);
+  assert(r.flags.some((f) => f.code === "allergen.unrecognised_emphasis"));
 });
 
 Deno.test("toProduct: the product's own language first, then pl/en/de; another language is kept as unsupported", () => {
@@ -24,7 +28,7 @@ Deno.test("toProduct: the product's own language first, then pl/en/de; another l
     allergens_tags: ["en:milk", 7],
   });
   assertEquals(p.texts.map((t) => t.lang), ["de", "pl"]);
-  assertEquals(p.texts[0].text, "Zucker, MILCH");
+  assertEquals(p.texts[0].text, "Zucker, _Milch_");
   assertEquals(p.off_allergens, ["en:milk"], "non-string tags dropped");
 
   const nutella = toProduct({

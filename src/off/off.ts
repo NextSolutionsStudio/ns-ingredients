@@ -5,7 +5,7 @@
 
 import { productUrl, readProductResponse } from "../../web/off-product.js";
 
-export { offEmphasisToCaps, PRODUCT_FIELDS, toProduct } from "../../web/off-product.js";
+export { PRODUCT_FIELDS, toProduct } from "../../web/off-product.js";
 
 const TIMEOUT_MS = 15_000;
 const CACHE_TTL_MS = 10 * 60_000;

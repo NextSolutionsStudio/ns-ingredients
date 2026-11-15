@@ -114,6 +114,20 @@ Deno.test("OFF underscore emphasis is captured and stripped from the name, also 
     "_",
     [],
   ]]);
+  // Capitals inside a marked span are that span's emphasis, not extra words; capitals outside still count.
+  const [powder, nuts] = parseLabel("_MLEKO W PROSZKU_ (ORZECHY), cukier").items;
+  assertEquals(powder.emphasized, ["MLEKO W PROSZKU", "ORZECHY"]);
+  assertEquals(nuts.name, "cukier");
+});
+
+Deno.test("an unclosed underscore costs linear time", () => {
+  // Two lazy runs around one letter backtracked quadratically: 12k characters took 73–115 ms, 50k 1.2 s.
+  const text = "_" + "a".repeat(50_000);
+  const t = performance.now();
+  const [item] = parseLabel(text).items;
+  const ms = performance.now() - t;
+  assertEquals([item.name.length, item.emphasized], [50_001, []]);
+  assert(ms < 500, `took ${ms.toFixed(0)} ms`);
 });
 
 Deno.test("precautionary clause is split off in PL, EN and DE", () => {
