@@ -3,7 +3,7 @@ type: fat
 names:
   en: [palm oil]
   pl: [olej palmowy, tłuszcz palmowy]
-  de: [Palmöl]
+  de: [Palmöl, Palmfett]
 summary:
   en: >-
     Oil pressed from the fruit (mesocarp) of the oil palm (Elaeis guineensis). High in saturated fat, solid
@@ -44,6 +44,24 @@ variants:
     prior_rationale:
       en: "A specialty product always sold on its colour/flavour, so it is named when present."
       pl: "Produkt specjalny, sprzedawany właśnie ze względu na kolor/smak, więc gdy jest obecny — jest nazwany."
+  - id: partially-hydrogenated
+    names:
+      en: [partially hydrogenated palm oil]
+      pl: [olej palmowy częściowo utwardzony, częściowo utwardzony olej palmowy, tłuszcz palmowy częściowo utwardzony, częściowo utwardzony tłuszcz palmowy, olej palmowy częściowo uwodorniony, częściowo uwodorniony olej palmowy]
+      de: [teilweise gehärtetes Palmöl]
+    process:
+      en: "Palm oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
+      pl: "Olej palmowy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
+    tells: ['czesciowo (?:utwardzon|uwodorn)', 'partially hydrogenated', 'teilweise gehartet']
+  - id: fully-hydrogenated
+    names:
+      en: [fully hydrogenated palm oil]
+      pl: [olej palmowy całkowicie utwardzony, całkowicie utwardzony olej palmowy, tłuszcz palmowy całkowicie utwardzony, całkowicie utwardzony tłuszcz palmowy, olej palmowy całkowicie uwodorniony, całkowicie uwodorniony olej palmowy]
+      de: [vollständig gehärtetes Palmöl]
+    process:
+      en: "Palm oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
+      pl: "Olej palmowy ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
+    tells: ['calkowicie (?:utwardzon|uwodorn)', 'fully hydrogenated', 'vollstandig gehartet']
 assertions:
   - code: ethics.palm_oil
     certainty: yes
@@ -70,6 +88,33 @@ assertions:
       en: "Refined, bleached and deodorised before food use."
       pl: "Rafinowany, odbarwiany i dezodoryzowany przed użyciem w żywności."
     sources: [{ id: reg-1169-2011, locator: "Annex VII Part A, point 8" }]
+  - code: processing.hydrogenated
+    variant: partially-hydrogenated
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares partial hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje częściowe utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources: [{ id: reg-1169-2011, locator: "Annex VII Part A, points 8 and 9" }]
+  - code: health.trans_fat_source
+    variant: partially-hydrogenated
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Partial hydrogenation is the main industrial source of trans fat; EU food sold to consumers is capped at 2 g trans fat per 100 g of fat."
+      pl: "Częściowe utwardzanie jest głównym przemysłowym źródłem tłuszczów trans; żywność sprzedawana konsumentom w UE ma limit 2 g tłuszczów trans na 100 g tłuszczu."
+    sources: [{ id: reg-2019-649 }]
+  - code: processing.hydrogenated
+    variant: fully-hydrogenated
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares full hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje całkowite utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources: [{ id: reg-1169-2011, locator: "Annex VII Part A, points 8 and 9" }]
 review_status: draft
 provenance: ai-drafted
 review_notes:

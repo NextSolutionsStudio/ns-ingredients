@@ -1,0 +1,53 @@
+id: ammonium-carbonates
+type: additive
+e_number: E503
+names:
+  en:
+    - ammonium carbonates
+    - ammonium carbonate
+    - ammonium hydrogen carbonate
+    - ammonium bicarbonate
+    - diammonium carbonate
+    - baker's ammonia
+  pl:
+    - węglany amonu
+    - węglan amonu
+    - wodorowęglan amonu
+    - kwaśny węglan amonu
+  de:
+    - Ammoniumcarbonate
+    - Ammoniumcarbonat
+    - Ammoniumhydrogencarbonat
+    - Hirschhornsalz
+functions:
+  - raising-agent
+  - acidity-regulator
+summary:
+  en: >-
+    A raising agent for flat baked goods such as biscuits and gingerbread: on heating it breaks down into
+    ammonia, carbon dioxide and water, which escape. E 503(i) is a mixture of ammonium carbamate, carbonate
+    and hydrogen carbonate; E 503(ii) is ammonium hydrogen carbonate.
+  pl: >-
+    Substancja spulchniająca do płaskich wypieków, np. herbatników i pierników: przy ogrzewaniu rozkłada się
+    na amoniak, dwutlenek węgla i wodę, które ulatniają się. E 503(i) to mieszanina karbaminianu, węglanu i
+    wodorowęglanu amonu; E 503(ii) to wodorowęglan amonu.
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: >-
+        Group I additive (Reg 1333/2008 Annex II Part C, as set by Reg 1129/2011): quantum satis in most food
+        categories.
+      pl: >-
+        Dodatek grupy I (rozporządzenie 1333/2008, załącznik II część C, w brzmieniu rozporządzenia
+        1129/2011): quantum satis w większości kategorii żywności.
+    source: swm-reg-1129-2011
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Identity-only: no EFSA re-evaluation of E 503 was found and the JECFA database redirected away from the
+    fetch tool, so no assessment or reference value is recorded.
+  - >-
+    Composition from Reg 231/2012 (E 503(i), E 503(ii) definitions). The decomposition on baking is general
+    chemistry, stated in the summary only.

@@ -1,0 +1,29 @@
+id: cucumber
+type: ingredient
+names:
+  en:
+    - cucumber
+    - cucumbers
+    - gherkins
+  pl:
+    - ogórki
+    - ogórek
+  de:
+    - Gurken
+    - Gurke
+summary:
+  en: 'Cucumber (Cucumis sativus), including gherkins.'
+  pl: Ogórek (Cucumis sativus).
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A vegetable.
+      pl: Warzywo.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted

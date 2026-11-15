@@ -2,7 +2,7 @@ id: natural-flavouring
 type: flavouring
 names:
   en: ["natural flavouring", "natural flavour", "natural vanilla flavouring"]
-  pl: ["aromat naturalny", "naturalny aromat", "naturalny aromat waniliowy"]
+  pl: ["aromat naturalny", "naturalny aromat", "naturalny aromat waniliowy", "aromaty naturalne", "naturalne aromaty"]
   de: ["natürliches Aroma", "natürliches Vanillearoma"]
 summary:
   en: >-

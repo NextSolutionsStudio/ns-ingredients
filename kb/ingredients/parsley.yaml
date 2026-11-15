@@ -1,0 +1,31 @@
+id: parsley
+type: ingredient
+names:
+  en:
+    - parsley
+    - parsley leaves
+    - parsley root
+  pl:
+    - pietruszka
+    - natka pietruszki
+    - korzeń pietruszki
+    - liście pietruszki
+    - pietruszka suszona
+  de:
+    - Petersilie
+summary:
+  en: 'Parsley (Petroselinum crispum): leaves or root.'
+  pl: 'Pietruszka (Petroselinum crispum): natka lub korzeń.'
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A culinary herb.
+      pl: Zioło kulinarne.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted

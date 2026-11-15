@@ -247,14 +247,38 @@ function splitBrackets(s: string): { own: string; groups: string[] } {
   return { own: own.replace(/\s+/g, " ").trim(), groups };
 }
 
+/**
+ * Open Food Facts marks the allergens of a typed-in list with underscores: "_mleko_", "_ser twarogowy_".
+ * The marks are explicit, so they count even on an all-caps label. One run of non-underscores between
+ * the marks, so an unclosed "_" costs linear time; a span counts only if it holds a letter.
+ */
+const OFF_EMPHASIS_RE = /(?<![\p{L}\p{N}_])_+([^_]+)_+(?![\p{L}\p{N}_])/gu;
+const hasLetter = (s: string) => /\p{L}/u.test(s);
+
+/** The item's name without OFF's underscore marks: "_twaróg_ ziarnisty" → "twaróg ziarnisty". */
+function stripOffEmphasis(s: string): string {
+  return s.replace(OFF_EMPHASIS_RE, (whole: string, inner: string) => hasLetter(inner) ? inner : whole);
+}
+
 function emphasis(raw: string, allCaps: boolean): string[] {
-  if (allCaps) return [];
-  return [...raw.matchAll(/(?<![\p{L}])[\p{Lu}]{3,}(?![\p{L}])/gu)].map((m) => m[0])
+  const marked: string[] = [];
+  const spans: [number, number][] = [];
+  for (const m of raw.matchAll(OFF_EMPHASIS_RE)) {
+    if (!hasLetter(m[1])) continue;
+    marked.push(m[1].trim());
+    spans.push([m.index, m.index + m[0].length]);
+  }
+  // Capitals inside a marked span are that span's emphasis already: "_MLEKO W PROSZKU_" is one, not three.
+  const inMark = (i: number) => spans.some(([a, b]) => i >= a && i < b);
+  const caps = allCaps ? [] : [...raw.matchAll(/(?<![\p{L}])[\p{Lu}]{3,}(?![\p{L}])/gu)]
+    .filter((m) => !inMark(m.index))
+    .map((m) => m[0])
     .filter((w) =>
       !/^E\d/.test(w) &&
       // Acronyms, colour-name suffixes (FCF), organic and protected-origin markers are not allergen emphasis.
       !/^(?:INS|DL|RRR|MCT|WPC|WPI|BHA|BHT|CMC|UHT|GMO|FCF|BIO|EKO|ÖKO|DOP|IGP|AOP|PDO|PGI)$/.test(w)
     );
+  return [...new Set([...marked, ...caps])];
 }
 
 function parseItem(raw: string, path: string, allCaps: boolean, lessThan: boolean): ParsedItem {
@@ -309,7 +333,7 @@ function parseItem(raw: string, path: string, allCaps: boolean, lessThan: boolea
   return {
     path,
     raw: raw.trim(),
-    name: name.replace(/^[\s:*-]+|[\s:*.-]+$/g, ""),
+    name: stripOffEmphasis(name).replace(/^[\s:*-]+|[\s:*.-]+$/g, ""),
     role: "ingredient",
     ...(percent ? { percent } : {}),
     emphasized: emphasis(raw, allCaps),

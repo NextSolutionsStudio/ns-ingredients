@@ -23,7 +23,7 @@ summary:
     Rindfleisch, Schweinefleisch, Geflügelfleisch.
 variants:
   - id: pork
-    names: { en: [pork], pl: [mięso wieprzowe, wieprzowina], de: [Schweinefleisch] }
+    names: { en: [pork], pl: [mięso wieprzowe, wieprzowina, boczek wieprzowy, łopatka wieprzowa, szynka wieprzowa], de: [Schweinefleisch] }
     process: { en: "Meat from the domestic pig (Sus domesticus).", pl: "Mięso ze świni domowej (Sus domesticus)." }
     tells: ["wieprzow", "\\bpork\\b", "schweinefleisch"]
   - id: beef

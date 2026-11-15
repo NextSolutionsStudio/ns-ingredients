@@ -1,0 +1,204 @@
+id: modified-starch
+type: additive
+names:
+  en:
+    - modified starch
+    - modified starches
+  pl:
+    - skrobia modyfikowana
+    - skrobie modyfikowane
+  de:
+    - modifizierte Stärke
+functions:
+  - modified-starch
+  - thickener
+summary:
+  en: >-
+    Starch from maize, potato, tapioca, wheat or another plant, changed chemically (cross-linked, acetylated,
+    oxidised, hydroxypropylated…) so it thickens and stays stable through heating, freezing or acid. EU labels
+    may say just 'modified starch' without the E-number (E 1404–E 1452), so this entry stands for the whole
+    family; a named E-number resolves to its own entry. EFSA (2017) found no safety concern at the reported
+    uses and saw no need for a numerical ADI.
+  pl: >-
+    Skrobia z kukurydzy, ziemniaków, tapioki, pszenicy lub innej rośliny zmieniona chemicznie (sieciowana,
+    acetylowana, utleniana, hydroksypropylowana…), aby zagęszczała i zachowywała stabilność przy ogrzewaniu,
+    zamrażaniu czy w środowisku kwaśnym. Etykieta w UE może podać samo „skrobia modyfikowana” bez numeru E (E
+    1404–E 1452), więc ten wpis obejmuje całą grupę; podany numer E prowadzi do osobnego wpisu. EFSA (2017)
+    nie stwierdziła zagrożenia przy zgłoszonych zastosowaniach i nie widziała potrzeby ustalania liczbowego
+    ADI.
+variants:
+  - id: maize
+    names:
+      en:
+        - modified maize starch
+        - modified corn starch
+      pl:
+        - skrobia modyfikowana kukurydziana
+        - skrobie modyfikowane kukurydziane
+        - skrobia kukurydziana modyfikowana
+        - kukurydziana skrobia modyfikowana
+    process:
+      en: Native maize starch treated chemically or physically.
+      pl: Natywna skrobia kukurydziana poddana obróbce chemicznej lub fizycznej.
+    tells:
+      - kukurydz
+      - maize
+      - \bcorn\b
+      - \bmais
+  - id: potato
+    names:
+      en:
+        - modified potato starch
+      pl:
+        - skrobia modyfikowana ziemniaczana
+        - skrobia ziemniaczana modyfikowana
+    process:
+      en: Native potato starch treated chemically or physically.
+      pl: Natywna skrobia ziemniaczana poddana obróbce chemicznej lub fizycznej.
+    tells:
+      - ziemniacz
+      - potato
+      - kartoffel
+  - id: tapioca
+    names:
+      en:
+        - modified tapioca starch
+      pl:
+        - skrobia modyfikowana z tapioki
+        - skrobia modyfikowana tapiokowa
+    process:
+      en: Native tapioca (cassava) starch treated chemically or physically.
+      pl: Natywna skrobia z tapioki (manioku) poddana obróbce chemicznej lub fizycznej.
+    tells:
+      - tapiok
+      - tapioca
+      - manio
+      - cassava
+  - id: wheat
+    names:
+      en:
+        - modified wheat starch
+      pl:
+        - skrobia modyfikowana pszenna
+        - skrobia pszenna modyfikowana
+    process:
+      en: Native wheat starch treated chemically or physically.
+      pl: Natywna skrobia pszenna poddana obróbce chemicznej lub fizycznej.
+    tells:
+      - pszen
+      - wheat
+      - weizen
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Made from a plant starch.
+      pl: Wytwarzana ze skrobi roślinnej.
+    sources:
+      - id: efsa-modified-starches-2017
+      - id: reg-231-2012
+        locator: E 1404–E 1452 definitions
+  - code: diet.gluten_free
+    certainty: unknown
+    kind: estimate
+    grade: D
+    note:
+      en: >-
+        A bare 'modified starch' does not say which plant it came from, and wheat is one of the possible
+        sources.
+      pl: >-
+        Samo „skrobia modyfikowana” nie mówi, z jakiej rośliny pochodzi, a jednym z możliwych źródeł jest
+        pszenica.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Annex VII Part C, ''Modified starch'' and footnote 19'
+  - code: allergen.gluten
+    variant: wheat
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    population:
+      - coeliac
+    note:
+      en: The label names wheat as the source; EU Annex II item 1.
+      pl: 'Etykieta podaje pszenicę jako źródło; załącznik II UE, pkt 1.'
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 1
+  - code: diet.gluten_free
+    variant: wheat
+    certainty: 'no'
+    kind: fact
+    grade: A
+    note:
+      en: Wheat-based.
+      pl: Na bazie pszenicy.
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 1
+  - code: diet.gluten_free
+    variant: maize
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Made from a plant that is not a gluten-containing cereal in EU Annex II.
+      pl: 'Z rośliny, która nie jest zbożem zawierającym gluten w rozumieniu załącznika II UE.'
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 1
+  - code: diet.gluten_free
+    variant: potato
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Made from a plant that is not a gluten-containing cereal in EU Annex II.
+      pl: 'Z rośliny, która nie jest zbożem zawierającym gluten w rozumieniu załącznika II UE.'
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 1
+  - code: diet.gluten_free
+    variant: tapioca
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Made from a plant that is not a gluten-containing cereal in EU Annex II.
+      pl: 'Z rośliny, która nie jest zbożem zawierającym gluten w rozumieniu załącznika II UE.'
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 1
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: >-
+        Group I additive (Reg 1333/2008 Annex II Part C, as set by Reg 1129/2011): quantum satis in most food
+        categories.
+      pl: >-
+        Dodatek grupy I (rozporządzenie 1333/2008, załącznik II część C, w brzmieniu rozporządzenia
+        1129/2011): quantum satis w większości kategorii żywności.
+    source: swm-reg-1129-2011
+reference_values:
+  - type: ADI
+    value: not specified
+    body: EFSA
+    year: 2017
+    source: efsa-modified-starches-2017
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Generic family entry for the label term 'modified starch' (Reg 1169/2011 Annex VII Part C footnote 19 lets
+    labels omit the E-number). Named E 1404–E 1452 still resolve to their own (generated) entries.
+  - >-
+    Bare 'modified starch' is gluten 'unknown' on purpose, matching METHODOLOGY's treatment of modified
+    starches from the identity backbone. Reviewer question: Art. 21 emphasis rules arguably make a silent EU
+    label non-wheat; if accepted, the ingredient-wide claim can go.
+  - >-
+    No processing.ultra_processed_marker claim: the KB applies that code to flavourings and protein isolates
+    but not yet to other additive classes (lecithins, E471, carrageenan); kept consistent until that policy is
+    decided.

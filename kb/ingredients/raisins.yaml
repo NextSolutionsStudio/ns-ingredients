@@ -1,0 +1,30 @@
+id: raisins
+type: ingredient
+names:
+  en:
+    - raisins
+    - sultanas
+  pl:
+    - rodzynki
+    - sułtanki
+  de:
+    - Rosinen
+    - Sultaninen
+summary:
+  en: 'Dried grapes (Vitis vinifera). Their sugars are intrinsic to the fruit, not added sugars in WHO''s sense.'
+  pl: >-
+    Suszone winogrona (Vitis vinifera). Ich cukry są naturalnie zawarte w owocu, a nie cukrami dodanymi w
+    rozumieniu WHO.
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A dried fruit.
+      pl: Suszony owoc.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted

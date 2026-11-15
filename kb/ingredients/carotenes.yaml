@@ -1,0 +1,174 @@
+id: carotenes
+type: additive
+e_number: E160a
+names:
+  en:
+    - carotenes
+    - beta-carotene
+    - mixed carotenes
+    - plant carotenes
+    - algal carotenes
+  pl:
+    - karoteny
+    - karoten
+    - beta-karoten
+    - karoteny roślinne
+    - karoteny z alg
+  de:
+    - Carotine
+    - Beta-Carotin
+functions:
+  - colour
+summary:
+  en: >-
+    Orange colours from the carotene family. E 160a covers four routes: synthetic beta-carotene, carotenes
+    extracted from plants (carrots, vegetable oils, grass, alfalfa, nettle), beta-carotene from fermentation
+    of the fungus Blakeslea trispora, and carotenes from the alga Dunaliella salina. A label saying only
+    'karoteny' does not tell them apart. EFSA (2012) could not set an ADI from the available data, but found
+    no safety concern for use as a colour as long as intake from colours and supplements stays within what
+    ordinary food provides (5–10 mg a day).
+  pl: >-
+    Pomarańczowe barwniki z grupy karotenów. E 160a obejmuje cztery drogi: syntetyczny beta-karoten, karoteny
+    ekstrahowane z roślin (marchew, oleje roślinne, trawa, lucerna, pokrzywa), beta-karoten z fermentacji
+    grzyba Blakeslea trispora oraz karoteny z alg Dunaliella salina. Etykieta z samym „karoteny” ich nie
+    rozróżnia. EFSA (2012) nie mogła ustalić ADI na podstawie dostępnych danych, ale nie widziała zagrożenia
+    przy stosowaniu jako barwnik, o ile spożycie z barwników i suplementów nie przekracza ilości dostarczanej
+    przez zwykłą żywność (5–10 mg dziennie).
+variants:
+  - id: synthetic
+    names:
+      en:
+        - synthetic beta-carotene
+      pl:
+        - syntetyczny beta-karoten
+    process:
+      en: Beta-carotene made by chemical synthesis (E 160a(i)).
+      pl: Beta-karoten otrzymywany syntezą chemiczną (E 160a(i)).
+    tells:
+      - syntetyczn
+      - synthetic
+  - id: plant
+    names:
+      en:
+        - plant carotenes
+      pl:
+        - karoteny roślinne
+    process:
+      en: 'Solvent extraction of edible plants, carrots, vegetable oils, grass, alfalfa or nettle (E 160a(ii)).'
+      pl: >-
+        Ekstrakcja rozpuszczalnikiem z roślin jadalnych, marchwi, olejów roślinnych, trawy, lucerny lub
+        pokrzywy (E 160a(ii)).
+    tells:
+      - roslinn
+      - z marchwi
+      - plant carotenes
+  - id: blakeslea
+    names:
+      en:
+        - beta-carotene from Blakeslea trispora
+    process:
+      en: >-
+        Fermentation with the fungus Blakeslea trispora, then solvent extraction and crystallisation (E
+        160a(iii)).
+      pl: >-
+        Fermentacja z udziałem grzyba Blakeslea trispora, następnie ekstrakcja rozpuszczalnikiem i
+        krystalizacja (E 160a(iii)).
+    tells:
+      - blakeslea
+  - id: algal
+    names:
+      en:
+        - algal carotenes
+      pl:
+        - karoteny z alg
+    process:
+      en: Extracted from the alga Dunaliella salina and suspended in edible oil (E 160a(iv)).
+      pl: Ekstrahowane z alg Dunaliella salina i zawieszone w oleju jadalnym (E 160a(iv)).
+    tells:
+      - z alg
+      - algal
+      - dunaliella
+assertions:
+  - code: origin.chemical_synthesis
+    variant: synthetic
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: The label names the synthetic form.
+      pl: Etykieta podaje formę syntetyczną.
+    sources:
+      - id: efsa-carotenes-2012
+  - code: origin.plant
+    variant: plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Extracted from plants.
+      pl: Ekstrahowane z roślin.
+    sources:
+      - id: reg-231-2012
+        locator: 'E 160a(ii) plant carotenes, definition'
+  - code: origin.microbial_fermentation
+    variant: blakeslea
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Made by fungal fermentation.
+      pl: Wytwarzany przez fermentację grzybową.
+    sources:
+      - id: reg-231-2012
+        locator: 'E 160a(iii), definition'
+  - code: origin.plant
+    variant: algal
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Extracted from an alga.
+      pl: Ekstrahowane z alg.
+    sources:
+      - id: reg-231-2012
+        locator: 'E 160a(iv) algal carotenes, definition'
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: >-
+        Group II colour (Reg 1333/2008 Annex II Part C, as set by Reg 1129/2011): quantum satis where colours
+        are allowed.
+      pl: >-
+        Barwnik grupy II (rozporządzenie 1333/2008, załącznik II część C, w brzmieniu rozporządzenia
+        1129/2011): quantum satis tam, gdzie barwniki są dozwolone.
+    source: swm-reg-1129-2011
+reference_values:
+  - type: ADI
+    value: not established
+    body: EFSA
+    year: 2012
+    source: efsa-carotenes-2012
+  - type: ADI
+    value: 5
+    unit: mg/kg bw/day
+    body: JECFA
+    year: 2001
+    source: efsa-carotenes-2012
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Reviewer decision: EFSA 2012 established no ADI because rodent data are unsuitable (rodents convert
+    beta-carotene to vitamin A far more efficiently than humans), and set an intake condition (≤ 5–10 mg/day
+    from colour and supplement use, keeping total supplemental beta-carotene under 15 mg/day).
+    health.no_safe_level_established was NOT asserted: EFSA found no safety concern at colour-use levels, so
+    it reads as a conditional all-clear rather than 'no safe level'. Revisit if the code's definition is meant
+    to cover it.
+  - >-
+    Variant numbering follows Reg 231/2012 as published (E 160a(i) beta-carotene, (ii) plant carotenes, (iii)
+    Blakeslea trispora, (iv) algal); the EFSA 2012 opinion uses the older two-way split (mixed carotenes /
+    beta-carotene). No priors: no market-share source was opened.
+  - >-
+    Not asserted: diet.vegan. All four routes are non-animal, but commercial beta-carotene preparations are
+    often formulated with carriers (possibly gelatine) that this specification does not cover.

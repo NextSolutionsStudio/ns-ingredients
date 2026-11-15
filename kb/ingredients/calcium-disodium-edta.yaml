@@ -1,0 +1,37 @@
+id: calcium-disodium-edta
+type: additive
+e_number: E385
+names:
+  en:
+    - calcium disodium EDTA
+    - calcium disodium ethylenediaminetetraacetate
+    - calcium disodium edetate
+  pl:
+    - sól wapniowo-disodowa EDTA
+    - wersenian wapniowo-disodowy
+    - wersenian disodowo-wapniowy
+    - sól wapniowo-disodowa kwasu etylenodiaminotetraoctowego
+    - EDTA wapniowo-disodowy
+  de:
+    - Calcium-Dinatrium-EDTA
+    - Calcium-dinatrium-ethylendiamintetraacetat
+functions:
+  - sequestrant
+  - antioxidant
+summary:
+  en: >-
+    A sequestrant that binds metal ions so they cannot catalyse spoilage; used in a few products such as
+    mayonnaise-type sauces and canned pulses.
+  pl: >-
+    Sekwestrant wiążący jony metali, aby nie katalizowały psucia się; stosowany w nielicznych produktach, np.
+    sosach typu majonezowego i konserwowych strączkach.
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    source: reg-1333-2008
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Identity-only: no assessment opened. The food-category list in the summary is general knowledge, not
+    checked against Annex II; drop it if a reviewer prefers.

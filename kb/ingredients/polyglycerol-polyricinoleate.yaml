@@ -1,0 +1,70 @@
+id: polyglycerol-polyricinoleate
+type: additive
+e_number: E476
+names:
+  en:
+    - polyglycerol polyricinoleate
+    - PGPR
+    - polyglycerol esters of polycondensed fatty acids from castor oil
+  pl:
+    - polirycynooleinian poliglicerolu
+    - polirycynoleinian poliglicerolu
+    - estry poliglicerolu i polikondensowanych kwasów tłuszczowych z oleju rycynowego
+  de:
+    - Polyglycerin-Polyricinoleat
+functions:
+  - emulsifier
+summary:
+  en: >-
+    An emulsifier made by esterifying polyglycerol with condensed castor-oil fatty acids, used mainly in
+    chocolate to make it flow. EFSA (2017) raised the ADI from 7.5 to 25 mg/kg body weight a day and found
+    estimated intakes below it.
+  pl: >-
+    Emulgator otrzymywany przez estryfikację poliglicerolu skondensowanymi kwasami tłuszczowymi oleju
+    rycynowego, stosowany głównie w czekoladzie, by poprawić jej płynność. EFSA (2017) podniosła ADI z 7,5 do
+    25 mg/kg masy ciała na dzień i oceniła, że szacowane spożycie go nie przekracza.
+assertions:
+  - code: origin.vegetable_oil_derived
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Made with fatty acids from castor oil.
+      pl: Wytwarzany z kwasów tłuszczowych oleju rycynowego.
+    sources:
+      - id: reg-231-2012
+        locator: 'E 476, definition'
+  - code: diet.vegan
+    certainty: maybe
+    kind: estimate
+    grade: D
+    note:
+      en: >-
+        The fatty acids are from castor oil; the specification does not tie the polyglycerol's glycerol to a
+        plant or animal source.
+      pl: >-
+        Kwasy tłuszczowe pochodzą z oleju rycynowego; specyfikacja nie wiąże glicerolu użytego do
+        poliglicerolu ze źródłem roślinnym ani zwierzęcym.
+    sources:
+      - id: reg-231-2012
+        locator: 'E 476, definition'
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: >-
+        Group I additive (Reg 1333/2008 Annex II Part C, as set by Reg 1129/2011): quantum satis in most food
+        categories.
+      pl: >-
+        Dodatek grupy I (rozporządzenie 1333/2008, załącznik II część C, w brzmieniu rozporządzenia
+        1129/2011): quantum satis w większości kategorii żywności.
+    source: swm-reg-1129-2011
+reference_values:
+  - type: ADI
+    value: 25
+    unit: mg/kg bw/day
+    body: EFSA
+    year: 2017
+    source: efsa-pgpr-2017
+review_status: draft
+provenance: ai-drafted

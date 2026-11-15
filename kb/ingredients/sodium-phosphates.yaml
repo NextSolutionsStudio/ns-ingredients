@@ -1,0 +1,61 @@
+id: sodium-phosphates
+type: additive
+e_number: E339
+names:
+  en:
+    - sodium phosphates
+    - sodium phosphate
+    - trisodium phosphate
+    - monosodium phosphate
+    - disodium phosphate
+    - sodium orthophosphate
+  pl:
+    - fosforany sodu
+    - fosforan sodu
+    - fosforan sodowy
+    - fosforan trisodu
+    - fosforan trisodowy
+    - fosforan disodowy
+    - fosforan monosodowy
+    - diwodorofosforan sodu
+    - ortofosforan sodu
+  de:
+    - Natriumphosphate
+    - Natriumphosphat
+    - Trinatriumphosphat
+    - Mononatriumphosphat
+functions:
+  - acidity-regulator
+  - emulsifying-salts
+  - stabiliser
+summary:
+  en: >-
+    Mono-, di- and trisodium phosphates (E 339(i)–(iii)), used as acidity regulators and emulsifying salts.
+    EFSA (2019) set a group ADI of 40 mg/kg body weight a day, expressed as phosphorus, for all phosphate
+    additives, and noted that estimated intake from the whole diet exceeded it on average for infants,
+    toddlers and other children.
+  pl: >-
+    Fosforany mono-, di- i trisodowe (E 339(i)–(iii)), stosowane jako regulatory kwasowości i sole emulgujące.
+    EFSA (2019) ustaliła grupowe ADI 40 mg/kg masy ciała na dzień, wyrażone jako fosfor, dla wszystkich
+    fosforanów stosowanych jako dodatki, i zauważyła, że szacowane spożycie z całej diety przekraczało je
+    średnio u niemowląt, małych dzieci i starszych dzieci.
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: >-
+        Authorised in listed food categories at maximum levels expressed as P2O5, individually or combined
+        with the other phosphates.
+      pl: >-
+        Dopuszczony w wymienionych kategoriach żywności w maksymalnych ilościach wyrażonych jako P2O5,
+        pojedynczo lub łącznie z innymi fosforanami.
+    source: swm-reg-1129-2011
+reference_values:
+  - type: group_ADI
+    value: 40
+    unit: mg/kg bw/day (as phosphorus)
+    body: EFSA
+    year: 2019
+    source: efsa-phosphates-2019
+review_status: draft
+provenance: ai-drafted

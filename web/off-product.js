@@ -33,14 +33,6 @@ export const PRODUCT_FIELDS = [
 ].join(",");
 
 /**
- * OFF marks allergens as _mleka_; the parser reads CAPS as label emphasis, so carry it over.
- * @param {string} text
- */
-export function offEmphasisToCaps(text) {
-  return text.replace(/_([^_\n]{1,60})_/g, (_, s) => s.toUpperCase());
-}
-
-/**
  * Declared sugars in the API's nutrition shape, or null. OFF keeps liquids per 100 ml in its *_100g fields;
  * a product in en:beverages is read as a drink. Carbohydrate is read as EU available carbohydrate (fibre
  * excluded), which holds for EU labels; a US label's total carbohydrate would overstate the GL.
@@ -90,13 +82,15 @@ export function toProduct(p) {
   /** @type {readonly string[]} */
   const langs = LANGS;
   const order = main && langs.includes(main) ? [main, ...langs.filter((l) => l !== main)] : [...langs];
+  // Texts stay as OFF prints them: the parser reads its _allergen_ marks as emphasis itself, also on an
+  // all-caps label, where marks turned into capitals would be lost.
   for (const l of order) {
     const t = str(p[`ingredients_text_${l}`]) ?? (main === l ? str(p.ingredients_text) : null);
-    if (t) texts.push({ lang: l, text: offEmphasisToCaps(t), supported: true });
+    if (t) texts.push({ lang: l, text: t, supported: true });
   }
   const fallback = str(p.ingredients_text);
-  if (fallback && !texts.some((t) => t.text === offEmphasisToCaps(fallback))) {
-    texts.push({ lang: main ?? "?", text: offEmphasisToCaps(fallback), supported: false });
+  if (fallback && !texts.some((t) => t.text === fallback)) {
+    texts.push({ lang: main ?? "?", text: fallback, supported: false });
   }
   // Contributors sometimes leave a fragment in one language (Nutella's English: "sugar, palm oil", German
   // complete). A supported text with under half the items of the fullest one goes after it.

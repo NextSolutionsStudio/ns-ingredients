@@ -1,0 +1,46 @@
+id: vinegar
+type: ingredient
+names:
+  en:
+    - vinegar
+    - spirit vinegar
+    - cider vinegar
+    - apple cider vinegar
+    - wine vinegar
+    - rice vinegar
+  pl:
+    - ocet
+    - ocet spirytusowy
+    - ocet jabłkowy
+    - ocet winny
+    - ocet winny biały
+    - ocet ryżowy
+    - ocet z wina
+  de:
+    - Essig
+    - Branntweinessig
+    - Apfelessig
+    - Weinessig
+summary:
+  en: >-
+    Vinegar: ethanol from an alcoholic liquid (spirit, cider, wine) converted to acetic acid by acetic acid
+    bacteria.
+  pl: >-
+    Ocet: etanol z płynu alkoholowego (spirytusu, cydru, wina) przekształcony w kwas octowy przez bakterie
+    octowe.
+assertions:
+  - code: origin.microbial_fermentation
+    certainty: 'yes'
+    kind: estimate
+    grade: C
+    note:
+      en: Acetic fermentation by bacteria.
+      pl: Fermentacja octowa z udziałem bakterii.
+    sources:
+      - id: wikipedia-vinegar
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Estimate, not fact: the opened reference also mentions spirit vinegar made from chemically produced acetic
+    acid. An EU or Codex vinegar standard would make this a fact; none was opened.

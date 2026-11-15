@@ -1,0 +1,51 @@
+id: sodium-citrates
+type: additive
+e_number: E331
+names:
+  en:
+    - sodium citrates
+    - sodium citrate
+    - trisodium citrate
+    - disodium citrate
+    - monosodium citrate
+  pl:
+    - cytryniany sodu
+    - cytrynian sodu
+    - cytrynian trisodowy
+    - cytrynian trisodu
+    - cytrynian disodowy
+    - cytrynian disodu
+    - cytrynian monosodowy
+    - cytrynian monosodu
+  de:
+    - Natriumcitrate
+    - Natriumcitrat
+    - Trinatriumcitrat
+functions:
+  - acidity-regulator
+  - emulsifying-salts
+  - sequestrant
+summary:
+  en: >-
+    Mono-, di- and trisodium salts of citric acid (E 331(i)–(iii)), used as acidity regulators and as
+    emulsifying salts in processed cheese.
+  pl: >-
+    Mono-, di- i trisodowe sole kwasu cytrynowego (E 331(i)–(iii)), stosowane jako regulatory kwasowości i
+    jako sole emulgujące w serach topionych.
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: >-
+        Group I additive (Reg 1333/2008 Annex II Part C, as set by Reg 1129/2011): quantum satis in most food
+        categories.
+      pl: >-
+        Dodatek grupy I (rozporządzenie 1333/2008, załącznik II część C, w brzmieniu rozporządzenia
+        1129/2011): quantum satis w większości kategorii żywności.
+    source: swm-reg-1129-2011
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Identity-only: no EFSA re-evaluation of E 331 was found, so no assessment is recorded. The parent acid is
+    kb/ingredients/citric-acid.yaml.

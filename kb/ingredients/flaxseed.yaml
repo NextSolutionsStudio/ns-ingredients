@@ -1,0 +1,29 @@
+id: flaxseed
+type: ingredient
+names:
+  en:
+    - linseed
+    - flaxseed
+  pl:
+    - siemię lniane
+    - nasiona lnu
+    - siemię lniane złote
+    - mielone siemię lniane
+  de:
+    - Leinsamen
+summary:
+  en: Linseed (Linum usitatissimum).
+  pl: Siemię lniane (Linum usitatissimum).
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A seed.
+      pl: Nasiona.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted

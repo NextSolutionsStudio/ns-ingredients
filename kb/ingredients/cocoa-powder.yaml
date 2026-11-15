@@ -20,7 +20,7 @@ variants:
   - id: fat-reduced
     names:
       en: [fat-reduced cocoa powder, low-fat cocoa powder]
-      pl: [kakao w proszku o obniżonej zawartości tłuszczu, kakao o zmniejszonej zawartości tłuszczu]
+      pl: [kakao w proszku o obniżonej zawartości tłuszczu, kakao o zmniejszonej zawartości tłuszczu, kakao o obniżonej zawartości tłuszczu, proszek kakaowy o obniżonej zawartości tłuszczu]
     process:
       en: "Cocoa powder pressed further, or blended, to bring cocoa butter below the 20% (dry-matter) threshold that defines plain cocoa powder."
       pl: "Kakao w proszku dodatkowo wytłoczone lub mieszane, tak by zawartość masła kakaowego spadła poniżej progu 20% (w suchej masie) definiującego zwykłe kakao w proszku."

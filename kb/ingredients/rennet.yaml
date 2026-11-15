@@ -1,0 +1,100 @@
+id: rennet
+type: processing_aid
+names:
+  en:
+    - rennet
+  pl:
+    - podpuszczka
+  de:
+    - Lab
+summary:
+  en: >-
+    The enzyme preparation that curdles milk for cheese. Animal rennet comes from calves' stomachs.
+    'Microbial' rennet is a coagulating enzyme from fungi such as Rhizomucor miehei, or chymosin made by
+    genetically modified microorganisms (fermentation-produced chymosin), which labels often also call
+    microbial.
+  pl: >-
+    Preparat enzymatyczny ścinający mleko przy produkcji sera. Podpuszczka zwierzęca pochodzi z żołądków
+    cieląt. Podpuszczka „mikrobiologiczna” to enzym koagulujący z grzybów, np. Rhizomucor miehei, albo
+    chymozyna wytwarzana przez genetycznie zmodyfikowane mikroorganizmy (chymozyna fermentacyjna), którą
+    etykiety często także nazywają mikrobiologiczną.
+variants:
+  - id: microbial
+    names:
+      en:
+        - microbial rennet
+      pl:
+        - podpuszczka mikrobiologiczna
+        - mikrobiologiczna podpuszczka
+        - podpuszczka mikrobiologiczna pochodzenia niezwierzęcego
+      de:
+        - mikrobielles Lab
+    process:
+      en: 'Coagulating enzymes from fungal fermentation, or chymosin made by genetically modified microorganisms.'
+      pl: >-
+        Enzymy koagulujące z fermentacji grzybowej lub chymozyna wytwarzana przez genetycznie zmodyfikowane
+        mikroorganizmy.
+    tells:
+      - mikrobiolog
+      - microbial
+      - mikrobiell
+  - id: animal
+    names:
+      en:
+        - animal rennet
+        - calf rennet
+      pl:
+        - podpuszczka zwierzęca
+        - podpuszczka cielęca
+      de:
+        - Kälberlab
+    process:
+      en: Extracted from the stomachs of calves.
+      pl: Pozyskiwana z żołądków cieląt.
+    tells:
+      - zwierzec
+      - ciel
+      - animal
+      - \bcalf
+      - kalber
+assertions:
+  - code: origin.microbial_fermentation
+    variant: microbial
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: The label declares a microbial rennet.
+      pl: Etykieta deklaruje podpuszczkę mikrobiologiczną.
+    sources:
+      - id: prot-vrg-fpc-rennet
+  - code: origin.gmo_derived
+    variant: microbial
+    certainty: maybe
+    kind: estimate
+    grade: D
+    note:
+      en: >-
+        Fermentation-produced chymosin, made by genetically modified microorganisms, is often labelled
+        'microbial rennet'; the label does not say which kind.
+      pl: >-
+        Chymozyna fermentacyjna, wytwarzana przez genetycznie zmodyfikowane mikroorganizmy, bywa oznaczana
+        jako „podpuszczka mikrobiologiczna”; etykieta nie mówi, o który rodzaj chodzi.
+    sources:
+      - id: prot-vrg-fpc-rennet
+  - code: origin.animal
+    variant: animal
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: The label declares animal (calf) rennet.
+      pl: Etykieta deklaruje podpuszczkę zwierzęcą (cielęcą).
+    sources:
+      - id: prot-vrg-fpc-rennet
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    No priors: no source on EU market shares of animal vs microbial rennet was opened. A bare 'podpuszczka'
+    therefore stays 'unknown' for vegetarians.

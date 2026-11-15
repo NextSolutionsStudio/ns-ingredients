@@ -1,0 +1,58 @@
+id: triphosphates
+type: additive
+e_number: E451
+names:
+  en:
+    - triphosphates
+    - pentasodium triphosphate
+    - sodium tripolyphosphate
+    - pentapotassium triphosphate
+  pl:
+    - trifosforany
+    - trifosforan sodu
+    - trifosforan pentasodowy
+    - trifosforan pentasodu
+    - trifosforan pentapotasowy
+    - tripolifosforan sodu
+  de:
+    - Triphosphate
+    - Pentanatriumtriphosphat
+functions:
+  - stabiliser
+  - emulsifying-salts
+  - sequestrant
+summary:
+  en: >-
+    Sodium and potassium triphosphates, used mainly in meat and fish products to hold water and as emulsifying
+    salts. EFSA (2019) set a group ADI of 40 mg/kg body weight a day, expressed as phosphorus, for all
+    phosphate additives (E 338–341, E 343, E 450–452), and noted that estimated intake from the whole diet
+    exceeded it on average for infants, toddlers and other children.
+  pl: >-
+    Trifosforany sodu i potasu, stosowane głównie w przetworach mięsnych i rybnych do zatrzymywania wody oraz
+    jako sole emulgujące. EFSA (2019) ustaliła grupowe ADI 40 mg/kg masy ciała na dzień, wyrażone jako fosfor,
+    dla wszystkich fosforanów stosowanych jako dodatki (E 338–341, E 343, E 450–452), i zauważyła, że
+    szacowane spożycie z całej diety przekraczało je średnio u niemowląt, małych dzieci i starszych dzieci.
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: >-
+        Authorised in listed food categories at maximum levels expressed as P2O5, individually or combined
+        with the other phosphates.
+      pl: >-
+        Dopuszczony w wymienionych kategoriach żywności w maksymalnych ilościach wyrażonych jako P2O5,
+        pojedynczo lub łącznie z innymi fosforanami.
+    source: swm-reg-1129-2011
+reference_values:
+  - type: group_ADI
+    value: 40
+    unit: mg/kg bw/day (as phosphorus)
+    body: EFSA
+    year: 2019
+    source: efsa-phosphates-2019
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Identity and assessment only: no origin claim, since the opened sources do not describe the phosphate raw
+    material route.

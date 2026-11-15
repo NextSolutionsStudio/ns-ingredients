@@ -1,0 +1,38 @@
+id: apple
+type: ingredient
+names:
+  en:
+    - apple
+    - apples
+    - apple purée
+    - dried apple
+  pl:
+    - jabłko
+    - jabłka
+    - przecier jabłkowy
+    - jabłka suszone
+    - suszone jabłka
+    - przecier z jabłek
+  de:
+    - Apfel
+    - Äpfel
+summary:
+  en: >-
+    Apple (Malus domestica), fresh, dried or as purée. Apple juice is not covered here: juices count as free
+    sugars.
+  pl: >-
+    Jabłko (Malus domestica), świeże, suszone lub jako przecier. Sok jabłkowy nie jest tu ujęty: soki liczą
+    się jako cukry wolne.
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A fruit.
+      pl: Owoc.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted
