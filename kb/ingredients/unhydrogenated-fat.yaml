@@ -2,7 +2,7 @@ id: unhydrogenated-fat
 type: fat
 names:
   en: [non-hydrogenated oil, unhydrogenated oil, not hydrogenated oil, not partially hydrogenated oil, not fully hydrogenated oil, non partially hydrogenated oil, non-hydrogenated oils, unhydrogenated oils, not hydrogenated oils, not partially hydrogenated oils, not fully hydrogenated oils, non partially hydrogenated oils, non-hydrogenated fat, unhydrogenated fat, not hydrogenated fat, not partially hydrogenated fat, not fully hydrogenated fat, non partially hydrogenated fat, non-hydrogenated fats, unhydrogenated fats, not hydrogenated fats, not partially hydrogenated fats, not fully hydrogenated fats, non partially hydrogenated fats]
-  pl: [tłuszcz lub olej nieutwardzony, olej nie utwardzony, olej nieutwardzony, olej nie uwodorniony, olej nieuwodorniony, tłuszcz nie utwardzony, tłuszcz nieutwardzony, tłuszcz nie uwodorniony, tłuszcz nieuwodorniony, oleje nie utwardzone, oleje nieutwardzone, oleje nie uwodornione, oleje nieuwodornione, tłuszcze nie utwardzone, tłuszcze nieutwardzone, tłuszcze nie uwodornione, tłuszcze nieuwodornione]
+  pl: [tłuszcz lub olej nieutwardzony, nie utwardzony oil, nie utwardzone oil, nie uwodorniony oil, nie uwodornione oil, nieutwardzony oil, nieutwardzone oil, nieuwodorniony oil, nieuwodornione oil]
 summary:
   en: >-
     A fat or oil that the label says is not hydrogenated, without naming whether it is vegetable or animal
@@ -16,4 +16,5 @@ assertions: []
 review_status: draft
 provenance: ai-drafted
 review_notes:
+  - "Names of the form \"<Polish negation> oil\" are context-only, as on hydrogenated-fat: they resolve a bracketed \"(nieutwardzony)\" after an oil or fat."
   - "No origin, no diet and no processing on purpose: the label denies hydrogenation and does not name the source."
