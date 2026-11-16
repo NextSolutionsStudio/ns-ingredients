@@ -358,10 +358,12 @@ function nameSpans(s: string, kb: NameOracle): Span[] {
     }
   }
   // Variant tells ("gluten ?free" declares gluten-free oats). They are written for one item's text, often with
-  // `.*` or `^`, so they are never run over the whole segment: a separator is kept when a tell fires on the two
-  // parts it joins, read as one, and on neither part alone. Only TELL_WORDS words, at most TELL_CHARS characters, on each side are read: a
-  // declaration printed across a separator is a short phrase, and a `.*` tell over an unbounded part
-  // backtracks ("kakao obniz " × 991 took seconds). So the work per separator is bounded.
+  // `.*` or `^`, so they are never run over the whole segment: a separator is kept when one tell fires on the
+  // two parts it joins, read as one, and that same tell on neither part alone. Each tell is judged on its own:
+  // in "gluten - free rice flour" rice's own tell fires on the right part, and that must not undo "gluten ?free".
+  // Only TELL_WORDS words, at most TELL_CHARS characters, on each side are read: a declaration printed across a
+  // separator is a short phrase, and a `.*` tell over an unbounded part backtracks ("kakao obniz " × 991 took
+  // seconds). So the work per separator is bounded.
   const tells = kb.tells?.() ?? [];
   if (tells.length && words.length > 1) {
     const gaps = [0]; // word indices that start a part: after a dash or a full stop between words
@@ -370,12 +372,13 @@ function nameSpans(s: string, kb: NameOracle): Span[] {
     }
     gaps.push(words.length);
     const text = (from: number, to: number) => words.slice(from, to).map((w) => w.w).join(" ");
-    const fires = (t: string) => tells.some((re) => (re.lastIndex = 0, re.test(t)));
+    const fires = (re: RegExp, t: string) => (re.lastIndex = 0, re.test(t));
     for (let g = 1; g < gaps.length - 1; g++) {
       const from = Math.max(gaps[g - 1], gaps[g] - TELL_WORDS),
         to = Math.min(gaps[g + 1], gaps[g] + TELL_WORDS);
       const left = text(from, gaps[g]).slice(-TELL_CHARS), right = text(gaps[g], to).slice(0, TELL_CHARS);
-      if (fires(`${left} ${right}`) && !fires(left) && !fires(right)) {
+      const joined = `${left} ${right}`;
+      if (tells.some((re) => fires(re, joined) && !fires(re, left) && !fires(re, right))) {
         spans.push([words[from].a, words[to - 1].b]);
       }
     }

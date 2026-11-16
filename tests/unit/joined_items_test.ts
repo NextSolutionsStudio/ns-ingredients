@@ -289,6 +289,20 @@ Deno.test("a variant tell spanning a dash keeps it: the declared variant survive
     ["1", "oats", "gluten-free-oats"],
   ]);
   assertEquals(oats.diets.gluten_free.status, "maybe");
+  // Each tell is judged on its own: rice's, maize's and potato's own tells fire on the right part, and that
+  // must not undo "gluten ?free" across the dash (it did: exact gluten, a false allergen, gluten_free "no").
+  for (
+    const [text, id] of [
+      ["gluten - free rice flour", "rice-flour"],
+      ["gluten - free corn starch", "maize-starch"],
+      ["gluten - free potato starch", "potato-starch"],
+    ]
+  ) {
+    const a = run(`Ingredients: ${text}`, "en");
+    assertEquals(a.items.map((i) => i.match?.ingredient_id), [id], text);
+    assertEquals(a.diets.gluten_free.status, "yes", text);
+    assert(!a.flags.some((f) => f.code === "allergen.gluten"), text);
+  }
   // A tell inside one part does not hold the list together: the sugar is still cut off.
   assertEquals(
     run("Ingredients: sugar - gluten-free oats", "en").items.map((
