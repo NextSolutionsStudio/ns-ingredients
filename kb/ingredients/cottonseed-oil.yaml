@@ -19,6 +19,10 @@ names:
     - tłuszcze roślinne bawełniane
     - oleje roślinne bawełniane
     - oleje roślinne bawełniany
+    - olej roślinny z nasion bawełny
+    - tłuszcz roślinny z nasion bawełny
+    - oleje roślinne z nasion bawełny
+    - tłuszcze roślinne z nasion bawełny
   de:
     - Baumwollsaatöl
     - Baumwollsamenöl
@@ -67,6 +71,22 @@ variants:
         - oleje roślinne bawełniany utwardzone
         - uwodornione oleje roślinne bawełniany
         - oleje roślinne bawełniany uwodornione
+        - utwardzony olej roślinny z nasion bawełny
+        - olej roślinny z nasion bawełny utwardzony
+        - uwodorniony olej roślinny z nasion bawełny
+        - olej roślinny z nasion bawełny uwodorniony
+        - utwardzony tłuszcz roślinny z nasion bawełny
+        - tłuszcz roślinny z nasion bawełny utwardzony
+        - uwodorniony tłuszcz roślinny z nasion bawełny
+        - tłuszcz roślinny z nasion bawełny uwodorniony
+        - utwardzone oleje roślinne z nasion bawełny
+        - oleje roślinne z nasion bawełny utwardzone
+        - uwodornione oleje roślinne z nasion bawełny
+        - oleje roślinne z nasion bawełny uwodornione
+        - utwardzone tłuszcze roślinne z nasion bawełny
+        - tłuszcze roślinne z nasion bawełny utwardzone
+        - uwodornione tłuszcze roślinne z nasion bawełny
+        - tłuszcze roślinne z nasion bawełny uwodornione
       de:
         - gehärtetes Baumwollsaatöl
     process:
@@ -108,6 +128,22 @@ variants:
         - oleje roślinne bawełniany częściowo utwardzone
         - częściowo uwodornione oleje roślinne bawełniany
         - oleje roślinne bawełniany częściowo uwodornione
+        - częściowo utwardzony olej roślinny z nasion bawełny
+        - olej roślinny z nasion bawełny częściowo utwardzony
+        - częściowo uwodorniony olej roślinny z nasion bawełny
+        - olej roślinny z nasion bawełny częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny z nasion bawełny
+        - tłuszcz roślinny z nasion bawełny częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny z nasion bawełny
+        - tłuszcz roślinny z nasion bawełny częściowo uwodorniony
+        - częściowo utwardzone oleje roślinne z nasion bawełny
+        - oleje roślinne z nasion bawełny częściowo utwardzone
+        - częściowo uwodornione oleje roślinne z nasion bawełny
+        - oleje roślinne z nasion bawełny częściowo uwodornione
+        - częściowo utwardzone tłuszcze roślinne z nasion bawełny
+        - tłuszcze roślinne z nasion bawełny częściowo utwardzone
+        - częściowo uwodornione tłuszcze roślinne z nasion bawełny
+        - tłuszcze roślinne z nasion bawełny częściowo uwodornione
       de:
         - teilweise gehärtetes Baumwollsaatöl
     process:
@@ -181,6 +217,38 @@ variants:
         - oleje roślinne bawełniany w pełni utwardzone
         - w pełni uwodornione oleje roślinne bawełniany
         - oleje roślinne bawełniany w pełni uwodornione
+        - całkowicie utwardzony olej roślinny z nasion bawełny
+        - olej roślinny z nasion bawełny całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny z nasion bawełny
+        - olej roślinny z nasion bawełny całkowicie uwodorniony
+        - w pełni utwardzony olej roślinny z nasion bawełny
+        - olej roślinny z nasion bawełny w pełni utwardzony
+        - w pełni uwodorniony olej roślinny z nasion bawełny
+        - olej roślinny z nasion bawełny w pełni uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny z nasion bawełny
+        - tłuszcz roślinny z nasion bawełny całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny z nasion bawełny
+        - tłuszcz roślinny z nasion bawełny całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz roślinny z nasion bawełny
+        - tłuszcz roślinny z nasion bawełny w pełni utwardzony
+        - w pełni uwodorniony tłuszcz roślinny z nasion bawełny
+        - tłuszcz roślinny z nasion bawełny w pełni uwodorniony
+        - całkowicie utwardzone oleje roślinne z nasion bawełny
+        - oleje roślinne z nasion bawełny całkowicie utwardzone
+        - całkowicie uwodornione oleje roślinne z nasion bawełny
+        - oleje roślinne z nasion bawełny całkowicie uwodornione
+        - w pełni utwardzone oleje roślinne z nasion bawełny
+        - oleje roślinne z nasion bawełny w pełni utwardzone
+        - w pełni uwodornione oleje roślinne z nasion bawełny
+        - oleje roślinne z nasion bawełny w pełni uwodornione
+        - całkowicie utwardzone tłuszcze roślinne z nasion bawełny
+        - tłuszcze roślinne z nasion bawełny całkowicie utwardzone
+        - całkowicie uwodornione tłuszcze roślinne z nasion bawełny
+        - tłuszcze roślinne z nasion bawełny całkowicie uwodornione
+        - w pełni utwardzone tłuszcze roślinne z nasion bawełny
+        - tłuszcze roślinne z nasion bawełny w pełni utwardzone
+        - w pełni uwodornione tłuszcze roślinne z nasion bawełny
+        - tłuszcze roślinne z nasion bawełny w pełni uwodornione
       de:
         - vollständig gehärtetes Baumwollsaatöl
     process:

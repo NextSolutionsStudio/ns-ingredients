@@ -17,6 +17,14 @@ names:
     - olej roślinny z orzecha włoskiego
     - olej orzechowy włoski
     - olej roślinny orzechowy z orzechów włoskich
+    - tłuszcz roślinny z orzecha włoskiego
+    - olej orzechowy z orzecha włoskiego
+    - olej roślinny orzechowy z orzecha włoskiego
+    - oleje roślinne z orzecha włoskiego
+    - tłuszcze roślinne z orzecha włoskiego
+    - tłuszcz roślinny z orzechów włoskich
+    - oleje roślinne z orzechów włoskich
+    - tłuszcze roślinne z orzechów włoskich
   de:
     - Walnussöl
 summary:
@@ -61,6 +69,38 @@ variants:
         - olej roślinny orzechowy z orzechów włoskich utwardzony
         - uwodorniony olej roślinny orzechowy z orzechów włoskich
         - olej roślinny orzechowy z orzechów włoskich uwodorniony
+        - utwardzony tłuszcz roślinny z orzecha włoskiego
+        - tłuszcz roślinny z orzecha włoskiego utwardzony
+        - uwodorniony tłuszcz roślinny z orzecha włoskiego
+        - tłuszcz roślinny z orzecha włoskiego uwodorniony
+        - utwardzony olej orzechowy z orzecha włoskiego
+        - olej orzechowy z orzecha włoskiego utwardzony
+        - uwodorniony olej orzechowy z orzecha włoskiego
+        - olej orzechowy z orzecha włoskiego uwodorniony
+        - utwardzony olej roślinny orzechowy z orzecha włoskiego
+        - olej roślinny orzechowy z orzecha włoskiego utwardzony
+        - uwodorniony olej roślinny orzechowy z orzecha włoskiego
+        - olej roślinny orzechowy z orzecha włoskiego uwodorniony
+        - utwardzone oleje roślinne z orzecha włoskiego
+        - oleje roślinne z orzecha włoskiego utwardzone
+        - uwodornione oleje roślinne z orzecha włoskiego
+        - oleje roślinne z orzecha włoskiego uwodornione
+        - utwardzone tłuszcze roślinne z orzecha włoskiego
+        - tłuszcze roślinne z orzecha włoskiego utwardzone
+        - uwodornione tłuszcze roślinne z orzecha włoskiego
+        - tłuszcze roślinne z orzecha włoskiego uwodornione
+        - utwardzony tłuszcz roślinny z orzechów włoskich
+        - tłuszcz roślinny z orzechów włoskich utwardzony
+        - uwodorniony tłuszcz roślinny z orzechów włoskich
+        - tłuszcz roślinny z orzechów włoskich uwodorniony
+        - utwardzone oleje roślinne z orzechów włoskich
+        - oleje roślinne z orzechów włoskich utwardzone
+        - uwodornione oleje roślinne z orzechów włoskich
+        - oleje roślinne z orzechów włoskich uwodornione
+        - utwardzone tłuszcze roślinne z orzechów włoskich
+        - tłuszcze roślinne z orzechów włoskich utwardzone
+        - uwodornione tłuszcze roślinne z orzechów włoskich
+        - tłuszcze roślinne z orzechów włoskich uwodornione
     process:
       en: "Walnut oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej z orzechów włoskich utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
@@ -100,6 +140,38 @@ variants:
         - olej roślinny orzechowy z orzechów włoskich częściowo utwardzony
         - częściowo uwodorniony olej roślinny orzechowy z orzechów włoskich
         - olej roślinny orzechowy z orzechów włoskich częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny z orzecha włoskiego
+        - tłuszcz roślinny z orzecha włoskiego częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny z orzecha włoskiego
+        - tłuszcz roślinny z orzecha włoskiego częściowo uwodorniony
+        - częściowo utwardzony olej orzechowy z orzecha włoskiego
+        - olej orzechowy z orzecha włoskiego częściowo utwardzony
+        - częściowo uwodorniony olej orzechowy z orzecha włoskiego
+        - olej orzechowy z orzecha włoskiego częściowo uwodorniony
+        - częściowo utwardzony olej roślinny orzechowy z orzecha włoskiego
+        - olej roślinny orzechowy z orzecha włoskiego częściowo utwardzony
+        - częściowo uwodorniony olej roślinny orzechowy z orzecha włoskiego
+        - olej roślinny orzechowy z orzecha włoskiego częściowo uwodorniony
+        - częściowo utwardzone oleje roślinne z orzecha włoskiego
+        - oleje roślinne z orzecha włoskiego częściowo utwardzone
+        - częściowo uwodornione oleje roślinne z orzecha włoskiego
+        - oleje roślinne z orzecha włoskiego częściowo uwodornione
+        - częściowo utwardzone tłuszcze roślinne z orzecha włoskiego
+        - tłuszcze roślinne z orzecha włoskiego częściowo utwardzone
+        - częściowo uwodornione tłuszcze roślinne z orzecha włoskiego
+        - tłuszcze roślinne z orzecha włoskiego częściowo uwodornione
+        - częściowo utwardzony tłuszcz roślinny z orzechów włoskich
+        - tłuszcz roślinny z orzechów włoskich częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny z orzechów włoskich
+        - tłuszcz roślinny z orzechów włoskich częściowo uwodorniony
+        - częściowo utwardzone oleje roślinne z orzechów włoskich
+        - oleje roślinne z orzechów włoskich częściowo utwardzone
+        - częściowo uwodornione oleje roślinne z orzechów włoskich
+        - oleje roślinne z orzechów włoskich częściowo uwodornione
+        - częściowo utwardzone tłuszcze roślinne z orzechów włoskich
+        - tłuszcze roślinne z orzechów włoskich częściowo utwardzone
+        - częściowo uwodornione tłuszcze roślinne z orzechów włoskich
+        - tłuszcze roślinne z orzechów włoskich częściowo uwodornione
     process:
       en: "Walnut oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
       pl: "Olej z orzechów włoskich, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
@@ -171,6 +243,70 @@ variants:
         - olej roślinny orzechowy z orzechów włoskich w pełni utwardzony
         - w pełni uwodorniony olej roślinny orzechowy z orzechów włoskich
         - olej roślinny orzechowy z orzechów włoskich w pełni uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny z orzecha włoskiego
+        - tłuszcz roślinny z orzecha włoskiego całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny z orzecha włoskiego
+        - tłuszcz roślinny z orzecha włoskiego całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz roślinny z orzecha włoskiego
+        - tłuszcz roślinny z orzecha włoskiego w pełni utwardzony
+        - w pełni uwodorniony tłuszcz roślinny z orzecha włoskiego
+        - tłuszcz roślinny z orzecha włoskiego w pełni uwodorniony
+        - całkowicie utwardzony olej orzechowy z orzecha włoskiego
+        - olej orzechowy z orzecha włoskiego całkowicie utwardzony
+        - całkowicie uwodorniony olej orzechowy z orzecha włoskiego
+        - olej orzechowy z orzecha włoskiego całkowicie uwodorniony
+        - w pełni utwardzony olej orzechowy z orzecha włoskiego
+        - olej orzechowy z orzecha włoskiego w pełni utwardzony
+        - w pełni uwodorniony olej orzechowy z orzecha włoskiego
+        - olej orzechowy z orzecha włoskiego w pełni uwodorniony
+        - całkowicie utwardzony olej roślinny orzechowy z orzecha włoskiego
+        - olej roślinny orzechowy z orzecha włoskiego całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny orzechowy z orzecha włoskiego
+        - olej roślinny orzechowy z orzecha włoskiego całkowicie uwodorniony
+        - w pełni utwardzony olej roślinny orzechowy z orzecha włoskiego
+        - olej roślinny orzechowy z orzecha włoskiego w pełni utwardzony
+        - w pełni uwodorniony olej roślinny orzechowy z orzecha włoskiego
+        - olej roślinny orzechowy z orzecha włoskiego w pełni uwodorniony
+        - całkowicie utwardzone oleje roślinne z orzecha włoskiego
+        - oleje roślinne z orzecha włoskiego całkowicie utwardzone
+        - całkowicie uwodornione oleje roślinne z orzecha włoskiego
+        - oleje roślinne z orzecha włoskiego całkowicie uwodornione
+        - w pełni utwardzone oleje roślinne z orzecha włoskiego
+        - oleje roślinne z orzecha włoskiego w pełni utwardzone
+        - w pełni uwodornione oleje roślinne z orzecha włoskiego
+        - oleje roślinne z orzecha włoskiego w pełni uwodornione
+        - całkowicie utwardzone tłuszcze roślinne z orzecha włoskiego
+        - tłuszcze roślinne z orzecha włoskiego całkowicie utwardzone
+        - całkowicie uwodornione tłuszcze roślinne z orzecha włoskiego
+        - tłuszcze roślinne z orzecha włoskiego całkowicie uwodornione
+        - w pełni utwardzone tłuszcze roślinne z orzecha włoskiego
+        - tłuszcze roślinne z orzecha włoskiego w pełni utwardzone
+        - w pełni uwodornione tłuszcze roślinne z orzecha włoskiego
+        - tłuszcze roślinne z orzecha włoskiego w pełni uwodornione
+        - całkowicie utwardzony tłuszcz roślinny z orzechów włoskich
+        - tłuszcz roślinny z orzechów włoskich całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny z orzechów włoskich
+        - tłuszcz roślinny z orzechów włoskich całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz roślinny z orzechów włoskich
+        - tłuszcz roślinny z orzechów włoskich w pełni utwardzony
+        - w pełni uwodorniony tłuszcz roślinny z orzechów włoskich
+        - tłuszcz roślinny z orzechów włoskich w pełni uwodorniony
+        - całkowicie utwardzone oleje roślinne z orzechów włoskich
+        - oleje roślinne z orzechów włoskich całkowicie utwardzone
+        - całkowicie uwodornione oleje roślinne z orzechów włoskich
+        - oleje roślinne z orzechów włoskich całkowicie uwodornione
+        - w pełni utwardzone oleje roślinne z orzechów włoskich
+        - oleje roślinne z orzechów włoskich w pełni utwardzone
+        - w pełni uwodornione oleje roślinne z orzechów włoskich
+        - oleje roślinne z orzechów włoskich w pełni uwodornione
+        - całkowicie utwardzone tłuszcze roślinne z orzechów włoskich
+        - tłuszcze roślinne z orzechów włoskich całkowicie utwardzone
+        - całkowicie uwodornione tłuszcze roślinne z orzechów włoskich
+        - tłuszcze roślinne z orzechów włoskich całkowicie uwodornione
+        - w pełni utwardzone tłuszcze roślinne z orzechów włoskich
+        - tłuszcze roślinne z orzechów włoskich w pełni utwardzone
+        - w pełni uwodornione tłuszcze roślinne z orzechów włoskich
+        - tłuszcze roślinne z orzechów włoskich w pełni uwodornione
     process:
       en: "Walnut oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
       pl: "Olej z orzechów włoskich ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."

@@ -14,6 +14,12 @@ names:
     - olej z zarodków pszenicy
     - olej roślinny z kiełków pszenicy
     - olej roślinny z zarodków pszenicy
+    - tłuszcz roślinny z kiełków pszenicy
+    - oleje roślinne z kiełków pszenicy
+    - tłuszcze roślinne z kiełków pszenicy
+    - tłuszcz roślinny z zarodków pszenicy
+    - oleje roślinne z zarodków pszenicy
+    - tłuszcze roślinne z zarodków pszenicy
   de:
     - Weizenkeimöl
 summary:
@@ -46,6 +52,30 @@ variants:
         - olej roślinny z zarodków pszenicy utwardzony
         - uwodorniony olej roślinny z zarodków pszenicy
         - olej roślinny z zarodków pszenicy uwodorniony
+        - utwardzony tłuszcz roślinny z kiełków pszenicy
+        - tłuszcz roślinny z kiełków pszenicy utwardzony
+        - uwodorniony tłuszcz roślinny z kiełków pszenicy
+        - tłuszcz roślinny z kiełków pszenicy uwodorniony
+        - utwardzone oleje roślinne z kiełków pszenicy
+        - oleje roślinne z kiełków pszenicy utwardzone
+        - uwodornione oleje roślinne z kiełków pszenicy
+        - oleje roślinne z kiełków pszenicy uwodornione
+        - utwardzone tłuszcze roślinne z kiełków pszenicy
+        - tłuszcze roślinne z kiełków pszenicy utwardzone
+        - uwodornione tłuszcze roślinne z kiełków pszenicy
+        - tłuszcze roślinne z kiełków pszenicy uwodornione
+        - utwardzony tłuszcz roślinny z zarodków pszenicy
+        - tłuszcz roślinny z zarodków pszenicy utwardzony
+        - uwodorniony tłuszcz roślinny z zarodków pszenicy
+        - tłuszcz roślinny z zarodków pszenicy uwodorniony
+        - utwardzone oleje roślinne z zarodków pszenicy
+        - oleje roślinne z zarodków pszenicy utwardzone
+        - uwodornione oleje roślinne z zarodków pszenicy
+        - oleje roślinne z zarodków pszenicy uwodornione
+        - utwardzone tłuszcze roślinne z zarodków pszenicy
+        - tłuszcze roślinne z zarodków pszenicy utwardzone
+        - uwodornione tłuszcze roślinne z zarodków pszenicy
+        - tłuszcze roślinne z zarodków pszenicy uwodornione
     process:
       en: "Wheat germ oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej z kiełków pszenicy utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
@@ -73,6 +103,30 @@ variants:
         - olej roślinny z zarodków pszenicy częściowo utwardzony
         - częściowo uwodorniony olej roślinny z zarodków pszenicy
         - olej roślinny z zarodków pszenicy częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny z kiełków pszenicy
+        - tłuszcz roślinny z kiełków pszenicy częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny z kiełków pszenicy
+        - tłuszcz roślinny z kiełków pszenicy częściowo uwodorniony
+        - częściowo utwardzone oleje roślinne z kiełków pszenicy
+        - oleje roślinne z kiełków pszenicy częściowo utwardzone
+        - częściowo uwodornione oleje roślinne z kiełków pszenicy
+        - oleje roślinne z kiełków pszenicy częściowo uwodornione
+        - częściowo utwardzone tłuszcze roślinne z kiełków pszenicy
+        - tłuszcze roślinne z kiełków pszenicy częściowo utwardzone
+        - częściowo uwodornione tłuszcze roślinne z kiełków pszenicy
+        - tłuszcze roślinne z kiełków pszenicy częściowo uwodornione
+        - częściowo utwardzony tłuszcz roślinny z zarodków pszenicy
+        - tłuszcz roślinny z zarodków pszenicy częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny z zarodków pszenicy
+        - tłuszcz roślinny z zarodków pszenicy częściowo uwodorniony
+        - częściowo utwardzone oleje roślinne z zarodków pszenicy
+        - oleje roślinne z zarodków pszenicy częściowo utwardzone
+        - częściowo uwodornione oleje roślinne z zarodków pszenicy
+        - oleje roślinne z zarodków pszenicy częściowo uwodornione
+        - częściowo utwardzone tłuszcze roślinne z zarodków pszenicy
+        - tłuszcze roślinne z zarodków pszenicy częściowo utwardzone
+        - częściowo uwodornione tłuszcze roślinne z zarodków pszenicy
+        - tłuszcze roślinne z zarodków pszenicy częściowo uwodornione
     process:
       en: "Wheat germ oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
       pl: "Olej z kiełków pszenicy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
@@ -120,6 +174,54 @@ variants:
         - olej roślinny z zarodków pszenicy w pełni utwardzony
         - w pełni uwodorniony olej roślinny z zarodków pszenicy
         - olej roślinny z zarodków pszenicy w pełni uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny z kiełków pszenicy
+        - tłuszcz roślinny z kiełków pszenicy całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny z kiełków pszenicy
+        - tłuszcz roślinny z kiełków pszenicy całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz roślinny z kiełków pszenicy
+        - tłuszcz roślinny z kiełków pszenicy w pełni utwardzony
+        - w pełni uwodorniony tłuszcz roślinny z kiełków pszenicy
+        - tłuszcz roślinny z kiełków pszenicy w pełni uwodorniony
+        - całkowicie utwardzone oleje roślinne z kiełków pszenicy
+        - oleje roślinne z kiełków pszenicy całkowicie utwardzone
+        - całkowicie uwodornione oleje roślinne z kiełków pszenicy
+        - oleje roślinne z kiełków pszenicy całkowicie uwodornione
+        - w pełni utwardzone oleje roślinne z kiełków pszenicy
+        - oleje roślinne z kiełków pszenicy w pełni utwardzone
+        - w pełni uwodornione oleje roślinne z kiełków pszenicy
+        - oleje roślinne z kiełków pszenicy w pełni uwodornione
+        - całkowicie utwardzone tłuszcze roślinne z kiełków pszenicy
+        - tłuszcze roślinne z kiełków pszenicy całkowicie utwardzone
+        - całkowicie uwodornione tłuszcze roślinne z kiełków pszenicy
+        - tłuszcze roślinne z kiełków pszenicy całkowicie uwodornione
+        - w pełni utwardzone tłuszcze roślinne z kiełków pszenicy
+        - tłuszcze roślinne z kiełków pszenicy w pełni utwardzone
+        - w pełni uwodornione tłuszcze roślinne z kiełków pszenicy
+        - tłuszcze roślinne z kiełków pszenicy w pełni uwodornione
+        - całkowicie utwardzony tłuszcz roślinny z zarodków pszenicy
+        - tłuszcz roślinny z zarodków pszenicy całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny z zarodków pszenicy
+        - tłuszcz roślinny z zarodków pszenicy całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz roślinny z zarodków pszenicy
+        - tłuszcz roślinny z zarodków pszenicy w pełni utwardzony
+        - w pełni uwodorniony tłuszcz roślinny z zarodków pszenicy
+        - tłuszcz roślinny z zarodków pszenicy w pełni uwodorniony
+        - całkowicie utwardzone oleje roślinne z zarodków pszenicy
+        - oleje roślinne z zarodków pszenicy całkowicie utwardzone
+        - całkowicie uwodornione oleje roślinne z zarodków pszenicy
+        - oleje roślinne z zarodków pszenicy całkowicie uwodornione
+        - w pełni utwardzone oleje roślinne z zarodków pszenicy
+        - oleje roślinne z zarodków pszenicy w pełni utwardzone
+        - w pełni uwodornione oleje roślinne z zarodków pszenicy
+        - oleje roślinne z zarodków pszenicy w pełni uwodornione
+        - całkowicie utwardzone tłuszcze roślinne z zarodków pszenicy
+        - tłuszcze roślinne z zarodków pszenicy całkowicie utwardzone
+        - całkowicie uwodornione tłuszcze roślinne z zarodków pszenicy
+        - tłuszcze roślinne z zarodków pszenicy całkowicie uwodornione
+        - w pełni utwardzone tłuszcze roślinne z zarodków pszenicy
+        - tłuszcze roślinne z zarodków pszenicy w pełni utwardzone
+        - w pełni uwodornione tłuszcze roślinne z zarodków pszenicy
+        - tłuszcze roślinne z zarodków pszenicy w pełni uwodornione
     process:
       en: "Wheat germ oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
       pl: "Olej z kiełków pszenicy ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
