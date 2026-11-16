@@ -1,0 +1,971 @@
+id: macadamia-oil
+type: fat
+parent: tree-nuts
+names:
+  en:
+    - macadamia oil
+    - macadamia nut oil
+    - queensland nut oil
+    - non-hydrogenated macadamia oil
+    - unhydrogenated macadamia oil
+    - non-hydrogenated macadamia nut oil
+    - unhydrogenated macadamia nut oil
+    - not hydrogenated macadamia nut oil
+    - not partially hydrogenated macadamia nut oil
+    - not fully hydrogenated macadamia nut oil
+    - non partially hydrogenated macadamia nut oil
+    - not hydrogenated macadamia oil
+    - not partially hydrogenated macadamia oil
+    - not fully hydrogenated macadamia oil
+    - non partially hydrogenated macadamia oil
+    - not hydrogenated queensland nut oil
+    - not partially hydrogenated queensland nut oil
+    - not fully hydrogenated queensland nut oil
+    - non partially hydrogenated queensland nut oil
+    - non-hydrogenated queensland nut oil
+    - unhydrogenated queensland nut oil
+  pl:
+    - olej z orzechów makadamia
+    - olej makadamia
+    - olej z makadamii
+    - olej orzechowy makadamia
+    - olej orzechowy z orzechów makadamia
+    - tłuszcz roślinny makadamia
+    - tłuszcze roślinne makadamia
+    - olej roślinny makadamia
+    - oleje roślinne makadamia
+    - olej roślinny orzechowy makadamia
+    - tłuszcz roślinny orzechowy makadamia
+    - oleje roślinne orzechowe makadamia
+    - orzechowy olej roślinny makadamia
+    - tłuszcze roślinne orzechowe makadamia
+    - oleje orzechowe makadamia
+    - tłuszcz orzechowy makadamia
+    - tłuszcze orzechowe makadamia
+    - tłuszcz roślinny z makadamii
+    - tłuszcze roślinne z makadamii
+    - olej roślinny z makadamii
+    - oleje roślinne z makadamii
+    - olej orzechowy z makadamii
+    - olej roślinny orzechowy z makadamii
+    - tłuszcz roślinny orzechowy z makadamii
+    - oleje roślinne orzechowe z makadamii
+    - orzechowy olej roślinny z makadamii
+    - tłuszcze roślinne orzechowe z makadamii
+    - oleje orzechowe z makadamii
+    - tłuszcz orzechowy z makadamii
+    - tłuszcze orzechowe z makadamii
+    - tłuszcz roślinny z orzechów makadamia
+    - tłuszcze roślinne z orzechów makadamia
+    - olej roślinny z orzechów makadamia
+    - oleje roślinne z orzechów makadamia
+    - olej roślinny orzechowy z orzechów makadamia
+    - tłuszcz roślinny orzechowy z orzechów makadamia
+    - oleje roślinne orzechowe z orzechów makadamia
+    - orzechowy olej roślinny z orzechów makadamia
+    - tłuszcze roślinne orzechowe z orzechów makadamia
+    - oleje orzechowe z orzechów makadamia
+    - tłuszcz orzechowy z orzechów makadamia
+    - tłuszcze orzechowe z orzechów makadamia
+    - nie utwardzony olej z orzechów makadamia
+    - olej z orzechów makadamia nie utwardzony
+    - nie uwodorniony olej z orzechów makadamia
+    - olej z orzechów makadamia nie uwodorniony
+    - nie utwardzony olej makadamia
+    - olej makadamia nie utwardzony
+    - nie uwodorniony olej makadamia
+    - olej makadamia nie uwodorniony
+    - nie utwardzony olej z makadamii
+    - olej z makadamii nie utwardzony
+    - nie uwodorniony olej z makadamii
+    - olej z makadamii nie uwodorniony
+    - nie utwardzony olej orzechowy makadamia
+    - olej orzechowy makadamia nie utwardzony
+    - nie uwodorniony olej orzechowy makadamia
+    - olej orzechowy makadamia nie uwodorniony
+    - nie utwardzony olej orzechowy z orzechów makadamia
+    - olej orzechowy z orzechów makadamia nie utwardzony
+    - nie uwodorniony olej orzechowy z orzechów makadamia
+    - olej orzechowy z orzechów makadamia nie uwodorniony
+    - nie utwardzony tłuszcz roślinny makadamia
+    - tłuszcz roślinny makadamia nie utwardzony
+    - nie uwodorniony tłuszcz roślinny makadamia
+    - tłuszcz roślinny makadamia nie uwodorniony
+    - nie utwardzone tłuszcze roślinne makadamia
+    - tłuszcze roślinne makadamia nie utwardzone
+    - nie uwodornione tłuszcze roślinne makadamia
+    - tłuszcze roślinne makadamia nie uwodornione
+    - nie utwardzony olej roślinny makadamia
+    - olej roślinny makadamia nie utwardzony
+    - nie uwodorniony olej roślinny makadamia
+    - olej roślinny makadamia nie uwodorniony
+    - nie utwardzone oleje roślinne makadamia
+    - oleje roślinne makadamia nie utwardzone
+    - nie uwodornione oleje roślinne makadamia
+    - oleje roślinne makadamia nie uwodornione
+    - nie utwardzony olej roślinny orzechowy makadamia
+    - olej roślinny orzechowy makadamia nie utwardzony
+    - nie uwodorniony olej roślinny orzechowy makadamia
+    - olej roślinny orzechowy makadamia nie uwodorniony
+    - nie utwardzony tłuszcz roślinny orzechowy makadamia
+    - tłuszcz roślinny orzechowy makadamia nie utwardzony
+    - nie uwodorniony tłuszcz roślinny orzechowy makadamia
+    - tłuszcz roślinny orzechowy makadamia nie uwodorniony
+    - nie utwardzone oleje roślinne orzechowe makadamia
+    - oleje roślinne orzechowe makadamia nie utwardzone
+    - nie uwodornione oleje roślinne orzechowe makadamia
+    - oleje roślinne orzechowe makadamia nie uwodornione
+    - nie utwardzone tłuszcze roślinne orzechowe makadamia
+    - tłuszcze roślinne orzechowe makadamia nie utwardzone
+    - nie uwodornione tłuszcze roślinne orzechowe makadamia
+    - tłuszcze roślinne orzechowe makadamia nie uwodornione
+    - nie utwardzone oleje orzechowe makadamia
+    - oleje orzechowe makadamia nie utwardzone
+    - nie uwodornione oleje orzechowe makadamia
+    - oleje orzechowe makadamia nie uwodornione
+    - nie utwardzony tłuszcz orzechowy makadamia
+    - tłuszcz orzechowy makadamia nie utwardzony
+    - nie uwodorniony tłuszcz orzechowy makadamia
+    - tłuszcz orzechowy makadamia nie uwodorniony
+    - nie utwardzone tłuszcze orzechowe makadamia
+    - tłuszcze orzechowe makadamia nie utwardzone
+    - nie uwodornione tłuszcze orzechowe makadamia
+    - tłuszcze orzechowe makadamia nie uwodornione
+    - nie utwardzony tłuszcz roślinny z makadamii
+    - tłuszcz roślinny z makadamii nie utwardzony
+    - nie uwodorniony tłuszcz roślinny z makadamii
+    - tłuszcz roślinny z makadamii nie uwodorniony
+    - nie utwardzone tłuszcze roślinne z makadamii
+    - tłuszcze roślinne z makadamii nie utwardzone
+    - nie uwodornione tłuszcze roślinne z makadamii
+    - tłuszcze roślinne z makadamii nie uwodornione
+    - nie utwardzony olej roślinny z makadamii
+    - olej roślinny z makadamii nie utwardzony
+    - nie uwodorniony olej roślinny z makadamii
+    - olej roślinny z makadamii nie uwodorniony
+    - nie utwardzone oleje roślinne z makadamii
+    - oleje roślinne z makadamii nie utwardzone
+    - nie uwodornione oleje roślinne z makadamii
+    - oleje roślinne z makadamii nie uwodornione
+    - nie utwardzony olej orzechowy z makadamii
+    - olej orzechowy z makadamii nie utwardzony
+    - nie uwodorniony olej orzechowy z makadamii
+    - olej orzechowy z makadamii nie uwodorniony
+    - nie utwardzony olej roślinny orzechowy z makadamii
+    - olej roślinny orzechowy z makadamii nie utwardzony
+    - nie uwodorniony olej roślinny orzechowy z makadamii
+    - olej roślinny orzechowy z makadamii nie uwodorniony
+    - nie utwardzony tłuszcz roślinny orzechowy z makadamii
+    - tłuszcz roślinny orzechowy z makadamii nie utwardzony
+    - nie uwodorniony tłuszcz roślinny orzechowy z makadamii
+    - tłuszcz roślinny orzechowy z makadamii nie uwodorniony
+    - nie utwardzone oleje roślinne orzechowe z makadamii
+    - oleje roślinne orzechowe z makadamii nie utwardzone
+    - nie uwodornione oleje roślinne orzechowe z makadamii
+    - oleje roślinne orzechowe z makadamii nie uwodornione
+    - nie utwardzone tłuszcze roślinne orzechowe z makadamii
+    - tłuszcze roślinne orzechowe z makadamii nie utwardzone
+    - nie uwodornione tłuszcze roślinne orzechowe z makadamii
+    - tłuszcze roślinne orzechowe z makadamii nie uwodornione
+    - nie utwardzone oleje orzechowe z makadamii
+    - oleje orzechowe z makadamii nie utwardzone
+    - nie uwodornione oleje orzechowe z makadamii
+    - oleje orzechowe z makadamii nie uwodornione
+    - nie utwardzony tłuszcz orzechowy z makadamii
+    - tłuszcz orzechowy z makadamii nie utwardzony
+    - nie uwodorniony tłuszcz orzechowy z makadamii
+    - tłuszcz orzechowy z makadamii nie uwodorniony
+    - nie utwardzone tłuszcze orzechowe z makadamii
+    - tłuszcze orzechowe z makadamii nie utwardzone
+    - nie uwodornione tłuszcze orzechowe z makadamii
+    - tłuszcze orzechowe z makadamii nie uwodornione
+    - nie utwardzony tłuszcz roślinny z orzechów makadamia
+    - tłuszcz roślinny z orzechów makadamia nie utwardzony
+    - nie uwodorniony tłuszcz roślinny z orzechów makadamia
+    - tłuszcz roślinny z orzechów makadamia nie uwodorniony
+    - nie utwardzone tłuszcze roślinne z orzechów makadamia
+    - tłuszcze roślinne z orzechów makadamia nie utwardzone
+    - nie uwodornione tłuszcze roślinne z orzechów makadamia
+    - tłuszcze roślinne z orzechów makadamia nie uwodornione
+    - nie utwardzony olej roślinny z orzechów makadamia
+    - olej roślinny z orzechów makadamia nie utwardzony
+    - nie uwodorniony olej roślinny z orzechów makadamia
+    - olej roślinny z orzechów makadamia nie uwodorniony
+    - nie utwardzone oleje roślinne z orzechów makadamia
+    - oleje roślinne z orzechów makadamia nie utwardzone
+    - nie uwodornione oleje roślinne z orzechów makadamia
+    - oleje roślinne z orzechów makadamia nie uwodornione
+    - nie utwardzony olej roślinny orzechowy z orzechów makadamia
+    - olej roślinny orzechowy z orzechów makadamia nie utwardzony
+    - nie uwodorniony olej roślinny orzechowy z orzechów makadamia
+    - olej roślinny orzechowy z orzechów makadamia nie uwodorniony
+    - nie utwardzony tłuszcz roślinny orzechowy z orzechów makadamia
+    - tłuszcz roślinny orzechowy z orzechów makadamia nie utwardzony
+    - nie uwodorniony tłuszcz roślinny orzechowy z orzechów makadamia
+    - tłuszcz roślinny orzechowy z orzechów makadamia nie uwodorniony
+    - nie utwardzone oleje roślinne orzechowe z orzechów makadamia
+    - oleje roślinne orzechowe z orzechów makadamia nie utwardzone
+    - nie uwodornione oleje roślinne orzechowe z orzechów makadamia
+    - oleje roślinne orzechowe z orzechów makadamia nie uwodornione
+    - nie utwardzone tłuszcze roślinne orzechowe z orzechów makadamia
+    - tłuszcze roślinne orzechowe z orzechów makadamia nie utwardzone
+    - nie uwodornione tłuszcze roślinne orzechowe z orzechów makadamia
+    - tłuszcze roślinne orzechowe z orzechów makadamia nie uwodornione
+    - nie utwardzone oleje orzechowe z orzechów makadamia
+    - oleje orzechowe z orzechów makadamia nie utwardzone
+    - nie uwodornione oleje orzechowe z orzechów makadamia
+    - oleje orzechowe z orzechów makadamia nie uwodornione
+    - nie utwardzony tłuszcz orzechowy z orzechów makadamia
+    - tłuszcz orzechowy z orzechów makadamia nie utwardzony
+    - nie uwodorniony tłuszcz orzechowy z orzechów makadamia
+    - tłuszcz orzechowy z orzechów makadamia nie uwodorniony
+    - nie utwardzone tłuszcze orzechowe z orzechów makadamia
+    - tłuszcze orzechowe z orzechów makadamia nie utwardzone
+    - nie uwodornione tłuszcze orzechowe z orzechów makadamia
+    - tłuszcze orzechowe z orzechów makadamia nie uwodornione
+  de:
+    - Macadamiaöl
+    - Macadamianussöl
+summary:
+  en: >-
+    Vegetable oil pressed from macadamia or Queensland nuts (Macadamia ternifolia). As a product derived from macadamia or Queensland nuts, it falls
+    under EU Annex II item 8 tree-nut allergen labelling without an Annex II exemption.
+  pl: >-
+    Olej roślinny tłoczony z orzechów makadamia (Macadamia ternifolia). Jako produkt pochodzący z orzechów makadamia podlega
+    obowiązkowi deklarowania alergenu z Aneksu II UE (punkt 8) i nie jest z niego wyłączony.
+variants:
+  - id: hydrogenated
+    names:
+      en:
+        - hydrogenated macadamia oil
+        - hydrogenated macadamia nut oil
+        - hydrogenated queensland nut oil
+      pl:
+        - utwardzony olej z orzechów makadamia
+        - olej z orzechów makadamia utwardzony
+        - uwodorniony olej z orzechów makadamia
+        - olej z orzechów makadamia uwodorniony
+        - utwardzony olej z makadamii
+        - olej z makadamii utwardzony
+        - uwodorniony olej z makadamii
+        - olej z makadamii uwodorniony
+        - utwardzony olej makadamia
+        - olej makadamia utwardzony
+        - uwodorniony olej makadamia
+        - olej makadamia uwodorniony
+        - utwardzony olej orzechowy makadamia
+        - olej orzechowy makadamia utwardzony
+        - uwodorniony olej orzechowy makadamia
+        - olej orzechowy makadamia uwodorniony
+        - utwardzony olej orzechowy z orzechów makadamia
+        - olej orzechowy z orzechów makadamia utwardzony
+        - uwodorniony olej orzechowy z orzechów makadamia
+        - olej orzechowy z orzechów makadamia uwodorniony
+        - utwardzony tłuszcz roślinny makadamia
+        - tłuszcz roślinny makadamia utwardzony
+        - uwodorniony tłuszcz roślinny makadamia
+        - tłuszcz roślinny makadamia uwodorniony
+        - utwardzone tłuszcze roślinne makadamia
+        - tłuszcze roślinne makadamia utwardzone
+        - uwodornione tłuszcze roślinne makadamia
+        - tłuszcze roślinne makadamia uwodornione
+        - utwardzony olej roślinny makadamia
+        - olej roślinny makadamia utwardzony
+        - uwodorniony olej roślinny makadamia
+        - olej roślinny makadamia uwodorniony
+        - utwardzone oleje roślinne makadamia
+        - oleje roślinne makadamia utwardzone
+        - uwodornione oleje roślinne makadamia
+        - oleje roślinne makadamia uwodornione
+        - utwardzony olej roślinny orzechowy makadamia
+        - olej roślinny orzechowy makadamia utwardzony
+        - uwodorniony olej roślinny orzechowy makadamia
+        - olej roślinny orzechowy makadamia uwodorniony
+        - utwardzony tłuszcz roślinny orzechowy makadamia
+        - tłuszcz roślinny orzechowy makadamia utwardzony
+        - uwodorniony tłuszcz roślinny orzechowy makadamia
+        - tłuszcz roślinny orzechowy makadamia uwodorniony
+        - utwardzone oleje roślinne orzechowe makadamia
+        - oleje roślinne orzechowe makadamia utwardzone
+        - uwodornione oleje roślinne orzechowe makadamia
+        - oleje roślinne orzechowe makadamia uwodornione
+        - utwardzone tłuszcze roślinne orzechowe makadamia
+        - tłuszcze roślinne orzechowe makadamia utwardzone
+        - uwodornione tłuszcze roślinne orzechowe makadamia
+        - tłuszcze roślinne orzechowe makadamia uwodornione
+        - utwardzone oleje orzechowe makadamia
+        - oleje orzechowe makadamia utwardzone
+        - uwodornione oleje orzechowe makadamia
+        - oleje orzechowe makadamia uwodornione
+        - utwardzony tłuszcz orzechowy makadamia
+        - tłuszcz orzechowy makadamia utwardzony
+        - uwodorniony tłuszcz orzechowy makadamia
+        - tłuszcz orzechowy makadamia uwodorniony
+        - utwardzone tłuszcze orzechowe makadamia
+        - tłuszcze orzechowe makadamia utwardzone
+        - uwodornione tłuszcze orzechowe makadamia
+        - tłuszcze orzechowe makadamia uwodornione
+        - utwardzony tłuszcz roślinny z makadamii
+        - tłuszcz roślinny z makadamii utwardzony
+        - uwodorniony tłuszcz roślinny z makadamii
+        - tłuszcz roślinny z makadamii uwodorniony
+        - utwardzone tłuszcze roślinne z makadamii
+        - tłuszcze roślinne z makadamii utwardzone
+        - uwodornione tłuszcze roślinne z makadamii
+        - tłuszcze roślinne z makadamii uwodornione
+        - utwardzony olej roślinny z makadamii
+        - olej roślinny z makadamii utwardzony
+        - uwodorniony olej roślinny z makadamii
+        - olej roślinny z makadamii uwodorniony
+        - utwardzone oleje roślinne z makadamii
+        - oleje roślinne z makadamii utwardzone
+        - uwodornione oleje roślinne z makadamii
+        - oleje roślinne z makadamii uwodornione
+        - utwardzony olej orzechowy z makadamii
+        - olej orzechowy z makadamii utwardzony
+        - uwodorniony olej orzechowy z makadamii
+        - olej orzechowy z makadamii uwodorniony
+        - utwardzony olej roślinny orzechowy z makadamii
+        - olej roślinny orzechowy z makadamii utwardzony
+        - uwodorniony olej roślinny orzechowy z makadamii
+        - olej roślinny orzechowy z makadamii uwodorniony
+        - utwardzony tłuszcz roślinny orzechowy z makadamii
+        - tłuszcz roślinny orzechowy z makadamii utwardzony
+        - uwodorniony tłuszcz roślinny orzechowy z makadamii
+        - tłuszcz roślinny orzechowy z makadamii uwodorniony
+        - utwardzone oleje roślinne orzechowe z makadamii
+        - oleje roślinne orzechowe z makadamii utwardzone
+        - uwodornione oleje roślinne orzechowe z makadamii
+        - oleje roślinne orzechowe z makadamii uwodornione
+        - utwardzone tłuszcze roślinne orzechowe z makadamii
+        - tłuszcze roślinne orzechowe z makadamii utwardzone
+        - uwodornione tłuszcze roślinne orzechowe z makadamii
+        - tłuszcze roślinne orzechowe z makadamii uwodornione
+        - utwardzone oleje orzechowe z makadamii
+        - oleje orzechowe z makadamii utwardzone
+        - uwodornione oleje orzechowe z makadamii
+        - oleje orzechowe z makadamii uwodornione
+        - utwardzony tłuszcz orzechowy z makadamii
+        - tłuszcz orzechowy z makadamii utwardzony
+        - uwodorniony tłuszcz orzechowy z makadamii
+        - tłuszcz orzechowy z makadamii uwodorniony
+        - utwardzone tłuszcze orzechowe z makadamii
+        - tłuszcze orzechowe z makadamii utwardzone
+        - uwodornione tłuszcze orzechowe z makadamii
+        - tłuszcze orzechowe z makadamii uwodornione
+        - utwardzony tłuszcz roślinny z orzechów makadamia
+        - tłuszcz roślinny z orzechów makadamia utwardzony
+        - uwodorniony tłuszcz roślinny z orzechów makadamia
+        - tłuszcz roślinny z orzechów makadamia uwodorniony
+        - utwardzone tłuszcze roślinne z orzechów makadamia
+        - tłuszcze roślinne z orzechów makadamia utwardzone
+        - uwodornione tłuszcze roślinne z orzechów makadamia
+        - tłuszcze roślinne z orzechów makadamia uwodornione
+        - utwardzony olej roślinny z orzechów makadamia
+        - olej roślinny z orzechów makadamia utwardzony
+        - uwodorniony olej roślinny z orzechów makadamia
+        - olej roślinny z orzechów makadamia uwodorniony
+        - utwardzone oleje roślinne z orzechów makadamia
+        - oleje roślinne z orzechów makadamia utwardzone
+        - uwodornione oleje roślinne z orzechów makadamia
+        - oleje roślinne z orzechów makadamia uwodornione
+        - utwardzony olej roślinny orzechowy z orzechów makadamia
+        - olej roślinny orzechowy z orzechów makadamia utwardzony
+        - uwodorniony olej roślinny orzechowy z orzechów makadamia
+        - olej roślinny orzechowy z orzechów makadamia uwodorniony
+        - utwardzony tłuszcz roślinny orzechowy z orzechów makadamia
+        - tłuszcz roślinny orzechowy z orzechów makadamia utwardzony
+        - uwodorniony tłuszcz roślinny orzechowy z orzechów makadamia
+        - tłuszcz roślinny orzechowy z orzechów makadamia uwodorniony
+        - utwardzone oleje roślinne orzechowe z orzechów makadamia
+        - oleje roślinne orzechowe z orzechów makadamia utwardzone
+        - uwodornione oleje roślinne orzechowe z orzechów makadamia
+        - oleje roślinne orzechowe z orzechów makadamia uwodornione
+        - utwardzone tłuszcze roślinne orzechowe z orzechów makadamia
+        - tłuszcze roślinne orzechowe z orzechów makadamia utwardzone
+        - uwodornione tłuszcze roślinne orzechowe z orzechów makadamia
+        - tłuszcze roślinne orzechowe z orzechów makadamia uwodornione
+        - utwardzone oleje orzechowe z orzechów makadamia
+        - oleje orzechowe z orzechów makadamia utwardzone
+        - uwodornione oleje orzechowe z orzechów makadamia
+        - oleje orzechowe z orzechów makadamia uwodornione
+        - utwardzony tłuszcz orzechowy z orzechów makadamia
+        - tłuszcz orzechowy z orzechów makadamia utwardzony
+        - uwodorniony tłuszcz orzechowy z orzechów makadamia
+        - tłuszcz orzechowy z orzechów makadamia uwodorniony
+        - utwardzone tłuszcze orzechowe z orzechów makadamia
+        - tłuszcze orzechowe z orzechów makadamia utwardzone
+        - uwodornione tłuszcze orzechowe z orzechów makadamia
+        - tłuszcze orzechowe z orzechów makadamia uwodornione
+    process:
+      en: "Macadamia oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
+      pl: "Olej z orzechów makadamia utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
+    tells:
+      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!not )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)'
+  - id: partially-hydrogenated
+    names:
+      en:
+        - partially hydrogenated macadamia oil
+        - partially hydrogenated macadamia nut oil
+        - partially hydrogenated queensland nut oil
+      pl:
+        - częściowo utwardzony olej z orzechów makadamia
+        - olej z orzechów makadamia częściowo utwardzony
+        - częściowo uwodorniony olej z orzechów makadamia
+        - olej z orzechów makadamia częściowo uwodorniony
+        - częściowo utwardzony olej z makadamii
+        - olej z makadamii częściowo utwardzony
+        - częściowo uwodorniony olej z makadamii
+        - olej z makadamii częściowo uwodorniony
+        - częściowo utwardzony olej makadamia
+        - olej makadamia częściowo utwardzony
+        - częściowo uwodorniony olej makadamia
+        - olej makadamia częściowo uwodorniony
+        - częściowo utwardzony olej orzechowy makadamia
+        - olej orzechowy makadamia częściowo utwardzony
+        - częściowo uwodorniony olej orzechowy makadamia
+        - olej orzechowy makadamia częściowo uwodorniony
+        - częściowo utwardzony olej orzechowy z orzechów makadamia
+        - olej orzechowy z orzechów makadamia częściowo utwardzony
+        - częściowo uwodorniony olej orzechowy z orzechów makadamia
+        - olej orzechowy z orzechów makadamia częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny makadamia
+        - tłuszcz roślinny makadamia częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny makadamia
+        - tłuszcz roślinny makadamia częściowo uwodorniony
+        - częściowo utwardzone tłuszcze roślinne makadamia
+        - tłuszcze roślinne makadamia częściowo utwardzone
+        - częściowo uwodornione tłuszcze roślinne makadamia
+        - tłuszcze roślinne makadamia częściowo uwodornione
+        - częściowo utwardzony olej roślinny makadamia
+        - olej roślinny makadamia częściowo utwardzony
+        - częściowo uwodorniony olej roślinny makadamia
+        - olej roślinny makadamia częściowo uwodorniony
+        - częściowo utwardzone oleje roślinne makadamia
+        - oleje roślinne makadamia częściowo utwardzone
+        - częściowo uwodornione oleje roślinne makadamia
+        - oleje roślinne makadamia częściowo uwodornione
+        - częściowo utwardzony olej roślinny orzechowy makadamia
+        - olej roślinny orzechowy makadamia częściowo utwardzony
+        - częściowo uwodorniony olej roślinny orzechowy makadamia
+        - olej roślinny orzechowy makadamia częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny orzechowy makadamia
+        - tłuszcz roślinny orzechowy makadamia częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny orzechowy makadamia
+        - tłuszcz roślinny orzechowy makadamia częściowo uwodorniony
+        - częściowo utwardzone oleje roślinne orzechowe makadamia
+        - oleje roślinne orzechowe makadamia częściowo utwardzone
+        - częściowo uwodornione oleje roślinne orzechowe makadamia
+        - oleje roślinne orzechowe makadamia częściowo uwodornione
+        - częściowo utwardzone tłuszcze roślinne orzechowe makadamia
+        - tłuszcze roślinne orzechowe makadamia częściowo utwardzone
+        - częściowo uwodornione tłuszcze roślinne orzechowe makadamia
+        - tłuszcze roślinne orzechowe makadamia częściowo uwodornione
+        - częściowo utwardzone oleje orzechowe makadamia
+        - oleje orzechowe makadamia częściowo utwardzone
+        - częściowo uwodornione oleje orzechowe makadamia
+        - oleje orzechowe makadamia częściowo uwodornione
+        - częściowo utwardzony tłuszcz orzechowy makadamia
+        - tłuszcz orzechowy makadamia częściowo utwardzony
+        - częściowo uwodorniony tłuszcz orzechowy makadamia
+        - tłuszcz orzechowy makadamia częściowo uwodorniony
+        - częściowo utwardzone tłuszcze orzechowe makadamia
+        - tłuszcze orzechowe makadamia częściowo utwardzone
+        - częściowo uwodornione tłuszcze orzechowe makadamia
+        - tłuszcze orzechowe makadamia częściowo uwodornione
+        - częściowo utwardzony tłuszcz roślinny z makadamii
+        - tłuszcz roślinny z makadamii częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny z makadamii
+        - tłuszcz roślinny z makadamii częściowo uwodorniony
+        - częściowo utwardzone tłuszcze roślinne z makadamii
+        - tłuszcze roślinne z makadamii częściowo utwardzone
+        - częściowo uwodornione tłuszcze roślinne z makadamii
+        - tłuszcze roślinne z makadamii częściowo uwodornione
+        - częściowo utwardzony olej roślinny z makadamii
+        - olej roślinny z makadamii częściowo utwardzony
+        - częściowo uwodorniony olej roślinny z makadamii
+        - olej roślinny z makadamii częściowo uwodorniony
+        - częściowo utwardzone oleje roślinne z makadamii
+        - oleje roślinne z makadamii częściowo utwardzone
+        - częściowo uwodornione oleje roślinne z makadamii
+        - oleje roślinne z makadamii częściowo uwodornione
+        - częściowo utwardzony olej orzechowy z makadamii
+        - olej orzechowy z makadamii częściowo utwardzony
+        - częściowo uwodorniony olej orzechowy z makadamii
+        - olej orzechowy z makadamii częściowo uwodorniony
+        - częściowo utwardzony olej roślinny orzechowy z makadamii
+        - olej roślinny orzechowy z makadamii częściowo utwardzony
+        - częściowo uwodorniony olej roślinny orzechowy z makadamii
+        - olej roślinny orzechowy z makadamii częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny orzechowy z makadamii
+        - tłuszcz roślinny orzechowy z makadamii częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny orzechowy z makadamii
+        - tłuszcz roślinny orzechowy z makadamii częściowo uwodorniony
+        - częściowo utwardzone oleje roślinne orzechowe z makadamii
+        - oleje roślinne orzechowe z makadamii częściowo utwardzone
+        - częściowo uwodornione oleje roślinne orzechowe z makadamii
+        - oleje roślinne orzechowe z makadamii częściowo uwodornione
+        - częściowo utwardzone tłuszcze roślinne orzechowe z makadamii
+        - tłuszcze roślinne orzechowe z makadamii częściowo utwardzone
+        - częściowo uwodornione tłuszcze roślinne orzechowe z makadamii
+        - tłuszcze roślinne orzechowe z makadamii częściowo uwodornione
+        - częściowo utwardzone oleje orzechowe z makadamii
+        - oleje orzechowe z makadamii częściowo utwardzone
+        - częściowo uwodornione oleje orzechowe z makadamii
+        - oleje orzechowe z makadamii częściowo uwodornione
+        - częściowo utwardzony tłuszcz orzechowy z makadamii
+        - tłuszcz orzechowy z makadamii częściowo utwardzony
+        - częściowo uwodorniony tłuszcz orzechowy z makadamii
+        - tłuszcz orzechowy z makadamii częściowo uwodorniony
+        - częściowo utwardzone tłuszcze orzechowe z makadamii
+        - tłuszcze orzechowe z makadamii częściowo utwardzone
+        - częściowo uwodornione tłuszcze orzechowe z makadamii
+        - tłuszcze orzechowe z makadamii częściowo uwodornione
+        - częściowo utwardzony tłuszcz roślinny z orzechów makadamia
+        - tłuszcz roślinny z orzechów makadamia częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny z orzechów makadamia
+        - tłuszcz roślinny z orzechów makadamia częściowo uwodorniony
+        - częściowo utwardzone tłuszcze roślinne z orzechów makadamia
+        - tłuszcze roślinne z orzechów makadamia częściowo utwardzone
+        - częściowo uwodornione tłuszcze roślinne z orzechów makadamia
+        - tłuszcze roślinne z orzechów makadamia częściowo uwodornione
+        - częściowo utwardzony olej roślinny z orzechów makadamia
+        - olej roślinny z orzechów makadamia częściowo utwardzony
+        - częściowo uwodorniony olej roślinny z orzechów makadamia
+        - olej roślinny z orzechów makadamia częściowo uwodorniony
+        - częściowo utwardzone oleje roślinne z orzechów makadamia
+        - oleje roślinne z orzechów makadamia częściowo utwardzone
+        - częściowo uwodornione oleje roślinne z orzechów makadamia
+        - oleje roślinne z orzechów makadamia częściowo uwodornione
+        - częściowo utwardzony olej roślinny orzechowy z orzechów makadamia
+        - olej roślinny orzechowy z orzechów makadamia częściowo utwardzony
+        - częściowo uwodorniony olej roślinny orzechowy z orzechów makadamia
+        - olej roślinny orzechowy z orzechów makadamia częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny orzechowy z orzechów makadamia
+        - tłuszcz roślinny orzechowy z orzechów makadamia częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny orzechowy z orzechów makadamia
+        - tłuszcz roślinny orzechowy z orzechów makadamia częściowo uwodorniony
+        - częściowo utwardzone oleje roślinne orzechowe z orzechów makadamia
+        - oleje roślinne orzechowe z orzechów makadamia częściowo utwardzone
+        - częściowo uwodornione oleje roślinne orzechowe z orzechów makadamia
+        - oleje roślinne orzechowe z orzechów makadamia częściowo uwodornione
+        - częściowo utwardzone tłuszcze roślinne orzechowe z orzechów makadamia
+        - tłuszcze roślinne orzechowe z orzechów makadamia częściowo utwardzone
+        - częściowo uwodornione tłuszcze roślinne orzechowe z orzechów makadamia
+        - tłuszcze roślinne orzechowe z orzechów makadamia częściowo uwodornione
+        - częściowo utwardzone oleje orzechowe z orzechów makadamia
+        - oleje orzechowe z orzechów makadamia częściowo utwardzone
+        - częściowo uwodornione oleje orzechowe z orzechów makadamia
+        - oleje orzechowe z orzechów makadamia częściowo uwodornione
+        - częściowo utwardzony tłuszcz orzechowy z orzechów makadamia
+        - tłuszcz orzechowy z orzechów makadamia częściowo utwardzony
+        - częściowo uwodorniony tłuszcz orzechowy z orzechów makadamia
+        - tłuszcz orzechowy z orzechów makadamia częściowo uwodorniony
+        - częściowo utwardzone tłuszcze orzechowe z orzechów makadamia
+        - tłuszcze orzechowe z orzechów makadamia częściowo utwardzone
+        - częściowo uwodornione tłuszcze orzechowe z orzechów makadamia
+        - tłuszcze orzechowe z orzechów makadamia częściowo uwodornione
+    process:
+      en: "Macadamia oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
+      pl: "Olej z orzechów makadamia, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
+    tells:
+      - 'czesciowo (?:utwardzon|uwodorn)'
+      - '(?<!not )(?<!non )partially hydrogenated'
+      - 'teilweise gehartet'
+  - id: fully-hydrogenated
+    names:
+      en:
+        - fully hydrogenated macadamia oil
+        - totally hydrogenated macadamia oil
+        - fully hydrogenated macadamia nut oil
+        - totally hydrogenated macadamia nut oil
+        - fully hydrogenated queensland nut oil
+        - totally hydrogenated queensland nut oil
+      pl:
+        - całkowicie utwardzony olej z orzechów makadamia
+        - olej z orzechów makadamia całkowicie utwardzony
+        - całkowicie uwodorniony olej z orzechów makadamia
+        - olej z orzechów makadamia całkowicie uwodorniony
+        - w pełni utwardzony olej z orzechów makadamia
+        - olej z orzechów makadamia w pełni utwardzony
+        - w pełni uwodorniony olej z orzechów makadamia
+        - olej z orzechów makadamia w pełni uwodorniony
+        - całkowicie utwardzony olej z makadamii
+        - olej z makadamii całkowicie utwardzony
+        - całkowicie uwodorniony olej z makadamii
+        - olej z makadamii całkowicie uwodorniony
+        - w pełni utwardzony olej z makadamii
+        - olej z makadamii w pełni utwardzony
+        - w pełni uwodorniony olej z makadamii
+        - olej z makadamii w pełni uwodorniony
+        - całkowicie utwardzony olej makadamia
+        - olej makadamia całkowicie utwardzony
+        - całkowicie uwodorniony olej makadamia
+        - olej makadamia całkowicie uwodorniony
+        - w pełni utwardzony olej makadamia
+        - olej makadamia w pełni utwardzony
+        - w pełni uwodorniony olej makadamia
+        - olej makadamia w pełni uwodorniony
+        - całkowicie utwardzony olej orzechowy makadamia
+        - olej orzechowy makadamia całkowicie utwardzony
+        - całkowicie uwodorniony olej orzechowy makadamia
+        - olej orzechowy makadamia całkowicie uwodorniony
+        - w pełni utwardzony olej orzechowy makadamia
+        - olej orzechowy makadamia w pełni utwardzony
+        - w pełni uwodorniony olej orzechowy makadamia
+        - olej orzechowy makadamia w pełni uwodorniony
+        - całkowicie utwardzony olej orzechowy z orzechów makadamia
+        - olej orzechowy z orzechów makadamia całkowicie utwardzony
+        - całkowicie uwodorniony olej orzechowy z orzechów makadamia
+        - olej orzechowy z orzechów makadamia całkowicie uwodorniony
+        - w pełni utwardzony olej orzechowy z orzechów makadamia
+        - olej orzechowy z orzechów makadamia w pełni utwardzony
+        - w pełni uwodorniony olej orzechowy z orzechów makadamia
+        - olej orzechowy z orzechów makadamia w pełni uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny makadamia
+        - tłuszcz roślinny makadamia całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny makadamia
+        - tłuszcz roślinny makadamia całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz roślinny makadamia
+        - tłuszcz roślinny makadamia w pełni utwardzony
+        - w pełni uwodorniony tłuszcz roślinny makadamia
+        - tłuszcz roślinny makadamia w pełni uwodorniony
+        - całkowicie utwardzone tłuszcze roślinne makadamia
+        - tłuszcze roślinne makadamia całkowicie utwardzone
+        - całkowicie uwodornione tłuszcze roślinne makadamia
+        - tłuszcze roślinne makadamia całkowicie uwodornione
+        - w pełni utwardzone tłuszcze roślinne makadamia
+        - tłuszcze roślinne makadamia w pełni utwardzone
+        - w pełni uwodornione tłuszcze roślinne makadamia
+        - tłuszcze roślinne makadamia w pełni uwodornione
+        - całkowicie utwardzony olej roślinny makadamia
+        - olej roślinny makadamia całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny makadamia
+        - olej roślinny makadamia całkowicie uwodorniony
+        - w pełni utwardzony olej roślinny makadamia
+        - olej roślinny makadamia w pełni utwardzony
+        - w pełni uwodorniony olej roślinny makadamia
+        - olej roślinny makadamia w pełni uwodorniony
+        - całkowicie utwardzone oleje roślinne makadamia
+        - oleje roślinne makadamia całkowicie utwardzone
+        - całkowicie uwodornione oleje roślinne makadamia
+        - oleje roślinne makadamia całkowicie uwodornione
+        - w pełni utwardzone oleje roślinne makadamia
+        - oleje roślinne makadamia w pełni utwardzone
+        - w pełni uwodornione oleje roślinne makadamia
+        - oleje roślinne makadamia w pełni uwodornione
+        - całkowicie utwardzony olej roślinny orzechowy makadamia
+        - olej roślinny orzechowy makadamia całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny orzechowy makadamia
+        - olej roślinny orzechowy makadamia całkowicie uwodorniony
+        - w pełni utwardzony olej roślinny orzechowy makadamia
+        - olej roślinny orzechowy makadamia w pełni utwardzony
+        - w pełni uwodorniony olej roślinny orzechowy makadamia
+        - olej roślinny orzechowy makadamia w pełni uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny orzechowy makadamia
+        - tłuszcz roślinny orzechowy makadamia całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny orzechowy makadamia
+        - tłuszcz roślinny orzechowy makadamia całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz roślinny orzechowy makadamia
+        - tłuszcz roślinny orzechowy makadamia w pełni utwardzony
+        - w pełni uwodorniony tłuszcz roślinny orzechowy makadamia
+        - tłuszcz roślinny orzechowy makadamia w pełni uwodorniony
+        - całkowicie utwardzone oleje roślinne orzechowe makadamia
+        - oleje roślinne orzechowe makadamia całkowicie utwardzone
+        - całkowicie uwodornione oleje roślinne orzechowe makadamia
+        - oleje roślinne orzechowe makadamia całkowicie uwodornione
+        - w pełni utwardzone oleje roślinne orzechowe makadamia
+        - oleje roślinne orzechowe makadamia w pełni utwardzone
+        - w pełni uwodornione oleje roślinne orzechowe makadamia
+        - oleje roślinne orzechowe makadamia w pełni uwodornione
+        - całkowicie utwardzone tłuszcze roślinne orzechowe makadamia
+        - tłuszcze roślinne orzechowe makadamia całkowicie utwardzone
+        - całkowicie uwodornione tłuszcze roślinne orzechowe makadamia
+        - tłuszcze roślinne orzechowe makadamia całkowicie uwodornione
+        - w pełni utwardzone tłuszcze roślinne orzechowe makadamia
+        - tłuszcze roślinne orzechowe makadamia w pełni utwardzone
+        - w pełni uwodornione tłuszcze roślinne orzechowe makadamia
+        - tłuszcze roślinne orzechowe makadamia w pełni uwodornione
+        - całkowicie utwardzone oleje orzechowe makadamia
+        - oleje orzechowe makadamia całkowicie utwardzone
+        - całkowicie uwodornione oleje orzechowe makadamia
+        - oleje orzechowe makadamia całkowicie uwodornione
+        - w pełni utwardzone oleje orzechowe makadamia
+        - oleje orzechowe makadamia w pełni utwardzone
+        - w pełni uwodornione oleje orzechowe makadamia
+        - oleje orzechowe makadamia w pełni uwodornione
+        - całkowicie utwardzony tłuszcz orzechowy makadamia
+        - tłuszcz orzechowy makadamia całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz orzechowy makadamia
+        - tłuszcz orzechowy makadamia całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz orzechowy makadamia
+        - tłuszcz orzechowy makadamia w pełni utwardzony
+        - w pełni uwodorniony tłuszcz orzechowy makadamia
+        - tłuszcz orzechowy makadamia w pełni uwodorniony
+        - całkowicie utwardzone tłuszcze orzechowe makadamia
+        - tłuszcze orzechowe makadamia całkowicie utwardzone
+        - całkowicie uwodornione tłuszcze orzechowe makadamia
+        - tłuszcze orzechowe makadamia całkowicie uwodornione
+        - w pełni utwardzone tłuszcze orzechowe makadamia
+        - tłuszcze orzechowe makadamia w pełni utwardzone
+        - w pełni uwodornione tłuszcze orzechowe makadamia
+        - tłuszcze orzechowe makadamia w pełni uwodornione
+        - całkowicie utwardzony tłuszcz roślinny z makadamii
+        - tłuszcz roślinny z makadamii całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny z makadamii
+        - tłuszcz roślinny z makadamii całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz roślinny z makadamii
+        - tłuszcz roślinny z makadamii w pełni utwardzony
+        - w pełni uwodorniony tłuszcz roślinny z makadamii
+        - tłuszcz roślinny z makadamii w pełni uwodorniony
+        - całkowicie utwardzone tłuszcze roślinne z makadamii
+        - tłuszcze roślinne z makadamii całkowicie utwardzone
+        - całkowicie uwodornione tłuszcze roślinne z makadamii
+        - tłuszcze roślinne z makadamii całkowicie uwodornione
+        - w pełni utwardzone tłuszcze roślinne z makadamii
+        - tłuszcze roślinne z makadamii w pełni utwardzone
+        - w pełni uwodornione tłuszcze roślinne z makadamii
+        - tłuszcze roślinne z makadamii w pełni uwodornione
+        - całkowicie utwardzony olej roślinny z makadamii
+        - olej roślinny z makadamii całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny z makadamii
+        - olej roślinny z makadamii całkowicie uwodorniony
+        - w pełni utwardzony olej roślinny z makadamii
+        - olej roślinny z makadamii w pełni utwardzony
+        - w pełni uwodorniony olej roślinny z makadamii
+        - olej roślinny z makadamii w pełni uwodorniony
+        - całkowicie utwardzone oleje roślinne z makadamii
+        - oleje roślinne z makadamii całkowicie utwardzone
+        - całkowicie uwodornione oleje roślinne z makadamii
+        - oleje roślinne z makadamii całkowicie uwodornione
+        - w pełni utwardzone oleje roślinne z makadamii
+        - oleje roślinne z makadamii w pełni utwardzone
+        - w pełni uwodornione oleje roślinne z makadamii
+        - oleje roślinne z makadamii w pełni uwodornione
+        - całkowicie utwardzony olej orzechowy z makadamii
+        - olej orzechowy z makadamii całkowicie utwardzony
+        - całkowicie uwodorniony olej orzechowy z makadamii
+        - olej orzechowy z makadamii całkowicie uwodorniony
+        - w pełni utwardzony olej orzechowy z makadamii
+        - olej orzechowy z makadamii w pełni utwardzony
+        - w pełni uwodorniony olej orzechowy z makadamii
+        - olej orzechowy z makadamii w pełni uwodorniony
+        - całkowicie utwardzony olej roślinny orzechowy z makadamii
+        - olej roślinny orzechowy z makadamii całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny orzechowy z makadamii
+        - olej roślinny orzechowy z makadamii całkowicie uwodorniony
+        - w pełni utwardzony olej roślinny orzechowy z makadamii
+        - olej roślinny orzechowy z makadamii w pełni utwardzony
+        - w pełni uwodorniony olej roślinny orzechowy z makadamii
+        - olej roślinny orzechowy z makadamii w pełni uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny orzechowy z makadamii
+        - tłuszcz roślinny orzechowy z makadamii całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny orzechowy z makadamii
+        - tłuszcz roślinny orzechowy z makadamii całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz roślinny orzechowy z makadamii
+        - tłuszcz roślinny orzechowy z makadamii w pełni utwardzony
+        - w pełni uwodorniony tłuszcz roślinny orzechowy z makadamii
+        - tłuszcz roślinny orzechowy z makadamii w pełni uwodorniony
+        - całkowicie utwardzone oleje roślinne orzechowe z makadamii
+        - oleje roślinne orzechowe z makadamii całkowicie utwardzone
+        - całkowicie uwodornione oleje roślinne orzechowe z makadamii
+        - oleje roślinne orzechowe z makadamii całkowicie uwodornione
+        - w pełni utwardzone oleje roślinne orzechowe z makadamii
+        - oleje roślinne orzechowe z makadamii w pełni utwardzone
+        - w pełni uwodornione oleje roślinne orzechowe z makadamii
+        - oleje roślinne orzechowe z makadamii w pełni uwodornione
+        - całkowicie utwardzone tłuszcze roślinne orzechowe z makadamii
+        - tłuszcze roślinne orzechowe z makadamii całkowicie utwardzone
+        - całkowicie uwodornione tłuszcze roślinne orzechowe z makadamii
+        - tłuszcze roślinne orzechowe z makadamii całkowicie uwodornione
+        - w pełni utwardzone tłuszcze roślinne orzechowe z makadamii
+        - tłuszcze roślinne orzechowe z makadamii w pełni utwardzone
+        - w pełni uwodornione tłuszcze roślinne orzechowe z makadamii
+        - tłuszcze roślinne orzechowe z makadamii w pełni uwodornione
+        - całkowicie utwardzone oleje orzechowe z makadamii
+        - oleje orzechowe z makadamii całkowicie utwardzone
+        - całkowicie uwodornione oleje orzechowe z makadamii
+        - oleje orzechowe z makadamii całkowicie uwodornione
+        - w pełni utwardzone oleje orzechowe z makadamii
+        - oleje orzechowe z makadamii w pełni utwardzone
+        - w pełni uwodornione oleje orzechowe z makadamii
+        - oleje orzechowe z makadamii w pełni uwodornione
+        - całkowicie utwardzony tłuszcz orzechowy z makadamii
+        - tłuszcz orzechowy z makadamii całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz orzechowy z makadamii
+        - tłuszcz orzechowy z makadamii całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz orzechowy z makadamii
+        - tłuszcz orzechowy z makadamii w pełni utwardzony
+        - w pełni uwodorniony tłuszcz orzechowy z makadamii
+        - tłuszcz orzechowy z makadamii w pełni uwodorniony
+        - całkowicie utwardzone tłuszcze orzechowe z makadamii
+        - tłuszcze orzechowe z makadamii całkowicie utwardzone
+        - całkowicie uwodornione tłuszcze orzechowe z makadamii
+        - tłuszcze orzechowe z makadamii całkowicie uwodornione
+        - w pełni utwardzone tłuszcze orzechowe z makadamii
+        - tłuszcze orzechowe z makadamii w pełni utwardzone
+        - w pełni uwodornione tłuszcze orzechowe z makadamii
+        - tłuszcze orzechowe z makadamii w pełni uwodornione
+        - całkowicie utwardzony tłuszcz roślinny z orzechów makadamia
+        - tłuszcz roślinny z orzechów makadamia całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny z orzechów makadamia
+        - tłuszcz roślinny z orzechów makadamia całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz roślinny z orzechów makadamia
+        - tłuszcz roślinny z orzechów makadamia w pełni utwardzony
+        - w pełni uwodorniony tłuszcz roślinny z orzechów makadamia
+        - tłuszcz roślinny z orzechów makadamia w pełni uwodorniony
+        - całkowicie utwardzone tłuszcze roślinne z orzechów makadamia
+        - tłuszcze roślinne z orzechów makadamia całkowicie utwardzone
+        - całkowicie uwodornione tłuszcze roślinne z orzechów makadamia
+        - tłuszcze roślinne z orzechów makadamia całkowicie uwodornione
+        - w pełni utwardzone tłuszcze roślinne z orzechów makadamia
+        - tłuszcze roślinne z orzechów makadamia w pełni utwardzone
+        - w pełni uwodornione tłuszcze roślinne z orzechów makadamia
+        - tłuszcze roślinne z orzechów makadamia w pełni uwodornione
+        - całkowicie utwardzony olej roślinny z orzechów makadamia
+        - olej roślinny z orzechów makadamia całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny z orzechów makadamia
+        - olej roślinny z orzechów makadamia całkowicie uwodorniony
+        - w pełni utwardzony olej roślinny z orzechów makadamia
+        - olej roślinny z orzechów makadamia w pełni utwardzony
+        - w pełni uwodorniony olej roślinny z orzechów makadamia
+        - olej roślinny z orzechów makadamia w pełni uwodorniony
+        - całkowicie utwardzone oleje roślinne z orzechów makadamia
+        - oleje roślinne z orzechów makadamia całkowicie utwardzone
+        - całkowicie uwodornione oleje roślinne z orzechów makadamia
+        - oleje roślinne z orzechów makadamia całkowicie uwodornione
+        - w pełni utwardzone oleje roślinne z orzechów makadamia
+        - oleje roślinne z orzechów makadamia w pełni utwardzone
+        - w pełni uwodornione oleje roślinne z orzechów makadamia
+        - oleje roślinne z orzechów makadamia w pełni uwodornione
+        - całkowicie utwardzony olej roślinny orzechowy z orzechów makadamia
+        - olej roślinny orzechowy z orzechów makadamia całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny orzechowy z orzechów makadamia
+        - olej roślinny orzechowy z orzechów makadamia całkowicie uwodorniony
+        - w pełni utwardzony olej roślinny orzechowy z orzechów makadamia
+        - olej roślinny orzechowy z orzechów makadamia w pełni utwardzony
+        - w pełni uwodorniony olej roślinny orzechowy z orzechów makadamia
+        - olej roślinny orzechowy z orzechów makadamia w pełni uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny orzechowy z orzechów makadamia
+        - tłuszcz roślinny orzechowy z orzechów makadamia całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny orzechowy z orzechów makadamia
+        - tłuszcz roślinny orzechowy z orzechów makadamia całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz roślinny orzechowy z orzechów makadamia
+        - tłuszcz roślinny orzechowy z orzechów makadamia w pełni utwardzony
+        - w pełni uwodorniony tłuszcz roślinny orzechowy z orzechów makadamia
+        - tłuszcz roślinny orzechowy z orzechów makadamia w pełni uwodorniony
+        - całkowicie utwardzone oleje roślinne orzechowe z orzechów makadamia
+        - oleje roślinne orzechowe z orzechów makadamia całkowicie utwardzone
+        - całkowicie uwodornione oleje roślinne orzechowe z orzechów makadamia
+        - oleje roślinne orzechowe z orzechów makadamia całkowicie uwodornione
+        - w pełni utwardzone oleje roślinne orzechowe z orzechów makadamia
+        - oleje roślinne orzechowe z orzechów makadamia w pełni utwardzone
+        - w pełni uwodornione oleje roślinne orzechowe z orzechów makadamia
+        - oleje roślinne orzechowe z orzechów makadamia w pełni uwodornione
+        - całkowicie utwardzone tłuszcze roślinne orzechowe z orzechów makadamia
+        - tłuszcze roślinne orzechowe z orzechów makadamia całkowicie utwardzone
+        - całkowicie uwodornione tłuszcze roślinne orzechowe z orzechów makadamia
+        - tłuszcze roślinne orzechowe z orzechów makadamia całkowicie uwodornione
+        - w pełni utwardzone tłuszcze roślinne orzechowe z orzechów makadamia
+        - tłuszcze roślinne orzechowe z orzechów makadamia w pełni utwardzone
+        - w pełni uwodornione tłuszcze roślinne orzechowe z orzechów makadamia
+        - tłuszcze roślinne orzechowe z orzechów makadamia w pełni uwodornione
+        - całkowicie utwardzone oleje orzechowe z orzechów makadamia
+        - oleje orzechowe z orzechów makadamia całkowicie utwardzone
+        - całkowicie uwodornione oleje orzechowe z orzechów makadamia
+        - oleje orzechowe z orzechów makadamia całkowicie uwodornione
+        - w pełni utwardzone oleje orzechowe z orzechów makadamia
+        - oleje orzechowe z orzechów makadamia w pełni utwardzone
+        - w pełni uwodornione oleje orzechowe z orzechów makadamia
+        - oleje orzechowe z orzechów makadamia w pełni uwodornione
+        - całkowicie utwardzony tłuszcz orzechowy z orzechów makadamia
+        - tłuszcz orzechowy z orzechów makadamia całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz orzechowy z orzechów makadamia
+        - tłuszcz orzechowy z orzechów makadamia całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz orzechowy z orzechów makadamia
+        - tłuszcz orzechowy z orzechów makadamia w pełni utwardzony
+        - w pełni uwodorniony tłuszcz orzechowy z orzechów makadamia
+        - tłuszcz orzechowy z orzechów makadamia w pełni uwodorniony
+        - całkowicie utwardzone tłuszcze orzechowe z orzechów makadamia
+        - tłuszcze orzechowe z orzechów makadamia całkowicie utwardzone
+        - całkowicie uwodornione tłuszcze orzechowe z orzechów makadamia
+        - tłuszcze orzechowe z orzechów makadamia całkowicie uwodornione
+        - w pełni utwardzone tłuszcze orzechowe z orzechów makadamia
+        - tłuszcze orzechowe z orzechów makadamia w pełni utwardzone
+        - w pełni uwodornione tłuszcze orzechowe z orzechów makadamia
+        - tłuszcze orzechowe z orzechów makadamia w pełni uwodornione
+    process:
+      en: "Macadamia oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
+      pl: "Olej z orzechów makadamia ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
+    tells:
+      - 'calkowicie (?:utwardzon|uwodorn)'
+      - 'w pelni (?:utwardzon|uwodorn)'
+      - '(?<!not )(?<!non )fully hydrogenated'
+      - '(?<!not )(?<!non )totally hydrogenated'
+      - 'vollstandig gehartet'
+assertions:
+  - code: origin.vegetable_oil_derived
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A pressed vegetable oil; EU labelling requires its specific plant origin to be named.
+      pl: Wyciskany olej roślinny; przepisy UE o etykietowaniu wymagają podania jego konkretnego pochodzenia rośliny.
+    sources:
+      - id: reg-1169-2011
+        locator: Annex VII Part A, point 8
+  - code: allergen.nuts
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Product derived from macadamia or Queensland nuts; EU Annex II item 8 (macadamia or Queensland nuts and products thereof).
+      pl: Produkt z orzechów makadamia; Aneks II UE, punkt 8 (orzechy makadamia i produkty z nich).
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 8
+  - code: processing.hydrogenated
+    variant: hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares hydrogenation without specifying partial or full, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje utwardzenie (bez wskazania, czy częściowe, czy całkowite), czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: processing.hydrogenated
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares partial hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje częściowe utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: health.trans_fat_source
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Partial hydrogenation is the main industrial source of trans fat; EU food sold to consumers is capped at 2 g trans fat per 100 g of fat."
+      pl: "Częściowe utwardzanie jest głównym przemysłowym źródłem tłuszczów trans; żywność sprzedawana konsumentom w UE ma limit 2 g tłuszczów trans na 100 g tłuszczu."
+    sources:
+      - id: reg-2019-649
+  - code: processing.hydrogenated
+    variant: fully-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares full hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje całkowite utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+review_status: draft
+provenance: ai-drafted
