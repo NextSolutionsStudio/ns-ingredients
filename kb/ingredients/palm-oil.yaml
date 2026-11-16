@@ -2,7 +2,7 @@ id: palm-oil
 type: fat
 names:
   en: [palm oil, non-hydrogenated palm oil, non-hydrogenated palm fat]
-  pl: [olej palmowy, tłuszcz palmowy, nieutwardzony tłuszcz palmowy, tłuszcz palmowy nieutwardzony, nieutwardzony olej palmowy, tłuszcz roślinny palmowy]
+  pl: [olej palmowy, tłuszcz palmowy, nieutwardzony tłuszcz palmowy, tłuszcz palmowy nieutwardzony, nieutwardzony olej palmowy, tłuszcz roślinny palmowy, olej roślinny palmowy, palmowy olej roślinny]
   de: [Palmöl, Palmfett]
 summary:
   en: >-
@@ -44,24 +44,33 @@ variants:
     prior_rationale:
       en: "A specialty product always sold on its colour/flavour, so it is named when present."
       pl: "Produkt specjalny, sprzedawany właśnie ze względu na kolor/smak, więc gdy jest obecny — jest nazwany."
+  - id: hydrogenated
+    names:
+      en: [hydrogenated palm oil, hydrogenated palm fat]
+      pl: [utwardzony olej palmowy, olej palmowy utwardzony, uwodorniony olej palmowy, olej palmowy uwodorniony, utwardzony tłuszcz palmowy, tłuszcz palmowy utwardzony, uwodorniony tłuszcz palmowy, tłuszcz palmowy uwodorniony]
+      de: [gehärtetes Palmöl, gehärtetes Palmfett]
+    process:
+      en: "Palm oil or palm fat hardened by hydrogenation; the label does not specify partial or full hydrogenation."
+      pl: "Olej lub tłuszcz palmowy utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
+    tells: ['(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)']
   - id: partially-hydrogenated
     names:
-      en: [partially hydrogenated palm oil]
-      pl: [olej palmowy częściowo utwardzony, częściowo utwardzony olej palmowy, tłuszcz palmowy częściowo utwardzony, częściowo utwardzony tłuszcz palmowy, olej palmowy częściowo uwodorniony, częściowo uwodorniony olej palmowy]
-      de: [teilweise gehärtetes Palmöl]
+      en: [partially hydrogenated palm oil, partially hydrogenated palm fat]
+      pl: [olej palmowy częściowo utwardzony, częściowo utwardzony olej palmowy, tłuszcz palmowy częściowo utwardzony, częściowo utwardzony tłuszcz palmowy, olej palmowy częściowo uwodorniony, częściowo uwodorniony olej palmowy, tłuszcz palmowy częściowo uwodorniony, częściowo uwodorniony tłuszcz palmowy]
+      de: [teilweise gehärtetes Palmöl, teilweise gehärtetes Palmfett]
     process:
       en: "Palm oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
       pl: "Olej palmowy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
     tells: ['czesciowo (?:utwardzon|uwodorn)', 'partially hydrogenated', 'teilweise gehartet']
   - id: fully-hydrogenated
     names:
-      en: [fully hydrogenated palm oil]
-      pl: [olej palmowy całkowicie utwardzony, całkowicie utwardzony olej palmowy, tłuszcz palmowy całkowicie utwardzony, całkowicie utwardzony tłuszcz palmowy, olej palmowy całkowicie uwodorniony, całkowicie uwodorniony olej palmowy]
-      de: [vollständig gehärtetes Palmöl]
+      en: [fully hydrogenated palm oil, totally hydrogenated palm oil, fully hydrogenated palm fat]
+      pl: [olej palmowy całkowicie utwardzony, całkowicie utwardzony olej palmowy, tłuszcz palmowy całkowicie utwardzony, całkowicie utwardzony tłuszcz palmowy, olej palmowy w pełni utwardzony, w pełni utwardzony olej palmowy, tłuszcz palmowy w pełni utwardzony, w pełni utwardzony tłuszcz palmowy, olej palmowy całkowicie uwodorniony, całkowicie uwodorniony olej palmowy, tłuszcz palmowy całkowicie uwodorniony, całkowicie uwodorniony tłuszcz palmowy, olej palmowy w pełni uwodorniony, w pełni uwodorniony olej palmowy, tłuszcz palmowy w pełni uwodorniony, w pełni uwodorniony tłuszcz palmowy]
+      de: [vollständig gehärtetes Palmöl, vollständig gehärtetes Palmfett]
     process:
       en: "Palm oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
       pl: "Olej palmowy ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
-    tells: ['calkowicie (?:utwardzon|uwodorn)', 'fully hydrogenated', 'vollstandig gehartet']
+    tells: ['calkowicie (?:utwardzon|uwodorn)', 'w pelni (?:utwardzon|uwodorn)', 'fully hydrogenated', 'totally hydrogenated', 'vollstandig gehartet']
 assertions:
   - code: ethics.palm_oil
     certainty: yes
@@ -88,6 +97,15 @@ assertions:
       en: "Refined, bleached and deodorised before food use."
       pl: "Rafinowany, odbarwiany i dezodoryzowany przed użyciem w żywności."
     sources: [{ id: reg-1169-2011, locator: "Annex VII Part A, point 8" }]
+  - code: processing.hydrogenated
+    variant: hydrogenated
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares hydrogenation without specifying partial or full, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje utwardzenie (bez wskazania, czy częściowe, czy całkowite), czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources: [{ id: reg-1169-2011, locator: "Annex VII Part A, points 8 and 9" }]
   - code: processing.hydrogenated
     variant: partially-hydrogenated
     certainty: yes

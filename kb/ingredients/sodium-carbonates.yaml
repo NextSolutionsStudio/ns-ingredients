@@ -53,18 +53,24 @@ assertions:
     sources:
       - id: usgs-mcs-soda-ash-2025
   - code: origin.mineral
-    certainty: maybe
+    certainty: yes
     kind: estimate
     grade: B
     note:
       en: >-
-        Natural soda ash is refined directly from mined trona ore and natural sodium-carbonate brines
-        (predominant in the US and Turkey, per USGS MCS 2025).
+        Both commercial routes to soda ash start from mineral raw materials: natural soda ash is refined
+        directly from mined trona ore, nahcolite or mineral brines (USGS MCS 2025), while the synthetic
+        Solvay route (~75% of global production) reacts sodium chloride brine with calcined limestone
+        (CaCO3) (Gutierrez et al. 2025, Section 1 & Table 1).
       pl: >-
-        Naturalna soda kalcynowana jest oczyszczana bezpośrednio z wydobywanego minerału trony oraz
-        naturalnych solanek węglanowych (dominująca ścieżka w USA i Turcji wg USGS MCS 2025).
+        Obie przemysłowe drogi otrzymywania sody opierają się na surowcach mineralnych: soda naturalna jest
+        oczyszczana bezpośrednio z wydobywanej trony, nahkolitu lub solanek mineralnych (USGS MCS 2025),
+        natomiast synteza Solvaya (ok. 75% światowej produkcji) wykorzystuje solankę (NaCl) i wypalany
+        wapień (CaCO3) (Gutierrez i in. 2025, sekcja 1 i tabela 1).
     sources:
       - id: usgs-mcs-soda-ash-2025
+      - id: gutierrez-2025-soda-ash
+        locator: "Section 1 & Table 1"
 regulatory:
   - jurisdiction: EU
     status: authorised

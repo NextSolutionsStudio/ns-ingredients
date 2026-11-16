@@ -31,3 +31,10 @@ review_status: draft
 provenance: ai-drafted
 review_notes:
   - 'Identity-only: no EFSA re-evaluation of E 626–635 was opened. Composition from Reg 231/2012.'
+  - >-
+    origin.*: not asserted — checked Reg (EU) No 231/2012 E 635 Definition (states IMP/GMP mixture only),
+    EFSA re-evaluation status (call for data only; no published food-additive opinion),
+    sources-pack/efsa-ribonucleotides-e626-e635.txt (FEEDAP animal-feed IMP opinions only), and
+    sources-pack/review-nucleotides-production.txt (research abstracts on yeast RNA/GMP). Without an
+    opened food-additive dossier settling fermentation/yeast RNA vs rare meat/fish extraction, no origin
+    code is asserted and diet status remains unknown.

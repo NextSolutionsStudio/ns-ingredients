@@ -2,7 +2,7 @@ id: rapeseed-oil
 type: fat
 names:
   en: [rapeseed oil, canola oil]
-  pl: [olej rzepakowy, olej roślinny rzepakowy]
+  pl: [olej rzepakowy, olej roślinny rzepakowy, tłuszcz roślinny rzepakowy, rzepakowy olej roślinny]
   de: [Rapsöl]
 summary:
   en: >-
@@ -19,6 +19,34 @@ summary:
     odpornych na herbicydy, ale surowiec faktycznie tłoczony na olej spożywczy w UE jest w większości
     niemodyfikowany: UE nie zezwala na komercyjną uprawę GMO rzepaku, a kanadyjska canola GMO, dominująca
     w produkcji światowej, trafia głównie na pasze i biopaliwa, a nie do żywności w UE.
+variants:
+  - id: hydrogenated
+    names:
+      en: [hydrogenated rapeseed oil, hydrogenated canola oil]
+      pl: [utwardzony olej rzepakowy, olej rzepakowy utwardzony, uwodorniony olej rzepakowy, olej rzepakowy uwodorniony]
+      de: [gehärtetes Rapsöl]
+    process:
+      en: "Rapeseed oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
+      pl: "Olej rzepakowy utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
+    tells: ['(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)']
+  - id: partially-hydrogenated
+    names:
+      en: [partially hydrogenated rapeseed oil, partially hydrogenated canola oil]
+      pl: [częściowo utwardzony olej rzepakowy, olej rzepakowy częściowo utwardzony, częściowo uwodorniony olej rzepakowy, olej rzepakowy częściowo uwodorniony]
+      de: [teilweise gehärtetes Rapsöl]
+    process:
+      en: "Rapeseed oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
+      pl: "Olej rzepakowy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
+    tells: ['czesciowo (?:utwardzon|uwodorn)', 'partially hydrogenated', 'teilweise gehartet']
+  - id: fully-hydrogenated
+    names:
+      en: [fully hydrogenated rapeseed oil, totally hydrogenated rapeseed oil, fully hydrogenated canola oil]
+      pl: [całkowicie utwardzony olej rzepakowy, olej rzepakowy całkowicie utwardzony, w pełni utwardzony olej rzepakowy, olej rzepakowy w pełni utwardzony, całkowicie uwodorniony olej rzepakowy, olej rzepakowy całkowicie uwodorniony, w pełni uwodorniony olej rzepakowy, olej rzepakowy w pełni uwodorniony]
+      de: [vollständig gehärtetes Rapsöl]
+    process:
+      en: "Rapeseed oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
+      pl: "Olej rzepakowy ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
+    tells: ['calkowicie (?:utwardzon|uwodorn)', 'w pelni (?:utwardzon|uwodorn)', 'fully hydrogenated', 'totally hydrogenated', 'vollstandig gehartet']
 assertions:
   - code: origin.vegetable_oil_derived
     certainty: yes
@@ -47,6 +75,42 @@ assertions:
         dla oleju faktycznie sprzedawanego jako żywność w UE; samej listy składników nie da się jednoznacznie
         przypisać do jednej z tych sytuacji.
     sources: [{ id: cano-ela-canola-gmo }]
+  - code: processing.hydrogenated
+    variant: hydrogenated
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares hydrogenation without specifying partial or full, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje utwardzenie (bez wskazania, czy częściowe, czy całkowite), czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources: [{ id: reg-1169-2011, locator: "Annex VII Part A, points 8 and 9" }]
+  - code: processing.hydrogenated
+    variant: partially-hydrogenated
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares partial hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje częściowe utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources: [{ id: reg-1169-2011, locator: "Annex VII Part A, points 8 and 9" }]
+  - code: health.trans_fat_source
+    variant: partially-hydrogenated
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Partial hydrogenation is the main industrial source of trans fat; EU food sold to consumers is capped at 2 g trans fat per 100 g of fat."
+      pl: "Częściowe utwardzanie jest głównym przemysłowym źródłem tłuszczów trans; żywność sprzedawana konsumentom w UE ma limit 2 g tłuszczów trans na 100 g tłuszczu."
+    sources: [{ id: reg-2019-649 }]
+  - code: processing.hydrogenated
+    variant: fully-hydrogenated
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares full hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje całkowite utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources: [{ id: reg-1169-2011, locator: "Annex VII Part A, points 8 and 9" }]
 review_status: draft
 provenance: ai-drafted
 review_notes: []

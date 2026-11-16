@@ -186,3 +186,16 @@ sources:
     licence: public-domain
     accessed: '2026-11-16'
     note: "USDA ERS summary retrieved via search_web: >90% of U.S. soybean (96% HT), corn (92% HT), and upland cotton (93% HT) acreage planted with genetically engineered varieties."
+
+  - id: gutierrez-2025-soda-ash
+    type: review
+    title: "Carbon-Negative Production of Soda Ash: Process Development and Feasibility Evaluation"
+    authors: "Gutierrez MF, Lorenz H, Schulze P"
+    publisher: "Industrial & Engineering Chemistry Research"
+    year: 2025
+    url: https://pubs.acs.org/doi/10.1021/acs.iecr.5c00483
+    doi: 10.1021/acs.iecr.5c00483
+    pmid: '40519898'
+    licence: CC-BY-4.0
+    accessed: '2026-11-16'
+    note: "Full text read in sources-pack/review-soda-ash.txt (PMC12164680): Section 1 & Table 1 document the Solvay process from mineral NaCl brine and limestone (CaCO3) (~75% of global output)."
