@@ -121,18 +121,10 @@ variants:
         - tłuszcze roślinne sojowe utwardzone
         - utwardzone oleje roślinne sojowe
         - oleje roślinne sojowe utwardzone
-        - rafinowany olej sojowy utwardzony
-        - utwardzony rafinowany olej sojowy
-        - w pełni rafinowany olej sojowy utwardzony
-        - utwardzony w pełni rafinowany olej sojowy
         - uwodorniony tłuszcz roślinny sojowy
         - tłuszcz roślinny sojowy uwodorniony
         - uwodorniony olej roślinny sojowy
         - olej roślinny sojowy uwodorniony
-        - rafinowany olej sojowy uwodorniony
-        - uwodorniony rafinowany olej sojowy
-        - w pełni rafinowany olej sojowy uwodorniony
-        - uwodorniony w pełni rafinowany olej sojowy
         - uwodornione tłuszcze roślinne sojowe
         - tłuszcze roślinne sojowe uwodornione
         - uwodornione oleje roślinne sojowe
@@ -166,18 +158,10 @@ variants:
         - tłuszcze roślinne sojowe częściowo utwardzone
         - częściowo utwardzone oleje roślinne sojowe
         - oleje roślinne sojowe częściowo utwardzone
-        - rafinowany olej sojowy częściowo utwardzony
-        - częściowo utwardzony rafinowany olej sojowy
-        - w pełni rafinowany olej sojowy częściowo utwardzony
-        - częściowo utwardzony w pełni rafinowany olej sojowy
         - częściowo uwodorniony tłuszcz roślinny sojowy
         - tłuszcz roślinny sojowy częściowo uwodorniony
         - częściowo uwodorniony olej roślinny sojowy
         - olej roślinny sojowy częściowo uwodorniony
-        - rafinowany olej sojowy częściowo uwodorniony
-        - częściowo uwodorniony rafinowany olej sojowy
-        - w pełni rafinowany olej sojowy częściowo uwodorniony
-        - częściowo uwodorniony w pełni rafinowany olej sojowy
         - częściowo uwodornione tłuszcze roślinne sojowe
         - tłuszcze roślinne sojowe częściowo uwodornione
         - częściowo uwodornione oleje roślinne sojowe
@@ -222,34 +206,18 @@ variants:
         - tłuszcze roślinne sojowe całkowicie utwardzone
         - całkowicie utwardzone oleje roślinne sojowe
         - oleje roślinne sojowe całkowicie utwardzone
-        - rafinowany olej sojowy całkowicie utwardzony
-        - całkowicie utwardzony rafinowany olej sojowy
-        - w pełni rafinowany olej sojowy całkowicie utwardzony
-        - całkowicie utwardzony w pełni rafinowany olej sojowy
         - całkowicie uwodorniony tłuszcz roślinny sojowy
         - tłuszcz roślinny sojowy całkowicie uwodorniony
         - całkowicie uwodorniony olej roślinny sojowy
         - olej roślinny sojowy całkowicie uwodorniony
-        - rafinowany olej sojowy całkowicie uwodorniony
-        - całkowicie uwodorniony rafinowany olej sojowy
-        - w pełni rafinowany olej sojowy całkowicie uwodorniony
-        - całkowicie uwodorniony w pełni rafinowany olej sojowy
         - w pełni utwardzony tłuszcz roślinny sojowy
         - tłuszcz roślinny sojowy w pełni utwardzony
         - w pełni utwardzony olej roślinny sojowy
         - olej roślinny sojowy w pełni utwardzony
-        - rafinowany olej sojowy w pełni utwardzony
-        - w pełni utwardzony rafinowany olej sojowy
-        - w pełni rafinowany olej sojowy w pełni utwardzony
-        - w pełni utwardzony w pełni rafinowany olej sojowy
         - w pełni uwodorniony tłuszcz roślinny sojowy
         - tłuszcz roślinny sojowy w pełni uwodorniony
         - w pełni uwodorniony olej roślinny sojowy
         - olej roślinny sojowy w pełni uwodorniony
-        - rafinowany olej sojowy w pełni uwodorniony
-        - w pełni uwodorniony rafinowany olej sojowy
-        - w pełni rafinowany olej sojowy w pełni uwodorniony
-        - w pełni uwodorniony w pełni rafinowany olej sojowy
         - całkowicie uwodornione tłuszcze roślinne sojowe
         - tłuszcze roślinne sojowe całkowicie uwodornione
         - całkowicie uwodornione oleje roślinne sojowe
@@ -273,6 +241,65 @@ variants:
       - 'fully hydrogenated'
       - 'totally hydrogenated'
       - 'vollstandig gehartet'
+  - id: fully-refined-hydrogenated
+    names:
+      en:
+        - fully refined hydrogenated soybean oil
+        - hydrogenated fully refined soybean oil
+      pl:
+        - rafinowany olej sojowy utwardzony
+        - utwardzony rafinowany olej sojowy
+        - w pełni rafinowany olej sojowy utwardzony
+        - utwardzony w pełni rafinowany olej sojowy
+        - rafinowany olej sojowy uwodorniony
+        - uwodorniony rafinowany olej sojowy
+        - w pełni rafinowany olej sojowy uwodorniony
+        - uwodorniony w pełni rafinowany olej sojowy
+    process:
+      en: "Fully refined soybean oil, then hydrogenated (partial or full not stated). The refining keeps the Annex II point 6(a) exemption."
+      pl: "W pełni rafinowany olej sojowy, następnie utwardzony (bez podania, czy częściowo, czy całkowicie). Rafinacja zachowuje wyłączenie z Załącznika II pkt 6(a)."
+  - id: fully-refined-partially-hydrogenated
+    names:
+      en:
+        - fully refined partially hydrogenated soybean oil
+        - partially hydrogenated fully refined soybean oil
+      pl:
+        - rafinowany olej sojowy częściowo utwardzony
+        - częściowo utwardzony rafinowany olej sojowy
+        - w pełni rafinowany olej sojowy częściowo utwardzony
+        - częściowo utwardzony w pełni rafinowany olej sojowy
+        - rafinowany olej sojowy częściowo uwodorniony
+        - częściowo uwodorniony rafinowany olej sojowy
+        - w pełni rafinowany olej sojowy częściowo uwodorniony
+        - częściowo uwodorniony w pełni rafinowany olej sojowy
+    process:
+      en: "Fully refined soybean oil, then partially hydrogenated, which forms industrial trans fat. The refining keeps the Annex II point 6(a) exemption."
+      pl: "W pełni rafinowany olej sojowy, następnie częściowo utwardzony, co tworzy przemysłowe tłuszcze trans. Rafinacja zachowuje wyłączenie z Załącznika II pkt 6(a)."
+  - id: fully-refined-fully-hydrogenated
+    names:
+      en:
+        - fully refined fully hydrogenated soybean oil
+        - fully hydrogenated fully refined soybean oil
+      pl:
+        - rafinowany olej sojowy całkowicie utwardzony
+        - całkowicie utwardzony rafinowany olej sojowy
+        - w pełni rafinowany olej sojowy całkowicie utwardzony
+        - całkowicie utwardzony w pełni rafinowany olej sojowy
+        - rafinowany olej sojowy całkowicie uwodorniony
+        - całkowicie uwodorniony rafinowany olej sojowy
+        - w pełni rafinowany olej sojowy całkowicie uwodorniony
+        - całkowicie uwodorniony w pełni rafinowany olej sojowy
+        - rafinowany olej sojowy w pełni utwardzony
+        - w pełni utwardzony rafinowany olej sojowy
+        - w pełni rafinowany olej sojowy w pełni utwardzony
+        - w pełni utwardzony w pełni rafinowany olej sojowy
+        - rafinowany olej sojowy w pełni uwodorniony
+        - w pełni uwodorniony rafinowany olej sojowy
+        - w pełni rafinowany olej sojowy w pełni uwodorniony
+        - w pełni uwodorniony w pełni rafinowany olej sojowy
+    process:
+      en: "Fully refined soybean oil, then fully hydrogenated: saturated, with essentially no trans fat. The refining keeps the Annex II point 6(a) exemption."
+      pl: "W pełni rafinowany olej sojowy, następnie całkowicie utwardzony: nasycony, praktycznie bez tłuszczów trans. Rafinacja zachowuje wyłączenie z Załącznika II pkt 6(a)."
 assertions:
   - code: origin.plant
     certainty: 'yes'
@@ -402,6 +429,82 @@ assertions:
       - id: reg-2019-649
   - code: processing.hydrogenated
     variant: fully-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares full hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje całkowite utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: allergen.soybeans
+    variant: fully-refined-hydrogenated
+    certainty: 'no'
+    kind: fact
+    grade: A
+    note:
+      en: "Fully refined soybean oil and fat are explicitly exempted from soy allergen declaration under Reg (EU) No 1169/2011 Annex II point 6(a)."
+      pl: "W pełni rafinowany olej i tłuszcz sojowy są wprost wyłączone z deklaracji alergenu soi na mocy Rozp. (UE) nr 1169/2011 Załącznik II pkt 6(a)."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex II, point 6(a)"
+  - code: allergen.soybeans
+    variant: fully-refined-partially-hydrogenated
+    certainty: 'no'
+    kind: fact
+    grade: A
+    note:
+      en: "Fully refined soybean oil and fat are explicitly exempted from soy allergen declaration under Reg (EU) No 1169/2011 Annex II point 6(a)."
+      pl: "W pełni rafinowany olej i tłuszcz sojowy są wprost wyłączone z deklaracji alergenu soi na mocy Rozp. (UE) nr 1169/2011 Załącznik II pkt 6(a)."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex II, point 6(a)"
+  - code: allergen.soybeans
+    variant: fully-refined-fully-hydrogenated
+    certainty: 'no'
+    kind: fact
+    grade: A
+    note:
+      en: "Fully refined soybean oil and fat are explicitly exempted from soy allergen declaration under Reg (EU) No 1169/2011 Annex II point 6(a)."
+      pl: "W pełni rafinowany olej i tłuszcz sojowy są wprost wyłączone z deklaracji alergenu soi na mocy Rozp. (UE) nr 1169/2011 Załącznik II pkt 6(a)."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex II, point 6(a)"
+  - code: processing.hydrogenated
+    variant: fully-refined-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares hydrogenation without specifying partial or full, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje utwardzenie (bez wskazania, czy częściowe, czy całkowite), czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: processing.hydrogenated
+    variant: fully-refined-partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares partial hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje częściowe utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: health.trans_fat_source
+    variant: fully-refined-partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Partial hydrogenation is the main industrial source of trans fat; EU food sold to consumers is capped at 2 g trans fat per 100 g of fat."
+      pl: "Częściowe utwardzanie jest głównym przemysłowym źródłem tłuszczów trans; żywność sprzedawana konsumentom w UE ma limit 2 g tłuszczów trans na 100 g tłuszczu."
+    sources:
+      - id: reg-2019-649
+  - code: processing.hydrogenated
+    variant: fully-refined-fully-hydrogenated
     certainty: 'yes'
     kind: fact
     grade: A

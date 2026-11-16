@@ -1,8 +1,8 @@
 id: almonds
 type: ingredient
 names:
-  en: [almonds, almond]
-  pl: [migdały]
+  en: [almonds, almond, almond oil]
+  pl: [migdały, olej migdałowy, olej z migdałów, olej roślinny migdałowy, tłuszcz roślinny migdałowy, oleje roślinne migdałowe, olej roślinny z migdałów]
   de: [Mandeln]
 summary:
   en: "The tree nut Prunus dulcis; part of the EU's regulated tree-nut group alongside hazelnuts, walnuts, cashews, pecans, Brazil nuts, pistachios and macadamia nuts."

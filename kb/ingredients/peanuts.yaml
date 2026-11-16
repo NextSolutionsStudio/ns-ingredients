@@ -1,8 +1,8 @@
 id: peanuts
 type: ingredient
 names:
-  en: [peanuts, peanut]
-  pl: [orzeszki ziemne, orzeszki arachidowe, orzechy arachidowe, orzeszków ziemnych]
+  en: [peanuts, peanut, peanut oil, groundnut oil, arachis oil]
+  pl: [orzeszki ziemne, orzeszki arachidowe, orzechy arachidowe, orzeszków ziemnych, olej arachidowy, olej z orzeszków ziemnych, olej roślinny arachidowy, tłuszcz roślinny arachidowy, arachidowy olej roślinny, oleje roślinne arachidowe, tłuszcze roślinne arachidowe, olej roślinny z orzeszków ziemnych]
   de: [Erdnüsse, Erdnüssen]
 summary:
   en: "The legume Arachis hypogaea; one of the EU's fourteen regulated allergens and among the most common causes of severe food-allergic reactions."

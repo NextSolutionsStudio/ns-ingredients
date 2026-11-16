@@ -1,8 +1,8 @@
 id: hazelnuts
 type: ingredient
 names:
-  en: [hazelnuts, hazelnut]
-  pl: [orzechy laskowe, pasta z orzechów laskowych]
+  en: [hazelnuts, hazelnut, hazelnut oil]
+  pl: [orzechy laskowe, pasta z orzechów laskowych, olej z orzechów laskowych, olej roślinny z orzechów laskowych]
   de: [Haselnüsse]
 summary:
   en: "The tree nut Corylus avellana; part of the EU's regulated tree-nut group alongside almonds, walnuts, cashews, pecans, Brazil nuts, pistachios and macadamia nuts."
