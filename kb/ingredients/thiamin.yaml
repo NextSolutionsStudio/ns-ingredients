@@ -1,0 +1,68 @@
+id: thiamin
+type: nutrient
+names:
+  en:
+    - thiamin
+    - thiamine
+    - vitamin b1
+    - thiamin hydrochloride
+    - thiamine hydrochloride
+    - thiamin mononitrate
+    - thiamine mononitrate
+  pl:
+    - tiamina
+    - witamina B1
+    - chlorowodorek tiaminy
+    - monoazotan tiaminy
+  de:
+    - Thiamin
+    - Vitamin B1
+    - Thiaminhydrochlorid
+    - Thiaminmononitrat
+summary:
+  en: >-
+    Water-soluble vitamin B1, required for carbohydrate and amino-acid metabolism. Permitted in EU fortified
+    foods and supplements mainly as thiamin hydrochloride and thiamin mononitrate. The EU Scientific
+    Committee on Food (2001) established no tolerable upper intake level due to absence of established
+    adverse-effect thresholds and insufficient dose-response data.
+  pl: >-
+    Rozpuszczalna w wodzie witamina B1, niezbędna w metabolizmie węglowodanów i aminokwasów. Dopuszczona w
+    UE do wzbogacania żywności i suplementów diety głównie jako chlorowodorek tiaminy i monoazotan tiaminy.
+    Komitet Naukowy ds. Żywności UE (SCF, 2001) nie ustalił górnego tolerowanego poziomu spożycia (UL) ze
+    względu na brak ustalonego progu działań niepożądanych i brak danych dawka-odpowiedź.
+assertions:
+  - code: diet.vegan
+    certainty: 'yes'
+    kind: estimate
+    grade: C
+    note:
+      en: >-
+        Chemically defined vitamin B1 salts (thiamin hydrochloride, thiamin mononitrate) permitted in EU food
+        fortification and supplements; no animal material in the synthetic forms.
+      pl: >-
+        Chemicznie zdefiniowane sole witaminy B1 (chlorowodorek tiaminy, monoazotan tiaminy) dopuszczone do
+        wzbogacania żywności i suplementów w UE; w formach syntetycznych nie wykorzystuje się surowców
+        zwierzęcych.
+    sources:
+      - id: reg-1925-2006
+      - id: dir-2002-46-annex2
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: >-
+        Permitted vitamin in fortified foods (Reg 1925/2006 Annex I & II: thiamin hydrochloride, thiamin
+        mononitrate) and food supplements (Dir 2002/46/EC Annex II: also thiamine monophosphate chloride and
+        thiamine pyrophosphate chloride).
+      pl: >-
+        Witamina dopuszczona do wzbogacania żywności (Rozp. 1925/2006 Załącznik I i II: chlorowodorek tiaminy,
+        monoazotan tiaminy) oraz suplementów diety (Dyr. 2002/46/WE Załącznik II: także chlorek monofosforanu
+        tiaminy i chlorek pirofosforanu tiaminy).
+    source: reg-1925-2006
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    No health.high_dose_supplement_nutrient assertion and no UL reference_values entry: as reported in the
+    NNR 2023 scoping review (PMC10710862), SCF (2001) could not establish a tolerable upper intake level for
+    thiamin due to lack of adverse-effect data.

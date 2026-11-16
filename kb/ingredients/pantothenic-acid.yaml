@@ -1,0 +1,68 @@
+id: pantothenic-acid
+type: nutrient
+names:
+  en:
+    - pantothenic acid
+    - vitamin b5
+    - calcium d-pantothenate
+    - calcium pantothenate
+    - d-pantothenate calcium
+    - sodium d-pantothenate
+    - dexpanthenol
+  pl:
+    - kwas pantotenowy
+    - witamina B5
+    - D-pantotenian wapnia
+    - pantotenian wapnia
+    - D-pantotenian sodu
+    - dekspantenol
+  de:
+    - Pantothensäure
+    - Calcium-D-pantothenat
+    - Calciumpantothenat
+summary:
+  en: >-
+    Water-soluble vitamin B5, an essential precursor of coenzyme A. Permitted for EU food fortification and
+    supplements mainly as calcium D-pantothenate, sodium D-pantothenate and dexpanthenol. The EU Scientific
+    Committee on Food established no tolerable upper intake level due to lack of adverse effects in
+    available data and lack of systematic dose-response data.
+  pl: >-
+    Rozpuszczalna w wodzie witamina B5, niezbędny prekursor koenzymu A. Dopuszczona w UE do wzbogacania
+    żywności i suplementów diety głównie jako D-pantotenian wapnia, D-pantotenian sodu i dekspantenol.
+    Komitet Naukowy ds. Żywności UE (SCF) nie ustalił górnego tolerowanego poziomu spożycia (UL) z powodu
+    braku udokumentowanych działań niepożądanych i braku systematycznych badań zależności dawka-odpowiedź.
+assertions:
+  - code: diet.vegan
+    certainty: 'yes'
+    kind: estimate
+    grade: C
+    note:
+      en: >-
+        Chemically defined vitamin B5 forms (such as calcium D-pantothenate and dexpanthenol) permitted in EU
+        food fortification and supplements; no animal material in the synthetic forms.
+      pl: >-
+        Chemicznie zdefiniowane formy witaminy B5 (np. D-pantotenian wapnia, dekspantenol) dopuszczone do
+        wzbogacania żywności i suplementów w UE; w formach syntetycznych nie wykorzystuje się surowców
+        zwierzęcych.
+    sources:
+      - id: reg-1925-2006
+      - id: dir-2002-46-annex2
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: >-
+        Permitted vitamin in fortified foods (Reg 1925/2006 Annex I & II: D-pantothenate calcium,
+        D-pantothenate sodium, dexpanthenol) and food supplements (Dir 2002/46/EC Annex II: also pantethine).
+      pl: >-
+        Witamina dopuszczona do wzbogacania żywności (Rozp. 1925/2006 Załącznik I i II: D-pantotenian wapnia,
+        D-pantotenian sodu, dekspantenol) oraz suplementów diety (Dyr. 2002/46/WE Załącznik II: także
+        pantetyna).
+    source: reg-1925-2006
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    No health.high_dose_supplement_nutrient assertion and no UL reference_values entry: as reported in the
+    NNR 2023 scoping review (PMC10770646), the EU SCF established no UL for pantothenic acid due to lack of
+    systematic oral dose-response studies (mild GI symptoms only reported at 10-20 g/day).
