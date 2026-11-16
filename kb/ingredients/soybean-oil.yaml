@@ -4,6 +4,12 @@ names:
   en:
     - soybean oil
     - soya oil
+    - non-hydrogenated soybean oil
+    - non hydrogenated soybean oil
+    - unhydrogenated soybean oil
+    - non-hydrogenated soya oil
+    - non hydrogenated soya oil
+    - unhydrogenated soya oil
   pl:
     - olej sojowy
     - olej z soi
@@ -14,6 +20,8 @@ names:
     - oleje roślinne sojowy
   de:
     - Sojaöl
+    - ungehärtetes Sojaöl
+    - nicht gehärtetes Sojaöl
 summary:
   en: >-
     Vegetable oil extracted from soybeans. Under EU food law (Reg 1169/2011 Annex II point 6(a)), fully
@@ -26,25 +34,70 @@ summary:
     rafinacja usuwa resztkowe białka alergenne, natomiast olej nierafinowany lub tłoczony na zimno nadal
     podlega deklaracji alergenu. Soja jest ponadto na świecie często modyfikowana genetycznie.
 variants:
+  - id: unrefined
+    names:
+      en:
+        - unrefined soybean oil
+        - cold-pressed soybean oil
+        - virgin soybean oil
+        - crude soybean oil
+        - unrefined soya oil
+        - cold-pressed soya oil
+      pl:
+        - olej sojowy tłoczony na zimno
+        - tłoczony na zimno olej sojowy
+        - zimnotłoczony olej sojowy
+        - nierafinowany olej sojowy
+        - olej sojowy nierafinowany
+        - surowy olej sojowy
+      de:
+        - unraffiniertes Sojaöl
+        - kaltgepresstes Sojaöl
+    process:
+      en: "Unrefined, crude or cold-pressed soybean oil that has not undergone full RBD refining and can retain allergenic soy proteins."
+      pl: "Nierafinowany, surowy lub tłoczony na zimno olej sojowy, który nie przeszedł pełnej rafinacji (RBD) i może zawierać alergenne białka soi."
+    tells:
+      - '\bnierafinowan'
+      - 'tloczon\w*\s+na\s+zimno'
+      - '\bzimnotloczon'
+      - '\bsurow\w*\s+olej\s+sojow'
+      - '\bunrefined\b'
+      - '\bcold\s+pressed'
+      - '\bvirgin\b'
+      - '\bcrude\s+soy'
+      - '\bunraffiniert'
+      - '\bkaltgepresst'
+    prior: 0.5
+    prior_rationale:
+      en: "Conservative safety prior when the label omits refining status: Reg (EU) No 1169/2011 Annex II point 6(a) exempts only fully refined soybean oil, so an unlabelled 'soybean oil' cannot be assumed protein-free."
+      pl: "Ostrożnościowy priorytet bezpieczeństwa, gdy etykieta nie podaje stopnia rafinacji: Rozp. (UE) nr 1169/2011 Załącznik II pkt 6(a) zwalnia wyłącznie w pełni rafinowany olej sojowy, więc przy samym zapisie 'olej sojowy' nie można wykluczyć białek soi."
   - id: fully-refined
     names:
       en:
         - refined soybean oil
         - fully refined soybean oil
+        - refined soya oil
+        - fully refined soya oil
       pl:
         - olej sojowy rafinowany
         - rafinowany olej sojowy
         - w pełni rafinowany olej sojowy
+        - olej sojowy w pełni rafinowany
       de:
         - raffiniertes Sojaöl
+        - vollraffiniertes Sojaöl
     process:
       en: "Fully refined (degummed, neutralised, bleached and deodorised), removing soybean proteins."
       pl: "W pełni rafinowany (odgumowany, odkwaszony, odbarwiany i dezodoryzowany), co usuwa białka soi."
     tells:
-      - 'rafinowan\w*\s+(?:olej\s+)?sojow'
-      - 'olej\s+sojow\w*\s+rafinowan'
-      - 'refined\s+soy(?:bean|a)\s+oil'
-      - 'raffiniert\w*\s+soja'
+      - '\brafinowan\w*\s+(?:olej\s+)?sojow'
+      - '\bolej\s+sojow\w*\s+(?:w\s+pelni\s+)?rafinowan'
+      - '\brefined\s+soy(?:bean|a)\s+oil'
+      - '\b(?:voll)?raffiniert\w*\s+soja'
+    prior: 0.45
+    prior_rationale:
+      en: "Refined soybean oil is widely used commercially, but when a label omits refining status the Annex II point 6(a) exemption cannot be assumed."
+      pl: "Rafinowany olej sojowy jest powszechny w przemyśle, jednak przy braku informacji o rafinacji na etykiecie nie można zakładać wyłączenia z Załącznika II pkt 6(a)."
   - id: hydrogenated
     names:
       en:
@@ -160,17 +213,17 @@ assertions:
     sources:
       - id: usda-ers-ge-2025
   - code: allergen.soybeans
-    certainty: maybe
+    variant: unrefined
+    certainty: 'yes'
     kind: fact
     grade: A
     note:
       en: >-
-        Bare 'soybean oil' without stating 'fully refined' may be unrefined or cold-pressed and retain trace
-        soy proteins; Reg (EU) No 1169/2011 Annex II point 6(a) exempts only fully refined soybean oil and fat.
+        Unrefined or cold-pressed soybean oil is not exempted under Reg (EU) No 1169/2011 Annex II point 6(a)
+        and can retain allergenic soy proteins.
       pl: >-
-        Samo określenie 'olej sojowy' bez wskazania pełnej rafinacji może dotyczyć oleju nierafinowanego lub
-        tłoczonego na zimno z resztkami białka soi; Rozp. (UE) nr 1169/2011 Załącznik II pkt 6(a) zwalnia z
-        obowiązku deklaracji alergenu wyłącznie olej w pełni rafinowany.
+        Nierafinowany lub tłoczony na zimno olej sojowy nie jest wyłączony na mocy Rozp. (UE) nr 1169/2011
+        Załącznik II pkt 6(a) i może zawierać alergenne białka soi.
     sources:
       - id: reg-1169-2011
         locator: "Annex II, point 6(a)"
@@ -231,4 +284,4 @@ assertions:
 review_status: draft
 provenance: ai-drafted
 review_notes:
-  - "No prior >= 0.5 set on fully-refined so bare 'olej sojowy' retains allergen.soybeans: maybe conservatively while explicit refined labels resolve to fully-refined (allergen.soybeans: no)."
+  - "Allergen scoped to variants (option a): unrefined carries allergen.soybeans: yes with prior 0.5 (conservative safety prior, downgraded to maybe for silent labels like 'olej sojowy'), while fully-refined carries allergen.soybeans: no with prior 0.45 so explicit refined labels resolve without a soy allergen flag."

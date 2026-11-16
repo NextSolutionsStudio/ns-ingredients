@@ -4,11 +4,18 @@ e_number: E473
 names:
   en:
     - sucrose esters of fatty acids
+    - sucrose esters
+    - sucrose fatty acid esters
+    - sugar ester
+    - sugar esters
   pl:
     - estry sacharozy i kwasów tłuszczowych
     - estry kwasów tłuszczowych i sacharozy
+    - ester kwasu tłuszczowego i sacharozy
   de:
     - Zuckerester von Speisefettsäuren
+    - Zuckerester
+    - Saccharoseester von Speisefettsäuren
 functions:
   - emulsifier
   - stabiliser

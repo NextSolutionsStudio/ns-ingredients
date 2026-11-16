@@ -6,6 +6,18 @@ names:
     - vegetable fats
     - vegetable oil
     - vegetable oils
+    - non-hydrogenated vegetable fat
+    - non hydrogenated vegetable fat
+    - unhydrogenated vegetable fat
+    - non-hydrogenated vegetable fats
+    - non hydrogenated vegetable fats
+    - unhydrogenated vegetable fats
+    - non-hydrogenated vegetable oil
+    - non hydrogenated vegetable oil
+    - unhydrogenated vegetable oil
+    - non-hydrogenated vegetable oils
+    - non hydrogenated vegetable oils
+    - unhydrogenated vegetable oils
   pl:
     - tłuszcz roślinny
     - tłuszcze roślinne
@@ -16,6 +28,12 @@ names:
     - Pflanzenfette
     - Pflanzenöl
     - Pflanzenöle
+    - ungehärtetes Pflanzenfett
+    - ungehärtete Pflanzenfette
+    - ungehärtetes Pflanzenöl
+    - ungehärtete Pflanzenöle
+    - nicht gehärtetes Pflanzenfett
+    - nicht gehärtetes Pflanzenöl
 summary:
   en: >-
     Generic umbrella term for refined oils and fats of vegetable origin. Under EU Regulation (EU) No

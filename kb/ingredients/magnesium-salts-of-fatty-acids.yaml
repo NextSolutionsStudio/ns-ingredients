@@ -7,9 +7,11 @@ names:
     - magnesium stearate
   pl:
     - sole magnezowe kwasów tłuszczowych
+    - sól magnezowa kwasu tłuszczowego
     - stearynian magnezu
   de:
     - Magnesiumsalze der Speisefettsäuren
+    - Magnesiumsalze von Speisefettsäuren
     - Magnesiumstearat
 functions:
   - anti-caking-agent

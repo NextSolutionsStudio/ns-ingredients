@@ -165,26 +165,6 @@ assertions:
     note: { en: "Recovered from rapeseed oil; no animal material.", pl: "Odzyskiwana z oleju rzepakowego; bez materiału zwierzęcego." }
     sources: [{ id: efsa-lecithins-2017 }]
   - code: origin.vegetable_oil_derived
-    certainty: maybe
-    kind: fact
-    grade: A
-    note:
-      en: "Reg (EU) No 231/2012 E 322 Definition and EFSA (2017) document that lecithins are predominantly obtained from crude vegetable oil degumming (soy, sunflower, rapeseed, corn, cottonseed), though egg-yolk and animal tissue sources are permitted."
-      pl: "Definicja E 322 w rozporządzeniu (UE) nr 231/2012 oraz EFSA (2017) wskazują, że lecytyny pozyskuje się głównie przy odgumowywaniu surowych olejów roślinnych (soja, słonecznik, rzepak, kukurydza, bawełna), choć dopuszczone są też żółtka jaj i źródła zwierzęce."
-    sources:
-      - { id: reg-231-2012, locator: "E 322 (Definition)" }
-      - { id: efsa-lecithins-2017, locator: "Sections 3.1.1 & 3.1.3" }
-  - code: origin.egg
-    certainty: maybe
-    kind: fact
-    grade: A
-    note:
-      en: "EFSA (2017) documents egg yolk as an authorised commercial source alongside vegetable oils (egg must be declared under EU allergen law)."
-      pl: "EFSA (2017) dokumentuje żółtko jaja jako jedno z dopuszczonych źródeł handlowych obok olejów roślinnych (jaja muszą być zadeklarowane zgodnie z prawem UE o alergenach)."
-    sources:
-      - { id: reg-231-2012, locator: "E 322 (Definition)" }
-      - { id: efsa-lecithins-2017, locator: "Section 3.1.3" }
-  - code: origin.vegetable_oil_derived
     variant: soy
     certainty: yes
     kind: fact

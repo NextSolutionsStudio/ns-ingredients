@@ -1,9 +1,9 @@
 id: sunflower-oil
 type: fat
 names:
-  en: [sunflower oil, sunflower seed oil]
+  en: [sunflower oil, sunflower seed oil, non-hydrogenated sunflower oil, non hydrogenated sunflower oil, unhydrogenated sunflower oil, non-hydrogenated sunflower seed oil, non hydrogenated sunflower seed oil, unhydrogenated sunflower seed oil]
   pl: [olej słonecznikowy, olej roślinny słonecznikowy, tłuszcz roślinny słonecznikowy, słonecznikowy olej roślinny, oleje roślinne słonecznikowe, oleje roślinne słonecznikowy]
-  de: [Sonnenblumenöl]
+  de: [Sonnenblumenöl, ungehärtetes Sonnenblumenöl, nicht gehärtetes Sonnenblumenöl]
 summary:
   en: >-
     Oil pressed from sunflower seeds, mostly unsaturated (linoleic-type, high-oleic cultivars also exist).

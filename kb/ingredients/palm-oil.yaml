@@ -1,9 +1,9 @@
 id: palm-oil
 type: fat
 names:
-  en: [palm oil, non-hydrogenated palm oil, non-hydrogenated palm fat]
+  en: [palm oil, non-hydrogenated palm oil, non hydrogenated palm oil, unhydrogenated palm oil, non-hydrogenated palm fat, non hydrogenated palm fat, unhydrogenated palm fat]
   pl: [olej palmowy, tłuszcz palmowy, nieutwardzony tłuszcz palmowy, tłuszcz palmowy nieutwardzony, nieutwardzony olej palmowy, tłuszcz roślinny palmowy, olej roślinny palmowy, palmowy olej roślinny, oleje roślinne palmowe, oleje roślinne palmowy, tłuszcze roślinne palmowe, tłuszcze roślinne palmowy]
-  de: [Palmöl, Palmfett]
+  de: [Palmöl, Palmfett, ungehärtetes Palmöl, ungehärtetes Palmfett, nicht gehärtetes Palmöl, nicht gehärtetes Palmfett]
 summary:
   en: >-
     Oil pressed from the fruit (mesocarp) of the oil palm (Elaeis guineensis). High in saturated fat, solid

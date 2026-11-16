@@ -1,9 +1,9 @@
 id: rapeseed-oil
 type: fat
 names:
-  en: [rapeseed oil, canola oil]
+  en: [rapeseed oil, canola oil, non-hydrogenated rapeseed oil, non hydrogenated rapeseed oil, unhydrogenated rapeseed oil, non-hydrogenated canola oil, non hydrogenated canola oil, unhydrogenated canola oil]
   pl: [olej rzepakowy, olej roślinny rzepakowy, tłuszcz roślinny rzepakowy, rzepakowy olej roślinny, oleje roślinne rzepakowe, oleje roślinne rzepakowy]
-  de: [Rapsöl]
+  de: [Rapsöl, ungehärtetes Rapsöl, nicht gehärtetes Rapsöl]
 summary:
   en: >-
     Oil pressed from rapeseed, low in saturated fat and (in the modern "canola"/00 cultivars) low in

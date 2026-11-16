@@ -4,6 +4,12 @@ names:
   en:
     - corn oil
     - maize oil
+    - non-hydrogenated corn oil
+    - non hydrogenated corn oil
+    - unhydrogenated corn oil
+    - non-hydrogenated maize oil
+    - non hydrogenated maize oil
+    - unhydrogenated maize oil
   pl:
     - olej kukurydziany
     - olej z kiełków kukurydzy
@@ -15,6 +21,10 @@ names:
   de:
     - Maiskeimöl
     - Maisöl
+    - ungehärtetes Maiskeimöl
+    - ungehärtetes Maisöl
+    - nicht gehärtetes Maiskeimöl
+    - nicht gehärtetes Maisöl
 summary:
   en: >-
     Vegetable oil extracted from maize (corn) germ, commonly used as a refined cooking, frying and bakery oil.

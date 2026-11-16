@@ -4,6 +4,9 @@ names:
   en:
     - cottonseed oil
     - refined cottonseed oil
+    - non-hydrogenated cottonseed oil
+    - non hydrogenated cottonseed oil
+    - unhydrogenated cottonseed oil
   pl:
     - olej bawełniany
     - olej z nasion bawełny
@@ -16,6 +19,9 @@ names:
   de:
     - Baumwollsaatöl
     - Baumwollsamenöl
+    - ungehärtetes Baumwollsaatöl
+    - ungehärtetes Baumwollsamenöl
+    - nicht gehärtetes Baumwollsaatöl
 summary:
   en: >-
     Vegetable oil extracted from cotton seeds (Gossypium spp.). Cotton seeds naturally contain gossypol, and

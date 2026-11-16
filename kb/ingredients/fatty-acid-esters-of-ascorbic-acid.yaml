@@ -27,6 +27,7 @@ variants:
       en:
         - ascorbyl palmitate
         - L-ascorbyl palmitate
+        - L-ascorbic acid 6-hexadecanoate
         - E304(i)
       pl:
         - palmitynian askorbylu
@@ -34,12 +35,15 @@ variants:
         - E304(i)
       de:
         - Ascorbylpalmitat
+        - Palmitinsäureascorbylester
     process:
       en: "Esterification of L-ascorbic acid with palmitic acid (E 304(i))."
       pl: "Estryfikacja kwasu L-askorbinowego kwasem palmitynowym (E 304(i))."
     tells:
       - 'palmitynian\w*\s+(?:l\s+)?askorbyl'
       - 'ascorbyl\s*palmitat'
+      - 'ascorbic acid 6 hexadecanoate'
+      - 'palmitinsaureascorbylester'
       - 'e\s*304\s*i\b'
   - id: ascorbyl-stearate
     names:
