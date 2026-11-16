@@ -281,6 +281,23 @@ Deno.test("a KB name inside a segment keeps its dash, though the words around it
   ]);
 });
 
+Deno.test("a variant tell spanning a dash keeps it: the declared variant survives", () => {
+  // "gluten ?free" is the gluten-free-oats tell. Cut at the dash, "gluten" matched exactly and the label lost
+  // its gluten-free oats (gluten_free went from maybe to no). On main it is one item, oats, that variant.
+  const oats = run("Ingredients: gluten - free rolled oats", "en");
+  assertEquals(oats.items.map((i) => [i.path, i.match?.ingredient_id, i.variant?.id]), [
+    ["1", "oats", "gluten-free-oats"],
+  ]);
+  assertEquals(oats.diets.gluten_free.status, "maybe");
+  // A tell inside one part does not hold the list together: the sugar is still cut off.
+  assertEquals(
+    run("Ingredients: sugar - gluten-free oats", "en").items.map((
+      i,
+    ) => [i.match?.ingredient_id, i.variant?.id]),
+    [["sugar", undefined], ["oats", "gluten-free-oats"]],
+  );
+});
+
 /** analyze() with the number of calls it made to the matcher, and its time (best of three). */
 function costOf(text: string, lang: "pl" | "en" = "en") {
   const match = index.match;

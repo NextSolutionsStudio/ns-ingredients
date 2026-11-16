@@ -171,6 +171,22 @@ export class KbIndex {
     return this.byNorm.has(norm);
   }
 
+  /**
+   * Every variant tell in the KB ("gluten ?free", "bezglutenow"), once each, global: the parser keeps a dash or
+   * a full stop that a tell spans ("gluten - free rolled oats"), so the variant it declares survives.
+   */
+  allTells(): RegExp[] {
+    if (!this.tellList) {
+      const seen = new Map<string, RegExp>();
+      for (const list of this.tells.values()) {
+        for (const t of list) for (const re of t.res) seen.set(re.source, new RegExp(re.source, "gu"));
+      }
+      this.tellList = [...seen.values()];
+    }
+    return this.tellList;
+  }
+  private tellList?: RegExp[];
+
   /** Whether a longer name begins with the words `norm` (`normName` output): "gluten free" begins one. */
   beginsName(norm: string): boolean {
     if (!this.namePrefixes) {

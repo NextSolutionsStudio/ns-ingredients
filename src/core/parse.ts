@@ -24,6 +24,11 @@ export interface NameOracle {
   isName(words: string): boolean;
   /** Whether a longer such name begins with these words (`normName` output): "gluten free" begins one. */
   beginsName(words: string): boolean;
+  /**
+   * The KB's variant tells, global regexes over `normName` text ("gluten ?free"). A tell that spans a dash or a
+   * full stop declares a variant ("gluten - free rolled oats" → gluten-free oats), so that separator is kept.
+   */
+  tells?(): RegExp[];
 }
 
 export interface Percent {
@@ -347,6 +352,26 @@ function nameSpans(s: string, kb: NameOracle): Span[] {
       run += ` ${words[j].w}`;
       if (kb.isName(run)) spans.push([words[i].a, words[j].b]);
     }
+  }
+  // Variant tells ("gluten ?free" declares gluten-free oats). They are written for one item's text, often with
+  // `.*` or `^`, so they are never run over the whole segment: a separator is kept when a tell fires on the two
+  // parts it joins, read as one, and on neither part alone. A few short tests per separator.
+  const tells = kb.tells?.() ?? [];
+  if (tells.length && words.length > 1) {
+    const gaps = [0]; // word indices that start a part: after a dash or a full stop between words
+    for (let k = 1; k < words.length; k++) {
+      if (/ [-–] |\.\s/.test(s.slice(words[k - 1].b - 1, words[k].a + 1))) gaps.push(k);
+    }
+    gaps.push(words.length);
+    const text = (from: number, to: number) => words.slice(from, to).map((w) => w.w).join(" ");
+    const fires = (t: string) => tells.some((re) => (re.lastIndex = 0, re.test(t)));
+    for (let g = 1; g < gaps.length - 1; g++) {
+      const left = text(gaps[g - 1], gaps[g]), right = text(gaps[g], gaps[g + 1]);
+      if (fires(`${left} ${right}`) && !fires(left) && !fires(right)) {
+        spans.push([words[gaps[g - 1]].a, words[gaps[g + 1] - 1].b]);
+      }
+    }
+    spans.sort((x, y) => x[0] - y[0]); // cutTopLevel walks them by start
   }
   return spans;
 }

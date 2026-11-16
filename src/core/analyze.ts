@@ -212,6 +212,7 @@ export const nameOracle = (index: KbIndex): NameOracle => ({
   },
   isName: (words) => index.isName(words),
   beginsName: (words) => index.beginsName(words),
+  tells: () => index.allTells(),
 });
 
 export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {}): AnalysisResult {
