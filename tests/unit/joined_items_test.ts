@@ -2,7 +2,7 @@
 // dash heads, lists or belongs to a word is a question about names, so a fixture KB cannot answer it.
 import { assert, assertEquals } from "@std/assert";
 import { analyze, type ItemResult, nameOracle } from "../../src/core/analyze.ts";
-import { KbIndex } from "../../src/core/kb-index.ts";
+import { KbIndex, TELL_TEXT_MAX } from "../../src/core/kb-index.ts";
 import { parseLabel, walk } from "../../src/core/parse.ts";
 import { readKb } from "../../src/kb/read.ts";
 import { AnalysisResponse } from "../../src/http/schemas.ts";
@@ -392,4 +392,25 @@ Deno.test("variant tells across a separator read a few words, never a whole long
     const { ms } = costOf(text);
     assert(ms < 1_000, `${text.slice(21, 40)}…: ${ms.toFixed(0)} ms`);
   }
+});
+
+Deno.test("an item's own variant tells read at most TELL_TEXT_MAX characters of it", () => {
+  // A comma item that matches cocoa and runs on as one long word: the analyser ran cocoa's tells over all of it,
+  // and "kakao.*obniz.*tluszcz" backtracked for ~4 s on main (before any separator handling was involved).
+  for (
+    const text of [
+      "Ingredients: sugar, kakao " + "kakaoobniz".repeat(1188),
+      "Ingredients: sugar, kakao " + "kakao obniz ".repeat(989),
+    ]
+  ) {
+    assert(text.length <= 12_000);
+    const { ms } = costOf(text);
+    assert(ms < 1_000, `${text.slice(20, 40)}…: ${ms.toFixed(0)} ms`);
+  }
+  // The cap is far above any real item: a tell near the start still fires.
+  assert(TELL_TEXT_MAX >= 400);
+  assertEquals(
+    run("Ingredients: gluten-free oats", "en").items.map((i) => i.variant?.id),
+    ["gluten-free-oats"],
+  );
 });
