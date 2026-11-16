@@ -1,0 +1,61 @@
+id: nut-oil
+type: fat
+names:
+  en:
+    - nut oil
+  pl:
+    - olej orzechowy
+    - olej roślinny orzechowy
+    - tłuszcz roślinny orzechowy
+    - oleje roślinne orzechowe
+    - orzechowy olej roślinny
+  de:
+    - Nussöl
+summary:
+  en: >-
+    A label term for oil from nuts that does not name the nut. In Polish, "olej orzechowy" is used both for
+    peanut oil and for oil from tree nuts such as walnuts, so the name alone does not show which Annex II
+    allergen applies.
+  pl: >-
+    Określenie z etykiety oznaczające olej z orzechów bez wskazania, z jakich. Po polsku "olej orzechowy" bywa
+    nazwą oleju arachidowego i oleju z orzechów (np. włoskich), więc sama nazwa nie pokazuje, który alergen z
+    Aneksu II UE dotyczy produktu.
+assertions:
+  - code: origin.vegetable_oil_derived
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A pressed vegetable oil; EU labelling requires its specific plant origin to be named.
+      pl: Wyciskany olej roślinny; przepisy UE o etykietowaniu wymagają podania jego konkretnego pochodzenia rośliny.
+    sources:
+      - id: reg-1169-2011
+        locator: Annex VII Part A, point 8
+  - code: allergen.peanuts
+    certainty: maybe
+    kind: estimate
+    grade: C
+    note:
+      en: "The Food-Info Polish allergy dictionary lists 'olej orzechowy' as peanut oil; the same name is also used for tree-nut oil, so peanut is possible but not shown (Annex II item 5)."
+      pl: "Słownik alergenów Food-Info podaje 'olej orzechowy' jako olej arachidowy; ta sama nazwa bywa używana dla oleju z orzechów, więc orzeszki ziemne są możliwe, ale nie wykazane (Aneks II, punkt 5)."
+    sources:
+      - id: foodinfo-allergy-dictionary-pl-en
+      - id: reg-1169-2011
+        locator: Annex II item 5
+  - code: allergen.nuts
+    certainty: maybe
+    kind: estimate
+    grade: C
+    note:
+      en: "The same name is used for walnut and other tree-nut oils (the dictionary lists walnut oil separately as 'olej z orzecha włoskiego'), so a tree nut is possible but not shown (Annex II item 8)."
+      pl: "Ta sama nazwa bywa używana dla oleju z orzechów włoskich i innych orzechów (słownik podaje olej z orzecha włoskiego osobno), więc orzechy są możliwe, ale nie wykazane (Aneks II, punkt 8)."
+    sources:
+      - id: foodinfo-allergy-dictionary-pl-en
+      - id: reg-1169-2011
+        locator: Annex II item 8
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Added in batch b2 after Sol 6.1 showed that 'olej orzechowy' on walnut-oil hid a possible peanut allergen.
+    Both allergens are maybe because the label term does not name the nut.

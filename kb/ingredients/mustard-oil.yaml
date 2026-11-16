@@ -5,6 +5,10 @@ names:
   en:
     - mustard oil
     - mustard seed oil
+    - non-hydrogenated mustard oil
+    - unhydrogenated mustard oil
+    - non-hydrogenated mustard seed oil
+    - unhydrogenated mustard seed oil
   pl:
     - olej gorczycowy
     - olej musztardowy
@@ -27,6 +31,112 @@ summary:
   pl: >-
     Olej roślinny tłoczony lub ekstrahowany z nasion gorczycy (Brassica / Sinapis spp.). Jako produkt z nich pochodzący
     podlega obowiązkowi deklarowania alergenu z Aneksu II UE (punkt 10); olej nie jest z niego wyłączony.
+variants:
+  - id: hydrogenated
+    names:
+      en:
+        - hydrogenated mustard oil
+        - hydrogenated mustard seed oil
+      pl:
+        - utwardzony olej gorczycowy
+        - olej gorczycowy utwardzony
+        - uwodorniony olej gorczycowy
+        - olej gorczycowy uwodorniony
+        - utwardzony olej musztardowy
+        - olej musztardowy utwardzony
+        - uwodorniony olej musztardowy
+        - olej musztardowy uwodorniony
+        - utwardzony olej roślinny gorczycowy
+        - olej roślinny gorczycowy utwardzony
+        - uwodorniony olej roślinny gorczycowy
+        - olej roślinny gorczycowy uwodorniony
+        - utwardzony olej roślinny musztardowy
+        - olej roślinny musztardowy utwardzony
+        - uwodorniony olej roślinny musztardowy
+        - olej roślinny musztardowy uwodorniony
+    process:
+      en: "Mustard oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
+      pl: "Olej gorczycowy utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
+    tells:
+      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)'
+  - id: partially-hydrogenated
+    names:
+      en:
+        - partially hydrogenated mustard oil
+        - partially hydrogenated mustard seed oil
+      pl:
+        - częściowo utwardzony olej gorczycowy
+        - olej gorczycowy częściowo utwardzony
+        - częściowo uwodorniony olej gorczycowy
+        - olej gorczycowy częściowo uwodorniony
+        - częściowo utwardzony olej musztardowy
+        - olej musztardowy częściowo utwardzony
+        - częściowo uwodorniony olej musztardowy
+        - olej musztardowy częściowo uwodorniony
+        - częściowo utwardzony olej roślinny gorczycowy
+        - olej roślinny gorczycowy częściowo utwardzony
+        - częściowo uwodorniony olej roślinny gorczycowy
+        - olej roślinny gorczycowy częściowo uwodorniony
+        - częściowo utwardzony olej roślinny musztardowy
+        - olej roślinny musztardowy częściowo utwardzony
+        - częściowo uwodorniony olej roślinny musztardowy
+        - olej roślinny musztardowy częściowo uwodorniony
+    process:
+      en: "Mustard oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
+      pl: "Olej gorczycowy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
+    tells:
+      - 'czesciowo (?:utwardzon|uwodorn)'
+      - 'partially hydrogenated'
+      - 'teilweise gehartet'
+  - id: fully-hydrogenated
+    names:
+      en:
+        - fully hydrogenated mustard oil
+        - totally hydrogenated mustard oil
+        - fully hydrogenated mustard seed oil
+        - totally hydrogenated mustard seed oil
+      pl:
+        - całkowicie utwardzony olej gorczycowy
+        - olej gorczycowy całkowicie utwardzony
+        - całkowicie uwodorniony olej gorczycowy
+        - olej gorczycowy całkowicie uwodorniony
+        - w pełni utwardzony olej gorczycowy
+        - olej gorczycowy w pełni utwardzony
+        - w pełni uwodorniony olej gorczycowy
+        - olej gorczycowy w pełni uwodorniony
+        - całkowicie utwardzony olej musztardowy
+        - olej musztardowy całkowicie utwardzony
+        - całkowicie uwodorniony olej musztardowy
+        - olej musztardowy całkowicie uwodorniony
+        - w pełni utwardzony olej musztardowy
+        - olej musztardowy w pełni utwardzony
+        - w pełni uwodorniony olej musztardowy
+        - olej musztardowy w pełni uwodorniony
+        - całkowicie utwardzony olej roślinny gorczycowy
+        - olej roślinny gorczycowy całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny gorczycowy
+        - olej roślinny gorczycowy całkowicie uwodorniony
+        - w pełni utwardzony olej roślinny gorczycowy
+        - olej roślinny gorczycowy w pełni utwardzony
+        - w pełni uwodorniony olej roślinny gorczycowy
+        - olej roślinny gorczycowy w pełni uwodorniony
+        - całkowicie utwardzony olej roślinny musztardowy
+        - olej roślinny musztardowy całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny musztardowy
+        - olej roślinny musztardowy całkowicie uwodorniony
+        - w pełni utwardzony olej roślinny musztardowy
+        - olej roślinny musztardowy w pełni utwardzony
+        - w pełni uwodorniony olej roślinny musztardowy
+        - olej roślinny musztardowy w pełni uwodorniony
+    process:
+      en: "Mustard oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
+      pl: "Olej gorczycowy ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
+    tells:
+      - 'calkowicie (?:utwardzon|uwodorn)'
+      - 'w pelni (?:utwardzon|uwodorn)'
+      - 'fully hydrogenated'
+      - 'totally hydrogenated'
+      - 'vollstandig gehartet'
 assertions:
   - code: origin.vegetable_oil_derived
     certainty: 'yes'
@@ -48,6 +158,49 @@ assertions:
     sources:
       - id: reg-1169-2011
         locator: Annex II item 10
+  - code: processing.hydrogenated
+    variant: hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares hydrogenation without specifying partial or full, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje utwardzenie (bez wskazania, czy częściowe, czy całkowite), czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: processing.hydrogenated
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares partial hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje częściowe utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: health.trans_fat_source
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Partial hydrogenation is the main industrial source of trans fat; EU food sold to consumers is capped at 2 g trans fat per 100 g of fat."
+      pl: "Częściowe utwardzanie jest głównym przemysłowym źródłem tłuszczów trans; żywność sprzedawana konsumentom w UE ma limit 2 g tłuszczów trans na 100 g tłuszczu."
+    sources:
+      - id: reg-2019-649
+  - code: processing.hydrogenated
+    variant: fully-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares full hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje całkowite utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
 review_status: draft
 provenance: ai-drafted
 review_notes:

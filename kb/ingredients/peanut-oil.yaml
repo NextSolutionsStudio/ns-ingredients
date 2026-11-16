@@ -7,6 +7,10 @@ names:
     - groundnut oil
     - arachis oil
     - peanuts oil
+    - non-hydrogenated peanut oil
+    - unhydrogenated peanut oil
+    - non-hydrogenated groundnut oil
+    - unhydrogenated groundnut oil
   pl:
     - olej arachidowy
     - olej z orzeszków ziemnych
@@ -25,6 +29,112 @@ summary:
   pl: >-
     Olej roślinny tłoczony lub ekstrahowany z orzeszków ziemnych (Arachis hypogaea). Jako produkt z nich pochodzący
     podlega obowiązkowi deklarowania alergenu z Aneksu II UE (punkt 5); olej nie jest z niego wyłączony.
+variants:
+  - id: hydrogenated
+    names:
+      en:
+        - hydrogenated peanut oil
+        - hydrogenated groundnut oil
+      pl:
+        - utwardzony olej arachidowy
+        - olej arachidowy utwardzony
+        - uwodorniony olej arachidowy
+        - olej arachidowy uwodorniony
+        - utwardzony olej z orzeszków ziemnych
+        - olej z orzeszków ziemnych utwardzony
+        - uwodorniony olej z orzeszków ziemnych
+        - olej z orzeszków ziemnych uwodorniony
+        - utwardzony olej roślinny arachidowy
+        - olej roślinny arachidowy utwardzony
+        - uwodorniony olej roślinny arachidowy
+        - olej roślinny arachidowy uwodorniony
+        - utwardzony olej roślinny z orzeszków ziemnych
+        - olej roślinny z orzeszków ziemnych utwardzony
+        - uwodorniony olej roślinny z orzeszków ziemnych
+        - olej roślinny z orzeszków ziemnych uwodorniony
+    process:
+      en: "Peanut oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
+      pl: "Olej arachidowy utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
+    tells:
+      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)'
+  - id: partially-hydrogenated
+    names:
+      en:
+        - partially hydrogenated peanut oil
+        - partially hydrogenated groundnut oil
+      pl:
+        - częściowo utwardzony olej arachidowy
+        - olej arachidowy częściowo utwardzony
+        - częściowo uwodorniony olej arachidowy
+        - olej arachidowy częściowo uwodorniony
+        - częściowo utwardzony olej z orzeszków ziemnych
+        - olej z orzeszków ziemnych częściowo utwardzony
+        - częściowo uwodorniony olej z orzeszków ziemnych
+        - olej z orzeszków ziemnych częściowo uwodorniony
+        - częściowo utwardzony olej roślinny arachidowy
+        - olej roślinny arachidowy częściowo utwardzony
+        - częściowo uwodorniony olej roślinny arachidowy
+        - olej roślinny arachidowy częściowo uwodorniony
+        - częściowo utwardzony olej roślinny z orzeszków ziemnych
+        - olej roślinny z orzeszków ziemnych częściowo utwardzony
+        - częściowo uwodorniony olej roślinny z orzeszków ziemnych
+        - olej roślinny z orzeszków ziemnych częściowo uwodorniony
+    process:
+      en: "Peanut oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
+      pl: "Olej arachidowy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
+    tells:
+      - 'czesciowo (?:utwardzon|uwodorn)'
+      - 'partially hydrogenated'
+      - 'teilweise gehartet'
+  - id: fully-hydrogenated
+    names:
+      en:
+        - fully hydrogenated peanut oil
+        - totally hydrogenated peanut oil
+        - fully hydrogenated groundnut oil
+        - totally hydrogenated groundnut oil
+      pl:
+        - całkowicie utwardzony olej arachidowy
+        - olej arachidowy całkowicie utwardzony
+        - całkowicie uwodorniony olej arachidowy
+        - olej arachidowy całkowicie uwodorniony
+        - w pełni utwardzony olej arachidowy
+        - olej arachidowy w pełni utwardzony
+        - w pełni uwodorniony olej arachidowy
+        - olej arachidowy w pełni uwodorniony
+        - całkowicie utwardzony olej z orzeszków ziemnych
+        - olej z orzeszków ziemnych całkowicie utwardzony
+        - całkowicie uwodorniony olej z orzeszków ziemnych
+        - olej z orzeszków ziemnych całkowicie uwodorniony
+        - w pełni utwardzony olej z orzeszków ziemnych
+        - olej z orzeszków ziemnych w pełni utwardzony
+        - w pełni uwodorniony olej z orzeszków ziemnych
+        - olej z orzeszków ziemnych w pełni uwodorniony
+        - całkowicie utwardzony olej roślinny arachidowy
+        - olej roślinny arachidowy całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny arachidowy
+        - olej roślinny arachidowy całkowicie uwodorniony
+        - w pełni utwardzony olej roślinny arachidowy
+        - olej roślinny arachidowy w pełni utwardzony
+        - w pełni uwodorniony olej roślinny arachidowy
+        - olej roślinny arachidowy w pełni uwodorniony
+        - całkowicie utwardzony olej roślinny z orzeszków ziemnych
+        - olej roślinny z orzeszków ziemnych całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny z orzeszków ziemnych
+        - olej roślinny z orzeszków ziemnych całkowicie uwodorniony
+        - w pełni utwardzony olej roślinny z orzeszków ziemnych
+        - olej roślinny z orzeszków ziemnych w pełni utwardzony
+        - w pełni uwodorniony olej roślinny z orzeszków ziemnych
+        - olej roślinny z orzeszków ziemnych w pełni uwodorniony
+    process:
+      en: "Peanut oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
+      pl: "Olej arachidowy ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
+    tells:
+      - 'calkowicie (?:utwardzon|uwodorn)'
+      - 'w pelni (?:utwardzon|uwodorn)'
+      - 'fully hydrogenated'
+      - 'totally hydrogenated'
+      - 'vollstandig gehartet'
 assertions:
   - code: origin.vegetable_oil_derived
     certainty: 'yes'
@@ -46,6 +156,49 @@ assertions:
     sources:
       - id: reg-1169-2011
         locator: Annex II item 5
+  - code: processing.hydrogenated
+    variant: hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares hydrogenation without specifying partial or full, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje utwardzenie (bez wskazania, czy częściowe, czy całkowite), czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: processing.hydrogenated
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares partial hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje częściowe utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: health.trans_fat_source
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Partial hydrogenation is the main industrial source of trans fat; EU food sold to consumers is capped at 2 g trans fat per 100 g of fat."
+      pl: "Częściowe utwardzanie jest głównym przemysłowym źródłem tłuszczów trans; żywność sprzedawana konsumentom w UE ma limit 2 g tłuszczów trans na 100 g tłuszczu."
+    sources:
+      - id: reg-2019-649
+  - code: processing.hydrogenated
+    variant: fully-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares full hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje całkowite utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
 review_status: draft
 provenance: ai-drafted
 review_notes:

@@ -6,6 +6,10 @@ names:
     - almond oil
     - sweet almond oil
     - almonds oil
+    - non-hydrogenated almond oil
+    - unhydrogenated almond oil
+    - non-hydrogenated sweet almond oil
+    - unhydrogenated sweet almond oil
   pl:
     - olej migdałowy
     - olej z migdałów
@@ -22,6 +26,112 @@ summary:
   pl: >-
     Olej roślinny tłoczony lub ekstrahowany z migdałów (Prunus dulcis). Jako produkt z nich pochodzący
     podlega obowiązkowi deklarowania alergenu z Aneksu II UE (punkt 8); olej nie jest z niego wyłączony.
+variants:
+  - id: hydrogenated
+    names:
+      en:
+        - hydrogenated almond oil
+        - hydrogenated sweet almond oil
+      pl:
+        - utwardzony olej migdałowy
+        - olej migdałowy utwardzony
+        - uwodorniony olej migdałowy
+        - olej migdałowy uwodorniony
+        - utwardzony olej z migdałów
+        - olej z migdałów utwardzony
+        - uwodorniony olej z migdałów
+        - olej z migdałów uwodorniony
+        - utwardzony olej roślinny migdałowy
+        - olej roślinny migdałowy utwardzony
+        - uwodorniony olej roślinny migdałowy
+        - olej roślinny migdałowy uwodorniony
+        - utwardzony olej roślinny z migdałów
+        - olej roślinny z migdałów utwardzony
+        - uwodorniony olej roślinny z migdałów
+        - olej roślinny z migdałów uwodorniony
+    process:
+      en: "Almond oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
+      pl: "Olej migdałowy utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
+    tells:
+      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)'
+  - id: partially-hydrogenated
+    names:
+      en:
+        - partially hydrogenated almond oil
+        - partially hydrogenated sweet almond oil
+      pl:
+        - częściowo utwardzony olej migdałowy
+        - olej migdałowy częściowo utwardzony
+        - częściowo uwodorniony olej migdałowy
+        - olej migdałowy częściowo uwodorniony
+        - częściowo utwardzony olej z migdałów
+        - olej z migdałów częściowo utwardzony
+        - częściowo uwodorniony olej z migdałów
+        - olej z migdałów częściowo uwodorniony
+        - częściowo utwardzony olej roślinny migdałowy
+        - olej roślinny migdałowy częściowo utwardzony
+        - częściowo uwodorniony olej roślinny migdałowy
+        - olej roślinny migdałowy częściowo uwodorniony
+        - częściowo utwardzony olej roślinny z migdałów
+        - olej roślinny z migdałów częściowo utwardzony
+        - częściowo uwodorniony olej roślinny z migdałów
+        - olej roślinny z migdałów częściowo uwodorniony
+    process:
+      en: "Almond oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
+      pl: "Olej migdałowy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
+    tells:
+      - 'czesciowo (?:utwardzon|uwodorn)'
+      - 'partially hydrogenated'
+      - 'teilweise gehartet'
+  - id: fully-hydrogenated
+    names:
+      en:
+        - fully hydrogenated almond oil
+        - totally hydrogenated almond oil
+        - fully hydrogenated sweet almond oil
+        - totally hydrogenated sweet almond oil
+      pl:
+        - całkowicie utwardzony olej migdałowy
+        - olej migdałowy całkowicie utwardzony
+        - całkowicie uwodorniony olej migdałowy
+        - olej migdałowy całkowicie uwodorniony
+        - w pełni utwardzony olej migdałowy
+        - olej migdałowy w pełni utwardzony
+        - w pełni uwodorniony olej migdałowy
+        - olej migdałowy w pełni uwodorniony
+        - całkowicie utwardzony olej z migdałów
+        - olej z migdałów całkowicie utwardzony
+        - całkowicie uwodorniony olej z migdałów
+        - olej z migdałów całkowicie uwodorniony
+        - w pełni utwardzony olej z migdałów
+        - olej z migdałów w pełni utwardzony
+        - w pełni uwodorniony olej z migdałów
+        - olej z migdałów w pełni uwodorniony
+        - całkowicie utwardzony olej roślinny migdałowy
+        - olej roślinny migdałowy całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny migdałowy
+        - olej roślinny migdałowy całkowicie uwodorniony
+        - w pełni utwardzony olej roślinny migdałowy
+        - olej roślinny migdałowy w pełni utwardzony
+        - w pełni uwodorniony olej roślinny migdałowy
+        - olej roślinny migdałowy w pełni uwodorniony
+        - całkowicie utwardzony olej roślinny z migdałów
+        - olej roślinny z migdałów całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny z migdałów
+        - olej roślinny z migdałów całkowicie uwodorniony
+        - w pełni utwardzony olej roślinny z migdałów
+        - olej roślinny z migdałów w pełni utwardzony
+        - w pełni uwodorniony olej roślinny z migdałów
+        - olej roślinny z migdałów w pełni uwodorniony
+    process:
+      en: "Almond oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
+      pl: "Olej migdałowy ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
+    tells:
+      - 'calkowicie (?:utwardzon|uwodorn)'
+      - 'w pelni (?:utwardzon|uwodorn)'
+      - 'fully hydrogenated'
+      - 'totally hydrogenated'
+      - 'vollstandig gehartet'
 assertions:
   - code: origin.vegetable_oil_derived
     certainty: 'yes'
@@ -43,6 +153,49 @@ assertions:
     sources:
       - id: reg-1169-2011
         locator: Annex II item 8
+  - code: processing.hydrogenated
+    variant: hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares hydrogenation without specifying partial or full, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje utwardzenie (bez wskazania, czy częściowe, czy całkowite), czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: processing.hydrogenated
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares partial hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje częściowe utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: health.trans_fat_source
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Partial hydrogenation is the main industrial source of trans fat; EU food sold to consumers is capped at 2 g trans fat per 100 g of fat."
+      pl: "Częściowe utwardzanie jest głównym przemysłowym źródłem tłuszczów trans; żywność sprzedawana konsumentom w UE ma limit 2 g tłuszczów trans na 100 g tłuszczu."
+    sources:
+      - id: reg-2019-649
+  - code: processing.hydrogenated
+    variant: fully-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares full hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje całkowite utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
 review_status: draft
 provenance: ai-drafted
 review_notes:

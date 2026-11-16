@@ -5,16 +5,15 @@ names:
   en:
     - walnut oil
     - walnuts oil
+    - non-hydrogenated walnut oil
+    - unhydrogenated walnut oil
+    - non-hydrogenated walnuts oil
+    - unhydrogenated walnuts oil
   pl:
     - olej z orzechów włoskich
     - olej z orzecha włoskiego
     - olej orzechowy z orzechów włoskich
     - olej roślinny z orzechów włoskich
-    - olej orzechowy
-    - olej roślinny orzechowy
-    - tłuszcz roślinny orzechowy
-    - oleje roślinne orzechowe
-    - orzechowy olej roślinny
     - olej roślinny z orzecha włoskiego
   de:
     - Walnussöl
@@ -25,6 +24,112 @@ summary:
   pl: >-
     Olej roślinny tłoczony z orzechów włoskich (Juglans regia). Jako produkt pochodzący z orzechów włoskich
     podlega obowiązkowi deklarowania alergenu z Aneksu II UE (punkt 8) i nie jest z niego wyłączony.
+variants:
+  - id: hydrogenated
+    names:
+      en:
+        - hydrogenated walnut oil
+        - hydrogenated walnuts oil
+      pl:
+        - utwardzony olej z orzechów włoskich
+        - olej z orzechów włoskich utwardzony
+        - uwodorniony olej z orzechów włoskich
+        - olej z orzechów włoskich uwodorniony
+        - utwardzony olej z orzecha włoskiego
+        - olej z orzecha włoskiego utwardzony
+        - uwodorniony olej z orzecha włoskiego
+        - olej z orzecha włoskiego uwodorniony
+        - utwardzony olej roślinny z orzechów włoskich
+        - olej roślinny z orzechów włoskich utwardzony
+        - uwodorniony olej roślinny z orzechów włoskich
+        - olej roślinny z orzechów włoskich uwodorniony
+        - utwardzony olej roślinny z orzecha włoskiego
+        - olej roślinny z orzecha włoskiego utwardzony
+        - uwodorniony olej roślinny z orzecha włoskiego
+        - olej roślinny z orzecha włoskiego uwodorniony
+    process:
+      en: "Walnut oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
+      pl: "Olej z orzechów włoskich utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
+    tells:
+      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)'
+  - id: partially-hydrogenated
+    names:
+      en:
+        - partially hydrogenated walnut oil
+        - partially hydrogenated walnuts oil
+      pl:
+        - częściowo utwardzony olej z orzechów włoskich
+        - olej z orzechów włoskich częściowo utwardzony
+        - częściowo uwodorniony olej z orzechów włoskich
+        - olej z orzechów włoskich częściowo uwodorniony
+        - częściowo utwardzony olej z orzecha włoskiego
+        - olej z orzecha włoskiego częściowo utwardzony
+        - częściowo uwodorniony olej z orzecha włoskiego
+        - olej z orzecha włoskiego częściowo uwodorniony
+        - częściowo utwardzony olej roślinny z orzechów włoskich
+        - olej roślinny z orzechów włoskich częściowo utwardzony
+        - częściowo uwodorniony olej roślinny z orzechów włoskich
+        - olej roślinny z orzechów włoskich częściowo uwodorniony
+        - częściowo utwardzony olej roślinny z orzecha włoskiego
+        - olej roślinny z orzecha włoskiego częściowo utwardzony
+        - częściowo uwodorniony olej roślinny z orzecha włoskiego
+        - olej roślinny z orzecha włoskiego częściowo uwodorniony
+    process:
+      en: "Walnut oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
+      pl: "Olej z orzechów włoskich, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
+    tells:
+      - 'czesciowo (?:utwardzon|uwodorn)'
+      - 'partially hydrogenated'
+      - 'teilweise gehartet'
+  - id: fully-hydrogenated
+    names:
+      en:
+        - fully hydrogenated walnut oil
+        - totally hydrogenated walnut oil
+        - fully hydrogenated walnuts oil
+        - totally hydrogenated walnuts oil
+      pl:
+        - całkowicie utwardzony olej z orzechów włoskich
+        - olej z orzechów włoskich całkowicie utwardzony
+        - całkowicie uwodorniony olej z orzechów włoskich
+        - olej z orzechów włoskich całkowicie uwodorniony
+        - w pełni utwardzony olej z orzechów włoskich
+        - olej z orzechów włoskich w pełni utwardzony
+        - w pełni uwodorniony olej z orzechów włoskich
+        - olej z orzechów włoskich w pełni uwodorniony
+        - całkowicie utwardzony olej z orzecha włoskiego
+        - olej z orzecha włoskiego całkowicie utwardzony
+        - całkowicie uwodorniony olej z orzecha włoskiego
+        - olej z orzecha włoskiego całkowicie uwodorniony
+        - w pełni utwardzony olej z orzecha włoskiego
+        - olej z orzecha włoskiego w pełni utwardzony
+        - w pełni uwodorniony olej z orzecha włoskiego
+        - olej z orzecha włoskiego w pełni uwodorniony
+        - całkowicie utwardzony olej roślinny z orzechów włoskich
+        - olej roślinny z orzechów włoskich całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny z orzechów włoskich
+        - olej roślinny z orzechów włoskich całkowicie uwodorniony
+        - w pełni utwardzony olej roślinny z orzechów włoskich
+        - olej roślinny z orzechów włoskich w pełni utwardzony
+        - w pełni uwodorniony olej roślinny z orzechów włoskich
+        - olej roślinny z orzechów włoskich w pełni uwodorniony
+        - całkowicie utwardzony olej roślinny z orzecha włoskiego
+        - olej roślinny z orzecha włoskiego całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny z orzecha włoskiego
+        - olej roślinny z orzecha włoskiego całkowicie uwodorniony
+        - w pełni utwardzony olej roślinny z orzecha włoskiego
+        - olej roślinny z orzecha włoskiego w pełni utwardzony
+        - w pełni uwodorniony olej roślinny z orzecha włoskiego
+        - olej roślinny z orzecha włoskiego w pełni uwodorniony
+    process:
+      en: "Walnut oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
+      pl: "Olej z orzechów włoskich ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
+    tells:
+      - 'calkowicie (?:utwardzon|uwodorn)'
+      - 'w pelni (?:utwardzon|uwodorn)'
+      - 'fully hydrogenated'
+      - 'totally hydrogenated'
+      - 'vollstandig gehartet'
 assertions:
   - code: origin.vegetable_oil_derived
     certainty: 'yes'
@@ -46,5 +151,48 @@ assertions:
     sources:
       - id: reg-1169-2011
         locator: Annex II item 8
+  - code: processing.hydrogenated
+    variant: hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares hydrogenation without specifying partial or full, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje utwardzenie (bez wskazania, czy częściowe, czy całkowite), czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: processing.hydrogenated
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares partial hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje częściowe utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: health.trans_fat_source
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Partial hydrogenation is the main industrial source of trans fat; EU food sold to consumers is capped at 2 g trans fat per 100 g of fat."
+      pl: "Częściowe utwardzanie jest głównym przemysłowym źródłem tłuszczów trans; żywność sprzedawana konsumentom w UE ma limit 2 g tłuszczów trans na 100 g tłuszczu."
+    sources:
+      - id: reg-2019-649
+  - code: processing.hydrogenated
+    variant: fully-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares full hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje całkowite utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
 review_status: draft
 provenance: ai-drafted

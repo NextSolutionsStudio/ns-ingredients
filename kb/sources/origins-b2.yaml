@@ -136,3 +136,13 @@ sources:
     licence: CC-BY-4.0
     accessed: '2026-11-16'
     note: "Full text read in sources-pack/review-soda-ash.txt (PMC12164680): Section 1 & Table 1 document the Solvay process from mineral NaCl brine and limestone (CaCO3) (~75% of global output)."
+  - id: foodinfo-allergy-dictionary-pl-en
+    type: reference
+    title: "Food-Info Allergy Dictionary, Polski – English"
+    publisher: "Food-Info (Wageningen University / European Federation of Food Science and Technology)"
+    year: 2007
+    url: https://www.food-info.net/allergy/pl-en.pdf
+    accessed: '2026-11-16'
+    licence: all-rights-reserved
+    note: "Opened in full (2-page PDF). Under nuts it lists 'olej orzechowy, olej arachidowy' as peanut oil, arachid oil, and 'olej z orzecha włoskiego' as walnut oil. Cited for the term only; nothing is copied."
+
