@@ -66,6 +66,8 @@ export class KbIndex {
   /** code → ingredient ids asserting it (yes/maybe), for facet filters. */
   private readonly tagIndex = new Map<string, Set<string>>();
   private readonly textIndex = new Map<string, string>();
+  /** Words a longer name begins with ("gluten", "gluten free", "gluten free wheat"); built on first use. */
+  private namePrefixes?: Set<string>;
   /** trigram → indices into names: fuzzy matching only visits names that share a trigram with the query. */
   private readonly postings = new Map<string, number[]>();
   private shared = new Int32Array(0);
@@ -159,6 +161,43 @@ export class KbIndex {
 
   classOf(text: string): string | undefined {
     return this.classByNorm.get(normName(text));
+  }
+
+  /**
+   * Whether `norm` (`normName` output) is an ingredient's or a variant's own name, in any language. A direct
+   * lookup, never the matcher: the parser asks it of short runs of words around every dash and full stop.
+   */
+  isName(norm: string): boolean {
+    return this.byNorm.has(norm);
+  }
+
+  /**
+   * Every variant tell in the KB ("gluten ?free", "bezglutenow"), once each, global: the parser keeps a dash or
+   * a full stop that a tell spans ("gluten - free rolled oats"), so the variant it declares survives.
+   */
+  allTells(): RegExp[] {
+    if (!this.tellList) {
+      const seen = new Map<string, RegExp>();
+      for (const list of this.tells.values()) {
+        for (const t of list) for (const re of t.res) seen.set(re.source, new RegExp(re.source, "gu"));
+      }
+      this.tellList = [...seen.values()];
+    }
+    return this.tellList;
+  }
+  private tellList?: RegExp[];
+
+  /** Whether a longer name begins with the words `norm` (`normName` output): "gluten free" begins one. */
+  beginsName(norm: string): boolean {
+    if (!this.namePrefixes) {
+      this.namePrefixes = new Set();
+      for (const name of this.byNorm.keys()) {
+        for (let i = name.indexOf(" "); i > 0; i = name.indexOf(" ", i + 1)) {
+          this.namePrefixes.add(name.slice(0, i));
+        }
+      }
+    }
+    return this.namePrefixes.has(norm);
   }
 
   /** Resolve one item's name (no brackets) to an ingredient. */
