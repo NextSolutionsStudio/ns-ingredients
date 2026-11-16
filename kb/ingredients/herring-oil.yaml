@@ -1,0 +1,62 @@
+id: herring-oil
+type: fat
+parent: atlantic-herring
+names:
+  en:
+    - herring oil
+  pl:
+    - olej ze śledzia
+    - olej ze śledzi
+  de:
+    - Heringsöl
+summary:
+  en: >-
+    Marine fish oil extracted from herring (Clupea harengus). As a product derived from fish, it falls under EU
+    Annex II item 4 fish allergen labelling without an exemption for fish oil.
+  pl: >-
+    Olej rybny pozyskiwany ze śledzia (Clupea harengus). Jako produkt pochodzący z ryb podlega obowiązkowi
+    deklarowania alergenu z Aneksu II UE (punkt 4) i nie jest wyłączony dla oleju rybnego.
+assertions:
+  - code: allergen.fish
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Derived from herring; EU Annex II item 4 (fish and products thereof, no exemption for fish oil).
+      pl: Produkt ze śledzia; Aneks II UE, punkt 4 (ryby i produkty z nich, brak wyłączenia dla oleju rybnego).
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 4
+  - code: origin.fish
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Extracted from marine fish (herring).
+      pl: Pozyskiwany z ryby morskiej (śledzia).
+    sources:
+      - id: reg-1169-2011
+  - code: diet.vegan
+    certainty: 'no'
+    kind: fact
+    grade: A
+    note:
+      en: An animal (fish) fat.
+      pl: Tłuszcz zwierzęcy (rybi).
+    sources:
+      - id: reg-1169-2011
+  - code: diet.vegetarian
+    certainty: 'no'
+    kind: fact
+    grade: A
+    note:
+      en: Fish oil is obtained from fish and is not compatible with a vegetarian diet.
+      pl: Olej rybny jest pozyskiwany z ryb i nie jest zgodny z dietą wegetariańską.
+    sources:
+      - id: reg-1169-2011
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Added during b1 derived-forms sweep so "herring oil" matches a fat entry rather than sub-phrase-matching
+    whole fish (atlantic-herring.yaml).

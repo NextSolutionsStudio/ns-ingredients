@@ -15,10 +15,10 @@ sources:
     note: >-
       Consolidated EUR-Lex CELEX 02006R1925-20251126 opened via EU Publications Office Cellar. Annex I lists
       permitted vitamins and minerals (including vitamin D, B1, niacin, pantothenic acid, B6, calcium, iron);
-      Annex II lists permitted vitamin formulations and mineral substances (including ferrous bisglycinate
-      alongside the other listed iron salts, nicotinic acid, nicotinamide, thiamin hydrochloride and
-      mononitrate, D-pantothenate calcium/sodium, dexpanthenol, pyridoxine hydrochloride/5'-phosphate/
-      dipalmitate, and ergocalciferol).
+      Annex II lists permitted vitamin formulations and mineral substances (including ferrous bisglycinate and
+      iron milk caseinate [footnote 4, Union list of novel foods] alongside the other listed iron salts,
+      nicotinic acid, nicotinamide, thiamin hydrochloride and mononitrate, D-pantothenate calcium/sodium,
+      dexpanthenol, pyridoxine hydrochloride/5'-phosphate/dipalmitate, and ergocalciferol).
   - id: reg-2065-2003
     type: regulation
     title: "Regulation (EC) No 2065/2003 on smoke flavourings used or intended for use in or on foods"

@@ -55,9 +55,9 @@ variants:
         Otrzymywana bezpośrednio z oliwek wyłącznie za pomocą środków mechanicznych, bez rafinacji, o nieco
         szerszej tolerancji kwasowości i cech sensorycznych niż oliwa extra virgin.
     tells:
-      - '^(?!.*extra virgin)(?!.*najwyzszej jakosci).*z pierwszego tloczenia'
-      - '\bvirgin olive oil\b'
-      - '\bnatives olivenol\b'
+      - '^(?!.*extra virgin)(?!.*najwyzszej jakosci)(?!.*natives olivenol extra).*z pierwszego tloczenia'
+      - '^(?!.*extra virgin)(?!.*najwyzszej jakosci)(?!.*natives olivenol extra).*\bvirgin olive oil\b'
+      - '^(?!.*extra virgin)(?!.*najwyzszej jakosci)(?!.*natives olivenol extra).*\bnatives olivenol\b'
   - id: refined-blend
     names:
       en:
