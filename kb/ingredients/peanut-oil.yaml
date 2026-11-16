@@ -1,0 +1,54 @@
+id: peanut-oil
+type: fat
+parent: peanuts
+names:
+  en:
+    - peanut oil
+    - groundnut oil
+    - arachis oil
+    - peanuts oil
+  pl:
+    - olej arachidowy
+    - olej z orzeszków ziemnych
+    - olej roślinny arachidowy
+    - tłuszcz roślinny arachidowy
+    - arachidowy olej roślinny
+    - oleje roślinne arachidowe
+    - tłuszcze roślinne arachidowe
+    - olej roślinny z orzeszków ziemnych
+  de:
+    - Erdnussöl
+summary:
+  en: >-
+    Vegetable oil pressed or extracted from peanuts (Arachis hypogaea). As a product derived from them, it
+    falls under EU Annex II item 5 allergen labelling, with no Annex II exemption for the oil.
+  pl: >-
+    Olej roślinny tłoczony lub ekstrahowany z orzeszków ziemnych (Arachis hypogaea). Jako produkt z nich pochodzący
+    podlega obowiązkowi deklarowania alergenu z Aneksu II UE (punkt 5); olej nie jest z niego wyłączony.
+assertions:
+  - code: origin.vegetable_oil_derived
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A pressed vegetable oil; EU labelling requires its specific plant origin to be named.
+      pl: Wyciskany olej roślinny; przepisy UE o etykietowaniu wymagają podania jego konkretnego pochodzenia rośliny.
+    sources:
+      - id: reg-1169-2011
+        locator: Annex VII Part A, point 8
+  - code: allergen.peanuts
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Product derived from peanuts; EU Annex II item 5, with no exemption for the oil.
+      pl: Produkt z orzeszków ziemnych; Aneks II UE, punkt 5, bez wyłączenia dla oleju.
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 5
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Split from the `peanuts` entry in batch b2 (Sol 6.1: an oil is a different food from the whole
+    seed or nut). Identity-only beyond origin and the allergen; no assessment opened.

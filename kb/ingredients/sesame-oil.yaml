@@ -1,0 +1,57 @@
+id: sesame-oil
+type: fat
+parent: sesame
+names:
+  en:
+    - sesame oil
+    - sesame seed oil
+    - refined sesame oil
+    - toasted sesame oil
+  pl:
+    - olej sezamowy
+    - rafinowany olej sezamowy
+    - olej roślinny sezamowy
+    - tłuszcz roślinny sezamowy
+    - sezamowy olej roślinny
+    - oleje roślinne sezamowe
+    - tłuszcze roślinne sezamowe
+    - olej roślinny z sezamu
+    - olej z sezamu
+    - olej z nasion sezamu
+    - olej sezamowy prażony
+  de:
+    - Sesamöl
+summary:
+  en: >-
+    Vegetable oil pressed or extracted from sesame seeds (Sesamum indicum). As a product derived from them, it
+    falls under EU Annex II item 11 allergen labelling, with no Annex II exemption for the oil.
+  pl: >-
+    Olej roślinny tłoczony lub ekstrahowany z nasion sezamu (Sesamum indicum). Jako produkt z nich pochodzący
+    podlega obowiązkowi deklarowania alergenu z Aneksu II UE (punkt 11); olej nie jest z niego wyłączony.
+assertions:
+  - code: origin.vegetable_oil_derived
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A pressed vegetable oil; EU labelling requires its specific plant origin to be named.
+      pl: Wyciskany olej roślinny; przepisy UE o etykietowaniu wymagają podania jego konkretnego pochodzenia rośliny.
+    sources:
+      - id: reg-1169-2011
+        locator: Annex VII Part A, point 8
+  - code: allergen.sesame
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Product derived from sesame seeds; EU Annex II item 11, with no exemption for the oil.
+      pl: Produkt z nasion sezamu; Aneks II UE, punkt 11, bez wyłączenia dla oleju.
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 11
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Split from the `sesame` entry in batch b2 (Sol 6.1: an oil is a different food from the whole
+    seed or nut). Identity-only beyond origin and the allergen; no assessment opened.

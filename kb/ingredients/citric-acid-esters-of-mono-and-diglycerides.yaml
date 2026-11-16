@@ -22,13 +22,13 @@ summary:
   en: >-
     Mixed esters of glycerol with citric acid and food fatty acids (also called CITREM), used as an
     emulsifier and stabiliser, including in infant formulae, spreads and bakery products. Manufactured by
-    esterifying citric acid with mono- and diglycerides or glycerol and fatty acids from edible vegetable
-    oils or animal fats.
+    esterifying citric acid with mono- and diglycerides, or with glycerol and fatty acids from edible oils
+    and fats; the EU specification does not name the fat source.
   pl: >-
     Mieszane estry glicerolu z kwasem cytrynowym i kwasami tłuszczowymi (CITREM), stosowane jako emulgator i
     stabilizator, m.in. w preparatach do początkowego żywienia niemowląt, tłuszczach do smarowania i
     pieczywie. Wytwarzane przez estryfikację kwasu cytrynowego z mono- i diglicerydami lub glicerolem i
-    kwasami tłuszczowymi z jadalnych olejów roślinnych lub tłuszczów zwierzęcych.
+    kwasami tłuszczowymi z jadalnych olejów i tłuszczów; specyfikacja UE nie wskazuje rodzaju tłuszczu.
 assertions:
   - code: origin.chemical_synthesis
     certainty: 'yes'

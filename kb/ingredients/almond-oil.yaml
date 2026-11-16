@@ -1,0 +1,51 @@
+id: almond-oil
+type: fat
+parent: almonds
+names:
+  en:
+    - almond oil
+    - sweet almond oil
+    - almonds oil
+  pl:
+    - olej migdałowy
+    - olej z migdałów
+    - olej roślinny migdałowy
+    - tłuszcz roślinny migdałowy
+    - oleje roślinne migdałowe
+    - olej roślinny z migdałów
+  de:
+    - Mandelöl
+summary:
+  en: >-
+    Vegetable oil pressed or extracted from almonds (Prunus dulcis). As a product derived from them, it
+    falls under EU Annex II item 8 allergen labelling, with no Annex II exemption for the oil.
+  pl: >-
+    Olej roślinny tłoczony lub ekstrahowany z migdałów (Prunus dulcis). Jako produkt z nich pochodzący
+    podlega obowiązkowi deklarowania alergenu z Aneksu II UE (punkt 8); olej nie jest z niego wyłączony.
+assertions:
+  - code: origin.vegetable_oil_derived
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A pressed vegetable oil; EU labelling requires its specific plant origin to be named.
+      pl: Wyciskany olej roślinny; przepisy UE o etykietowaniu wymagają podania jego konkretnego pochodzenia rośliny.
+    sources:
+      - id: reg-1169-2011
+        locator: Annex VII Part A, point 8
+  - code: allergen.nuts
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Product derived from almonds; EU Annex II item 8, with no exemption for the oil.
+      pl: Produkt z migdałów; Aneks II UE, punkt 8, bez wyłączenia dla oleju.
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 8
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Split from the `almonds` entry in batch b2 (Sol 6.1: an oil is a different food from the whole
+    seed or nut). Identity-only beyond origin and the allergen; no assessment opened.
