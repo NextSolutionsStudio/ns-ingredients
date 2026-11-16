@@ -1,0 +1,55 @@
+id: hydrogenated-fat
+type: fat
+names:
+  en: [hydrogenated fat, hydrogenated fats, hydrogenated oil, hydrogenated oils]
+  pl: [tłuszcz utwardzony, tłuszcze utwardzone, olej utwardzony, olej uwodorniony, tłuszcz uwodorniony, oleje utwardzone, oleje uwodornione, tłuszcze uwodornione, olej utwardzone, tłuszcz utwardzone, olej uwodornione, tłuszcz uwodornione]
+summary:
+  en: >-
+    A fat or oil that the label calls hardened (hydrogenated) without saying whether it is vegetable or animal,
+    such as a bare "tłuszcz utwardzony" or "olej częściowo uwodorniony". Hydrogenation can be partial, which
+    forms industrial trans fat, or full, which leaves essentially none. In a bracket after a named oil or fat
+    ("olej sojowy (częściowo uwodorniony)") the named parent carries the origin.
+  pl: >-
+    Tłuszcz lub olej, który etykieta nazywa utwardzonym (uwodornionym), nie mówiąc, czy jest roślinny, czy
+    zwierzęcy, np. samo "tłuszcz utwardzony" albo "olej częściowo uwodorniony". Utwardzanie może być częściowe,
+    co tworzy przemysłowe tłuszcze trans, albo całkowite, praktycznie bez nich. W nawiasie po nazwanym oleju lub
+    tłuszczu ("olej sojowy (częściowo uwodorniony)") pochodzenie niesie nazwany składnik nadrzędny.
+variants:
+  - id: partially-hydrogenated
+    names:
+      en: [partially hydrogenated fat, partially hydrogenated fats, partially hydrogenated oil, partially hydrogenated oils]
+      pl: [tłuszcz częściowo utwardzony, olej częściowo utwardzony, olej częściowo uwodorniony, tłuszcz częściowo uwodorniony, oleje częściowo utwardzone, tłuszcze częściowo utwardzone, oleje częściowo uwodornione, tłuszcze częściowo uwodornione, olej częściowo utwardzone, tłuszcz częściowo utwardzone, olej częściowo uwodornione, tłuszcz częściowo uwodornione]
+    process:
+      en: "Some but not all double bonds are hydrogenated, leaving a mix of natural cis and industrially formed trans unsaturated fatty acids."
+      pl: "Utwardzeniu podlega część, nie wszystkie, wiązania podwójne, co pozostawia mieszankę naturalnych (cis) i powstałych przemysłowo (trans) nienasyconych kwasów tłuszczowych."
+    tells: ['czesciowo (?:utwardzon|uwodorn)', '(?<!not )(?<!non )partially hydrogenated', 'teilweise gehartet']
+  - id: fully-hydrogenated
+    names:
+      en: [fully hydrogenated fat, fully hydrogenated fats, fully hydrogenated oil, fully hydrogenated oils, totally hydrogenated fat]
+      pl: [tłuszcz całkowicie utwardzony, olej całkowicie utwardzony, olej całkowicie uwodorniony, tłuszcz całkowicie uwodorniony, olej w pełni utwardzony, tłuszcz w pełni utwardzony, olej w pełni uwodorniony, tłuszcz w pełni uwodorniony, oleje całkowicie utwardzone, tłuszcze całkowicie utwardzone, oleje całkowicie uwodornione, tłuszcze całkowicie uwodornione, oleje w pełni utwardzone, tłuszcze w pełni utwardzone, oleje w pełni uwodornione, tłuszcze w pełni uwodornione, olej całkowicie utwardzone, tłuszcz całkowicie utwardzone, olej całkowicie uwodornione, tłuszcz całkowicie uwodornione, olej w pełni utwardzone, tłuszcz w pełni utwardzone, olej w pełni uwodornione, tłuszcz w pełni uwodornione]
+    process:
+      en: "All double bonds are hydrogenated; the fat is fully saturated, very hard, and contains essentially no trans fat."
+      pl: "Wszystkie wiązania podwójne są utwardzone; tłuszcz jest w pełni nasycony, bardzo twardy i praktycznie nie zawiera tłuszczów trans."
+    tells: ['calkowicie (?:utwardzon|uwodorn)', '(?<!not )(?<!non )fully hydrogenated', '(?<!not )(?<!non )totally hydrogenated', 'w pelni (?:utwardzon|uwodorn)', 'vollstandig gehartet']
+assertions:
+  - code: processing.hydrogenated
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares the fat hydrogenated in its list of ingredients, whether partially or fully."
+      pl: "Etykieta deklaruje utwardzenie tłuszczu w wykazie składników, częściowe lub całkowite."
+    sources: [{ id: reg-1169-2011, locator: "Article 9(1)(b) and Article 18 (list of ingredients)" }]
+  - code: health.trans_fat_source
+    variant: partially-hydrogenated
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Partial hydrogenation is the main industrial source of trans fat; EU food sold to consumers is capped at 2 g trans fat per 100 g of fat, other than trans fat naturally occurring in animal fat."
+      pl: "Częściowe utwardzanie jest głównym przemysłowym źródłem tłuszczów trans; żywność sprzedawana konsumentom w UE ma limit 2 g tłuszczów trans na 100 g tłuszczu, poza tłuszczami trans występującymi naturalnie w tłuszczu zwierzęcym."
+    sources: [{ id: reg-2019-649 }]
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "No origin and no diet on purpose: a bare hardened fat may be vegetable or animal. Named oils and fats carry their own hydrogenation variants (palm, rapeseed, lard, ...)."
