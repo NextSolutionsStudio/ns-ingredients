@@ -1,0 +1,153 @@
+id: smoke-flavouring
+type: flavouring
+names:
+  en:
+    - smoke flavouring
+    - smoke flavourings
+    - smoke flavoring
+    - liquid smoke
+  pl:
+    - aromat dymu wędzarniczego
+    - aromaty dymu wędzarniczego
+    - dym wędzarniczy
+  de:
+    - Raucharoma
+    - Raucharomen
+summary:
+  en: >-
+    Condensed smoke preparations made by controlled pyrolysis of hardwood (such as beech, oak, hickory or
+    maple), regulated separately from other flavourings in the EU under Regulation (EC) No 2065/2003. In
+    November 2023 EFSA evaluated the eight primary products submitted for renewal (SF-001 to SF-006, SF-008
+    and SF-009) and concluded that genotoxicity concerns were identified or could not be ruled out for every
+    one of them. In July 2024 Commission Implementing Regulation (EU) 2024/2067 deleted all ten primary
+    products (SF-001 to SF-010) from the EU Union list, setting transitional phase-out deadlines of 1 July
+    2026 for general foods and 1 July 2029 for cheese, meat and processed fish/roe categories.
+  pl: >-
+    Kondensaty dymu otrzymywane przez kontrolowaną pirolizę drewna liściastego (np. buku, dębu, hikory lub
+    klonu), regulowane w UE odrębnie od pozostałych aromatów na mocy Rozporządzenia (WE) nr 2065/2003. W
+    listopadzie 2023 r. EFSA oceniła osiem produktów pierwotnych zgłoszonych do odnowienia (SF-001 do SF-006,
+    SF-008 i SF-009) i stwierdziła, że w przypadku każdego z nich zidentyfikowano obawy dotyczące
+    genotoksyczności lub nie można ich było wykluczyć. W lipcu 2024 r. Rozporządzenie Wykonawcze Komisji (UE)
+    2024/2067 usunęło wszystkie dziesięć produktów pierwotnych (SF-001 do SF-010) z unijnego wykazu,
+    wyznaczając okresy przejściowe na wprowadzanie do obrotu do 1 lipca 2026 r. dla ogółu żywności oraz do 1
+    lipca 2029 r. dla serów, mięsa i przetworzonych ryb/ikry.
+assertions:
+  - code: health.no_safe_level_established
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    population: [general]
+    note:
+      en: >-
+        In November 2023 EFSA concluded for all eight smoke flavouring primary products evaluated for renewal
+        (SF-001 to SF-006, SF-008 and SF-009) that genotoxicity concerns were identified or could not be
+        ruled out (e.g. furan-2(5H)-one and benzene-1,2-diol above the 0.0025 ug/kg bw/day TTC, styrene and
+        benzofuran in SF-004, unresolved mouse-lymphoma/aneugenicity findings in SF-009, and unidentified
+        mixture fractions); no safe intake level was established.
+      pl: >-
+        W listopadzie 2023 r. EFSA stwierdziła dla wszystkich ośmiu ocenianych produktów pierwotnych aromatów
+        dymu wędzarniczego (SF-001 do SF-006, SF-008 i SF-009), że zidentyfikowano obawy o genotoksyczność
+        lub nie można ich było wykluczyć (m.in. furan-2(5H)-on i benzeno-1,2-diol powyżej TTC 0,0025 ug/kg
+        m.c./dobę, styren i benzofuran w SF-004, nierozstrzygnięte wyniki w teście chłoniaka mysiego i
+        aneugenności w SF-009 oraz niezidentyfikowane frakcje); nie ustalono bezpiecznego poziomu spożycia.
+    sources:
+      - id: efsa-sf001-2023
+      - id: efsa-sf002-2023
+      - id: efsa-sf003-2023
+      - id: efsa-sf004-2023
+      - id: efsa-sf005-2023
+      - id: efsa-sf006-2023
+      - id: efsa-sf008-2023
+      - id: efsa-sf009-2023
+  - code: regulatory.eu_banned
+    certainty: maybe
+    kind: fact
+    grade: A
+    jurisdiction: EU
+    note:
+      en: >-
+        Commission Implementing Regulation (EU) 2024/2067 deleted all ten smoke flavouring primary products
+        (SF-001 to SF-010) from the EU Union list in August 2024. Placing foods containing them on the market
+        ended on 1 July 2026 for general foods (sauces, snacks, soups), while cheese (cat. 1.7), meat (cat.
+        8), processed fish (cat. 9.2) and fish roe (cat. 9.3) have a transitional phase-out until 1 July 2029.
+      pl: >-
+        Rozporządzenie Wykonawcze (UE) 2024/2067 usunęło w sierpniu 2024 r. wszystkie dziesięć produktów
+        pierwotnych aromatów dymu wędzarniczego (SF-001 do SF-010) z unijnego wykazu. Wprowadzanie do obrotu
+        żywności z ich dodatkiem zakończyło się 1 lipca 2026 r. dla ogółu żywności (sosy, przekąski, zupy),
+        natomiast sery (kat. 1.7), mięso (kat. 8), przetworzone ryby (kat. 9.2) i ikra (kat. 9.3) mają okres
+        przejściowy do 1 lipca 2029 r.
+    sources:
+      - id: reg-2024-2067
+        locator: Articles 1 and 2
+      - id: reg-2065-2003
+  - code: regulatory.eu_restricted
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    jurisdiction: EU
+    note:
+      en: >-
+        Regulated separately from other flavourings (Reg 2065/2003). Following non-renewal and deletion of all
+        ten entries from the Union list (Reg 2024/2067), use is restricted to transitional phase-out stock
+        (until 1 July 2029 for cheese, meat and processed fish/roe; ended 1 July 2026 for all other foods).
+      pl: >-
+        Regulowany odrębnie od innych aromatów (Rozp. 2065/2003). Po odmowie odnowienia i usunięciu wszystkich
+        dziesięciu wpisów z wykazu unijnego (Rozp. 2024/2067) stosowanie ograniczono do wygaszania w okresie
+        przejściowym (do 1 lipca 2029 r. w serach, mięsie i przetworzonych rybach/ikrze; zakończone 1 lipca
+        2026 r. w pozostałej żywności).
+    sources:
+      - id: reg-2024-2067
+        locator: Articles 1 and 2
+      - id: reg-2065-2003
+  - code: processing.ultra_processed_marker
+    certainty: 'yes'
+    kind: estimate
+    grade: D
+    note:
+      en: >-
+        NOVA treats flavourings (including smoke flavourings) as markers of group-4 (ultra-processed) products;
+        weak, contested signal on its own.
+      pl: >-
+        NOVA traktuje aromaty (w tym aromaty dymu wędzarniczego) jako wskaźniki produktów grupy 4 (wysoko
+        przetworzonych); sam w sobie słaby, dyskusyjny sygnał.
+    sources:
+      - id: reg-2065-2003
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: >-
+        Primary smoke flavouring products are produced by pyrolysis of hardwood (such as beech, oak, hickory,
+        maple, ash, birch, cherry or hornbeam).
+      pl: >-
+        Pierwotne produkty aromatów dymu wędzarniczego otrzymuje się przez pirolizę drewna liściastego (np.
+        buku, dębu, hikory, klonu, jesionu, brzozy, wiśni lub grabu).
+    sources:
+      - id: efsa-sf001-2023
+      - id: efsa-sf005-2023
+      - id: efsa-sf009-2023
+regulatory:
+  - jurisdiction: EU
+    status: restricted
+    conditions:
+      en: >-
+        All ten primary products (SF-001 to SF-010) deleted from the Union list by Reg (EU) 2024/2067;
+        transitional placing on the market ended 1 July 2026 for general foods and runs until 1 July 2029 for
+        cheese (cat. 1.7), meat (cat. 8), processed fish (cat. 9.2) and fish roe (cat. 9.3).
+      pl: >-
+        Wszystkie dziesięć produktów pierwotnych (SF-001 do SF-010) usunięto z wykazu unijnego na mocy Rozp.
+        (UE) 2024/2067; okres przejściowy wprowadzania do obrotu zakończył się 1 lipca 2026 r. dla ogółu
+        żywności i trwa do 1 lipca 2029 r. dla serów (kat. 1.7), mięsa (kat. 8), przetworzonych ryb (kat. 9.2)
+        oraz ikry (kat. 9.3).
+    since: '2024-08-21'
+    source: reg-2024-2067
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Policy call: regulatory.eu_banned is set to certainty 'maybe' (kind: fact, grade: A) rather than 'yes'
+    because while Reg (EU) 2024/2067 deleted all 10 entries from the Union list (and general-food phase-out
+    ended 1 July 2026), meat, cheese and processed fish categories (where smoke flavouring commonly appears in
+    the Polish corpus, e.g. sausages) remain in legal transitional phase-out until 1 July 2029.
+    health.no_safe_level_established and processing.ultra_processed_marker apply at certainty 'yes'.
