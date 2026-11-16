@@ -4,13 +4,17 @@ parent: milk
 names:
   en:
     - iron milk caseinate
+    - iron caseinate
   pl:
     - kazeinian żelaza z mleka
+    - kazeinian żelaza
     - kazeinian mleczny żelaza
   de:
     - Eisen-Milchcaseinat
     - Eisen-Milch-Caseinat
     - Eisenmilchcaseinat
+    - Eisen-Caseinat
+    - Eisencaseinat
 summary:
   en: >-
     Complex of iron, milk casein and phosphate authorised in the EU as a source of iron in fortified foods

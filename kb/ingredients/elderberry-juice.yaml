@@ -3,6 +3,7 @@ type: carbohydrate
 names:
   en:
     - elderberry juice
+    - elderberries juice
     - black elderberry juice
     - concentrated elderberry juice
     - elderberry juice concentrate
@@ -65,3 +66,7 @@ review_notes:
   - >-
     No blanket vegan claim: clarification/fining processing aids (e.g. gelatine) were not verified for a
     given batch.
+  - >-
+    No nectar names: a fruit nectar may be sweetened with sweeteners instead of sugar or honey (Directive
+    2001/112/EC Annex I), so "elderberry nectar" does not by itself establish juice or added sugar. A nectar
+    entry that keeps that uncertainty is future work; none of the 800 popular Polish labels names a nectar.
