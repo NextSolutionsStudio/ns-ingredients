@@ -180,11 +180,14 @@ Deno.test("unbalanced brackets do not lose text", () => {
 });
 
 // ---------------------------------------------------------------- dash and full-stop separators (issue #6)
-// A stand-in for the KB: the parser only asks whether a text is a class, or which ingredient a name is.
+// A stand-in for the KB: the parser only asks whether a text is a class, which ingredient a name is, and whether
+// a name is one the KB holds whole. Here every known name is held whole.
 const CLASSES: Record<string, string> = {
   "regulator kwasowosci": "acidity-regulator",
   "emulgator": "emulsifier",
   "substancje spulchniajace": "raising-agent",
+  "substancja slodzaca": "sweetener",
+  "acid": "acid",
 };
 const KNOWN: Record<string, string> = {
   "kwas cytrynowy": "citric-acid",
@@ -207,8 +210,18 @@ const KNOWN: Record<string, string> = {
   "z mleka": "milk",
   "zywe kultury bakterii oraz l": "bacterial-cultures",
   "acidophilus": "lactobacillus-acidophilus",
+  // Halves that are known on their own, inside a name that is known whole.
+  "glucose": "dextrose",
+  "fructose syrup": "fructose",
+  "glucose fructose syrup": "glucose-fructose-syrup",
+  "proof caramel": "caramel",
+  "acid proof caramel": "e150d",
 };
-const kb: NameOracle = { classOf: (t) => CLASSES[normName(t)], confident: (n) => KNOWN[normName(n)] };
+const kb: NameOracle = {
+  classOf: (t) => CLASSES[normName(t)],
+  confident: (n) => KNOWN[normName(n)],
+  exact: (n) => normName(n) in KNOWN,
+};
 const shape = (items: ParsedItem[]) => items.map((i) => [i.path, i.name, i.header, i.inheritedHeader]);
 
 Deno.test("a class header printed with a dash or a full stop heads its item like the colon form", () => {
@@ -305,4 +318,70 @@ Deno.test("a dash or a full stop the KB cannot vouch for leaves the item exactly
   ) {
     assertEquals(parseLabel(text, { kb }), parseLabel(text), text);
   }
+});
+
+// ---------------------------------------------------------------- review of PR #9
+Deno.test("a name the KB holds whole is not cut, though both halves are known", () => {
+  // In a list, and after a class ("acid" is one, and "proof caramel" is known).
+  for (
+    const text of [
+      "glucose - fructose syrup",
+      "acid - proof caramel",
+      "cukier, glucose - fructose syrup (5%)",
+    ]
+  ) {
+    assertEquals(parseLabel(text, { kb }), parseLabel(text), text);
+  }
+  // In a longer list, only the cuts through the name are not made.
+  assertEquals(shape(parseLabel("cukier - glucose - fructose syrup - ocet", { kb }).items), [
+    ["1", "cukier", undefined, undefined],
+    ["2", "glucose - fructose syrup", undefined, undefined],
+    ["3", "ocet", undefined, undefined],
+  ]);
+  // A colon header across the full stop is no name: the stop is cut, and the name after the colon stays whole.
+  assertEquals(
+    shape(parseLabel("emulgator - lecytyny. substancja słodząca: glucose - fructose syrup", { kb }).items),
+    [
+      ["1", "lecytyny", "emulgator", undefined],
+      ["2", "glucose - fructose syrup", "substancja słodząca", undefined],
+    ],
+  );
+});
+
+Deno.test("a header is scoped by how it is printed, not by the headers before it", () => {
+  // A dashed class, then a colon header in the same comma part: the colon list runs on past the comma.
+  assertEquals(
+    shape(parseLabel("emulgator - lecytyny. regulator kwasowości: kwas cytrynowy, ocet", { kb }).items),
+    [
+      ["1", "lecytyny", "emulgator", undefined],
+      ["2", "kwas cytrynowy", "regulator kwasowości", undefined],
+      ["3", "ocet", undefined, "regulator kwasowości"],
+    ],
+  );
+});
+
+Deno.test("in brackets, the parts of one dashed list share its header, and no header passes a comma", () => {
+  const h = "substancje spulchniające";
+  const kids = (text: string) => shape(parseLabel(text, { kb }).items[0].children);
+  // A dashed class heads the rest of its dashed list, and stops at the comma.
+  assertEquals(kids(`ciasto (${h} - węglany amonu - węglany sodu, difosforany)`), [
+    ["1.1", "węglany amonu", h, undefined],
+    ["1.2", "węglany sodu", undefined, h],
+    ["1.3", "difosforany", undefined, undefined],
+  ]);
+  // So does a colon or a full stop: a dashed list after it shares it, the next sibling does not.
+  for (const sep of [": ", ". "]) {
+    assertEquals(kids(`ciasto (${h}${sep}węglany amonu - węglany sodu, difosforany)`), [
+      ["1.1", "węglany amonu", h, undefined],
+      ["1.2", "węglany sodu", undefined, h],
+      ["1.3", "difosforany", undefined, undefined],
+    ]);
+  }
+  // Without the KB too, a colon header in brackets heads only its own item, as before.
+  const text = `ciasto (${h}: węglany amonu, węglany sodu)`;
+  assertEquals(shape(parseLabel(text).items[0].children), [
+    ["1.1", "węglany amonu", h, undefined],
+    ["1.2", "węglany sodu", undefined, undefined],
+  ]);
+  assertEquals(parseLabel(text, { kb }), parseLabel(text));
 });

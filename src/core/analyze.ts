@@ -210,6 +210,10 @@ export const nameOracle = (index: KbIndex): NameOracle => ({
       ? m.ingredientId
       : undefined;
   },
+  exact: (name) => {
+    const t = index.match(name)?.matchType;
+    return t === "exact" || t === "variant";
+  },
 });
 
 export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {}): AnalysisResult {

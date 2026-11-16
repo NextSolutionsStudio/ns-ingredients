@@ -15,6 +15,11 @@ export interface NameOracle {
   classOf(text: string): string | undefined;
   /** The ingredient an item with this name would be matched to confidently, if any. */
   confident(name: string): string | undefined;
+  /**
+   * Whether this name, as printed, is one the KB holds whole: an ingredient's or a variant's own name (an exact
+   * or variant match). Then it is one item, however well its halves match ("glucose - fructose syrup").
+   */
+  exact(name: string): boolean;
 }
 
 export interface Percent {
@@ -335,14 +340,44 @@ function cutTopLevel(s: string, sep: RegExp, from = 0, to = s.length): Span[] {
 }
 
 /**
+ * One item's own text parsed without the KB: its colon header and the name the analyser will match. Its brackets
+ * are not its name: parsing them here would re-parse every level below, once per level.
+ */
+const ownItem = (text: string) => parseItem(splitBrackets(text).own, "", false, false);
+
+/**
  * The ingredient one item names by its own name, when the analyser will match it confidently. A source
  * qualifier ("z mleka") belongs to the item before it, never stands alone; `headed` allows a colon header.
  */
 function ownId(text: string, kb: NameOracle, headed: boolean): string | undefined {
-  // Its brackets are not its name: parsing them here would re-parse every level below, once per level.
-  const it = parseItem(splitBrackets(text).own, "", false, false);
+  const it = ownItem(text);
   if (!it.name || (it.header && !headed) || QUALIFIER_RE.test(normName(it.name))) return undefined;
   return kb.confident(it.name);
+}
+
+/**
+ * Whether the separators in this text belong to a name the KB holds whole ("glucose - fructose syrup",
+ * "gluten - free wheat fibre"): an exact or variant match outranks any cut. A sub-phrase match does not
+ * ("wzmacniacz smaku - glutaminian monosodowy" is a class and its additive), and neither does an E-number: it
+ * says the text prints a code, not that the text is one name ("dwutlenek węgla. barwnik E150d"). A colon
+ * header that holds the separator ("emulgator - lecytyny. substancja słodząca: …") is cut, not the name after it.
+ */
+function knownWhole(text: string, kb: NameOracle): boolean {
+  const it = ownItem(text);
+  if (it.header && JOINED_RE.test(it.header)) return false;
+  return JOINED_RE.test(it.name) && kb.exact(it.name);
+}
+
+/** Merge runs of adjacent parts that print a name the KB holds whole, longest first: they are one part. */
+function keepWhole(s: string, parts: Span[], kb: NameOracle): Span[] {
+  const out: Span[] = [];
+  for (let i = 0; i < parts.length; i++) {
+    let j = parts.length - 1;
+    while (j > i && !knownWhole(s.slice(parts[i][0], parts[j][1]), kb)) j--;
+    out.push([parts[i][0], parts[j][1]]);
+    i = j;
+  }
+  return out;
 }
 
 /** The ingredient one item names: by its own name, or as "class - item". */
@@ -359,6 +394,8 @@ function classLead(text: string, kb: NameOracle): { header: string; rest: string
   let parts = cutTopLevel(text, STOP_SEP);
   if (parts.length < 2) parts = cutTopLevel(text, DASH_SEP);
   if (parts.length < 2) return null;
+  // The class must stand on its own: "acid - proof caramel" is one name the KB holds whole.
+  if (parts.slice(1).some((p) => knownWhole(text.slice(parts[0][0], p[1]), kb))) return null;
   const header = text.slice(...parts[0]);
   const rest = text.slice(parts[1][0]).trim();
   const id = kb.classOf(header) ? ownId(rest, kb, false) : undefined;
@@ -384,13 +421,42 @@ function joinSpans(s: string, parts: Span[], kb: NameOracle): Span[] | null {
  * "ocet. cukier". Cut only where every part is known, so a hyphenated word ("syrop glukozowo - fruktozowy"),
  * a Latin name ("Ryba - Katsuwonus pelamis") or a qualifier ("serwatka - z mleka") stays one item.
  * Full stops first, then dashes inside each part; a part that is a known class stays with the item it heads.
+ * Parts that together print a name the KB holds whole are never cut apart ("glucose - fructose syrup").
  */
 function splitJoined(seg: string, kb?: NameOracle): string[] {
   if (!kb || !JOINED_RE.test(seg)) return [seg];
-  const stops = cutTopLevel(seg, STOP_SEP);
-  const pieces = stops.flatMap((s) => joinSpans(seg, cutTopLevel(seg, DASH_SEP, s[0], s[1]), kb) ?? [s]);
+  const stops = keepWhole(seg, cutTopLevel(seg, STOP_SEP), kb);
+  const pieces = stops.flatMap((s) =>
+    joinSpans(seg, keepWhole(seg, cutTopLevel(seg, DASH_SEP, s[0], s[1]), kb), kb) ?? [s]
+  );
   const out = stops.length > 1 ? joinSpans(seg, pieces, kb) : pieces;
   return out && out.length > 1 ? out.map(([a, b]) => seg.slice(a, b)) : [seg];
+}
+
+/**
+ * Which header each item stands under. At the label's top level a class printed with a colon opens a list that
+ * runs to the next header ("emulgatory: lecytyny, E471"), and so does a full stop typed for one ("stabilizatory.
+ * mączka chleba świętojańskiego, guma guar"). A class printed with a dash heads only what is printed with it, to
+ * the end of its comma part ("regulator kwasowości - kwas cytrynowy, hydrolizat białka"). The newest header's
+ * punctuation decides: a colon after a dashed class still opens a list. In brackets, see `parseItem`.
+ */
+function headerScope() {
+  let header: string | undefined;
+  let dashed = false;
+  return {
+    /** The next item, parsed from `seg`. */
+    add(item: ParsedItem, seg: string) {
+      if (item.header) {
+        header = item.header;
+        dashed = /^ - /.test(seg.slice(seg.indexOf(header) + header.length));
+      } else if (header) item.inheritedHeader = header;
+    },
+    /** The end of a comma part. */
+    endPart() {
+      if (dashed) header = undefined;
+      dashed = false;
+    },
+  };
 }
 
 function parseItem(
@@ -427,20 +493,33 @@ function parseItem(
       percent ??= toPercent(pOnly);
       continue;
     }
-    for (const part of splitTopLevel(g).flatMap((p) => splitJoined(p, kb))) {
-      childIndex++;
-      const child = parseItem(part, `${path}.${childIndex}`, allCaps, false, kb);
-      const n = normName(child.name);
-      const es = findENumbers(child.name);
-      if (
-        es.length === 1 &&
-        normName(child.name.replace(/(?:e|ins)[\s-]*\d{3,4}\s*[a-h]?(?:\s*\([ivx]+\))?/giu, "")) === ""
-      ) {
-        bareE.push(child);
-      } else if (QUALIFIER_RE.test(n) && !child.children.length) {
-        child.role = "qualifier";
+    // Index loops: every bracket level is a frame of this function, and two nested iterators made that frame too
+    // big for 2000-deep nesting (tests/property/parse_property_test.ts).
+    const siblings = splitTopLevel(g);
+    for (let s = 0; s < siblings.length; s++) {
+      // In brackets a header heads its own comma part, however it is printed: the parts split from one dashed list
+      // share it ("(substancje spulchniające - węglany amonu - węglany sodu)"), the next sibling does not. Running
+      // a colon list on to the bracket's end, as at the top level, put "wanilia" under "emulgator: lecytyny;" and
+      // withheld 6 airon skład scores in its two corpora, with nothing gained.
+      const scope = headerScope();
+      const parts = splitJoined(siblings[s], kb);
+      for (let p = 0; p < parts.length; p++) {
+        const part = parts[p];
+        childIndex++;
+        const child = parseItem(part, `${path}.${childIndex}`, allCaps, false, kb);
+        scope.add(child, part);
+        const n = normName(child.name);
+        const es = findENumbers(child.name);
+        if (
+          es.length === 1 &&
+          normName(child.name.replace(/(?:e|ins)[\s-]*\d{3,4}\s*[a-h]?(?:\s*\([ivx]+\))?/giu, "")) === ""
+        ) {
+          bareE.push(child);
+        } else if (QUALIFIER_RE.test(n) && !child.children.length) {
+          child.role = "qualifier";
+        }
+        children.push(child);
       }
-      children.push(child);
     }
   }
   // A bare E-number annotates its parent ("kwas cytrynowy (E330)", "lecytyny (z soi) (E322)", "barwnik (E120)")
@@ -497,13 +576,9 @@ export function parseLabel(input: string, opts: { lang?: string; kb?: NameOracle
 
   const items: ParsedItem[] = [];
   let lessThan = false;
-  let currentHeader: string | undefined;
+  const scope = headerScope();
   let n = 0;
   for (const part of splitTopLevel(list)) {
-    // A colon opens a list that runs to the next header ("emulgatory: lecytyny, E471"), and so does a full stop
-    // typed for one ("stabilizatory. mączka chleba świętojańskiego, guma guar"). A class printed with a dash heads
-    // only what is printed with it ("regulator kwasowości - kwas cytrynowy, hydrolizat białka").
-    let dashedClass = false;
     for (let seg of splitJoined(part, opts.kb)) {
       if (LESS_THAN_RE.test(seg)) {
         lessThan = true;
@@ -516,13 +591,10 @@ export function parseLabel(input: string, opts: { lang?: string; kb?: NameOracle
         n--;
         continue;
       }
-      if (item.header) {
-        currentHeader = item.header;
-        dashedClass ||= /^ - /.test(seg.slice(seg.indexOf(item.header) + item.header.length));
-      } else if (currentHeader) item.inheritedHeader = currentHeader;
+      scope.add(item, seg);
       items.push(item);
     }
-    if (dashedClass) currentHeader = undefined;
+    scope.endPart();
   }
   return { list, items, mayContain, statements, trailing, lang };
 }

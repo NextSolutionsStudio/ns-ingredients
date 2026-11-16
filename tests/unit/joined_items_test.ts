@@ -10,8 +10,8 @@ import { KB_DIR } from "../helpers.ts";
 
 const { bundle } = await readKb(KB_DIR);
 const index = new KbIndex(bundle!);
-const run = (text: string) => {
-  const r = analyze(index, text, { lang: "pl" });
+const run = (text: string, lang: "pl" | "en" = "pl") => {
+  const r = analyze(index, text, { lang });
   AnalysisResponse.parse(r);
   return r;
 };
@@ -166,4 +166,91 @@ Deno.test("hyphenated words, Latin names, qualifiers and forms stay one item", (
   // The two that were confident before keep their match.
   assertEquals(run(`Skład: ${UNCHANGED[0]}`).items[0].match?.match_type, "exact");
   assertEquals(run(`Skład: ${UNCHANGED[2]}`).items[0].match?.ingredient_id, "glucose-fructose-syrup");
+});
+
+// ---------------------------------------------------------------- review of PR #9
+Deno.test("a name the KB knows whole is never cut, however well its parts match", () => {
+  // "glucose" is dextrose and "fructose syrup" a sub-phrase of fructose, but together they are the syrup's own
+  // name: that dash is a hyphen, and cutting it lost the syrup's claims.
+  assertEquals(ids(run("Ingredients: glucose - fructose syrup", "en").items), [
+    ["1", "glucose-fructose-syrup", "exact"],
+  ]);
+  // A variant's name too: cut, "gluten" made the label not gluten-free.
+  const fibre = run("Ingredients: gluten - free wheat fibre", "en");
+  assertEquals(ids(fibre.items), [["1", "wheat-fibre", "variant"]]);
+  assertEquals(fibre.items[0].variant?.id, "gluten-free");
+  assertEquals(fibre.diets.gluten_free.status, "yes");
+  // The Polish forms were one exact item on main, and stay one.
+  for (const t of ["syrop glukozowo - fruktozowy", "syrop fruktozowo - glukozowy"]) {
+    assertEquals(ids(run(`Skład: ${t}`).items), [["1", "glucose-fructose-syrup", "exact"]], t);
+  }
+  // Inside a longer dash list, only the cuts around the known name are made.
+  assertEquals(ids(run("Ingredients: sugar - glucose - fructose syrup - salt", "en").items), [
+    ["1", "sugar", "exact"],
+    ["2", "glucose-fructose-syrup", "exact"],
+    ["3", "salt", "exact"],
+  ]);
+  // A whole match that is only a sub-phrase proves nothing: the class still heads its additive.
+  assertEquals(
+    run("Skład: wzmacniacz smaku - glutaminian monosodowy").items[0].function?.id,
+    "flavour-enhancer",
+  );
+});
+
+Deno.test("every hyphenated KB name, printed with a spaced dash, is read as the syntax alone reads it", () => {
+  let checked = 0;
+  for (const ing of bundle!.ingredients) {
+    const sets = [ing.names, ...(ing.variants ?? []).map((v) => v.names ?? {})];
+    for (const name of sets.flatMap((ns) => Object.values(ns).flat() as string[])) {
+      // One segment as printed: names with commas, colons or brackets are cut by the syntax before the KB is asked.
+      if (!/\p{L}-\p{L}/u.test(name) || /[,;:()]/.test(name)) continue;
+      const spaced = name.replace(/(\p{L})-(\p{L})/gu, "$1 - $2");
+      const m = index.match(spaced);
+      if (m?.matchType !== "exact" && m?.matchType !== "variant") continue;
+      checked++;
+      const label = `Skład: ${spaced}, sól`;
+      assertEquals(parseLabel(label, { kb: nameOracle(index) }), parseLabel(label), spaced);
+    }
+  }
+  assert(checked > 250, `only ${checked} names checked`);
+});
+
+Deno.test("a colon header after a dashed one opens its own list", () => {
+  // The dashed class headed only lecithin; the colon after the full stop must still cover pectin.
+  const r = run("Skład: emulgator - lecytyny. stabilizator: guma guar, pektyny");
+  assertEquals(r.items.map((i) => [i.path, i.match?.ingredient_id, i.function?.id]), [
+    ["1", "lecithins", "emulsifier"],
+    ["2", "guar-gum", "stabiliser"],
+    ["3", "pectins", "stabiliser"],
+  ]);
+  // The other way round, the dashed class replaces the colon list and ends at its comma.
+  const back = run("Skład: stabilizator: guma guar, emulgator - lecytyny, pektyny");
+  assertEquals(back.items.map((i) => i.function?.id), ["stabiliser", "emulsifier", undefined]);
+});
+
+Deno.test("in brackets, the parts of one dashed list share its class", () => {
+  const dough = run("Skład: ciasto (substancje spulchniające - węglany amonu - węglany sodu)").items[0];
+  assertEquals(dough.children.map((c) => [c.path, c.match?.ingredient_id, c.function?.id]), [
+    ["1.1", "ammonium-carbonates", "raising-agent"],
+    ["1.2", "sodium-carbonates", "raising-agent"],
+  ]);
+  // In brackets no header passes a comma, however it is printed (a colon never did).
+  for (const sep of [" - ", ": ", ". "]) {
+    const kids =
+      run(`Skład: ciasto (substancje spulchniające${sep}węglany amonu, węglany sodu)`).items[0].children;
+    assertEquals(
+      kids.map((c) => [c.match?.ingredient_id, c.function?.id]),
+      [["ammonium-carbonates", "raising-agent"], ["sodium-carbonates", undefined]],
+      sep,
+    );
+  }
+  // Why: in a compound's list, what follows a class is mostly not of that class. Run on to the bracket's end,
+  // "emulgator: lecytyny" put the vanilla flavouring under it, and airon skład withheld the score.
+  const chips = "Skład: wiórki czekolady (cukier, emulgator: lecytyny, naturalny aromat waniliowy), sól";
+  const reparsed = parseLabel(chips, { lang: "pl", kb: nameOracle(index) }).items[0].children;
+  assertEquals(reparsed.map((c) => [c.name, c.header ?? c.inheritedHeader]), [
+    ["cukier", undefined],
+    ["lecytyny", "emulgator"],
+    ["naturalny aromat waniliowy", undefined],
+  ]);
 });
