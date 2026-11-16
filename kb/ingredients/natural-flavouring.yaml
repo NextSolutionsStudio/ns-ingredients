@@ -31,7 +31,7 @@ summary:
 assertions:
   - code: diet.vegan
     certainty: maybe
-    kind: estimate
+    kind: fact
     grade: A
     note:
       en: "Reg 1334/2008 Art. 3 explicitly allows a 'natural flavouring substance' to be obtained from material of animal origin (e.g. historically, substances from castoreum or civet); the label is not required to disclose vegetable vs. animal vs. microbial sourcing, so 'maybe' rather than 'yes' or 'no' when the source is unnamed."

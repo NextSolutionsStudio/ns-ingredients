@@ -28,7 +28,7 @@ summary:
 assertions:
   - code: origin.chemical_synthesis
     certainty: 'yes'
-    kind: fact
+    kind: estimate
     grade: B
     note:
       en: >-

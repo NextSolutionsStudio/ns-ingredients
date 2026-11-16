@@ -147,21 +147,21 @@ assertions:
     variant: soy
     certainty: yes
     kind: fact
-    grade: B
+    grade: A
     note: { en: "Recovered from soya bean oil; no animal material.", pl: "Odzyskiwana z oleju sojowego; bez materiału zwierzęcego." }
     sources: [{ id: efsa-lecithins-2017 }]
   - code: diet.vegan
     variant: sunflower
     certainty: yes
     kind: fact
-    grade: B
+    grade: A
     note: { en: "Recovered from sunflower oil; no animal material.", pl: "Odzyskiwana z oleju słonecznikowego; bez materiału zwierzęcego." }
     sources: [{ id: efsa-lecithins-2017 }]
   - code: diet.vegan
     variant: rapeseed
     certainty: yes
     kind: fact
-    grade: B
+    grade: A
     note: { en: "Recovered from rapeseed oil; no animal material.", pl: "Odzyskiwana z oleju rzepakowego; bez materiału zwierzęcego." }
     sources: [{ id: efsa-lecithins-2017 }]
   - code: origin.vegetable_oil_derived

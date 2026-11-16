@@ -62,7 +62,7 @@ assertions:
   - code: health.iarc_group_2b
     certainty: yes
     kind: fact
-    grade: B
+    grade: A
     note:
       en: >-
         IARC (July 2023, Monographs Vol. 134) classified aspartame as Group 2B on limited evidence
