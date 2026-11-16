@@ -1,7 +1,7 @@
 // Label analysis: parse → match → variants → implications → diets → profile.
 // Deterministic and side-effect free; the HTTP layer only validates and serialises.
 import type { AssertionT, IngredientT, Lang, TextT } from "../kb/schema.ts";
-import type { KbIndex, MatchType } from "./kb-index.ts";
+import type { KbIndex, MatchType, NameMatch } from "./kb-index.ts";
 import { baseENumber, findENumbers, guessLang, normName } from "./normalize.ts";
 import {
   assessNutrition,
@@ -11,7 +11,7 @@ import {
   type NutritionInput,
   type NutritionResult,
 } from "./nutrition.ts";
-import { type ParsedItem, parseLabel, type Percent, splitTopLevel } from "./parse.ts";
+import { type NameOracle, type ParsedItem, parseLabel, type Percent, splitTopLevel } from "./parse.ts";
 
 export type Certainty = "yes" | "no" | "maybe" | "unknown";
 export type DietId = "vegan" | "vegetarian" | "gluten_free" | "lactose_free";
@@ -177,8 +177,46 @@ const txt = (t: TextT | undefined, lang: Lang): string => (t ? t[lang] ?? t.en :
 // E1400–E1452: modified starches, which can be wheat-derived; identity-only entries can't say.
 const isModifiedStarch = (e?: string) => !!e && /^E14[0-5]\d/.test(e);
 
+/** An item's own match: the matcher, else an E-number the name prints ("barwnik E150d"). */
+function matchName(index: KbIndex, name: string): NameMatch | null {
+  const m = name ? index.match(name) : null;
+  if (m && m.confidence >= 0.9) return m;
+  const es = findENumbers(name);
+  const byE = es.length ? index.byENumber(es[0].code) : undefined;
+  return byE
+    ? { ingredientId: byE.id, matchType: "e_number", confidence: 1, matched: baseENumber(es[0].code) }
+    : m;
+}
+
+/**
+ * A match the score counts: exact, variant, E-number, or a sub-phrase ≥ 0.8; never fuzzy. The same rule as
+ * airon skład's `isConfident` (src/score.ts), which can import this one.
+ */
+export function isConfident(m: { match_type: MatchType; confidence: number } | null): boolean {
+  if (!m) return false;
+  if (m.match_type === "exact" || m.match_type === "variant" || m.match_type === "e_number") return true;
+  return m.match_type === "sub_phrase" && m.confidence >= 0.8;
+}
+
+/**
+ * What the parser may ask when a dash or a full stop could be a separator: a class, or a confident match.
+ * Anything that re-parses a label to line up with an analysis (item paths) must pass the same oracle.
+ */
+export const nameOracle = (index: KbIndex): NameOracle => ({
+  classOf: (t) => index.classOf(t),
+  confident: (name) => {
+    const m = matchName(index, name);
+    return m && isConfident({ match_type: m.matchType, confidence: m.confidence })
+      ? m.ingredientId
+      : undefined;
+  },
+  isName: (words) => index.isName(words),
+  beginsName: (words) => index.beginsName(words),
+  tells: () => index.allTells(),
+});
+
 export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {}): AnalysisResult {
-  const parsed = parseLabel(text, { lang: opts.lang });
+  const parsed = parseLabel(text, { lang: opts.lang, kb: nameOracle(index) });
   const lang: Lang = opts.lang ?? parsed.lang ?? guessLang(text);
   const flags = new Map<string, Flag>();
   const citedSources = new Set<string>();
@@ -262,14 +300,7 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
     const headerClass = item.header ? index.classOf(item.header) : undefined;
     let fn = headerClass ?? parentFn;
 
-    let m = item.name ? index.match(item.name) : null;
-    if (!m || m.confidence < 0.9) {
-      const es = findENumbers(item.name);
-      const byE = es.length ? index.byENumber(es[0].code) : undefined;
-      if (byE) {
-        m = { ingredientId: byE.id, matchType: "e_number", confidence: 1, matched: baseENumber(es[0].code) };
-      }
-    }
+    let m = matchName(index, item.name);
     // A compound item ("Vitamins (…)", "polewa kakaowa (…)") is described by its parts; a fuzzy guess at
     // the header name is how "Vitamins" became vitamin C.
     if (m?.matchType === "fuzzy" && item.children.some((c) => c.role === "ingredient")) m = null;
