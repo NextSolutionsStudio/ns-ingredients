@@ -34,6 +34,35 @@ names:
     - not partially hydrogenated refined soybean oil
     - not fully hydrogenated refined soybean oil
     - non partially hydrogenated refined soybean oil
+    - partially refined soybean oil
+    - partly refined soybean oil
+    - semi-refined soybean oil
+    - partially refined soya oil
+    - not fully refined soybean oil
+    - not hydrogenated partially refined soya oil
+    - not partially hydrogenated partially refined soya oil
+    - not fully hydrogenated partially refined soya oil
+    - non partially hydrogenated partially refined soya oil
+    - not hydrogenated partially refined soybean oil
+    - not partially hydrogenated partially refined soybean oil
+    - not fully hydrogenated partially refined soybean oil
+    - non partially hydrogenated partially refined soybean oil
+    - not hydrogenated partly refined soybean oil
+    - not partially hydrogenated partly refined soybean oil
+    - not fully hydrogenated partly refined soybean oil
+    - non partially hydrogenated partly refined soybean oil
+    - not hydrogenated semi-refined soybean oil
+    - not partially hydrogenated semi-refined soybean oil
+    - not fully hydrogenated semi-refined soybean oil
+    - non partially hydrogenated semi-refined soybean oil
+    - non-hydrogenated partially refined soybean oil
+    - unhydrogenated partially refined soybean oil
+    - non-hydrogenated partly refined soybean oil
+    - unhydrogenated partly refined soybean oil
+    - non-hydrogenated semi-refined soybean oil
+    - unhydrogenated semi-refined soybean oil
+    - non-hydrogenated partially refined soya oil
+    - unhydrogenated partially refined soya oil
   pl:
     - olej sojowy
     - olej z soi
@@ -152,6 +181,11 @@ names:
     - olej roślinny z nasion soi nieutwardzony
     - nieuwodorniony olej roślinny z nasion soi
     - olej roślinny z nasion soi nieuwodorniony
+    - częściowo rafinowany olej sojowy
+    - olej sojowy częściowo rafinowany
+    - nie w pełni rafinowany olej sojowy
+    - olej sojowy nie w pełni rafinowany
+    - niecałkowicie rafinowany olej sojowy
   de:
     - Sojaöl
     - ungehärtetes Sojaöl
@@ -240,11 +274,11 @@ variants:
       en: "Fully refined (degummed, neutralised, bleached and deodorised), removing soybean proteins."
       pl: "W pełni rafinowany (odgumowany, odkwaszony, odbarwiany i dezodoryzowany), co usuwa białka soi."
     tells:
-      - '\brafinowan\w*\s+(?:olej\s+)?sojow'
-      - '\bolej\s+sojow\w*\s+(?:w\s+pelni\s+)?rafinowan'
-      - '\brefined\s+soy(?:bean|a)\s+oil'
-      - '\brefined\s+(?:non\s+|un)hydrogenated\s+soy(?:bean|a)\s+oil'
-      - '\b(?:voll)?raffiniert\w*\s+soja'
+      - '(?<!czesciowo )(?<!nie w pelni )(?<!niecalkowicie )(?<!nie )\brafinowan\w*\s+(?:olej\s+)?sojow'
+      - '\bolej\s+sojow\w*\s+(?:w\s+pelni\s+)?(?<!czesciowo )(?<!nie w pelni )(?<!nie )rafinowan'
+      - '(?<!partially )(?<!partly )(?<!semi )(?<!not fully )(?<!not )\brefined\s+soy(?:bean|a)\s+oil'
+      - '(?<!partially )(?<!partly )(?<!semi )(?<!not fully )(?<!not )\brefined\s+(?:non\s+|un)hydrogenated\s+soy(?:bean|a)\s+oil'
+      - '(?<!teilweise )(?<!nicht )\b(?:voll)?raffiniert\w*\s+soja'
     prior: 0.45
     prior_rationale:
       en: "Refined soybean oil is widely used commercially, but when a label omits refining status the Annex II point 6(a) exemption cannot be assumed."
@@ -254,6 +288,10 @@ variants:
       en:
         - hydrogenated soybean oil
         - hydrogenated soya oil
+        - hydrogenated partially refined soybean oil
+        - hydrogenated partly refined soybean oil
+        - hydrogenated semi-refined soybean oil
+        - hydrogenated partially refined soya oil
       pl:
         - utwardzony olej sojowy
         - olej sojowy utwardzony
@@ -319,6 +357,10 @@ variants:
       en:
         - partially hydrogenated soybean oil
         - partially hydrogenated soya oil
+        - partially hydrogenated partially refined soybean oil
+        - partially hydrogenated partly refined soybean oil
+        - partially hydrogenated semi-refined soybean oil
+        - partially hydrogenated partially refined soya oil
       pl:
         - częściowo utwardzony olej sojowy
         - olej sojowy częściowo utwardzony
@@ -388,6 +430,14 @@ variants:
         - totally hydrogenated soybean oil
         - fully hydrogenated soya oil
         - totally hydrogenated soya oil
+        - fully hydrogenated partially refined soybean oil
+        - totally hydrogenated partially refined soybean oil
+        - fully hydrogenated partly refined soybean oil
+        - totally hydrogenated partly refined soybean oil
+        - fully hydrogenated semi-refined soybean oil
+        - totally hydrogenated semi-refined soybean oil
+        - fully hydrogenated partially refined soya oil
+        - totally hydrogenated partially refined soya oil
       pl:
         - całkowicie utwardzony olej sojowy
         - olej sojowy całkowicie utwardzony

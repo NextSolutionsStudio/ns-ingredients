@@ -1,0 +1,1516 @@
+id: pine-nut-oil
+type: fat
+names:
+  en:
+    - pine nut oil
+    - pine kernel oil
+    - pine seed oil
+    - pine nuts oil
+    - cedar nut oil
+    - non-hydrogenated pine nut oil
+    - unhydrogenated pine nut oil
+    - non-hydrogenated pine kernel oil
+    - unhydrogenated pine kernel oil
+    - not hydrogenated cedar nut oil
+    - not partially hydrogenated cedar nut oil
+    - not fully hydrogenated cedar nut oil
+    - non partially hydrogenated cedar nut oil
+    - not hydrogenated pine kernel oil
+    - not partially hydrogenated pine kernel oil
+    - not fully hydrogenated pine kernel oil
+    - non partially hydrogenated pine kernel oil
+    - not hydrogenated pine nut oil
+    - not partially hydrogenated pine nut oil
+    - not fully hydrogenated pine nut oil
+    - non partially hydrogenated pine nut oil
+    - not hydrogenated pine nuts oil
+    - not partially hydrogenated pine nuts oil
+    - not fully hydrogenated pine nuts oil
+    - non partially hydrogenated pine nuts oil
+    - not hydrogenated pine seed oil
+    - not partially hydrogenated pine seed oil
+    - not fully hydrogenated pine seed oil
+    - non partially hydrogenated pine seed oil
+    - non-hydrogenated pine seed oil
+    - unhydrogenated pine seed oil
+    - non-hydrogenated pine nuts oil
+    - unhydrogenated pine nuts oil
+    - non-hydrogenated cedar nut oil
+    - unhydrogenated cedar nut oil
+  pl:
+    - olej z orzeszków piniowych
+    - olej z orzeszków pinii
+    - olej piniowy
+    - olej z orzeszków cedrowych
+    - olej orzechowy z orzeszków piniowych
+    - tłuszcz roślinny piniowy
+    - tłuszcze roślinne piniowe
+    - olej roślinny piniowy
+    - oleje roślinne piniowe
+    - olej orzechowy piniowy
+    - olej roślinny orzechowy piniowy
+    - tłuszcz roślinny orzechowy piniowy
+    - oleje roślinne orzechowe piniowe
+    - orzechowy olej roślinny piniowy
+    - tłuszcze roślinne orzechowe piniowe
+    - oleje orzechowe piniowe
+    - tłuszcz orzechowy piniowy
+    - tłuszcze orzechowe piniowe
+    - piniowy olej roślinny
+    - tłuszcz roślinny z orzeszków cedrowych
+    - tłuszcze roślinne z orzeszków cedrowych
+    - olej roślinny z orzeszków cedrowych
+    - oleje roślinne z orzeszków cedrowych
+    - olej orzechowy z orzeszków cedrowych
+    - olej roślinny orzechowy z orzeszków cedrowych
+    - tłuszcz roślinny orzechowy z orzeszków cedrowych
+    - oleje roślinne orzechowe z orzeszków cedrowych
+    - orzechowy olej roślinny z orzeszków cedrowych
+    - tłuszcze roślinne orzechowe z orzeszków cedrowych
+    - oleje orzechowe z orzeszków cedrowych
+    - tłuszcz orzechowy z orzeszków cedrowych
+    - tłuszcze orzechowe z orzeszków cedrowych
+    - tłuszcz roślinny z orzeszków pinii
+    - tłuszcze roślinne z orzeszków pinii
+    - olej roślinny z orzeszków pinii
+    - oleje roślinne z orzeszków pinii
+    - olej orzechowy z orzeszków pinii
+    - olej roślinny orzechowy z orzeszków pinii
+    - tłuszcz roślinny orzechowy z orzeszków pinii
+    - oleje roślinne orzechowe z orzeszków pinii
+    - orzechowy olej roślinny z orzeszków pinii
+    - tłuszcze roślinne orzechowe z orzeszków pinii
+    - oleje orzechowe z orzeszków pinii
+    - tłuszcz orzechowy z orzeszków pinii
+    - tłuszcze orzechowe z orzeszków pinii
+    - tłuszcz roślinny z orzeszków piniowych
+    - tłuszcze roślinne z orzeszków piniowych
+    - olej roślinny z orzeszków piniowych
+    - oleje roślinne z orzeszków piniowych
+    - olej roślinny orzechowy z orzeszków piniowych
+    - tłuszcz roślinny orzechowy z orzeszków piniowych
+    - oleje roślinne orzechowe z orzeszków piniowych
+    - orzechowy olej roślinny z orzeszków piniowych
+    - tłuszcze roślinne orzechowe z orzeszków piniowych
+    - oleje orzechowe z orzeszków piniowych
+    - tłuszcz orzechowy z orzeszków piniowych
+    - tłuszcze orzechowe z orzeszków piniowych
+    - nie utwardzony olej z orzeszków piniowych
+    - olej z orzeszków piniowych nie utwardzony
+    - olej nie utwardzony z orzeszków piniowych
+    - nie uwodorniony olej z orzeszków piniowych
+    - olej z orzeszków piniowych nie uwodorniony
+    - olej nie uwodorniony z orzeszków piniowych
+    - nieutwardzony olej z orzeszków piniowych
+    - olej z orzeszków piniowych nieutwardzony
+    - olej nieutwardzony z orzeszków piniowych
+    - nieuwodorniony olej z orzeszków piniowych
+    - olej z orzeszków piniowych nieuwodorniony
+    - olej nieuwodorniony z orzeszków piniowych
+    - nie utwardzony olej z orzeszków pinii
+    - olej z orzeszków pinii nie utwardzony
+    - olej nie utwardzony z orzeszków pinii
+    - nie uwodorniony olej z orzeszków pinii
+    - olej z orzeszków pinii nie uwodorniony
+    - olej nie uwodorniony z orzeszków pinii
+    - nieutwardzony olej z orzeszków pinii
+    - olej z orzeszków pinii nieutwardzony
+    - olej nieutwardzony z orzeszków pinii
+    - nieuwodorniony olej z orzeszków pinii
+    - olej z orzeszków pinii nieuwodorniony
+    - olej nieuwodorniony z orzeszków pinii
+    - nie utwardzony olej piniowy
+    - olej piniowy nie utwardzony
+    - olej nie utwardzony piniowy
+    - nie uwodorniony olej piniowy
+    - olej piniowy nie uwodorniony
+    - olej nie uwodorniony piniowy
+    - nieutwardzony olej piniowy
+    - olej piniowy nieutwardzony
+    - olej nieutwardzony piniowy
+    - nieuwodorniony olej piniowy
+    - olej piniowy nieuwodorniony
+    - olej nieuwodorniony piniowy
+    - nie utwardzony olej z orzeszków cedrowych
+    - olej z orzeszków cedrowych nie utwardzony
+    - olej nie utwardzony z orzeszków cedrowych
+    - nie uwodorniony olej z orzeszków cedrowych
+    - olej z orzeszków cedrowych nie uwodorniony
+    - olej nie uwodorniony z orzeszków cedrowych
+    - nieutwardzony olej z orzeszków cedrowych
+    - olej z orzeszków cedrowych nieutwardzony
+    - olej nieutwardzony z orzeszków cedrowych
+    - nieuwodorniony olej z orzeszków cedrowych
+    - olej z orzeszków cedrowych nieuwodorniony
+    - olej nieuwodorniony z orzeszków cedrowych
+    - nie utwardzony olej orzechowy z orzeszków piniowych
+    - olej orzechowy z orzeszków piniowych nie utwardzony
+    - nie uwodorniony olej orzechowy z orzeszków piniowych
+    - olej orzechowy z orzeszków piniowych nie uwodorniony
+    - nieutwardzony olej orzechowy z orzeszków piniowych
+    - olej orzechowy z orzeszków piniowych nieutwardzony
+    - nieuwodorniony olej orzechowy z orzeszków piniowych
+    - olej orzechowy z orzeszków piniowych nieuwodorniony
+    - nie utwardzony tłuszcz roślinny piniowy
+    - tłuszcz roślinny piniowy nie utwardzony
+    - nie uwodorniony tłuszcz roślinny piniowy
+    - tłuszcz roślinny piniowy nie uwodorniony
+    - nieutwardzony tłuszcz roślinny piniowy
+    - tłuszcz roślinny piniowy nieutwardzony
+    - nieuwodorniony tłuszcz roślinny piniowy
+    - tłuszcz roślinny piniowy nieuwodorniony
+    - nie utwardzone tłuszcze roślinne piniowe
+    - tłuszcze roślinne piniowe nie utwardzone
+    - nie uwodornione tłuszcze roślinne piniowe
+    - tłuszcze roślinne piniowe nie uwodornione
+    - nieutwardzone tłuszcze roślinne piniowe
+    - tłuszcze roślinne piniowe nieutwardzone
+    - nieuwodornione tłuszcze roślinne piniowe
+    - tłuszcze roślinne piniowe nieuwodornione
+    - nie utwardzony olej roślinny piniowy
+    - olej roślinny piniowy nie utwardzony
+    - nie uwodorniony olej roślinny piniowy
+    - olej roślinny piniowy nie uwodorniony
+    - nieutwardzony olej roślinny piniowy
+    - olej roślinny piniowy nieutwardzony
+    - nieuwodorniony olej roślinny piniowy
+    - olej roślinny piniowy nieuwodorniony
+    - nie utwardzone oleje roślinne piniowe
+    - oleje roślinne piniowe nie utwardzone
+    - nie uwodornione oleje roślinne piniowe
+    - oleje roślinne piniowe nie uwodornione
+    - nieutwardzone oleje roślinne piniowe
+    - oleje roślinne piniowe nieutwardzone
+    - nieuwodornione oleje roślinne piniowe
+    - oleje roślinne piniowe nieuwodornione
+    - nie utwardzony olej orzechowy piniowy
+    - olej orzechowy piniowy nie utwardzony
+    - nie uwodorniony olej orzechowy piniowy
+    - olej orzechowy piniowy nie uwodorniony
+    - nieutwardzony olej orzechowy piniowy
+    - olej orzechowy piniowy nieutwardzony
+    - nieuwodorniony olej orzechowy piniowy
+    - olej orzechowy piniowy nieuwodorniony
+    - nie utwardzony olej roślinny orzechowy piniowy
+    - olej roślinny orzechowy piniowy nie utwardzony
+    - nie uwodorniony olej roślinny orzechowy piniowy
+    - olej roślinny orzechowy piniowy nie uwodorniony
+    - nieutwardzony olej roślinny orzechowy piniowy
+    - olej roślinny orzechowy piniowy nieutwardzony
+    - nieuwodorniony olej roślinny orzechowy piniowy
+    - olej roślinny orzechowy piniowy nieuwodorniony
+    - nie utwardzony tłuszcz roślinny orzechowy piniowy
+    - tłuszcz roślinny orzechowy piniowy nie utwardzony
+    - nie uwodorniony tłuszcz roślinny orzechowy piniowy
+    - tłuszcz roślinny orzechowy piniowy nie uwodorniony
+    - nieutwardzony tłuszcz roślinny orzechowy piniowy
+    - tłuszcz roślinny orzechowy piniowy nieutwardzony
+    - nieuwodorniony tłuszcz roślinny orzechowy piniowy
+    - tłuszcz roślinny orzechowy piniowy nieuwodorniony
+    - nie utwardzone oleje roślinne orzechowe piniowe
+    - oleje roślinne orzechowe piniowe nie utwardzone
+    - nie uwodornione oleje roślinne orzechowe piniowe
+    - oleje roślinne orzechowe piniowe nie uwodornione
+    - nieutwardzone oleje roślinne orzechowe piniowe
+    - oleje roślinne orzechowe piniowe nieutwardzone
+    - nieuwodornione oleje roślinne orzechowe piniowe
+    - oleje roślinne orzechowe piniowe nieuwodornione
+    - nie utwardzone tłuszcze roślinne orzechowe piniowe
+    - tłuszcze roślinne orzechowe piniowe nie utwardzone
+    - nie uwodornione tłuszcze roślinne orzechowe piniowe
+    - tłuszcze roślinne orzechowe piniowe nie uwodornione
+    - nieutwardzone tłuszcze roślinne orzechowe piniowe
+    - tłuszcze roślinne orzechowe piniowe nieutwardzone
+    - nieuwodornione tłuszcze roślinne orzechowe piniowe
+    - tłuszcze roślinne orzechowe piniowe nieuwodornione
+    - nie utwardzone oleje orzechowe piniowe
+    - oleje orzechowe piniowe nie utwardzone
+    - nie uwodornione oleje orzechowe piniowe
+    - oleje orzechowe piniowe nie uwodornione
+    - nieutwardzone oleje orzechowe piniowe
+    - oleje orzechowe piniowe nieutwardzone
+    - nieuwodornione oleje orzechowe piniowe
+    - oleje orzechowe piniowe nieuwodornione
+    - nie utwardzony tłuszcz orzechowy piniowy
+    - tłuszcz orzechowy piniowy nie utwardzony
+    - nie uwodorniony tłuszcz orzechowy piniowy
+    - tłuszcz orzechowy piniowy nie uwodorniony
+    - nieutwardzony tłuszcz orzechowy piniowy
+    - tłuszcz orzechowy piniowy nieutwardzony
+    - nieuwodorniony tłuszcz orzechowy piniowy
+    - tłuszcz orzechowy piniowy nieuwodorniony
+    - nie utwardzone tłuszcze orzechowe piniowe
+    - tłuszcze orzechowe piniowe nie utwardzone
+    - nie uwodornione tłuszcze orzechowe piniowe
+    - tłuszcze orzechowe piniowe nie uwodornione
+    - nieutwardzone tłuszcze orzechowe piniowe
+    - tłuszcze orzechowe piniowe nieutwardzone
+    - nieuwodornione tłuszcze orzechowe piniowe
+    - tłuszcze orzechowe piniowe nieuwodornione
+    - nie utwardzony tłuszcz roślinny z orzeszków cedrowych
+    - tłuszcz roślinny z orzeszków cedrowych nie utwardzony
+    - nie uwodorniony tłuszcz roślinny z orzeszków cedrowych
+    - tłuszcz roślinny z orzeszków cedrowych nie uwodorniony
+    - nieutwardzony tłuszcz roślinny z orzeszków cedrowych
+    - tłuszcz roślinny z orzeszków cedrowych nieutwardzony
+    - nieuwodorniony tłuszcz roślinny z orzeszków cedrowych
+    - tłuszcz roślinny z orzeszków cedrowych nieuwodorniony
+    - nie utwardzone tłuszcze roślinne z orzeszków cedrowych
+    - tłuszcze roślinne z orzeszków cedrowych nie utwardzone
+    - nie uwodornione tłuszcze roślinne z orzeszków cedrowych
+    - tłuszcze roślinne z orzeszków cedrowych nie uwodornione
+    - nieutwardzone tłuszcze roślinne z orzeszków cedrowych
+    - tłuszcze roślinne z orzeszków cedrowych nieutwardzone
+    - nieuwodornione tłuszcze roślinne z orzeszków cedrowych
+    - tłuszcze roślinne z orzeszków cedrowych nieuwodornione
+    - nie utwardzony olej roślinny z orzeszków cedrowych
+    - olej roślinny z orzeszków cedrowych nie utwardzony
+    - nie uwodorniony olej roślinny z orzeszków cedrowych
+    - olej roślinny z orzeszków cedrowych nie uwodorniony
+    - nieutwardzony olej roślinny z orzeszków cedrowych
+    - olej roślinny z orzeszków cedrowych nieutwardzony
+    - nieuwodorniony olej roślinny z orzeszków cedrowych
+    - olej roślinny z orzeszków cedrowych nieuwodorniony
+    - nie utwardzone oleje roślinne z orzeszków cedrowych
+    - oleje roślinne z orzeszków cedrowych nie utwardzone
+    - nie uwodornione oleje roślinne z orzeszków cedrowych
+    - oleje roślinne z orzeszków cedrowych nie uwodornione
+    - nieutwardzone oleje roślinne z orzeszków cedrowych
+    - oleje roślinne z orzeszków cedrowych nieutwardzone
+    - nieuwodornione oleje roślinne z orzeszków cedrowych
+    - oleje roślinne z orzeszków cedrowych nieuwodornione
+    - nie utwardzony olej orzechowy z orzeszków cedrowych
+    - olej orzechowy z orzeszków cedrowych nie utwardzony
+    - nie uwodorniony olej orzechowy z orzeszków cedrowych
+    - olej orzechowy z orzeszków cedrowych nie uwodorniony
+    - nieutwardzony olej orzechowy z orzeszków cedrowych
+    - olej orzechowy z orzeszków cedrowych nieutwardzony
+    - nieuwodorniony olej orzechowy z orzeszków cedrowych
+    - olej orzechowy z orzeszków cedrowych nieuwodorniony
+    - nie utwardzony olej roślinny orzechowy z orzeszków cedrowych
+    - olej roślinny orzechowy z orzeszków cedrowych nie utwardzony
+    - nie uwodorniony olej roślinny orzechowy z orzeszków cedrowych
+    - olej roślinny orzechowy z orzeszków cedrowych nie uwodorniony
+    - nieutwardzony olej roślinny orzechowy z orzeszków cedrowych
+    - olej roślinny orzechowy z orzeszków cedrowych nieutwardzony
+    - nieuwodorniony olej roślinny orzechowy z orzeszków cedrowych
+    - olej roślinny orzechowy z orzeszków cedrowych nieuwodorniony
+    - nie utwardzony tłuszcz roślinny orzechowy z orzeszków cedrowych
+    - tłuszcz roślinny orzechowy z orzeszków cedrowych nie utwardzony
+    - nie uwodorniony tłuszcz roślinny orzechowy z orzeszków cedrowych
+    - tłuszcz roślinny orzechowy z orzeszków cedrowych nie uwodorniony
+    - nieutwardzony tłuszcz roślinny orzechowy z orzeszków cedrowych
+    - tłuszcz roślinny orzechowy z orzeszków cedrowych nieutwardzony
+    - nieuwodorniony tłuszcz roślinny orzechowy z orzeszków cedrowych
+    - tłuszcz roślinny orzechowy z orzeszków cedrowych nieuwodorniony
+    - nie utwardzone oleje roślinne orzechowe z orzeszków cedrowych
+    - oleje roślinne orzechowe z orzeszków cedrowych nie utwardzone
+    - nie uwodornione oleje roślinne orzechowe z orzeszków cedrowych
+    - oleje roślinne orzechowe z orzeszków cedrowych nie uwodornione
+    - nieutwardzone oleje roślinne orzechowe z orzeszków cedrowych
+    - oleje roślinne orzechowe z orzeszków cedrowych nieutwardzone
+    - nieuwodornione oleje roślinne orzechowe z orzeszków cedrowych
+    - oleje roślinne orzechowe z orzeszków cedrowych nieuwodornione
+    - nie utwardzone tłuszcze roślinne orzechowe z orzeszków cedrowych
+    - tłuszcze roślinne orzechowe z orzeszków cedrowych nie utwardzone
+    - nie uwodornione tłuszcze roślinne orzechowe z orzeszków cedrowych
+    - tłuszcze roślinne orzechowe z orzeszków cedrowych nie uwodornione
+    - nieutwardzone tłuszcze roślinne orzechowe z orzeszków cedrowych
+    - tłuszcze roślinne orzechowe z orzeszków cedrowych nieutwardzone
+    - nieuwodornione tłuszcze roślinne orzechowe z orzeszków cedrowych
+    - tłuszcze roślinne orzechowe z orzeszków cedrowych nieuwodornione
+    - nie utwardzone oleje orzechowe z orzeszków cedrowych
+    - oleje orzechowe z orzeszków cedrowych nie utwardzone
+    - nie uwodornione oleje orzechowe z orzeszków cedrowych
+    - oleje orzechowe z orzeszków cedrowych nie uwodornione
+    - nieutwardzone oleje orzechowe z orzeszków cedrowych
+    - oleje orzechowe z orzeszków cedrowych nieutwardzone
+    - nieuwodornione oleje orzechowe z orzeszków cedrowych
+    - oleje orzechowe z orzeszków cedrowych nieuwodornione
+    - nie utwardzony tłuszcz orzechowy z orzeszków cedrowych
+    - tłuszcz orzechowy z orzeszków cedrowych nie utwardzony
+    - nie uwodorniony tłuszcz orzechowy z orzeszków cedrowych
+    - tłuszcz orzechowy z orzeszków cedrowych nie uwodorniony
+    - nieutwardzony tłuszcz orzechowy z orzeszków cedrowych
+    - tłuszcz orzechowy z orzeszków cedrowych nieutwardzony
+    - nieuwodorniony tłuszcz orzechowy z orzeszków cedrowych
+    - tłuszcz orzechowy z orzeszków cedrowych nieuwodorniony
+    - nie utwardzone tłuszcze orzechowe z orzeszków cedrowych
+    - tłuszcze orzechowe z orzeszków cedrowych nie utwardzone
+    - nie uwodornione tłuszcze orzechowe z orzeszków cedrowych
+    - tłuszcze orzechowe z orzeszków cedrowych nie uwodornione
+    - nieutwardzone tłuszcze orzechowe z orzeszków cedrowych
+    - tłuszcze orzechowe z orzeszków cedrowych nieutwardzone
+    - nieuwodornione tłuszcze orzechowe z orzeszków cedrowych
+    - tłuszcze orzechowe z orzeszków cedrowych nieuwodornione
+    - nie utwardzony tłuszcz roślinny z orzeszków pinii
+    - tłuszcz roślinny z orzeszków pinii nie utwardzony
+    - nie uwodorniony tłuszcz roślinny z orzeszków pinii
+    - tłuszcz roślinny z orzeszków pinii nie uwodorniony
+    - nieutwardzony tłuszcz roślinny z orzeszków pinii
+    - tłuszcz roślinny z orzeszków pinii nieutwardzony
+    - nieuwodorniony tłuszcz roślinny z orzeszków pinii
+    - tłuszcz roślinny z orzeszków pinii nieuwodorniony
+    - nie utwardzone tłuszcze roślinne z orzeszków pinii
+    - tłuszcze roślinne z orzeszków pinii nie utwardzone
+    - nie uwodornione tłuszcze roślinne z orzeszków pinii
+    - tłuszcze roślinne z orzeszków pinii nie uwodornione
+    - nieutwardzone tłuszcze roślinne z orzeszków pinii
+    - tłuszcze roślinne z orzeszków pinii nieutwardzone
+    - nieuwodornione tłuszcze roślinne z orzeszków pinii
+    - tłuszcze roślinne z orzeszków pinii nieuwodornione
+    - nie utwardzony olej roślinny z orzeszków pinii
+    - olej roślinny z orzeszków pinii nie utwardzony
+    - nie uwodorniony olej roślinny z orzeszków pinii
+    - olej roślinny z orzeszków pinii nie uwodorniony
+    - nieutwardzony olej roślinny z orzeszków pinii
+    - olej roślinny z orzeszków pinii nieutwardzony
+    - nieuwodorniony olej roślinny z orzeszków pinii
+    - olej roślinny z orzeszków pinii nieuwodorniony
+    - nie utwardzone oleje roślinne z orzeszków pinii
+    - oleje roślinne z orzeszków pinii nie utwardzone
+    - nie uwodornione oleje roślinne z orzeszków pinii
+    - oleje roślinne z orzeszków pinii nie uwodornione
+    - nieutwardzone oleje roślinne z orzeszków pinii
+    - oleje roślinne z orzeszków pinii nieutwardzone
+    - nieuwodornione oleje roślinne z orzeszków pinii
+    - oleje roślinne z orzeszków pinii nieuwodornione
+    - nie utwardzony olej orzechowy z orzeszków pinii
+    - olej orzechowy z orzeszków pinii nie utwardzony
+    - nie uwodorniony olej orzechowy z orzeszków pinii
+    - olej orzechowy z orzeszków pinii nie uwodorniony
+    - nieutwardzony olej orzechowy z orzeszków pinii
+    - olej orzechowy z orzeszków pinii nieutwardzony
+    - nieuwodorniony olej orzechowy z orzeszków pinii
+    - olej orzechowy z orzeszków pinii nieuwodorniony
+    - nie utwardzony olej roślinny orzechowy z orzeszków pinii
+    - olej roślinny orzechowy z orzeszków pinii nie utwardzony
+    - nie uwodorniony olej roślinny orzechowy z orzeszków pinii
+    - olej roślinny orzechowy z orzeszków pinii nie uwodorniony
+    - nieutwardzony olej roślinny orzechowy z orzeszków pinii
+    - olej roślinny orzechowy z orzeszków pinii nieutwardzony
+    - nieuwodorniony olej roślinny orzechowy z orzeszków pinii
+    - olej roślinny orzechowy z orzeszków pinii nieuwodorniony
+    - nie utwardzony tłuszcz roślinny orzechowy z orzeszków pinii
+    - tłuszcz roślinny orzechowy z orzeszków pinii nie utwardzony
+    - nie uwodorniony tłuszcz roślinny orzechowy z orzeszków pinii
+    - tłuszcz roślinny orzechowy z orzeszków pinii nie uwodorniony
+    - nieutwardzony tłuszcz roślinny orzechowy z orzeszków pinii
+    - tłuszcz roślinny orzechowy z orzeszków pinii nieutwardzony
+    - nieuwodorniony tłuszcz roślinny orzechowy z orzeszków pinii
+    - tłuszcz roślinny orzechowy z orzeszków pinii nieuwodorniony
+    - nie utwardzone oleje roślinne orzechowe z orzeszków pinii
+    - oleje roślinne orzechowe z orzeszków pinii nie utwardzone
+    - nie uwodornione oleje roślinne orzechowe z orzeszków pinii
+    - oleje roślinne orzechowe z orzeszków pinii nie uwodornione
+    - nieutwardzone oleje roślinne orzechowe z orzeszków pinii
+    - oleje roślinne orzechowe z orzeszków pinii nieutwardzone
+    - nieuwodornione oleje roślinne orzechowe z orzeszków pinii
+    - oleje roślinne orzechowe z orzeszków pinii nieuwodornione
+    - nie utwardzone tłuszcze roślinne orzechowe z orzeszków pinii
+    - tłuszcze roślinne orzechowe z orzeszków pinii nie utwardzone
+    - nie uwodornione tłuszcze roślinne orzechowe z orzeszków pinii
+    - tłuszcze roślinne orzechowe z orzeszków pinii nie uwodornione
+    - nieutwardzone tłuszcze roślinne orzechowe z orzeszków pinii
+    - tłuszcze roślinne orzechowe z orzeszków pinii nieutwardzone
+    - nieuwodornione tłuszcze roślinne orzechowe z orzeszków pinii
+    - tłuszcze roślinne orzechowe z orzeszków pinii nieuwodornione
+    - nie utwardzone oleje orzechowe z orzeszków pinii
+    - oleje orzechowe z orzeszków pinii nie utwardzone
+    - nie uwodornione oleje orzechowe z orzeszków pinii
+    - oleje orzechowe z orzeszków pinii nie uwodornione
+    - nieutwardzone oleje orzechowe z orzeszków pinii
+    - oleje orzechowe z orzeszków pinii nieutwardzone
+    - nieuwodornione oleje orzechowe z orzeszków pinii
+    - oleje orzechowe z orzeszków pinii nieuwodornione
+    - nie utwardzony tłuszcz orzechowy z orzeszków pinii
+    - tłuszcz orzechowy z orzeszków pinii nie utwardzony
+    - nie uwodorniony tłuszcz orzechowy z orzeszków pinii
+    - tłuszcz orzechowy z orzeszków pinii nie uwodorniony
+    - nieutwardzony tłuszcz orzechowy z orzeszków pinii
+    - tłuszcz orzechowy z orzeszków pinii nieutwardzony
+    - nieuwodorniony tłuszcz orzechowy z orzeszków pinii
+    - tłuszcz orzechowy z orzeszków pinii nieuwodorniony
+    - nie utwardzone tłuszcze orzechowe z orzeszków pinii
+    - tłuszcze orzechowe z orzeszków pinii nie utwardzone
+    - nie uwodornione tłuszcze orzechowe z orzeszków pinii
+    - tłuszcze orzechowe z orzeszków pinii nie uwodornione
+    - nieutwardzone tłuszcze orzechowe z orzeszków pinii
+    - tłuszcze orzechowe z orzeszków pinii nieutwardzone
+    - nieuwodornione tłuszcze orzechowe z orzeszków pinii
+    - tłuszcze orzechowe z orzeszków pinii nieuwodornione
+    - nie utwardzony tłuszcz roślinny z orzeszków piniowych
+    - tłuszcz roślinny z orzeszków piniowych nie utwardzony
+    - nie uwodorniony tłuszcz roślinny z orzeszków piniowych
+    - tłuszcz roślinny z orzeszków piniowych nie uwodorniony
+    - nieutwardzony tłuszcz roślinny z orzeszków piniowych
+    - tłuszcz roślinny z orzeszków piniowych nieutwardzony
+    - nieuwodorniony tłuszcz roślinny z orzeszków piniowych
+    - tłuszcz roślinny z orzeszków piniowych nieuwodorniony
+    - nie utwardzone tłuszcze roślinne z orzeszków piniowych
+    - tłuszcze roślinne z orzeszków piniowych nie utwardzone
+    - nie uwodornione tłuszcze roślinne z orzeszków piniowych
+    - tłuszcze roślinne z orzeszków piniowych nie uwodornione
+    - nieutwardzone tłuszcze roślinne z orzeszków piniowych
+    - tłuszcze roślinne z orzeszków piniowych nieutwardzone
+    - nieuwodornione tłuszcze roślinne z orzeszków piniowych
+    - tłuszcze roślinne z orzeszków piniowych nieuwodornione
+    - nie utwardzony olej roślinny z orzeszków piniowych
+    - olej roślinny z orzeszków piniowych nie utwardzony
+    - nie uwodorniony olej roślinny z orzeszków piniowych
+    - olej roślinny z orzeszków piniowych nie uwodorniony
+    - nieutwardzony olej roślinny z orzeszków piniowych
+    - olej roślinny z orzeszków piniowych nieutwardzony
+    - nieuwodorniony olej roślinny z orzeszków piniowych
+    - olej roślinny z orzeszków piniowych nieuwodorniony
+    - nie utwardzone oleje roślinne z orzeszków piniowych
+    - oleje roślinne z orzeszków piniowych nie utwardzone
+    - nie uwodornione oleje roślinne z orzeszków piniowych
+    - oleje roślinne z orzeszków piniowych nie uwodornione
+    - nieutwardzone oleje roślinne z orzeszków piniowych
+    - oleje roślinne z orzeszków piniowych nieutwardzone
+    - nieuwodornione oleje roślinne z orzeszków piniowych
+    - oleje roślinne z orzeszków piniowych nieuwodornione
+    - nie utwardzony olej roślinny orzechowy z orzeszków piniowych
+    - olej roślinny orzechowy z orzeszków piniowych nie utwardzony
+    - nie uwodorniony olej roślinny orzechowy z orzeszków piniowych
+    - olej roślinny orzechowy z orzeszków piniowych nie uwodorniony
+    - nieutwardzony olej roślinny orzechowy z orzeszków piniowych
+    - olej roślinny orzechowy z orzeszków piniowych nieutwardzony
+    - nieuwodorniony olej roślinny orzechowy z orzeszków piniowych
+    - olej roślinny orzechowy z orzeszków piniowych nieuwodorniony
+    - nie utwardzony tłuszcz roślinny orzechowy z orzeszków piniowych
+    - tłuszcz roślinny orzechowy z orzeszków piniowych nie utwardzony
+    - nie uwodorniony tłuszcz roślinny orzechowy z orzeszków piniowych
+    - tłuszcz roślinny orzechowy z orzeszków piniowych nie uwodorniony
+    - nieutwardzony tłuszcz roślinny orzechowy z orzeszków piniowych
+    - tłuszcz roślinny orzechowy z orzeszków piniowych nieutwardzony
+    - nieuwodorniony tłuszcz roślinny orzechowy z orzeszków piniowych
+    - tłuszcz roślinny orzechowy z orzeszków piniowych nieuwodorniony
+    - nie utwardzone oleje roślinne orzechowe z orzeszków piniowych
+    - oleje roślinne orzechowe z orzeszków piniowych nie utwardzone
+    - nie uwodornione oleje roślinne orzechowe z orzeszków piniowych
+    - oleje roślinne orzechowe z orzeszków piniowych nie uwodornione
+    - nieutwardzone oleje roślinne orzechowe z orzeszków piniowych
+    - oleje roślinne orzechowe z orzeszków piniowych nieutwardzone
+    - nieuwodornione oleje roślinne orzechowe z orzeszków piniowych
+    - oleje roślinne orzechowe z orzeszków piniowych nieuwodornione
+    - nie utwardzone tłuszcze roślinne orzechowe z orzeszków piniowych
+    - tłuszcze roślinne orzechowe z orzeszków piniowych nie utwardzone
+    - nie uwodornione tłuszcze roślinne orzechowe z orzeszków piniowych
+    - tłuszcze roślinne orzechowe z orzeszków piniowych nie uwodornione
+    - nieutwardzone tłuszcze roślinne orzechowe z orzeszków piniowych
+    - tłuszcze roślinne orzechowe z orzeszków piniowych nieutwardzone
+    - nieuwodornione tłuszcze roślinne orzechowe z orzeszków piniowych
+    - tłuszcze roślinne orzechowe z orzeszków piniowych nieuwodornione
+    - nie utwardzone oleje orzechowe z orzeszków piniowych
+    - oleje orzechowe z orzeszków piniowych nie utwardzone
+    - nie uwodornione oleje orzechowe z orzeszków piniowych
+    - oleje orzechowe z orzeszków piniowych nie uwodornione
+    - nieutwardzone oleje orzechowe z orzeszków piniowych
+    - oleje orzechowe z orzeszków piniowych nieutwardzone
+    - nieuwodornione oleje orzechowe z orzeszków piniowych
+    - oleje orzechowe z orzeszków piniowych nieuwodornione
+    - nie utwardzony tłuszcz orzechowy z orzeszków piniowych
+    - tłuszcz orzechowy z orzeszków piniowych nie utwardzony
+    - nie uwodorniony tłuszcz orzechowy z orzeszków piniowych
+    - tłuszcz orzechowy z orzeszków piniowych nie uwodorniony
+    - nieutwardzony tłuszcz orzechowy z orzeszków piniowych
+    - tłuszcz orzechowy z orzeszków piniowych nieutwardzony
+    - nieuwodorniony tłuszcz orzechowy z orzeszków piniowych
+    - tłuszcz orzechowy z orzeszków piniowych nieuwodorniony
+    - nie utwardzone tłuszcze orzechowe z orzeszków piniowych
+    - tłuszcze orzechowe z orzeszków piniowych nie utwardzone
+    - nie uwodornione tłuszcze orzechowe z orzeszków piniowych
+    - tłuszcze orzechowe z orzeszków piniowych nie uwodornione
+    - nieutwardzone tłuszcze orzechowe z orzeszków piniowych
+    - tłuszcze orzechowe z orzeszków piniowych nieutwardzone
+    - nieuwodornione tłuszcze orzechowe z orzeszków piniowych
+    - tłuszcze orzechowe z orzeszków piniowych nieuwodornione
+  de:
+    - Pinienkernöl
+    - Zedernussöl
+summary:
+  en: >-
+    Vegetable oil pressed from pine nuts, the edible seeds of pines such as Pinus pinea and Pinus sibirica. Pine nuts
+    are not among the tree nuts listed in EU Annex II item 8, so the oil carries no tree-nut allergen declaration.
+  pl: >-
+    Olej roślinny tłoczony z orzeszków piniowych, jadalnych nasion sosen, np. pinii (Pinus pinea) i sosny syberyjskiej
+    (Pinus sibirica). Orzeszki piniowe nie należą do orzechów wymienionych w Aneksie II UE (punkt 8), więc olej nie
+    podlega deklaracji alergenu orzechów.
+variants:
+  - id: hydrogenated
+    names:
+      en:
+        - hydrogenated pine nut oil
+        - hydrogenated pine kernel oil
+        - hydrogenated pine seed oil
+        - hydrogenated pine nuts oil
+        - hydrogenated cedar nut oil
+      pl:
+        - utwardzony olej z orzeszków piniowych
+        - olej z orzeszków piniowych utwardzony
+        - uwodorniony olej z orzeszków piniowych
+        - olej z orzeszków piniowych uwodorniony
+        - utwardzony olej z orzeszków pinii
+        - olej z orzeszków pinii utwardzony
+        - uwodorniony olej z orzeszków pinii
+        - olej z orzeszków pinii uwodorniony
+        - utwardzony olej piniowy
+        - olej piniowy utwardzony
+        - uwodorniony olej piniowy
+        - olej piniowy uwodorniony
+        - utwardzony olej z orzeszków cedrowych
+        - olej z orzeszków cedrowych utwardzony
+        - uwodorniony olej z orzeszków cedrowych
+        - olej z orzeszków cedrowych uwodorniony
+        - olej utwardzony z orzeszków piniowych
+        - olej uwodorniony z orzeszków piniowych
+        - olej utwardzony z orzeszków pinii
+        - olej uwodorniony z orzeszków pinii
+        - olej utwardzony piniowy
+        - olej uwodorniony piniowy
+        - olej utwardzony z orzeszków cedrowych
+        - olej uwodorniony z orzeszków cedrowych
+        - utwardzony olej orzechowy z orzeszków piniowych
+        - olej orzechowy z orzeszków piniowych utwardzony
+        - uwodorniony olej orzechowy z orzeszków piniowych
+        - olej orzechowy z orzeszków piniowych uwodorniony
+        - utwardzony tłuszcz roślinny piniowy
+        - tłuszcz roślinny piniowy utwardzony
+        - uwodorniony tłuszcz roślinny piniowy
+        - tłuszcz roślinny piniowy uwodorniony
+        - utwardzone tłuszcze roślinne piniowe
+        - tłuszcze roślinne piniowe utwardzone
+        - uwodornione tłuszcze roślinne piniowe
+        - tłuszcze roślinne piniowe uwodornione
+        - utwardzony olej roślinny piniowy
+        - olej roślinny piniowy utwardzony
+        - uwodorniony olej roślinny piniowy
+        - olej roślinny piniowy uwodorniony
+        - utwardzone oleje roślinne piniowe
+        - oleje roślinne piniowe utwardzone
+        - uwodornione oleje roślinne piniowe
+        - oleje roślinne piniowe uwodornione
+        - utwardzony olej orzechowy piniowy
+        - olej orzechowy piniowy utwardzony
+        - uwodorniony olej orzechowy piniowy
+        - olej orzechowy piniowy uwodorniony
+        - utwardzony olej roślinny orzechowy piniowy
+        - olej roślinny orzechowy piniowy utwardzony
+        - uwodorniony olej roślinny orzechowy piniowy
+        - olej roślinny orzechowy piniowy uwodorniony
+        - utwardzony tłuszcz roślinny orzechowy piniowy
+        - tłuszcz roślinny orzechowy piniowy utwardzony
+        - uwodorniony tłuszcz roślinny orzechowy piniowy
+        - tłuszcz roślinny orzechowy piniowy uwodorniony
+        - utwardzone oleje roślinne orzechowe piniowe
+        - oleje roślinne orzechowe piniowe utwardzone
+        - uwodornione oleje roślinne orzechowe piniowe
+        - oleje roślinne orzechowe piniowe uwodornione
+        - utwardzone tłuszcze roślinne orzechowe piniowe
+        - tłuszcze roślinne orzechowe piniowe utwardzone
+        - uwodornione tłuszcze roślinne orzechowe piniowe
+        - tłuszcze roślinne orzechowe piniowe uwodornione
+        - utwardzone oleje orzechowe piniowe
+        - oleje orzechowe piniowe utwardzone
+        - uwodornione oleje orzechowe piniowe
+        - oleje orzechowe piniowe uwodornione
+        - utwardzony tłuszcz orzechowy piniowy
+        - tłuszcz orzechowy piniowy utwardzony
+        - uwodorniony tłuszcz orzechowy piniowy
+        - tłuszcz orzechowy piniowy uwodorniony
+        - utwardzone tłuszcze orzechowe piniowe
+        - tłuszcze orzechowe piniowe utwardzone
+        - uwodornione tłuszcze orzechowe piniowe
+        - tłuszcze orzechowe piniowe uwodornione
+        - utwardzony tłuszcz roślinny z orzeszków cedrowych
+        - tłuszcz roślinny z orzeszków cedrowych utwardzony
+        - uwodorniony tłuszcz roślinny z orzeszków cedrowych
+        - tłuszcz roślinny z orzeszków cedrowych uwodorniony
+        - utwardzone tłuszcze roślinne z orzeszków cedrowych
+        - tłuszcze roślinne z orzeszków cedrowych utwardzone
+        - uwodornione tłuszcze roślinne z orzeszków cedrowych
+        - tłuszcze roślinne z orzeszków cedrowych uwodornione
+        - utwardzony olej roślinny z orzeszków cedrowych
+        - olej roślinny z orzeszków cedrowych utwardzony
+        - uwodorniony olej roślinny z orzeszków cedrowych
+        - olej roślinny z orzeszków cedrowych uwodorniony
+        - utwardzone oleje roślinne z orzeszków cedrowych
+        - oleje roślinne z orzeszków cedrowych utwardzone
+        - uwodornione oleje roślinne z orzeszków cedrowych
+        - oleje roślinne z orzeszków cedrowych uwodornione
+        - utwardzony olej orzechowy z orzeszków cedrowych
+        - olej orzechowy z orzeszków cedrowych utwardzony
+        - uwodorniony olej orzechowy z orzeszków cedrowych
+        - olej orzechowy z orzeszków cedrowych uwodorniony
+        - utwardzony olej roślinny orzechowy z orzeszków cedrowych
+        - olej roślinny orzechowy z orzeszków cedrowych utwardzony
+        - uwodorniony olej roślinny orzechowy z orzeszków cedrowych
+        - olej roślinny orzechowy z orzeszków cedrowych uwodorniony
+        - utwardzony tłuszcz roślinny orzechowy z orzeszków cedrowych
+        - tłuszcz roślinny orzechowy z orzeszków cedrowych utwardzony
+        - uwodorniony tłuszcz roślinny orzechowy z orzeszków cedrowych
+        - tłuszcz roślinny orzechowy z orzeszków cedrowych uwodorniony
+        - utwardzone oleje roślinne orzechowe z orzeszków cedrowych
+        - oleje roślinne orzechowe z orzeszków cedrowych utwardzone
+        - uwodornione oleje roślinne orzechowe z orzeszków cedrowych
+        - oleje roślinne orzechowe z orzeszków cedrowych uwodornione
+        - utwardzone tłuszcze roślinne orzechowe z orzeszków cedrowych
+        - tłuszcze roślinne orzechowe z orzeszków cedrowych utwardzone
+        - uwodornione tłuszcze roślinne orzechowe z orzeszków cedrowych
+        - tłuszcze roślinne orzechowe z orzeszków cedrowych uwodornione
+        - utwardzone oleje orzechowe z orzeszków cedrowych
+        - oleje orzechowe z orzeszków cedrowych utwardzone
+        - uwodornione oleje orzechowe z orzeszków cedrowych
+        - oleje orzechowe z orzeszków cedrowych uwodornione
+        - utwardzony tłuszcz orzechowy z orzeszków cedrowych
+        - tłuszcz orzechowy z orzeszków cedrowych utwardzony
+        - uwodorniony tłuszcz orzechowy z orzeszków cedrowych
+        - tłuszcz orzechowy z orzeszków cedrowych uwodorniony
+        - utwardzone tłuszcze orzechowe z orzeszków cedrowych
+        - tłuszcze orzechowe z orzeszków cedrowych utwardzone
+        - uwodornione tłuszcze orzechowe z orzeszków cedrowych
+        - tłuszcze orzechowe z orzeszków cedrowych uwodornione
+        - utwardzony tłuszcz roślinny z orzeszków pinii
+        - tłuszcz roślinny z orzeszków pinii utwardzony
+        - uwodorniony tłuszcz roślinny z orzeszków pinii
+        - tłuszcz roślinny z orzeszków pinii uwodorniony
+        - utwardzone tłuszcze roślinne z orzeszków pinii
+        - tłuszcze roślinne z orzeszków pinii utwardzone
+        - uwodornione tłuszcze roślinne z orzeszków pinii
+        - tłuszcze roślinne z orzeszków pinii uwodornione
+        - utwardzony olej roślinny z orzeszków pinii
+        - olej roślinny z orzeszków pinii utwardzony
+        - uwodorniony olej roślinny z orzeszków pinii
+        - olej roślinny z orzeszków pinii uwodorniony
+        - utwardzone oleje roślinne z orzeszków pinii
+        - oleje roślinne z orzeszków pinii utwardzone
+        - uwodornione oleje roślinne z orzeszków pinii
+        - oleje roślinne z orzeszków pinii uwodornione
+        - utwardzony olej orzechowy z orzeszków pinii
+        - olej orzechowy z orzeszków pinii utwardzony
+        - uwodorniony olej orzechowy z orzeszków pinii
+        - olej orzechowy z orzeszków pinii uwodorniony
+        - utwardzony olej roślinny orzechowy z orzeszków pinii
+        - olej roślinny orzechowy z orzeszków pinii utwardzony
+        - uwodorniony olej roślinny orzechowy z orzeszków pinii
+        - olej roślinny orzechowy z orzeszków pinii uwodorniony
+        - utwardzony tłuszcz roślinny orzechowy z orzeszków pinii
+        - tłuszcz roślinny orzechowy z orzeszków pinii utwardzony
+        - uwodorniony tłuszcz roślinny orzechowy z orzeszków pinii
+        - tłuszcz roślinny orzechowy z orzeszków pinii uwodorniony
+        - utwardzone oleje roślinne orzechowe z orzeszków pinii
+        - oleje roślinne orzechowe z orzeszków pinii utwardzone
+        - uwodornione oleje roślinne orzechowe z orzeszków pinii
+        - oleje roślinne orzechowe z orzeszków pinii uwodornione
+        - utwardzone tłuszcze roślinne orzechowe z orzeszków pinii
+        - tłuszcze roślinne orzechowe z orzeszków pinii utwardzone
+        - uwodornione tłuszcze roślinne orzechowe z orzeszków pinii
+        - tłuszcze roślinne orzechowe z orzeszków pinii uwodornione
+        - utwardzone oleje orzechowe z orzeszków pinii
+        - oleje orzechowe z orzeszków pinii utwardzone
+        - uwodornione oleje orzechowe z orzeszków pinii
+        - oleje orzechowe z orzeszków pinii uwodornione
+        - utwardzony tłuszcz orzechowy z orzeszków pinii
+        - tłuszcz orzechowy z orzeszków pinii utwardzony
+        - uwodorniony tłuszcz orzechowy z orzeszków pinii
+        - tłuszcz orzechowy z orzeszków pinii uwodorniony
+        - utwardzone tłuszcze orzechowe z orzeszków pinii
+        - tłuszcze orzechowe z orzeszków pinii utwardzone
+        - uwodornione tłuszcze orzechowe z orzeszków pinii
+        - tłuszcze orzechowe z orzeszków pinii uwodornione
+        - utwardzony tłuszcz roślinny z orzeszków piniowych
+        - tłuszcz roślinny z orzeszków piniowych utwardzony
+        - uwodorniony tłuszcz roślinny z orzeszków piniowych
+        - tłuszcz roślinny z orzeszków piniowych uwodorniony
+        - utwardzone tłuszcze roślinne z orzeszków piniowych
+        - tłuszcze roślinne z orzeszków piniowych utwardzone
+        - uwodornione tłuszcze roślinne z orzeszków piniowych
+        - tłuszcze roślinne z orzeszków piniowych uwodornione
+        - utwardzony olej roślinny z orzeszków piniowych
+        - olej roślinny z orzeszków piniowych utwardzony
+        - uwodorniony olej roślinny z orzeszków piniowych
+        - olej roślinny z orzeszków piniowych uwodorniony
+        - utwardzone oleje roślinne z orzeszków piniowych
+        - oleje roślinne z orzeszków piniowych utwardzone
+        - uwodornione oleje roślinne z orzeszków piniowych
+        - oleje roślinne z orzeszków piniowych uwodornione
+        - utwardzony olej roślinny orzechowy z orzeszków piniowych
+        - olej roślinny orzechowy z orzeszków piniowych utwardzony
+        - uwodorniony olej roślinny orzechowy z orzeszków piniowych
+        - olej roślinny orzechowy z orzeszków piniowych uwodorniony
+        - utwardzony tłuszcz roślinny orzechowy z orzeszków piniowych
+        - tłuszcz roślinny orzechowy z orzeszków piniowych utwardzony
+        - uwodorniony tłuszcz roślinny orzechowy z orzeszków piniowych
+        - tłuszcz roślinny orzechowy z orzeszków piniowych uwodorniony
+        - utwardzone oleje roślinne orzechowe z orzeszków piniowych
+        - oleje roślinne orzechowe z orzeszków piniowych utwardzone
+        - uwodornione oleje roślinne orzechowe z orzeszków piniowych
+        - oleje roślinne orzechowe z orzeszków piniowych uwodornione
+        - utwardzone tłuszcze roślinne orzechowe z orzeszków piniowych
+        - tłuszcze roślinne orzechowe z orzeszków piniowych utwardzone
+        - uwodornione tłuszcze roślinne orzechowe z orzeszków piniowych
+        - tłuszcze roślinne orzechowe z orzeszków piniowych uwodornione
+        - utwardzone oleje orzechowe z orzeszków piniowych
+        - oleje orzechowe z orzeszków piniowych utwardzone
+        - uwodornione oleje orzechowe z orzeszków piniowych
+        - oleje orzechowe z orzeszków piniowych uwodornione
+        - utwardzony tłuszcz orzechowy z orzeszków piniowych
+        - tłuszcz orzechowy z orzeszków piniowych utwardzony
+        - uwodorniony tłuszcz orzechowy z orzeszków piniowych
+        - tłuszcz orzechowy z orzeszków piniowych uwodorniony
+        - utwardzone tłuszcze orzechowe z orzeszków piniowych
+        - tłuszcze orzechowe z orzeszków piniowych utwardzone
+        - uwodornione tłuszcze orzechowe z orzeszków piniowych
+        - tłuszcze orzechowe z orzeszków piniowych uwodornione
+    process:
+      en: "Pine nut oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
+      pl: "Olej z orzeszków piniowych utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
+    tells:
+      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!not )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)'
+  - id: partially-hydrogenated
+    names:
+      en:
+        - partially hydrogenated pine nut oil
+        - partially hydrogenated pine kernel oil
+        - partially hydrogenated pine seed oil
+        - partially hydrogenated pine nuts oil
+        - partially hydrogenated cedar nut oil
+      pl:
+        - częściowo utwardzony olej z orzeszków piniowych
+        - olej z orzeszków piniowych częściowo utwardzony
+        - częściowo uwodorniony olej z orzeszków piniowych
+        - olej z orzeszków piniowych częściowo uwodorniony
+        - częściowo utwardzony olej z orzeszków pinii
+        - olej z orzeszków pinii częściowo utwardzony
+        - częściowo uwodorniony olej z orzeszków pinii
+        - olej z orzeszków pinii częściowo uwodorniony
+        - częściowo utwardzony olej piniowy
+        - olej piniowy częściowo utwardzony
+        - częściowo uwodorniony olej piniowy
+        - olej piniowy częściowo uwodorniony
+        - częściowo utwardzony olej z orzeszków cedrowych
+        - olej z orzeszków cedrowych częściowo utwardzony
+        - częściowo uwodorniony olej z orzeszków cedrowych
+        - olej z orzeszków cedrowych częściowo uwodorniony
+        - olej częściowo utwardzony z orzeszków piniowych
+        - olej częściowo uwodorniony z orzeszków piniowych
+        - olej częściowo utwardzony z orzeszków pinii
+        - olej częściowo uwodorniony z orzeszków pinii
+        - olej częściowo utwardzony piniowy
+        - olej częściowo uwodorniony piniowy
+        - olej częściowo utwardzony z orzeszków cedrowych
+        - olej częściowo uwodorniony z orzeszków cedrowych
+        - częściowo utwardzony olej orzechowy z orzeszków piniowych
+        - olej orzechowy z orzeszków piniowych częściowo utwardzony
+        - częściowo uwodorniony olej orzechowy z orzeszków piniowych
+        - olej orzechowy z orzeszków piniowych częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny piniowy
+        - tłuszcz roślinny piniowy częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny piniowy
+        - tłuszcz roślinny piniowy częściowo uwodorniony
+        - częściowo utwardzone tłuszcze roślinne piniowe
+        - tłuszcze roślinne piniowe częściowo utwardzone
+        - częściowo uwodornione tłuszcze roślinne piniowe
+        - tłuszcze roślinne piniowe częściowo uwodornione
+        - częściowo utwardzony olej roślinny piniowy
+        - olej roślinny piniowy częściowo utwardzony
+        - częściowo uwodorniony olej roślinny piniowy
+        - olej roślinny piniowy częściowo uwodorniony
+        - częściowo utwardzone oleje roślinne piniowe
+        - oleje roślinne piniowe częściowo utwardzone
+        - częściowo uwodornione oleje roślinne piniowe
+        - oleje roślinne piniowe częściowo uwodornione
+        - częściowo utwardzony olej orzechowy piniowy
+        - olej orzechowy piniowy częściowo utwardzony
+        - częściowo uwodorniony olej orzechowy piniowy
+        - olej orzechowy piniowy częściowo uwodorniony
+        - częściowo utwardzony olej roślinny orzechowy piniowy
+        - olej roślinny orzechowy piniowy częściowo utwardzony
+        - częściowo uwodorniony olej roślinny orzechowy piniowy
+        - olej roślinny orzechowy piniowy częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny orzechowy piniowy
+        - tłuszcz roślinny orzechowy piniowy częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny orzechowy piniowy
+        - tłuszcz roślinny orzechowy piniowy częściowo uwodorniony
+        - częściowo utwardzone oleje roślinne orzechowe piniowe
+        - oleje roślinne orzechowe piniowe częściowo utwardzone
+        - częściowo uwodornione oleje roślinne orzechowe piniowe
+        - oleje roślinne orzechowe piniowe częściowo uwodornione
+        - częściowo utwardzone tłuszcze roślinne orzechowe piniowe
+        - tłuszcze roślinne orzechowe piniowe częściowo utwardzone
+        - częściowo uwodornione tłuszcze roślinne orzechowe piniowe
+        - tłuszcze roślinne orzechowe piniowe częściowo uwodornione
+        - częściowo utwardzone oleje orzechowe piniowe
+        - oleje orzechowe piniowe częściowo utwardzone
+        - częściowo uwodornione oleje orzechowe piniowe
+        - oleje orzechowe piniowe częściowo uwodornione
+        - częściowo utwardzony tłuszcz orzechowy piniowy
+        - tłuszcz orzechowy piniowy częściowo utwardzony
+        - częściowo uwodorniony tłuszcz orzechowy piniowy
+        - tłuszcz orzechowy piniowy częściowo uwodorniony
+        - częściowo utwardzone tłuszcze orzechowe piniowe
+        - tłuszcze orzechowe piniowe częściowo utwardzone
+        - częściowo uwodornione tłuszcze orzechowe piniowe
+        - tłuszcze orzechowe piniowe częściowo uwodornione
+        - częściowo utwardzony tłuszcz roślinny z orzeszków cedrowych
+        - tłuszcz roślinny z orzeszków cedrowych częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny z orzeszków cedrowych
+        - tłuszcz roślinny z orzeszków cedrowych częściowo uwodorniony
+        - częściowo utwardzone tłuszcze roślinne z orzeszków cedrowych
+        - tłuszcze roślinne z orzeszków cedrowych częściowo utwardzone
+        - częściowo uwodornione tłuszcze roślinne z orzeszków cedrowych
+        - tłuszcze roślinne z orzeszków cedrowych częściowo uwodornione
+        - częściowo utwardzony olej roślinny z orzeszków cedrowych
+        - olej roślinny z orzeszków cedrowych częściowo utwardzony
+        - częściowo uwodorniony olej roślinny z orzeszków cedrowych
+        - olej roślinny z orzeszków cedrowych częściowo uwodorniony
+        - częściowo utwardzone oleje roślinne z orzeszków cedrowych
+        - oleje roślinne z orzeszków cedrowych częściowo utwardzone
+        - częściowo uwodornione oleje roślinne z orzeszków cedrowych
+        - oleje roślinne z orzeszków cedrowych częściowo uwodornione
+        - częściowo utwardzony olej orzechowy z orzeszków cedrowych
+        - olej orzechowy z orzeszków cedrowych częściowo utwardzony
+        - częściowo uwodorniony olej orzechowy z orzeszków cedrowych
+        - olej orzechowy z orzeszków cedrowych częściowo uwodorniony
+        - częściowo utwardzony olej roślinny orzechowy z orzeszków cedrowych
+        - olej roślinny orzechowy z orzeszków cedrowych częściowo utwardzony
+        - częściowo uwodorniony olej roślinny orzechowy z orzeszków cedrowych
+        - olej roślinny orzechowy z orzeszków cedrowych częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny orzechowy z orzeszków cedrowych
+        - tłuszcz roślinny orzechowy z orzeszków cedrowych częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny orzechowy z orzeszków cedrowych
+        - tłuszcz roślinny orzechowy z orzeszków cedrowych częściowo uwodorniony
+        - częściowo utwardzone oleje roślinne orzechowe z orzeszków cedrowych
+        - oleje roślinne orzechowe z orzeszków cedrowych częściowo utwardzone
+        - częściowo uwodornione oleje roślinne orzechowe z orzeszków cedrowych
+        - oleje roślinne orzechowe z orzeszków cedrowych częściowo uwodornione
+        - częściowo utwardzone tłuszcze roślinne orzechowe z orzeszków cedrowych
+        - tłuszcze roślinne orzechowe z orzeszków cedrowych częściowo utwardzone
+        - częściowo uwodornione tłuszcze roślinne orzechowe z orzeszków cedrowych
+        - tłuszcze roślinne orzechowe z orzeszków cedrowych częściowo uwodornione
+        - częściowo utwardzone oleje orzechowe z orzeszków cedrowych
+        - oleje orzechowe z orzeszków cedrowych częściowo utwardzone
+        - częściowo uwodornione oleje orzechowe z orzeszków cedrowych
+        - oleje orzechowe z orzeszków cedrowych częściowo uwodornione
+        - częściowo utwardzony tłuszcz orzechowy z orzeszków cedrowych
+        - tłuszcz orzechowy z orzeszków cedrowych częściowo utwardzony
+        - częściowo uwodorniony tłuszcz orzechowy z orzeszków cedrowych
+        - tłuszcz orzechowy z orzeszków cedrowych częściowo uwodorniony
+        - częściowo utwardzone tłuszcze orzechowe z orzeszków cedrowych
+        - tłuszcze orzechowe z orzeszków cedrowych częściowo utwardzone
+        - częściowo uwodornione tłuszcze orzechowe z orzeszków cedrowych
+        - tłuszcze orzechowe z orzeszków cedrowych częściowo uwodornione
+        - częściowo utwardzony tłuszcz roślinny z orzeszków pinii
+        - tłuszcz roślinny z orzeszków pinii częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny z orzeszków pinii
+        - tłuszcz roślinny z orzeszków pinii częściowo uwodorniony
+        - częściowo utwardzone tłuszcze roślinne z orzeszków pinii
+        - tłuszcze roślinne z orzeszków pinii częściowo utwardzone
+        - częściowo uwodornione tłuszcze roślinne z orzeszków pinii
+        - tłuszcze roślinne z orzeszków pinii częściowo uwodornione
+        - częściowo utwardzony olej roślinny z orzeszków pinii
+        - olej roślinny z orzeszków pinii częściowo utwardzony
+        - częściowo uwodorniony olej roślinny z orzeszków pinii
+        - olej roślinny z orzeszków pinii częściowo uwodorniony
+        - częściowo utwardzone oleje roślinne z orzeszków pinii
+        - oleje roślinne z orzeszków pinii częściowo utwardzone
+        - częściowo uwodornione oleje roślinne z orzeszków pinii
+        - oleje roślinne z orzeszków pinii częściowo uwodornione
+        - częściowo utwardzony olej orzechowy z orzeszków pinii
+        - olej orzechowy z orzeszków pinii częściowo utwardzony
+        - częściowo uwodorniony olej orzechowy z orzeszków pinii
+        - olej orzechowy z orzeszków pinii częściowo uwodorniony
+        - częściowo utwardzony olej roślinny orzechowy z orzeszków pinii
+        - olej roślinny orzechowy z orzeszków pinii częściowo utwardzony
+        - częściowo uwodorniony olej roślinny orzechowy z orzeszków pinii
+        - olej roślinny orzechowy z orzeszków pinii częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny orzechowy z orzeszków pinii
+        - tłuszcz roślinny orzechowy z orzeszków pinii częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny orzechowy z orzeszków pinii
+        - tłuszcz roślinny orzechowy z orzeszków pinii częściowo uwodorniony
+        - częściowo utwardzone oleje roślinne orzechowe z orzeszków pinii
+        - oleje roślinne orzechowe z orzeszków pinii częściowo utwardzone
+        - częściowo uwodornione oleje roślinne orzechowe z orzeszków pinii
+        - oleje roślinne orzechowe z orzeszków pinii częściowo uwodornione
+        - częściowo utwardzone tłuszcze roślinne orzechowe z orzeszków pinii
+        - tłuszcze roślinne orzechowe z orzeszków pinii częściowo utwardzone
+        - częściowo uwodornione tłuszcze roślinne orzechowe z orzeszków pinii
+        - tłuszcze roślinne orzechowe z orzeszków pinii częściowo uwodornione
+        - częściowo utwardzone oleje orzechowe z orzeszków pinii
+        - oleje orzechowe z orzeszków pinii częściowo utwardzone
+        - częściowo uwodornione oleje orzechowe z orzeszków pinii
+        - oleje orzechowe z orzeszków pinii częściowo uwodornione
+        - częściowo utwardzony tłuszcz orzechowy z orzeszków pinii
+        - tłuszcz orzechowy z orzeszków pinii częściowo utwardzony
+        - częściowo uwodorniony tłuszcz orzechowy z orzeszków pinii
+        - tłuszcz orzechowy z orzeszków pinii częściowo uwodorniony
+        - częściowo utwardzone tłuszcze orzechowe z orzeszków pinii
+        - tłuszcze orzechowe z orzeszków pinii częściowo utwardzone
+        - częściowo uwodornione tłuszcze orzechowe z orzeszków pinii
+        - tłuszcze orzechowe z orzeszków pinii częściowo uwodornione
+        - częściowo utwardzony tłuszcz roślinny z orzeszków piniowych
+        - tłuszcz roślinny z orzeszków piniowych częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny z orzeszków piniowych
+        - tłuszcz roślinny z orzeszków piniowych częściowo uwodorniony
+        - częściowo utwardzone tłuszcze roślinne z orzeszków piniowych
+        - tłuszcze roślinne z orzeszków piniowych częściowo utwardzone
+        - częściowo uwodornione tłuszcze roślinne z orzeszków piniowych
+        - tłuszcze roślinne z orzeszków piniowych częściowo uwodornione
+        - częściowo utwardzony olej roślinny z orzeszków piniowych
+        - olej roślinny z orzeszków piniowych częściowo utwardzony
+        - częściowo uwodorniony olej roślinny z orzeszków piniowych
+        - olej roślinny z orzeszków piniowych częściowo uwodorniony
+        - częściowo utwardzone oleje roślinne z orzeszków piniowych
+        - oleje roślinne z orzeszków piniowych częściowo utwardzone
+        - częściowo uwodornione oleje roślinne z orzeszków piniowych
+        - oleje roślinne z orzeszków piniowych częściowo uwodornione
+        - częściowo utwardzony olej roślinny orzechowy z orzeszków piniowych
+        - olej roślinny orzechowy z orzeszków piniowych częściowo utwardzony
+        - częściowo uwodorniony olej roślinny orzechowy z orzeszków piniowych
+        - olej roślinny orzechowy z orzeszków piniowych częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny orzechowy z orzeszków piniowych
+        - tłuszcz roślinny orzechowy z orzeszków piniowych częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny orzechowy z orzeszków piniowych
+        - tłuszcz roślinny orzechowy z orzeszków piniowych częściowo uwodorniony
+        - częściowo utwardzone oleje roślinne orzechowe z orzeszków piniowych
+        - oleje roślinne orzechowe z orzeszków piniowych częściowo utwardzone
+        - częściowo uwodornione oleje roślinne orzechowe z orzeszków piniowych
+        - oleje roślinne orzechowe z orzeszków piniowych częściowo uwodornione
+        - częściowo utwardzone tłuszcze roślinne orzechowe z orzeszków piniowych
+        - tłuszcze roślinne orzechowe z orzeszków piniowych częściowo utwardzone
+        - częściowo uwodornione tłuszcze roślinne orzechowe z orzeszków piniowych
+        - tłuszcze roślinne orzechowe z orzeszków piniowych częściowo uwodornione
+        - częściowo utwardzone oleje orzechowe z orzeszków piniowych
+        - oleje orzechowe z orzeszków piniowych częściowo utwardzone
+        - częściowo uwodornione oleje orzechowe z orzeszków piniowych
+        - oleje orzechowe z orzeszków piniowych częściowo uwodornione
+        - częściowo utwardzony tłuszcz orzechowy z orzeszków piniowych
+        - tłuszcz orzechowy z orzeszków piniowych częściowo utwardzony
+        - częściowo uwodorniony tłuszcz orzechowy z orzeszków piniowych
+        - tłuszcz orzechowy z orzeszków piniowych częściowo uwodorniony
+        - częściowo utwardzone tłuszcze orzechowe z orzeszków piniowych
+        - tłuszcze orzechowe z orzeszków piniowych częściowo utwardzone
+        - częściowo uwodornione tłuszcze orzechowe z orzeszków piniowych
+        - tłuszcze orzechowe z orzeszków piniowych częściowo uwodornione
+    process:
+      en: "Pine nut oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
+      pl: "Olej z orzeszków piniowych, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
+    tells:
+      - 'czesciowo (?:utwardzon|uwodorn)'
+      - '(?<!not )(?<!non )partially hydrogenated'
+      - 'teilweise gehartet'
+  - id: fully-hydrogenated
+    names:
+      en:
+        - fully hydrogenated pine nut oil
+        - totally hydrogenated pine nut oil
+        - fully hydrogenated pine kernel oil
+        - totally hydrogenated pine kernel oil
+        - fully hydrogenated pine seed oil
+        - totally hydrogenated pine seed oil
+        - fully hydrogenated pine nuts oil
+        - totally hydrogenated pine nuts oil
+        - fully hydrogenated cedar nut oil
+        - totally hydrogenated cedar nut oil
+      pl:
+        - całkowicie utwardzony olej z orzeszków piniowych
+        - olej z orzeszków piniowych całkowicie utwardzony
+        - całkowicie uwodorniony olej z orzeszków piniowych
+        - olej z orzeszków piniowych całkowicie uwodorniony
+        - w pełni utwardzony olej z orzeszków piniowych
+        - olej z orzeszków piniowych w pełni utwardzony
+        - w pełni uwodorniony olej z orzeszków piniowych
+        - olej z orzeszków piniowych w pełni uwodorniony
+        - całkowicie utwardzony olej z orzeszków pinii
+        - olej z orzeszków pinii całkowicie utwardzony
+        - całkowicie uwodorniony olej z orzeszków pinii
+        - olej z orzeszków pinii całkowicie uwodorniony
+        - w pełni utwardzony olej z orzeszków pinii
+        - olej z orzeszków pinii w pełni utwardzony
+        - w pełni uwodorniony olej z orzeszków pinii
+        - olej z orzeszków pinii w pełni uwodorniony
+        - całkowicie utwardzony olej piniowy
+        - olej piniowy całkowicie utwardzony
+        - całkowicie uwodorniony olej piniowy
+        - olej piniowy całkowicie uwodorniony
+        - w pełni utwardzony olej piniowy
+        - olej piniowy w pełni utwardzony
+        - w pełni uwodorniony olej piniowy
+        - olej piniowy w pełni uwodorniony
+        - całkowicie utwardzony olej z orzeszków cedrowych
+        - olej z orzeszków cedrowych całkowicie utwardzony
+        - całkowicie uwodorniony olej z orzeszków cedrowych
+        - olej z orzeszków cedrowych całkowicie uwodorniony
+        - w pełni utwardzony olej z orzeszków cedrowych
+        - olej z orzeszków cedrowych w pełni utwardzony
+        - w pełni uwodorniony olej z orzeszków cedrowych
+        - olej z orzeszków cedrowych w pełni uwodorniony
+        - olej całkowicie utwardzony z orzeszków piniowych
+        - olej całkowicie uwodorniony z orzeszków piniowych
+        - olej w pełni utwardzony z orzeszków piniowych
+        - olej w pełni uwodorniony z orzeszków piniowych
+        - olej całkowicie utwardzony z orzeszków pinii
+        - olej całkowicie uwodorniony z orzeszków pinii
+        - olej w pełni utwardzony z orzeszków pinii
+        - olej w pełni uwodorniony z orzeszków pinii
+        - olej całkowicie utwardzony piniowy
+        - olej całkowicie uwodorniony piniowy
+        - olej w pełni utwardzony piniowy
+        - olej w pełni uwodorniony piniowy
+        - olej całkowicie utwardzony z orzeszków cedrowych
+        - olej całkowicie uwodorniony z orzeszków cedrowych
+        - olej w pełni utwardzony z orzeszków cedrowych
+        - olej w pełni uwodorniony z orzeszków cedrowych
+        - całkowicie utwardzony olej orzechowy z orzeszków piniowych
+        - olej orzechowy z orzeszków piniowych całkowicie utwardzony
+        - całkowicie uwodorniony olej orzechowy z orzeszków piniowych
+        - olej orzechowy z orzeszków piniowych całkowicie uwodorniony
+        - w pełni utwardzony olej orzechowy z orzeszków piniowych
+        - olej orzechowy z orzeszków piniowych w pełni utwardzony
+        - w pełni uwodorniony olej orzechowy z orzeszków piniowych
+        - olej orzechowy z orzeszków piniowych w pełni uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny piniowy
+        - tłuszcz roślinny piniowy całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny piniowy
+        - tłuszcz roślinny piniowy całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz roślinny piniowy
+        - tłuszcz roślinny piniowy w pełni utwardzony
+        - w pełni uwodorniony tłuszcz roślinny piniowy
+        - tłuszcz roślinny piniowy w pełni uwodorniony
+        - całkowicie utwardzone tłuszcze roślinne piniowe
+        - tłuszcze roślinne piniowe całkowicie utwardzone
+        - całkowicie uwodornione tłuszcze roślinne piniowe
+        - tłuszcze roślinne piniowe całkowicie uwodornione
+        - w pełni utwardzone tłuszcze roślinne piniowe
+        - tłuszcze roślinne piniowe w pełni utwardzone
+        - w pełni uwodornione tłuszcze roślinne piniowe
+        - tłuszcze roślinne piniowe w pełni uwodornione
+        - całkowicie utwardzony olej roślinny piniowy
+        - olej roślinny piniowy całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny piniowy
+        - olej roślinny piniowy całkowicie uwodorniony
+        - w pełni utwardzony olej roślinny piniowy
+        - olej roślinny piniowy w pełni utwardzony
+        - w pełni uwodorniony olej roślinny piniowy
+        - olej roślinny piniowy w pełni uwodorniony
+        - całkowicie utwardzone oleje roślinne piniowe
+        - oleje roślinne piniowe całkowicie utwardzone
+        - całkowicie uwodornione oleje roślinne piniowe
+        - oleje roślinne piniowe całkowicie uwodornione
+        - w pełni utwardzone oleje roślinne piniowe
+        - oleje roślinne piniowe w pełni utwardzone
+        - w pełni uwodornione oleje roślinne piniowe
+        - oleje roślinne piniowe w pełni uwodornione
+        - całkowicie utwardzony olej orzechowy piniowy
+        - olej orzechowy piniowy całkowicie utwardzony
+        - całkowicie uwodorniony olej orzechowy piniowy
+        - olej orzechowy piniowy całkowicie uwodorniony
+        - w pełni utwardzony olej orzechowy piniowy
+        - olej orzechowy piniowy w pełni utwardzony
+        - w pełni uwodorniony olej orzechowy piniowy
+        - olej orzechowy piniowy w pełni uwodorniony
+        - całkowicie utwardzony olej roślinny orzechowy piniowy
+        - olej roślinny orzechowy piniowy całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny orzechowy piniowy
+        - olej roślinny orzechowy piniowy całkowicie uwodorniony
+        - w pełni utwardzony olej roślinny orzechowy piniowy
+        - olej roślinny orzechowy piniowy w pełni utwardzony
+        - w pełni uwodorniony olej roślinny orzechowy piniowy
+        - olej roślinny orzechowy piniowy w pełni uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny orzechowy piniowy
+        - tłuszcz roślinny orzechowy piniowy całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny orzechowy piniowy
+        - tłuszcz roślinny orzechowy piniowy całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz roślinny orzechowy piniowy
+        - tłuszcz roślinny orzechowy piniowy w pełni utwardzony
+        - w pełni uwodorniony tłuszcz roślinny orzechowy piniowy
+        - tłuszcz roślinny orzechowy piniowy w pełni uwodorniony
+        - całkowicie utwardzone oleje roślinne orzechowe piniowe
+        - oleje roślinne orzechowe piniowe całkowicie utwardzone
+        - całkowicie uwodornione oleje roślinne orzechowe piniowe
+        - oleje roślinne orzechowe piniowe całkowicie uwodornione
+        - w pełni utwardzone oleje roślinne orzechowe piniowe
+        - oleje roślinne orzechowe piniowe w pełni utwardzone
+        - w pełni uwodornione oleje roślinne orzechowe piniowe
+        - oleje roślinne orzechowe piniowe w pełni uwodornione
+        - całkowicie utwardzone tłuszcze roślinne orzechowe piniowe
+        - tłuszcze roślinne orzechowe piniowe całkowicie utwardzone
+        - całkowicie uwodornione tłuszcze roślinne orzechowe piniowe
+        - tłuszcze roślinne orzechowe piniowe całkowicie uwodornione
+        - w pełni utwardzone tłuszcze roślinne orzechowe piniowe
+        - tłuszcze roślinne orzechowe piniowe w pełni utwardzone
+        - w pełni uwodornione tłuszcze roślinne orzechowe piniowe
+        - tłuszcze roślinne orzechowe piniowe w pełni uwodornione
+        - całkowicie utwardzone oleje orzechowe piniowe
+        - oleje orzechowe piniowe całkowicie utwardzone
+        - całkowicie uwodornione oleje orzechowe piniowe
+        - oleje orzechowe piniowe całkowicie uwodornione
+        - w pełni utwardzone oleje orzechowe piniowe
+        - oleje orzechowe piniowe w pełni utwardzone
+        - w pełni uwodornione oleje orzechowe piniowe
+        - oleje orzechowe piniowe w pełni uwodornione
+        - całkowicie utwardzony tłuszcz orzechowy piniowy
+        - tłuszcz orzechowy piniowy całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz orzechowy piniowy
+        - tłuszcz orzechowy piniowy całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz orzechowy piniowy
+        - tłuszcz orzechowy piniowy w pełni utwardzony
+        - w pełni uwodorniony tłuszcz orzechowy piniowy
+        - tłuszcz orzechowy piniowy w pełni uwodorniony
+        - całkowicie utwardzone tłuszcze orzechowe piniowe
+        - tłuszcze orzechowe piniowe całkowicie utwardzone
+        - całkowicie uwodornione tłuszcze orzechowe piniowe
+        - tłuszcze orzechowe piniowe całkowicie uwodornione
+        - w pełni utwardzone tłuszcze orzechowe piniowe
+        - tłuszcze orzechowe piniowe w pełni utwardzone
+        - w pełni uwodornione tłuszcze orzechowe piniowe
+        - tłuszcze orzechowe piniowe w pełni uwodornione
+        - całkowicie utwardzony tłuszcz roślinny z orzeszków cedrowych
+        - tłuszcz roślinny z orzeszków cedrowych całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny z orzeszków cedrowych
+        - tłuszcz roślinny z orzeszków cedrowych całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz roślinny z orzeszków cedrowych
+        - tłuszcz roślinny z orzeszków cedrowych w pełni utwardzony
+        - w pełni uwodorniony tłuszcz roślinny z orzeszków cedrowych
+        - tłuszcz roślinny z orzeszków cedrowych w pełni uwodorniony
+        - całkowicie utwardzone tłuszcze roślinne z orzeszków cedrowych
+        - tłuszcze roślinne z orzeszków cedrowych całkowicie utwardzone
+        - całkowicie uwodornione tłuszcze roślinne z orzeszków cedrowych
+        - tłuszcze roślinne z orzeszków cedrowych całkowicie uwodornione
+        - w pełni utwardzone tłuszcze roślinne z orzeszków cedrowych
+        - tłuszcze roślinne z orzeszków cedrowych w pełni utwardzone
+        - w pełni uwodornione tłuszcze roślinne z orzeszków cedrowych
+        - tłuszcze roślinne z orzeszków cedrowych w pełni uwodornione
+        - całkowicie utwardzony olej roślinny z orzeszków cedrowych
+        - olej roślinny z orzeszków cedrowych całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny z orzeszków cedrowych
+        - olej roślinny z orzeszków cedrowych całkowicie uwodorniony
+        - w pełni utwardzony olej roślinny z orzeszków cedrowych
+        - olej roślinny z orzeszków cedrowych w pełni utwardzony
+        - w pełni uwodorniony olej roślinny z orzeszków cedrowych
+        - olej roślinny z orzeszków cedrowych w pełni uwodorniony
+        - całkowicie utwardzone oleje roślinne z orzeszków cedrowych
+        - oleje roślinne z orzeszków cedrowych całkowicie utwardzone
+        - całkowicie uwodornione oleje roślinne z orzeszków cedrowych
+        - oleje roślinne z orzeszków cedrowych całkowicie uwodornione
+        - w pełni utwardzone oleje roślinne z orzeszków cedrowych
+        - oleje roślinne z orzeszków cedrowych w pełni utwardzone
+        - w pełni uwodornione oleje roślinne z orzeszków cedrowych
+        - oleje roślinne z orzeszków cedrowych w pełni uwodornione
+        - całkowicie utwardzony olej orzechowy z orzeszków cedrowych
+        - olej orzechowy z orzeszków cedrowych całkowicie utwardzony
+        - całkowicie uwodorniony olej orzechowy z orzeszków cedrowych
+        - olej orzechowy z orzeszków cedrowych całkowicie uwodorniony
+        - w pełni utwardzony olej orzechowy z orzeszków cedrowych
+        - olej orzechowy z orzeszków cedrowych w pełni utwardzony
+        - w pełni uwodorniony olej orzechowy z orzeszków cedrowych
+        - olej orzechowy z orzeszków cedrowych w pełni uwodorniony
+        - całkowicie utwardzony olej roślinny orzechowy z orzeszków cedrowych
+        - olej roślinny orzechowy z orzeszków cedrowych całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny orzechowy z orzeszków cedrowych
+        - olej roślinny orzechowy z orzeszków cedrowych całkowicie uwodorniony
+        - w pełni utwardzony olej roślinny orzechowy z orzeszków cedrowych
+        - olej roślinny orzechowy z orzeszków cedrowych w pełni utwardzony
+        - w pełni uwodorniony olej roślinny orzechowy z orzeszków cedrowych
+        - olej roślinny orzechowy z orzeszków cedrowych w pełni uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny orzechowy z orzeszków cedrowych
+        - tłuszcz roślinny orzechowy z orzeszków cedrowych całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny orzechowy z orzeszków cedrowych
+        - tłuszcz roślinny orzechowy z orzeszków cedrowych całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz roślinny orzechowy z orzeszków cedrowych
+        - tłuszcz roślinny orzechowy z orzeszków cedrowych w pełni utwardzony
+        - w pełni uwodorniony tłuszcz roślinny orzechowy z orzeszków cedrowych
+        - tłuszcz roślinny orzechowy z orzeszków cedrowych w pełni uwodorniony
+        - całkowicie utwardzone oleje roślinne orzechowe z orzeszków cedrowych
+        - oleje roślinne orzechowe z orzeszków cedrowych całkowicie utwardzone
+        - całkowicie uwodornione oleje roślinne orzechowe z orzeszków cedrowych
+        - oleje roślinne orzechowe z orzeszków cedrowych całkowicie uwodornione
+        - w pełni utwardzone oleje roślinne orzechowe z orzeszków cedrowych
+        - oleje roślinne orzechowe z orzeszków cedrowych w pełni utwardzone
+        - w pełni uwodornione oleje roślinne orzechowe z orzeszków cedrowych
+        - oleje roślinne orzechowe z orzeszków cedrowych w pełni uwodornione
+        - całkowicie utwardzone tłuszcze roślinne orzechowe z orzeszków cedrowych
+        - tłuszcze roślinne orzechowe z orzeszków cedrowych całkowicie utwardzone
+        - całkowicie uwodornione tłuszcze roślinne orzechowe z orzeszków cedrowych
+        - tłuszcze roślinne orzechowe z orzeszków cedrowych całkowicie uwodornione
+        - w pełni utwardzone tłuszcze roślinne orzechowe z orzeszków cedrowych
+        - tłuszcze roślinne orzechowe z orzeszków cedrowych w pełni utwardzone
+        - w pełni uwodornione tłuszcze roślinne orzechowe z orzeszków cedrowych
+        - tłuszcze roślinne orzechowe z orzeszków cedrowych w pełni uwodornione
+        - całkowicie utwardzone oleje orzechowe z orzeszków cedrowych
+        - oleje orzechowe z orzeszków cedrowych całkowicie utwardzone
+        - całkowicie uwodornione oleje orzechowe z orzeszków cedrowych
+        - oleje orzechowe z orzeszków cedrowych całkowicie uwodornione
+        - w pełni utwardzone oleje orzechowe z orzeszków cedrowych
+        - oleje orzechowe z orzeszków cedrowych w pełni utwardzone
+        - w pełni uwodornione oleje orzechowe z orzeszków cedrowych
+        - oleje orzechowe z orzeszków cedrowych w pełni uwodornione
+        - całkowicie utwardzony tłuszcz orzechowy z orzeszków cedrowych
+        - tłuszcz orzechowy z orzeszków cedrowych całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz orzechowy z orzeszków cedrowych
+        - tłuszcz orzechowy z orzeszków cedrowych całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz orzechowy z orzeszków cedrowych
+        - tłuszcz orzechowy z orzeszków cedrowych w pełni utwardzony
+        - w pełni uwodorniony tłuszcz orzechowy z orzeszków cedrowych
+        - tłuszcz orzechowy z orzeszków cedrowych w pełni uwodorniony
+        - całkowicie utwardzone tłuszcze orzechowe z orzeszków cedrowych
+        - tłuszcze orzechowe z orzeszków cedrowych całkowicie utwardzone
+        - całkowicie uwodornione tłuszcze orzechowe z orzeszków cedrowych
+        - tłuszcze orzechowe z orzeszków cedrowych całkowicie uwodornione
+        - w pełni utwardzone tłuszcze orzechowe z orzeszków cedrowych
+        - tłuszcze orzechowe z orzeszków cedrowych w pełni utwardzone
+        - w pełni uwodornione tłuszcze orzechowe z orzeszków cedrowych
+        - tłuszcze orzechowe z orzeszków cedrowych w pełni uwodornione
+        - całkowicie utwardzony tłuszcz roślinny z orzeszków pinii
+        - tłuszcz roślinny z orzeszków pinii całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny z orzeszków pinii
+        - tłuszcz roślinny z orzeszków pinii całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz roślinny z orzeszków pinii
+        - tłuszcz roślinny z orzeszków pinii w pełni utwardzony
+        - w pełni uwodorniony tłuszcz roślinny z orzeszków pinii
+        - tłuszcz roślinny z orzeszków pinii w pełni uwodorniony
+        - całkowicie utwardzone tłuszcze roślinne z orzeszków pinii
+        - tłuszcze roślinne z orzeszków pinii całkowicie utwardzone
+        - całkowicie uwodornione tłuszcze roślinne z orzeszków pinii
+        - tłuszcze roślinne z orzeszków pinii całkowicie uwodornione
+        - w pełni utwardzone tłuszcze roślinne z orzeszków pinii
+        - tłuszcze roślinne z orzeszków pinii w pełni utwardzone
+        - w pełni uwodornione tłuszcze roślinne z orzeszków pinii
+        - tłuszcze roślinne z orzeszków pinii w pełni uwodornione
+        - całkowicie utwardzony olej roślinny z orzeszków pinii
+        - olej roślinny z orzeszków pinii całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny z orzeszków pinii
+        - olej roślinny z orzeszków pinii całkowicie uwodorniony
+        - w pełni utwardzony olej roślinny z orzeszków pinii
+        - olej roślinny z orzeszków pinii w pełni utwardzony
+        - w pełni uwodorniony olej roślinny z orzeszków pinii
+        - olej roślinny z orzeszków pinii w pełni uwodorniony
+        - całkowicie utwardzone oleje roślinne z orzeszków pinii
+        - oleje roślinne z orzeszków pinii całkowicie utwardzone
+        - całkowicie uwodornione oleje roślinne z orzeszków pinii
+        - oleje roślinne z orzeszków pinii całkowicie uwodornione
+        - w pełni utwardzone oleje roślinne z orzeszków pinii
+        - oleje roślinne z orzeszków pinii w pełni utwardzone
+        - w pełni uwodornione oleje roślinne z orzeszków pinii
+        - oleje roślinne z orzeszków pinii w pełni uwodornione
+        - całkowicie utwardzony olej orzechowy z orzeszków pinii
+        - olej orzechowy z orzeszków pinii całkowicie utwardzony
+        - całkowicie uwodorniony olej orzechowy z orzeszków pinii
+        - olej orzechowy z orzeszków pinii całkowicie uwodorniony
+        - w pełni utwardzony olej orzechowy z orzeszków pinii
+        - olej orzechowy z orzeszków pinii w pełni utwardzony
+        - w pełni uwodorniony olej orzechowy z orzeszków pinii
+        - olej orzechowy z orzeszków pinii w pełni uwodorniony
+        - całkowicie utwardzony olej roślinny orzechowy z orzeszków pinii
+        - olej roślinny orzechowy z orzeszków pinii całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny orzechowy z orzeszków pinii
+        - olej roślinny orzechowy z orzeszków pinii całkowicie uwodorniony
+        - w pełni utwardzony olej roślinny orzechowy z orzeszków pinii
+        - olej roślinny orzechowy z orzeszków pinii w pełni utwardzony
+        - w pełni uwodorniony olej roślinny orzechowy z orzeszków pinii
+        - olej roślinny orzechowy z orzeszków pinii w pełni uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny orzechowy z orzeszków pinii
+        - tłuszcz roślinny orzechowy z orzeszków pinii całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny orzechowy z orzeszków pinii
+        - tłuszcz roślinny orzechowy z orzeszków pinii całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz roślinny orzechowy z orzeszków pinii
+        - tłuszcz roślinny orzechowy z orzeszków pinii w pełni utwardzony
+        - w pełni uwodorniony tłuszcz roślinny orzechowy z orzeszków pinii
+        - tłuszcz roślinny orzechowy z orzeszków pinii w pełni uwodorniony
+        - całkowicie utwardzone oleje roślinne orzechowe z orzeszków pinii
+        - oleje roślinne orzechowe z orzeszków pinii całkowicie utwardzone
+        - całkowicie uwodornione oleje roślinne orzechowe z orzeszków pinii
+        - oleje roślinne orzechowe z orzeszków pinii całkowicie uwodornione
+        - w pełni utwardzone oleje roślinne orzechowe z orzeszków pinii
+        - oleje roślinne orzechowe z orzeszków pinii w pełni utwardzone
+        - w pełni uwodornione oleje roślinne orzechowe z orzeszków pinii
+        - oleje roślinne orzechowe z orzeszków pinii w pełni uwodornione
+        - całkowicie utwardzone tłuszcze roślinne orzechowe z orzeszków pinii
+        - tłuszcze roślinne orzechowe z orzeszków pinii całkowicie utwardzone
+        - całkowicie uwodornione tłuszcze roślinne orzechowe z orzeszków pinii
+        - tłuszcze roślinne orzechowe z orzeszków pinii całkowicie uwodornione
+        - w pełni utwardzone tłuszcze roślinne orzechowe z orzeszków pinii
+        - tłuszcze roślinne orzechowe z orzeszków pinii w pełni utwardzone
+        - w pełni uwodornione tłuszcze roślinne orzechowe z orzeszków pinii
+        - tłuszcze roślinne orzechowe z orzeszków pinii w pełni uwodornione
+        - całkowicie utwardzone oleje orzechowe z orzeszków pinii
+        - oleje orzechowe z orzeszków pinii całkowicie utwardzone
+        - całkowicie uwodornione oleje orzechowe z orzeszków pinii
+        - oleje orzechowe z orzeszków pinii całkowicie uwodornione
+        - w pełni utwardzone oleje orzechowe z orzeszków pinii
+        - oleje orzechowe z orzeszków pinii w pełni utwardzone
+        - w pełni uwodornione oleje orzechowe z orzeszków pinii
+        - oleje orzechowe z orzeszków pinii w pełni uwodornione
+        - całkowicie utwardzony tłuszcz orzechowy z orzeszków pinii
+        - tłuszcz orzechowy z orzeszków pinii całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz orzechowy z orzeszków pinii
+        - tłuszcz orzechowy z orzeszków pinii całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz orzechowy z orzeszków pinii
+        - tłuszcz orzechowy z orzeszków pinii w pełni utwardzony
+        - w pełni uwodorniony tłuszcz orzechowy z orzeszków pinii
+        - tłuszcz orzechowy z orzeszków pinii w pełni uwodorniony
+        - całkowicie utwardzone tłuszcze orzechowe z orzeszków pinii
+        - tłuszcze orzechowe z orzeszków pinii całkowicie utwardzone
+        - całkowicie uwodornione tłuszcze orzechowe z orzeszków pinii
+        - tłuszcze orzechowe z orzeszków pinii całkowicie uwodornione
+        - w pełni utwardzone tłuszcze orzechowe z orzeszków pinii
+        - tłuszcze orzechowe z orzeszków pinii w pełni utwardzone
+        - w pełni uwodornione tłuszcze orzechowe z orzeszków pinii
+        - tłuszcze orzechowe z orzeszków pinii w pełni uwodornione
+        - całkowicie utwardzony tłuszcz roślinny z orzeszków piniowych
+        - tłuszcz roślinny z orzeszków piniowych całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny z orzeszków piniowych
+        - tłuszcz roślinny z orzeszków piniowych całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz roślinny z orzeszków piniowych
+        - tłuszcz roślinny z orzeszków piniowych w pełni utwardzony
+        - w pełni uwodorniony tłuszcz roślinny z orzeszków piniowych
+        - tłuszcz roślinny z orzeszków piniowych w pełni uwodorniony
+        - całkowicie utwardzone tłuszcze roślinne z orzeszków piniowych
+        - tłuszcze roślinne z orzeszków piniowych całkowicie utwardzone
+        - całkowicie uwodornione tłuszcze roślinne z orzeszków piniowych
+        - tłuszcze roślinne z orzeszków piniowych całkowicie uwodornione
+        - w pełni utwardzone tłuszcze roślinne z orzeszków piniowych
+        - tłuszcze roślinne z orzeszków piniowych w pełni utwardzone
+        - w pełni uwodornione tłuszcze roślinne z orzeszków piniowych
+        - tłuszcze roślinne z orzeszków piniowych w pełni uwodornione
+        - całkowicie utwardzony olej roślinny z orzeszków piniowych
+        - olej roślinny z orzeszków piniowych całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny z orzeszków piniowych
+        - olej roślinny z orzeszków piniowych całkowicie uwodorniony
+        - w pełni utwardzony olej roślinny z orzeszków piniowych
+        - olej roślinny z orzeszków piniowych w pełni utwardzony
+        - w pełni uwodorniony olej roślinny z orzeszków piniowych
+        - olej roślinny z orzeszków piniowych w pełni uwodorniony
+        - całkowicie utwardzone oleje roślinne z orzeszków piniowych
+        - oleje roślinne z orzeszków piniowych całkowicie utwardzone
+        - całkowicie uwodornione oleje roślinne z orzeszków piniowych
+        - oleje roślinne z orzeszków piniowych całkowicie uwodornione
+        - w pełni utwardzone oleje roślinne z orzeszków piniowych
+        - oleje roślinne z orzeszków piniowych w pełni utwardzone
+        - w pełni uwodornione oleje roślinne z orzeszków piniowych
+        - oleje roślinne z orzeszków piniowych w pełni uwodornione
+        - całkowicie utwardzony olej roślinny orzechowy z orzeszków piniowych
+        - olej roślinny orzechowy z orzeszków piniowych całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny orzechowy z orzeszków piniowych
+        - olej roślinny orzechowy z orzeszków piniowych całkowicie uwodorniony
+        - w pełni utwardzony olej roślinny orzechowy z orzeszków piniowych
+        - olej roślinny orzechowy z orzeszków piniowych w pełni utwardzony
+        - w pełni uwodorniony olej roślinny orzechowy z orzeszków piniowych
+        - olej roślinny orzechowy z orzeszków piniowych w pełni uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny orzechowy z orzeszków piniowych
+        - tłuszcz roślinny orzechowy z orzeszków piniowych całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny orzechowy z orzeszków piniowych
+        - tłuszcz roślinny orzechowy z orzeszków piniowych całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz roślinny orzechowy z orzeszków piniowych
+        - tłuszcz roślinny orzechowy z orzeszków piniowych w pełni utwardzony
+        - w pełni uwodorniony tłuszcz roślinny orzechowy z orzeszków piniowych
+        - tłuszcz roślinny orzechowy z orzeszków piniowych w pełni uwodorniony
+        - całkowicie utwardzone oleje roślinne orzechowe z orzeszków piniowych
+        - oleje roślinne orzechowe z orzeszków piniowych całkowicie utwardzone
+        - całkowicie uwodornione oleje roślinne orzechowe z orzeszków piniowych
+        - oleje roślinne orzechowe z orzeszków piniowych całkowicie uwodornione
+        - w pełni utwardzone oleje roślinne orzechowe z orzeszków piniowych
+        - oleje roślinne orzechowe z orzeszków piniowych w pełni utwardzone
+        - w pełni uwodornione oleje roślinne orzechowe z orzeszków piniowych
+        - oleje roślinne orzechowe z orzeszków piniowych w pełni uwodornione
+        - całkowicie utwardzone tłuszcze roślinne orzechowe z orzeszków piniowych
+        - tłuszcze roślinne orzechowe z orzeszków piniowych całkowicie utwardzone
+        - całkowicie uwodornione tłuszcze roślinne orzechowe z orzeszków piniowych
+        - tłuszcze roślinne orzechowe z orzeszków piniowych całkowicie uwodornione
+        - w pełni utwardzone tłuszcze roślinne orzechowe z orzeszków piniowych
+        - tłuszcze roślinne orzechowe z orzeszków piniowych w pełni utwardzone
+        - w pełni uwodornione tłuszcze roślinne orzechowe z orzeszków piniowych
+        - tłuszcze roślinne orzechowe z orzeszków piniowych w pełni uwodornione
+        - całkowicie utwardzone oleje orzechowe z orzeszków piniowych
+        - oleje orzechowe z orzeszków piniowych całkowicie utwardzone
+        - całkowicie uwodornione oleje orzechowe z orzeszków piniowych
+        - oleje orzechowe z orzeszków piniowych całkowicie uwodornione
+        - w pełni utwardzone oleje orzechowe z orzeszków piniowych
+        - oleje orzechowe z orzeszków piniowych w pełni utwardzone
+        - w pełni uwodornione oleje orzechowe z orzeszków piniowych
+        - oleje orzechowe z orzeszków piniowych w pełni uwodornione
+        - całkowicie utwardzony tłuszcz orzechowy z orzeszków piniowych
+        - tłuszcz orzechowy z orzeszków piniowych całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz orzechowy z orzeszków piniowych
+        - tłuszcz orzechowy z orzeszków piniowych całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz orzechowy z orzeszków piniowych
+        - tłuszcz orzechowy z orzeszków piniowych w pełni utwardzony
+        - w pełni uwodorniony tłuszcz orzechowy z orzeszków piniowych
+        - tłuszcz orzechowy z orzeszków piniowych w pełni uwodorniony
+        - całkowicie utwardzone tłuszcze orzechowe z orzeszków piniowych
+        - tłuszcze orzechowe z orzeszków piniowych całkowicie utwardzone
+        - całkowicie uwodornione tłuszcze orzechowe z orzeszków piniowych
+        - tłuszcze orzechowe z orzeszków piniowych całkowicie uwodornione
+        - w pełni utwardzone tłuszcze orzechowe z orzeszków piniowych
+        - tłuszcze orzechowe z orzeszków piniowych w pełni utwardzone
+        - w pełni uwodornione tłuszcze orzechowe z orzeszków piniowych
+        - tłuszcze orzechowe z orzeszków piniowych w pełni uwodornione
+    process:
+      en: "Pine nut oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
+      pl: "Olej z orzeszków piniowych ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
+    tells:
+      - 'calkowicie (?:utwardzon|uwodorn)'
+      - 'w pelni (?:utwardzon|uwodorn)'
+      - '(?<!not )(?<!non )fully hydrogenated'
+      - '(?<!not )(?<!non )totally hydrogenated'
+      - 'vollstandig gehartet'
+assertions:
+  - code: origin.vegetable_oil_derived
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A pressed vegetable oil; EU labelling requires its specific plant origin to be named.
+      pl: Wyciskany olej roślinny; przepisy UE o etykietowaniu wymagają podania jego konkretnego pochodzenia rośliny.
+    sources:
+      - id: reg-1169-2011
+        locator: Annex VII Part A, point 8
+  - code: processing.hydrogenated
+    variant: hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares hydrogenation without specifying partial or full, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje utwardzenie (bez wskazania, czy częściowe, czy całkowite), czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: processing.hydrogenated
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares partial hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje częściowe utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: health.trans_fat_source
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Partial hydrogenation is the main industrial source of trans fat; EU food sold to consumers is capped at 2 g trans fat per 100 g of fat."
+      pl: "Częściowe utwardzanie jest głównym przemysłowym źródłem tłuszczów trans; żywność sprzedawana konsumentom w UE ma limit 2 g tłuszczów trans na 100 g tłuszczu."
+    sources:
+      - id: reg-2019-649
+  - code: processing.hydrogenated
+    variant: fully-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares full hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje całkowite utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "No allergen.nuts on purpose: Annex II item 8 lists almonds, hazelnuts, walnuts, cashews, pecans, Brazil nuts, pistachios and macadamia nuts, not pine nuts."

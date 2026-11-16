@@ -23,6 +23,27 @@ names:
     - not partially hydrogenated shea oil
     - not fully hydrogenated shea oil
     - non partially hydrogenated shea oil
+    - shea nut oil
+    - shea nut butter
+    - shea nut fat
+    - not hydrogenated shea nut butter
+    - not partially hydrogenated shea nut butter
+    - not fully hydrogenated shea nut butter
+    - non partially hydrogenated shea nut butter
+    - not hydrogenated shea nut fat
+    - not partially hydrogenated shea nut fat
+    - not fully hydrogenated shea nut fat
+    - non partially hydrogenated shea nut fat
+    - not hydrogenated shea nut oil
+    - not partially hydrogenated shea nut oil
+    - not fully hydrogenated shea nut oil
+    - non partially hydrogenated shea nut oil
+    - non-hydrogenated shea nut oil
+    - unhydrogenated shea nut oil
+    - non-hydrogenated shea nut butter
+    - unhydrogenated shea nut butter
+    - non-hydrogenated shea nut fat
+    - unhydrogenated shea nut fat
   pl:
     - tłuszcz shea
     - masło shea
@@ -119,6 +140,9 @@ variants:
         - hydrogenated shea butter
         - hydrogenated shea fat
         - hydrogenated shea oil
+        - hydrogenated shea nut oil
+        - hydrogenated shea nut butter
+        - hydrogenated shea nut fat
       pl:
         - utwardzony tłuszcz shea
         - tłuszcz shea utwardzony
@@ -168,6 +192,9 @@ variants:
         - partially hydrogenated shea butter
         - partially hydrogenated shea fat
         - partially hydrogenated shea oil
+        - partially hydrogenated shea nut oil
+        - partially hydrogenated shea nut butter
+        - partially hydrogenated shea nut fat
       pl:
         - częściowo utwardzony tłuszcz shea
         - tłuszcz shea częściowo utwardzony
@@ -221,6 +248,12 @@ variants:
         - fully hydrogenated shea fat
         - fully hydrogenated shea oil
         - totally hydrogenated shea fat
+        - fully hydrogenated shea nut oil
+        - totally hydrogenated shea nut oil
+        - fully hydrogenated shea nut butter
+        - totally hydrogenated shea nut butter
+        - fully hydrogenated shea nut fat
+        - totally hydrogenated shea nut fat
       pl:
         - całkowicie utwardzony tłuszcz shea
         - tłuszcz shea całkowicie utwardzony
