@@ -7,8 +7,6 @@ names:
     - black elderberry juice
     - concentrated elderberry juice
     - elderberry juice concentrate
-    - elderberry nectar
-    - elderberries nectar
   pl:
     - sok z czarnego bzu
     - sok z bzu czarnego
@@ -69,6 +67,6 @@ review_notes:
     No blanket vegan claim: clarification/fining processing aids (e.g. gelatine) were not verified for a
     given batch.
   - >-
-    Includes elderberry nectar / elderberries nectar: under Directive 2001/112/EC Annex I, fruit nectar is
-    obtained from fruit juice/purée with water and optionally sugars/honey, and under WHO 2015 both fruit
-    juices and added sugars/honey count as free sugars (health.added_sugar).
+    No nectar names: a fruit nectar may be sweetened with sweeteners instead of sugar or honey (Directive
+    2001/112/EC Annex I), so "elderberry nectar" does not by itself establish juice or added sugar. A nectar
+    entry that keeps that uncertainty is future work; none of the 800 popular Polish labels names a nectar.
