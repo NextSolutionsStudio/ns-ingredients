@@ -1,5 +1,6 @@
 import { assert, assertEquals } from "@std/assert";
-import { parseLabel, splitTopLevel, walk } from "../../src/core/parse.ts";
+import { normName } from "../../src/core/normalize.ts";
+import { type NameOracle, type ParsedItem, parseLabel, splitTopLevel, walk } from "../../src/core/parse.ts";
 
 const names = (text: string, lang?: string) => parseLabel(text, { lang }).items.map((i) => i.name);
 
@@ -176,4 +177,132 @@ Deno.test("unbalanced brackets do not lose text", () => {
   assertEquals(a.children.map((c) => c.name), ["cukier", "kakao"]);
   const r = parseLabel("cukier), sól");
   assertEquals(r.items.map((i) => i.name), ["cukier", "sól"]);
+});
+
+// ---------------------------------------------------------------- dash and full-stop separators (issue #6)
+// A stand-in for the KB: the parser only asks whether a text is a class, or which ingredient a name is.
+const CLASSES: Record<string, string> = {
+  "regulator kwasowosci": "acidity-regulator",
+  "emulgator": "emulsifier",
+  "substancje spulchniajace": "raising-agent",
+};
+const KNOWN: Record<string, string> = {
+  "kwas cytrynowy": "citric-acid",
+  "e330": "citric-acid",
+  "lecytyny": "lecithins",
+  "mono i diglicerydy kwasow tluszczowych": "mono-and-diglycerides",
+  "weglany amonu": "ammonium-carbonates",
+  "weglany sodu": "sodium-carbonates",
+  "difosforany": "diphosphates",
+  "syrop glukozowo fruktozowy": "glucose-fructose-syrup",
+  "drozdze": "yeast",
+  "ocet": "vinegar",
+  "cukier": "sugar",
+  "aromat": "flavouring",
+  "ryba": "fish",
+  "mintaj": "pollock",
+  "miazga kakaowa": "cocoa-mass",
+  "papryczka chilli": "capsicum",
+  "serwatka w proszku": "whey-powder",
+  "z mleka": "milk",
+  "zywe kultury bakterii oraz l": "bacterial-cultures",
+  "acidophilus": "lactobacillus-acidophilus",
+};
+const kb: NameOracle = { classOf: (t) => CLASSES[normName(t)], confident: (n) => KNOWN[normName(n)] };
+const shape = (items: ParsedItem[]) => items.map((i) => [i.path, i.name, i.header, i.inheritedHeader]);
+
+Deno.test("a class header printed with a dash or a full stop heads its item like the colon form", () => {
+  const colon = parseLabel("cukier, regulator kwasowości: kwas cytrynowy").items;
+  for (const sep of [" - ", ". "]) {
+    const items = parseLabel(`cukier, regulator kwasowości${sep}kwas cytrynowy, sól`, { kb }).items;
+    assertEquals(shape(items.slice(0, 2)), shape(colon));
+    assertEquals(items[1].header, "regulator kwasowości");
+    assertEquals(items[1].raw, `regulator kwasowości${sep}kwas cytrynowy`); // the text stays as printed
+    // A full stop is a colon mistyped and opens a list; a dash heads only its own item.
+    const scope = sep === ". " ? "regulator kwasowości" : undefined;
+    assertEquals(shape([items[2]]), [["3", "sól", undefined, scope]]);
+  }
+  // Several dashed parts after the class are all under it, and only they are.
+  assertEquals(shape(parseLabel("emulgator - lecytyny - E330, sól", { kb }).items), [
+    ["1", "lecytyny", "emulgator", undefined],
+    ["2", "E330", undefined, "emulgator"],
+    ["3", "sól", undefined, undefined],
+  ]);
+  // A colon list before it ends there too: a new class was named.
+  assertEquals(
+    shape(parseLabel("emulgator: lecytyny, regulator kwasowości - kwas cytrynowy, ocet", { kb }).items),
+    [
+      ["1", "lecytyny", "emulgator", undefined],
+      ["2", "kwas cytrynowy", "regulator kwasowości", undefined],
+      ["3", "ocet", undefined, undefined],
+    ],
+  );
+  // Without the KB the parser cannot know, and leaves the item alone.
+  assertEquals(shape(parseLabel("regulator kwasowości - kwas cytrynowy").items), [
+    ["1", "regulator kwasowości - kwas cytrynowy", undefined, undefined],
+  ]);
+});
+
+Deno.test("a spaced dash between known names is a list: sibling items, numbered in order", () => {
+  const items =
+    parseLabel("mąka, substancje spulchniające: węglany amonu - węglany sodu - difosforany, sól", { kb })
+      .items;
+  const h = "substancje spulchniające";
+  assertEquals(shape(items), [
+    ["1", "mąka", undefined, undefined],
+    ["2", "węglany amonu", h, undefined],
+    ["3", "węglany sodu", undefined, h],
+    ["4", "difosforany", undefined, h],
+    ["5", "sól", undefined, h],
+  ]);
+  assertEquals(items.map((i) => i.raw), [
+    `mąka`,
+    `${h}: węglany amonu`,
+    "węglany sodu",
+    "difosforany",
+    "sól",
+  ]);
+  // Inside brackets: the parts are children in order, each keeping its own brackets; percent stays on the parent.
+  const [dough, sugar] =
+    parseLabel("ciasto 40% (mąka, węglany amonu - węglany sodu (E500)), cukier", { kb }).items;
+  assertEquals(dough.percent?.value, 40);
+  assertEquals([...walk([dough])].map((i) => [i.path, i.name, i.role]), [
+    ["1", "ciasto", "ingredient"],
+    ["1.1", "mąka", "ingredient"],
+    ["1.2", "węglany amonu", "ingredient"],
+    ["1.3", "węglany sodu", "ingredient"],
+    ["1.3.1", "E500", "e_number"],
+  ]);
+  assertEquals(sugar.path, "2");
+});
+
+Deno.test("full stops are cut before dashes, so a hyphenated word inside a part stays whole", () => {
+  assertEquals(shape(parseLabel("emulgator. mono - i diglicerydy kwasów tłuszczowych", { kb }).items), [
+    ["1", "mono - i diglicerydy kwasów tłuszczowych", "emulgator", undefined],
+  ]);
+  const named = (t: string) => parseLabel(t, { kb }).items.map((i) => i.name);
+  assertEquals(named("syrop glukozowo - fruktozowy. drożdże"), ["syrop glukozowo - fruktozowy", "drożdże"]);
+  assertEquals(named("ocet. cukier"), ["ocet", "cukier"]);
+});
+
+Deno.test("a dash or a full stop the KB cannot vouch for leaves the item exactly as printed", () => {
+  for (
+    const text of [
+      "mono - i diglicerydy kwasów tłuszczowych", // "mono" alone is no ingredient
+      "syrop glukozowo - fruktozowy", // a hyphenated word
+      "aro - mat", // a word broken across lines
+      "Ryba - Katsuwonus pelamis", // a species gloss
+      "A - Mintaj", // a key letter
+      "miazga kakaowa - w polewie kakaowej", // where it is used
+      "papryczka chilli - płatki", // its form
+      "Gatunek i pochodzenie ryb - patrz nadruk",
+      "serwatka w proszku - z mleka", // a source qualifier, though both halves are known
+      "E330 - kwas cytrynowy", // one ingredient named twice
+      "żywe kultury bakterii oraz L. acidophilus", // a genus initial, though both halves are known
+      "tzw. aromat",
+      "regulator kwasowości - nowy składnik", // a class, then nothing the KB knows
+    ]
+  ) {
+    assertEquals(parseLabel(text, { kb }), parseLabel(text), text);
+  }
 });

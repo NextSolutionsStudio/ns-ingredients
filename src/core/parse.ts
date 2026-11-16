@@ -1,8 +1,21 @@
 // Ingredient-list parser: raw label text → tree of items. Knows nothing about the KB; the
 // analyser decides what each item *is*. Handles PL/EN/DE labels: headers, nested brackets,
 // QUID percentages, "class: items", source qualifiers, CAPS allergen emphasis, precautionary
-// clauses, mandatory statements, and trailing non-ingredient text.
+// clauses, mandatory statements, and trailing non-ingredient text. Where punctuation is ambiguous
+// (a spaced dash, a full stop) it may ask an injected `NameOracle`, and splits only when that agrees.
 import { findENumbers, normName } from "./normalize.ts";
+
+/**
+ * What the parser may ask about names. Punctuation alone cannot tell "regulator kwasowości - kwas cytrynowy"
+ * (a class, then its additive) or "węglany amonu - węglany sodu" (a list) from "syrop glukozowo - fruktozowy"
+ * (one hyphenated word); knowing the names can. Without an oracle the parser splits on syntax only.
+ */
+export interface NameOracle {
+  /** The function class a text names ("emulgator" → "emulsifier"), if any. */
+  classOf(text: string): string | undefined;
+  /** The ingredient an item with this name would be matched to confidently, if any. */
+  confident(name: string): string | undefined;
+}
 
 export interface Percent {
   value?: number;
@@ -281,14 +294,121 @@ function emphasis(raw: string, allCaps: boolean): string[] {
   return [...new Set([...marked, ...caps])];
 }
 
-function parseItem(raw: string, path: string, allCaps: boolean, lessThan: boolean): ParsedItem {
+/** "emulgatory: lecytyny" — a short, bracket-free prefix before a colon. */
+function colonHeader(text: string): RegExpMatchArray | null {
+  const hm = text.match(/^([^():]{2,48}?)\s*:\s*(.+)$/su);
+  return hm && hm[1].trim().split(/\s+/).length <= 5 ? hm : null;
+}
+
+type Span = [number, number];
+// Not after a lone letter: "L. acidophilus", "B. lactis" abbreviate a genus ("E 150d. kwas" is no initial).
+const STOP_SEP = /(?<!(?:^|[\s(])\p{L})\.\s+/uy;
+const DASH_SEP = / - /y;
+const JOINED_RE = / - |\.\s/;
+
+/** Trimmed, non-empty spans of s[from, to) between top-level (unbracketed) matches of the sticky `sep`. */
+function cutTopLevel(s: string, sep: RegExp, from = 0, to = s.length): Span[] {
+  const spans: Span[] = [];
+  let depth = 0;
+  let start = from;
+  const push = (end: number) => {
+    const part = s.slice(start, end);
+    const a = start + part.length - part.trimStart().length;
+    const b = start + part.trimEnd().length;
+    if (b > a) spans.push([a, b]);
+  };
+  for (let i = from; i < to; i++) {
+    if (s[i] === "(") depth++;
+    else if (s[i] === ")") depth = Math.max(0, depth - 1);
+    else if (depth === 0) {
+      sep.lastIndex = i;
+      const m = sep.exec(s);
+      if (m && i + m[0].length <= to) {
+        push(i);
+        start = i + m[0].length;
+        i = start - 1;
+      }
+    }
+  }
+  push(to);
+  return spans;
+}
+
+/**
+ * The ingredient one item names by its own name, when the analyser will match it confidently. A source
+ * qualifier ("z mleka") belongs to the item before it, never stands alone; `headed` allows a colon header.
+ */
+function ownId(text: string, kb: NameOracle, headed: boolean): string | undefined {
+  // Its brackets are not its name: parsing them here would re-parse every level below, once per level.
+  const it = parseItem(splitBrackets(text).own, "", false, false);
+  if (!it.name || (it.header && !headed) || QUALIFIER_RE.test(normName(it.name))) return undefined;
+  return kb.confident(it.name);
+}
+
+/** The ingredient one item names: by its own name, or as "class - item". */
+const itemId = (text: string, kb: NameOracle, headed = true) =>
+  ownId(text, kb, headed) ?? classLead(text, kb)?.id;
+
+/**
+ * "regulator kwasowości - kwas cytrynowy", "emulgator. lecytyny": a known class, a spaced dash or a full stop,
+ * then one known item — the colon form "regulator kwasowości: kwas cytrynowy" printed with other punctuation.
+ * A full stop is looked for first, so "emulgator. mono - i diglicerydy" keeps its hyphenated word whole.
+ */
+function classLead(text: string, kb: NameOracle): { header: string; rest: string; id: string } | null {
+  if (!JOINED_RE.test(text)) return null;
+  let parts = cutTopLevel(text, STOP_SEP);
+  if (parts.length < 2) parts = cutTopLevel(text, DASH_SEP);
+  if (parts.length < 2) return null;
+  const header = text.slice(...parts[0]);
+  const rest = text.slice(parts[1][0]).trim();
+  const id = kb.classOf(header) ? ownId(rest, kb, false) : undefined;
+  return id ? { header, rest, id } : null;
+}
+
+/**
+ * Accept a cut when the KB agrees: a class heading known items (kept with the first), or every part known.
+ * The parts must name different ingredients: "E330 - kwas cytrynowy" is one ingredient named twice.
+ */
+function joinSpans(s: string, parts: Span[], kb: NameOracle): Span[] | null {
+  if (parts.length < 2) return null;
+  const text = ([a, b]: Span) => s.slice(a, b);
+  const distinct = (ids: (string | undefined)[]) => ids.every(Boolean) && new Set(ids).size === ids.length;
+  if (kb.classOf(text(parts[0])) && distinct(parts.slice(1).map((p) => itemId(text(p), kb, false)))) {
+    return [[parts[0][0], parts[1][1]], ...parts.slice(2)];
+  }
+  return distinct(parts.map((p) => itemId(text(p), kb))) ? parts : null;
+}
+
+/**
+ * A spaced dash or a full stop used as a list separator: "węglany amonu - węglany sodu - difosforany",
+ * "ocet. cukier". Cut only where every part is known, so a hyphenated word ("syrop glukozowo - fruktozowy"),
+ * a Latin name ("Ryba - Katsuwonus pelamis") or a qualifier ("serwatka - z mleka") stays one item.
+ * Full stops first, then dashes inside each part; a part that is a known class stays with the item it heads.
+ */
+function splitJoined(seg: string, kb?: NameOracle): string[] {
+  if (!kb || !JOINED_RE.test(seg)) return [seg];
+  const stops = cutTopLevel(seg, STOP_SEP);
+  const pieces = stops.flatMap((s) => joinSpans(seg, cutTopLevel(seg, DASH_SEP, s[0], s[1]), kb) ?? [s]);
+  const out = stops.length > 1 ? joinSpans(seg, pieces, kb) : pieces;
+  return out && out.length > 1 ? out.map(([a, b]) => seg.slice(a, b)) : [seg];
+}
+
+function parseItem(
+  raw: string,
+  path: string,
+  allCaps: boolean,
+  lessThan: boolean,
+  kb?: NameOracle,
+): ParsedItem {
   let text = raw.trim().replace(/^[-*]\s*/, "");
   let header: string | undefined;
-  // "emulgatory: lecytyny" — a short, bracket-free prefix before a colon.
-  const hm = text.match(/^([^():]{2,48}?)\s*:\s*(.+)$/su);
-  if (hm && hm[1].trim().split(/\s+/).length <= 5) {
+  const hm = colonHeader(text);
+  if (hm) {
     header = hm[1].trim();
     text = hm[2].trim();
+  } else if (kb) {
+    const lead = classLead(text, kb);
+    if (lead) [header, text] = [lead.header, lead.rest];
   }
   const { own, groups } = splitBrackets(text);
   let percent: Percent | undefined;
@@ -307,9 +427,9 @@ function parseItem(raw: string, path: string, allCaps: boolean, lessThan: boolea
       percent ??= toPercent(pOnly);
       continue;
     }
-    for (const part of splitTopLevel(g)) {
+    for (const part of splitTopLevel(g).flatMap((p) => splitJoined(p, kb))) {
       childIndex++;
-      const child = parseItem(part, `${path}.${childIndex}`, allCaps, false);
+      const child = parseItem(part, `${path}.${childIndex}`, allCaps, false, kb);
       const n = normName(child.name);
       const es = findENumbers(child.name);
       if (
@@ -342,7 +462,7 @@ function parseItem(raw: string, path: string, allCaps: boolean, lessThan: boolea
   };
 }
 
-export function parseLabel(input: string, opts: { lang?: string } = {}): ParsedLabel {
+export function parseLabel(input: string, opts: { lang?: string; kb?: NameOracle } = {}): ParsedLabel {
   const prepared = prepare(input);
   const { block, lang } = selectBlock(prepared, opts.lang);
 
@@ -379,21 +499,30 @@ export function parseLabel(input: string, opts: { lang?: string } = {}): ParsedL
   let lessThan = false;
   let currentHeader: string | undefined;
   let n = 0;
-  for (let seg of splitTopLevel(list)) {
-    if (LESS_THAN_RE.test(seg)) {
-      lessThan = true;
-      seg = seg.replace(LESS_THAN_RE, "");
-      if (!seg) continue;
+  for (const part of splitTopLevel(list)) {
+    // A colon opens a list that runs to the next header ("emulgatory: lecytyny, E471"), and so does a full stop
+    // typed for one ("stabilizatory. mączka chleba świętojańskiego, guma guar"). A class printed with a dash heads
+    // only what is printed with it ("regulator kwasowości - kwas cytrynowy, hydrolizat białka").
+    let dashedClass = false;
+    for (let seg of splitJoined(part, opts.kb)) {
+      if (LESS_THAN_RE.test(seg)) {
+        lessThan = true;
+        seg = seg.replace(LESS_THAN_RE, "");
+        if (!seg) continue;
+      }
+      n++;
+      const item = parseItem(seg, String(n), allCaps, lessThan, opts.kb);
+      if (!item.name && !item.children.length) {
+        n--;
+        continue;
+      }
+      if (item.header) {
+        currentHeader = item.header;
+        dashedClass ||= /^ - /.test(seg.slice(seg.indexOf(item.header) + item.header.length));
+      } else if (currentHeader) item.inheritedHeader = currentHeader;
+      items.push(item);
     }
-    n++;
-    const item = parseItem(seg, String(n), allCaps, lessThan);
-    if (!item.name && !item.children.length) {
-      n--;
-      continue;
-    }
-    if (item.header) currentHeader = item.header;
-    else if (currentHeader) item.inheritedHeader = currentHeader;
-    items.push(item);
+    if (dashedClass) currentHeader = undefined;
   }
   return { list, items, mayContain, statements, trailing, lang };
 }
