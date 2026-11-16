@@ -126,9 +126,9 @@ sources:
     licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
     accessed: '2026-11-16'
     note: >-
-      Abstract opened via Europe PMC. Confirms the UL of 2,500 mg/day for adults (including pregnant and
-      lactating women) from diet and supplements combined; insufficient data to set a UL for infants, children
-      or adolescents.
+      Abstract opened via Europe PMC (indexed 2026-04-22, PMID 42016128). Confirms the UL of 2,500 mg/day for
+      adults (including pregnant and lactating women) from diet and supplements combined; insufficient data to
+      set a UL for infants, children or adolescents.
   - id: efsa-nmn-2026
     type: regulatory_opinion
     title: >-

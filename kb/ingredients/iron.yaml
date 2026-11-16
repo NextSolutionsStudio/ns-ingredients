@@ -26,16 +26,17 @@ summary:
   en: >-
     Essential mineral added to fortified foods (such as breakfast cereals) and supplements using EU-permitted
     iron compounds including ferrous sulfate, ferrous fumarate, ferric pyrophosphate and elemental iron. In
-    2024 EFSA concluded no tolerable upper intake level could be established, and set a conservative safe level
-    of intake of 40 mg/day for adults (10-35 mg/day for children and adolescents) based on avoiding black
-    stools from unabsorbed iron.
+    2024 EFSA concluded no tolerable upper intake level could be established because the threshold for systemic
+    iron-overload risk is undefined, and set a conservative safe level of intake of 40 mg/day for adults
+    (10-35 mg/day for children and adolescents, and 5 mg/day supplemental iron for infants 4-11 months).
   pl: >-
     Niezbędny składnik mineralny dodawany do żywności wzbogacanej (np. płatków śniadaniowych) oraz suplementów
     diety w postaci dopuszczonych w UE związków żelaza, takich jak siarczan żelaza(II), fumaran żelaza(II),
     pirofosforan żelaza(III) czy żelazo elementarne. W 2024 r. EFSA uznała, że nie można ustalić górnego
-    tolerowanego poziomu spożycia (UL), i wyznaczyła zachowawczy bezpieczny poziom spożycia 40 mg/dobę dla
-    dorosłych (10-35 mg/dobę dla dzieci i młodzieży) w oparciu o brak czarnych stolców z niewchłoniętego
-    żelaza.
+    tolerowanego poziomu spożycia (UL), ponieważ próg ryzyka ogólnoustrojowego przeciążenia żelazem nie został
+    określony, i wyznaczyła zachowawczy bezpieczny poziom spożycia wynoszący 40 mg/dobę dla dorosłych
+    (10-35 mg/dobę dla dzieci i młodzieży oraz 5 mg/dobę żelaza z suplementów dla niemowląt w wieku 4-11
+    miesięcy).
 assertions:
   - code: origin.mineral
     certainty: 'yes'

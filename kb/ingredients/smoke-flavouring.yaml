@@ -19,18 +19,19 @@ summary:
     maple), regulated separately from other flavourings in the EU under Regulation (EC) No 2065/2003. In
     November 2023 EFSA evaluated the eight primary products submitted for renewal (SF-001 to SF-006, SF-008
     and SF-009) and concluded that genotoxicity concerns were identified or could not be ruled out for every
-    one of them. In July 2024 Commission Implementing Regulation (EU) 2024/2067 deleted all ten primary
-    products (SF-001 to SF-010) from the EU Union list, setting transitional phase-out deadlines of 1 July
-    2026 for general foods and 1 July 2029 for cheese, meat and processed fish/roe categories.
+    one of them. Adopted on 31 July 2024 (entering into force on 21 August 2024), Commission Implementing
+    Regulation (EU) 2024/2067 deleted all ten primary products (SF-001 to SF-010) from the EU Union list,
+    setting transitional phase-out deadlines of 1 July 2026 for general foods and 1 July 2029 for cheese, meat
+    and processed fish/roe categories.
   pl: >-
     Kondensaty dymu otrzymywane przez kontrolowaną pirolizę drewna liściastego (np. buku, dębu, hikory lub
     klonu), regulowane w UE odrębnie od pozostałych aromatów na mocy Rozporządzenia (WE) nr 2065/2003. W
     listopadzie 2023 r. EFSA oceniła osiem produktów pierwotnych zgłoszonych do odnowienia (SF-001 do SF-006,
     SF-008 i SF-009) i stwierdziła, że w przypadku każdego z nich zidentyfikowano obawy dotyczące
-    genotoksyczności lub nie można ich było wykluczyć. W lipcu 2024 r. Rozporządzenie Wykonawcze Komisji (UE)
-    2024/2067 usunęło wszystkie dziesięć produktów pierwotnych (SF-001 do SF-010) z unijnego wykazu,
-    wyznaczając okresy przejściowe na wprowadzanie do obrotu do 1 lipca 2026 r. dla ogółu żywności oraz do 1
-    lipca 2029 r. dla serów, mięsa i przetworzonych ryb/ikry.
+    genotoksyczności lub nie można ich było wykluczyć. Przyjęte 31 lipca 2024 r. (wchodzące w życie 21 sierpnia
+    2024 r.) Rozporządzenie Wykonawcze Komisji (UE) 2024/2067 usunęło wszystkie dziesięć produktów pierwotnych
+    (SF-001 do SF-010) z unijnego wykazu, wyznaczając okresy przejściowe na wprowadzanie do obrotu do 1 lipca
+    2026 r. dla ogółu żywności oraz do 1 lipca 2029 r. dla serów, mięsa i przetworzonych ryb/ikry.
 assertions:
   - code: health.no_safe_level_established
     certainty: 'yes'
@@ -66,16 +67,17 @@ assertions:
     jurisdiction: EU
     note:
       en: >-
-        Commission Implementing Regulation (EU) 2024/2067 deleted all ten smoke flavouring primary products
-        (SF-001 to SF-010) from the EU Union list in August 2024. Placing foods containing them on the market
-        ended on 1 July 2026 for general foods (sauces, snacks, soups), while cheese (cat. 1.7), meat (cat.
-        8), processed fish (cat. 9.2) and fish roe (cat. 9.3) have a transitional phase-out until 1 July 2029.
+        Commission Implementing Regulation (EU) 2024/2067 (adopted 31 July 2024, in force 21 August 2024)
+        deleted all ten smoke flavouring primary products (SF-001 to SF-010) from the EU Union list. Placing
+        foods containing them on the market ended on 1 July 2026 for general foods (sauces, snacks, soups),
+        while cheese (cat. 1.7), meat (cat. 8), processed fish (cat. 9.2) and fish roe (cat. 9.3) have a
+        transitional phase-out until 1 July 2029.
       pl: >-
-        Rozporządzenie Wykonawcze (UE) 2024/2067 usunęło w sierpniu 2024 r. wszystkie dziesięć produktów
-        pierwotnych aromatów dymu wędzarniczego (SF-001 do SF-010) z unijnego wykazu. Wprowadzanie do obrotu
-        żywności z ich dodatkiem zakończyło się 1 lipca 2026 r. dla ogółu żywności (sosy, przekąski, zupy),
-        natomiast sery (kat. 1.7), mięso (kat. 8), przetworzone ryby (kat. 9.2) i ikra (kat. 9.3) mają okres
-        przejściowy do 1 lipca 2029 r.
+        Rozporządzenie Wykonawcze (UE) 2024/2067 (przyjęte 31 lipca 2024 r., obowiązujące od 21 sierpnia 2024
+        r.) usunęło wszystkie dziesięć produktów pierwotnych aromatów dymu wędzarniczego (SF-001 do SF-010) z
+        unijnego wykazu. Wprowadzanie do obrotu żywności z ich dodatkiem zakończyło się 1 lipca 2026 r. dla
+        ogółu żywności (sosy, przekąski, zupy), natomiast sery (kat. 1.7), mięso (kat. 8), przetworzone ryby
+        (kat. 9.2) i ikra (kat. 9.3) mają okres przejściowy do 1 lipca 2029 r.
     sources:
       - id: reg-2024-2067
         locator: Articles 1 and 2
@@ -111,7 +113,7 @@ assertions:
         NOVA traktuje aromaty (w tym aromaty dymu wędzarniczego) jako wskaźniki produktów grupy 4 (wysoko
         przetworzonych); sam w sobie słaby, dyskusyjny sygnał.
     sources:
-      - id: reg-2065-2003
+      - id: prot-monteiro-2019-nova
   - code: origin.plant
     certainty: 'yes'
     kind: fact

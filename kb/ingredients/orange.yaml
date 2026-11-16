@@ -7,18 +7,15 @@ names:
   pl:
     - pomarańcza
     - pomarańcze
-    - skórka pomarańczowa
-    - skórka z pomarańczy
   de:
     - Orange
     - Orangen
 summary:
   en: >-
-    Sweet orange (Citrus × sinensis), whole fruit or peel. Orange juice is not covered here: juices count as
-    free sugars.
+    Sweet orange (Citrus × sinensis), whole fruit. Orange juice is not covered here: juices count as free
+    sugars.
   pl: >-
-    Pomarańcza (Citrus × sinensis), owoc lub skórka. Sok pomarańczowy nie jest tu ujęty: soki liczą się jako
-    cukry wolne.
+    Pomarańcza (Citrus × sinensis), owoc. Sok pomarańczowy nie jest tu ujęty: soki liczą się jako cukry wolne.
 assertions:
   - code: origin.plant
     certainty: 'yes'

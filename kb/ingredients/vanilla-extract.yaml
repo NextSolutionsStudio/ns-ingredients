@@ -31,20 +31,15 @@ assertions:
     kind: fact
     grade: A
     note:
-      en: >-
-        Obtained by extracting vanilla pods (vegetable material) in ethanol and water; a flavouring preparation
-        from plant material under Reg 1334/2008 Art. 3(2)(d).
-      pl: >-
-        Otrzymywany przez ekstrakcję lasek wanilii (materiał roślinny) w etanolu i wodzie; preparat aromatyczny
-        z materiału roślinnego w rozumieniu art. 3 ust. 2 lit. d) Rozp. 1334/2008.
+      en: From vanilla pods (Vanilla planifolia / Vanilla tahitensis).
+      pl: Z lasek wanilii (Vanilla planifolia / Vanilla tahitensis).
     sources:
-      - id: wiki-vanilla-extract
-      - id: reg-1334-2008
-        locator: Article 3(2)(d)
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
   - code: diet.vegan
     certainty: 'yes'
-    kind: fact
-    grade: A
+    kind: estimate
+    grade: D
     note:
       en: Extracted from vanilla pods in ethanol and water; no animal material.
       pl: Ekstrahowany z lasek wanilii w etanolu i wodzie; brak surowców zwierzęcych.
