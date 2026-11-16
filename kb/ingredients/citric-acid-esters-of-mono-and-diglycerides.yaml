@@ -54,19 +54,18 @@ assertions:
     grade: A
     note:
       en: >-
-        Fatty acids and mono-/diglycerides used in E 472c are commonly derived from edible vegetable oils and
-        fats (EFSA 2020; EFSA 2025 Section 3.5.3.2), though Reg 231/2012 does not restrict the botanical or
-        zoological fat source.
+        EFSA (2025, Section 3.2.1) describes E 472c as citric acid reacted with E 471, or with glycerol and fatty
+        acids obtained from edible oils and fats; the specification does not name the fat, so a vegetable source
+        is possible but not shown.
       pl: >-
-        Kwasy tłuszczowe i mono-/diglicerydy stosowane do produkcji E 472c pochodzą zwykle z jadalnych olejów i
-        tłuszczów roślinnych (EFSA 2020; EFSA 2025 sekcja 3.5.3.2), jednak rozporządzenie 231/2012 nie ogranicza
-        źródła tłuszczu.
+        EFSA (2025, sekcja 3.2.1) opisuje E 472c jako kwas cytrynowy przereagowany z E 471 albo z glicerolem i
+        kwasami tłuszczowymi z jadalnych olejów i tłuszczów; specyfikacja nie wskazuje rodzaju tłuszczu, więc
+        źródło roślinne jest możliwe, ale nie wykazane.
     sources:
       - id: reg-231-2012
         locator: E 472c (Definition)
       - id: efsa-e472c-2025
-        locator: Section 3.5.3.2
-      - id: efsa-e472a-f-2020
+        locator: Section 3.2.1
   - code: origin.animal
     certainty: maybe
     kind: fact
