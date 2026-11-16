@@ -21,15 +21,14 @@ names:
     - Thiaminmononitrat
 summary:
   en: >-
-    Water-soluble vitamin B1, required for carbohydrate and amino-acid metabolism. Permitted in EU fortified
-    foods and supplements mainly as thiamin hydrochloride and thiamin mononitrate. The EU Scientific
-    Committee on Food (2001) established no tolerable upper intake level due to absence of established
-    adverse-effect thresholds and insufficient dose-response data.
+    Water-soluble vitamin B1, whose requirement relates to energy and carbohydrate intake. Permitted in EU
+    fortified foods and supplements mainly as thiamin hydrochloride and thiamin mononitrate. According to
+    the NNR 2023 scoping review, no safe upper intake level could be set for thiamin due to a lack of data.
   pl: >-
-    Rozpuszczalna w wodzie witamina B1, niezbędna w metabolizmie węglowodanów i aminokwasów. Dopuszczona w
-    UE do wzbogacania żywności i suplementów diety głównie jako chlorowodorek tiaminy i monoazotan tiaminy.
-    Komitet Naukowy ds. Żywności UE (SCF, 2001) nie ustalił górnego tolerowanego poziomu spożycia (UL) ze
-    względu na brak ustalonego progu działań niepożądanych i brak danych dawka-odpowiedź.
+    Rozpuszczalna w wodzie witamina B1, której zapotrzebowanie wiąże się ze spożyciem energii i węglowodanów.
+    Dopuszczona w UE do wzbogacania żywności i suplementów diety głównie jako chlorowodorek tiaminy i
+    monoazotan tiaminy. Według przeglądu NNR 2023 nie było możliwe ustalenie bezpiecznego górnego poziomu
+    spożycia tiaminy ze względu na brak danych.
 assertions:
   - code: diet.vegan
     certainty: 'yes'
@@ -63,6 +62,6 @@ review_status: draft
 provenance: ai-drafted
 review_notes:
   - >-
-    No health.high_dose_supplement_nutrient assertion and no UL reference_values entry: as reported in the
-    NNR 2023 scoping review (PMC10710862), SCF (2001) could not establish a tolerable upper intake level for
-    thiamin due to lack of adverse-effect data.
+    No health.high_dose_supplement_nutrient assertion and no UL reference_values entry: the opened NNR 2023
+    scoping review abstract (nnr-thiamin-2023, PMID 38084159) states that no safe upper intake level could be
+    set for thiamin due to a lack of data.

@@ -1,5 +1,5 @@
 # Sources for popular-pl-b1 (batch b1, 2026-11-16).
-# EFSA abstracts and PMC full texts were opened via Europe PMC (Wiley returns 403);
+# EFSA, NNR and journal abstracts were opened via Europe PMC (Wiley returns 403);
 # EU regulations were opened via Spain's official DOUE mirror (boe.es) where EUR-Lex returned HTTP 202.
 sources:
   - id: reg-1925-2006
@@ -39,11 +39,11 @@ sources:
     licence: "EU reuse policy (Decision 2011/833/EU) — CC BY 4.0"
     accessed: '2026-11-16'
     note: >-
-      Canonical ELI URL; opened via boe.es DOUE mirror (DOUE-L-2024-81233). Deletes SF-001 through SF-010 from
-      the Union list after non-renewal decisions (SF-007 and SF-010 expired 1 Jan 2024 without renewal
-      application); sets transitional placing-on-the-market deadlines of 1 July 2029 for categories 1.7
-      (cheese), 8 (meat), 9.2 (processed fish) and 9.3 (fish roe), and 1 July 2026 for all other food
-      categories.
+      Canonical ELI URL; opened via boe.es DOUE mirror (DOUE-L-2024-81233). Article 1 deletes SF-001 through
+      SF-010 from the Union list (Recital 3: SF-007 and SF-010 expired 1 January 2024 without renewal
+      application); Article 2 sets transitional placing-on-the-market deadlines for SF-001 to SF-006, SF-008
+      and SF-009 of 1 July 2029 for categories 1.7 (cheese), 8 (meat), 9.2 (processed fish) and 9.3 (fish
+      roe), and 1 July 2026 for all other food categories.
   - id: reg-828-2014
     type: regulation
     title: >-
@@ -112,9 +112,12 @@ sources:
     licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
     accessed: '2026-11-16'
     note: >-
-      Abstract opened via Europe PMC. Concludes no UL could be established for iron; sets a safe level of intake
-      of 40 mg/day for adults (including pregnancy and lactation), 10-35 mg/day for children and adolescents,
-      and 5 mg/day supplemental iron for infants 4-11 months based on absence of black stools.
+      Abstract opened via Europe PMC (PMID 38868106). Concludes no UL could be established for iron; sets an
+      adult safe level of intake of 40 mg/day (including pregnancy and lactation) based on interventions where
+      black stools did not occur at 20-25 mg/day supplemental iron plus 15 mg/day background intake, scales
+      that 40 mg/day value down to 10-35 mg/day for children and adolescents (1-17 years), and scales the
+      25 mg/day supplemental figure to 5 mg/day supplemental iron for infants 7-11 months (extended to 4-6
+      months; covering fortified foods and food supplements, excluding infant and follow-on formulae).
   - id: efsa-calcium-ul-2012
     type: regulatory_opinion
     title: Scientific Opinion on the Tolerable Upper Intake Level of calcium
@@ -142,9 +145,10 @@ sources:
     licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
     accessed: '2026-11-16'
     note: >-
-      Full text opened via Europe PMC (PMC13158811). Section 1.2 states the SCF (2002) Tolerable Upper Intake
-      Level for nicotinamide of 900 mg/day (12.5 mg/kg bw/day) for adults (excluding pregnant and lactating
-      women).
+      Abstract opened via Europe PMC (PMID 42125559). Evaluates beta-nicotinamide mononucleotide as a niacin
+      source in food supplements for adults (excluding pregnant and lactating women) and notes that the
+      proposed maximum intake (corresponding to 109.7 mg/day of nicotinamide) remains below the upper level
+      (UL) of 900 mg/day for nicotinamide.
   - id: nnr-niacin-2023
     type: review
     title: Niacin - a scoping review for Nordic Nutrition Recommendations 2023
@@ -156,9 +160,9 @@ sources:
     licence: CC BY 4.0
     accessed: '2026-11-16'
     note: >-
-      Full text opened via Europe PMC (PMC10770643). States the EU SCF Tolerable Upper Intake Levels of
-      10 mg/day for nicotinic acid (based on flushing at 30-1000 mg/day) and 900 mg/day for nicotinamide for
-      adults.
+      Abstract opened via Europe PMC (PMID 38187785). Defines niacin (vitamin B3) as the common term for
+      nicotinic acid, nicotinamide and biologically active derivatives, with tryptophan as de novo NAD
+      precursor, expressed as niacin equivalents (NE).
   - id: nnr-pantothenic-2023
     type: review
     title: Pantothenic acid - a scoping review for Nordic Nutrition Recommendations 2023
@@ -170,8 +174,9 @@ sources:
     licence: CC BY 4.0
     accessed: '2026-11-16'
     note: >-
-      Full text opened via Europe PMC (PMC10770646). Reports that no UL was established by the SCF due to lack
-      of systematic oral dose-response studies.
+      Abstract opened via Europe PMC (PMID 38187802). Reports that pantothenic acid deficiency is rare and
+      toxicity is negligible, no dietary reference values (DRVs) were set in NNR since 2012 due to lack of
+      data, and no health concerns related to pantothenic acid were identified.
   - id: nnr-thiamin-2023
     type: review
     title: Thiamin (Vitamin B1) - A scoping review for Nordic Nutrition Recommendations 2023
@@ -183,8 +188,9 @@ sources:
     licence: CC BY 4.0
     accessed: '2026-11-16'
     note: >-
-      Full text opened via Europe PMC (PMC10710862). Reports that no UL could be established by SCF (2001) due
-      to lack of data; notes thiamine chloride and thiamine mononitrate as permitted supplement salts.
+      Abstract opened via Europe PMC (PMID 38084159). Reports that it has not been possible to set a safe
+      upper intake level for thiamine due to a lack of data, and relates thiamine requirement to energy and
+      carbohydrate intake.
   - id: pmc-vitd2-2026
     type: review
     title: >-
@@ -198,8 +204,9 @@ sources:
     licence: CC BY 4.0
     accessed: '2026-11-16'
     note: >-
-      Abstract and text opened via Europe PMC (PMC13414236). Covers vitamin D2 (ergocalciferol) from fungal,
-      yeast and algal ergosterol under UV irradiation as a non-animal vitamin D source.
+      Abstract opened via Europe PMC (PMID 42506436). Evaluates UV-irradiated mushrooms and algae as
+      non-animal sources of vitamin D2; concludes UV-enhanced mushrooms represent a quantifiable dietary source
+      of vitamin D2, whereas algae cannot currently be considered a validated source of vitamin D.
   - id: efsa-sf001-2023
     type: regulatory_opinion
     title: Scientific opinion on the renewal of the authorisation of proFagus Smoke R714 (SF-001) as a smoke flavouring Primary Product

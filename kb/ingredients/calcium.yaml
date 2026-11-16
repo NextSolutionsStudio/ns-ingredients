@@ -30,7 +30,7 @@ assertions:
       - id: reg-1925-2006
         locator: Annex I & Annex II
   - code: diet.vegan
-    certainty: 'yes'
+    certainty: maybe
     kind: estimate
     grade: C
     note:

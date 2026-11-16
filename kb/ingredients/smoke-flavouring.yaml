@@ -20,9 +20,10 @@ summary:
     November 2023 EFSA evaluated the eight primary products submitted for renewal (SF-001 to SF-006, SF-008
     and SF-009) and concluded that genotoxicity concerns were identified or could not be ruled out for every
     one of them. Adopted on 31 July 2024 (entering into force on 21 August 2024), Commission Implementing
-    Regulation (EU) 2024/2067 deleted all ten primary products (SF-001 to SF-010) from the EU Union list,
-    setting transitional phase-out deadlines of 1 July 2026 for general foods and 1 July 2029 for cheese, meat
-    and processed fish/roe categories.
+    Regulation (EU) 2024/2067 deleted all ten primary products (SF-001 to SF-010) from the EU Union list:
+    SF-007 and SF-010 had expired on 1 January 2024 without renewal applications, while SF-001 to SF-006,
+    SF-008 and SF-009 received transitional placing-on-the-market deadlines of 1 July 2026 for general foods
+    and 1 July 2029 for cheese, meat and processed fish/roe categories.
   pl: >-
     Kondensaty dymu otrzymywane przez kontrolowaną pirolizę drewna liściastego (np. buku, dębu, hikory lub
     klonu), regulowane w UE odrębnie od pozostałych aromatów na mocy Rozporządzenia (WE) nr 2065/2003. W
@@ -30,8 +31,10 @@ summary:
     SF-008 i SF-009) i stwierdziła, że w przypadku każdego z nich zidentyfikowano obawy dotyczące
     genotoksyczności lub nie można ich było wykluczyć. Przyjęte 31 lipca 2024 r. (wchodzące w życie 21 sierpnia
     2024 r.) Rozporządzenie Wykonawcze Komisji (UE) 2024/2067 usunęło wszystkie dziesięć produktów pierwotnych
-    (SF-001 do SF-010) z unijnego wykazu, wyznaczając okresy przejściowe na wprowadzanie do obrotu do 1 lipca
-    2026 r. dla ogółu żywności oraz do 1 lipca 2029 r. dla serów, mięsa i przetworzonych ryb/ikry.
+    (SF-001 do SF-010) z unijnego wykazu: zezwolenia dla SF-007 i SF-010 wygasły 1 stycznia 2024 r. bez
+    wniosków o odnowienie, natomiast dla SF-001 do SF-006, SF-008 i SF-009 wyznaczono okresy przejściowe na
+    wprowadzanie do obrotu do 1 lipca 2026 r. dla ogółu żywności oraz do 1 lipca 2029 r. dla serów, mięsa i
+    przetworzonych ryb/ikry.
 assertions:
   - code: health.no_safe_level_established
     certainty: 'yes'
@@ -68,19 +71,21 @@ assertions:
     note:
       en: >-
         Commission Implementing Regulation (EU) 2024/2067 (adopted 31 July 2024, in force 21 August 2024)
-        deleted all ten smoke flavouring primary products (SF-001 to SF-010) from the EU Union list. Placing
-        foods containing them on the market ended on 1 July 2026 for general foods (sauces, snacks, soups),
-        while cheese (cat. 1.7), meat (cat. 8), processed fish (cat. 9.2) and fish roe (cat. 9.3) have a
-        transitional phase-out until 1 July 2029.
+        deleted all ten smoke flavouring primary products (SF-001 to SF-010) from the EU Union list (Art. 1):
+        SF-007 and SF-010 expired on 1 January 2024 without renewal applications (Recital 3), while Article 2's
+        transitional placing-on-the-market deadlines for SF-001 to SF-006, SF-008 and SF-009 ended on 1 July
+        2026 for all other food categories and run until 1 July 2029 for categories 1.7 (cheese), 8 (meat),
+        9.2 (processed fish) and 9.3 (fish roe).
       pl: >-
         Rozporządzenie Wykonawcze (UE) 2024/2067 (przyjęte 31 lipca 2024 r., obowiązujące od 21 sierpnia 2024
         r.) usunęło wszystkie dziesięć produktów pierwotnych aromatów dymu wędzarniczego (SF-001 do SF-010) z
-        unijnego wykazu. Wprowadzanie do obrotu żywności z ich dodatkiem zakończyło się 1 lipca 2026 r. dla
-        ogółu żywności (sosy, przekąski, zupy), natomiast sery (kat. 1.7), mięso (kat. 8), przetworzone ryby
-        (kat. 9.2) i ikra (kat. 9.3) mają okres przejściowy do 1 lipca 2029 r.
+        unijnego wykazu (art. 1): zezwolenia dla SF-007 i SF-010 wygasły 1 stycznia 2024 r. bez wniosków o
+        odnowienie (motyw 3), natomiast określone w art. 2 okresy przejściowe dla SF-001 do SF-006, SF-008 i
+        SF-009 zakończyły się 1 lipca 2026 r. dla pozostałych kategorii żywności i trwają do 1 lipca 2029 r.
+        dla kategorii 1.7 (sery), 8 (mięso), 9.2 (przetworzone ryby) i 9.3 (ikra).
     sources:
       - id: reg-2024-2067
-        locator: Articles 1 and 2
+        locator: Recital 3, Articles 1 and 2
       - id: reg-2065-2003
   - code: regulatory.eu_restricted
     certainty: 'yes'
@@ -89,17 +94,18 @@ assertions:
     jurisdiction: EU
     note:
       en: >-
-        Regulated separately from other flavourings (Reg 2065/2003). Following non-renewal and deletion of all
-        ten entries from the Union list (Reg 2024/2067), use is restricted to transitional phase-out stock
-        (until 1 July 2029 for cheese, meat and processed fish/roe; ended 1 July 2026 for all other foods).
+        Regulated separately from other flavourings (Reg 2065/2003). Following expiry of SF-007 and SF-010 on
+        1 January 2024 without renewal applications and deletion of SF-001 to SF-010 from the Union list (Reg
+        2024/2067), transitional placing on the market covers only SF-001 to SF-006, SF-008 and SF-009 (until
+        1 July 2029 for categories 1.7, 8, 9.2 and 9.3; ended 1 July 2026 for all other categories).
       pl: >-
-        Regulowany odrębnie od innych aromatów (Rozp. 2065/2003). Po odmowie odnowienia i usunięciu wszystkich
-        dziesięciu wpisów z wykazu unijnego (Rozp. 2024/2067) stosowanie ograniczono do wygaszania w okresie
-        przejściowym (do 1 lipca 2029 r. w serach, mięsie i przetworzonych rybach/ikrze; zakończone 1 lipca
-        2026 r. w pozostałej żywności).
+        Regulowany odrębnie od innych aromatów (Rozp. 2065/2003). Po wygaśnięciu SF-007 i SF-010 dnia 1
+        stycznia 2024 r. bez wniosków o odnowienie oraz usunięciu SF-001 do SF-010 z wykazu unijnego (Rozp.
+        2024/2067) okresy przejściowe obejmują wyłącznie SF-001 do SF-006, SF-008 i SF-009 (do 1 lipca 2029
+        r. w kategoriach 1.7, 8, 9.2 i 9.3; zakończone 1 lipca 2026 r. w pozostałej żywności).
     sources:
       - id: reg-2024-2067
-        locator: Articles 1 and 2
+        locator: Recital 3, Articles 1 and 2
       - id: reg-2065-2003
   - code: processing.ultra_processed_marker
     certainty: 'yes'
@@ -134,14 +140,17 @@ regulatory:
     status: restricted
     conditions:
       en: >-
-        All ten primary products (SF-001 to SF-010) deleted from the Union list by Reg (EU) 2024/2067;
-        transitional placing on the market ended 1 July 2026 for general foods and runs until 1 July 2029 for
-        cheese (cat. 1.7), meat (cat. 8), processed fish (cat. 9.2) and fish roe (cat. 9.3).
+        All ten primary products (SF-001 to SF-010) deleted from the Union list by Reg (EU) 2024/2067 (Art.
+        1); SF-007 and SF-010 expired on 1 January 2024 without renewal applications (Recital 3), while Art. 2
+        transitional placing on the market for SF-001 to SF-006, SF-008 and SF-009 ended 1 July 2026 for all
+        other food categories and runs until 1 July 2029 for categories 1.7 (cheese), 8 (meat), 9.2 (processed
+        fish) and 9.3 (fish roe).
       pl: >-
         Wszystkie dziesięć produktów pierwotnych (SF-001 do SF-010) usunięto z wykazu unijnego na mocy Rozp.
-        (UE) 2024/2067; okres przejściowy wprowadzania do obrotu zakończył się 1 lipca 2026 r. dla ogółu
-        żywności i trwa do 1 lipca 2029 r. dla serów (kat. 1.7), mięsa (kat. 8), przetworzonych ryb (kat. 9.2)
-        oraz ikry (kat. 9.3).
+        (UE) 2024/2067 (art. 1); SF-007 i SF-010 wygasły 1 stycznia 2024 r. bez wniosków o odnowienie (motyw
+        3), a określony w art. 2 okres przejściowy dla SF-001 do SF-006, SF-008 i SF-009 zakończył się 1 lipca
+        2026 r. dla pozostałych kategorii żywności i trwa do 1 lipca 2029 r. dla kategorii 1.7 (sery), 8
+        (mięso), 9.2 (przetworzone ryby) oraz 9.3 (ikra).
     since: '2024-08-21'
     source: reg-2024-2067
 review_status: draft

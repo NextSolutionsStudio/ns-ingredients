@@ -22,15 +22,16 @@ names:
     - Calciumpantothenat
 summary:
   en: >-
-    Water-soluble vitamin B5, an essential precursor of coenzyme A. Permitted for EU food fortification and
-    supplements mainly as calcium D-pantothenate, sodium D-pantothenate and dexpanthenol. The EU Scientific
-    Committee on Food established no tolerable upper intake level due to lack of adverse effects in
-    available data and lack of systematic dose-response data.
+    Water-soluble vitamin B5, an essential component of coenzyme A. Permitted for EU food fortification and
+    supplements mainly as calcium D-pantothenate, sodium D-pantothenate and dexpanthenol. The NNR 2023
+    scoping review notes that pantothenic acid toxicity is negligible, no Nordic dietary reference values were
+    set due to lack of data, and no health concerns related to pantothenic acid were identified.
   pl: >-
-    Rozpuszczalna w wodzie witamina B5, niezbędny prekursor koenzymu A. Dopuszczona w UE do wzbogacania
+    Rozpuszczalna w wodzie witamina B5, niezbędny składnik koenzymu A. Dopuszczona w UE do wzbogacania
     żywności i suplementów diety głównie jako D-pantotenian wapnia, D-pantotenian sodu i dekspantenol.
-    Komitet Naukowy ds. Żywności UE (SCF) nie ustalił górnego tolerowanego poziomu spożycia (UL) z powodu
-    braku udokumentowanych działań niepożądanych i braku systematycznych badań zależności dawka-odpowiedź.
+    Przegląd NNR 2023 wskazuje na znikome ryzyko działań niepożądanych, brak ustalonych norm żywieniowych
+    (DRV) w NNR od 2012 r. z powodu braku danych oraz brak zidentyfikowanych obaw zdrowotnych związanych z
+    kwasem pantotenowym.
 assertions:
   - code: diet.vegan
     certainty: 'yes'
@@ -63,6 +64,6 @@ review_status: draft
 provenance: ai-drafted
 review_notes:
   - >-
-    No health.high_dose_supplement_nutrient assertion and no UL reference_values entry: as reported in the
-    NNR 2023 scoping review (PMC10770646), the EU SCF established no UL for pantothenic acid due to lack of
-    systematic oral dose-response studies (mild GI symptoms only reported at 10-20 g/day).
+    No health.high_dose_supplement_nutrient assertion and no UL reference_values entry: the opened NNR 2023
+    scoping review abstract (nnr-pantothenic-2023, PMID 38187802) reports that toxicity is negligible, no
+    Nordic DRVs were set due to lack of data, and no health concerns were identified.

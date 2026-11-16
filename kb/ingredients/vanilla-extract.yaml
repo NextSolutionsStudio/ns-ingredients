@@ -16,23 +16,22 @@ names:
     - Bourbon-Vanilleextrakt
 summary:
   en: >-
-    An aromatic extract made by macerating and percolating cured vanilla pods (Vanilla planifolia / Vanilla
-    tahitensis) in an ethanol-water solution. Unlike synthetic vanillin, it contains hundreds of natural
-    flavour compounds from the vanilla bean and qualifies as a flavouring preparation of plant origin under
-    EU Regulation (EC) No 1334/2008.
+    Botanical liquid preparation obtained by steeping cured vanilla pods in an alcohol-and-water solvent.
+    Unlike synthetic vanillin (a single isolated molecule), real vanilla extract carries the broad aromatic
+    profile of the whole pod and is labelled distinctly from synthetic flavourings.
   pl: >-
-    Aromatyczny ekstrakt otrzymywany przez macerację i perkolację lasek wanilii (Vanilla planifolia / Vanilla
-    tahitensis) w roztworze etanolu i wody. W przeciwieństwie do syntetycznej waniliny zawiera setki
-    naturalnych związków zapachowych z laski wanilii i kwalifikuje się jako preparat aromatyczny pochodzenia
-    roślinnego w rozumieniu Rozporządzenia (WE) nr 1334/2008.
+    Roślinny ekstrakt płynny otrzymywany przez ekstrakcję dojrzałych lasek wanilii w mieszaninie alkoholu
+    etylowego i wody. W odróżnieniu od syntetycznej waniliny (pojedynczego związku chemicznego) prawdziwy
+    ekstrakt z wanilii zawiera złożony profil aromatyczny całej laski wanilii i nie jest tym samym co
+    aromaty syntetyczne.
 assertions:
   - code: origin.plant
     certainty: 'yes'
     kind: fact
     grade: A
     note:
-      en: From vanilla pods (Vanilla planifolia / Vanilla tahitensis).
-      pl: Z lasek wanilii (Vanilla planifolia / Vanilla tahitensis).
+      en: Plant-derived extract as declared by its ingredient name ("vanilla extract").
+      pl: Ekstrakt pochodzenia roślinnego zgodnie z nazwą składnika zadeklarowaną na etykiecie („ekstrakt z wanilii”).
     sources:
       - id: reg-1169-2011
         locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'

@@ -29,10 +29,10 @@ assertions:
     grade: C
     note:
       en: >-
-        Ergocalciferol is derived from fungal, yeast or algal ergosterol under UV irradiation, without animal
-        raw materials.
+        Ergocalciferol is derived from fungal or yeast ergosterol under UV irradiation, without animal raw
+        materials.
       pl: >-
-        Ergokalcyferol powstaje przez naświetlanie UV ergosterolu pochodzącego z grzybów, drożdży lub alg, bez
+        Ergokalcyferol powstaje przez naświetlanie UV ergosterolu pochodzącego z grzybów lub drożdży, bez
         udziału surowców zwierzęcych.
     sources:
       - id: pmc-vitd2-2026

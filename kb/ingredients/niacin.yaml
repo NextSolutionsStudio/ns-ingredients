@@ -14,17 +14,13 @@ names:
     - Vitamin B3
 summary:
   en: >-
-    Water-soluble vitamin B3, permitted for EU food fortification and supplements in the forms of
-    nicotinamide (niacinamide) and nicotinic acid. While chemically related, the two forms differ sharply in
-    their EU tolerable upper intake levels: the Scientific Committee on Food (2002) set 900 mg/day for
-    nicotinamide and 10 mg/day for nicotinic acid because free nicotinic acid causes skin flushing at doses
-    from 30 mg/day.
+    Water-soluble vitamin B3, permitted for EU food fortification and food supplements in the forms of
+    nicotinamide (niacinamide) and nicotinic acid. EFSA (2026) cites an upper level (UL) of 900 mg/day for
+    nicotinamide.
   pl: >-
     Rozpuszczalna w wodzie witamina B3, dopuszczona w UE do wzbogacania żywności i suplementów diety w
-    formach amidu kwasu nikotynowego (nikotynamidu) oraz kwasu nikotynowego. Choć oba związki są pokrewne,
-    różnią się znacznie górnymi tolerowanymi poziomami spożycia: Komitet Naukowy ds. Żywności (SCF, 2002)
-    ustalił UL 900 mg/dobę dla nikotynamidu i 10 mg/dobę dla kwasu nikotynowego, ponieważ wolny kwas
-    nikotynowy wywołuje zaczerwienienie skóry (flushing) już od dawek ok. 30 mg/dobę.
+    formach amidu kwasu nikotynowego (nikotynamidu) oraz kwasu nikotynowego. EFSA (2026) przywołuje górny
+    tolerowany poziom spożycia (UL) wynoszący 900 mg/dobę dla nikotynamidu.
 variants:
   - id: nicotinamide
     names:
@@ -37,11 +33,12 @@ variants:
         - Nicotinamid
     process:
       en: >-
-        The amide form of vitamin B3 used in most fortified foods and multivitamins; does not produce the
-        vasodilatory flushing caused by free nicotinic acid.
+        The amide form of vitamin B3 (niacinamide), permitted for EU food fortification and food supplements;
+        EFSA (2026) cites an upper level (UL) of 900 mg/day for nicotinamide.
       pl: >-
-        Forma amidowa witaminy B3 stosowana w większości żywności wzbogacanej i preparatów wielowitaminowych;
-        nie wywołuje rozszerzenia naczyń (flushingu) typowego dla wolnego kwasu nikotynowego.
+        Forma amidowa witaminy B3 (nikotynamid), dopuszczona do wzbogacania żywności i suplementów diety w
+        UE; EFSA (2026) przywołuje górny tolerowany poziom spożycia (UL) wynoszący 900 mg/dobę dla
+        nikotynamidu.
     tells:
       - 'nicotinamid'
       - 'nikotynamid'
@@ -56,11 +53,9 @@ variants:
         - Nicotinsäure
     process:
       en: >-
-        The free acid form of vitamin B3; higher supplemental doses (30-1000 mg/day) can trigger skin
-        flushing.
+        The free acid form of vitamin B3, permitted for EU food fortification and food supplements.
       pl: >-
-        Forma wolnego kwasu witaminy B3; wyższe dawki suplementowe (30-1000 mg/dobę) mogą powodować
-        zaczerwienienie skóry (flushing).
+        Forma wolnego kwasu witaminy B3, dopuszczona do wzbogacania żywności i suplementów diety w UE.
     tells:
       - 'nicotinic acid'
       - 'kwas nikotynow'
@@ -87,18 +82,11 @@ assertions:
     population: [general]
     note:
       en: >-
-        The EU Scientific Committee on Food (2002) set separate adult tolerable upper intake levels: 900 mg/day
-        (12.5 mg/kg bw/day, excluding pregnancy/lactation) for nicotinamide and 10 mg/day for free nicotinic
-        acid (based on skin flushing observed from 30 mg/day).
+        EFSA (2026) cites an upper level (UL) of 900 mg/day for nicotinamide.
       pl: >-
-        Komitet Naukowy ds. Żywności UE (SCF, 2002) ustalił odrębne górne tolerowane poziomy spożycia dla
-        dorosłych: 900 mg/dobę (12,5 mg/kg m.c./dobę, z wyłączeniem ciąży i laktacji) dla nikotynamidu oraz
-        10 mg/dobę dla wolnego kwasu nikotynowego (na podstawie zaczerwienienia skóry od 30 mg/dobę).
+        EFSA (2026) przywołuje górny tolerowany poziom spożycia (UL) wynoszący 900 mg/dobę dla nikotynamidu.
     sources:
       - id: efsa-nmn-2026
-        locator: Section 1.2
-      - id: nnr-niacin-2023
-        locator: Upper intake levels and toxicity
 regulatory:
   - jurisdiction: EU
     status: authorised
@@ -115,22 +103,17 @@ reference_values:
   - type: UL
     value: 900
     unit: mg/day (nicotinamide)
-    body: SCF
-    year: 2002
+    body: EFSA
+    year: 2026
     source: efsa-nmn-2026
-  - type: UL
-    value: 10
-    unit: mg/day (nicotinic acid)
-    body: SCF
-    year: 2002
-    source: nnr-niacin-2023
 review_status: draft
 provenance: ai-drafted
 review_notes:
   - >-
-    SCF (2002) figures are cited through EFSA (2026, PMC13158811) and the NNR 2023 scoping review
-    (PMC10770643), both opened in full, because the standalone SCF 2002 PDF returned HTTP 429 from
-    food.ec.europa.eu.
+    Only Europe PMC abstracts were opened for efsa-nmn-2026 (PMID 42125559) and nnr-niacin-2023 (PMID
+    38187785), because the standalone SCF 2002 PDF returned HTTP 429 from food.ec.europa.eu. Accordingly only
+    the 900 mg/day nicotinamide UL cited in the efsa-nmn-2026 abstract is recorded; the nicotinic-acid UL,
+    flushing thresholds and body-weight-scaled qualifiers are omitted until the full primary text is opened.
   - >-
     No numerical priors assigned between nicotinamide and nicotinic acid: no market-share study was opened
     this session, though nicotinamide is standard in food fortification to avoid flushing.
