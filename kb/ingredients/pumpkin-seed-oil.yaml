@@ -9,6 +9,14 @@ names:
     - unhydrogenated pumpkin seed oil
     - non-hydrogenated pumpkin seeds oil
     - unhydrogenated pumpkin seeds oil
+    - not hydrogenated pumpkin seed oil
+    - not partially hydrogenated pumpkin seed oil
+    - not fully hydrogenated pumpkin seed oil
+    - non partially hydrogenated pumpkin seed oil
+    - not hydrogenated pumpkin seeds oil
+    - not partially hydrogenated pumpkin seeds oil
+    - not fully hydrogenated pumpkin seeds oil
+    - non partially hydrogenated pumpkin seeds oil
   pl:
     - olej z pestek dyni
     - olej dyniowy
@@ -26,6 +34,74 @@ names:
     - tłuszcz roślinny z pestek dyni
     - oleje roślinne z pestek dyni
     - tłuszcze roślinne z pestek dyni
+    - nie utwardzony olej z pestek dyni
+    - olej z pestek dyni nie utwardzony
+    - nie uwodorniony olej z pestek dyni
+    - olej z pestek dyni nie uwodorniony
+    - nie utwardzony olej dyniowy
+    - olej dyniowy nie utwardzony
+    - nie uwodorniony olej dyniowy
+    - olej dyniowy nie uwodorniony
+    - nie utwardzony olej z nasion dyni
+    - olej z nasion dyni nie utwardzony
+    - nie uwodorniony olej z nasion dyni
+    - olej z nasion dyni nie uwodorniony
+    - nie utwardzony olej roślinny dyniowy
+    - olej roślinny dyniowy nie utwardzony
+    - nie uwodorniony olej roślinny dyniowy
+    - olej roślinny dyniowy nie uwodorniony
+    - nie utwardzony tłuszcz roślinny dyniowy
+    - tłuszcz roślinny dyniowy nie utwardzony
+    - nie uwodorniony tłuszcz roślinny dyniowy
+    - tłuszcz roślinny dyniowy nie uwodorniony
+    - nie utwardzone oleje roślinne dyniowe
+    - oleje roślinne dyniowe nie utwardzone
+    - nie uwodornione oleje roślinne dyniowe
+    - oleje roślinne dyniowe nie uwodornione
+    - nie utwardzony olej roślinny z pestek dyni
+    - olej roślinny z pestek dyni nie utwardzony
+    - nie uwodorniony olej roślinny z pestek dyni
+    - olej roślinny z pestek dyni nie uwodorniony
+    - nie utwardzone tłuszcze roślinne dyniowe
+    - tłuszcze roślinne dyniowe nie utwardzone
+    - nie uwodornione tłuszcze roślinne dyniowe
+    - tłuszcze roślinne dyniowe nie uwodornione
+    - nie utwardzony olej roślinny z nasion dyni
+    - olej roślinny z nasion dyni nie utwardzony
+    - nie uwodorniony olej roślinny z nasion dyni
+    - olej roślinny z nasion dyni nie uwodorniony
+    - nie utwardzony tłuszcz roślinny z nasion dyni
+    - tłuszcz roślinny z nasion dyni nie utwardzony
+    - nie uwodorniony tłuszcz roślinny z nasion dyni
+    - tłuszcz roślinny z nasion dyni nie uwodorniony
+    - nie utwardzone oleje roślinne z nasion dyni
+    - oleje roślinne z nasion dyni nie utwardzone
+    - nie uwodornione oleje roślinne z nasion dyni
+    - oleje roślinne z nasion dyni nie uwodornione
+    - nie utwardzone tłuszcze roślinne z nasion dyni
+    - tłuszcze roślinne z nasion dyni nie utwardzone
+    - nie uwodornione tłuszcze roślinne z nasion dyni
+    - tłuszcze roślinne z nasion dyni nie uwodornione
+    - nie utwardzony tłuszcz roślinny z pestek dyni
+    - tłuszcz roślinny z pestek dyni nie utwardzony
+    - nie uwodorniony tłuszcz roślinny z pestek dyni
+    - tłuszcz roślinny z pestek dyni nie uwodorniony
+    - nie utwardzone oleje roślinne z pestek dyni
+    - oleje roślinne z pestek dyni nie utwardzone
+    - nie uwodornione oleje roślinne z pestek dyni
+    - oleje roślinne z pestek dyni nie uwodornione
+    - nie utwardzone tłuszcze roślinne z pestek dyni
+    - tłuszcze roślinne z pestek dyni nie utwardzone
+    - nie uwodornione tłuszcze roślinne z pestek dyni
+    - tłuszcze roślinne z pestek dyni nie uwodornione
+    - oleje roślinne z nasion dyni nie utwardzony
+    - tłuszcze roślinne z nasion dyni nie utwardzony
+    - oleje roślinne z nasion dyni nie uwodorniony
+    - tłuszcze roślinne z nasion dyni nie uwodorniony
+    - oleje roślinne z pestek dyni nie utwardzony
+    - tłuszcze roślinne z pestek dyni nie utwardzony
+    - oleje roślinne z pestek dyni nie uwodorniony
+    - tłuszcze roślinne z pestek dyni nie uwodorniony
   de:
     - Kürbiskernöl
 summary:
@@ -102,7 +178,7 @@ variants:
       en: "Pumpkin seed oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej z pestek dyni utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
     tells:
-      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)'
+      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!not )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)'
   - id: partially-hydrogenated
     names:
       en:
@@ -174,7 +250,7 @@ variants:
       pl: "Olej z pestek dyni, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
     tells:
       - 'czesciowo (?:utwardzon|uwodorn)'
-      - 'partially hydrogenated'
+      - '(?<!not )(?<!non )partially hydrogenated'
       - 'teilweise gehartet'
   - id: fully-hydrogenated
     names:
@@ -310,8 +386,8 @@ variants:
     tells:
       - 'calkowicie (?:utwardzon|uwodorn)'
       - 'w pelni (?:utwardzon|uwodorn)'
-      - 'fully hydrogenated'
-      - 'totally hydrogenated'
+      - '(?<!not )(?<!non )fully hydrogenated'
+      - '(?<!not )(?<!non )totally hydrogenated'
       - 'vollstandig gehartet'
 assertions:
   - code: origin.vegetable_oil_derived

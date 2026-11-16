@@ -13,6 +13,18 @@ names:
     - unhydrogenated flaxseed oil
     - non-hydrogenated cold-pressed flaxseed oil
     - unhydrogenated cold-pressed flaxseed oil
+    - not hydrogenated linseed oil
+    - not partially hydrogenated linseed oil
+    - not fully hydrogenated linseed oil
+    - non partially hydrogenated linseed oil
+    - not hydrogenated flaxseed oil
+    - not partially hydrogenated flaxseed oil
+    - not fully hydrogenated flaxseed oil
+    - non partially hydrogenated flaxseed oil
+    - not hydrogenated cold-pressed flaxseed oil
+    - not partially hydrogenated cold-pressed flaxseed oil
+    - not fully hydrogenated cold-pressed flaxseed oil
+    - non partially hydrogenated cold-pressed flaxseed oil
   pl:
     - olej lniany
     - olej roślinny lniany
@@ -32,6 +44,78 @@ names:
     - tłuszcz roślinny z siemienia lnianego
     - oleje roślinne z siemienia lnianego
     - tłuszcze roślinne z siemienia lnianego
+    - nie utwardzony olej lniany
+    - olej lniany nie utwardzony
+    - nie uwodorniony olej lniany
+    - olej lniany nie uwodorniony
+    - nie utwardzony olej roślinny lniany
+    - olej roślinny lniany nie utwardzony
+    - nie uwodorniony olej roślinny lniany
+    - olej roślinny lniany nie uwodorniony
+    - nie utwardzony tłuszcz roślinny lniany
+    - tłuszcz roślinny lniany nie utwardzony
+    - nie uwodorniony tłuszcz roślinny lniany
+    - tłuszcz roślinny lniany nie uwodorniony
+    - nie utwardzony olej z siemienia lnianego
+    - olej z siemienia lnianego nie utwardzony
+    - nie uwodorniony olej z siemienia lnianego
+    - olej z siemienia lnianego nie uwodorniony
+    - nie utwardzony olej z nasion lnu
+    - olej z nasion lnu nie utwardzony
+    - nie uwodorniony olej z nasion lnu
+    - olej z nasion lnu nie uwodorniony
+    - nie utwardzone tłuszcze roślinne lniane
+    - tłuszcze roślinne lniane nie utwardzone
+    - nie uwodornione tłuszcze roślinne lniane
+    - tłuszcze roślinne lniane nie uwodornione
+    - nie utwardzone oleje roślinne lniane
+    - oleje roślinne lniane nie utwardzone
+    - nie uwodornione oleje roślinne lniane
+    - oleje roślinne lniane nie uwodornione
+    - nie utwardzone oleje roślinne lniany
+    - oleje roślinne lniany nie utwardzone
+    - nie uwodornione oleje roślinne lniany
+    - oleje roślinne lniany nie uwodornione
+    - nie utwardzony olej roślinny z nasion lnu
+    - olej roślinny z nasion lnu nie utwardzony
+    - nie uwodorniony olej roślinny z nasion lnu
+    - olej roślinny z nasion lnu nie uwodorniony
+    - nie utwardzony tłuszcz roślinny z nasion lnu
+    - tłuszcz roślinny z nasion lnu nie utwardzony
+    - nie uwodorniony tłuszcz roślinny z nasion lnu
+    - tłuszcz roślinny z nasion lnu nie uwodorniony
+    - nie utwardzone oleje roślinne z nasion lnu
+    - oleje roślinne z nasion lnu nie utwardzone
+    - nie uwodornione oleje roślinne z nasion lnu
+    - oleje roślinne z nasion lnu nie uwodornione
+    - nie utwardzone tłuszcze roślinne z nasion lnu
+    - tłuszcze roślinne z nasion lnu nie utwardzone
+    - nie uwodornione tłuszcze roślinne z nasion lnu
+    - tłuszcze roślinne z nasion lnu nie uwodornione
+    - nie utwardzony olej roślinny z siemienia lnianego
+    - olej roślinny z siemienia lnianego nie utwardzony
+    - nie uwodorniony olej roślinny z siemienia lnianego
+    - olej roślinny z siemienia lnianego nie uwodorniony
+    - nie utwardzony tłuszcz roślinny z siemienia lnianego
+    - tłuszcz roślinny z siemienia lnianego nie utwardzony
+    - nie uwodorniony tłuszcz roślinny z siemienia lnianego
+    - tłuszcz roślinny z siemienia lnianego nie uwodorniony
+    - nie utwardzone oleje roślinne z siemienia lnianego
+    - oleje roślinne z siemienia lnianego nie utwardzone
+    - nie uwodornione oleje roślinne z siemienia lnianego
+    - oleje roślinne z siemienia lnianego nie uwodornione
+    - nie utwardzone tłuszcze roślinne z siemienia lnianego
+    - tłuszcze roślinne z siemienia lnianego nie utwardzone
+    - nie uwodornione tłuszcze roślinne z siemienia lnianego
+    - tłuszcze roślinne z siemienia lnianego nie uwodornione
+    - oleje roślinne z nasion lnu nie utwardzony
+    - tłuszcze roślinne z nasion lnu nie utwardzony
+    - oleje roślinne z nasion lnu nie uwodorniony
+    - tłuszcze roślinne z nasion lnu nie uwodorniony
+    - oleje roślinne z siemienia lnianego nie utwardzony
+    - tłuszcze roślinne z siemienia lnianego nie utwardzony
+    - oleje roślinne z siemienia lnianego nie uwodorniony
+    - tłuszcze roślinne z siemienia lnianego nie uwodorniony
   de:
     - Leinöl
     - Leinsamenöl
@@ -122,7 +206,7 @@ variants:
       en: "Linseed oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej lniany utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
     tells:
-      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)'
+      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!not )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)'
   - id: partially-hydrogenated
     names:
       en:
@@ -202,7 +286,7 @@ variants:
       pl: "Olej lniany, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
     tells:
       - 'czesciowo (?:utwardzon|uwodorn)'
-      - 'partially hydrogenated'
+      - '(?<!not )(?<!non )partially hydrogenated'
       - 'teilweise gehartet'
   - id: fully-hydrogenated
     names:
@@ -351,8 +435,8 @@ variants:
     tells:
       - 'calkowicie (?:utwardzon|uwodorn)'
       - 'w pelni (?:utwardzon|uwodorn)'
-      - 'fully hydrogenated'
-      - 'totally hydrogenated'
+      - '(?<!not )(?<!non )fully hydrogenated'
+      - '(?<!not )(?<!non )totally hydrogenated'
       - 'vollstandig gehartet'
 assertions:
   - code: origin.plant

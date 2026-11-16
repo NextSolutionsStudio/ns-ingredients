@@ -5,12 +5,32 @@ names:
     - nut oil
     - non-hydrogenated nut oil
     - unhydrogenated nut oil
+    - not hydrogenated nut oil
+    - not partially hydrogenated nut oil
+    - not fully hydrogenated nut oil
+    - non partially hydrogenated nut oil
   pl:
     - olej orzechowy
     - olej roślinny orzechowy
     - tłuszcz roślinny orzechowy
     - oleje roślinne orzechowe
     - orzechowy olej roślinny
+    - nie utwardzony olej orzechowy
+    - olej orzechowy nie utwardzony
+    - nie uwodorniony olej orzechowy
+    - olej orzechowy nie uwodorniony
+    - nie utwardzony olej roślinny orzechowy
+    - olej roślinny orzechowy nie utwardzony
+    - nie uwodorniony olej roślinny orzechowy
+    - olej roślinny orzechowy nie uwodorniony
+    - nie utwardzony tłuszcz roślinny orzechowy
+    - tłuszcz roślinny orzechowy nie utwardzony
+    - nie uwodorniony tłuszcz roślinny orzechowy
+    - tłuszcz roślinny orzechowy nie uwodorniony
+    - nie utwardzone oleje roślinne orzechowe
+    - oleje roślinne orzechowe nie utwardzone
+    - nie uwodornione oleje roślinne orzechowe
+    - oleje roślinne orzechowe nie uwodornione
   de:
     - Nussöl
 summary:
@@ -48,7 +68,7 @@ variants:
       en: "Nut oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej orzechowy utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
     tells:
-      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)'
+      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!not )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)'
   - id: partially-hydrogenated
     names:
       en:
@@ -75,7 +95,7 @@ variants:
       pl: "Olej orzechowy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
     tells:
       - 'czesciowo (?:utwardzon|uwodorn)'
-      - 'partially hydrogenated'
+      - '(?<!not )(?<!non )partially hydrogenated'
       - 'teilweise gehartet'
   - id: fully-hydrogenated
     names:
@@ -121,8 +141,8 @@ variants:
     tells:
       - 'calkowicie (?:utwardzon|uwodorn)'
       - 'w pelni (?:utwardzon|uwodorn)'
-      - 'fully hydrogenated'
-      - 'totally hydrogenated'
+      - '(?<!not )(?<!non )fully hydrogenated'
+      - '(?<!not )(?<!non )totally hydrogenated'
       - 'vollstandig gehartet'
 assertions:
   - code: origin.vegetable_oil_derived

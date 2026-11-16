@@ -15,6 +15,22 @@ names:
     - unhydrogenated refined sesame oil
     - non-hydrogenated toasted sesame oil
     - unhydrogenated toasted sesame oil
+    - not hydrogenated sesame oil
+    - not partially hydrogenated sesame oil
+    - not fully hydrogenated sesame oil
+    - non partially hydrogenated sesame oil
+    - not hydrogenated sesame seed oil
+    - not partially hydrogenated sesame seed oil
+    - not fully hydrogenated sesame seed oil
+    - non partially hydrogenated sesame seed oil
+    - not hydrogenated refined sesame oil
+    - not partially hydrogenated refined sesame oil
+    - not fully hydrogenated refined sesame oil
+    - non partially hydrogenated refined sesame oil
+    - not hydrogenated toasted sesame oil
+    - not partially hydrogenated toasted sesame oil
+    - not fully hydrogenated toasted sesame oil
+    - non partially hydrogenated toasted sesame oil
   pl:
     - olej sezamowy
     - rafinowany olej sezamowy
@@ -34,6 +50,74 @@ names:
     - tłuszcz roślinny z sezamu
     - oleje roślinne z sezamu
     - tłuszcze roślinne z sezamu
+    - nie utwardzony olej sezamowy
+    - olej sezamowy nie utwardzony
+    - nie uwodorniony olej sezamowy
+    - olej sezamowy nie uwodorniony
+    - nie utwardzony olej roślinny sezamowy
+    - olej roślinny sezamowy nie utwardzony
+    - nie uwodorniony olej roślinny sezamowy
+    - olej roślinny sezamowy nie uwodorniony
+    - nie utwardzony tłuszcz roślinny sezamowy
+    - tłuszcz roślinny sezamowy nie utwardzony
+    - nie uwodorniony tłuszcz roślinny sezamowy
+    - tłuszcz roślinny sezamowy nie uwodorniony
+    - nie utwardzone oleje roślinne sezamowe
+    - oleje roślinne sezamowe nie utwardzone
+    - nie uwodornione oleje roślinne sezamowe
+    - oleje roślinne sezamowe nie uwodornione
+    - nie utwardzone tłuszcze roślinne sezamowe
+    - tłuszcze roślinne sezamowe nie utwardzone
+    - nie uwodornione tłuszcze roślinne sezamowe
+    - tłuszcze roślinne sezamowe nie uwodornione
+    - nie utwardzony olej roślinny z sezamu
+    - olej roślinny z sezamu nie utwardzony
+    - nie uwodorniony olej roślinny z sezamu
+    - olej roślinny z sezamu nie uwodorniony
+    - nie utwardzony olej z sezamu
+    - olej z sezamu nie utwardzony
+    - nie uwodorniony olej z sezamu
+    - olej z sezamu nie uwodorniony
+    - nie utwardzony olej z nasion sezamu
+    - olej z nasion sezamu nie utwardzony
+    - nie uwodorniony olej z nasion sezamu
+    - olej z nasion sezamu nie uwodorniony
+    - nie utwardzony olej roślinny z nasion sezamu
+    - olej roślinny z nasion sezamu nie utwardzony
+    - nie uwodorniony olej roślinny z nasion sezamu
+    - olej roślinny z nasion sezamu nie uwodorniony
+    - nie utwardzony tłuszcz roślinny z nasion sezamu
+    - tłuszcz roślinny z nasion sezamu nie utwardzony
+    - nie uwodorniony tłuszcz roślinny z nasion sezamu
+    - tłuszcz roślinny z nasion sezamu nie uwodorniony
+    - nie utwardzone oleje roślinne z nasion sezamu
+    - oleje roślinne z nasion sezamu nie utwardzone
+    - nie uwodornione oleje roślinne z nasion sezamu
+    - oleje roślinne z nasion sezamu nie uwodornione
+    - nie utwardzone tłuszcze roślinne z nasion sezamu
+    - tłuszcze roślinne z nasion sezamu nie utwardzone
+    - nie uwodornione tłuszcze roślinne z nasion sezamu
+    - tłuszcze roślinne z nasion sezamu nie uwodornione
+    - nie utwardzony tłuszcz roślinny z sezamu
+    - tłuszcz roślinny z sezamu nie utwardzony
+    - nie uwodorniony tłuszcz roślinny z sezamu
+    - tłuszcz roślinny z sezamu nie uwodorniony
+    - nie utwardzone oleje roślinne z sezamu
+    - oleje roślinne z sezamu nie utwardzone
+    - nie uwodornione oleje roślinne z sezamu
+    - oleje roślinne z sezamu nie uwodornione
+    - nie utwardzone tłuszcze roślinne z sezamu
+    - tłuszcze roślinne z sezamu nie utwardzone
+    - nie uwodornione tłuszcze roślinne z sezamu
+    - tłuszcze roślinne z sezamu nie uwodornione
+    - oleje roślinne z nasion sezamu nie utwardzony
+    - tłuszcze roślinne z nasion sezamu nie utwardzony
+    - oleje roślinne z nasion sezamu nie uwodorniony
+    - tłuszcze roślinne z nasion sezamu nie uwodorniony
+    - oleje roślinne z sezamu nie utwardzony
+    - tłuszcze roślinne z sezamu nie utwardzony
+    - oleje roślinne z sezamu nie uwodorniony
+    - tłuszcze roślinne z sezamu nie uwodorniony
   de:
     - Sesamöl
 summary:
@@ -116,7 +200,7 @@ variants:
       en: "Sesame oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej sezamowy utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
     tells:
-      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)'
+      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!not )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)'
   - id: partially-hydrogenated
     names:
       en:
@@ -190,7 +274,7 @@ variants:
       pl: "Olej sezamowy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
     tells:
       - 'czesciowo (?:utwardzon|uwodorn)'
-      - 'partially hydrogenated'
+      - '(?<!not )(?<!non )partially hydrogenated'
       - 'teilweise gehartet'
   - id: fully-hydrogenated
     names:
@@ -330,8 +414,8 @@ variants:
     tells:
       - 'calkowicie (?:utwardzon|uwodorn)'
       - 'w pelni (?:utwardzon|uwodorn)'
-      - 'fully hydrogenated'
-      - 'totally hydrogenated'
+      - '(?<!not )(?<!non )fully hydrogenated'
+      - '(?<!not )(?<!non )totally hydrogenated'
       - 'vollstandig gehartet'
 assertions:
   - code: origin.vegetable_oil_derived

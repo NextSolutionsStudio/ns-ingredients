@@ -30,7 +30,7 @@ variants:
     process:
       en: "Some but not all double bonds are hydrogenated, leaving a mix of natural cis and industrially formed trans unsaturated fatty acids."
       pl: "Utwardzeniu podlega część, nie wszystkie, wiązania podwójne, co pozostawia mieszankę naturalnych (cis) i powstałych przemysłowo (trans) nienasyconych kwasów tłuszczowych."
-    tells: ['czesciowo (?:utwardzon|uwodorn)', 'partially hydrogenated', 'teilweise gehartet']
+    tells: ['czesciowo (?:utwardzon|uwodorn)', '(?<!not )(?<!non )partially hydrogenated', 'teilweise gehartet']
     prior: 0.45
     prior_rationale:
       en: >-
@@ -49,7 +49,7 @@ variants:
     process:
       en: "All double bonds are hydrogenated; the fat is fully saturated, very hard, and contains essentially no trans fat."
       pl: "Wszystkie wiązania podwójne są utwardzone; tłuszcz jest w pełni nasycony, bardzo twardy i praktycznie nie zawiera tłuszczów trans."
-    tells: ['calkowicie (?:utwardzon|uwodorn)', 'fully hydrogenated', 'totally hydrogenated', 'w pelni (?:utwardzon|uwodorn)', 'vollstandig gehartet']
+    tells: ['calkowicie (?:utwardzon|uwodorn)', '(?<!not )(?<!non )fully hydrogenated', '(?<!not )(?<!non )totally hydrogenated', 'w pelni (?:utwardzon|uwodorn)', 'vollstandig gehartet']
     prior: 0.5
     prior_rationale:
       en: "The post-2021 default for a 'fully hardened' commodity fat, usually blended or interesterified with a liquid oil to get a workable texture."

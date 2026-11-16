@@ -9,6 +9,14 @@ names:
     - unhydrogenated mustard oil
     - non-hydrogenated mustard seed oil
     - unhydrogenated mustard seed oil
+    - not hydrogenated mustard oil
+    - not partially hydrogenated mustard oil
+    - not fully hydrogenated mustard oil
+    - non partially hydrogenated mustard oil
+    - not hydrogenated mustard seed oil
+    - not partially hydrogenated mustard seed oil
+    - not fully hydrogenated mustard seed oil
+    - non partially hydrogenated mustard seed oil
   pl:
     - olej gorczycowy
     - olej musztardowy
@@ -32,6 +40,94 @@ names:
     - tłuszcz roślinny z nasion gorczycy
     - oleje roślinne z nasion gorczycy
     - tłuszcze roślinne z nasion gorczycy
+    - nie utwardzony olej gorczycowy
+    - olej gorczycowy nie utwardzony
+    - nie uwodorniony olej gorczycowy
+    - olej gorczycowy nie uwodorniony
+    - nie utwardzony olej musztardowy
+    - olej musztardowy nie utwardzony
+    - nie uwodorniony olej musztardowy
+    - olej musztardowy nie uwodorniony
+    - nie utwardzony olej roślinny gorczycowy
+    - olej roślinny gorczycowy nie utwardzony
+    - nie uwodorniony olej roślinny gorczycowy
+    - olej roślinny gorczycowy nie uwodorniony
+    - nie utwardzony olej roślinny musztardowy
+    - olej roślinny musztardowy nie utwardzony
+    - nie uwodorniony olej roślinny musztardowy
+    - olej roślinny musztardowy nie uwodorniony
+    - nie utwardzony olej z gorczycy
+    - olej z gorczycy nie utwardzony
+    - nie uwodorniony olej z gorczycy
+    - olej z gorczycy nie uwodorniony
+    - nie utwardzone oleje roślinne musztardowe
+    - oleje roślinne musztardowe nie utwardzone
+    - nie uwodornione oleje roślinne musztardowe
+    - oleje roślinne musztardowe nie uwodornione
+    - nie utwardzone oleje roślinne gorczycowe
+    - oleje roślinne gorczycowe nie utwardzone
+    - nie uwodornione oleje roślinne gorczycowe
+    - oleje roślinne gorczycowe nie uwodornione
+    - nie utwardzony olej z nasion gorczycy
+    - olej z nasion gorczycy nie utwardzony
+    - nie uwodorniony olej z nasion gorczycy
+    - olej z nasion gorczycy nie uwodorniony
+    - nie utwardzony olej roślinny z gorczycy
+    - olej roślinny z gorczycy nie utwardzony
+    - nie uwodorniony olej roślinny z gorczycy
+    - olej roślinny z gorczycy nie uwodorniony
+    - nie utwardzony olej roślinny z nasion gorczycy
+    - olej roślinny z nasion gorczycy nie utwardzony
+    - nie uwodorniony olej roślinny z nasion gorczycy
+    - olej roślinny z nasion gorczycy nie uwodorniony
+    - nie utwardzony tłuszcz roślinny gorczycowy
+    - tłuszcz roślinny gorczycowy nie utwardzony
+    - nie uwodorniony tłuszcz roślinny gorczycowy
+    - tłuszcz roślinny gorczycowy nie uwodorniony
+    - nie utwardzone tłuszcze roślinne gorczycowe
+    - tłuszcze roślinne gorczycowe nie utwardzone
+    - nie uwodornione tłuszcze roślinne gorczycowe
+    - tłuszcze roślinne gorczycowe nie uwodornione
+    - nie utwardzony tłuszcz roślinny musztardowy
+    - tłuszcz roślinny musztardowy nie utwardzony
+    - nie uwodorniony tłuszcz roślinny musztardowy
+    - tłuszcz roślinny musztardowy nie uwodorniony
+    - nie utwardzone tłuszcze roślinne musztardowe
+    - tłuszcze roślinne musztardowe nie utwardzone
+    - nie uwodornione tłuszcze roślinne musztardowe
+    - tłuszcze roślinne musztardowe nie uwodornione
+    - nie utwardzony tłuszcz roślinny z gorczycy
+    - tłuszcz roślinny z gorczycy nie utwardzony
+    - nie uwodorniony tłuszcz roślinny z gorczycy
+    - tłuszcz roślinny z gorczycy nie uwodorniony
+    - nie utwardzone oleje roślinne z gorczycy
+    - oleje roślinne z gorczycy nie utwardzone
+    - nie uwodornione oleje roślinne z gorczycy
+    - oleje roślinne z gorczycy nie uwodornione
+    - nie utwardzone tłuszcze roślinne z gorczycy
+    - tłuszcze roślinne z gorczycy nie utwardzone
+    - nie uwodornione tłuszcze roślinne z gorczycy
+    - tłuszcze roślinne z gorczycy nie uwodornione
+    - nie utwardzony tłuszcz roślinny z nasion gorczycy
+    - tłuszcz roślinny z nasion gorczycy nie utwardzony
+    - nie uwodorniony tłuszcz roślinny z nasion gorczycy
+    - tłuszcz roślinny z nasion gorczycy nie uwodorniony
+    - nie utwardzone oleje roślinne z nasion gorczycy
+    - oleje roślinne z nasion gorczycy nie utwardzone
+    - nie uwodornione oleje roślinne z nasion gorczycy
+    - oleje roślinne z nasion gorczycy nie uwodornione
+    - nie utwardzone tłuszcze roślinne z nasion gorczycy
+    - tłuszcze roślinne z nasion gorczycy nie utwardzone
+    - nie uwodornione tłuszcze roślinne z nasion gorczycy
+    - tłuszcze roślinne z nasion gorczycy nie uwodornione
+    - oleje roślinne z gorczycy nie utwardzony
+    - tłuszcze roślinne z gorczycy nie utwardzony
+    - oleje roślinne z gorczycy nie uwodorniony
+    - tłuszcze roślinne z gorczycy nie uwodorniony
+    - oleje roślinne z nasion gorczycy nie utwardzony
+    - tłuszcze roślinne z nasion gorczycy nie utwardzony
+    - oleje roślinne z nasion gorczycy nie uwodorniony
+    - tłuszcze roślinne z nasion gorczycy nie uwodorniony
   de:
     - Senföl
 summary:
@@ -132,7 +228,7 @@ variants:
       en: "Mustard oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej gorczycowy utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
     tells:
-      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)'
+      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!not )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)'
   - id: partially-hydrogenated
     names:
       en:
@@ -224,7 +320,7 @@ variants:
       pl: "Olej gorczycowy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
     tells:
       - 'czesciowo (?:utwardzon|uwodorn)'
-      - 'partially hydrogenated'
+      - '(?<!not )(?<!non )partially hydrogenated'
       - 'teilweise gehartet'
   - id: fully-hydrogenated
     names:
@@ -400,8 +496,8 @@ variants:
     tells:
       - 'calkowicie (?:utwardzon|uwodorn)'
       - 'w pelni (?:utwardzon|uwodorn)'
-      - 'fully hydrogenated'
-      - 'totally hydrogenated'
+      - '(?<!not )(?<!non )fully hydrogenated'
+      - '(?<!not )(?<!non )totally hydrogenated'
       - 'vollstandig gehartet'
 assertions:
   - code: origin.vegetable_oil_derived

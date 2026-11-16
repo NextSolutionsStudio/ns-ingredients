@@ -10,6 +10,14 @@ names:
     - non-hydrogenated soya oil
     - non hydrogenated soya oil
     - unhydrogenated soya oil
+    - not hydrogenated soybean oil
+    - not partially hydrogenated soybean oil
+    - not fully hydrogenated soybean oil
+    - non partially hydrogenated soybean oil
+    - not hydrogenated soya oil
+    - not partially hydrogenated soya oil
+    - not fully hydrogenated soya oil
+    - non partially hydrogenated soya oil
   pl:
     - olej sojowy
     - olej z soi
@@ -24,6 +32,58 @@ names:
     - oleje roślinne z soi
     - tłuszcze roślinne z soi
     - olej roślinny z nasion soi
+    - nie utwardzony olej sojowy
+    - olej sojowy nie utwardzony
+    - nie uwodorniony olej sojowy
+    - olej sojowy nie uwodorniony
+    - nie utwardzony olej z soi
+    - olej z soi nie utwardzony
+    - nie uwodorniony olej z soi
+    - olej z soi nie uwodorniony
+    - nie utwardzony olej roślinny sojowy
+    - olej roślinny sojowy nie utwardzony
+    - nie uwodorniony olej roślinny sojowy
+    - olej roślinny sojowy nie uwodorniony
+    - nie utwardzony tłuszcz roślinny sojowy
+    - tłuszcz roślinny sojowy nie utwardzony
+    - nie uwodorniony tłuszcz roślinny sojowy
+    - tłuszcz roślinny sojowy nie uwodorniony
+    - nie utwardzone tłuszcze roślinne sojowe
+    - tłuszcze roślinne sojowe nie utwardzone
+    - nie uwodornione tłuszcze roślinne sojowe
+    - tłuszcze roślinne sojowe nie uwodornione
+    - nie utwardzone oleje roślinne sojowe
+    - oleje roślinne sojowe nie utwardzone
+    - nie uwodornione oleje roślinne sojowe
+    - oleje roślinne sojowe nie uwodornione
+    - nie utwardzone oleje roślinne sojowy
+    - oleje roślinne sojowy nie utwardzone
+    - nie uwodornione oleje roślinne sojowy
+    - oleje roślinne sojowy nie uwodornione
+    - nie utwardzony olej roślinny z soi
+    - olej roślinny z soi nie utwardzony
+    - nie uwodorniony olej roślinny z soi
+    - olej roślinny z soi nie uwodorniony
+    - nie utwardzony tłuszcz roślinny z soi
+    - tłuszcz roślinny z soi nie utwardzony
+    - nie uwodorniony tłuszcz roślinny z soi
+    - tłuszcz roślinny z soi nie uwodorniony
+    - nie utwardzone oleje roślinne z soi
+    - oleje roślinne z soi nie utwardzone
+    - nie uwodornione oleje roślinne z soi
+    - oleje roślinne z soi nie uwodornione
+    - nie utwardzone tłuszcze roślinne z soi
+    - tłuszcze roślinne z soi nie utwardzone
+    - nie uwodornione tłuszcze roślinne z soi
+    - tłuszcze roślinne z soi nie uwodornione
+    - nie utwardzony olej roślinny z nasion soi
+    - olej roślinny z nasion soi nie utwardzony
+    - nie uwodorniony olej roślinny z nasion soi
+    - olej roślinny z nasion soi nie uwodorniony
+    - oleje roślinne z soi nie utwardzony
+    - tłuszcze roślinne z soi nie utwardzony
+    - oleje roślinne z soi nie uwodorniony
+    - tłuszcze roślinne z soi nie uwodorniony
   de:
     - Sojaöl
     - ungehärtetes Sojaöl
@@ -181,7 +241,7 @@ variants:
       en: "Soybean oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej sojowy utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
     tells:
-      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)'
+      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!not )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)'
   - id: partially-hydrogenated
     names:
       en:
@@ -243,7 +303,7 @@ variants:
       pl: "Olej sojowy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
     tells:
       - 'czesciowo (?:utwardzon|uwodorn)'
-      - 'partially hydrogenated'
+      - '(?<!not )(?<!non )partially hydrogenated'
       - 'teilweise gehartet'
   - id: fully-hydrogenated
     names:
@@ -357,8 +417,8 @@ variants:
     tells:
       - 'calkowicie (?:utwardzon|uwodorn)'
       - 'w pelni (?:utwardzon|uwodorn)'
-      - 'fully hydrogenated'
-      - 'totally hydrogenated'
+      - '(?<!not )(?<!non )fully hydrogenated'
+      - '(?<!not )(?<!non )totally hydrogenated'
       - 'vollstandig gehartet'
   - id: fully-refined-hydrogenated
     names:
@@ -412,6 +472,14 @@ variants:
         - olej z soi w pełni rafinowany uwodorniony
         - olej z soi uwodorniony w pełni rafinowany
         - w pełni rafinowany uwodorniony olej z soi
+        - utwardzony olej sojowy rafinowany
+        - utwardzony olej sojowy w pełni rafinowany
+        - utwardzony olej z soi rafinowany
+        - utwardzony olej z soi w pełni rafinowany
+        - uwodorniony olej sojowy rafinowany
+        - uwodorniony olej sojowy w pełni rafinowany
+        - uwodorniony olej z soi rafinowany
+        - uwodorniony olej z soi w pełni rafinowany
     process:
       en: "Fully refined soybean oil, then hydrogenated (partial or full not stated). The refining keeps the Annex II point 6(a) exemption."
       pl: "W pełni rafinowany olej sojowy, następnie utwardzony (bez podania, czy częściowo, czy całkowicie). Rafinacja zachowuje wyłączenie z Załącznika II pkt 6(a)."
@@ -467,6 +535,14 @@ variants:
         - olej z soi w pełni rafinowany częściowo uwodorniony
         - olej z soi częściowo uwodorniony w pełni rafinowany
         - w pełni rafinowany częściowo uwodorniony olej z soi
+        - częściowo utwardzony olej sojowy rafinowany
+        - częściowo utwardzony olej sojowy w pełni rafinowany
+        - częściowo utwardzony olej z soi rafinowany
+        - częściowo utwardzony olej z soi w pełni rafinowany
+        - częściowo uwodorniony olej sojowy rafinowany
+        - częściowo uwodorniony olej sojowy w pełni rafinowany
+        - częściowo uwodorniony olej z soi rafinowany
+        - częściowo uwodorniony olej z soi w pełni rafinowany
     process:
       en: "Fully refined soybean oil, then partially hydrogenated, which forms industrial trans fat. The refining keeps the Annex II point 6(a) exemption."
       pl: "W pełni rafinowany olej sojowy, następnie częściowo utwardzony, co tworzy przemysłowe tłuszcze trans. Rafinacja zachowuje wyłączenie z Załącznika II pkt 6(a)."
@@ -562,6 +638,22 @@ variants:
         - olej z soi w pełni rafinowany w pełni uwodorniony
         - olej z soi w pełni uwodorniony w pełni rafinowany
         - w pełni rafinowany w pełni uwodorniony olej z soi
+        - całkowicie utwardzony olej sojowy rafinowany
+        - całkowicie utwardzony olej sojowy w pełni rafinowany
+        - całkowicie utwardzony olej z soi rafinowany
+        - całkowicie utwardzony olej z soi w pełni rafinowany
+        - całkowicie uwodorniony olej sojowy rafinowany
+        - całkowicie uwodorniony olej sojowy w pełni rafinowany
+        - całkowicie uwodorniony olej z soi rafinowany
+        - całkowicie uwodorniony olej z soi w pełni rafinowany
+        - w pełni utwardzony olej sojowy rafinowany
+        - w pełni utwardzony olej sojowy w pełni rafinowany
+        - w pełni utwardzony olej z soi rafinowany
+        - w pełni utwardzony olej z soi w pełni rafinowany
+        - w pełni uwodorniony olej sojowy rafinowany
+        - w pełni uwodorniony olej sojowy w pełni rafinowany
+        - w pełni uwodorniony olej z soi rafinowany
+        - w pełni uwodorniony olej z soi w pełni rafinowany
     process:
       en: "Fully refined soybean oil, then fully hydrogenated: saturated, with essentially no trans fat. The refining keeps the Annex II point 6(a) exemption."
       pl: "W pełni rafinowany olej sojowy, następnie całkowicie utwardzony: nasycony, praktycznie bez tłuszczów trans. Rafinacja zachowuje wyłączenie z Załącznika II pkt 6(a)."

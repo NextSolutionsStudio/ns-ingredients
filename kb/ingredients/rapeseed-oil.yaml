@@ -1,8 +1,8 @@
 id: rapeseed-oil
 type: fat
 names:
-  en: [rapeseed oil, canola oil, non-hydrogenated rapeseed oil, non hydrogenated rapeseed oil, unhydrogenated rapeseed oil, non-hydrogenated canola oil, non hydrogenated canola oil, unhydrogenated canola oil]
-  pl: [olej rzepakowy, olej roślinny rzepakowy, tłuszcz roślinny rzepakowy, rzepakowy olej roślinny, tłuszcze roślinne rzepakowe, oleje roślinne rzepakowe, oleje roślinne rzepakowy]
+  en: [rapeseed oil, canola oil, non-hydrogenated rapeseed oil, non hydrogenated rapeseed oil, unhydrogenated rapeseed oil, non-hydrogenated canola oil, non hydrogenated canola oil, unhydrogenated canola oil, not hydrogenated rapeseed oil, not partially hydrogenated rapeseed oil, not fully hydrogenated rapeseed oil, non partially hydrogenated rapeseed oil, not hydrogenated canola oil, not partially hydrogenated canola oil, not fully hydrogenated canola oil, non partially hydrogenated canola oil]
+  pl: [olej rzepakowy, olej roślinny rzepakowy, tłuszcz roślinny rzepakowy, rzepakowy olej roślinny, tłuszcze roślinne rzepakowe, oleje roślinne rzepakowe, oleje roślinne rzepakowy, nie utwardzony olej rzepakowy, olej rzepakowy nie utwardzony, nie uwodorniony olej rzepakowy, olej rzepakowy nie uwodorniony, nie utwardzony olej roślinny rzepakowy, olej roślinny rzepakowy nie utwardzony, nie uwodorniony olej roślinny rzepakowy, olej roślinny rzepakowy nie uwodorniony, nie utwardzony tłuszcz roślinny rzepakowy, tłuszcz roślinny rzepakowy nie utwardzony, nie uwodorniony tłuszcz roślinny rzepakowy, tłuszcz roślinny rzepakowy nie uwodorniony, nie utwardzone tłuszcze roślinne rzepakowe, tłuszcze roślinne rzepakowe nie utwardzone, nie uwodornione tłuszcze roślinne rzepakowe, tłuszcze roślinne rzepakowe nie uwodornione, nie utwardzone oleje roślinne rzepakowe, oleje roślinne rzepakowe nie utwardzone, nie uwodornione oleje roślinne rzepakowe, oleje roślinne rzepakowe nie uwodornione, nie utwardzone oleje roślinne rzepakowy, oleje roślinne rzepakowy nie utwardzone, nie uwodornione oleje roślinne rzepakowy, oleje roślinne rzepakowy nie uwodornione]
   de: [Rapsöl, ungehärtetes Rapsöl, nicht gehärtetes Rapsöl]
 summary:
   en: >-
@@ -28,7 +28,7 @@ variants:
     process:
       en: "Rapeseed oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej rzepakowy utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
-    tells: ['(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)']
+    tells: ['(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!not )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)']
   - id: partially-hydrogenated
     names:
       en: [partially hydrogenated rapeseed oil, partially hydrogenated canola oil]
@@ -37,7 +37,7 @@ variants:
     process:
       en: "Rapeseed oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
       pl: "Olej rzepakowy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
-    tells: ['czesciowo (?:utwardzon|uwodorn)', 'partially hydrogenated', 'teilweise gehartet']
+    tells: ['czesciowo (?:utwardzon|uwodorn)', '(?<!not )(?<!non )partially hydrogenated', 'teilweise gehartet']
   - id: fully-hydrogenated
     names:
       en: [fully hydrogenated rapeseed oil, totally hydrogenated rapeseed oil, fully hydrogenated canola oil, totally hydrogenated canola oil]
@@ -46,7 +46,7 @@ variants:
     process:
       en: "Rapeseed oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
       pl: "Olej rzepakowy ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
-    tells: ['calkowicie (?:utwardzon|uwodorn)', 'w pelni (?:utwardzon|uwodorn)', 'fully hydrogenated', 'totally hydrogenated', 'vollstandig gehartet']
+    tells: ['calkowicie (?:utwardzon|uwodorn)', 'w pelni (?:utwardzon|uwodorn)', '(?<!not )(?<!non )fully hydrogenated', '(?<!not )(?<!non )totally hydrogenated', 'vollstandig gehartet']
 assertions:
   - code: origin.vegetable_oil_derived
     certainty: yes

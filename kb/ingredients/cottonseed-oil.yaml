@@ -9,6 +9,14 @@ names:
     - unhydrogenated cottonseed oil
     - non-hydrogenated refined cottonseed oil
     - unhydrogenated refined cottonseed oil
+    - not hydrogenated cottonseed oil
+    - not partially hydrogenated cottonseed oil
+    - not fully hydrogenated cottonseed oil
+    - non partially hydrogenated cottonseed oil
+    - not hydrogenated refined cottonseed oil
+    - not partially hydrogenated refined cottonseed oil
+    - not fully hydrogenated refined cottonseed oil
+    - non partially hydrogenated refined cottonseed oil
   pl:
     - olej bawełniany
     - olej z nasion bawełny
@@ -23,6 +31,54 @@ names:
     - tłuszcz roślinny z nasion bawełny
     - oleje roślinne z nasion bawełny
     - tłuszcze roślinne z nasion bawełny
+    - nie utwardzony olej bawełniany
+    - olej bawełniany nie utwardzony
+    - nie uwodorniony olej bawełniany
+    - olej bawełniany nie uwodorniony
+    - nie utwardzony olej z nasion bawełny
+    - olej z nasion bawełny nie utwardzony
+    - nie uwodorniony olej z nasion bawełny
+    - olej z nasion bawełny nie uwodorniony
+    - nie utwardzony olej roślinny bawełniany
+    - olej roślinny bawełniany nie utwardzony
+    - nie uwodorniony olej roślinny bawełniany
+    - olej roślinny bawełniany nie uwodorniony
+    - nie utwardzony tłuszcz roślinny bawełniany
+    - tłuszcz roślinny bawełniany nie utwardzony
+    - nie uwodorniony tłuszcz roślinny bawełniany
+    - tłuszcz roślinny bawełniany nie uwodorniony
+    - nie utwardzone tłuszcze roślinne bawełniane
+    - tłuszcze roślinne bawełniane nie utwardzone
+    - nie uwodornione tłuszcze roślinne bawełniane
+    - tłuszcze roślinne bawełniane nie uwodornione
+    - nie utwardzone oleje roślinne bawełniane
+    - oleje roślinne bawełniane nie utwardzone
+    - nie uwodornione oleje roślinne bawełniane
+    - oleje roślinne bawełniane nie uwodornione
+    - nie utwardzone oleje roślinne bawełniany
+    - oleje roślinne bawełniany nie utwardzone
+    - nie uwodornione oleje roślinne bawełniany
+    - oleje roślinne bawełniany nie uwodornione
+    - nie utwardzony olej roślinny z nasion bawełny
+    - olej roślinny z nasion bawełny nie utwardzony
+    - nie uwodorniony olej roślinny z nasion bawełny
+    - olej roślinny z nasion bawełny nie uwodorniony
+    - nie utwardzony tłuszcz roślinny z nasion bawełny
+    - tłuszcz roślinny z nasion bawełny nie utwardzony
+    - nie uwodorniony tłuszcz roślinny z nasion bawełny
+    - tłuszcz roślinny z nasion bawełny nie uwodorniony
+    - nie utwardzone oleje roślinne z nasion bawełny
+    - oleje roślinne z nasion bawełny nie utwardzone
+    - nie uwodornione oleje roślinne z nasion bawełny
+    - oleje roślinne z nasion bawełny nie uwodornione
+    - nie utwardzone tłuszcze roślinne z nasion bawełny
+    - tłuszcze roślinne z nasion bawełny nie utwardzone
+    - nie uwodornione tłuszcze roślinne z nasion bawełny
+    - tłuszcze roślinne z nasion bawełny nie uwodornione
+    - oleje roślinne z nasion bawełny nie utwardzony
+    - tłuszcze roślinne z nasion bawełny nie utwardzony
+    - oleje roślinne z nasion bawełny nie uwodorniony
+    - tłuszcze roślinne z nasion bawełny nie uwodorniony
   de:
     - Baumwollsaatöl
     - Baumwollsamenöl
@@ -93,7 +149,7 @@ variants:
       en: "Cottonseed oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej bawełniany utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
     tells:
-      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)'
+      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!not )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)'
   - id: partially-hydrogenated
     names:
       en:
@@ -151,7 +207,7 @@ variants:
       pl: "Olej bawełniany, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
     tells:
       - 'czesciowo (?:utwardzon|uwodorn)'
-      - 'partially hydrogenated'
+      - '(?<!not )(?<!non )partially hydrogenated'
       - 'teilweise gehartet'
   - id: fully-hydrogenated
     names:
@@ -257,8 +313,8 @@ variants:
     tells:
       - 'calkowicie (?:utwardzon|uwodorn)'
       - 'w pelni (?:utwardzon|uwodorn)'
-      - 'fully hydrogenated'
-      - 'totally hydrogenated'
+      - '(?<!not )(?<!non )fully hydrogenated'
+      - '(?<!not )(?<!non )totally hydrogenated'
       - 'vollstandig gehartet'
 assertions:
   - code: origin.plant

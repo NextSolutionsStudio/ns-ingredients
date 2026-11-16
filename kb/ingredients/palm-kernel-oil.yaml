@@ -1,8 +1,8 @@
 id: palm-kernel-oil
 type: fat
 names:
-  en: [palm kernel oil, non-hydrogenated palm kernel oil, non hydrogenated palm kernel oil, unhydrogenated palm kernel oil, non-hydrogenated palm kernel fat, non hydrogenated palm kernel fat, unhydrogenated palm kernel fat]
-  pl: [olej z ziaren palmowych, tłuszcz z ziaren palmowych, olej z nasion palmowych, tłuszcz z nasion palmowych, olej palmowy z ziaren, tłuszcz roślinny z ziaren palmowych, olej roślinny z ziaren palmowych, tłuszcze roślinne z ziaren palmowych, oleje roślinne z ziaren palmowych, tłuszcz roślinny z nasion palmowych, olej roślinny z nasion palmowych, tłuszcze roślinne z nasion palmowych, oleje roślinne z nasion palmowych]
+  en: [palm kernel oil, non-hydrogenated palm kernel oil, non hydrogenated palm kernel oil, unhydrogenated palm kernel oil, non-hydrogenated palm kernel fat, non hydrogenated palm kernel fat, unhydrogenated palm kernel fat, not hydrogenated palm kernel oil, not partially hydrogenated palm kernel oil, not fully hydrogenated palm kernel oil, non partially hydrogenated palm kernel oil]
+  pl: [olej z ziaren palmowych, tłuszcz z ziaren palmowych, olej z nasion palmowych, tłuszcz z nasion palmowych, olej palmowy z ziaren, tłuszcz roślinny z ziaren palmowych, olej roślinny z ziaren palmowych, tłuszcze roślinne z ziaren palmowych, oleje roślinne z ziaren palmowych, tłuszcz roślinny z nasion palmowych, olej roślinny z nasion palmowych, tłuszcze roślinne z nasion palmowych, oleje roślinne z nasion palmowych, nie utwardzony olej z ziaren palmowych, olej z ziaren palmowych nie utwardzony, nie uwodorniony olej z ziaren palmowych, olej z ziaren palmowych nie uwodorniony, nie utwardzony tłuszcz z ziaren palmowych, tłuszcz z ziaren palmowych nie utwardzony, nie uwodorniony tłuszcz z ziaren palmowych, tłuszcz z ziaren palmowych nie uwodorniony, nie utwardzony olej z nasion palmowych, olej z nasion palmowych nie utwardzony, nie uwodorniony olej z nasion palmowych, olej z nasion palmowych nie uwodorniony, nie utwardzony tłuszcz z nasion palmowych, tłuszcz z nasion palmowych nie utwardzony, nie uwodorniony tłuszcz z nasion palmowych, tłuszcz z nasion palmowych nie uwodorniony, nie utwardzony olej palmowy z ziaren, olej palmowy z ziaren nie utwardzony, nie uwodorniony olej palmowy z ziaren, olej palmowy z ziaren nie uwodorniony, nie utwardzony tłuszcz roślinny z ziaren palmowych, tłuszcz roślinny z ziaren palmowych nie utwardzony, nie uwodorniony tłuszcz roślinny z ziaren palmowych, tłuszcz roślinny z ziaren palmowych nie uwodorniony, nie utwardzony olej roślinny z ziaren palmowych, olej roślinny z ziaren palmowych nie utwardzony, nie uwodorniony olej roślinny z ziaren palmowych, olej roślinny z ziaren palmowych nie uwodorniony, nie utwardzone tłuszcze roślinne z ziaren palmowych, tłuszcze roślinne z ziaren palmowych nie utwardzone, nie uwodornione tłuszcze roślinne z ziaren palmowych, tłuszcze roślinne z ziaren palmowych nie uwodornione, nie utwardzone oleje roślinne z ziaren palmowych, oleje roślinne z ziaren palmowych nie utwardzone, nie uwodornione oleje roślinne z ziaren palmowych, oleje roślinne z ziaren palmowych nie uwodornione, nie utwardzony tłuszcz roślinny z nasion palmowych, tłuszcz roślinny z nasion palmowych nie utwardzony, nie uwodorniony tłuszcz roślinny z nasion palmowych, tłuszcz roślinny z nasion palmowych nie uwodorniony, nie utwardzony olej roślinny z nasion palmowych, olej roślinny z nasion palmowych nie utwardzony, nie uwodorniony olej roślinny z nasion palmowych, olej roślinny z nasion palmowych nie uwodorniony, nie utwardzone tłuszcze roślinne z nasion palmowych, tłuszcze roślinne z nasion palmowych nie utwardzone, nie uwodornione tłuszcze roślinne z nasion palmowych, tłuszcze roślinne z nasion palmowych nie uwodornione, nie utwardzone oleje roślinne z nasion palmowych, oleje roślinne z nasion palmowych nie utwardzone, nie uwodornione oleje roślinne z nasion palmowych, oleje roślinne z nasion palmowych nie uwodornione, oleje roślinne z nasion palmowych nie utwardzony, tłuszcze roślinne z nasion palmowych nie utwardzony, oleje roślinne z nasion palmowych nie uwodorniony, tłuszcze roślinne z nasion palmowych nie uwodorniony, oleje roślinne z ziaren palmowych nie utwardzony, tłuszcze roślinne z ziaren palmowych nie utwardzony, oleje roślinne z ziaren palmowych nie uwodorniony, tłuszcze roślinne z ziaren palmowych nie uwodorniony]
   de: [Palmkernöl, ungehärtetes Palmkernöl, ungehärtetes Palmkernfett, nicht gehärtetes Palmkernöl, nicht gehärtetes Palmkernfett]
 summary:
   en: >-
@@ -26,7 +26,7 @@ variants:
     process:
       en: "Palm kernel oil or fat hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej lub tłuszcz z ziaren palmowych utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
-    tells: ['(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)']
+    tells: ['(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!not )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)']
   - id: partially-hydrogenated
     names:
       en: [partially hydrogenated palm kernel oil, partially hydrogenated palm kernel fat]
@@ -35,7 +35,7 @@ variants:
     process:
       en: "Palm kernel oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
       pl: "Olej z ziaren palmowych, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
-    tells: ['czesciowo (?:utwardzon|uwodorn)', 'partially hydrogenated', 'teilweise gehartet']
+    tells: ['czesciowo (?:utwardzon|uwodorn)', '(?<!not )(?<!non )partially hydrogenated', 'teilweise gehartet']
   - id: fully-hydrogenated
     names:
       en: [fully hydrogenated palm kernel oil, totally hydrogenated palm kernel oil, fully hydrogenated palm kernel fat]
@@ -44,7 +44,7 @@ variants:
     process:
       en: "Palm kernel oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
       pl: "Olej z ziaren palmowych ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
-    tells: ['calkowicie (?:utwardzon|uwodorn)', 'w pelni (?:utwardzon|uwodorn)', 'fully hydrogenated', 'totally hydrogenated', 'vollstandig gehartet']
+    tells: ['calkowicie (?:utwardzon|uwodorn)', 'w pelni (?:utwardzon|uwodorn)', '(?<!not )(?<!non )fully hydrogenated', '(?<!not )(?<!non )totally hydrogenated', 'vollstandig gehartet']
 assertions:
   - code: ethics.palm_oil
     certainty: yes

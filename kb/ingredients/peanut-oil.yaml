@@ -15,6 +15,22 @@ names:
     - unhydrogenated arachis oil
     - non-hydrogenated peanuts oil
     - unhydrogenated peanuts oil
+    - not hydrogenated peanut oil
+    - not partially hydrogenated peanut oil
+    - not fully hydrogenated peanut oil
+    - non partially hydrogenated peanut oil
+    - not hydrogenated groundnut oil
+    - not partially hydrogenated groundnut oil
+    - not fully hydrogenated groundnut oil
+    - non partially hydrogenated groundnut oil
+    - not hydrogenated arachis oil
+    - not partially hydrogenated arachis oil
+    - not fully hydrogenated arachis oil
+    - non partially hydrogenated arachis oil
+    - not hydrogenated peanuts oil
+    - not partially hydrogenated peanuts oil
+    - not fully hydrogenated peanuts oil
+    - non partially hydrogenated peanuts oil
   pl:
     - olej arachidowy
     - olej z orzeszków ziemnych
@@ -31,6 +47,87 @@ names:
     - olej roślinny orzechowy z orzeszków ziemnych
     - oleje roślinne z orzeszków ziemnych
     - tłuszcze roślinne z orzeszków ziemnych
+    - nie utwardzony olej arachidowy
+    - olej arachidowy nie utwardzony
+    - nie uwodorniony olej arachidowy
+    - olej arachidowy nie uwodorniony
+    - nie utwardzony olej z orzeszków ziemnych
+    - olej z orzeszków ziemnych nie utwardzony
+    - nie uwodorniony olej z orzeszków ziemnych
+    - olej z orzeszków ziemnych nie uwodorniony
+    - nie utwardzony olej roślinny arachidowy
+    - olej roślinny arachidowy nie utwardzony
+    - nie uwodorniony olej roślinny arachidowy
+    - olej roślinny arachidowy nie uwodorniony
+    - nie utwardzony tłuszcz roślinny arachidowy
+    - tłuszcz roślinny arachidowy nie utwardzony
+    - nie uwodorniony tłuszcz roślinny arachidowy
+    - tłuszcz roślinny arachidowy nie uwodorniony
+    - nie utwardzone oleje roślinne arachidowe
+    - oleje roślinne arachidowe nie utwardzone
+    - nie uwodornione oleje roślinne arachidowe
+    - oleje roślinne arachidowe nie uwodornione
+    - nie utwardzone tłuszcze roślinne arachidowe
+    - tłuszcze roślinne arachidowe nie utwardzone
+    - nie uwodornione tłuszcze roślinne arachidowe
+    - tłuszcze roślinne arachidowe nie uwodornione
+    - nie utwardzony olej roślinny z orzeszków ziemnych
+    - olej roślinny z orzeszków ziemnych nie utwardzony
+    - nie uwodorniony olej roślinny z orzeszków ziemnych
+    - olej roślinny z orzeszków ziemnych nie uwodorniony
+    - nie utwardzony olej orzechowy arachidowy
+    - olej orzechowy arachidowy nie utwardzony
+    - nie uwodorniony olej orzechowy arachidowy
+    - olej orzechowy arachidowy nie uwodorniony
+    - nie utwardzony olej roślinny orzechowy arachidowy
+    - olej roślinny orzechowy arachidowy nie utwardzony
+    - nie uwodorniony olej roślinny orzechowy arachidowy
+    - olej roślinny orzechowy arachidowy nie uwodorniony
+    - nie utwardzony tłuszcz roślinny z orzeszków ziemnych
+    - tłuszcz roślinny z orzeszków ziemnych nie utwardzony
+    - nie uwodorniony tłuszcz roślinny z orzeszków ziemnych
+    - tłuszcz roślinny z orzeszków ziemnych nie uwodorniony
+    - nie utwardzony olej orzechowy z orzeszków ziemnych
+    - olej orzechowy z orzeszków ziemnych nie utwardzony
+    - nie uwodorniony olej orzechowy z orzeszków ziemnych
+    - olej orzechowy z orzeszków ziemnych nie uwodorniony
+    - nie utwardzony olej roślinny orzechowy z orzeszków ziemnych
+    - olej roślinny orzechowy z orzeszków ziemnych nie utwardzony
+    - nie uwodorniony olej roślinny orzechowy z orzeszków ziemnych
+    - olej roślinny orzechowy z orzeszków ziemnych nie uwodorniony
+    - nie utwardzone oleje roślinne z orzeszków ziemnych
+    - oleje roślinne z orzeszków ziemnych nie utwardzone
+    - nie uwodornione oleje roślinne z orzeszków ziemnych
+    - oleje roślinne z orzeszków ziemnych nie uwodornione
+    - nie utwardzone tłuszcze roślinne z orzeszków ziemnych
+    - tłuszcze roślinne z orzeszków ziemnych nie utwardzone
+    - nie uwodornione tłuszcze roślinne z orzeszków ziemnych
+    - tłuszcze roślinne z orzeszków ziemnych nie uwodornione
+    - tłuszcz roślinny orzechowy arachidowy
+    - orzechowy olej roślinny arachidowy
+    - oleje roślinne orzechowe arachidowe
+    - oleje orzechowe arachidowe
+    - tłuszcze roślinne orzechowe arachidowe
+    - oleje roślinne z orzeszków ziemnych nie utwardzony
+    - tłuszcze roślinne z orzeszków ziemnych nie utwardzony
+    - oleje roślinne z orzeszków ziemnych nie uwodorniony
+    - tłuszcze roślinne z orzeszków ziemnych nie uwodorniony
+    - nie utwardzony tłuszcz roślinny orzechowy arachidowy
+    - tłuszcz roślinny orzechowy arachidowy nie utwardzony
+    - nie uwodorniony tłuszcz roślinny orzechowy arachidowy
+    - tłuszcz roślinny orzechowy arachidowy nie uwodorniony
+    - nie utwardzone oleje roślinne orzechowe arachidowe
+    - oleje roślinne orzechowe arachidowe nie utwardzone
+    - nie uwodornione oleje roślinne orzechowe arachidowe
+    - oleje roślinne orzechowe arachidowe nie uwodornione
+    - nie utwardzone oleje orzechowe arachidowe
+    - oleje orzechowe arachidowe nie utwardzone
+    - nie uwodornione oleje orzechowe arachidowe
+    - oleje orzechowe arachidowe nie uwodornione
+    - nie utwardzone tłuszcze roślinne orzechowe arachidowe
+    - tłuszcze roślinne orzechowe arachidowe nie utwardzone
+    - nie uwodornione tłuszcze roślinne orzechowe arachidowe
+    - tłuszcze roślinne orzechowe arachidowe nie uwodornione
   de:
     - Erdnussöl
 summary:
@@ -105,11 +202,27 @@ variants:
         - tłuszcze roślinne z orzeszków ziemnych utwardzone
         - uwodornione tłuszcze roślinne z orzeszków ziemnych
         - tłuszcze roślinne z orzeszków ziemnych uwodornione
+        - utwardzony tłuszcz roślinny orzechowy arachidowy
+        - tłuszcz roślinny orzechowy arachidowy utwardzony
+        - uwodorniony tłuszcz roślinny orzechowy arachidowy
+        - tłuszcz roślinny orzechowy arachidowy uwodorniony
+        - utwardzone oleje roślinne orzechowe arachidowe
+        - oleje roślinne orzechowe arachidowe utwardzone
+        - uwodornione oleje roślinne orzechowe arachidowe
+        - oleje roślinne orzechowe arachidowe uwodornione
+        - utwardzone oleje orzechowe arachidowe
+        - oleje orzechowe arachidowe utwardzone
+        - uwodornione oleje orzechowe arachidowe
+        - oleje orzechowe arachidowe uwodornione
+        - utwardzone tłuszcze roślinne orzechowe arachidowe
+        - tłuszcze roślinne orzechowe arachidowe utwardzone
+        - uwodornione tłuszcze roślinne orzechowe arachidowe
+        - tłuszcze roślinne orzechowe arachidowe uwodornione
     process:
       en: "Peanut oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej arachidowy utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
     tells:
-      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)'
+      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!not )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)'
   - id: partially-hydrogenated
     names:
       en:
@@ -174,12 +287,28 @@ variants:
         - tłuszcze roślinne z orzeszków ziemnych częściowo utwardzone
         - częściowo uwodornione tłuszcze roślinne z orzeszków ziemnych
         - tłuszcze roślinne z orzeszków ziemnych częściowo uwodornione
+        - częściowo utwardzony tłuszcz roślinny orzechowy arachidowy
+        - tłuszcz roślinny orzechowy arachidowy częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny orzechowy arachidowy
+        - tłuszcz roślinny orzechowy arachidowy częściowo uwodorniony
+        - częściowo utwardzone oleje roślinne orzechowe arachidowe
+        - oleje roślinne orzechowe arachidowe częściowo utwardzone
+        - częściowo uwodornione oleje roślinne orzechowe arachidowe
+        - oleje roślinne orzechowe arachidowe częściowo uwodornione
+        - częściowo utwardzone oleje orzechowe arachidowe
+        - oleje orzechowe arachidowe częściowo utwardzone
+        - częściowo uwodornione oleje orzechowe arachidowe
+        - oleje orzechowe arachidowe częściowo uwodornione
+        - częściowo utwardzone tłuszcze roślinne orzechowe arachidowe
+        - tłuszcze roślinne orzechowe arachidowe częściowo utwardzone
+        - częściowo uwodornione tłuszcze roślinne orzechowe arachidowe
+        - tłuszcze roślinne orzechowe arachidowe częściowo uwodornione
     process:
       en: "Peanut oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
       pl: "Olej arachidowy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
     tells:
       - 'czesciowo (?:utwardzon|uwodorn)'
-      - 'partially hydrogenated'
+      - '(?<!not )(?<!non )partially hydrogenated'
       - 'teilweise gehartet'
   - id: fully-hydrogenated
     names:
@@ -305,14 +434,46 @@ variants:
         - tłuszcze roślinne z orzeszków ziemnych w pełni utwardzone
         - w pełni uwodornione tłuszcze roślinne z orzeszków ziemnych
         - tłuszcze roślinne z orzeszków ziemnych w pełni uwodornione
+        - całkowicie utwardzony tłuszcz roślinny orzechowy arachidowy
+        - tłuszcz roślinny orzechowy arachidowy całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny orzechowy arachidowy
+        - tłuszcz roślinny orzechowy arachidowy całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz roślinny orzechowy arachidowy
+        - tłuszcz roślinny orzechowy arachidowy w pełni utwardzony
+        - w pełni uwodorniony tłuszcz roślinny orzechowy arachidowy
+        - tłuszcz roślinny orzechowy arachidowy w pełni uwodorniony
+        - całkowicie utwardzone oleje roślinne orzechowe arachidowe
+        - oleje roślinne orzechowe arachidowe całkowicie utwardzone
+        - całkowicie uwodornione oleje roślinne orzechowe arachidowe
+        - oleje roślinne orzechowe arachidowe całkowicie uwodornione
+        - w pełni utwardzone oleje roślinne orzechowe arachidowe
+        - oleje roślinne orzechowe arachidowe w pełni utwardzone
+        - w pełni uwodornione oleje roślinne orzechowe arachidowe
+        - oleje roślinne orzechowe arachidowe w pełni uwodornione
+        - całkowicie utwardzone oleje orzechowe arachidowe
+        - oleje orzechowe arachidowe całkowicie utwardzone
+        - całkowicie uwodornione oleje orzechowe arachidowe
+        - oleje orzechowe arachidowe całkowicie uwodornione
+        - w pełni utwardzone oleje orzechowe arachidowe
+        - oleje orzechowe arachidowe w pełni utwardzone
+        - w pełni uwodornione oleje orzechowe arachidowe
+        - oleje orzechowe arachidowe w pełni uwodornione
+        - całkowicie utwardzone tłuszcze roślinne orzechowe arachidowe
+        - tłuszcze roślinne orzechowe arachidowe całkowicie utwardzone
+        - całkowicie uwodornione tłuszcze roślinne orzechowe arachidowe
+        - tłuszcze roślinne orzechowe arachidowe całkowicie uwodornione
+        - w pełni utwardzone tłuszcze roślinne orzechowe arachidowe
+        - tłuszcze roślinne orzechowe arachidowe w pełni utwardzone
+        - w pełni uwodornione tłuszcze roślinne orzechowe arachidowe
+        - tłuszcze roślinne orzechowe arachidowe w pełni uwodornione
     process:
       en: "Peanut oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
       pl: "Olej arachidowy ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
     tells:
       - 'calkowicie (?:utwardzon|uwodorn)'
       - 'w pelni (?:utwardzon|uwodorn)'
-      - 'fully hydrogenated'
-      - 'totally hydrogenated'
+      - '(?<!not )(?<!non )fully hydrogenated'
+      - '(?<!not )(?<!non )totally hydrogenated'
       - 'vollstandig gehartet'
 assertions:
   - code: origin.vegetable_oil_derived

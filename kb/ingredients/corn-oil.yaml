@@ -10,6 +10,14 @@ names:
     - non-hydrogenated maize oil
     - non hydrogenated maize oil
     - unhydrogenated maize oil
+    - not hydrogenated corn oil
+    - not partially hydrogenated corn oil
+    - not fully hydrogenated corn oil
+    - non partially hydrogenated corn oil
+    - not hydrogenated maize oil
+    - not partially hydrogenated maize oil
+    - not fully hydrogenated maize oil
+    - non partially hydrogenated maize oil
   pl:
     - olej kukurydziany
     - olej z kiełków kukurydzy
@@ -23,6 +31,54 @@ names:
     - tłuszcz roślinny z kiełków kukurydzy
     - oleje roślinne z kiełków kukurydzy
     - tłuszcze roślinne z kiełków kukurydzy
+    - nie utwardzony olej kukurydziany
+    - olej kukurydziany nie utwardzony
+    - nie uwodorniony olej kukurydziany
+    - olej kukurydziany nie uwodorniony
+    - nie utwardzony olej z kiełków kukurydzy
+    - olej z kiełków kukurydzy nie utwardzony
+    - nie uwodorniony olej z kiełków kukurydzy
+    - olej z kiełków kukurydzy nie uwodorniony
+    - nie utwardzony olej roślinny kukurydziany
+    - olej roślinny kukurydziany nie utwardzony
+    - nie uwodorniony olej roślinny kukurydziany
+    - olej roślinny kukurydziany nie uwodorniony
+    - nie utwardzony tłuszcz roślinny kukurydziany
+    - tłuszcz roślinny kukurydziany nie utwardzony
+    - nie uwodorniony tłuszcz roślinny kukurydziany
+    - tłuszcz roślinny kukurydziany nie uwodorniony
+    - nie utwardzone tłuszcze roślinne kukurydziane
+    - tłuszcze roślinne kukurydziane nie utwardzone
+    - nie uwodornione tłuszcze roślinne kukurydziane
+    - tłuszcze roślinne kukurydziane nie uwodornione
+    - nie utwardzone oleje roślinne kukurydziane
+    - oleje roślinne kukurydziane nie utwardzone
+    - nie uwodornione oleje roślinne kukurydziane
+    - oleje roślinne kukurydziane nie uwodornione
+    - nie utwardzone oleje roślinne kukurydziany
+    - oleje roślinne kukurydziany nie utwardzone
+    - nie uwodornione oleje roślinne kukurydziany
+    - oleje roślinne kukurydziany nie uwodornione
+    - nie utwardzony olej roślinny z kiełków kukurydzy
+    - olej roślinny z kiełków kukurydzy nie utwardzony
+    - nie uwodorniony olej roślinny z kiełków kukurydzy
+    - olej roślinny z kiełków kukurydzy nie uwodorniony
+    - nie utwardzony tłuszcz roślinny z kiełków kukurydzy
+    - tłuszcz roślinny z kiełków kukurydzy nie utwardzony
+    - nie uwodorniony tłuszcz roślinny z kiełków kukurydzy
+    - tłuszcz roślinny z kiełków kukurydzy nie uwodorniony
+    - nie utwardzone oleje roślinne z kiełków kukurydzy
+    - oleje roślinne z kiełków kukurydzy nie utwardzone
+    - nie uwodornione oleje roślinne z kiełków kukurydzy
+    - oleje roślinne z kiełków kukurydzy nie uwodornione
+    - nie utwardzone tłuszcze roślinne z kiełków kukurydzy
+    - tłuszcze roślinne z kiełków kukurydzy nie utwardzone
+    - nie uwodornione tłuszcze roślinne z kiełków kukurydzy
+    - tłuszcze roślinne z kiełków kukurydzy nie uwodornione
+    - oleje roślinne z kiełków kukurydzy nie utwardzony
+    - tłuszcze roślinne z kiełków kukurydzy nie utwardzony
+    - oleje roślinne z kiełków kukurydzy nie uwodorniony
+    - tłuszcze roślinne z kiełków kukurydzy nie uwodorniony
   de:
     - Maiskeimöl
     - Maisöl
@@ -96,7 +152,7 @@ variants:
       en: "Corn oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej kukurydziany utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
     tells:
-      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)'
+      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!not )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)'
   - id: partially-hydrogenated
     names:
       en:
@@ -155,7 +211,7 @@ variants:
       pl: "Olej kukurydziany, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
     tells:
       - 'czesciowo (?:utwardzon|uwodorn)'
-      - 'partially hydrogenated'
+      - '(?<!not )(?<!non )partially hydrogenated'
       - 'teilweise gehartet'
   - id: fully-hydrogenated
     names:
@@ -262,8 +318,8 @@ variants:
     tells:
       - 'calkowicie (?:utwardzon|uwodorn)'
       - 'w pelni (?:utwardzon|uwodorn)'
-      - 'fully hydrogenated'
-      - 'totally hydrogenated'
+      - '(?<!not )(?<!non )fully hydrogenated'
+      - '(?<!not )(?<!non )totally hydrogenated'
       - 'vollstandig gehartet'
 assertions:
   - code: origin.plant

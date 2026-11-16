@@ -11,6 +11,14 @@ names:
     - unhydrogenated shea fat
     - non-hydrogenated shea oil
     - unhydrogenated shea oil
+    - not hydrogenated shea butter
+    - not partially hydrogenated shea butter
+    - not fully hydrogenated shea butter
+    - non partially hydrogenated shea butter
+    - not hydrogenated shea fat
+    - not partially hydrogenated shea fat
+    - not fully hydrogenated shea fat
+    - non partially hydrogenated shea fat
   pl:
     - tłuszcz shea
     - masło shea
@@ -19,6 +27,34 @@ names:
     - tłuszcz roślinny shea
     - tłuszcze roślinne shea
     - oleje roślinne shea
+    - nie utwardzony tłuszcz shea
+    - tłuszcz shea nie utwardzony
+    - nie uwodorniony tłuszcz shea
+    - tłuszcz shea nie uwodorniony
+    - nie utwardzone masło shea
+    - masło shea nie utwardzone
+    - nie uwodornione masło shea
+    - masło shea nie uwodornione
+    - nie utwardzony olej shea
+    - olej shea nie utwardzony
+    - nie uwodorniony olej shea
+    - olej shea nie uwodorniony
+    - nie utwardzony olej roślinny shea
+    - olej roślinny shea nie utwardzony
+    - nie uwodorniony olej roślinny shea
+    - olej roślinny shea nie uwodorniony
+    - nie utwardzony tłuszcz roślinny shea
+    - tłuszcz roślinny shea nie utwardzony
+    - nie uwodorniony tłuszcz roślinny shea
+    - tłuszcz roślinny shea nie uwodorniony
+    - nie utwardzone tłuszcze roślinne shea
+    - tłuszcze roślinne shea nie utwardzone
+    - nie uwodornione tłuszcze roślinne shea
+    - tłuszcze roślinne shea nie uwodornione
+    - nie utwardzone oleje roślinne shea
+    - oleje roślinne shea nie utwardzone
+    - nie uwodornione oleje roślinne shea
+    - oleje roślinne shea nie uwodornione
   de:
     - Sheabutter
     - ungehärtete Sheabutter
@@ -75,7 +111,7 @@ variants:
       en: "Shea fat hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Tłuszcz shea utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
     tells:
-      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)'
+      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!not )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)'
   - id: partially-hydrogenated
     names:
       en:
@@ -119,7 +155,7 @@ variants:
       pl: "Tłuszcz shea, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
     tells:
       - 'czesciowo (?:utwardzon|uwodorn)'
-      - 'partially hydrogenated'
+      - '(?<!not )(?<!non )partially hydrogenated'
       - 'teilweise gehartet'
   - id: fully-hydrogenated
     names:
@@ -195,8 +231,8 @@ variants:
     tells:
       - 'calkowicie (?:utwardzon|uwodorn)'
       - 'w pelni (?:utwardzon|uwodorn)'
-      - 'fully hydrogenated'
-      - 'totally hydrogenated'
+      - '(?<!not )(?<!non )fully hydrogenated'
+      - '(?<!not )(?<!non )totally hydrogenated'
       - 'vollstandig gehartet'
 assertions:
   - code: origin.vegetable_oil_derived
