@@ -63,7 +63,7 @@ assertions:
     sources: [{ id: reg-1169-2011, locator: "Annex VII Part A, point 8" }]
   - code: processing.refined
     certainty: yes
-    kind: fact
+    kind: estimate
     grade: B
     note:
       en: "Food-grade sunflower oil for a neutral-tasting product is refined, bleached and deodorised."
