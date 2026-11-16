@@ -51,6 +51,13 @@ export interface SearchFilters {
 const FUZZY_MIN = 0.55;
 const FUZZY_EDIT_MIN_SIM = 0.4;
 const SUBPHRASE_MAX_TOKENS = 7;
+/**
+ * The longest normalised item text variant tells are run on; longer text reads none. Tells are written for one item and some backtrack on
+ * long input: cocoa's `kakao.*obniz.*tluszcz` over a 12,000-character item took ~4 s. On 1,400 real Polish labels
+ * the longest text reaching a tell is 204 characters and every tell hit ends by character 51, so 500 changes no
+ * real result and bounds the work.
+ */
+export const TELL_TEXT_MAX = 500;
 
 export class KbIndex {
   readonly version: string;
@@ -268,6 +275,10 @@ export class KbIndex {
   /** Variants whose label tells fire on this text (normalised). */
   tellsFor(ingredientId: string, text: string): VariantT[] {
     const norm = normName(text);
+    // Longer than any real item: no tell is read, so no variant is declared. A cut window cannot be read safely:
+    // a word cut short fires the wrong tell ("fishmint" → \bfish\b), and a tell that excludes a phrase
+    // (`(?!.*extra virgin)`) passes when the phrase falls past the cut. Unknown, never a wrong variant.
+    if (norm.length > TELL_TEXT_MAX) return [];
     return (this.tells.get(ingredientId) ?? []).filter((t) => t.res.some((re) => re.test(norm))).map((t) =>
       t.variant
     );
