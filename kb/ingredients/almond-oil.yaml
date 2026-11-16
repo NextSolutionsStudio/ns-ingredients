@@ -281,6 +281,10 @@ variants:
         - tłuszcze orzechowe z migdałów utwardzone
         - uwodornione tłuszcze orzechowe z migdałów
         - tłuszcze orzechowe z migdałów uwodornione
+        - olej utwardzony migdałowy
+        - olej uwodorniony migdałowy
+        - olej utwardzony z migdałów
+        - olej uwodorniony z migdałów
     process:
       en: "Almond oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej migdałowy utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
@@ -397,6 +401,10 @@ variants:
         - tłuszcze orzechowe z migdałów częściowo utwardzone
         - częściowo uwodornione tłuszcze orzechowe z migdałów
         - tłuszcze orzechowe z migdałów częściowo uwodornione
+        - olej częściowo utwardzony migdałowy
+        - olej częściowo uwodorniony migdałowy
+        - olej częściowo utwardzony z migdałów
+        - olej częściowo uwodorniony z migdałów
     process:
       en: "Almond oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
       pl: "Olej migdałowy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
@@ -622,6 +630,14 @@ variants:
         - tłuszcze orzechowe z migdałów w pełni utwardzone
         - w pełni uwodornione tłuszcze orzechowe z migdałów
         - tłuszcze orzechowe z migdałów w pełni uwodornione
+        - olej całkowicie utwardzony migdałowy
+        - olej całkowicie uwodorniony migdałowy
+        - olej w pełni utwardzony migdałowy
+        - olej w pełni uwodorniony migdałowy
+        - olej całkowicie utwardzony z migdałów
+        - olej całkowicie uwodorniony z migdałów
+        - olej w pełni utwardzony z migdałów
+        - olej w pełni uwodorniony z migdałów
     process:
       en: "Almond oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
       pl: "Olej migdałowy ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."

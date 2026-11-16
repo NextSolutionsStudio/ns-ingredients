@@ -380,6 +380,10 @@ variants:
         - tłuszcze orzechowe z orzechów pekan utwardzone
         - uwodornione tłuszcze orzechowe z orzechów pekan
         - tłuszcze orzechowe z orzechów pekan uwodornione
+        - olej utwardzony z orzechów pekan
+        - olej uwodorniony z orzechów pekan
+        - olej utwardzony pekanowy
+        - olej uwodorniony pekanowy
     process:
       en: "Pecan oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej z orzechów pekan utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
@@ -543,6 +547,10 @@ variants:
         - tłuszcze orzechowe z orzechów pekan częściowo utwardzone
         - częściowo uwodornione tłuszcze orzechowe z orzechów pekan
         - tłuszcze orzechowe z orzechów pekan częściowo uwodornione
+        - olej częściowo utwardzony z orzechów pekan
+        - olej częściowo uwodorniony z orzechów pekan
+        - olej częściowo utwardzony pekanowy
+        - olej częściowo uwodorniony pekanowy
     process:
       en: "Pecan oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
       pl: "Olej z orzechów pekan, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
@@ -862,6 +870,14 @@ variants:
         - tłuszcze orzechowe z orzechów pekan w pełni utwardzone
         - w pełni uwodornione tłuszcze orzechowe z orzechów pekan
         - tłuszcze orzechowe z orzechów pekan w pełni uwodornione
+        - olej całkowicie utwardzony z orzechów pekan
+        - olej całkowicie uwodorniony z orzechów pekan
+        - olej w pełni utwardzony z orzechów pekan
+        - olej w pełni uwodorniony z orzechów pekan
+        - olej całkowicie utwardzony pekanowy
+        - olej całkowicie uwodorniony pekanowy
+        - olej w pełni utwardzony pekanowy
+        - olej w pełni uwodorniony pekanowy
     process:
       en: "Pecan oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
       pl: "Olej z orzechów pekan ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."

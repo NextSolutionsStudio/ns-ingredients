@@ -289,6 +289,10 @@ variants:
         - tłuszcze orzechowe z orzeszków ziemnych utwardzone
         - uwodornione tłuszcze orzechowe z orzeszków ziemnych
         - tłuszcze orzechowe z orzeszków ziemnych uwodornione
+        - olej utwardzony arachidowy
+        - olej uwodorniony arachidowy
+        - olej utwardzony z orzeszków ziemnych
+        - olej uwodorniony z orzeszków ziemnych
     process:
       en: "Peanut oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej arachidowy utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
@@ -406,6 +410,10 @@ variants:
         - tłuszcze orzechowe z orzeszków ziemnych częściowo utwardzone
         - częściowo uwodornione tłuszcze orzechowe z orzeszków ziemnych
         - tłuszcze orzechowe z orzeszków ziemnych częściowo uwodornione
+        - olej częściowo utwardzony arachidowy
+        - olej częściowo uwodorniony arachidowy
+        - olej częściowo utwardzony z orzeszków ziemnych
+        - olej częściowo uwodorniony z orzeszków ziemnych
     process:
       en: "Peanut oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
       pl: "Olej arachidowy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
@@ -633,6 +641,14 @@ variants:
         - tłuszcze orzechowe z orzeszków ziemnych w pełni utwardzone
         - w pełni uwodornione tłuszcze orzechowe z orzeszków ziemnych
         - tłuszcze orzechowe z orzeszków ziemnych w pełni uwodornione
+        - olej całkowicie utwardzony arachidowy
+        - olej całkowicie uwodorniony arachidowy
+        - olej w pełni utwardzony arachidowy
+        - olej w pełni uwodorniony arachidowy
+        - olej całkowicie utwardzony z orzeszków ziemnych
+        - olej całkowicie uwodorniony z orzeszków ziemnych
+        - olej w pełni utwardzony z orzeszków ziemnych
+        - olej w pełni uwodorniony z orzeszków ziemnych
     process:
       en: "Peanut oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
       pl: "Olej arachidowy ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."

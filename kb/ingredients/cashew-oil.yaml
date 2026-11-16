@@ -282,6 +282,10 @@ variants:
         - tłuszcze orzechowe z orzechów nerkowca utwardzone
         - uwodornione tłuszcze orzechowe z orzechów nerkowca
         - tłuszcze orzechowe z orzechów nerkowca uwodornione
+        - olej utwardzony z orzechów nerkowca
+        - olej uwodorniony z orzechów nerkowca
+        - olej utwardzony z nerkowców
+        - olej uwodorniony z nerkowców
     process:
       en: "Cashew oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej z orzechów nerkowca utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
@@ -398,6 +402,10 @@ variants:
         - tłuszcze orzechowe z orzechów nerkowca częściowo utwardzone
         - częściowo uwodornione tłuszcze orzechowe z orzechów nerkowca
         - tłuszcze orzechowe z orzechów nerkowca częściowo uwodornione
+        - olej częściowo utwardzony z orzechów nerkowca
+        - olej częściowo uwodorniony z orzechów nerkowca
+        - olej częściowo utwardzony z nerkowców
+        - olej częściowo uwodorniony z nerkowców
     process:
       en: "Cashew oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
       pl: "Olej z orzechów nerkowca, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
@@ -623,6 +631,14 @@ variants:
         - tłuszcze orzechowe z orzechów nerkowca w pełni utwardzone
         - w pełni uwodornione tłuszcze orzechowe z orzechów nerkowca
         - tłuszcze orzechowe z orzechów nerkowca w pełni uwodornione
+        - olej całkowicie utwardzony z orzechów nerkowca
+        - olej całkowicie uwodorniony z orzechów nerkowca
+        - olej w pełni utwardzony z orzechów nerkowca
+        - olej w pełni uwodorniony z orzechów nerkowca
+        - olej całkowicie utwardzony z nerkowców
+        - olej całkowicie uwodorniony z nerkowców
+        - olej w pełni utwardzony z nerkowców
+        - olej w pełni uwodorniony z nerkowców
     process:
       en: "Cashew oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
       pl: "Olej z orzechów nerkowca ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."

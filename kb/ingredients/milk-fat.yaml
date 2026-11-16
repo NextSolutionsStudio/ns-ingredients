@@ -1,13 +1,79 @@
 id: milk-fat
 type: fat
 names:
-  en: [milk fat, butterfat, anhydrous milk fat]
-  pl: [tłuszcz mleczny, bezwodny tłuszcz mleczny]
+  en: [milk fat, butterfat, anhydrous milk fat, non-hydrogenated milk fat, unhydrogenated milk fat, non-hydrogenated anhydrous milk fat, unhydrogenated anhydrous milk fat, not hydrogenated anhydrous milk fat, not partially hydrogenated anhydrous milk fat, not fully hydrogenated anhydrous milk fat, non partially hydrogenated anhydrous milk fat, not hydrogenated milk fat, not partially hydrogenated milk fat, not fully hydrogenated milk fat, non partially hydrogenated milk fat]
+  pl: [tłuszcz mleczny, bezwodny tłuszcz mleczny, nie utwardzony tłuszcz mleczny, tłuszcz mleczny nie utwardzony, nie uwodorniony tłuszcz mleczny, tłuszcz mleczny nie uwodorniony]
   de: [Milchfett, Butterreinfett]
 summary:
   en: "The fat fraction of milk, isolated to near-pure fat (anhydrous milk fat/butterfat removes essentially all water and milk solids); one of the EU's fourteen regulated allergens (milk) regardless of how little non-fat milk solid remains."
   pl: "Frakcja tłuszczowa mleka, wyodrębniona do postaci praktycznie czystego tłuszczu (bezwodny tłuszcz mleczny usuwa niemal całą wodę i suchą masę mleka); jeden z czternastu regulowanych alergenów UE (mleko), niezależnie od tego, jak mało beztłuszczowej suchej masy mleka pozostaje."
   de: "Die Fettfraktion der Milch, isoliert zu nahezu reinem Fett (Butterreinfett entfernt praktisch alles Wasser und alle Milchfeststoffe); eines der vierzehn geregelten EU-Allergene (Milch)."
+variants:
+  - id: hydrogenated
+    names:
+      en:
+        - hydrogenated milk fat
+        - hydrogenated anhydrous milk fat
+      pl:
+        - utwardzony tłuszcz mleczny
+        - tłuszcz mleczny utwardzony
+        - uwodorniony tłuszcz mleczny
+        - tłuszcz mleczny uwodorniony
+        - tłuszcz utwardzony mleczny
+        - tłuszcz uwodorniony mleczny
+    process:
+      en: "Milk fat hardened by hydrogenation; the label does not specify partial or full hydrogenation."
+      pl: "Tłuszcz mleczny utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
+    tells:
+      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!not )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)'
+  - id: partially-hydrogenated
+    names:
+      en:
+        - partially hydrogenated milk fat
+        - partially hydrogenated anhydrous milk fat
+      pl:
+        - częściowo utwardzony tłuszcz mleczny
+        - tłuszcz mleczny częściowo utwardzony
+        - częściowo uwodorniony tłuszcz mleczny
+        - tłuszcz mleczny częściowo uwodorniony
+        - tłuszcz częściowo utwardzony mleczny
+        - tłuszcz częściowo uwodorniony mleczny
+    process:
+      en: "Milk fat in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
+      pl: "Tłuszcz mleczny, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
+    tells:
+      - 'czesciowo (?:utwardzon|uwodorn)'
+      - '(?<!not )(?<!non )partially hydrogenated'
+      - 'teilweise gehartet'
+  - id: fully-hydrogenated
+    names:
+      en:
+        - fully hydrogenated milk fat
+        - totally hydrogenated milk fat
+        - fully hydrogenated anhydrous milk fat
+        - totally hydrogenated anhydrous milk fat
+      pl:
+        - całkowicie utwardzony tłuszcz mleczny
+        - tłuszcz mleczny całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz mleczny
+        - tłuszcz mleczny całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz mleczny
+        - tłuszcz mleczny w pełni utwardzony
+        - w pełni uwodorniony tłuszcz mleczny
+        - tłuszcz mleczny w pełni uwodorniony
+        - tłuszcz całkowicie utwardzony mleczny
+        - tłuszcz całkowicie uwodorniony mleczny
+        - tłuszcz w pełni utwardzony mleczny
+        - tłuszcz w pełni uwodorniony mleczny
+    process:
+      en: "Milk fat with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
+      pl: "Tłuszcz mleczny ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
+    tells:
+      - 'calkowicie (?:utwardzon|uwodorn)'
+      - 'w pelni (?:utwardzon|uwodorn)'
+      - '(?<!not )(?<!non )fully hydrogenated'
+      - '(?<!not )(?<!non )totally hydrogenated'
+      - 'vollstandig gehartet'
 assertions:
   - code: allergen.milk
     certainty: yes
@@ -33,6 +99,49 @@ assertions:
     grade: A
     note: { en: "Compatible with a lacto-ovo-vegetarian diet.", pl: "Zgodne z dietą laktoowowegetariańską." }
     sources: [{ id: reg-1169-2011 }]
+  - code: processing.hydrogenated
+    variant: hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares hydrogenation without specifying partial or full in its list of ingredients."
+      pl: "Etykieta deklaruje utwardzenie (bez wskazania, czy częściowe, czy całkowite) w wykazie składników."
+    sources:
+      - id: reg-1169-2011
+        locator: "Article 9(1)(b) and Article 18 (list of ingredients)"
+  - code: processing.hydrogenated
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares partial hydrogenation in its list of ingredients."
+      pl: "Etykieta deklaruje częściowe utwardzenie w wykazie składników."
+    sources:
+      - id: reg-1169-2011
+        locator: "Article 9(1)(b) and Article 18 (list of ingredients)"
+  - code: health.trans_fat_source
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Partial hydrogenation is the main industrial source of trans fat; EU food sold to consumers is capped at 2 g trans fat per 100 g of fat, and the cap covers trans fat formed by hydrogenating an animal fat, which is not naturally occurring."
+      pl: "Częściowe utwardzanie jest głównym przemysłowym źródłem tłuszczów trans; żywność sprzedawana konsumentom w UE ma limit 2 g tłuszczów trans na 100 g tłuszczu, obejmujący też tłuszcze trans powstałe przy utwardzaniu tłuszczu zwierzęcego, które nie występują naturalnie."
+    sources:
+      - id: reg-2019-649
+  - code: processing.hydrogenated
+    variant: fully-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares full hydrogenation in its list of ingredients."
+      pl: "Etykieta deklaruje całkowite utwardzenie w wykazie składników."
+    sources:
+      - id: reg-1169-2011
+        locator: "Article 9(1)(b) and Article 18 (list of ingredients)"
 review_status: draft
 provenance: ai-drafted
 review_notes:

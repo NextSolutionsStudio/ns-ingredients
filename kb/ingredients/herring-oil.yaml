@@ -4,9 +4,23 @@ parent: atlantic-herring
 names:
   en:
     - herring oil
+    - non-hydrogenated herring oil
+    - unhydrogenated herring oil
+    - not hydrogenated herring oil
+    - not partially hydrogenated herring oil
+    - not fully hydrogenated herring oil
+    - non partially hydrogenated herring oil
   pl:
     - olej ze śledzia
     - olej ze śledzi
+    - nie utwardzony olej ze śledzia
+    - olej ze śledzia nie utwardzony
+    - nie uwodorniony olej ze śledzia
+    - olej ze śledzia nie uwodorniony
+    - nie utwardzony olej ze śledzi
+    - olej ze śledzi nie utwardzony
+    - nie uwodorniony olej ze śledzi
+    - olej ze śledzi nie uwodorniony
   de:
     - Heringsöl
 summary:
@@ -16,6 +30,92 @@ summary:
   pl: >-
     Olej rybny pozyskiwany ze śledzia (Clupea harengus). Jako produkt pochodzący z ryb podlega obowiązkowi
     deklarowania alergenu z Aneksu II UE (punkt 4) i nie jest wyłączony dla oleju rybnego.
+variants:
+  - id: hydrogenated
+    names:
+      en:
+        - hydrogenated herring oil
+      pl:
+        - utwardzony olej ze śledzia
+        - olej ze śledzia utwardzony
+        - uwodorniony olej ze śledzia
+        - olej ze śledzia uwodorniony
+        - utwardzony olej ze śledzi
+        - olej ze śledzi utwardzony
+        - uwodorniony olej ze śledzi
+        - olej ze śledzi uwodorniony
+        - olej utwardzony ze śledzia
+        - olej uwodorniony ze śledzia
+        - olej utwardzony ze śledzi
+        - olej uwodorniony ze śledzi
+    process:
+      en: "Herring oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
+      pl: "Olej ze śledzia utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
+    tells:
+      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!not )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)'
+  - id: partially-hydrogenated
+    names:
+      en:
+        - partially hydrogenated herring oil
+      pl:
+        - częściowo utwardzony olej ze śledzia
+        - olej ze śledzia częściowo utwardzony
+        - częściowo uwodorniony olej ze śledzia
+        - olej ze śledzia częściowo uwodorniony
+        - częściowo utwardzony olej ze śledzi
+        - olej ze śledzi częściowo utwardzony
+        - częściowo uwodorniony olej ze śledzi
+        - olej ze śledzi częściowo uwodorniony
+        - olej częściowo utwardzony ze śledzia
+        - olej częściowo uwodorniony ze śledzia
+        - olej częściowo utwardzony ze śledzi
+        - olej częściowo uwodorniony ze śledzi
+    process:
+      en: "Herring oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
+      pl: "Olej ze śledzia, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
+    tells:
+      - 'czesciowo (?:utwardzon|uwodorn)'
+      - '(?<!not )(?<!non )partially hydrogenated'
+      - 'teilweise gehartet'
+  - id: fully-hydrogenated
+    names:
+      en:
+        - fully hydrogenated herring oil
+        - totally hydrogenated herring oil
+      pl:
+        - całkowicie utwardzony olej ze śledzia
+        - olej ze śledzia całkowicie utwardzony
+        - całkowicie uwodorniony olej ze śledzia
+        - olej ze śledzia całkowicie uwodorniony
+        - w pełni utwardzony olej ze śledzia
+        - olej ze śledzia w pełni utwardzony
+        - w pełni uwodorniony olej ze śledzia
+        - olej ze śledzia w pełni uwodorniony
+        - całkowicie utwardzony olej ze śledzi
+        - olej ze śledzi całkowicie utwardzony
+        - całkowicie uwodorniony olej ze śledzi
+        - olej ze śledzi całkowicie uwodorniony
+        - w pełni utwardzony olej ze śledzi
+        - olej ze śledzi w pełni utwardzony
+        - w pełni uwodorniony olej ze śledzi
+        - olej ze śledzi w pełni uwodorniony
+        - olej całkowicie utwardzony ze śledzia
+        - olej całkowicie uwodorniony ze śledzia
+        - olej w pełni utwardzony ze śledzia
+        - olej w pełni uwodorniony ze śledzia
+        - olej całkowicie utwardzony ze śledzi
+        - olej całkowicie uwodorniony ze śledzi
+        - olej w pełni utwardzony ze śledzi
+        - olej w pełni uwodorniony ze śledzi
+    process:
+      en: "Herring oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
+      pl: "Olej ze śledzia ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
+    tells:
+      - 'calkowicie (?:utwardzon|uwodorn)'
+      - 'w pelni (?:utwardzon|uwodorn)'
+      - '(?<!not )(?<!non )fully hydrogenated'
+      - '(?<!not )(?<!non )totally hydrogenated'
+      - 'vollstandig gehartet'
 assertions:
   - code: allergen.fish
     certainty: 'yes'
@@ -54,6 +154,49 @@ assertions:
       pl: Olej rybny jest pozyskiwany z ryb i nie jest zgodny z dietą wegetariańską.
     sources:
       - id: reg-1169-2011
+  - code: processing.hydrogenated
+    variant: hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares hydrogenation without specifying partial or full in its list of ingredients."
+      pl: "Etykieta deklaruje utwardzenie (bez wskazania, czy częściowe, czy całkowite) w wykazie składników."
+    sources:
+      - id: reg-1169-2011
+        locator: "Article 9(1)(b) and Article 18 (list of ingredients)"
+  - code: processing.hydrogenated
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares partial hydrogenation in its list of ingredients."
+      pl: "Etykieta deklaruje częściowe utwardzenie w wykazie składników."
+    sources:
+      - id: reg-1169-2011
+        locator: "Article 9(1)(b) and Article 18 (list of ingredients)"
+  - code: health.trans_fat_source
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Partial hydrogenation is the main industrial source of trans fat; EU food sold to consumers is capped at 2 g trans fat per 100 g of fat, and the cap covers trans fat formed by hydrogenating an animal fat, which is not naturally occurring."
+      pl: "Częściowe utwardzanie jest głównym przemysłowym źródłem tłuszczów trans; żywność sprzedawana konsumentom w UE ma limit 2 g tłuszczów trans na 100 g tłuszczu, obejmujący też tłuszcze trans powstałe przy utwardzaniu tłuszczu zwierzęcego, które nie występują naturalnie."
+    sources:
+      - id: reg-2019-649
+  - code: processing.hydrogenated
+    variant: fully-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares full hydrogenation in its list of ingredients."
+      pl: "Etykieta deklaruje całkowite utwardzenie w wykazie składników."
+    sources:
+      - id: reg-1169-2011
+        locator: "Article 9(1)(b) and Article 18 (list of ingredients)"
 review_status: draft
 provenance: ai-drafted
 review_notes:

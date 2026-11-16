@@ -186,6 +186,12 @@ variants:
         - oleje roślinne z kukurydzy utwardzone
         - uwodornione oleje roślinne z kukurydzy
         - oleje roślinne z kukurydzy uwodornione
+        - olej utwardzony kukurydziany
+        - olej uwodorniony kukurydziany
+        - olej utwardzony z kiełków kukurydzy
+        - olej uwodorniony z kiełków kukurydzy
+        - olej utwardzony z kukurydzy
+        - olej uwodorniony z kukurydzy
       de:
         - gehärtetes Maiskeimöl
         - gehärtetes Maisöl
@@ -264,6 +270,12 @@ variants:
         - oleje roślinne z kukurydzy częściowo utwardzone
         - częściowo uwodornione oleje roślinne z kukurydzy
         - oleje roślinne z kukurydzy częściowo uwodornione
+        - olej częściowo utwardzony kukurydziany
+        - olej częściowo uwodorniony kukurydziany
+        - olej częściowo utwardzony z kiełków kukurydzy
+        - olej częściowo uwodorniony z kiełków kukurydzy
+        - olej częściowo utwardzony z kukurydzy
+        - olej częściowo uwodorniony z kukurydzy
       de:
         - teilweise gehärtetes Maiskeimöl
         - teilweise gehärtetes Maisöl
@@ -410,6 +422,18 @@ variants:
         - oleje roślinne z kukurydzy w pełni utwardzone
         - w pełni uwodornione oleje roślinne z kukurydzy
         - oleje roślinne z kukurydzy w pełni uwodornione
+        - olej całkowicie utwardzony kukurydziany
+        - olej całkowicie uwodorniony kukurydziany
+        - olej w pełni utwardzony kukurydziany
+        - olej w pełni uwodorniony kukurydziany
+        - olej całkowicie utwardzony z kiełków kukurydzy
+        - olej całkowicie uwodorniony z kiełków kukurydzy
+        - olej w pełni utwardzony z kiełków kukurydzy
+        - olej w pełni uwodorniony z kiełków kukurydzy
+        - olej całkowicie utwardzony z kukurydzy
+        - olej całkowicie uwodorniony z kukurydzy
+        - olej w pełni utwardzony z kukurydzy
+        - olej w pełni uwodorniony z kukurydzy
       de:
         - vollständig gehärtetes Maiskeimöl
         - vollständig gehärtetes Maisöl

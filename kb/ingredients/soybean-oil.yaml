@@ -247,6 +247,10 @@ variants:
         - olej roślinny z nasion soi utwardzony
         - uwodorniony olej roślinny z nasion soi
         - olej roślinny z nasion soi uwodorniony
+        - olej utwardzony sojowy
+        - olej uwodorniony sojowy
+        - olej utwardzony z soi
+        - olej uwodorniony z soi
       de:
         - gehärtetes Sojaöl
     process:
@@ -308,6 +312,10 @@ variants:
         - olej roślinny z nasion soi częściowo utwardzony
         - częściowo uwodorniony olej roślinny z nasion soi
         - olej roślinny z nasion soi częściowo uwodorniony
+        - olej częściowo utwardzony sojowy
+        - olej częściowo uwodorniony sojowy
+        - olej częściowo utwardzony z soi
+        - olej częściowo uwodorniony z soi
       de:
         - teilweise gehärtetes Sojaöl
     process:
@@ -421,6 +429,14 @@ variants:
         - olej roślinny z nasion soi w pełni utwardzony
         - w pełni uwodorniony olej roślinny z nasion soi
         - olej roślinny z nasion soi w pełni uwodorniony
+        - olej całkowicie utwardzony sojowy
+        - olej całkowicie uwodorniony sojowy
+        - olej w pełni utwardzony sojowy
+        - olej w pełni uwodorniony sojowy
+        - olej całkowicie utwardzony z soi
+        - olej całkowicie uwodorniony z soi
+        - olej w pełni utwardzony z soi
+        - olej w pełni uwodorniony z soi
       de:
         - vollständig gehärtetes Sojaöl
     process:

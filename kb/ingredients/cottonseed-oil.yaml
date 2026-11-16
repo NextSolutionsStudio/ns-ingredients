@@ -184,6 +184,12 @@ variants:
         - oleje roślinne z bawełny utwardzone
         - uwodornione oleje roślinne z bawełny
         - oleje roślinne z bawełny uwodornione
+        - olej utwardzony bawełniany
+        - olej uwodorniony bawełniany
+        - olej utwardzony z nasion bawełny
+        - olej uwodorniony z nasion bawełny
+        - olej utwardzony z bawełny
+        - olej uwodorniony z bawełny
       de:
         - gehärtetes Baumwollsaatöl
     process:
@@ -261,6 +267,12 @@ variants:
         - oleje roślinne z bawełny częściowo utwardzone
         - częściowo uwodornione oleje roślinne z bawełny
         - oleje roślinne z bawełny częściowo uwodornione
+        - olej częściowo utwardzony bawełniany
+        - olej częściowo uwodorniony bawełniany
+        - olej częściowo utwardzony z nasion bawełny
+        - olej częściowo uwodorniony z nasion bawełny
+        - olej częściowo utwardzony z bawełny
+        - olej częściowo uwodorniony z bawełny
       de:
         - teilweise gehärtetes Baumwollsaatöl
     process:
@@ -406,6 +418,18 @@ variants:
         - oleje roślinne z bawełny w pełni utwardzone
         - w pełni uwodornione oleje roślinne z bawełny
         - oleje roślinne z bawełny w pełni uwodornione
+        - olej całkowicie utwardzony bawełniany
+        - olej całkowicie uwodorniony bawełniany
+        - olej w pełni utwardzony bawełniany
+        - olej w pełni uwodorniony bawełniany
+        - olej całkowicie utwardzony z nasion bawełny
+        - olej całkowicie uwodorniony z nasion bawełny
+        - olej w pełni utwardzony z nasion bawełny
+        - olej w pełni uwodorniony z nasion bawełny
+        - olej całkowicie utwardzony z bawełny
+        - olej całkowicie uwodorniony z bawełny
+        - olej w pełni utwardzony z bawełny
+        - olej w pełni uwodorniony z bawełny
       de:
         - vollständig gehärtetes Baumwollsaatöl
     process:

@@ -397,6 +397,12 @@ variants:
         - tłuszcze orzechowe z orzechów makadamia utwardzone
         - uwodornione tłuszcze orzechowe z orzechów makadamia
         - tłuszcze orzechowe z orzechów makadamia uwodornione
+        - olej utwardzony z orzechów makadamia
+        - olej uwodorniony z orzechów makadamia
+        - olej utwardzony makadamia
+        - olej uwodorniony makadamia
+        - olej utwardzony z makadamii
+        - olej uwodorniony z makadamii
     process:
       en: "Macadamia oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej z orzechów makadamia utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
@@ -565,6 +571,12 @@ variants:
         - tłuszcze orzechowe z orzechów makadamia częściowo utwardzone
         - częściowo uwodornione tłuszcze orzechowe z orzechów makadamia
         - tłuszcze orzechowe z orzechów makadamia częściowo uwodornione
+        - olej częściowo utwardzony z orzechów makadamia
+        - olej częściowo uwodorniony z orzechów makadamia
+        - olej częściowo utwardzony makadamia
+        - olej częściowo uwodorniony makadamia
+        - olej częściowo utwardzony z makadamii
+        - olej częściowo uwodorniony z makadamii
     process:
       en: "Macadamia oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
       pl: "Olej z orzechów makadamia, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
@@ -894,6 +906,18 @@ variants:
         - tłuszcze orzechowe z orzechów makadamia w pełni utwardzone
         - w pełni uwodornione tłuszcze orzechowe z orzechów makadamia
         - tłuszcze orzechowe z orzechów makadamia w pełni uwodornione
+        - olej całkowicie utwardzony z orzechów makadamia
+        - olej całkowicie uwodorniony z orzechów makadamia
+        - olej w pełni utwardzony z orzechów makadamia
+        - olej w pełni uwodorniony z orzechów makadamia
+        - olej całkowicie utwardzony makadamia
+        - olej całkowicie uwodorniony makadamia
+        - olej w pełni utwardzony makadamia
+        - olej w pełni uwodorniony makadamia
+        - olej całkowicie utwardzony z makadamii
+        - olej całkowicie uwodorniony z makadamii
+        - olej w pełni utwardzony z makadamii
+        - olej w pełni uwodorniony z makadamii
     process:
       en: "Macadamia oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
       pl: "Olej z orzechów makadamia ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."

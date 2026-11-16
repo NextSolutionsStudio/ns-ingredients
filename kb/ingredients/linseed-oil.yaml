@@ -236,6 +236,14 @@ variants:
         - oleje roślinne z lnu utwardzone
         - uwodornione oleje roślinne z lnu
         - oleje roślinne z lnu uwodornione
+        - olej utwardzony lniany
+        - olej uwodorniony lniany
+        - olej utwardzony z siemienia lnianego
+        - olej uwodorniony z siemienia lnianego
+        - olej utwardzony z nasion lnu
+        - olej uwodorniony z nasion lnu
+        - olej utwardzony z lnu
+        - olej uwodorniony z lnu
       de:
         - gehärtetes Leinöl
         - gehärtetes Leinsamenöl
@@ -335,6 +343,14 @@ variants:
         - oleje roślinne z lnu częściowo utwardzone
         - częściowo uwodornione oleje roślinne z lnu
         - oleje roślinne z lnu częściowo uwodornione
+        - olej częściowo utwardzony lniany
+        - olej częściowo uwodorniony lniany
+        - olej częściowo utwardzony z siemienia lnianego
+        - olej częściowo uwodorniony z siemienia lnianego
+        - olej częściowo utwardzony z nasion lnu
+        - olej częściowo uwodorniony z nasion lnu
+        - olej częściowo utwardzony z lnu
+        - olej częściowo uwodorniony z lnu
       de:
         - teilweise gehärtetes Leinöl
         - teilweise gehärtetes Leinsamenöl
@@ -523,6 +539,22 @@ variants:
         - oleje roślinne z lnu w pełni utwardzone
         - w pełni uwodornione oleje roślinne z lnu
         - oleje roślinne z lnu w pełni uwodornione
+        - olej całkowicie utwardzony lniany
+        - olej całkowicie uwodorniony lniany
+        - olej w pełni utwardzony lniany
+        - olej w pełni uwodorniony lniany
+        - olej całkowicie utwardzony z siemienia lnianego
+        - olej całkowicie uwodorniony z siemienia lnianego
+        - olej w pełni utwardzony z siemienia lnianego
+        - olej w pełni uwodorniony z siemienia lnianego
+        - olej całkowicie utwardzony z nasion lnu
+        - olej całkowicie uwodorniony z nasion lnu
+        - olej w pełni utwardzony z nasion lnu
+        - olej w pełni uwodorniony z nasion lnu
+        - olej całkowicie utwardzony z lnu
+        - olej całkowicie uwodorniony z lnu
+        - olej w pełni utwardzony z lnu
+        - olej w pełni uwodorniony z lnu
       de:
         - vollständig gehärtetes Leinöl
         - vollständig gehärtetes Leinsamenöl

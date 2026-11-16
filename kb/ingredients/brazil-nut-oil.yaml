@@ -21,10 +21,6 @@ names:
     - olej z orzechów brazylijskich
     - olej orzechowy brazylijski
     - olej orzechowy z orzechów brazylijskich
-    - tłuszcz roślinny brazylijski
-    - tłuszcze roślinne brazylijskie
-    - olej roślinny brazylijski
-    - oleje roślinne brazylijskie
     - olej roślinny orzechowy brazylijski
     - tłuszcz roślinny orzechowy brazylijski
     - oleje roślinne orzechowe brazylijskie
@@ -33,7 +29,6 @@ names:
     - oleje orzechowe brazylijskie
     - tłuszcz orzechowy brazylijski
     - tłuszcze orzechowe brazylijskie
-    - brazylijski olej roślinny
     - tłuszcz roślinny z orzechów brazylijskich
     - tłuszcze roślinne z orzechów brazylijskich
     - olej roślinny z orzechów brazylijskich
@@ -58,22 +53,6 @@ names:
     - olej orzechowy z orzechów brazylijskich nie utwardzony
     - nie uwodorniony olej orzechowy z orzechów brazylijskich
     - olej orzechowy z orzechów brazylijskich nie uwodorniony
-    - nie utwardzony tłuszcz roślinny brazylijski
-    - tłuszcz roślinny brazylijski nie utwardzony
-    - nie uwodorniony tłuszcz roślinny brazylijski
-    - tłuszcz roślinny brazylijski nie uwodorniony
-    - nie utwardzone tłuszcze roślinne brazylijskie
-    - tłuszcze roślinne brazylijskie nie utwardzone
-    - nie uwodornione tłuszcze roślinne brazylijskie
-    - tłuszcze roślinne brazylijskie nie uwodornione
-    - nie utwardzony olej roślinny brazylijski
-    - olej roślinny brazylijski nie utwardzony
-    - nie uwodorniony olej roślinny brazylijski
-    - olej roślinny brazylijski nie uwodorniony
-    - nie utwardzone oleje roślinne brazylijskie
-    - oleje roślinne brazylijskie nie utwardzone
-    - nie uwodornione oleje roślinne brazylijskie
-    - oleje roślinne brazylijskie nie uwodornione
     - nie utwardzony olej roślinny orzechowy brazylijski
     - olej roślinny orzechowy brazylijski nie utwardzony
     - nie uwodorniony olej roślinny orzechowy brazylijski
@@ -174,22 +153,6 @@ variants:
         - olej orzechowy z orzechów brazylijskich utwardzony
         - uwodorniony olej orzechowy z orzechów brazylijskich
         - olej orzechowy z orzechów brazylijskich uwodorniony
-        - utwardzony tłuszcz roślinny brazylijski
-        - tłuszcz roślinny brazylijski utwardzony
-        - uwodorniony tłuszcz roślinny brazylijski
-        - tłuszcz roślinny brazylijski uwodorniony
-        - utwardzone tłuszcze roślinne brazylijskie
-        - tłuszcze roślinne brazylijskie utwardzone
-        - uwodornione tłuszcze roślinne brazylijskie
-        - tłuszcze roślinne brazylijskie uwodornione
-        - utwardzony olej roślinny brazylijski
-        - olej roślinny brazylijski utwardzony
-        - uwodorniony olej roślinny brazylijski
-        - olej roślinny brazylijski uwodorniony
-        - utwardzone oleje roślinne brazylijskie
-        - oleje roślinne brazylijskie utwardzone
-        - uwodornione oleje roślinne brazylijskie
-        - oleje roślinne brazylijskie uwodornione
         - utwardzony olej roślinny orzechowy brazylijski
         - olej roślinny orzechowy brazylijski utwardzony
         - uwodorniony olej roślinny orzechowy brazylijski
@@ -262,6 +225,8 @@ variants:
         - tłuszcze orzechowe z orzechów brazylijskich utwardzone
         - uwodornione tłuszcze orzechowe z orzechów brazylijskich
         - tłuszcze orzechowe z orzechów brazylijskich uwodornione
+        - olej utwardzony z orzechów brazylijskich
+        - olej uwodorniony z orzechów brazylijskich
     process:
       en: "Brazil nut oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej z orzechów brazylijskich utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
@@ -285,22 +250,6 @@ variants:
         - olej orzechowy z orzechów brazylijskich częściowo utwardzony
         - częściowo uwodorniony olej orzechowy z orzechów brazylijskich
         - olej orzechowy z orzechów brazylijskich częściowo uwodorniony
-        - częściowo utwardzony tłuszcz roślinny brazylijski
-        - tłuszcz roślinny brazylijski częściowo utwardzony
-        - częściowo uwodorniony tłuszcz roślinny brazylijski
-        - tłuszcz roślinny brazylijski częściowo uwodorniony
-        - częściowo utwardzone tłuszcze roślinne brazylijskie
-        - tłuszcze roślinne brazylijskie częściowo utwardzone
-        - częściowo uwodornione tłuszcze roślinne brazylijskie
-        - tłuszcze roślinne brazylijskie częściowo uwodornione
-        - częściowo utwardzony olej roślinny brazylijski
-        - olej roślinny brazylijski częściowo utwardzony
-        - częściowo uwodorniony olej roślinny brazylijski
-        - olej roślinny brazylijski częściowo uwodorniony
-        - częściowo utwardzone oleje roślinne brazylijskie
-        - oleje roślinne brazylijskie częściowo utwardzone
-        - częściowo uwodornione oleje roślinne brazylijskie
-        - oleje roślinne brazylijskie częściowo uwodornione
         - częściowo utwardzony olej roślinny orzechowy brazylijski
         - olej roślinny orzechowy brazylijski częściowo utwardzony
         - częściowo uwodorniony olej roślinny orzechowy brazylijski
@@ -373,6 +322,8 @@ variants:
         - tłuszcze orzechowe z orzechów brazylijskich częściowo utwardzone
         - częściowo uwodornione tłuszcze orzechowe z orzechów brazylijskich
         - tłuszcze orzechowe z orzechów brazylijskich częściowo uwodornione
+        - olej częściowo utwardzony z orzechów brazylijskich
+        - olej częściowo uwodorniony z orzechów brazylijskich
     process:
       en: "Brazil nut oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
       pl: "Olej z orzechów brazylijskich, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
@@ -412,38 +363,6 @@ variants:
         - olej orzechowy z orzechów brazylijskich w pełni utwardzony
         - w pełni uwodorniony olej orzechowy z orzechów brazylijskich
         - olej orzechowy z orzechów brazylijskich w pełni uwodorniony
-        - całkowicie utwardzony tłuszcz roślinny brazylijski
-        - tłuszcz roślinny brazylijski całkowicie utwardzony
-        - całkowicie uwodorniony tłuszcz roślinny brazylijski
-        - tłuszcz roślinny brazylijski całkowicie uwodorniony
-        - w pełni utwardzony tłuszcz roślinny brazylijski
-        - tłuszcz roślinny brazylijski w pełni utwardzony
-        - w pełni uwodorniony tłuszcz roślinny brazylijski
-        - tłuszcz roślinny brazylijski w pełni uwodorniony
-        - całkowicie utwardzone tłuszcze roślinne brazylijskie
-        - tłuszcze roślinne brazylijskie całkowicie utwardzone
-        - całkowicie uwodornione tłuszcze roślinne brazylijskie
-        - tłuszcze roślinne brazylijskie całkowicie uwodornione
-        - w pełni utwardzone tłuszcze roślinne brazylijskie
-        - tłuszcze roślinne brazylijskie w pełni utwardzone
-        - w pełni uwodornione tłuszcze roślinne brazylijskie
-        - tłuszcze roślinne brazylijskie w pełni uwodornione
-        - całkowicie utwardzony olej roślinny brazylijski
-        - olej roślinny brazylijski całkowicie utwardzony
-        - całkowicie uwodorniony olej roślinny brazylijski
-        - olej roślinny brazylijski całkowicie uwodorniony
-        - w pełni utwardzony olej roślinny brazylijski
-        - olej roślinny brazylijski w pełni utwardzony
-        - w pełni uwodorniony olej roślinny brazylijski
-        - olej roślinny brazylijski w pełni uwodorniony
-        - całkowicie utwardzone oleje roślinne brazylijskie
-        - oleje roślinne brazylijskie całkowicie utwardzone
-        - całkowicie uwodornione oleje roślinne brazylijskie
-        - oleje roślinne brazylijskie całkowicie uwodornione
-        - w pełni utwardzone oleje roślinne brazylijskie
-        - oleje roślinne brazylijskie w pełni utwardzone
-        - w pełni uwodornione oleje roślinne brazylijskie
-        - oleje roślinne brazylijskie w pełni uwodornione
         - całkowicie utwardzony olej roślinny orzechowy brazylijski
         - olej roślinny orzechowy brazylijski całkowicie utwardzony
         - całkowicie uwodorniony olej roślinny orzechowy brazylijski
@@ -588,6 +507,10 @@ variants:
         - tłuszcze orzechowe z orzechów brazylijskich w pełni utwardzone
         - w pełni uwodornione tłuszcze orzechowe z orzechów brazylijskich
         - tłuszcze orzechowe z orzechów brazylijskich w pełni uwodornione
+        - olej całkowicie utwardzony z orzechów brazylijskich
+        - olej całkowicie uwodorniony z orzechów brazylijskich
+        - olej w pełni utwardzony z orzechów brazylijskich
+        - olej w pełni uwodorniony z orzechów brazylijskich
     process:
       en: "Brazil nut oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
       pl: "Olej z orzechów brazylijskich ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
