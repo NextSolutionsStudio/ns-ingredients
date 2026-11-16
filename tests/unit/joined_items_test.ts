@@ -254,3 +254,96 @@ Deno.test("in brackets, the parts of one dashed list share its class", () => {
     ["naturalny aromat waniliowy", undefined],
   ]);
 });
+
+// ---------------------------------------------------------------- second review of PR #9
+Deno.test("a KB name inside a segment keeps its dash, though the words around it would split", () => {
+  // "gluten - free wheat fibre" is a variant's name inside a longer segment. Cut at its dash, "BIO gluten"
+  // and "free wheat fibre" both matched, and the label stopped being gluten-free. On main d533da5 it was one
+  // item, the variant by sub-phrase at 0.9; it still is.
+  const fibre = run("Ingredients: BIO gluten - free wheat fibre", "en");
+  assertEquals(ids(fibre.items), [["1", "wheat-fibre", "sub_phrase"]]);
+  assertEquals([fibre.items[0].variant?.id, fibre.items[0].match?.confidence], ["gluten-free", 0.9]);
+  assertEquals(fibre.diets.gluten_free.status, "yes");
+  // "coconut - milk" is the coconut's own name: cut after "coconut", "milk powder" was dairy milk, a false
+  // allergen. On main it was one item, coconut by sub-phrase; it still is, and nothing says milk.
+  const coconut = run("Ingredients: coconut - milk powder", "en");
+  assertEquals(ids(coconut.items), [["1", "coconut", "sub_phrase"]]);
+  assertEquals(coconut.flags.filter((f) => f.code === "allergen.milk"), []);
+  assertEquals([coconut.diets.vegan.status, coconut.diets.lactose_free.status], ["yes", "yes"]);
+  // The same for a whole name with a word before it: it was dextrose and fructose, and is the syrup, as on main.
+  assertEquals(ids(run("Ingredients: BIO glucose - fructose syrup", "en").items), [
+    ["1", "glucose-fructose-syrup", "sub_phrase"],
+  ]);
+  // A separator outside the name is still cut.
+  assertEquals(ids(run("Ingredients: sugar - coconut - milk", "en").items), [
+    ["1", "sugar", "exact"],
+    ["2", "coconut", "exact"],
+  ]);
+});
+
+/** analyze() with the number of calls it made to the matcher, and its time (best of three). */
+function costOf(text: string, lang: "pl" | "en" = "en") {
+  const match = index.match;
+  let calls = 0;
+  index.match = (t: string) => (calls++, match.call(index, t));
+  try {
+    let ms = Infinity;
+    let r = analyze(index, text, { lang });
+    for (let i = 0; i < 3; i++) {
+      calls = 0;
+      const t = performance.now();
+      r = analyze(index, text, { lang });
+      ms = Math.min(ms, performance.now() - t);
+    }
+    return { r, calls, ms };
+  } finally {
+    index.match = match;
+  }
+}
+
+/**
+ * Up to 12,000 characters of distinct ingredients' plain English names ("sugar", "wheat flour"), joined by
+ * `sep`. Each name splits from the one before it: no qualifier ("vegetable carbon"), no name across the join
+ * ("oat gum - tragacanth" prints "gum tragacanth"), no genus initial ("vitamin e. walnut oil").
+ */
+function knownList(sep: string) {
+  const kb = nameOracle(index);
+  const names: string[] = [];
+  let length = "Ingredients: ".length;
+  for (const ing of bundle!.ingredients) {
+    const name = ing.names.en?.[0];
+    if (!name || !/^\p{Ll}{2,}(?: \p{Ll}{2,})*$/u.test(name) || index.classOf(name)) continue;
+    if (index.match(name)?.ingredientId !== ing.id) continue;
+    if (names.length && parseLabel(`${names.at(-1)}${sep}${name}`, { kb }).items.length !== 2) continue;
+    if ((length += name.length + sep.length) > 12_000) break;
+    names.push(name);
+  }
+  return { text: `Ingredients: ${names.join(sep)}`, parts: names.length };
+}
+
+Deno.test("a long dash or full-stop list costs a few matcher calls per part, never one per run of parts", () => {
+  // 240 sugars (1,930 characters): looking for whole names among every run of parts made 29,160 matcher calls
+  // and took ~5 s; main took ~1 ms. The limits below are far above the linear cost and far below that.
+  const unknown = Array.from({ length: 460 }, (_, i) => `nieznany skladnik ${i.toString(36)}qx`);
+  const cases: { what: string; text: string; parts: number }[] = [
+    { what: "240 × sugar", text: `Ingredients: ${Array(240).fill("sugar").join(" - ")}`, parts: 240 },
+    { what: "known names, dashes", ...knownList(" - ") },
+    { what: "known names, full stops", ...knownList(". ") },
+    { what: "unknown words, dashes", text: `Ingredients: ${unknown.join(" - ")}`, parts: unknown.length },
+    // Repeated, a name is one ingredient named twice and nothing is cut: finding that out must be as cheap.
+    ...[" - ", ". "].map((sep) => {
+      const names = ["sugar", "salt", "glucose - fructose syrup", "wheat flour", "citric acid", "palm oil"];
+      let text = "Ingredients: sugar";
+      for (let i = 1; text.length < 11_950; i++) text += sep + names[i % names.length];
+      return { what: `repeated names to 12,000 characters, "${sep}"`, text, parts: text.split(sep).length };
+    }),
+  ];
+  for (const { what, text, parts } of cases) {
+    assert(text.length <= 12_000 && parts >= 240, `${what}: ${text.length} characters, ${parts} parts`);
+    const { r, calls, ms } = costOf(text);
+    assert(calls <= 4 * parts, `${what}: ${calls} matcher calls for ${parts} parts`);
+    assert(ms < 1_000, `${what}: ${ms.toFixed(0)} ms`);
+    // The known names do become their own items: the cost is not saved by giving up the split.
+    if (what.startsWith("known")) assertEquals(r.items.length, parts, what);
+  }
+});

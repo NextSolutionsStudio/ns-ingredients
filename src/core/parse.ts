@@ -16,10 +16,14 @@ export interface NameOracle {
   /** The ingredient an item with this name would be matched to confidently, if any. */
   confident(name: string): string | undefined;
   /**
-   * Whether this name, as printed, is one the KB holds whole: an ingredient's or a variant's own name (an exact
-   * or variant match). Then it is one item, however well its halves match ("glucose - fructose syrup").
+   * Whether these words are a name the KB holds whole: an ingredient's or a variant's own name, in any
+   * language. `words` is `normName` output ("gluten free wheat fibre"), so a hyphen, a spaced dash and a full
+   * stop read alike. A dash or a full stop inside such a name is never a separator, however well the words
+   * around it match.
    */
-  exact(name: string): boolean;
+  isName(words: string): boolean;
+  /** Whether a longer such name begins with these words (`normName` output): "gluten free" begins one. */
+  beginsName(words: string): boolean;
 }
 
 export interface Percent {
@@ -310,12 +314,53 @@ type Span = [number, number];
 const STOP_SEP = /(?<!(?:^|[\s(])\p{L})\.\s+/uy;
 const DASH_SEP = / - /y;
 const JOINED_RE = / - |\.\s/;
+// A word as `normName` sees one: what lies between its separators (marks stay with their letter).
+const WORD_RE = /[\p{L}\p{N}\p{M}]+/uy;
 
-/** Trimmed, non-empty spans of s[from, to) between top-level (unbracketed) matches of the sticky `sep`. */
-function cutTopLevel(s: string, sep: RegExp, from = 0, to = s.length): Span[] {
+/**
+ * Where s prints a name the KB holds whole: each run of two or more words, outside brackets, that normalises
+ * to an ingredient's or a variant's own name. "gluten - free wheat fibre" in "BIO gluten - free wheat fibre"
+ * and "coconut - milk" in "coconut - milk powder" are names, so their dashes are hyphens; the words around
+ * them may still be cut off. A hyphenated name printed whole ("syrop glukozowo - fruktozowy") is one such
+ * run. A sub-phrase or an E-number match is no name: "wzmacniacz smaku - glutaminian monosodowy" is a class
+ * and its additive. A run grows only while a longer name begins with it: a few set lookups per word.
+ */
+function nameSpans(s: string, kb: NameOracle): Span[] {
+  const words: { a: number; b: number; w: string }[] = [];
+  let depth = 0;
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] === "(") depth++;
+    else if (s[i] === ")") depth = Math.max(0, depth - 1);
+    else if (depth === 0) {
+      WORD_RE.lastIndex = i;
+      const m = WORD_RE.exec(s);
+      if (!m) continue;
+      const w = normName(m[0]);
+      if (w) words.push({ a: i, b: i + m[0].length, w });
+      i += m[0].length - 1;
+    }
+  }
+  const spans: Span[] = [];
+  for (let i = 0; i < words.length; i++) {
+    let run = words[i].w;
+    for (let j = i + 1; j < words.length && kb.beginsName(run); j++) {
+      run += ` ${words[j].w}`;
+      if (kb.isName(run)) spans.push([words[i].a, words[j].b]);
+    }
+  }
+  return spans;
+}
+
+/**
+ * Trimmed, non-empty spans of s[from, to) between top-level (unbracketed) matches of the sticky `sep`. A
+ * match inside one of the `names` (from `nameSpans`, in order) is part of that name, not a separator.
+ */
+function cutTopLevel(s: string, sep: RegExp, names: Span[] = [], from = 0, to = s.length): Span[] {
   const spans: Span[] = [];
   let depth = 0;
   let start = from;
+  let next = 0; // names before `next` start before i, and the furthest of them ends at `reach`
+  let reach = -1;
   const push = (end: number) => {
     const part = s.slice(start, end);
     const a = start + part.length - part.trimStart().length;
@@ -328,11 +373,12 @@ function cutTopLevel(s: string, sep: RegExp, from = 0, to = s.length): Span[] {
     else if (depth === 0) {
       sep.lastIndex = i;
       const m = sep.exec(s);
-      if (m && i + m[0].length <= to) {
-        push(i);
-        start = i + m[0].length;
-        i = start - 1;
-      }
+      if (!m || i + m[0].length > to) continue;
+      while (next < names.length && names[next][0] < i) reach = Math.max(reach, names[next++][1]);
+      if (reach > i) continue;
+      push(i);
+      start = i + m[0].length;
+      i = start - 1;
     }
   }
   push(to);
@@ -355,31 +401,6 @@ function ownId(text: string, kb: NameOracle, headed: boolean): string | undefine
   return kb.confident(it.name);
 }
 
-/**
- * Whether the separators in this text belong to a name the KB holds whole ("glucose - fructose syrup",
- * "gluten - free wheat fibre"): an exact or variant match outranks any cut. A sub-phrase match does not
- * ("wzmacniacz smaku - glutaminian monosodowy" is a class and its additive), and neither does an E-number: it
- * says the text prints a code, not that the text is one name ("dwutlenek węgla. barwnik E150d"). A colon
- * header that holds the separator ("emulgator - lecytyny. substancja słodząca: …") is cut, not the name after it.
- */
-function knownWhole(text: string, kb: NameOracle): boolean {
-  const it = ownItem(text);
-  if (it.header && JOINED_RE.test(it.header)) return false;
-  return JOINED_RE.test(it.name) && kb.exact(it.name);
-}
-
-/** Merge runs of adjacent parts that print a name the KB holds whole, longest first: they are one part. */
-function keepWhole(s: string, parts: Span[], kb: NameOracle): Span[] {
-  const out: Span[] = [];
-  for (let i = 0; i < parts.length; i++) {
-    let j = parts.length - 1;
-    while (j > i && !knownWhole(s.slice(parts[i][0], parts[j][1]), kb)) j--;
-    out.push([parts[i][0], parts[j][1]]);
-    i = j;
-  }
-  return out;
-}
-
 /** The ingredient one item names: by its own name, or as "class - item". */
 const itemId = (text: string, kb: NameOracle, headed = true) =>
   ownId(text, kb, headed) ?? classLead(text, kb)?.id;
@@ -387,15 +408,15 @@ const itemId = (text: string, kb: NameOracle, headed = true) =>
 /**
  * "regulator kwasowości - kwas cytrynowy", "emulgator. lecytyny": a known class, a spaced dash or a full stop,
  * then one known item — the colon form "regulator kwasowości: kwas cytrynowy" printed with other punctuation.
- * A full stop is looked for first, so "emulgator. mono - i diglicerydy" keeps its hyphenated word whole.
+ * A full stop is looked for first, so "emulgator. mono - i diglicerydy" keeps its hyphenated word whole. The
+ * class must stand on its own: in "acid - proof caramel" the dash is inside a name, so nothing is cut.
  */
 function classLead(text: string, kb: NameOracle): { header: string; rest: string; id: string } | null {
   if (!JOINED_RE.test(text)) return null;
-  let parts = cutTopLevel(text, STOP_SEP);
-  if (parts.length < 2) parts = cutTopLevel(text, DASH_SEP);
+  const names = nameSpans(text, kb);
+  let parts = cutTopLevel(text, STOP_SEP, names);
+  if (parts.length < 2) parts = cutTopLevel(text, DASH_SEP, names);
   if (parts.length < 2) return null;
-  // The class must stand on its own: "acid - proof caramel" is one name the KB holds whole.
-  if (parts.slice(1).some((p) => knownWhole(text.slice(parts[0][0], p[1]), kb))) return null;
   const header = text.slice(...parts[0]);
   const rest = text.slice(parts[1][0]).trim();
   const id = kb.classOf(header) ? ownId(rest, kb, false) : undefined;
@@ -404,16 +425,24 @@ function classLead(text: string, kb: NameOracle): { header: string; rest: string
 
 /**
  * Accept a cut when the KB agrees: a class heading known items (kept with the first), or every part known.
- * The parts must name different ingredients: "E330 - kwas cytrynowy" is one ingredient named twice.
+ * The parts must name different ingredients: "E330 - kwas cytrynowy" is one ingredient named twice. The first
+ * part that fails ends the asking, so a long list of unknown words costs one fuzzy match, not one per word.
  */
 function joinSpans(s: string, parts: Span[], kb: NameOracle): Span[] | null {
   if (parts.length < 2) return null;
-  const text = ([a, b]: Span) => s.slice(a, b);
-  const distinct = (ids: (string | undefined)[]) => ids.every(Boolean) && new Set(ids).size === ids.length;
-  if (kb.classOf(text(parts[0])) && distinct(parts.slice(1).map((p) => itemId(text(p), kb, false)))) {
+  const distinct = (list: Span[], headed: boolean) => {
+    const seen = new Set<string>();
+    for (const [a, b] of list) {
+      const id = itemId(s.slice(a, b), kb, headed);
+      if (!id || seen.has(id)) return false;
+      seen.add(id);
+    }
+    return true;
+  };
+  if (kb.classOf(s.slice(...parts[0])) && distinct(parts.slice(1), false)) {
     return [[parts[0][0], parts[1][1]], ...parts.slice(2)];
   }
-  return distinct(parts.map((p) => itemId(text(p), kb))) ? parts : null;
+  return distinct(parts, true) ? parts : null;
 }
 
 /**
@@ -421,13 +450,15 @@ function joinSpans(s: string, parts: Span[], kb: NameOracle): Span[] | null {
  * "ocet. cukier". Cut only where every part is known, so a hyphenated word ("syrop glukozowo - fruktozowy"),
  * a Latin name ("Ryba - Katsuwonus pelamis") or a qualifier ("serwatka - z mleka") stays one item.
  * Full stops first, then dashes inside each part; a part that is a known class stays with the item it heads.
- * Parts that together print a name the KB holds whole are never cut apart ("glucose - fructose syrup").
+ * A separator inside a name the KB holds whole is never cut ("glucose - fructose syrup", "BIO gluten - free
+ * wheat fibre"): see `nameSpans`.
  */
 function splitJoined(seg: string, kb?: NameOracle): string[] {
   if (!kb || !JOINED_RE.test(seg)) return [seg];
-  const stops = keepWhole(seg, cutTopLevel(seg, STOP_SEP), kb);
+  const names = nameSpans(seg, kb);
+  const stops = cutTopLevel(seg, STOP_SEP, names);
   const pieces = stops.flatMap((s) =>
-    joinSpans(seg, keepWhole(seg, cutTopLevel(seg, DASH_SEP, s[0], s[1]), kb), kb) ?? [s]
+    joinSpans(seg, cutTopLevel(seg, DASH_SEP, names, s[0], s[1]), kb) ?? [s]
   );
   const out = stops.length > 1 ? joinSpans(seg, pieces, kb) : pieces;
   return out && out.length > 1 ? out.map(([a, b]) => seg.slice(a, b)) : [seg];

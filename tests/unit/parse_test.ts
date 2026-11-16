@@ -216,11 +216,17 @@ const KNOWN: Record<string, string> = {
   "glucose fructose syrup": "glucose-fructose-syrup",
   "proof caramel": "caramel",
   "acid proof caramel": "e150d",
+  // A name inside a longer segment, across its dash: "coconut - milk powder" is coconut, not milk.
+  "coconut": "coconut",
+  "coconut milk": "coconut",
+  "milk powder": "milk-powder",
+  "fd c red no 2": "e123",
 };
 const kb: NameOracle = {
   classOf: (t) => CLASSES[normName(t)],
   confident: (n) => KNOWN[normName(n)],
-  exact: (n) => normName(n) in KNOWN,
+  isName: (words) => Object.hasOwn(KNOWN, words),
+  beginsName: (words) => Object.keys(KNOWN).some((name) => name.startsWith(`${words} `)),
 };
 const shape = (items: ParsedItem[]) => items.map((i) => [i.path, i.name, i.header, i.inheritedHeader]);
 
@@ -384,4 +390,23 @@ Deno.test("in brackets, the parts of one dashed list share its header, and no he
     ["1.2", "węglany sodu", undefined, undefined],
   ]);
   assertEquals(parseLabel(text, { kb }), parseLabel(text));
+});
+
+// ---------------------------------------------------------------- second review of PR #9
+Deno.test("a separator inside a name the KB holds whole is not cut, wherever the name sits in its segment", () => {
+  // "coconut - milk" is a name inside "coconut - milk powder": cutting its dash made the rest dairy milk.
+  for (const text of ["coconut - milk powder", "cukier, coconut - milk powder (5%), ocet"]) {
+    assertEquals(parseLabel(text, { kb }), parseLabel(text), text);
+  }
+  // Outside the name the separator is still cut, and the name is one part.
+  assertEquals(shape(parseLabel("cukier - coconut - milk - ocet", { kb }).items), [
+    ["1", "cukier", undefined, undefined],
+    ["2", "coconut - milk", undefined, undefined],
+    ["3", "ocet", undefined, undefined],
+  ]);
+  // A full stop inside a name is kept too; the one before it is cut.
+  assertEquals(shape(parseLabel("ocet. FD&C Red No. 2", { kb }).items), [
+    ["1", "ocet", undefined, undefined],
+    ["2", "FD&C Red No. 2", undefined, undefined],
+  ]);
 });
