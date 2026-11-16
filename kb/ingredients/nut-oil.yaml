@@ -31,6 +31,26 @@ names:
     - oleje roślinne orzechowe nie utwardzone
     - nie uwodornione oleje roślinne orzechowe
     - oleje roślinne orzechowe nie uwodornione
+    - tłuszcze roślinne orzechowe
+    - oleje orzechowe
+    - tłuszcz orzechowy
+    - tłuszcze orzechowe
+    - nie utwardzone tłuszcze roślinne orzechowe
+    - tłuszcze roślinne orzechowe nie utwardzone
+    - nie uwodornione tłuszcze roślinne orzechowe
+    - tłuszcze roślinne orzechowe nie uwodornione
+    - nie utwardzone oleje orzechowe
+    - oleje orzechowe nie utwardzone
+    - nie uwodornione oleje orzechowe
+    - oleje orzechowe nie uwodornione
+    - nie utwardzony tłuszcz orzechowy
+    - tłuszcz orzechowy nie utwardzony
+    - nie uwodorniony tłuszcz orzechowy
+    - tłuszcz orzechowy nie uwodorniony
+    - nie utwardzone tłuszcze orzechowe
+    - tłuszcze orzechowe nie utwardzone
+    - nie uwodornione tłuszcze orzechowe
+    - tłuszcze orzechowe nie uwodornione
   de:
     - Nussöl
 summary:
@@ -64,6 +84,22 @@ variants:
         - oleje roślinne orzechowe utwardzone
         - uwodornione oleje roślinne orzechowe
         - oleje roślinne orzechowe uwodornione
+        - utwardzone tłuszcze roślinne orzechowe
+        - tłuszcze roślinne orzechowe utwardzone
+        - uwodornione tłuszcze roślinne orzechowe
+        - tłuszcze roślinne orzechowe uwodornione
+        - utwardzone oleje orzechowe
+        - oleje orzechowe utwardzone
+        - uwodornione oleje orzechowe
+        - oleje orzechowe uwodornione
+        - utwardzony tłuszcz orzechowy
+        - tłuszcz orzechowy utwardzony
+        - uwodorniony tłuszcz orzechowy
+        - tłuszcz orzechowy uwodorniony
+        - utwardzone tłuszcze orzechowe
+        - tłuszcze orzechowe utwardzone
+        - uwodornione tłuszcze orzechowe
+        - tłuszcze orzechowe uwodornione
     process:
       en: "Nut oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej orzechowy utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
@@ -90,6 +126,22 @@ variants:
         - oleje roślinne orzechowe częściowo utwardzone
         - częściowo uwodornione oleje roślinne orzechowe
         - oleje roślinne orzechowe częściowo uwodornione
+        - częściowo utwardzone tłuszcze roślinne orzechowe
+        - tłuszcze roślinne orzechowe częściowo utwardzone
+        - częściowo uwodornione tłuszcze roślinne orzechowe
+        - tłuszcze roślinne orzechowe częściowo uwodornione
+        - częściowo utwardzone oleje orzechowe
+        - oleje orzechowe częściowo utwardzone
+        - częściowo uwodornione oleje orzechowe
+        - oleje orzechowe częściowo uwodornione
+        - częściowo utwardzony tłuszcz orzechowy
+        - tłuszcz orzechowy częściowo utwardzony
+        - częściowo uwodorniony tłuszcz orzechowy
+        - tłuszcz orzechowy częściowo uwodorniony
+        - częściowo utwardzone tłuszcze orzechowe
+        - tłuszcze orzechowe częściowo utwardzone
+        - częściowo uwodornione tłuszcze orzechowe
+        - tłuszcze orzechowe częściowo uwodornione
     process:
       en: "Nut oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
       pl: "Olej orzechowy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
@@ -135,6 +187,38 @@ variants:
         - oleje roślinne orzechowe w pełni utwardzone
         - w pełni uwodornione oleje roślinne orzechowe
         - oleje roślinne orzechowe w pełni uwodornione
+        - całkowicie utwardzone tłuszcze roślinne orzechowe
+        - tłuszcze roślinne orzechowe całkowicie utwardzone
+        - całkowicie uwodornione tłuszcze roślinne orzechowe
+        - tłuszcze roślinne orzechowe całkowicie uwodornione
+        - w pełni utwardzone tłuszcze roślinne orzechowe
+        - tłuszcze roślinne orzechowe w pełni utwardzone
+        - w pełni uwodornione tłuszcze roślinne orzechowe
+        - tłuszcze roślinne orzechowe w pełni uwodornione
+        - całkowicie utwardzone oleje orzechowe
+        - oleje orzechowe całkowicie utwardzone
+        - całkowicie uwodornione oleje orzechowe
+        - oleje orzechowe całkowicie uwodornione
+        - w pełni utwardzone oleje orzechowe
+        - oleje orzechowe w pełni utwardzone
+        - w pełni uwodornione oleje orzechowe
+        - oleje orzechowe w pełni uwodornione
+        - całkowicie utwardzony tłuszcz orzechowy
+        - tłuszcz orzechowy całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz orzechowy
+        - tłuszcz orzechowy całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz orzechowy
+        - tłuszcz orzechowy w pełni utwardzony
+        - w pełni uwodorniony tłuszcz orzechowy
+        - tłuszcz orzechowy w pełni uwodorniony
+        - całkowicie utwardzone tłuszcze orzechowe
+        - tłuszcze orzechowe całkowicie utwardzone
+        - całkowicie uwodornione tłuszcze orzechowe
+        - tłuszcze orzechowe całkowicie uwodornione
+        - w pełni utwardzone tłuszcze orzechowe
+        - tłuszcze orzechowe w pełni utwardzone
+        - w pełni uwodornione tłuszcze orzechowe
+        - tłuszcze orzechowe w pełni uwodornione
     process:
       en: "Nut oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
       pl: "Olej orzechowy ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
