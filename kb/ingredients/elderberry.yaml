@@ -8,14 +8,17 @@ names:
   pl:
     - czarny bez
     - owoce czarnego bzu
-    - bzu czarnego
   de:
     - Holunder
     - Holunderbeeren
     - schwarzer Holunder
 summary:
-  en: Black elderberry (Sambucus nigra), fruit used in jams, syrups and juices.
-  pl: Czarny bez (Sambucus nigra), owoce stosowane w konfiturach, syropach i sokach.
+  en: >-
+    Black elderberry (Sambucus nigra), whole fruit. Elderberry juice is covered separately under
+    elderberry-juice (counts as free sugars).
+  pl: >-
+    Czarny bez (Sambucus nigra), cały owoc. Sok z czarnego bzu opisano osobno jako sok owocowy (liczy się jako
+    cukry wolne).
 assertions:
   - code: origin.plant
     certainty: 'yes'

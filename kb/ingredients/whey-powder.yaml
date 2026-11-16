@@ -3,7 +3,7 @@ type: ingredient
 names:
   en: [whey powder, sweet whey powder, whey]
   pl: [serwatka, serwatka w proszku, serwatka słodka w proszku]
-  de: [Molkenpulver, Süßmolkenpulver, Molkenerzeugnis]
+  de: [Molkenpulver, Süßmolkenpulver]
 summary:
   en: >-
     The liquid left over from cheesemaking, dried to a powder without the protein-concentrating

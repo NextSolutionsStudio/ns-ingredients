@@ -25,6 +25,8 @@ variants:
       pl:
         - oliwa z oliwek najwyższej jakości z pierwszego tłoczenia
         - oliwa z oliwek extra virgin
+        - oliwa z oliwek z pierwszego tłoczenia extra virgin
+        - oliwa z oliwek extra virgin z pierwszego tłoczenia
       de:
         - natives Olivenöl extra
     process:
@@ -54,7 +56,7 @@ variants:
         Otrzymywana bezpośrednio z oliwek wyłącznie za pomocą środków mechanicznych, bez rafinacji, o nieco
         szerszej tolerancji kwasowości i cech sensorycznych niż oliwa extra virgin.
     tells:
-      - '(?<!najwyzszej jakosci )z pierwszego tloczenia'
+      - '^(?!.*extra virgin)(?!.*najwyzszej jakosci).*z pierwszego tloczenia'
       - '\bvirgin olive oil\b'
       - '\bnatives olivenol\b'
   - id: refined-blend

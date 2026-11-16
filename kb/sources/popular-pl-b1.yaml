@@ -145,10 +145,12 @@ sources:
     licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
     accessed: '2026-11-16'
     note: >-
-      Abstract opened via Europe PMC (PMID 42125559). Evaluates beta-nicotinamide mononucleotide as a niacin
-      source in food supplements for adults (excluding pregnant and lactating women) and notes that the
-      proposed maximum intake (corresponding to 109.7 mg/day of nicotinamide) remains below the upper level
-      (UL) of 900 mg/day for nicotinamide.
+      Full text opened via Europe PMC (PMCID PMC13158811, PMID 42125559; Wiley DOI returned HTTP 403). Section
+      1.2 states that SCF (2002) established an adult UL for nicotinamide of 900 mg/day (12.5 mg/kg bw/day),
+      excluding pregnant and lactating women due to lack of data; Section 3.9 and Section 4 cite the 900
+      mg/day nicotinamide UL and note separate ULs for free nicotinic acid and nicotinamide. Evaluates
+      beta-nicotinamide mononucleotide up to 300 mg/day (109.7 mg/day nicotinamide) in food supplements for
+      adults excluding pregnant and lactating women.
   - id: nnr-niacin-2023
     type: review
     title: Niacin - a scoping review for Nordic Nutrition Recommendations 2023
@@ -160,9 +162,12 @@ sources:
     licence: CC BY 4.0
     accessed: '2026-11-16'
     note: >-
-      Abstract opened via Europe PMC (PMID 38187785). Defines niacin (vitamin B3) as the common term for
-      nicotinic acid, nicotinamide and biologically active derivatives, with tryptophan as de novo NAD
-      precursor, expressed as niacin equivalents (NE).
+      Full text opened via Food & Nutrition Research
+      (https://foodandnutritionresearch.net/index.php/fnr/article/download/10299/16539; PMID 38187785). Section
+      "Health outcomes - Upper intake levels and toxicity" states that intakes of nicotinic acid, but not
+      nicotinamide, as a supplement or fortificant in the range of 30 mg/d to 1000 mg/d can cause mild
+      symptoms such as flushing (with higher intakes reported to induce liver damage), and cites the SCF
+      (2002) adult ULs of 10 mg/d for nicotinic acid and 900 mg/d for nicotinamide.
   - id: nnr-pantothenic-2023
     type: review
     title: Pantothenic acid - a scoping review for Nordic Nutrition Recommendations 2023
