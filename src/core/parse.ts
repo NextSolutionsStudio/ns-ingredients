@@ -321,6 +321,8 @@ const DASH_SEP = / - /y;
 const JOINED_RE = / - |\.\s/;
 // A word as `normName` sees one: what lies between its separators (marks stay with their letter).
 const WORD_RE = /[\p{L}\p{N}\p{M}]+/uy;
+/** Words read on each side of a separator when testing variant tells across it (see `nameSpans`). */
+const TELL_WORDS = 6;
 
 /**
  * Where s prints a name the KB holds whole: each run of two or more words, outside brackets, that normalises
@@ -355,7 +357,9 @@ function nameSpans(s: string, kb: NameOracle): Span[] {
   }
   // Variant tells ("gluten ?free" declares gluten-free oats). They are written for one item's text, often with
   // `.*` or `^`, so they are never run over the whole segment: a separator is kept when a tell fires on the two
-  // parts it joins, read as one, and on neither part alone. A few short tests per separator.
+  // parts it joins, read as one, and on neither part alone. Only TELL_WORDS words on each side are read: a
+  // declaration printed across a separator is a short phrase, and a `.*` tell over an unbounded part
+  // backtracks ("kakao obniz " × 991 took seconds). So the work per separator is bounded.
   const tells = kb.tells?.() ?? [];
   if (tells.length && words.length > 1) {
     const gaps = [0]; // word indices that start a part: after a dash or a full stop between words
@@ -366,9 +370,11 @@ function nameSpans(s: string, kb: NameOracle): Span[] {
     const text = (from: number, to: number) => words.slice(from, to).map((w) => w.w).join(" ");
     const fires = (t: string) => tells.some((re) => (re.lastIndex = 0, re.test(t)));
     for (let g = 1; g < gaps.length - 1; g++) {
-      const left = text(gaps[g - 1], gaps[g]), right = text(gaps[g], gaps[g + 1]);
+      const from = Math.max(gaps[g - 1], gaps[g] - TELL_WORDS),
+        to = Math.min(gaps[g + 1], gaps[g] + TELL_WORDS);
+      const left = text(from, gaps[g]), right = text(gaps[g], to);
       if (fires(`${left} ${right}`) && !fires(left) && !fires(right)) {
-        spans.push([words[gaps[g - 1]].a, words[gaps[g + 1] - 1].b]);
+        spans.push([words[from].a, words[to - 1].b]);
       }
     }
     spans.sort((x, y) => x[0] - y[0]); // cutTopLevel walks them by start
