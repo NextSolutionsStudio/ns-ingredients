@@ -1,7 +1,7 @@
 id: hydrogenated-fat
 type: fat
 names:
-  en: [hydrogenated fat, hydrogenated fats, hydrogenated oil, hydrogenated oils]
+  en: [hydrogenated fat or oil, hydrogenated fat, hydrogenated fats, hydrogenated oil, hydrogenated oils]
   pl: [tłuszcz utwardzony, tłuszcze utwardzone, olej utwardzony, olej uwodorniony, tłuszcz uwodorniony, oleje utwardzone, oleje uwodornione, tłuszcze uwodornione, olej utwardzone, tłuszcz utwardzone, olej uwodornione, tłuszcz uwodornione]
 summary:
   en: >-
@@ -17,7 +17,7 @@ summary:
 variants:
   - id: partially-hydrogenated
     names:
-      en: [partially hydrogenated fat, partially hydrogenated fats, partially hydrogenated oil, partially hydrogenated oils]
+      en: [partially hydrogenated fat or oil, partially hydrogenated fat, partially hydrogenated fats, partially hydrogenated oil, partially hydrogenated oils]
       pl: [tłuszcz częściowo utwardzony, olej częściowo utwardzony, olej częściowo uwodorniony, tłuszcz częściowo uwodorniony, oleje częściowo utwardzone, tłuszcze częściowo utwardzone, oleje częściowo uwodornione, tłuszcze częściowo uwodornione, olej częściowo utwardzone, tłuszcz częściowo utwardzone, olej częściowo uwodornione, tłuszcz częściowo uwodornione]
     process:
       en: "Some but not all double bonds are hydrogenated, leaving a mix of natural cis and industrially formed trans unsaturated fatty acids."
@@ -25,7 +25,7 @@ variants:
     tells: ['czesciowo (?:utwardzon|uwodorn)', '(?<!not )(?<!non )partially hydrogenated', 'teilweise gehartet']
   - id: fully-hydrogenated
     names:
-      en: [fully hydrogenated fat, fully hydrogenated fats, fully hydrogenated oil, fully hydrogenated oils, totally hydrogenated fat]
+      en: [fully hydrogenated fat or oil, fully hydrogenated fat, fully hydrogenated fats, fully hydrogenated oil, fully hydrogenated oils, totally hydrogenated fat, totally hydrogenated oil]
       pl: [tłuszcz całkowicie utwardzony, olej całkowicie utwardzony, olej całkowicie uwodorniony, tłuszcz całkowicie uwodorniony, olej w pełni utwardzony, tłuszcz w pełni utwardzony, olej w pełni uwodorniony, tłuszcz w pełni uwodorniony, oleje całkowicie utwardzone, tłuszcze całkowicie utwardzone, oleje całkowicie uwodornione, tłuszcze całkowicie uwodornione, oleje w pełni utwardzone, tłuszcze w pełni utwardzone, oleje w pełni uwodornione, tłuszcze w pełni uwodornione, olej całkowicie utwardzone, tłuszcz całkowicie utwardzone, olej całkowicie uwodornione, tłuszcz całkowicie uwodornione, olej w pełni utwardzone, tłuszcz w pełni utwardzone, olej w pełni uwodornione, tłuszcz w pełni uwodornione]
     process:
       en: "All double bonds are hydrogenated; the fat is fully saturated, very hard, and contains essentially no trans fat."
