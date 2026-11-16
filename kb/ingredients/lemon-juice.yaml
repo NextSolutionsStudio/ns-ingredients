@@ -1,0 +1,65 @@
+id: lemon-juice
+type: carbohydrate
+names:
+  en:
+    - lemon juice
+    - concentrated lemon juice
+    - lemon juice concentrate
+    - lemon juice from concentrate
+  pl:
+    - sok z cytryny
+    - sok cytrynowy
+    - zagęszczony sok z cytryny
+    - sok z cytryny z zagęszczonego soku
+    - koncentrat soku z cytryny
+    - koncentrat soku cytrynowego
+  de:
+    - Zitronensaft
+    - Zitronensaftkonzentrat
+summary:
+  en: >-
+    Juice or concentrated juice obtained from lemons (Citrus limon) as defined in Directive 2001/112/EC,
+    often used in small amounts as an acidifier or flavouring in savoury and sweet foods. Under WHO's 2015
+    sugars guideline, fruit juices and fruit juice concentrates fall under the definition of free sugars.
+  pl: >-
+    Sok lub zagęszczony sok z cytryn (Citrus limon) w rozumieniu dyrektywy 2001/112/WE, często stosowany w
+    niewielkich ilościach jako zakwaszacz lub składnik smakowy w daniach wytrawnych i słodkich. Według
+    wytycznych WHO z 2015 r. soki owocowe i zagęszczone soki owocowe mieszczą się w definicji cukrów wolnych.
+assertions:
+  - code: health.added_sugar
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    population: [general]
+    note:
+      en: >-
+        WHO's 2015 free-sugars definition covers fruit juices and fruit juice concentrates without a
+        sugar-content threshold, though lemon juice is often added in small quantities for acidity rather than
+        sweetness; the ingredient list does not show the amount.
+      pl: >-
+        Definicja cukrów wolnych WHO (2015) obejmuje soki owocowe i zagęszczone soki owocowe niezależnie od
+        zawartości cukru, choć sok z cytryny często dodaje się w małych ilościach dla kwasowości, a nie
+        słodyczy; lista składników nie pokazuje jego ilości.
+    sources:
+      - id: who-free-sugars-2015
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Obtained from lemons.
+      pl: Otrzymywany z cytryn.
+    sources:
+      - id: sug-juice-directive
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Policy call: follows the KB convention (fruit-juice-concentrate.yaml / WHO 2015) asserting
+    health.added_sugar on fruit juices and concentrates, noting in the assertion and report that lemon juice
+    is lower in sugars than sweet fruit juices and is often used in small amounts as an acidifier.
+  - >-
+    Bare adjective "cytrynowy" is deliberately excluded so it cannot swallow "aromat cytrynowy" or "olejek
+    cytrynowy" via sub-phrase matching.
