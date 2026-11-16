@@ -5,6 +5,7 @@ names:
     - olive oil
   pl:
     - oliwa z oliwek
+    - oliwa z oliwek z pierwszego tłoczenia
   de:
     - Olivenöl
 summary:
@@ -44,8 +45,6 @@ variants:
     names:
       en:
         - virgin olive oil
-      pl:
-        - oliwa z oliwek z pierwszego tłoczenia
       de:
         - natives Olivenöl
     process:
