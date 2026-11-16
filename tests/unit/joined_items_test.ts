@@ -407,6 +407,11 @@ Deno.test("an item's own variant tells read at most TELL_TEXT_MAX characters of 
     const { ms } = costOf(text);
     assert(ms < 1_000, `${text.slice(20, 40)}…: ${ms.toFixed(0)} ms`);
   }
+  // The cut falls at a word gap: "fishmint" across the cap was cut to "fish" and fired gelatine's \bfish\b tell,
+  // a false fish allergen. As on main, the gelatine gets no variant and nothing says fish.
+  const gel = run(`Ingredients: gelatine (${"sugar, ".repeat(77)}${"salt, ".repeat(5)}fishmint)`, "en");
+  assertEquals(gel.items[0].variant?.id, undefined);
+  assert(!gel.flags.some((f) => f.code === "allergen.fish"));
   // The cap is far above any real item: a tell near the start still fires.
   assert(TELL_TEXT_MAX >= 400);
   assertEquals(

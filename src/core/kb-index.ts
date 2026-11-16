@@ -55,7 +55,7 @@ const SUBPHRASE_MAX_TOKENS = 7;
  * The most of an item's normalised text a variant tell reads. Tells are written for one item and some backtrack on
  * long input: cocoa's `kakao.*obniz.*tluszcz` over a 12,000-character item took ~4 s. On 1,400 real Polish labels
  * the longest text reaching a tell is 204 characters and every tell hit ends by character 51, so 500 changes no
- * real result and bounds the work.
+ * real result and bounds the work. The cut falls at a word gap, so no word is shortened into another.
  */
 export const TELL_TEXT_MAX = 500;
 
@@ -274,7 +274,12 @@ export class KbIndex {
 
   /** Variants whose label tells fire on this text (normalised). */
   tellsFor(ingredientId: string, text: string): VariantT[] {
-    const norm = normName(text).slice(0, TELL_TEXT_MAX);
+    const full = normName(text);
+    // Cut at a word gap, never inside a word: "fishmint" cut to "fish" fired gelatine's \bfish\b tell. One word
+    // longer than the cap reads as nothing.
+    const norm = full.length <= TELL_TEXT_MAX
+      ? full
+      : full.slice(0, Math.max(0, full.lastIndexOf(" ", TELL_TEXT_MAX)));
     return (this.tells.get(ingredientId) ?? []).filter((t) => t.res.some((re) => re.test(norm))).map((t) =>
       t.variant
     );
