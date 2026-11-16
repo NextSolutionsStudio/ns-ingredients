@@ -108,14 +108,31 @@ names:
     - tłuszcze roślinne z siemienia lnianego nie utwardzone
     - nie uwodornione tłuszcze roślinne z siemienia lnianego
     - tłuszcze roślinne z siemienia lnianego nie uwodornione
-    - oleje roślinne z nasion lnu nie utwardzony
-    - tłuszcze roślinne z nasion lnu nie utwardzony
-    - oleje roślinne z nasion lnu nie uwodorniony
-    - tłuszcze roślinne z nasion lnu nie uwodorniony
-    - oleje roślinne z siemienia lnianego nie utwardzony
-    - tłuszcze roślinne z siemienia lnianego nie utwardzony
-    - oleje roślinne z siemienia lnianego nie uwodorniony
-    - tłuszcze roślinne z siemienia lnianego nie uwodorniony
+    - olej z lnu
+    - tłuszcz roślinny z lnu
+    - tłuszcze roślinne z lnu
+    - olej roślinny z lnu
+    - oleje roślinne z lnu
+    - nie utwardzony olej z lnu
+    - olej z lnu nie utwardzony
+    - nie uwodorniony olej z lnu
+    - olej z lnu nie uwodorniony
+    - nie utwardzony tłuszcz roślinny z lnu
+    - tłuszcz roślinny z lnu nie utwardzony
+    - nie uwodorniony tłuszcz roślinny z lnu
+    - tłuszcz roślinny z lnu nie uwodorniony
+    - nie utwardzone tłuszcze roślinne z lnu
+    - tłuszcze roślinne z lnu nie utwardzone
+    - nie uwodornione tłuszcze roślinne z lnu
+    - tłuszcze roślinne z lnu nie uwodornione
+    - nie utwardzony olej roślinny z lnu
+    - olej roślinny z lnu nie utwardzony
+    - nie uwodorniony olej roślinny z lnu
+    - olej roślinny z lnu nie uwodorniony
+    - nie utwardzone oleje roślinne z lnu
+    - oleje roślinne z lnu nie utwardzone
+    - nie uwodornione oleje roślinne z lnu
+    - oleje roślinne z lnu nie uwodornione
   de:
     - Leinöl
     - Leinsamenöl
@@ -199,6 +216,26 @@ variants:
         - tłuszcze roślinne z siemienia lnianego utwardzone
         - uwodornione tłuszcze roślinne z siemienia lnianego
         - tłuszcze roślinne z siemienia lnianego uwodornione
+        - utwardzony olej z lnu
+        - olej z lnu utwardzony
+        - uwodorniony olej z lnu
+        - olej z lnu uwodorniony
+        - utwardzony tłuszcz roślinny z lnu
+        - tłuszcz roślinny z lnu utwardzony
+        - uwodorniony tłuszcz roślinny z lnu
+        - tłuszcz roślinny z lnu uwodorniony
+        - utwardzone tłuszcze roślinne z lnu
+        - tłuszcze roślinne z lnu utwardzone
+        - uwodornione tłuszcze roślinne z lnu
+        - tłuszcze roślinne z lnu uwodornione
+        - utwardzony olej roślinny z lnu
+        - olej roślinny z lnu utwardzony
+        - uwodorniony olej roślinny z lnu
+        - olej roślinny z lnu uwodorniony
+        - utwardzone oleje roślinne z lnu
+        - oleje roślinne z lnu utwardzone
+        - uwodornione oleje roślinne z lnu
+        - oleje roślinne z lnu uwodornione
       de:
         - gehärtetes Leinöl
         - gehärtetes Leinsamenöl
@@ -278,6 +315,26 @@ variants:
         - tłuszcze roślinne z siemienia lnianego częściowo utwardzone
         - częściowo uwodornione tłuszcze roślinne z siemienia lnianego
         - tłuszcze roślinne z siemienia lnianego częściowo uwodornione
+        - częściowo utwardzony olej z lnu
+        - olej z lnu częściowo utwardzony
+        - częściowo uwodorniony olej z lnu
+        - olej z lnu częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny z lnu
+        - tłuszcz roślinny z lnu częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny z lnu
+        - tłuszcz roślinny z lnu częściowo uwodorniony
+        - częściowo utwardzone tłuszcze roślinne z lnu
+        - tłuszcze roślinne z lnu częściowo utwardzone
+        - częściowo uwodornione tłuszcze roślinne z lnu
+        - tłuszcze roślinne z lnu częściowo uwodornione
+        - częściowo utwardzony olej roślinny z lnu
+        - olej roślinny z lnu częściowo utwardzony
+        - częściowo uwodorniony olej roślinny z lnu
+        - olej roślinny z lnu częściowo uwodorniony
+        - częściowo utwardzone oleje roślinne z lnu
+        - oleje roślinne z lnu częściowo utwardzone
+        - częściowo uwodornione oleje roślinne z lnu
+        - oleje roślinne z lnu częściowo uwodornione
       de:
         - teilweise gehärtetes Leinöl
         - teilweise gehärtetes Leinsamenöl
@@ -426,6 +483,46 @@ variants:
         - tłuszcze roślinne z siemienia lnianego w pełni utwardzone
         - w pełni uwodornione tłuszcze roślinne z siemienia lnianego
         - tłuszcze roślinne z siemienia lnianego w pełni uwodornione
+        - całkowicie utwardzony olej z lnu
+        - olej z lnu całkowicie utwardzony
+        - całkowicie uwodorniony olej z lnu
+        - olej z lnu całkowicie uwodorniony
+        - w pełni utwardzony olej z lnu
+        - olej z lnu w pełni utwardzony
+        - w pełni uwodorniony olej z lnu
+        - olej z lnu w pełni uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny z lnu
+        - tłuszcz roślinny z lnu całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny z lnu
+        - tłuszcz roślinny z lnu całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz roślinny z lnu
+        - tłuszcz roślinny z lnu w pełni utwardzony
+        - w pełni uwodorniony tłuszcz roślinny z lnu
+        - tłuszcz roślinny z lnu w pełni uwodorniony
+        - całkowicie utwardzone tłuszcze roślinne z lnu
+        - tłuszcze roślinne z lnu całkowicie utwardzone
+        - całkowicie uwodornione tłuszcze roślinne z lnu
+        - tłuszcze roślinne z lnu całkowicie uwodornione
+        - w pełni utwardzone tłuszcze roślinne z lnu
+        - tłuszcze roślinne z lnu w pełni utwardzone
+        - w pełni uwodornione tłuszcze roślinne z lnu
+        - tłuszcze roślinne z lnu w pełni uwodornione
+        - całkowicie utwardzony olej roślinny z lnu
+        - olej roślinny z lnu całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny z lnu
+        - olej roślinny z lnu całkowicie uwodorniony
+        - w pełni utwardzony olej roślinny z lnu
+        - olej roślinny z lnu w pełni utwardzony
+        - w pełni uwodorniony olej roślinny z lnu
+        - olej roślinny z lnu w pełni uwodorniony
+        - całkowicie utwardzone oleje roślinne z lnu
+        - oleje roślinne z lnu całkowicie utwardzone
+        - całkowicie uwodornione oleje roślinne z lnu
+        - oleje roślinne z lnu całkowicie uwodornione
+        - w pełni utwardzone oleje roślinne z lnu
+        - oleje roślinne z lnu w pełni utwardzone
+        - w pełni uwodornione oleje roślinne z lnu
+        - oleje roślinne z lnu w pełni uwodornione
       de:
         - vollständig gehärtetes Leinöl
         - vollständig gehärtetes Leinsamenöl
