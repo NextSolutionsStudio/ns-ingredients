@@ -12,16 +12,16 @@ names:
     - Ergocalciferol
 summary:
   en: >-
-    The fungal/yeast-derived form of vitamin D (ergocalciferol), chemically distinct from animal/lichen-derived
-    vitamin D3 (cholecalciferol). Produced commercially by UV irradiation of ergosterol from yeast or fungi,
-    making it inherently non-animal and widely used to fortify plant-based drinks. EFSA (2023) sets a
-    tolerable upper intake level of 100 ug/day for adults covering both vitamin D2 and D3.
+    The fungal/mushroom-derived form of vitamin D (ergocalciferol), chemically distinct from
+    animal/lichen-derived vitamin D3 (cholecalciferol). Produced by UV irradiation of ergosterol from
+    mushrooms/fungi, making it inherently non-animal and widely used to fortify plant-based drinks. EFSA
+    (2023) sets a tolerable upper intake level of 100 ug/day for adults covering both vitamin D2 and D3.
   pl: >-
-    Forma witaminy D pochodzenia grzybowo-drożdżowego (ergokalcyferol), chemicznie odrębna od zwierzęcej lub
-    porostowej witaminy D3 (cholekalcyferolu). Wytwarzana handlowo przez naświetlanie promieniami UV
-    ergosterolu z drożdży lub grzybów, dzięki czemu nie pochodzi od zwierząt i jest szeroko stosowana do
-    wzbogacania napojów roślinnych. EFSA (2023) ustaliła górny tolerowany poziom spożycia 100 ug/dobę dla
-    dorosłych, obejmujący zarówno witaminę D2, jak i D3.
+    Forma witaminy D pochodzenia grzybowego (ergokalcyferol), chemicznie odrębna od zwierzęcej lub porostowej
+    witaminy D3 (cholekalcyferolu). Wytwarzana przez naświetlanie promieniami UV ergosterolu z grzybów,
+    dzięki czemu nie pochodzi od zwierząt i jest szeroko stosowana do wzbogacania napojów roślinnych. EFSA
+    (2023) ustaliła górny tolerowany poziom spożycia 100 ug/dobę dla dorosłych, obejmujący zarówno witaminę
+    D2, jak i D3.
 assertions:
   - code: diet.vegan
     certainty: 'yes'
@@ -29,11 +29,11 @@ assertions:
     grade: C
     note:
       en: >-
-        Ergocalciferol is derived from fungal or yeast ergosterol under UV irradiation, without animal raw
+        Ergocalciferol is derived from mushroom/fungal ergosterol under UV irradiation, without animal raw
         materials.
       pl: >-
-        Ergokalcyferol powstaje przez naświetlanie UV ergosterolu pochodzącego z grzybów lub drożdży, bez
-        udziału surowców zwierzęcych.
+        Ergokalcyferol powstaje przez naświetlanie UV ergosterolu pochodzącego z grzybów, bez udziału surowców
+        zwierzęcych.
     sources:
       - id: pmc-vitd2-2026
       - id: reg-1925-2006

@@ -75,6 +75,21 @@ sources:
       Canonical ELI URL; opened via boe.es DOUE mirror (DOUE-L-2022-81606). Defines the EU legal categories for
       olive oils (extra virgin, virgin, refined olive oil, olive oil composed of refined and virgin olive oils,
       olive-pomace oils) and their labelling rules.
+  - id: dir-2001-113
+    type: regulation
+    title: >-
+      Council Directive 2001/113/EC of 20 December 2001 relating to fruit jams, jellies and marmalades and
+      sweetened chestnut purée intended for human consumption
+    publisher: European Union
+    year: 2001
+    url: https://eur-lex.europa.eu/eli/dir/2001/113/oj
+    licence: "EU reuse policy (Decision 2011/833/EU) — CC BY 4.0"
+    accessed: '2026-11-16'
+    note: >-
+      Canonical ELI URL (read-url unavailable in this file-edits-only run; Annex I definition verified via web
+      search, orchestrator to fetch and check). Annex I defines jam as a mixture, brought to a suitable gelled
+      consistency, of sugars, the pulp and/or purée of one or more kinds of fruit and water, and marmalade as
+      a mixture of water, sugars and citrus fruit products.
   - id: efsa-b6-ul-2023
     type: regulatory_opinion
     title: Scientific opinion on the tolerable upper intake level for vitamin B6

@@ -1,0 +1,73 @@
+id: jam
+type: carbohydrate
+names:
+  en:
+    - jam
+    - marmalade
+    - orange jam
+    - orange marmalade
+    - oranges jam
+    - elderberry jam
+    - elderberries jam
+    - apple jam
+    - apples jam
+  pl:
+    - dżem
+    - konfitura
+    - marmolada
+    - dżem pomarańczowy
+    - marmolada pomarańczowa
+    - dżem z czarnego bzu
+    - dżem jabłkowy
+  de:
+    - Konfitüre
+    - Marmelade
+summary:
+  en: >-
+    Fruit preserve (jam, marmalade, konfitura) made from fruit pulp or purée, sugars and water, brought to a
+    gelled consistency as defined in Council Directive 2001/113/EC. Contains added sugars, which count as free
+    sugars under WHO's 2015 guideline.
+  pl: >-
+    Przetwór owocowy (dżem, konfitura, marmolada) otrzymywany z miazgi lub przecieru owocowego, cukrów i
+    wody, doprowadzony do odpowiedniej żelującej konsystencji zgodnie z dyrektywą Rady 2001/113/WE. Zawiera
+    dodane cukry, które liczą się jako cukry wolne w rozumieniu wytycznych WHO z 2015 r.
+assertions:
+  - code: health.added_sugar
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    population: [general]
+    note:
+      en: >-
+        Defined under Council Directive 2001/113/EC as a mixture of sugars, fruit pulp or purée and water;
+        added sugars count as free sugars in WHO's sense. The ingredient list does not show how much is in the
+        product.
+      pl: >-
+        Zdefiniowany w dyrektywie Rady 2001/113/WE jako mieszanina cukrów, miazgi lub przecieru owocowego oraz
+        wody; dodane cukry są cukrami wolnymi w rozumieniu WHO. Lista składników nie pokazuje, ile go jest w
+        produkcie.
+    sources:
+      - id: dir-2001-113
+        locator: 'Annex I: jam is a mixture of sugars, fruit pulp or purée and water'
+      - id: who-free-sugars-2015
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Made from fruit pulp or purée and sugars as declared by its ingredient name.
+      pl: Wytwarzany z miazgi lub przecieru owocowego oraz cukrów zgodnie z nazwą składnika.
+    sources:
+      - id: dir-2001-113
+        locator: 'Annex I: jam is a mixture of sugars, fruit pulp or purée and water'
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Policy call: counts as health.added_sugar because Council Directive 2001/113/EC Annex I defines jam as a
+    mixture of sugars, fruit pulp or purée and water.
+  - >-
+    No blanket diet.vegan claim: optional gelling or finishing ingredients are not verified from a bare jam
+    name.
