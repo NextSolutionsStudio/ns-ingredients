@@ -99,6 +99,8 @@ assertions:
     sources:
       - id: reg-1169-2011
         locator: Annex II item 1
+      - id: reg-828-2014
+        locator: Annex Part A
   - code: diet.gluten_free
     variant: gluten-free
     certainty: 'yes'

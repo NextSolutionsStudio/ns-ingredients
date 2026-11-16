@@ -110,31 +110,29 @@ assertions:
         wyższe dawki uszkodzenie wątroby).
     sources:
       - id: efsa-nmn-2026
-        locator: Section 1.2 (900 mg/day, 12.5 mg/kg bw/day nicotinamide UL, excl. pregnancy/lactation, citing SCF 2002)
+        locator: PMC13158811 Section 1.2 (900 mg/day, 12.5 mg/kg bw/day nicotinamide UL, excl. pregnancy/lactation, citing SCF 2002)
       - id: nnr-niacin-2023
-        locator: Health outcomes - Upper intake levels and toxicity (10 mg/day nicotinic acid UL, 900 mg/day nicotinamide UL, 30-1,000 mg/day flushing, citing SCF 2002)
+        locator: PMC10770643 Health outcomes - Upper intake levels and toxicity (10 mg/day nicotinic acid UL, 900 mg/day nicotinamide UL, 30-1,000 mg/day flushing, higher intakes liver damage, citing SCF 2002)
 regulatory:
   - jurisdiction: EU
     status: authorised
     conditions:
       en: >-
-        Permitted vitamin in fortified foods (Reg 1925/2006 Annex I & II) and food supplements (Dir 2002/46/EC
-        Annex II): nicotinic acid, nicotinamide (plus inositol hexanicotinate in supplements).
+        Permitted vitamin in fortified foods (Reg (EC) No 1925/2006 Annex I & II): nicotinic acid, nicotinamide.
       pl: >-
-        Witamina dopuszczona do wzbogacania żywności (Rozp. 1925/2006 Załącznik I i II) oraz suplementów diety
-        (Dyr. 2002/46/WE Załącznik II): kwas nikotynowy, amid kwasu nikotynowego (w suplementach także
-        heksanikotynian inozytolu).
+        Witamina dopuszczona do wzbogacania żywności (Rozp. (WE) nr 1925/2006 Załącznik I i II): kwas
+        nikotynowy, amid kwasu nikotynowego.
     source: reg-1925-2006
 reference_values:
   - type: UL
     value: 900
-    unit: mg/day (12.5 mg/kg bw/day, nicotinamide; adults excl. pregnancy/lactation)
+    unit: mg/day (12.5 mg/kg bw/day, nicotinamide; adults excl. pregnancy/lactation; PMC13158811 Section 1.2)
     body: SCF
     year: 2002
     source: efsa-nmn-2026
   - type: UL
     value: 10
-    unit: mg/day (nicotinic acid; adults)
+    unit: mg/day (nicotinic acid; adults; PMC10770643 Health outcomes - Upper intake levels and toxicity)
     body: SCF
     year: 2002
     source: nnr-niacin-2023
@@ -143,8 +141,8 @@ provenance: ai-drafted
 review_notes:
   - >-
     SCF (2002) figures are cited from opened full texts of EFSA (2026, Europe PMC PMCID PMC13158811, Section
-    1.2) and NNR 2023 (Food & Nutrition Research HTML full text, section "Health outcomes - Upper intake levels
-    and toxicity"), because the standalone SCF 2002 PDF returned HTTP 429 from food.ec.europa.eu.
+    1.2) and NNR 2023 (Europe PMC PMCID PMC10770643, section "Health outcomes - Upper intake levels and
+    toxicity"), because the standalone SCF 2002 PDF returned HTTP 429 from food.ec.europa.eu.
   - >-
     No numerical priors assigned between nicotinamide and nicotinic acid: no market-share study was opened
     this session.

@@ -6,16 +6,19 @@ sources:
     type: regulation
     title: >-
       Regulation (EC) No 1925/2006 on the addition of vitamins and minerals and of certain other substances to
-      foods (with Annexes I and II as amended by Regulation (EC) No 1170/2009)
+      foods (consolidated text, 2025-11-26)
     publisher: European Union
     year: 2006
-    url: https://eur-lex.europa.eu/eli/reg/2006/1925/oj
+    url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02006R1925-20251126
     licence: "EU reuse policy (Decision 2011/833/EU) — CC BY 4.0"
     accessed: '2026-11-16'
     note: >-
-      Canonical ELI URL; opened via boe.es DOUE mirrors (DOUE-L-2006-82776 and DOUE-L-2009-82310). Annex I
-      lists permitted vitamins and minerals (including vitamin D, B1, niacin, pantothenic acid, B6, calcium,
-      iron); Annex II lists permitted vitamin formulations and mineral substances.
+      Consolidated EUR-Lex CELEX 02006R1925-20251126 opened via EU Publications Office Cellar. Annex I lists
+      permitted vitamins and minerals (including vitamin D, B1, niacin, pantothenic acid, B6, calcium, iron);
+      Annex II lists permitted vitamin formulations and mineral substances (including ferrous bisglycinate
+      alongside the other listed iron salts, nicotinic acid, nicotinamide, thiamin hydrochloride and
+      mononitrate, D-pantothenate calcium/sodium, dexpanthenol, pyridoxine hydrochloride/5'-phosphate/
+      dipalmitate, and ergocalciferol).
   - id: reg-2065-2003
     type: regulation
     title: "Regulation (EC) No 2065/2003 on smoke flavourings used or intended for use in or on foods"
@@ -145,8 +148,8 @@ sources:
     licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
     accessed: '2026-11-16'
     note: >-
-      Full text opened via Europe PMC (PMCID PMC13158811, PMID 42125559; Wiley DOI returned HTTP 403). Section
-      1.2 states that SCF (2002) established an adult UL for nicotinamide of 900 mg/day (12.5 mg/kg bw/day),
+      Full text (PMC13158811) opened via Europe PMC (PMID 42125559; Wiley DOI returned HTTP 403). Section 1.2
+      states that SCF (2002) established an adult UL for nicotinamide of 900 mg/day (12.5 mg/kg bw/day),
       excluding pregnant and lactating women due to lack of data; Section 3.9 and Section 4 cite the 900
       mg/day nicotinamide UL and note separate ULs for free nicotinic acid and nicotinamide. Evaluates
       beta-nicotinamide mononucleotide up to 300 mg/day (109.7 mg/day nicotinamide) in food supplements for
@@ -162,12 +165,11 @@ sources:
     licence: CC BY 4.0
     accessed: '2026-11-16'
     note: >-
-      Full text opened via Food & Nutrition Research
-      (https://foodandnutritionresearch.net/index.php/fnr/article/download/10299/16539; PMID 38187785). Section
-      "Health outcomes - Upper intake levels and toxicity" states that intakes of nicotinic acid, but not
-      nicotinamide, as a supplement or fortificant in the range of 30 mg/d to 1000 mg/d can cause mild
-      symptoms such as flushing (with higher intakes reported to induce liver damage), and cites the SCF
-      (2002) adult ULs of 10 mg/d for nicotinic acid and 900 mg/d for nicotinamide.
+      Full text (PMC10770643) opened via Europe PMC (PMID 38187785; also published in Food & Nutrition
+      Research). Section "Health outcomes - Upper intake levels and toxicity" states that intakes of nicotinic
+      acid, but not nicotinamide, as a supplement or fortificant in the range of 30 mg/d to 1000 mg/d can
+      result in mild symptoms such as flushing (with higher intakes reported to induce liver damage), and cites
+      the SCF (2002) adult ULs of 10 mg/d for nicotinic acid and 900 mg/d for nicotinamide.
   - id: nnr-pantothenic-2023
     type: review
     title: Pantothenic acid - a scoping review for Nordic Nutrition Recommendations 2023

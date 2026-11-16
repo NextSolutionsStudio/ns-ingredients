@@ -67,11 +67,10 @@ regulatory:
     status: authorised
     conditions:
       en: >-
-        Permitted mineral in fortified foods (Reg 1925/2006 Annex I & II) and food supplements (Dir 2002/46/EC
-        Annex II), via listed calcium salts.
+        Permitted mineral in fortified foods (Reg (EC) No 1925/2006 Annex I & II) via listed calcium salts.
       pl: >-
-        Składnik mineralny dopuszczony do wzbogacania żywności (Rozp. 1925/2006 Załącznik I i II) oraz
-        suplementów diety (Dyr. 2002/46/WE Załącznik II) w postaci wymienionych soli wapnia.
+        Składnik mineralny dopuszczony do wzbogacania żywności (Rozp. (WE) nr 1925/2006 Załącznik I i II) w
+        postaci wymienionych soli wapnia.
     source: reg-1925-2006
 reference_values:
   - type: UL

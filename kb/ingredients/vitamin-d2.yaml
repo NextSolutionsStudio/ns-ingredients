@@ -60,11 +60,10 @@ regulatory:
     status: authorised
     conditions:
       en: >-
-        Permitted vitamin D source in fortified foods (Reg 1925/2006 Annex I & II) and food supplements (Dir
-        2002/46/EC Annex II): ergocalciferol.
+        Permitted vitamin D source in fortified foods (Reg (EC) No 1925/2006 Annex I & II): ergocalciferol.
       pl: >-
-        Dopuszczone źródło witaminy D w żywności wzbogacanej (Rozp. 1925/2006 Załącznik I i II) i suplementach
-        diety (Dyr. 2002/46/WE Załącznik II): ergokalcyferol.
+        Dopuszczone źródło witaminy D w żywności wzbogacanej (Rozp. (WE) nr 1925/2006 Załącznik I i II):
+        ergokalcyferol.
     source: reg-1925-2006
 reference_values:
   - type: UL

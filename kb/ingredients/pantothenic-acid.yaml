@@ -53,12 +53,11 @@ regulatory:
     status: authorised
     conditions:
       en: >-
-        Permitted vitamin in fortified foods (Reg 1925/2006 Annex I & II: D-pantothenate calcium,
-        D-pantothenate sodium, dexpanthenol) and food supplements (Dir 2002/46/EC Annex II: also pantethine).
+        Permitted vitamin in fortified foods (Reg (EC) No 1925/2006 Annex I & II): D-pantothenate calcium,
+        D-pantothenate sodium, dexpanthenol.
       pl: >-
-        Witamina dopuszczona do wzbogacania żywności (Rozp. 1925/2006 Załącznik I i II: D-pantotenian wapnia,
-        D-pantotenian sodu, dekspantenol) oraz suplementów diety (Dyr. 2002/46/WE Załącznik II: także
-        pantetyna).
+        Witamina dopuszczona do wzbogacania żywności (Rozp. (WE) nr 1925/2006 Załącznik I i II): D-pantotenian
+        wapnia, D-pantotenian sodu, dekspantenol.
     source: reg-1925-2006
 review_status: draft
 provenance: ai-drafted

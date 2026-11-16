@@ -50,13 +50,11 @@ regulatory:
     status: authorised
     conditions:
       en: >-
-        Permitted vitamin in fortified foods (Reg 1925/2006 Annex I & II: thiamin hydrochloride, thiamin
-        mononitrate) and food supplements (Dir 2002/46/EC Annex II: also thiamine monophosphate chloride and
-        thiamine pyrophosphate chloride).
+        Permitted vitamin in fortified foods (Reg (EC) No 1925/2006 Annex I & II): thiamin hydrochloride,
+        thiamin mononitrate.
       pl: >-
-        Witamina dopuszczona do wzbogacania żywności (Rozp. 1925/2006 Załącznik I i II: chlorowodorek tiaminy,
-        monoazotan tiaminy) oraz suplementów diety (Dyr. 2002/46/WE Załącznik II: także chlorek monofosforanu
-        tiaminy i chlorek pirofosforanu tiaminy).
+        Witamina dopuszczona do wzbogacania żywności (Rozp. (WE) nr 1925/2006 Załącznik I i II): chlorowodorek
+        tiaminy, monoazotan tiaminy.
     source: reg-1925-2006
 review_status: draft
 provenance: ai-drafted

@@ -5,29 +5,26 @@ names:
     - vitamin b6
     - pyridoxine
     - pyridoxine hydrochloride
-    - pyridoxal 5'-phosphate
     - pyridoxine 5'-phosphate
   pl:
     - witamina B6
     - pirydoksyna
     - chlorowodorek pirydoksyny
-    - 5'-fosforan pirydoksalu
     - 5'-fosforan pirydoksyny
   de:
     - Vitamin B6
     - Pyridoxinhydrochlorid
 summary:
   en: >-
-    Water-soluble vitamin B6 (pyridoxine and related vitamers), permitted in EU fortified foods and supplements
-    primarily as pyridoxine hydrochloride, pyridoxine 5'-phosphate and pyridoxal 5'-phosphate. In 2023 EFSA
-    lowered the adult tolerable upper intake level to 12 mg/day (including pregnancy and lactation) based on
-    peripheral neuropathy observed with chronic high supplemental intakes.
+    Water-soluble vitamin B6 (pyridoxine and related vitamers), permitted in EU fortified foods as pyridoxine
+    hydrochloride, pyridoxine 5'-phosphate and pyridoxine dipalmitate. In 2023 EFSA established an adult
+    tolerable upper intake level of 12 mg/day (including pregnancy and lactation) based on peripheral
+    neuropathy observed with chronic high supplemental intakes.
   pl: >-
     Rozpuszczalna w wodzie witamina B6 (pirydoksyna i pokrewne witamery), dopuszczona w UE do wzbogacania
-    żywności i suplementów diety głównie jako chlorowodorek pirydoksyny, 5'-fosforan pirydoksyny i
-    5'-fosforan pirydoksalu. W 2023 r. EFSA obniżyła górny tolerowany poziom spożycia (UL) dla dorosłych do
-    12 mg/dobę (w tym w ciąży i laktacji) ze względu na neuropatię obwodową przy długotrwałym wysokim
-    spożyciu z suplementów.
+    żywności jako chlorowodorek pirydoksyny, 5'-fosforan pirydoksyny i dipalmitynian pirydoksyny. W 2023 r.
+    EFSA ustaliła górny tolerowany poziom spożycia (UL) dla dorosłych wynoszący 12 mg/dobę (w tym w ciąży i
+    laktacji) ze względu na neuropatię obwodową przy długotrwałym wysokim spożyciu z suplementów.
 assertions:
   - code: diet.vegan
     certainty: 'yes'
@@ -64,13 +61,11 @@ regulatory:
     status: authorised
     conditions:
       en: >-
-        Permitted vitamin in fortified foods (Reg 1925/2006 Annex I & II: pyridoxine hydrochloride, pyridoxine
-        5'-phosphate, pyridoxine dipalmitate) and food supplements (Dir 2002/46/EC Annex II: also pyridoxal
-        5'-phosphate).
+        Permitted vitamin in fortified foods (Reg (EC) No 1925/2006 Annex I & II): pyridoxine hydrochloride,
+        pyridoxine 5'-phosphate, pyridoxine dipalmitate.
       pl: >-
-        Witamina dopuszczona do wzbogacania żywności (Rozp. 1925/2006 Załącznik I i II: chlorowodorek
-        pirydoksyny, 5'-fosforan pirydoksyny, dipalmitynian pirydoksyny) oraz suplementów diety (Dyr.
-        2002/46/WE Załącznik II: także 5'-fosforan pirydoksalu).
+        Witamina dopuszczona do wzbogacania żywności (Rozp. (WE) nr 1925/2006 Załącznik I i II): chlorowodorek
+        pirydoksyny, 5'-fosforan pirydoksyny, dipalmitynian pirydoksyny.
     source: reg-1925-2006
 reference_values:
   - type: UL
