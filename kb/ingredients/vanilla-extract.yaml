@@ -1,0 +1,55 @@
+id: vanilla-extract
+type: flavouring
+names:
+  en:
+    - vanilla extract
+    - pure vanilla extract
+    - Bourbon vanilla extract
+  pl:
+    - ekstrakt z wanilii
+    - ekstrakt z wanili
+    - ekstrakt waniliowy
+    - ekstrakt z laski wanilii
+    - ekstrakt z wanilii Bourbon
+  de:
+    - Vanilleextrakt
+    - Bourbon-Vanilleextrakt
+summary:
+  en: >-
+    Botanical liquid preparation obtained by steeping cured vanilla pods in an alcohol-and-water solvent.
+    Unlike synthetic vanillin (a single isolated molecule), real vanilla extract carries the broad aromatic
+    profile of the whole pod and is labelled distinctly from synthetic flavourings.
+  pl: >-
+    Roślinny ekstrakt płynny otrzymywany przez ekstrakcję dojrzałych lasek wanilii w mieszaninie alkoholu
+    etylowego i wody. W odróżnieniu od syntetycznej waniliny (pojedynczego związku chemicznego) prawdziwy
+    ekstrakt z wanilii zawiera złożony profil aromatyczny całej laski wanilii i nie jest tym samym co
+    aromaty syntetyczne.
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Plant-derived extract as declared by its ingredient name ("vanilla extract").
+      pl: Ekstrakt pochodzenia roślinnego zgodnie z nazwą składnika zadeklarowaną na etykiecie („ekstrakt z wanilii”).
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+  - code: diet.vegan
+    certainty: 'yes'
+    kind: estimate
+    grade: D
+    note:
+      en: Extracted from vanilla pods in ethanol and water; no animal material.
+      pl: Ekstrahowany z lasek wanilii w etanolu i wodzie; brak surowców zwierzęcych.
+    sources:
+      - id: wiki-vanilla-extract
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Includes the common Polish label misspelling "ekstrakt z wanili" (single 'i') seen in real labels.
+  - >-
+    No processing.ultra_processed_marker assertion: botanical culinary extract (infusion of vanilla pods),
+    consistent with spice-extracts.yaml, rosemary-extract.yaml and paprika-extract.yaml rather than synthetic
+    or generic flavouring.yaml.

@@ -1,0 +1,128 @@
+id: olive-oil
+type: fat
+names:
+  en:
+    - olive oil
+  pl:
+    - oliwa z oliwek
+    - oliwa z oliwek z pierwszego tłoczenia
+  de:
+    - Olivenöl
+summary:
+  en: >-
+    Vegetable oil pressed from whole olives (Olea europaea). EU marketing rules (Delegated Regulation (EU)
+    2022/2104) distinguish virgin and extra virgin olive oils—obtained solely by mechanical means without
+    refining—from ordinary "olive oil", which is a blend of refined olive oil and virgin olive oils.
+  pl: >-
+    Olej roślinny tłoczony z całych oliwek (Olea europaea). Unijne normy handlowe (Rozporządzenie Delegowane
+    (UE) 2022/2104) odróżniają oliwy z oliwek z pierwszego tłoczenia (extra virgin i virgin) — otrzymywane
+    wyłącznie metodami mechanicznymi bez rafinacji — od zwykłej „oliwy z oliwek”, będącej mieszanką
+    rafinowanej oliwy z oliwek i oliw z pierwszego tłoczenia.
+variants:
+  - id: extra-virgin
+    names:
+      en:
+        - extra virgin olive oil
+      pl:
+        - oliwa z oliwek najwyższej jakości z pierwszego tłoczenia
+        - oliwa z oliwek extra virgin
+        - oliwa z oliwek z pierwszego tłoczenia extra virgin
+        - oliwa z oliwek extra virgin z pierwszego tłoczenia
+      de:
+        - natives Olivenöl extra
+    process:
+      en: >-
+        Obtained directly from olives solely by mechanical means, without refining, meeting strict chemical
+        (free acidity <= 0.8%) and organoleptic (defect-free) criteria.
+      pl: >-
+        Otrzymywana bezpośrednio z oliwek wyłącznie za pomocą środków mechanicznych, bez rafinacji, spełniająca
+        rygorystyczne kryteria chemiczne (wolna kwasowość <= 0,8%) i organoleptyczne (bez wad).
+    tells:
+      - 'extra virgin'
+      - 'najwyzszej jakosci'
+      - 'natives olivenol extra'
+  - id: virgin
+    names:
+      en:
+        - virgin olive oil
+      de:
+        - natives Olivenöl
+    process:
+      en: >-
+        Obtained directly from olives solely by mechanical means without refining, with slightly wider acidity
+        and sensory tolerances than extra virgin olive oil.
+      pl: >-
+        Otrzymywana bezpośrednio z oliwek wyłącznie za pomocą środków mechanicznych, bez rafinacji, o nieco
+        szerszej tolerancji kwasowości i cech sensorycznych niż oliwa extra virgin.
+    tells:
+      - '^(?!.*extra virgin)(?!.*najwyzszej jakosci)(?!.*natives olivenol extra).*z pierwszego tloczenia'
+      - '^(?!.*extra virgin)(?!.*najwyzszej jakosci)(?!.*natives olivenol extra).*\bvirgin olive oil\b'
+      - '^(?!.*extra virgin)(?!.*najwyzszej jakosci)(?!.*natives olivenol extra).*\bnatives olivenol\b'
+  - id: refined-blend
+    names:
+      en:
+        - refined olive oil
+      pl:
+        - oliwa z oliwek rafinowana
+      de:
+        - raffiniertes Olivenöl
+    process:
+      en: >-
+        Refined olive oil obtained by refining virgin olive oil (not sold directly to final consumers on its
+        own, usually blended with virgin olive oil as "olive oil").
+      pl: >-
+        Rafinowana oliwa z oliwek otrzymywana przez rafinację oliwy z pierwszego tłoczenia (zwykle sprzedawana
+        w mieszance z oliwą z pierwszego tłoczenia jako „oliwa z oliwek”).
+    tells:
+      - 'rafinowan'
+      - 'raffinier'
+      - '\brefined\b'
+assertions:
+  - code: origin.vegetable_oil_derived
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Oil pressed from the fruit of the olive tree (Olea europaea).
+      pl: Olej tłoczony z owoców drzewa oliwnego (Olea europaea).
+    sources:
+      - id: reg-2022-2104
+        locator: Article 2
+      - id: reg-1169-2011
+        locator: Annex VII Part A, point 8
+  - code: diet.vegan
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Pressed from olives; no animal material.
+      pl: Tłoczona z oliwek; brak surowców zwierzęcych.
+    sources:
+      - id: reg-2022-2104
+  - code: diet.vegetarian
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Pressed from olives; compatible with a vegetarian diet.
+      pl: Tłoczona z oliwek; zgodna z dietą wegetariańską.
+    sources:
+      - id: reg-2022-2104
+  - code: processing.refined
+    variant: refined-blend
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Refined olive oil is refined; virgin and extra virgin olive oils are unrefined mechanical pressings.
+      pl: Rafinowana oliwa z oliwek jest rafinowana; oliwy z pierwszego tłoczenia są nierafinowane i tłoczone mechanicznie.
+    sources:
+      - id: reg-2022-2104
+        locator: Article 2(1)(d)-(e)
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    No numerical priors on bare "oliwa z oliwek" / "olive oil": in compound foods (e.g. canned tuna, pasta
+    sauces) bare "oliwa z oliwek" may be either extra virgin/virgin or refined+virgin blend under Reg
+    2022/2104 Art. 3(2).

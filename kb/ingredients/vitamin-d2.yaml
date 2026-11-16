@@ -1,0 +1,80 @@
+id: vitamin-d2
+type: nutrient
+names:
+  en:
+    - vitamin d2
+    - ergocalciferol
+  pl:
+    - witamina D2
+    - ergokalcyferol
+  de:
+    - Vitamin D2
+    - Ergocalciferol
+summary:
+  en: >-
+    The fungal/yeast-derived form of vitamin D (ergocalciferol), chemically distinct from animal/lichen-derived
+    vitamin D3 (cholecalciferol). Produced commercially by UV irradiation of ergosterol from yeast or fungi,
+    making it inherently non-animal and widely used to fortify plant-based drinks. EFSA (2023) sets a
+    tolerable upper intake level of 100 ug/day for adults covering both vitamin D2 and D3.
+  pl: >-
+    Forma witaminy D pochodzenia grzybowo-drożdżowego (ergokalcyferol), chemicznie odrębna od zwierzęcej lub
+    porostowej witaminy D3 (cholekalcyferolu). Wytwarzana handlowo przez naświetlanie promieniami UV
+    ergosterolu z drożdży lub grzybów, dzięki czemu nie pochodzi od zwierząt i jest szeroko stosowana do
+    wzbogacania napojów roślinnych. EFSA (2023) ustaliła górny tolerowany poziom spożycia 100 ug/dobę dla
+    dorosłych, obejmujący zarówno witaminę D2, jak i D3.
+assertions:
+  - code: diet.vegan
+    certainty: 'yes'
+    kind: estimate
+    grade: C
+    note:
+      en: >-
+        Ergocalciferol is derived from fungal or yeast ergosterol under UV irradiation, without animal raw
+        materials.
+      pl: >-
+        Ergokalcyferol powstaje przez naświetlanie UV ergosterolu pochodzącego z grzybów lub drożdży, bez
+        udziału surowców zwierzęcych.
+    sources:
+      - id: pmc-vitd2-2026
+      - id: reg-1925-2006
+  - code: health.high_dose_supplement_nutrient
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    population: [general, pregnancy, children]
+    note:
+      en: >-
+        EFSA (2023) confirmed a tolerable upper intake level of 100 ug VDE/day for adults (including pregnant
+        and lactating women) and adolescents aged 11-17 years, and 50 ug VDE/day for children aged 1-10 years,
+        based on persistent hypercalciuria; the opinion explicitly covers ergocalciferol (vitamin D2) alongside
+        cholecalciferol (vitamin D3).
+      pl: >-
+        EFSA (2023) potwierdziła górny tolerowany poziom spożycia 100 ug równoważników witaminy D/dobę dla
+        dorosłych (w tym kobiet w ciąży i karmiących) oraz młodzieży 11-17 lat, i 50 ug/dobę dla dzieci 1-10
+        lat na podstawie utrzymującej się hiperkalciurii; opinia wprost obejmuje ergokalcyferol (witaminę D2)
+        obok cholekalcyferolu (witaminy D3).
+    sources:
+      - id: efsa-vitd-ul-2023
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: >-
+        Permitted vitamin D source in fortified foods (Reg (EC) No 1925/2006 Annex I & II): ergocalciferol.
+      pl: >-
+        Dopuszczone źródło witaminy D w żywności wzbogacanej (Rozp. (WE) nr 1925/2006 Załącznik I i II):
+        ergokalcyferol.
+    source: reg-1925-2006
+reference_values:
+  - type: UL
+    value: 100
+    unit: µg/day
+    body: EFSA
+    year: 2023
+    source: efsa-vitd-ul-2023
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Separate molecule from vitamin-d3.yaml (cholecalciferol); created so "witamina D2" no longer
+    fuzzy-matches vitamin-d3.

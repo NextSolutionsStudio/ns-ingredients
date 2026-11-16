@@ -1,0 +1,36 @@
+id: orange-oil
+type: flavouring
+names:
+  en:
+    - orange oil
+    - orange peel oil
+  pl:
+    - olejek pomarańczowy
+    - olej pomarańczowy
+    - olejek z pomarańczy
+  de:
+    - Orangenöl
+summary:
+  en: >-
+    Essential oil obtained from the peel of oranges (Citrus × sinensis), used as a flavouring ingredient in
+    foods and beverages rather than as whole fruit.
+  pl: >-
+    Olejek eteryczny pozyskiwany ze skórki pomarańczy (Citrus × sinensis), stosowany do aromatyzowania żywności
+    i napojów, a nie jako cały owoc.
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Plant-derived essential oil as declared by its ingredient name ("orange oil").
+      pl: Olejek pochodzenia roślinnego zgodnie z nazwą składnika zadeklarowaną na etykiecie („olejek pomarańczowy”).
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Identity-only in this round: flavouring and processing.ultra_processed_marker assertions are not added
+    here so no new score deduction is introduced without a policy decision (listed under Policy calls).

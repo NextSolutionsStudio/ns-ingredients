@@ -1,0 +1,84 @@
+id: vitamin-b6
+type: nutrient
+names:
+  en:
+    - vitamin b6
+    - pyridoxine
+    - pyridoxine hydrochloride
+    - pyridoxine 5'-phosphate
+  pl:
+    - witamina B6
+    - pirydoksyna
+    - chlorowodorek pirydoksyny
+    - 5'-fosforan pirydoksyny
+  de:
+    - Vitamin B6
+    - Pyridoxinhydrochlorid
+summary:
+  en: >-
+    Water-soluble vitamin B6 (pyridoxine and related vitamers), permitted in EU fortified foods as pyridoxine
+    hydrochloride, pyridoxine 5'-phosphate and pyridoxine dipalmitate. In 2023 EFSA established an adult
+    tolerable upper intake level of 12 mg/day (including pregnancy and lactation) based on peripheral
+    neuropathy observed with chronic high supplemental intakes.
+  pl: >-
+    Rozpuszczalna w wodzie witamina B6 (pirydoksyna i pokrewne witamery), dopuszczona w UE do wzbogacania
+    żywności jako chlorowodorek pirydoksyny, 5'-fosforan pirydoksyny i dipalmitynian pirydoksyny. W 2023 r.
+    EFSA ustaliła górny tolerowany poziom spożycia (UL) dla dorosłych wynoszący 12 mg/dobę (w tym w ciąży i
+    laktacji) ze względu na neuropatię obwodową przy długotrwałym wysokim spożyciu z suplementów.
+assertions:
+  - code: diet.vegan
+    certainty: 'yes'
+    kind: estimate
+    grade: C
+    note:
+      en: >-
+        Chemically defined vitamin B6 forms (such as pyridoxine hydrochloride) permitted in EU food
+        fortification and supplements; no animal material in the synthetic forms.
+      pl: >-
+        Chemicznie zdefiniowane formy witaminy B6 (np. chlorowodorek pirydoksyny) dopuszczone do wzbogacania
+        żywności i suplementów w UE; w formach syntetycznych nie wykorzystuje się surowców zwierzęcych.
+    sources:
+      - id: reg-1925-2006
+      - id: dir-2002-46-annex2
+  - code: health.high_dose_supplement_nutrient
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    population: [general, pregnancy, children, infants]
+    note:
+      en: >-
+        EFSA (2023) established a tolerable upper intake level of 12 mg/day for adults (including pregnant and
+        lactating women) based on peripheral neuropathy, and 2.2-10.7 mg/day for infants and children; intake
+        from ordinary foods rarely approaches the UL, which mainly concerns high-dose supplements.
+      pl: >-
+        EFSA (2023) ustaliła górny tolerowany poziom spożycia 12 mg/dobę dla dorosłych (w tym kobiet w ciąży i
+        karmiących) ze względu na neuropatię obwodową oraz 2,2-10,7 mg/dobę dla niemowląt i dzieci; spożycie
+        ze zwykłej żywności rzadko zbliża się do UL, który dotyczy głównie wysokodawkowych suplementów.
+    sources:
+      - id: efsa-b6-ul-2023
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: >-
+        Permitted vitamin in fortified foods (Reg (EC) No 1925/2006 Annex I & II): pyridoxine hydrochloride,
+        pyridoxine 5'-phosphate, pyridoxine dipalmitate.
+      pl: >-
+        Witamina dopuszczona do wzbogacania żywności (Rozp. (WE) nr 1925/2006 Załącznik I i II): chlorowodorek
+        pirydoksyny, 5'-fosforan pirydoksyny, dipalmitynian pirydoksyny.
+    source: reg-1925-2006
+reference_values:
+  - type: UL
+    value: 12
+    unit: mg/day
+    body: EFSA
+    year: 2023
+    source: efsa-b6-ul-2023
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Added to prevent "witamina B6" from fuzzy-matching E101 (riboflavin, vitamin B2) at 0.71.
+  - >-
+    Chemical synthesis route for pyridoxine was not opened directly, so no origin.chemical_synthesis assertion
+    is recorded.

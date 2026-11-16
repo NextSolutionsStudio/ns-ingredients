@@ -1,0 +1,148 @@
+id: niacin
+type: nutrient
+names:
+  en:
+    - niacin
+    - vitamin b3
+  pl:
+    - niacyna
+    - witamina B3
+    - witamina PP
+  de:
+    - Niacin
+    - Vitamin B3
+summary:
+  en: >-
+    Water-soluble vitamin B3, permitted for EU food fortification and food supplements in the forms of
+    nicotinamide (niacinamide) and nicotinic acid. While chemically related, they have separate adult
+    tolerable upper intake levels (SCF, 2002): 900 mg/day (12.5 mg/kg bw/day, excluding pregnant and
+    lactating women) for nicotinamide (EFSA 2026, Section 1.2), and 10 mg/day for nicotinic acid because
+    intakes of 30-1,000 mg/day as a supplement or fortificant can cause flushing (NNR 2023, Upper intake
+    levels and toxicity).
+  pl: >-
+    Rozpuszczalna w wodzie witamina B3, dopuszczona w UE do wzbogacania żywności i suplementów diety w
+    formach amidu kwasu nikotynowego (nikotynamidu) oraz kwasu nikotynowego. Choć oba związki są pokrewne,
+    mają odrębne górne tolerowane poziomy spożycia dla dorosłych (SCF, 2002): 900 mg/dobę (12,5 mg/kg
+    m.c./dobę, z wyłączeniem kobiet w ciąży i karmiących) dla nikotynamidu (EFSA 2026, sekcja 1.2) oraz 10
+    mg/dobę dla kwasu nikotynowego, ponieważ dawki 30-1000 mg/dobę z suplementów lub żywności wzbogacanej mogą
+    wywoływać zaczerwienienie skóry (flushing; NNR 2023, Upper intake levels and toxicity).
+variants:
+  - id: nicotinamide
+    names:
+      en:
+        - nicotinamide
+        - niacinamide
+      pl:
+        - amid kwasu nikotynowego
+        - nikotynamid
+      de:
+        - Nicotinamid
+    process:
+      en: >-
+        The amide form of vitamin B3 (niacinamide), permitted for EU food fortification and food supplements;
+        does not cause the flushing reported for nicotinic acid at 30-1,000 mg/day (NNR 2023, Upper intake
+        levels and toxicity). SCF (2002) established an adult UL of 900 mg/day (12.5 mg/kg bw/day, excluding
+        pregnant and lactating women; EFSA 2026, Section 1.2).
+      pl: >-
+        Forma amidowa witaminy B3 (niacynamid), dopuszczona do wzbogacania żywności i suplementów diety w UE;
+        nie wywołuje zaczerwienienia skóry (flushingu) obserwowanego przy kwasie nikotynowym w zakresie
+        30-1000 mg/dobę (NNR 2023, Upper intake levels and toxicity). SCF (2002) ustalił dla dorosłych UL 900
+        mg/dobę (12,5 mg/kg m.c./dobę, z wyłączeniem kobiet w ciąży i karmiących; EFSA 2026, sekcja 1.2).
+    tells:
+      - 'nicotinamid'
+      - 'niacinamid'
+      - 'nikotynamid'
+      - 'amid kwasu nikotynowego'
+  - id: nicotinic-acid
+    names:
+      en:
+        - nicotinic acid
+      pl:
+        - kwas nikotynowy
+      de:
+        - Nicotinsäure
+    process:
+      en: >-
+        The free acid form of vitamin B3, permitted for EU food fortification and food supplements;
+        supplemental or fortificant intakes of 30-1,000 mg/day can cause mild symptoms such as flushing, and
+        higher intakes liver damage, so SCF (2002) set an adult UL of 10 mg/day (NNR 2023, Upper intake levels
+        and toxicity).
+      pl: >-
+        Forma wolnego kwasu witaminy B3, dopuszczona do wzbogacania żywności i suplementów diety w UE; spożycie
+        z suplementów lub żywności wzbogacanej w zakresie 30-1000 mg/dobę może wywoływać łagodne objawy, takie
+        jak zaczerwienienie skóry (flushing), a wyższe dawki uszkodzenie wątroby, dlatego SCF (2002) ustalił
+        dla dorosłych UL 10 mg/dobę (NNR 2023, Upper intake levels and toxicity).
+    tells:
+      - 'nicotinic acid'
+      - 'kwas nikotynow'
+      - 'nicotinsaure'
+assertions:
+  - code: diet.vegan
+    certainty: 'yes'
+    kind: estimate
+    grade: C
+    note:
+      en: >-
+        Chemically defined vitamin B3 forms (nicotinic acid, nicotinamide) permitted in EU food fortification
+        and supplements; no animal material in the synthetic forms.
+      pl: >-
+        Chemicznie zdefiniowane formy witaminy B3 (kwas nikotynowy, nikotynamid) dopuszczone do wzbogacania
+        żywności i suplementów w UE; w formach syntetycznych nie wykorzystuje się surowców zwierzęcych.
+    sources:
+      - id: reg-1925-2006
+      - id: dir-2002-46-annex2
+  - code: health.high_dose_supplement_nutrient
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    population: [general]
+    note:
+      en: >-
+        The EU Scientific Committee on Food (2002) established separate adult tolerable upper intake levels: 900
+        mg/day (12.5 mg/kg bw/day, excluding pregnant and lactating women) for nicotinamide, and 10 mg/day for
+        nicotinic acid (supplemental or fortificant intakes of 30-1,000 mg/day of nicotinic acid, unlike
+        nicotinamide, can cause flushing, and higher intakes liver damage).
+      pl: >-
+        Komitet Naukowy ds. Żywności UE (SCF, 2002) ustalił odrębne górne tolerowane poziomy spożycia dla
+        dorosłych: 900 mg/dobę (12,5 mg/kg m.c./dobę, z wyłączeniem kobiet w ciąży i karmiących) dla
+        nikotynamidu oraz 10 mg/dobę dla kwasu nikotynowego (dawki suplementowe lub wzbogacające 30-1000
+        mg/dobę kwasu nikotynowego, w odróżnieniu od nikotynamidu, mogą wywoływać zaczerwienienie skóry, a
+        wyższe dawki uszkodzenie wątroby).
+    sources:
+      - id: efsa-nmn-2026
+        locator: PMC13158811 Section 1.2 (900 mg/day, 12.5 mg/kg bw/day nicotinamide UL, excl. pregnancy/lactation, citing SCF 2002)
+      - id: nnr-niacin-2023
+        locator: PMC10770643 Health outcomes - Upper intake levels and toxicity (10 mg/day nicotinic acid UL, 900 mg/day nicotinamide UL, 30-1,000 mg/day flushing, higher intakes liver damage, citing SCF 2002)
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: >-
+        Permitted vitamin in fortified foods (Reg (EC) No 1925/2006 Annex I & II): nicotinic acid, nicotinamide.
+      pl: >-
+        Witamina dopuszczona do wzbogacania żywności (Rozp. (WE) nr 1925/2006 Załącznik I i II): kwas
+        nikotynowy, amid kwasu nikotynowego.
+    source: reg-1925-2006
+reference_values:
+  - type: UL
+    value: 900
+    unit: mg/day (12.5 mg/kg bw/day, nicotinamide; adults excl. pregnancy/lactation; PMC13158811 Section 1.2)
+    body: SCF
+    year: 2002
+    source: efsa-nmn-2026
+  - type: UL
+    value: 10
+    unit: mg/day (nicotinic acid; adults; PMC10770643 Health outcomes - Upper intake levels and toxicity)
+    body: SCF
+    year: 2002
+    source: nnr-niacin-2023
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    SCF (2002) figures are cited from opened full texts of EFSA (2026, Europe PMC PMCID PMC13158811, Section
+    1.2) and NNR 2023 (Europe PMC PMCID PMC10770643, section "Health outcomes - Upper intake levels and
+    toxicity"), because the standalone SCF 2002 PDF returned HTTP 429 from food.ec.europa.eu.
+  - >-
+    No numerical priors assigned between nicotinamide and nicotinic acid: no market-share study was opened
+    this session.

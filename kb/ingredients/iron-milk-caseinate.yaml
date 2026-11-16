@@ -1,0 +1,78 @@
+id: iron-milk-caseinate
+type: nutrient
+parent: milk
+names:
+  en:
+    - iron milk caseinate
+  pl:
+    - kazeinian żelaza z mleka
+    - kazeinian mleczny żelaza
+  de:
+    - Eisen-Milchcaseinat
+    - Eisen-Milch-Caseinat
+    - Eisenmilchcaseinat
+summary:
+  en: >-
+    Complex of iron, milk casein and phosphate authorised in the EU as a source of iron in fortified foods
+    and food supplements under Regulation (EC) No 1925/2006 Annex II (cross-referencing the Union list of
+    novel foods, Regulation (EU) 2017/2470). Because it is derived from milk casein, it carries the milk
+    allergen under EU Annex II item 7 and is not suitable for vegan or lactose-free diets.
+  pl: >-
+    Kompleks żelaza, kazeiny mlecznej i fosforanu dopuszczony w UE jako źródło żelaza do wzbogacania żywności
+    i w suplementach diety na mocy załącznika II do rozporządzenia (WE) nr 1925/2006 (z odesłaniem do
+    unijnego wykazu nowej żywności w rozporządzeniu (UE) 2017/2470). Ponieważ pochodzi z kazeiny mlecznej,
+    podlega obowiązkowi znakowania jako alergen mleczny (Aneks II UE, pkt 7) i nie jest odpowiedni dla diety
+    wegańskiej ani bezlaktozowej.
+assertions:
+  - code: allergen.milk
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Milk-casein-derived iron compound; declared as a milk allergen under EU Annex II item 7.
+      pl: Związek żelaza pochodzący z kazeiny mlecznej; deklarowany jako alergen mleczny w Aneksie II UE, pkt 7.
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 7
+  - code: origin.dairy
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Derived from milk casein (iron milk caseinate).
+      pl: Pochodzi z kazeiny mlecznej (kazeinian żelaza z mleka).
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 7
+      - id: reg-1925-2006
+        locator: Annex II
+  - code: diet.vegan
+    certainty: 'no'
+    kind: fact
+    grade: A
+    note:
+      en: Dairy-derived (made from milk casein).
+      pl: Pochodzenia mlecznego (wytwarzany z kazeiny mlecznej).
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 7
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: >-
+        Permitted iron source in fortified foods under Reg (EC) No 1925/2006 Annex II, footnote 4 (as listed in
+        the Union list of novel foods, Reg (EU) 2017/2470).
+      pl: >-
+        Dopuszczone źródło żelaza w żywności wzbogacanej na mocy Rozp. (WE) nr 1925/2006 Załącznik II, przypis 4
+        (zgodnie z unijnym wykazem nowej żywności, Rozp. (UE) 2017/2470).
+    source: reg-1925-2006
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Left explicit diet.lactose_free assertion out (matching kb/ingredients/caseinates.yaml): no numeric lactose
+    specification was opened, and the analyser derives diet.lactose_free: no from allergen.milk: yes.
+  - >-
+    Polish EU legal name is "kazeinian żelaza z mleka"; "kazeinian mleczny żelaza" is also listed as a label
+    variant.

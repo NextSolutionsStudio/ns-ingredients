@@ -1,0 +1,65 @@
+id: thiamin
+type: nutrient
+names:
+  en:
+    - thiamin
+    - thiamine
+    - vitamin b1
+    - thiamin hydrochloride
+    - thiamine hydrochloride
+    - thiamin mononitrate
+    - thiamine mononitrate
+  pl:
+    - tiamina
+    - witamina B1
+    - chlorowodorek tiaminy
+    - monoazotan tiaminy
+  de:
+    - Thiamin
+    - Vitamin B1
+    - Thiaminhydrochlorid
+    - Thiaminmononitrat
+summary:
+  en: >-
+    Water-soluble vitamin B1, whose requirement relates to energy and carbohydrate intake. Permitted in EU
+    fortified foods and supplements mainly as thiamin hydrochloride and thiamin mononitrate. According to
+    the NNR 2023 scoping review, no safe upper intake level could be set for thiamin due to a lack of data.
+  pl: >-
+    Rozpuszczalna w wodzie witamina B1, której zapotrzebowanie wiąże się ze spożyciem energii i węglowodanów.
+    Dopuszczona w UE do wzbogacania żywności i suplementów diety głównie jako chlorowodorek tiaminy i
+    monoazotan tiaminy. Według przeglądu NNR 2023 nie było możliwe ustalenie bezpiecznego górnego poziomu
+    spożycia tiaminy ze względu na brak danych.
+assertions:
+  - code: diet.vegan
+    certainty: 'yes'
+    kind: estimate
+    grade: C
+    note:
+      en: >-
+        Chemically defined vitamin B1 salts (thiamin hydrochloride, thiamin mononitrate) permitted in EU food
+        fortification and supplements; no animal material in the synthetic forms.
+      pl: >-
+        Chemicznie zdefiniowane sole witaminy B1 (chlorowodorek tiaminy, monoazotan tiaminy) dopuszczone do
+        wzbogacania żywności i suplementów w UE; w formach syntetycznych nie wykorzystuje się surowców
+        zwierzęcych.
+    sources:
+      - id: reg-1925-2006
+      - id: dir-2002-46-annex2
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: >-
+        Permitted vitamin in fortified foods (Reg (EC) No 1925/2006 Annex I & II): thiamin hydrochloride,
+        thiamin mononitrate.
+      pl: >-
+        Witamina dopuszczona do wzbogacania żywności (Rozp. (WE) nr 1925/2006 Załącznik I i II): chlorowodorek
+        tiaminy, monoazotan tiaminy.
+    source: reg-1925-2006
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    No health.high_dose_supplement_nutrient assertion and no UL reference_values entry: the opened NNR 2023
+    scoping review abstract (nnr-thiamin-2023, PMID 38084159) states that no safe upper intake level could be
+    set for thiamin due to a lack of data.

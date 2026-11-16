@@ -1,0 +1,62 @@
+id: cashews
+type: ingredient
+names:
+  en:
+    - cashews
+    - cashew nuts
+    - cashew
+  pl:
+    - orzechy nerkowca
+    - orzechów nerkowca
+    - nerkowce
+    - orzechy nerkowcowe
+  de:
+    - Cashewnüsse
+    - Cashewkerne
+summary:
+  en: >-
+    The tree nut Anacardium occidentale; part of the EU's regulated tree-nut group alongside almonds,
+    hazelnuts, walnuts, pecans, Brazil nuts, pistachios and macadamia nuts.
+  pl: >-
+    Orzech Anacardium occidentale; część regulowanej w UE grupy orzechów, wraz z migdałami, orzechami
+    laskowymi, włoskimi, pekan, brazylijskimi, pistacjami i makadamia.
+assertions:
+  - code: allergen.nuts
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Declared ingredient; EU Annex II item 8.
+      pl: Zadeklarowany składnik; Aneks II UE, punkt 8.
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 8
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A tree nut.
+      pl: Orzech.
+    sources:
+      - id: reg-1169-2011
+  - code: diet.vegan
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A plant food.
+      pl: Produkt roślinny.
+    sources:
+      - id: reg-1169-2011
+  - code: diet.vegetarian
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A plant food.
+      pl: Produkt roślinny.
+    sources:
+      - id: reg-1169-2011
+review_status: draft
+provenance: ai-drafted

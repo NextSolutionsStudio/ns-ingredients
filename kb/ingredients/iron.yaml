@@ -1,0 +1,143 @@
+id: iron
+type: nutrient
+names:
+  en:
+    - iron
+  pl:
+    - żelazo
+  de:
+    - Eisen
+summary:
+  en: >-
+    Essential mineral added to fortified foods (such as breakfast cereals) and supplements using EU-permitted
+    iron compounds including mineral/organic salts (ferrous sulfate, ferrous fumarate, ferric pyrophosphate,
+    ferrous bisglycinate), elemental iron and—in consolidated Annex II—iron milk caseinate (covered under its
+    own dairy-allergen entry). In 2024 EFSA concluded no tolerable upper intake level could be established
+    because the threshold for systemic iron-overload risk is undefined, and set a conservative safe level of
+    intake of 40 mg/day for adults (10-35 mg/day for children and adolescents, and 5 mg/day supplemental iron
+    from fortified foods and food supplements, excluding infant and follow-on formulae, for infants 4-11
+    months).
+  pl: >-
+    Niezbędny składnik mineralny dodawany do żywności wzbogacanej (np. płatków śniadaniowych) oraz suplementów
+    diety w postaci dopuszczonych w UE związków żelaza, takich jak sole mineralne lub organiczne (siarczan
+    żelaza(II), fumaran żelaza(II), pirofosforan żelaza(III), diglicynian żelaza), żelazo elementarne oraz — w
+    tekście skonsolidowanym załącznika II — kazeinian żelaza z mleka (ujęty w osobnym wpisie z alergenem
+    mlecznym). W 2024 r. EFSA uznała, że nie można ustalić górnego tolerowanego poziomu spożycia (UL), ponieważ
+    próg ryzyka ogólnoustrojowego przeciążenia żelazem nie został określony, i wyznaczyła zachowawczy
+    bezpieczny poziom spożycia wynoszący 40 mg/dobę dla dorosłych (10-35 mg/dobę dla dzieci i młodzieży oraz 5
+    mg/dobę dodatkowego żelaza z żywności wzbogacanej i suplementów diety, z wyłączeniem preparatów do
+    początkowego i dalszego żywienia niemowląt, dla niemowląt w wieku 4-11 miesięcy).
+variants:
+  - id: mineral-form
+    names:
+      en:
+        - ferrous sulfate
+        - ferrous sulphate
+        - ferrous fumarate
+        - ferrous bisglycinate
+        - ferric pyrophosphate
+        - ferric diphosphate
+        - elemental iron
+      pl:
+        - siarczan żelaza
+        - siarczan żelaza(II)
+        - fumaran żelaza
+        - fumaran żelaza(II)
+        - diglicynian żelaza
+        - pirofosforan żelaza
+        - pirofosforan żelaza(III)
+        - żelazo elementarne
+      de:
+        - Eisensulfat
+        - Eisenfumarat
+    process:
+      en: >-
+        Inorganic or organic mineral iron salts (such as ferrous sulfate, ferrous fumarate, ferrous
+        bisglycinate, ferric pyrophosphate) or elemental iron, without dairy carriers.
+      pl: >-
+        Nieorganiczne lub organiczne mineralne sole żelaza (takie jak siarczan żelaza(II), fumaran żelaza(II),
+        diglicynian żelaza, pirofosforan żelaza(III)) lub żelazo elementarne, bez nośników mlecznych.
+    tells:
+      - 'sulfat'
+      - 'sulphat'
+      - 'fumarat'
+      - 'bisglycinat'
+      - 'pyrophosphat'
+      - 'diphosphat'
+      - 'elemental'
+      - 'siarczan'
+      - 'fumaran'
+      - 'diglicynian'
+      - 'pirofosforan'
+      - 'elementarn'
+      - 'eisensulfat'
+      - 'eisenfumarat'
+assertions:
+  - code: origin.mineral
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Mineral nutrient added as EU-permitted inorganic or organic iron salts or elemental iron.
+      pl: Składnik mineralny dodawany jako dopuszczone w UE nieorganiczne lub organiczne sole żelaza albo żelazo elementarne.
+    sources:
+      - id: reg-1925-2006
+        locator: Annex I & Annex II
+  - code: diet.vegan
+    certainty: maybe
+    kind: estimate
+    grade: C
+    note:
+      en: >-
+        Most permitted iron fortification compounds under Reg (EC) No 1925/2006 Annex II (sulfate, fumarate,
+        pyrophosphate, elemental iron, bisglycinate, etc.) are mineral/synthetic forms without animal
+        material, but consolidated Annex II also permits iron milk caseinate (dairy-derived), so a bare "iron"
+        declaration on a label cannot rule out an animal-derived form.
+      pl: >-
+        Większość dopuszczonych związków żelaza w załączniku II do Rozp. (WE) nr 1925/2006 (siarczan, fumaran,
+        pirofosforan, żelazo elementarne, diglicynian itd.) to formy mineralne/syntetyczne bez surowców
+        zwierzęcych, ale tekst skonsolidowany dopuszcza także kazeinian żelaza z mleka (pochodzenia
+        mlecznego), więc sama deklaracja „żelazo” na etykiecie nie wyklucza formy odzwierzęcej.
+    sources:
+      - id: reg-1925-2006
+        locator: Annex I & Annex II
+  - code: diet.vegan
+    variant: mineral-form
+    certainty: 'yes'
+    kind: estimate
+    grade: C
+    note:
+      en: >-
+        Declared as a non-dairy mineral/synthetic iron salt (sulfate, fumarate, pyrophosphate, bisglycinate)
+        or elemental iron permitted under Reg (EC) No 1925/2006 Annex II.
+      pl: >-
+        Zadeklarowana niemleczna, mineralna lub syntetyczna sól żelaza (siarczan, fumaran, pirofosforan,
+        diglicynian) albo żelazo elementarne dopuszczone w załączniku II do Rozp. (WE) nr 1925/2006.
+    sources:
+      - id: reg-1925-2006
+        locator: Annex I & Annex II
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: >-
+        Permitted mineral in fortified foods (Reg (EC) No 1925/2006 Annex I & II) via listed iron salts
+        (including ferrous bisglycinate, ferrous fumarate, ferrous sulphate, ferric diphosphate) and elemental
+        iron.
+      pl: >-
+        Składnik mineralny dopuszczony do wzbogacania żywności (Rozp. (WE) nr 1925/2006 Załącznik I i II) w
+        postaci wymienionych soli żelaza (w tym diglicynianu żelaza, fumaranu żelaza, siarczanu żelaza,
+        difosforanu żelaza) i żelaza elementarnego.
+    source: reg-1925-2006
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    No health.high_dose_supplement_nutrient assertion or UL reference_values entry: EFSA (2024,
+    10.2903/j.efsa.2024.8819) explicitly concluded no UL could be set because the threshold where systemic
+    iron-overload risk begins is undefined; instead it set a safe level of intake of 40 mg/day for adults
+    (10-35 mg/day for children/adolescents, and 5 mg/day supplemental iron from fortified foods and food
+    supplements, excluding infant and follow-on formulae, for infants 4-11 months).
+  - >-
+    Ferrous gluconate (E579) and ferrous lactate (E585) remain under their generated additive entries to avoid
+    name collisions.

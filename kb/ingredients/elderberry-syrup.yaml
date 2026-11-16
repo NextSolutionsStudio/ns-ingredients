@@ -1,0 +1,50 @@
+id: elderberry-syrup
+type: carbohydrate
+names:
+  en:
+    - elderberry syrup
+    - black elderberry syrup
+  pl:
+    - syrop z czarnego bzu
+    - syrop z bzu czarnego
+  de:
+    - Holundersirup
+    - Holunderbeerensirup
+summary:
+  en: >-
+    Sweetened syrup prepared from black elderberry (Sambucus nigra) juice or extract and sugars. Under WHO's
+    2015 sugars guideline, syrups and sugars added to foods or drinks count as free sugars.
+  pl: >-
+    Słodki syrop otrzymywany z soku lub wyciągu z czarnego bzu (Sambucus nigra) oraz cukrów. Według wytycznych
+    WHO z 2015 r. syropy oraz cukry dodawane do żywności lub napojów liczą się jako cukry wolne.
+assertions:
+  - code: health.added_sugar
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    population: [general]
+    note:
+      en: >-
+        Added as an ingredient, syrup counts as a free sugar in WHO's sense. WHO strongly recommends keeping
+        free sugars under 10% of energy intake. The ingredient list does not show how much is in the product.
+      pl: >-
+        Dodany jako składnik, syrop jest cukrem wolnym w rozumieniu WHO. WHO zdecydowanie zaleca, by cukry
+        wolne stanowiły mniej niż 10% energii z diety. Lista składników nie pokazuje, ile go jest w produkcie.
+    sources:
+      - id: who-free-sugars-2015
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Plant-derived fruit syrup as declared by its ingredient name.
+      pl: Syrop owocowy pochodzenia roślinnego zgodnie z nazwą składnika zadeklarowaną na etykiecie.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Added during b1 derived-forms sweep so "elderberry syrup" does not confidently sub-phrase-match the whole
+    fruit entry (elderberry.yaml) and omit health.added_sugar.

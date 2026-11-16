@@ -1,0 +1,46 @@
+id: beetroot-juice-concentrate
+type: ingredient
+names:
+  en:
+    - beetroot juice concentrate
+    - concentrated beetroot juice
+    - beet juice concentrate
+    - beetroot juice
+  pl:
+    - koncentrat soku z buraka
+    - zagęszczony sok z buraka
+    - koncentrat soku z buraków
+    - sok z buraka
+    - zagęszczony sok buraczany
+  de:
+    - Rote-Bete-Saftkonzentrat
+    - Rote-Bete-Saft
+summary:
+  en: >-
+    Concentrated juice pressed from red beetroot (Beta vulgaris), widely used as a colouring foodstuff (rather
+    than the purified additive E 162 betanin) in yoghurts, confectionery and sauces. As a vegetable juice
+    concentrate, it is outside the wording of WHO's 2015 free-sugars definition, which specifies fruit juices
+    and fruit juice concentrates.
+  pl: >-
+    Zagęszczony sok tłoczony z buraka czerwonego (Beta vulgaris), szeroko stosowany jako żywność barwiąca (w
+    odróżnieniu od oczyszczonego dodatku E 162 betanina) w jogurtach, słodyczach i sosach. Jako koncentrat
+    soku warzywnego nie jest objęty literalnym brzmieniem definicji cukrów wolnych WHO z 2015 r., która
+    wymienia soki owocowe i zagęszczone soki owocowe.
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Pressed and concentrated from red beetroot (Beta vulgaris).
+      pl: Tłoczony i zagęszczany z korzenia buraka czerwonego (Beta vulgaris).
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Policy call: no health.added_sugar assertion. WHO's 2015 guideline defines free sugars as added
+    monosaccharides/disaccharides plus sugars naturally present in honey, syrups, fruit juices and fruit
+    juice concentrates — it does not include vegetable juices. Kept distinct from E 162 (beetroot-red.yaml).

@@ -1,0 +1,28 @@
+id: pumpkin-seed-oil
+type: fat
+parent: pumpkin-seeds
+names:
+  en:
+    - pumpkin seed oil
+  pl:
+    - olej z pestek dyni
+    - olej dyniowy
+    - olej z nasion dyni
+  de:
+    - Kürbiskernöl
+summary:
+  en: Vegetable oil pressed from pumpkin seeds (Cucurbita pepo and related Cucurbita species).
+  pl: Olej roślinny tłoczony z pestek dyni (Cucurbita pepo i pokrewnych gatunków z rodzaju Cucurbita).
+assertions:
+  - code: origin.vegetable_oil_derived
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A pressed vegetable oil; EU labelling requires its specific plant origin to be named.
+      pl: Wyciskany olej roślinny; przepisy UE o etykietowaniu wymagają podania jego konkretnego pochodzenia rośliny.
+    sources:
+      - id: reg-1169-2011
+        locator: Annex VII Part A, point 8
+review_status: draft
+provenance: ai-drafted

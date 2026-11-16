@@ -1,0 +1,34 @@
+id: elderberry
+type: ingredient
+names:
+  en:
+    - elderberry
+    - elderberries
+    - black elderberry
+  pl:
+    - czarny bez
+    - owoce czarnego bzu
+  de:
+    - Holunder
+    - Holunderbeeren
+    - schwarzer Holunder
+summary:
+  en: >-
+    Black elderberry (Sambucus nigra), whole fruit. Elderberry juice is covered separately under
+    elderberry-juice (counts as free sugars).
+  pl: >-
+    Czarny bez (Sambucus nigra), cały owoc. Sok z czarnego bzu opisano osobno jako sok owocowy (liczy się jako
+    cukry wolne).
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A fruit.
+      pl: Owoc.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted

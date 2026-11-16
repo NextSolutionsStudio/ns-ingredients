@@ -1,0 +1,125 @@
+id: wheat-fibre
+type: ingredient
+parent: wheat
+names:
+  en:
+    - wheat fibre
+    - wheat fiber
+  pl:
+    - błonnik pszenny
+    - błonnik z pszenicy
+  de:
+    - Weizenfaser
+summary:
+  en: >-
+    Dietary fibre extracted from wheat grain or straw, used to bind water and improve texture in meat
+    products, baked goods and pasta. Because wheat is an EU Annex II item 1 allergen without an exemption for
+    wheat fibre, its wheat origin must be declared; specifically processed "gluten-free wheat fibre" is sold
+    for foods meeting the <= 20 mg/kg gluten limit under Regulation (EU) No 828/2014.
+  pl: >-
+    Błonnik pokarmowy pozyskiwany z pszenicy, stosowany do wiązania wody i poprawy tekstury w wyrobach
+    mięsnych, pieczywie i wyrobach mącznych. Ponieważ pszenica jest alergenem z Aneksu II UE (pkt 1) bez
+    wyłączenia dla błonnika pszennego, jego pochodzenie z pszenicy podlega deklaracji; specjalnie
+    oczyszczony „błonnik pszenny bezglutenowy” spełnia limit <= 20 mg/kg glutenu zgodnie z Rozporządzeniem
+    (UE) nr 828/2014.
+variants:
+  - id: gluten-free
+    names:
+      en:
+        - gluten-free wheat fibre
+        - gluten-free wheat fiber
+      pl:
+        - błonnik pszenny bezglutenowy
+      de:
+        - glutenfreie Weizenfaser
+    process:
+      en: >-
+        Wheat fibre specifically processed and tested so the finished food contains no more than 20 mg/kg of
+        gluten (Reg (EU) No 828/2014), while remaining wheat-derived under Annex II item 1.
+      pl: >-
+        Błonnik pszenny specjalnie przetworzony i przebadany tak, aby żywność końcowa zawierała najwyżej 20
+        mg/kg glutenu (Rozp. (UE) nr 828/2014), choć nadal pochodzi z pszenicy w rozumieniu Aneksu II pkt 1.
+    tells:
+      - 'bezglutenow'
+      - 'gluten ?free'
+      - 'glutenfrei'
+assertions:
+  - code: allergen.gluten
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: >-
+        Derived from wheat (EU Annex II item 1); wheat fibre is not among the Annex II exemptions for
+        wheat-based glucose syrups, dextrose, maltodextrins or distillates.
+      pl: >-
+        Pochodny pszenicy (Aneks II UE, pkt 1); błonnik pszenny nie należy do wyłączeń z Aneksu II dla
+        pszenicznych syropów glukozowych, dekstrozy, maltodekstryn czy destylatów.
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 1
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Extracted from wheat.
+      pl: Otrzymywany z pszenicy.
+    sources:
+      - id: reg-1169-2011
+  - code: diet.vegan
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A plant fibre.
+      pl: Błonnik roślinny.
+    sources:
+      - id: reg-1169-2011
+  - code: diet.vegetarian
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A plant fibre.
+      pl: Błonnik roślinny.
+    sources:
+      - id: reg-1169-2011
+  - code: diet.gluten_free
+    certainty: 'no'
+    kind: estimate
+    grade: B
+    note:
+      en: >-
+        Unless explicitly labelled gluten-free, wheat fibre may carry residual wheat gluten above the 20 mg/kg
+        threshold.
+      pl: >-
+        O ile nie oznaczono wprost jako bezglutenowy, błonnik pszenny może zawierać resztkowy gluten powyżej
+        progu 20 mg/kg.
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 1
+      - id: reg-828-2014
+        locator: Annex Part A
+  - code: diet.gluten_free
+    variant: gluten-free
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: >-
+        Specifically processed and labelled gluten-free; under Reg (EU) No 828/2014 the gluten-free claim
+        requires <= 20 mg/kg gluten in the food as sold.
+      pl: >-
+        Specjalnie przetworzony i oznaczony jako bezglutenowy; zgodnie z Rozp. (UE) nr 828/2014 oświadczenie
+        „bezglutenowy” wymaga <= 20 mg/kg glutenu w gotowym produkcie.
+    sources:
+      - id: reg-828-2014
+        locator: Annex Part A
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Matches oats.yaml pattern: ingredient-wide allergen.gluten applies because EU Annex II item 1 does not
+    exempt wheat fibre (relevant to wheat allergy), while the labelled gluten-free variant overrides
+    diet.gluten_free to 'yes' under Reg (EU) 828/2014.

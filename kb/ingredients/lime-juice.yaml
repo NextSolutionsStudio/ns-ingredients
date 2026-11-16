@@ -1,0 +1,58 @@
+id: lime-juice
+type: carbohydrate
+names:
+  en:
+    - lime juice
+    - concentrated lime juice
+    - lime juice concentrate
+  pl:
+    - sok z limonki
+    - sok limonkowy
+    - zagęszczony sok z limonki
+    - koncentrat soku z limonki
+  de:
+    - Limettensaft
+    - Limettensaftkonzentrat
+summary:
+  en: >-
+    Juice or concentrated juice obtained from limes (Citrus aurantiifolia / Citrus latifolia) as defined in
+    Directive 2001/112/EC, commonly used for acidity and citrus flavour in sauces, guacamole and drinks.
+    Under WHO's 2015 sugars guideline, fruit juices and fruit juice concentrates fall under the definition of
+    free sugars.
+  pl: >-
+    Sok lub zagęszczony sok z limonek (Citrus aurantiifolia / Citrus latifolia) w rozumieniu dyrektywy
+    2001/112/WE, stosowany zwykle dla kwasowości i smaku cytrusowego w sosach, guacamole i napojach. Według
+    wytycznych WHO z 2015 r. soki owocowe i zagęszczone soki owocowe mieszczą się w definicji cukrów wolnych.
+assertions:
+  - code: health.added_sugar
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    population: [general]
+    note:
+      en: >-
+        WHO's 2015 free-sugars definition covers fruit juices and fruit juice concentrates, though lime juice
+        is typically added in small quantities for acidity; the ingredient list does not show the amount.
+      pl: >-
+        Definicja cukrów wolnych WHO (2015) obejmuje soki owocowe i zagęszczone soki owocowe, choć sok z
+        limonki bywa dodawany głównie w niewielkich ilościach dla kwasowości; lista składników nie pokazuje
+        ilości.
+    sources:
+      - id: who-free-sugars-2015
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Obtained from limes.
+      pl: Otrzymywany z limonek.
+    sources:
+      - id: sug-juice-directive
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Policy call: follows the KB convention (fruit-juice-concentrate.yaml / WHO 2015) asserting
+    health.added_sugar on fruit juices and concentrates.

@@ -1,0 +1,67 @@
+id: elderberry-juice
+type: carbohydrate
+names:
+  en:
+    - elderberry juice
+    - black elderberry juice
+    - concentrated elderberry juice
+    - elderberry juice concentrate
+  pl:
+    - sok z czarnego bzu
+    - sok z bzu czarnego
+    - zagęszczony sok z czarnego bzu
+    - zagęszczony sok z bzu czarnego
+    - koncentrat soku z czarnego bzu
+    - koncentrat soku z bzu czarnego
+    - koncentraty soku z czarnego bzu
+  de:
+    - Holundersaft
+    - Holunderbeerensaft
+    - Holundersaftkonzentrat
+summary:
+  en: >-
+    Juice or concentrated juice obtained from black elderberries (Sambucus nigra) as defined in Directive
+    2001/112/EC. Under WHO's 2015 sugars guideline, sugars naturally present in fruit juices and fruit juice
+    concentrates count as free sugars.
+  pl: >-
+    Sok lub zagęszczony sok otrzymywany z owoców czarnego bzu (Sambucus nigra) zgodnie z dyrektywą
+    2001/112/WE. Według wytycznych WHO z 2015 r. cukry naturalnie obecne w sokach owocowych i zagęszczonych
+    sokach owocowych liczą się jako cukry wolne.
+assertions:
+  - code: health.added_sugar
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    population: [general]
+    note:
+      en: >-
+        Added as an ingredient, fruit juice counts as a free sugar in WHO's sense. WHO strongly recommends
+        keeping free sugars under 10% of energy intake. The ingredient list does not show how much is in the
+        product.
+      pl: >-
+        Dodany jako składnik, sok owocowy jest cukrem wolnym w rozumieniu WHO. WHO zdecydowanie zaleca, by
+        cukry wolne stanowiły mniej niż 10% energii z diety. Lista składników nie pokazuje, ile go jest w
+        produkcie.
+    sources:
+      - id: who-free-sugars-2015
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Pressed from black elderberries.
+      pl: Wyciskany z owoców czarnego bzu.
+    sources:
+      - id: sug-juice-directive
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Policy call: counts as health.added_sugar (WHO 2015 free-sugar definition includes sugars naturally
+    present in fruit juices, matching kb/ingredients/apple-juice.yaml and
+    kb/ingredients/fruit-juice-concentrate.yaml).
+  - >-
+    No blanket vegan claim: clarification/fining processing aids (e.g. gelatine) were not verified for a
+    given batch.

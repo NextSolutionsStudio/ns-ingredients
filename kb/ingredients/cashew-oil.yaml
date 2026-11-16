@@ -1,0 +1,41 @@
+id: cashew-oil
+type: fat
+parent: cashews
+names:
+  en:
+    - cashew oil
+    - cashew nut oil
+  pl:
+    - olej z orzechów nerkowca
+  de:
+    - Cashewöl
+summary:
+  en: >-
+    Vegetable oil pressed from cashew nuts (Anacardium occidentale). As a product derived from cashews, it
+    falls under EU Annex II item 8 tree-nut allergen labelling without an Annex II exemption.
+  pl: >-
+    Olej roślinny tłoczony z orzechów nerkowca (Anacardium occidentale). Jako produkt pochodzący z orzechów
+    nerkowca podlega obowiązkowi deklarowania alergenu z Aneksu II UE (punkt 8) i nie jest z niego wyłączony.
+assertions:
+  - code: origin.vegetable_oil_derived
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A pressed vegetable oil; EU labelling requires its specific plant origin to be named.
+      pl: Wyciskany olej roślinny; przepisy UE o etykietowaniu wymagają podania jego konkretnego pochodzenia rośliny.
+    sources:
+      - id: reg-1169-2011
+        locator: Annex VII Part A, point 8
+  - code: allergen.nuts
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Product derived from cashews; EU Annex II item 8 (cashews and products thereof).
+      pl: Produkt z orzechów nerkowca; Aneks II UE, punkt 8 (orzechy nerkowca i produkty z nich).
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 8
+review_status: draft
+provenance: ai-drafted

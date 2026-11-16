@@ -1,0 +1,342 @@
+# Sources for popular-pl-b1 (batch b1, 2026-11-16).
+# EFSA, NNR and journal abstracts were opened via Europe PMC (Wiley returns 403);
+# EU regulations were opened via Spain's official DOUE mirror (boe.es) where EUR-Lex returned HTTP 202.
+sources:
+  - id: reg-1925-2006
+    type: regulation
+    title: >-
+      Regulation (EC) No 1925/2006 on the addition of vitamins and minerals and of certain other substances to
+      foods (consolidated text, 2025-11-26)
+    publisher: European Union
+    year: 2006
+    url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02006R1925-20251126
+    licence: "EU reuse policy (Decision 2011/833/EU) — CC BY 4.0"
+    accessed: '2026-11-16'
+    note: >-
+      Consolidated EUR-Lex CELEX 02006R1925-20251126 opened via EU Publications Office Cellar. Annex I lists
+      permitted vitamins and minerals (including vitamin D, B1, niacin, pantothenic acid, B6, calcium, iron);
+      Annex II lists permitted vitamin formulations and mineral substances (including ferrous bisglycinate and
+      iron milk caseinate [footnote 4, Union list of novel foods] alongside the other listed iron salts,
+      nicotinic acid, nicotinamide, thiamin hydrochloride and mononitrate, D-pantothenate calcium/sodium,
+      dexpanthenol, pyridoxine hydrochloride/5'-phosphate/dipalmitate, and ergocalciferol).
+  - id: reg-2065-2003
+    type: regulation
+    title: "Regulation (EC) No 2065/2003 on smoke flavourings used or intended for use in or on foods"
+    publisher: European Union
+    year: 2003
+    url: https://eur-lex.europa.eu/eli/reg/2003/2065/oj
+    licence: "EU reuse policy (Decision 2011/833/EU) — CC BY 4.0"
+    accessed: '2026-11-16'
+    note: >-
+      Canonical ELI URL; opened via boe.es DOUE mirror (DOUE-L-2003-81885). Regulates smoke flavouring primary
+      products separately from other flavourings, requiring authorisation on an EU Union list.
+  - id: reg-2024-2067
+    type: regulation
+    title: >-
+      Commission Implementing Regulation (EU) 2024/2067 amending Implementing Regulation (EU) No 1321/2013 as
+      regards the deletion of entries SF-001 to SF-010 from the Union list of authorised smoke flavouring
+      primary products
+    publisher: European Union
+    year: 2024
+    url: https://eur-lex.europa.eu/eli/reg_impl/2024/2067/oj
+    licence: "EU reuse policy (Decision 2011/833/EU) — CC BY 4.0"
+    accessed: '2026-11-16'
+    note: >-
+      Canonical ELI URL; opened via boe.es DOUE mirror (DOUE-L-2024-81233). Article 1 deletes SF-001 through
+      SF-010 from the Union list (Recital 3: SF-007 and SF-010 expired 1 January 2024 without renewal
+      application); Article 2 sets transitional placing-on-the-market deadlines for SF-001 to SF-006, SF-008
+      and SF-009 of 1 July 2029 for categories 1.7 (cheese), 8 (meat), 9.2 (processed fish) and 9.3 (fish
+      roe), and 1 July 2026 for all other food categories.
+  - id: reg-828-2014
+    type: regulation
+    title: >-
+      Commission Implementing Regulation (EU) No 828/2014 on the requirements for the provision of information
+      to consumers on the absence or reduced presence of gluten in food
+    publisher: European Union
+    year: 2014
+    url: https://eur-lex.europa.eu/eli/reg_impl/2014/828/oj
+    licence: "EU reuse policy (Decision 2011/833/EU) — CC BY 4.0"
+    accessed: '2026-11-16'
+    note: >-
+      Canonical ELI URL; opened via boe.es DOUE mirror (DOUE-L-2014-81720). Sets the 'gluten-free' threshold at
+      <= 20 mg/kg gluten in food as sold to the final consumer (and 'very low gluten' at <= 100 mg/kg for
+      specifically processed cereal ingredients).
+  - id: reg-2022-2104
+    type: regulation
+    title: >-
+      Commission Delegated Regulation (EU) 2022/2104 supplementing Regulation (EU) No 1308/2013 as regards
+      marketing standards for olive oil
+    publisher: European Union
+    year: 2022
+    url: https://eur-lex.europa.eu/eli/reg_del/2022/2104/oj
+    licence: "EU reuse policy (Decision 2011/833/EU) — CC BY 4.0"
+    accessed: '2026-11-16'
+    note: >-
+      Canonical ELI URL; opened via boe.es DOUE mirror (DOUE-L-2022-81606). Defines the EU legal categories for
+      olive oils (extra virgin, virgin, refined olive oil, olive oil composed of refined and virgin olive oils,
+      olive-pomace oils) and their labelling rules.
+  - id: efsa-b6-ul-2023
+    type: regulatory_opinion
+    title: Scientific opinion on the tolerable upper intake level for vitamin B6
+    publisher: European Food Safety Authority
+    year: 2023
+    url: https://doi.org/10.2903/j.efsa.2023.8006
+    doi: 10.2903/j.efsa.2023.8006
+    pmid: '37207271'
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: '2026-11-16'
+    note: >-
+      Abstract opened via Europe PMC. Establishes a UL of 12 mg/day for adults (including pregnancy and
+      lactation) based on peripheral neuropathy, and 2.2-10.7 mg/day for infants, children and adolescents.
+  - id: efsa-vitd-ul-2023
+    type: regulatory_opinion
+    title: >-
+      Scientific opinion on the tolerable upper intake level for vitamin D, including the derivation of a
+      conversion factor for calcidiol monohydrate
+    publisher: European Food Safety Authority
+    year: 2023
+    url: https://doi.org/10.2903/j.efsa.2023.8145
+    doi: 10.2903/j.efsa.2023.8145
+    pmid: '37560437'
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: '2026-11-16'
+    note: >-
+      Abstract opened via Europe PMC. Covers ergocalciferol (vitamin D2), cholecalciferol (vitamin D3) and
+      calcidiol monohydrate; establishes a UL of 100 ug VDE/day for adults and adolescents 11-17 years, and
+      50 ug VDE/day for children 1-10 years, based on persistent hypercalciuria.
+  - id: efsa-iron-ul-2024
+    type: regulatory_opinion
+    title: Scientific opinion on the tolerable upper intake level for iron
+    publisher: European Food Safety Authority
+    year: 2024
+    url: https://doi.org/10.2903/j.efsa.2024.8819
+    doi: 10.2903/j.efsa.2024.8819
+    pmid: '38868106'
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: '2026-11-16'
+    note: >-
+      Abstract opened via Europe PMC (PMID 38868106). Concludes no UL could be established for iron; sets an
+      adult safe level of intake of 40 mg/day (including pregnancy and lactation) based on interventions where
+      black stools did not occur at 20-25 mg/day supplemental iron plus 15 mg/day background intake, scales
+      that 40 mg/day value down to 10-35 mg/day for children and adolescents (1-17 years), and scales the
+      25 mg/day supplemental figure to 5 mg/day supplemental iron for infants 7-11 months (extended to 4-6
+      months; covering fortified foods and food supplements, excluding infant and follow-on formulae).
+  - id: efsa-calcium-ul-2012
+    type: regulatory_opinion
+    title: Scientific Opinion on the Tolerable Upper Intake Level of calcium
+    publisher: European Food Safety Authority
+    year: 2012
+    url: https://doi.org/10.2903/j.efsa.2012.2814
+    doi: 10.2903/j.efsa.2012.2814
+    pmid: '42016128'
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: '2026-11-16'
+    note: >-
+      Abstract opened via Europe PMC (indexed 2026-04-22, PMID 42016128). Confirms the UL of 2,500 mg/day for
+      adults (including pregnant and lactating women) from diet and supplements combined; insufficient data to
+      set a UL for infants, children or adolescents.
+  - id: efsa-nmn-2026
+    type: regulatory_opinion
+    title: >-
+      Safety of beta-nicotinamide mononucleotide (beta-NMN) pursuant the regulation (EU) 2015/2283 and the
+      bioavailability of nicotinamide from this source in the context of Directive 2002/46/EC
+    publisher: European Food Safety Authority
+    year: 2026
+    url: https://doi.org/10.2903/j.efsa.2026.10007
+    doi: 10.2903/j.efsa.2026.10007
+    pmid: '42125559'
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: '2026-11-16'
+    note: >-
+      Full text (PMC13158811) opened via Europe PMC (PMID 42125559; Wiley DOI returned HTTP 403). Section 1.2
+      states that SCF (2002) established an adult UL for nicotinamide of 900 mg/day (12.5 mg/kg bw/day),
+      excluding pregnant and lactating women due to lack of data; Section 3.9 and Section 4 cite the 900
+      mg/day nicotinamide UL and note separate ULs for free nicotinic acid and nicotinamide. Evaluates
+      beta-nicotinamide mononucleotide up to 300 mg/day (109.7 mg/day nicotinamide) in food supplements for
+      adults excluding pregnant and lactating women.
+  - id: nnr-niacin-2023
+    type: review
+    title: Niacin - a scoping review for Nordic Nutrition Recommendations 2023
+    publisher: Food & Nutrition Research
+    year: 2023
+    url: https://doi.org/10.29219/fnr.v67.10299
+    doi: 10.29219/fnr.v67.10299
+    pmid: '38187785'
+    licence: CC BY 4.0
+    accessed: '2026-11-16'
+    note: >-
+      Full text (PMC10770643) opened via Europe PMC (PMID 38187785; also published in Food & Nutrition
+      Research). Section "Health outcomes - Upper intake levels and toxicity" states that intakes of nicotinic
+      acid, but not nicotinamide, as a supplement or fortificant in the range of 30 mg/d to 1000 mg/d can
+      result in mild symptoms such as flushing (with higher intakes reported to induce liver damage), and cites
+      the SCF (2002) adult ULs of 10 mg/d for nicotinic acid and 900 mg/d for nicotinamide.
+  - id: nnr-pantothenic-2023
+    type: review
+    title: Pantothenic acid - a scoping review for Nordic Nutrition Recommendations 2023
+    publisher: Food & Nutrition Research
+    year: 2023
+    url: https://doi.org/10.29219/fnr.v67.10255
+    doi: 10.29219/fnr.v67.10255
+    pmid: '38187802'
+    licence: CC BY 4.0
+    accessed: '2026-11-16'
+    note: >-
+      Abstract opened via Europe PMC (PMID 38187802). Reports that pantothenic acid deficiency is rare and
+      toxicity is negligible, no dietary reference values (DRVs) were set in NNR since 2012 due to lack of
+      data, and no health concerns related to pantothenic acid were identified.
+  - id: nnr-thiamin-2023
+    type: review
+    title: Thiamin (Vitamin B1) - A scoping review for Nordic Nutrition Recommendations 2023
+    publisher: Food & Nutrition Research
+    year: 2023
+    url: https://doi.org/10.29219/fnr.v67.10290
+    doi: 10.29219/fnr.v67.10290
+    pmid: '38084159'
+    licence: CC BY 4.0
+    accessed: '2026-11-16'
+    note: >-
+      Abstract opened via Europe PMC (PMID 38084159). Reports that it has not been possible to set a safe
+      upper intake level for thiamine due to a lack of data, and relates thiamine requirement to energy and
+      carbohydrate intake.
+  - id: pmc-vitd2-2026
+    type: review
+    title: >-
+      Content of Vitamin D2 in Alternative Biological and Nutritional Sources and Its Effectiveness as Compared
+      to Vitamin D3 - A Narrative Review
+    publisher: Metabolites (MDPI)
+    year: 2026
+    url: https://doi.org/10.3390/metabo16070485
+    doi: 10.3390/metabo16070485
+    pmid: '42506436'
+    licence: CC BY 4.0
+    accessed: '2026-11-16'
+    note: >-
+      Abstract opened via Europe PMC (PMID 42506436). Evaluates UV-irradiated mushrooms and algae as
+      non-animal sources of vitamin D2; concludes UV-enhanced mushrooms represent a quantifiable dietary source
+      of vitamin D2, whereas algae cannot currently be considered a validated source of vitamin D.
+  - id: efsa-sf001-2023
+    type: regulatory_opinion
+    title: Scientific opinion on the renewal of the authorisation of proFagus Smoke R714 (SF-001) as a smoke flavouring Primary Product
+    publisher: European Food Safety Authority
+    year: 2023
+    url: https://doi.org/10.2903/j.efsa.2023.8363
+    doi: 10.2903/j.efsa.2023.8363
+    pmid: '38027451'
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: '2026-11-16'
+    note: >-
+      Abstract opened via Europe PMC. Obtained by pyrolysis of beech and oak woods; raises concern with respect
+      to genotoxicity (furan-2(5H)-one in vivo genotoxicity above TTC 0.0025 ug/kg bw/day, plus unidentified
+      fraction).
+  - id: efsa-sf002-2023
+    type: regulatory_opinion
+    title: Scientific opinion on the renewal of the authorisation of Zesti Smoke Code 10 (SF-002) as a smoke flavouring Primary Product
+    publisher: European Food Safety Authority
+    year: 2023
+    url: https://doi.org/10.2903/j.efsa.2023.8364
+    doi: 10.2903/j.efsa.2023.8364
+    pmid: '38027431'
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: '2026-11-16'
+    note: >-
+      Abstract opened via Europe PMC. Obtained by pyrolysis of hickory and oak woods; raises concern with
+      respect to genotoxicity (furan-2(5H)-one and benzene-1,2-diol above TTC, plus unidentified fraction).
+  - id: efsa-sf003-2023
+    type: regulatory_opinion
+    title: Scientific opinion on the renewal of the authorisation of Smoke Concentrate 809045 (SF-003) as a smoke flavouring Primary Product
+    publisher: European Food Safety Authority
+    year: 2023
+    url: https://doi.org/10.2903/j.efsa.2023.8365
+    doi: 10.2903/j.efsa.2023.8365
+    pmid: '38027427'
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: '2026-11-16'
+    note: >-
+      Abstract opened via Europe PMC. Obtained by pyrolysis of beech wood; raises concern with respect to
+      genotoxicity (11 components, furan-2(5H)-one and benzene-1,2-diol above TTC, plus unidentified fraction).
+  - id: efsa-sf004-2023
+    type: regulatory_opinion
+    title: Scientific opinion on the renewal of the authorisation of Scansmoke SEF7525 (SF-004) as a smoke flavouring Primary Product
+    publisher: European Food Safety Authority
+    year: 2023
+    url: https://doi.org/10.2903/j.efsa.2023.8366
+    doi: 10.2903/j.efsa.2023.8366
+    pmid: '38027432'
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: '2026-11-16'
+    note: >-
+      Abstract opened via Europe PMC. Obtained from oak/maple/beech/hickory tar; potential safety concern for
+      genotoxicity cannot be ruled out (styrene and benzofuran above TTC, plus unidentified fraction).
+  - id: efsa-sf005-2023
+    type: regulatory_opinion
+    title: Scientific opinion on the renewal of the authorisation of SmokEz C-10 (SF-005) as a smoke flavouring Primary Product
+    publisher: European Food Safety Authority
+    year: 2023
+    url: https://doi.org/10.2903/j.efsa.2023.8367
+    doi: 10.2903/j.efsa.2023.8367
+    pmid: '38027441'
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: '2026-11-16'
+    note: >-
+      Abstract opened via Europe PMC. Obtained by pyrolysis of maple, oak, hickory, ash, birch, beech and cherry
+      woods; raises concern with respect to genotoxicity (furan-2(5H)-one and benzene-1,2-diol above TTC).
+  - id: efsa-sf006-2023
+    type: regulatory_opinion
+    title: Scientific opinion on the renewal of the authorisation of SmokEz Enviro-23 (SF-006) as a smoke flavouring Primary Product
+    publisher: European Food Safety Authority
+    year: 2023
+    url: https://doi.org/10.2903/j.efsa.2023.8368
+    doi: 10.2903/j.efsa.2023.8368
+    pmid: '38027452'
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: '2026-11-16'
+    note: >-
+      Abstract opened via Europe PMC. Obtained by pyrolysis of oak, maple, hickory, ash, birch, beech and cherry
+      woods; raises concern with respect to genotoxicity (furan-2(5H)-one and benzene-1,2-diol above TTC).
+  - id: efsa-sf008-2023
+    type: regulatory_opinion
+    title: Scientific opinion on the renewal of the authorisation of proFagus Smoke R709 (SF-008) as a smoke flavouring Primary Product
+    publisher: European Food Safety Authority
+    year: 2023
+    url: https://doi.org/10.2903/j.efsa.2023.8369
+    doi: 10.2903/j.efsa.2023.8369
+    pmid: '38027454'
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: '2026-11-16'
+    note: >-
+      Abstract opened via Europe PMC. Obtained by pyrolysis of beech and oak wood; raises concern with respect
+      to genotoxicity (furan-2(5H)-one above TTC, plus unidentified fraction).
+  - id: efsa-sf009-2023
+    type: regulatory_opinion
+    title: Scientific opinion on the renewal of the authorisation of Fumokomp (SF-009) as a smoke flavouring Primary Product
+    publisher: European Food Safety Authority
+    year: 2023
+    url: https://doi.org/10.2903/j.efsa.2023.8370
+    doi: 10.2903/j.efsa.2023.8370
+    pmid: '38027436'
+    licence: "EFSA Journal — CC BY-ND 4.0 (cite, do not adapt)"
+    accessed: '2026-11-16'
+    note: >-
+      Abstract opened via Europe PMC. Obtained by pyrolysis of beech and hornbeam woods; potential safety concern
+      for genotoxicity cannot be ruled out (positive in vitro mouse lymphoma assay, aneugenicity and absence of
+      furan-2(5H)-one not adequately resolved).
+  - id: wiki-vanilla-extract
+    type: reference
+    title: Vanilla extract
+    publisher: Wikipedia
+    url: https://en.wikipedia.org/wiki/Vanilla_extract
+    licence: CC BY-SA 4.0
+    accessed: '2026-11-16'
+    note: >-
+      Opened via Wikipedia API. Solution made by macerating and percolating vanilla pods in ethanol and water;
+      distinct from synthetic vanillin.
+  - id: wiki-caramelization
+    type: reference
+    title: Caramelization
+    publisher: Wikipedia
+    url: https://en.wikipedia.org/wiki/Caramelization
+    licence: CC BY-SA 4.0
+    accessed: '2026-11-16'
+    note: >-
+      Opened via Wikipedia API. Pyrolytic browning of sugars (e.g. sucrose inversion to fructose and glucose,
+      followed by dehydration and polymerisation) yielding caramel flavour and brown colour.

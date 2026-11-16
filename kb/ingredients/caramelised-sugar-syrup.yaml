@@ -1,0 +1,66 @@
+id: caramelised-sugar-syrup
+type: carbohydrate
+names:
+  en:
+    - caramelised sugar syrup
+    - caramelized sugar syrup
+    - burnt sugar syrup
+    - caramelised sugar
+  pl:
+    - syrop cukru skarmelizowanego
+    - syrop cukru palonego
+    - syrop z cukru karmelizowanego
+    - cukier karmelizowany
+    - cukier palony
+  de:
+    - Karamellzuckersirup
+    - gebrannter Zucker
+summary:
+  en: >-
+    Sugar syrup made by heating sugar (sucrose) to caramelise it and dissolving it in water, used for brown
+    colour and roasted-caramel flavour in sauces, baked goods and confectionery. Distinct from food-additive
+    caramel colours (E 150a-d) when used primarily for flavour/sweetening rather than as an additive colour;
+    under WHO's 2015 guideline, added sugars and syrups count as free sugars.
+  pl: >-
+    Syrop cukrowy otrzymywany przez ogrzewanie cukru (sacharozy) w celu karmelizacji i rozpuszczenie w
+    wodzie, stosowany dla brązowej barwy i palonego, karmelowego smaku w sosach, pieczywie cukierniczym i
+    słodyczach. Odrębny od barwników karmelowych (E 150a-d), gdy pełni funkcję składnika smakowego lub
+    słodzącego, a nie dodatku barwiącego; w rozumieniu wytycznych WHO z 2015 r. dodane cukry i syropy liczą
+    się jako cukry wolne.
+assertions:
+  - code: health.added_sugar
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    population: [general]
+    note:
+      en: >-
+        Added as a sugar syrup, it counts as a free sugar in WHO's sense. WHO strongly recommends keeping free
+        sugars under 10% of energy intake. The ingredient list does not show how much is in the product.
+      pl: >-
+        Dodany jako syrop cukrowy, jest cukrem wolnym w rozumieniu WHO. WHO zdecydowanie zaleca, by cukry
+        wolne stanowiły mniej niż 10% energii z diety. Lista składników nie pokazuje, ile go jest w
+        produkcie.
+    sources:
+      - id: who-free-sugars-2015
+  - code: origin.plant
+    certainty: 'yes'
+    kind: estimate
+    grade: D
+    note:
+      en: >-
+        Produced by pyrolytic heating (caramelisation) of plant-derived sugar (typically sucrose from sugar
+        beet or sugar cane) and dissolution in water.
+      pl: >-
+        Otrzymywany przez termiczną karmelizację cukru pochodzenia roślinnego (zwykle sacharozy z buraka lub
+        trzciny cukrowej) i rozpuszczenie w wodzie.
+    sources:
+      - id: wiki-caramelization
+      - id: sug-sugars-directive
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Policy call: asserted health.added_sugar (WHO 2015 free sugars: added sugars and syrups), and kept
+    separate from E 150a-d caramel colours (wikidata-additives.yaml) because EU labels declare caramelised /
+    burnt sugar syrup as a foodstuff/flavouring syrup rather than an E 150 additive.
