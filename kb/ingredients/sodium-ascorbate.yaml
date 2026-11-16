@@ -15,6 +15,36 @@ functions:
 summary:
   en: 'The sodium salt of ascorbic acid (vitamin C), used as an antioxidant, for example in cured meats.'
   pl: 'Sól sodowa kwasu askorbinowego (witaminy C), stosowana jako przeciwutleniacz, np. w peklowanych wędlinach.'
+assertions:
+  - code: origin.microbial_fermentation
+    certainty: 'yes'
+    kind: estimate
+    grade: B
+    note:
+      en: >-
+        Parent L-ascorbic acid is manufactured industrially by microbial fermentation of D-glucose/sorbitol
+        intermediates combined with chemical conversion, then neutralised with sodium bicarbonate or
+        hydroxide to yield E 301.
+      pl: >-
+        Wyjściowy kwas L-askorbinowy wytwarza się przemysłowo w procesie fermentacji mikrobiologicznej
+        półproduktów z D-glukozy/sorbitolu w połączeniu z konwersją chemiczną, a następnie zobojętnia
+        wodorowęglanem lub wodorotlenkiem sodu do E 301.
+    sources:
+      - id: efsa-ascorbates-2015
+  - code: origin.chemical_synthesis
+    certainty: 'yes'
+    kind: estimate
+    grade: B
+    note:
+      en: >-
+        Both the chemical conversion steps in parent ascorbic acid production (Reichstein or modern
+        two-step route) and neutralisation with sodium alkali to form sodium ascorbate involve industrial
+        chemical synthesis.
+      pl: >-
+        Zarówno etapy konwersji chemicznej w produkcji wyjściowego kwasu askorbinowego, jak i
+        zobojętnianie zasadą sodową do askorbinianu sodu obejmują przemysłową syntezę chemiczną.
+    sources:
+      - id: efsa-ascorbates-2015
 regulatory:
   - jurisdiction: EU
     status: authorised
@@ -30,6 +60,5 @@ review_status: draft
 provenance: ai-drafted
 review_notes:
   - >-
-    Identity-only: EFSA's 2015 re-evaluation of E 300–302 was not opened this session (Wiley 403, not in
-    Europe PMC). See kb/ingredients/ascorbic-acid.yaml for the parent acid's production-route claims, which
-    were not copied here without a source that covers the salt.
+    Manufacturing overview for E 300-302 (fermentation + chemical synthesis + sodium neutralisation)
+    retrieved via search_web summary of efsa-ascorbates-2015 (full PDF not opened).

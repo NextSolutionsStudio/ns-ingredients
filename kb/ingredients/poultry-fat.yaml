@@ -1,0 +1,43 @@
+id: poultry-fat
+type: fat
+names:
+  en:
+    - poultry fat
+    - chicken fat
+    - goose fat
+    - duck fat
+  pl:
+    - tłuszcz drobiowy
+    - tłuszcz kurczęcy
+    - tłuszcz z kurczaka
+    - smalec drobiowy
+    - tłuszcz gęsi
+    - smalec gęsi
+    - tłuszcz kaczy
+  de:
+    - Geflügelfett
+    - Hühnerfett
+    - Gänsefett
+    - Entenfett
+summary:
+  en: >-
+    Rendered fat obtained from poultry (chicken, goose, duck or turkey tissues), used as an animal fat in
+    broths, soups, sauces, pâtés and roasted potato products.
+  pl: >-
+    Tłuszcz wytopiony z tkanek drobiu (kurczaka, gęsi, kaczki lub indyka), stosowany jako tłuszcz zwierzęcy w
+    bulionach, zupach, sosach, pasztetach oraz produktach pieczonych i smażonych.
+assertions:
+  - code: origin.animal
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Rendered fat obtained from slaughtered poultry (Reg (EU) No 1169/2011 Annex VII Part B point 2; Reg (EC) No 853/2004 Annex III)."
+      pl: "Wytopiony tłuszcz pozyskiwany z ubojowego drobiu (Rozp. (UE) nr 1169/2011 Załącznik VII część B pkt 2; Rozp. (WE) nr 853/2004 Załącznik III)."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part B, point 2"
+      - id: ad-reg-853-2004
+        locator: "Annex III"
+review_status: draft
+provenance: ai-drafted

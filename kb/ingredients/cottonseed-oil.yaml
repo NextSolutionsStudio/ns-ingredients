@@ -1,0 +1,56 @@
+id: cottonseed-oil
+type: fat
+names:
+  en:
+    - cottonseed oil
+    - refined cottonseed oil
+  pl:
+    - olej bawełniany
+    - olej z nasion bawełny
+    - olej bawełniany rafinowany
+  de:
+    - Baumwollsaatöl
+    - Baumwollsamenöl
+summary:
+  en: >-
+    Vegetable oil extracted from cotton seeds (Gossypium spp.). Crude cottonseed oil naturally contains
+    gossypol, which is removed during alkali refining to produce edible food-grade refined cottonseed oil.
+    Upland cotton is also widely genetically engineered.
+  pl: >-
+    Olej roślinny pozyskiwany z nasion bawełny (Gossypium spp.). Surowy olej zawiera naturalnie gossypol,
+    który usuwa się w trakcie rafinacji alkalicznej, uzyskując jadalny olej spożywczy. Bawełna jest również
+    na świecie powszechnie modyfikowana genetycznie.
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Obtained from cotton seeds (Reg (EU) No 1169/2011 Annex VII Part A point 8; Gadelha et al. 2014)."
+      pl: "Pozyskiwany z nasion bawełny (Rozp. (UE) nr 1169/2011 Załącznik VII część A pkt 8; Gadelha i in. 2014)."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, point 8"
+      - id: gadelha-2014-gossypol-pmc4033412
+  - code: origin.vegetable_oil_derived
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Extracted and alkali-refined vegetable seed oil (to remove gossypol for edible use)."
+      pl: "Ekstrahowany i rafinowany alkalicznie olej z nasion roślinnych (w celu usunięcia gossypolu)."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, point 8"
+      - id: gadelha-2014-gossypol-pmc4033412
+  - code: origin.gmo_derived
+    certainty: maybe
+    kind: estimate
+    grade: B
+    note:
+      en: "USDA ERS reports 93% herbicide-tolerant GE adoption on US upland cotton acreage; EU GM labelling applies where applicable."
+      pl: "USDA ERS podaje 93% udziału odmian HT w uprawach bawełny w USA; w UE obowiązują przepisy dotyczące znakowania GM."
+    sources:
+      - id: usda-ers-ge-2025
+review_status: draft
+provenance: ai-drafted

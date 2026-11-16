@@ -36,6 +36,21 @@ summary:
     masy ciała na dzień, wyrażone jako fosfor, dla wszystkich fosforanów stosowanych jako dodatki (E 338–341,
     E 343, E 450–452), i zauważyła, że szacowane spożycie z całej diety przekraczało je średnio u niemowląt,
     małych dzieci i starszych dzieci.
+assertions:
+  - code: origin.mineral
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: >-
+        EFSA (2019) Section 3.1.4 documents that phosphoric acid is produced from phosphate rock, neutralised
+        with alkalis and thermally dehydrated/condensed at high temperatures to form polyphosphates (E 452).
+      pl: >-
+        Sekcja 3.1.4 opinii EFSA (2019) dokumentuje, że kwas fosforowy otrzymuje się ze skały fosforytowej,
+        zobojętnia alkaliami i kondensuje termicznie w wysokiej temperaturze, tworząc polifosforany (E 452).
+    sources:
+      - id: efsa-phosphates-2019
+        locator: Section 3.1.4
 regulatory:
   - jurisdiction: EU
     status: authorised
@@ -56,7 +71,3 @@ reference_values:
     source: efsa-phosphates-2019
 review_status: draft
 provenance: ai-drafted
-review_notes:
-  - >-
-    Identity and assessment only: no origin claim, since the opened sources do not describe the phosphate raw
-    material route.

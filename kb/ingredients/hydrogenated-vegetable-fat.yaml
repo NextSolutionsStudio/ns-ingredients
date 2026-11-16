@@ -1,9 +1,9 @@
 id: hydrogenated-vegetable-fat
 type: fat
 names:
-  en: [hydrogenated vegetable fat, hydrogenated vegetable oil]
-  pl: [tłuszcz utwardzony, olej roślinny utwardzony, tłuszcz roślinny utwardzony]
-  de: [gehärtetes Pflanzenfett, gehärtetes Pflanzenöl]
+  en: [hydrogenated vegetable fat, hydrogenated vegetable oil, hydrogenated rapeseed oil]
+  pl: [tłuszcz utwardzony, olej roślinny utwardzony, tłuszcz roślinny utwardzony, utwardzony olej rzepakowy]
+  de: [gehärtetes Pflanzenfett, gehärtetes Pflanzenöl, gehärtetes Rapsöl]
 summary:
   en: >-
     A vegetable oil hardened by adding hydrogen across its double bonds, to raise its melting point and
@@ -43,9 +43,9 @@ variants:
         tłuszczów trans i związanego z tym ryzyka na etykiecie.
   - id: fully-hydrogenated
     names:
-      en: [fully hydrogenated vegetable oil, totally hydrogenated vegetable fat]
-      pl: [olej roślinny całkowicie utwardzony, tłuszcz całkowicie utwardzony, w pełni utwardzony tłuszcz roślinny, olej roślinny całkowicie uwodorniony, całkowicie uwodorniony olej roślinny]
-      de: [vollständig gehärtetes Pflanzenöl]
+      en: [fully hydrogenated vegetable oil, totally hydrogenated vegetable fat, fully hydrogenated rapeseed oil]
+      pl: [olej roślinny całkowicie utwardzony, tłuszcz całkowicie utwardzony, w pełni utwardzony tłuszcz roślinny, olej roślinny całkowicie uwodorniony, całkowicie uwodorniony olej roślinny, całkowicie utwardzony olej rzepakowy]
+      de: [vollständig gehärtetes Pflanzenöl, vollständig gehärtetes Rapsöl]
     process:
       en: "All double bonds are hydrogenated; the fat is fully saturated, very hard, and contains essentially no trans fat."
       pl: "Wszystkie wiązania podwójne są utwardzone; tłuszcz jest w pełni nasycony, bardzo twardy i praktycznie nie zawiera tłuszczów trans."
@@ -55,6 +55,24 @@ variants:
       en: "The post-2021 default for a 'fully hardened' commodity fat, usually blended or interesterified with a liquid oil to get a workable texture."
       pl: "Domyślny wybór po 2021 r. dla masowego 'w pełni utwardzonego' tłuszczu, zwykle mieszanego lub estryfikowanego z olejem ciekłym w celu uzyskania odpowiedniej konsystencji."
 assertions:
+  - code: origin.plant
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Derived from refined oils and fats of vegetable origin (Reg (EU) No 1169/2011 Annex VII Part A points 8-9)."
+      pl: "Pochodzi z rafinowanych olejów i tłuszczów pochodzenia roślinnego (rozporządzenie (UE) nr 1169/2011, załącznik VII część A pkt 8-9)."
+    sources: [{ id: reg-1169-2011, locator: "Annex VII Part A, points 8-9" }]
+  - code: origin.vegetable_oil_derived
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Manufactured by catalytic hydrogenation of refined vegetable oils or fats."
+      pl: "Wytwarzany przez katalityczne uwodornienie rafinowanych olejów lub tłuszczów roślinnych."
+    sources:
+      - { id: reg-1169-2011, locator: "Annex VII Part A, points 8-9" }
+      - { id: reg-2019-649 }
   - code: processing.hydrogenated
     certainty: yes
     kind: fact

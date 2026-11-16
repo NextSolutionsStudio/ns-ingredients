@@ -77,6 +77,35 @@ variants:
       - 'kwas nikotynow'
       - 'nicotinsaure'
 assertions:
+  - code: origin.chemical_synthesis
+    certainty: 'yes'
+    kind: estimate
+    grade: B
+    note:
+      en: >-
+        Commercial nicotinic acid and nicotinamide for food fortification and supplements are produced
+        predominantly by industrial chemical synthesis (oxidation of alkylpyridines such as
+        3-methylpyridine or hydrolysis of 3-cyanopyridine), alongside biocatalytic nitrilase steps.
+      pl: >-
+        Handlowy kwas nikotynowy i nikotynamid do wzbogacania żywności i suplementów wytwarza się głównie w
+        drodze przemysłowej syntezy chemicznej (utlenianie alkilopirydyn, np. 3-metylopirydyny, lub hydroliza
+        3-cyjanopirydyny), czasem z etapami biokatalitycznymi.
+    sources:
+      - id: acevedo-rocha-2019-bvit
+      - id: wang-2021-vitamins-pmc8247775
+  - code: origin.petrochemical_synthetic
+    certainty: maybe
+    kind: estimate
+    grade: B
+    note:
+      en: >-
+        Traditional alkylpyridine feedstocks (3-methylpyridine, 5-ethyl-2-methylpyridine) derive mainly from
+        petrochemical or coal-tar chemical intermediates.
+      pl: >-
+        Tradycyjne surowce alkilopirydynowe (3-metylopirydyna, 5-etylo-2-metylopirydyna) pochodzą głównie z
+        półproduktów petrochemicznych lub węglopochodnych.
+    sources:
+      - id: acevedo-rocha-2019-bvit
   - code: diet.vegan
     certainty: 'yes'
     kind: estimate

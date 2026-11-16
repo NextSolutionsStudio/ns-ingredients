@@ -45,6 +45,30 @@ assertions:
       en: "NOVA explicitly lists flavourings among its markers of group-4 (ultra-processed) products, regardless of whether the flavouring itself is 'natural' — a weak, contested signal on its own."
       pl: "NOVA wyraźnie wymienia aromaty wśród wskaźników produktów grupy 4 (wysoko przetworzonych), niezależnie od tego, czy sam aromat jest 'naturalny' — sam w sobie słaby, dyskusyjny sygnał."
     sources: [{ id: reg-1334-2008 }]
+  - code: origin.plant
+    certainty: maybe
+    kind: fact
+    grade: A
+    note:
+      en: "Reg (EC) No 1334/2008 Art. 3(2)(c)-(d) allows natural flavouring substances and preparations to be derived from material of vegetable origin; an unqualified 'natural flavouring' declaration does not specify which origin was used."
+      pl: "Art. 3 ust. 2 lit. c-d rozporządzenia (WE) nr 1334/2008 dopuszcza pochodzenie naturalnych substancji i preparatów aromatycznych z materiału roślinnego; ogólne określenie 'aromat naturalny' nie wskazuje konkretnego źródła."
+    sources: [{ id: reg-1334-2008, locator: "Article 3(2)(c)-(d)" }]
+  - code: origin.animal
+    certainty: maybe
+    kind: fact
+    grade: A
+    note:
+      en: "Reg (EC) No 1334/2008 Art. 3(2)(c)-(d) permits natural flavouring substances and preparations to be obtained from material of animal origin; labels are not required to state non-allergen animal sourcing."
+      pl: "Art. 3 ust. 2 lit. c-d rozporządzenia (WE) nr 1334/2008 dopuszcza otrzymywanie naturalnych substancji i preparatów aromatycznych z materiału pochodzenia zwierzęcego; etykieta nie musi ujawniać źródła niealergizującego."
+    sources: [{ id: reg-1334-2008, locator: "Article 3(2)(c)-(d)" }]
+  - code: origin.microbial_fermentation
+    certainty: maybe
+    kind: fact
+    grade: A
+    note:
+      en: "Reg (EC) No 1334/2008 Art. 3(2)(c)-(d) explicitly covers natural flavouring substances produced by microbiological processes from material of vegetable, animal or microbiological origin."
+      pl: "Art. 3 ust. 2 lit. c-d rozporządzenia (WE) nr 1334/2008 wyraźnie obejmuje naturalne substancje aromatyczne wytwarzane w procesach mikrobiologicznych z materiału pochodzenia roślinnego, zwierzęcego lub mikrobiologicznego."
+    sources: [{ id: reg-1334-2008, locator: "Article 3(2)(c)-(d)" }]
 review_status: draft
 provenance: ai-drafted
 review_notes:

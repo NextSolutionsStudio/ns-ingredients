@@ -1,0 +1,117 @@
+id: fatty-acid-esters-of-ascorbic-acid
+type: additive
+e_number: E304
+names:
+  en:
+    - fatty acid esters of ascorbic acid
+  pl:
+    - estry kwasów tłuszczowych i kwasu askorbinowego
+  de:
+    - Fettsäureester der Ascorbinsäure
+functions:
+  - antioxidant
+summary:
+  en: >-
+    Fat-soluble antioxidants formed by chemically esterifying L-ascorbic acid (vitamin C) with palmitic acid
+    (E 304(i), ascorbyl palmitate) or stearic acid (E 304(ii), ascorbyl stearate). Used in oils, margarines
+    and infant formulae to prevent fat rancidity. Commercial palmitic and stearic acids can derive from
+    vegetable oils (such as palm oil) or animal fats.
+  pl: >-
+    Przeciwutleniacze rozpuszczalne w tłuszczach, otrzymywane przez chemiczną estryfikację kwasu
+    L-askorbinowego (witaminy C) kwasem palmitynowym (E 304(i), palmitynian askorbylu) lub kwasem
+    stearynowym (E 304(ii), stearynian askorbylu). Stosowane m.in. w olejach i margarynach; kwasy
+    tłuszczowe mogą pochodzić z olejów roślinnych (np. palmowego) lub tłuszczów zwierzęcych.
+variants:
+  - id: ascorbyl-palmitate
+    names:
+      en:
+        - ascorbyl palmitate
+        - L-ascorbyl palmitate
+        - E304(i)
+      pl:
+        - palmitynian askorbylu
+        - palmitynian L-askorbylu
+        - E304(i)
+      de:
+        - Ascorbylpalmitat
+    process:
+      en: "Esterification of L-ascorbic acid with palmitic acid (E 304(i))."
+      pl: "Estryfikacja kwasu L-askorbinowego kwasem palmitynowym (E 304(i))."
+    tells:
+      - 'palmitynian\w*\s+(?:l\s+)?askorbyl'
+      - 'ascorbyl\s*palmitat'
+      - 'e\s*304\s*i\b'
+  - id: ascorbyl-stearate
+    names:
+      en:
+        - ascorbyl stearate
+        - L-ascorbyl stearate
+        - E304(ii)
+      pl:
+        - stearynian askorbylu
+        - stearynian L-askorbylu
+        - E304(ii)
+      de:
+        - Ascorbylstearat
+    process:
+      en: "Esterification of L-ascorbic acid with stearic acid (E 304(ii))."
+      pl: "Estryfikacja kwasu L-askorbinowego kwasem stearynowym (E 304(ii))."
+    tells:
+      - 'stearynian\w*\s+(?:l\s+)?askorbyl'
+      - 'ascorbyl\s*stearat'
+      - 'e\s*304\s*ii\b'
+assertions:
+  - code: origin.chemical_synthesis
+    certainty: 'yes'
+    kind: fact
+    grade: B
+    note:
+      en: >-
+        EFSA (2015) and JECFA INS 304 document commercial manufacture by acid-catalysed chemical esterification
+        (sulfuric acid) or enzymatic esterification of L-ascorbic acid with palmitic or stearic acid.
+      pl: >-
+        EFSA (2015) i monografia JECFA INS 304 dokumentują produkcję handlową przez estryfikację kwasu
+        L-askorbinowego kwasem palmitynowym lub stearynowym (zwykle w obecności kwasu siarkowego).
+    sources:
+      - id: efsa-e304-2015
+  - code: origin.vegetable_oil_derived
+    certainty: maybe
+    kind: estimate
+    grade: B
+    note:
+      en: >-
+        Palmitic and stearic acid feedstocks used for E 304(i)/(ii) are commonly obtained from vegetable oils
+        (such as palm oil), though JECFA/EU purity specifications do not restrict against animal fats.
+      pl: >-
+        Kwas palmitynowy i stearynowy używane do wytwarzania E 304(i)/(ii) pochodzą często z olejów
+        roślinnych (np. oleju palmowego), lecz specyfikacje nie wykluczają tłuszczów zwierzęcych.
+    sources:
+      - id: efsa-e304-2015
+      - id: reg-231-2012
+        locator: E 304(i)-(ii)
+  - code: origin.animal
+    certainty: maybe
+    kind: estimate
+    grade: B
+    note:
+      en: >-
+        Reg (EU) No 231/2012 specifications for E 304(i)-(ii) do not exclude palmitic or stearic acid derived
+        from animal fats, and labels do not distinguish botanical vs animal fat origin.
+      pl: >-
+        Specyfikacje E 304(i)-(ii) w rozporządzeniu (UE) nr 231/2012 nie wykluczają kwasu palmitynowego lub
+        stearynowego pochodzenia zwierzęcego, a etykieta nie rozróżnia ich źródła.
+    sources:
+      - id: efsa-e304-2015
+      - id: reg-231-2012
+        locator: E 304(i)-(ii)
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: "Group I additive (Reg (EC) No 1333/2008 Annex II Part C): quantum satis in most food categories."
+      pl: "Dodatek grupy I (Rozp. (WE) nr 1333/2008 Załącznik II część C): quantum satis w większości kategorii żywności."
+    source: reg-1333-2008
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Covers EU additive group E 304 (sub-items E 304(i) ascorbyl palmitate and E 304(ii) ascorbyl stearate); generated Wikidata divides these across e304 and e305."

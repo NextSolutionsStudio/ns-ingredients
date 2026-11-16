@@ -1,0 +1,99 @@
+id: citric-acid-esters-of-mono-and-diglycerides
+type: additive
+e_number: E472c
+names:
+  en:
+    - citric acid esters of mono- and diglycerides of fatty acids
+    - citric acid esters of mono- and diglycerides
+    - CITREM
+  pl:
+    - estry kwasów tłuszczowych i kwasu cytrynowego
+    - estry kwasu cytrynowego i mono- oraz diglicerydów kwasów tłuszczowych
+    - estry glicerolu z kwasem cytrynowym i kwasami tłuszczowymi
+  de:
+    - Citronensäureester von Mono- und Diglyceriden von Speisefettsäuren
+functions:
+  - emulsifier
+  - stabiliser
+summary:
+  en: >-
+    Mixed esters of glycerol with citric acid and food fatty acids (also called CITREM), used as an
+    emulsifier and stabiliser, including in infant formulae, spreads and bakery products. Manufactured by
+    esterifying citric acid with mono- and diglycerides or glycerol and fatty acids from edible vegetable
+    oils or animal fats.
+  pl: >-
+    Mieszane estry glicerolu z kwasem cytrynowym i kwasami tłuszczowymi (CITREM), stosowane jako emulgator i
+    stabilizator, m.in. w preparatach do początkowego żywienia niemowląt, tłuszczach do smarowania i
+    pieczywie. Wytwarzane przez estryfikację kwasu cytrynowego z mono- i diglicerydami lub glicerolem i
+    kwasami tłuszczowymi z jadalnych olejów roślinnych lub tłuszczów zwierzęcych.
+assertions:
+  - code: origin.chemical_synthesis
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: >-
+        Reg (EU) No 231/2012 E 472c Definition and EFSA (2025) Section 3.2.1 document manufacture via chemical
+        esterification of citric acid with mono- and diglycerides (E 471) or glycerol (E 422) and edible food
+        fatty acids, optionally neutralised with sodium, potassium or calcium salts.
+      pl: >-
+        Definicja E 472c w rozporządzeniu (UE) nr 231/2012 oraz sekcja 3.2.1 opinii EFSA (2025) dokumentują
+        wytwarzanie w drodze estryfikacji chemicznej kwasu cytrynowego z mono- i diglicerydami (E 471) lub
+        glicerolem (E 422) oraz kwasami tłuszczowymi.
+    sources:
+      - id: reg-231-2012
+        locator: E 472c (Definition)
+      - id: efsa-e472c-2025
+        locator: Section 3.2.1
+  - code: origin.vegetable_oil_derived
+    certainty: maybe
+    kind: fact
+    grade: A
+    note:
+      en: >-
+        Fatty acids and mono-/diglycerides used in E 472c are commonly derived from edible vegetable oils and
+        fats (EFSA 2020; EFSA 2025 Section 3.5.3.2), though Reg 231/2012 does not restrict the botanical or
+        zoological fat source.
+      pl: >-
+        Kwasy tłuszczowe i mono-/diglicerydy stosowane do produkcji E 472c pochodzą zwykle z jadalnych olejów i
+        tłuszczów roślinnych (EFSA 2020; EFSA 2025 sekcja 3.5.3.2), jednak rozporządzenie 231/2012 nie ogranicza
+        źródła tłuszczu.
+    sources:
+      - id: reg-231-2012
+        locator: E 472c (Definition)
+      - id: efsa-e472c-2025
+        locator: Section 3.5.3.2
+      - id: efsa-e472a-f-2020
+  - code: origin.animal
+    certainty: maybe
+    kind: fact
+    grade: A
+    note:
+      en: >-
+        Reg (EU) No 231/2012 defines E 472c as esters with fatty acids occurring in food oils and fats without
+        excluding animal fats, and food labels need not disclose whether the fatty-acid feedstock was plant
+        or animal.
+      pl: >-
+        Rozporządzenie (UE) nr 231/2012 definiuje E 472c jako estry kwasów tłuszczowych występujących w olejach
+        i tłuszczach spożywczych bez wykluczenia tłuszczów zwierzęcych, a etykieta nie musi ujawniać ich
+        pochodzenia.
+    sources:
+      - id: reg-231-2012
+        locator: E 472c (Definition)
+      - id: efsa-e472c-2025
+        locator: Section 3.2.1
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: "Group I additive (Reg (EC) No 1333/2008 Annex II): quantum satis in most food categories, plus specific infant formula uses."
+      pl: "Dodatek grupy I (Rozp. (WE) nr 1333/2008 Załącznik II): quantum satis w większości kategorii żywności oraz szczegółowe zastosowania w żywieniu niemowląt."
+    source: reg-1333-2008
+reference_values:
+  - type: ADI
+    value: not specified
+    body: EFSA
+    year: 2020
+    source: efsa-e472a-f-2020
+review_status: draft
+provenance: ai-drafted

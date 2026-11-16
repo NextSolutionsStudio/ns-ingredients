@@ -33,6 +33,34 @@ summary:
     (DRV) w NNR od 2012 r. z powodu braku danych oraz brak zidentyfikowanych obaw zdrowotnych związanych z
     kwasem pantotenowym.
 assertions:
+  - code: origin.chemical_synthesis
+    certainty: 'yes'
+    kind: estimate
+    grade: B
+    note:
+      en: >-
+        Industrial calcium D-pantothenate and dexpanthenol are manufactured primarily by chemical synthesis
+        condensing resolved D-pantolactone (from isobutyraldehyde, formaldehyde and cyanide/CO precursors)
+        with beta-alanine salts.
+      pl: >-
+        Przemysłowy D-pantotenian wapnia i dekspantenol wytwarza się głównie w syntezie chemicznej przez
+        kondensację rozdzielonego D-pantolaktonu z solami beta-alaniny.
+    sources:
+      - id: acevedo-rocha-2019-bvit
+      - id: wang-2021-vitamins-pmc8247775
+  - code: origin.petrochemical_synthetic
+    certainty: maybe
+    kind: estimate
+    grade: B
+    note:
+      en: >-
+        Chemical pantolactone/beta-alanine synthesis relies largely on petrochemical precursors, though
+        fermentative/biocatalytic routes are emerging.
+      pl: >-
+        Chemiczna synteza pantolaktonu i beta-alaniny opiera się w dużej mierze na surowcach
+        petrochemicznych, choć rozwijane są także ścieżki fermentacyjne i biokatalityczne.
+    sources:
+      - id: acevedo-rocha-2019-bvit
   - code: diet.vegan
     certainty: 'yes'
     kind: estimate

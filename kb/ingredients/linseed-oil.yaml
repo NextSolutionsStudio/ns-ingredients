@@ -1,0 +1,45 @@
+id: linseed-oil
+type: fat
+names:
+  en:
+    - linseed oil
+    - flaxseed oil
+    - cold-pressed flaxseed oil
+  pl:
+    - olej lniany
+    - olej lniany tłoczony na zimno
+    - olej z siemienia lnianego
+  de:
+    - Leinöl
+    - Leinsamenöl
+summary:
+  en: >-
+    Vegetable oil pressed from flax seeds (Linum usitatissimum), rich in alpha-linolenic acid (an omega-3
+    polyunsaturated fatty acid); used in food chiefly in cold-pressed form.
+  pl: >-
+    Olej roślinny tłoczony z nasion lnu (siemienia lnianego, Linum usitatissimum), bogaty w kwas
+    alfa-linolenowy (wielonienasycony kwas tłuszczowy omega-3); w żywności stosowany głównie jako olej
+    tłoczony na zimno.
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Obtained from the seeds of flax (Linum usitatissimum) (Reg (EU) No 1169/2011 Annex VII Part A point 8)."
+      pl: "Pozyskiwany z nasion lnu (Linum usitatissimum) (Rozp. (UE) nr 1169/2011 Załącznik VII część A pkt 8)."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, point 8"
+  - code: origin.vegetable_oil_derived
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Plant seed oil expressed from flaxseed."
+      pl: "Olej roślinny wytłaczany z siemienia lnianego."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, point 8"
+review_status: draft
+provenance: ai-drafted

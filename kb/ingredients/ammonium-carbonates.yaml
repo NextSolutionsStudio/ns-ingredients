@@ -31,6 +31,22 @@ summary:
     Substancja spulchniająca do płaskich wypieków, np. herbatników i pierników: przy ogrzewaniu rozkłada się
     na amoniak, dwutlenek węgla i wodę, które ulatniają się. E 503(i) to mieszanina karbaminianu, węglanu i
     wodorowęglanu amonu; E 503(ii) to wodorowęglan amonu.
+assertions:
+  - code: origin.chemical_synthesis
+    certainty: 'yes'
+    kind: fact
+    grade: B
+    note:
+      en: >-
+        Synthesised by reacting anhydrous ammonia and carbon dioxide under controlled aqueous conditions
+        (JECFA INS 503 specifications).
+      pl: >-
+        Syntezowany w reakcji bezwodnego amoniaku i dwutlenku węgla w kontrolowanych warunkach wodnych
+        (specyfikacja JECFA INS 503).
+    sources:
+      - id: jecfa-ammonium-carbonate-503
+      - id: reg-231-2012
+        locator: E 503(i)-(ii)
 regulatory:
   - jurisdiction: EU
     status: authorised

@@ -15,7 +15,21 @@ names:
 summary:
   en: 'The soluble contents of yeast cells after their walls are broken down, used for a savoury taste.'
   pl: 'Rozpuszczalna zawartość komórek drożdży po rozłożeniu ścian komórkowych, stosowana dla wytrawnego smaku.'
+assertions:
+  - code: origin.microbial_fermentation
+    certainty: 'yes'
+    kind: estimate
+    grade: B
+    note:
+      en: >-
+        Manufactured by autolysis or enzymatic hydrolysis of Saccharomyces cerevisiae yeast biomass propagated
+        by aerobic fermentation (including spent brewer's yeast).
+      pl: >-
+        Wytwarzany przez autolizę lub hydrolizę enzymatyczną biomasy drożdży Saccharomyces cerevisiae
+        namnażanej w fermentacji tlenowej (w tym z drożdży browarniczych).
+    sources:
+      - id: tao-yeast-extract-pmc9998214
 review_status: draft
 provenance: ai-drafted
 review_notes:
-  - 'Identity-only: no opened source. Candidate later: glutamate content and its NOVA treatment.'
+  - 'Candidate later: free glutamate content and NOVA processing treatment.'

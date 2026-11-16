@@ -25,6 +25,22 @@ summary:
   pl: >-
     Sekwestrant wiążący jony metali, aby nie katalizowały psucia się; stosowany w nielicznych produktach, np.
     sosach typu majonezowego i konserwowych strączkach.
+assertions:
+  - code: origin.chemical_synthesis
+    certainty: 'yes'
+    kind: fact
+    grade: B
+    note:
+      en: >-
+        Manufactured by chemical synthesis from ethylenediamine, formaldehyde and sodium cyanide followed by
+        alkaline hydrolysis and conversion to the calcium disodium salt (JECFA INS 385 specification limits
+        residual formaldehyde to <= 5 mg/kg).
+      pl: >-
+        Wytwarzany w drodze syntezy chemicznej z etylenodiaminy, formaldehydu i cyjanku sodu z późniejszą
+        hydrolizą alkaliczną i konwersją do soli wapniowo-disodowej (specyfikacja JECFA INS 385 ogranicza
+        pozostałość formaldehydu do <= 5 mg/kg).
+    sources:
+      - id: jecfa-edta-e385
 regulatory:
   - jurisdiction: EU
     status: authorised

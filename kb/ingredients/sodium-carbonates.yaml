@@ -37,6 +37,34 @@ summary:
     Węglan sodu (soda kalcynowana), wodorowęglan sodu (soda oczyszczona) i seskwiwęglan sodu: zasadowy
     składnik większości proszków do pieczenia, uwalniający dwutlenek węgla w reakcji z kwasem, a także
     regulator kwasowości.
+assertions:
+  - code: origin.chemical_synthesis
+    certainty: maybe
+    kind: estimate
+    grade: B
+    note:
+      en: >-
+        Synthetic soda ash is produced at large global scale via the Solvay ammonia-soda process from
+        sodium chloride brine, limestone and ammonia (USGS MCS 2025 reports synthetic production accounts for
+        the larger global share, led by China).
+      pl: >-
+        Syntetyczna soda kalcynowana jest wytwarzana na wielką skalę w procesie Solvaya z solanki, kamienia
+        wapiennego i amoniaku (USGS MCS 2025 wskazuje większy udział produkcji syntetycznej na świecie).
+    sources:
+      - id: usgs-mcs-soda-ash-2025
+  - code: origin.mineral
+    certainty: maybe
+    kind: estimate
+    grade: B
+    note:
+      en: >-
+        Natural soda ash is refined directly from mined trona ore and natural sodium-carbonate brines
+        (predominant in the US and Turkey, per USGS MCS 2025).
+      pl: >-
+        Naturalna soda kalcynowana jest oczyszczana bezpośrednio z wydobywanego minerału trony oraz
+        naturalnych solanek węglanowych (dominująca ścieżka w USA i Turcji wg USGS MCS 2025).
+    sources:
+      - id: usgs-mcs-soda-ash-2025
 regulatory:
   - jurisdiction: EU
     status: authorised

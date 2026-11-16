@@ -4,7 +4,7 @@ e_number: E322
 ids: { cas: "8002-43-5", wikidata: "Q241595", chebi: "CHEBI:61995" }
 names:
   en: [lecithin, lecithins]
-  pl: [lecytyny, lecytyna]
+  pl: [lecytyny, lecytyna, lecytyny ekologiczne, lecytyna ekologiczna]
   de: [Lecithine]
 functions: [emulsifier]
 summary:
@@ -164,6 +164,98 @@ assertions:
     grade: B
     note: { en: "Recovered from rapeseed oil; no animal material.", pl: "Odzyskiwana z oleju rzepakowego; bez materiału zwierzęcego." }
     sources: [{ id: efsa-lecithins-2017 }]
+  - code: origin.vegetable_oil_derived
+    certainty: maybe
+    kind: fact
+    grade: A
+    note:
+      en: "Reg (EU) No 231/2012 E 322 Definition and EFSA (2017) document that lecithins are predominantly obtained from crude vegetable oil degumming (soy, sunflower, rapeseed, corn, cottonseed), though egg-yolk and animal tissue sources are permitted."
+      pl: "Definicja E 322 w rozporządzeniu (UE) nr 231/2012 oraz EFSA (2017) wskazują, że lecytyny pozyskuje się głównie przy odgumowywaniu surowych olejów roślinnych (soja, słonecznik, rzepak, kukurydza, bawełna), choć dopuszczone są też żółtka jaj i źródła zwierzęce."
+    sources:
+      - { id: reg-231-2012, locator: "E 322 (Definition)" }
+      - { id: efsa-lecithins-2017, locator: "Sections 3.1.1 & 3.1.3" }
+  - code: origin.egg
+    certainty: maybe
+    kind: fact
+    grade: A
+    note:
+      en: "EFSA (2017) documents egg yolk as an authorised commercial source alongside vegetable oils (egg must be declared under EU allergen law)."
+      pl: "EFSA (2017) dokumentuje żółtko jaja jako jedno z dopuszczonych źródeł handlowych obok olejów roślinnych (jaja muszą być zadeklarowane zgodnie z prawem UE o alergenach)."
+    sources:
+      - { id: reg-231-2012, locator: "E 322 (Definition)" }
+      - { id: efsa-lecithins-2017, locator: "Section 3.1.3" }
+  - code: origin.vegetable_oil_derived
+    variant: soy
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Recovered from crude soybean oil degumming."
+      pl: "Odzyskiwana podczas odgumowania surowego oleju sojowego."
+    sources: [{ id: efsa-lecithins-2017, locator: "Section 3.1.3" }]
+  - code: origin.plant
+    variant: soy
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Derived from soybeans via crude oil refining."
+      pl: "Pozyskiwana z soi w procesie rafinacji surowego oleju."
+    sources: [{ id: efsa-lecithins-2017, locator: "Section 3.1.3" }]
+  - code: origin.gmo_derived
+    variant: soy
+    certainty: maybe
+    kind: estimate
+    grade: B
+    note:
+      en: "Soybean is heavily genetically engineered globally (USDA ERS reports 96% HT GE adoption on US soybean acreage); non-GM soy lecithin exists and EU GM labelling rules apply above 0.9%."
+      pl: "Soja jest na świecie powszechnie modyfikowana genetycznie (USDA ERS podaje 96% udziału odmian HT w USA); istnieje też lecytyna ze soi niemodyfikowanej, a w UE obowiązuje znakowanie powyżej 0,9%."
+    sources: [{ id: usda-ers-ge-2025 }]
+  - code: origin.vegetable_oil_derived
+    variant: sunflower
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Recovered from crude sunflower seed oil."
+      pl: "Odzyskiwana z surowego oleju słonecznikowego."
+    sources: [{ id: efsa-lecithins-2017, locator: "Section 3.1.3" }]
+  - code: origin.plant
+    variant: sunflower
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Derived from sunflower seeds via oil refining."
+      pl: "Pozyskiwana z nasion słonecznika poprzez rafinację oleju."
+    sources: [{ id: efsa-lecithins-2017, locator: "Section 3.1.3" }]
+  - code: origin.vegetable_oil_derived
+    variant: rapeseed
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Recovered from crude rapeseed oil."
+      pl: "Odzyskiwana z surowego oleju rzepakowego."
+    sources: [{ id: efsa-lecithins-2017, locator: "Section 3.1.3" }]
+  - code: origin.plant
+    variant: rapeseed
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Derived from rapeseed via oil refining."
+      pl: "Pozyskiwana z rzepaku poprzez rafinację oleju."
+    sources: [{ id: efsa-lecithins-2017, locator: "Section 3.1.3" }]
+  - code: origin.egg
+    variant: egg
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Extracted from egg yolk."
+      pl: "Pozyskiwana z żółtka jaja."
+    sources: [{ id: efsa-lecithins-2017, locator: "Section 3.1.3" }]
   - code: diet.vegan
     variant: egg
     certainty: "no"
@@ -185,5 +277,5 @@ reference_values:
 review_status: draft
 provenance: ai-drafted
 review_notes:
-  - "Considered an origin.gmo_derived (maybe) assertion for the soy variant — soy is a commonly genetically modified crop and most EU-imported soy/soy products are GM — but could not pin down a specific, directly-opened, non-paywalled source with a citable figure this session (a USDA GAIN PDF and an EU DG AGRI PDF both resisted text extraction). Left out per the sourcing rule; revisit with a readable EU Commission or JRC figure."
+  - "Added origin.gmo_derived (maybe) on soy variant based on USDA ERS GE soybean adoption data (usda-ers-ge-2025); EU-specific GM lecithin market share not isolated."
   - "EFSA's 2020 follow-up opinion (10.2903/j.efsa.2020.6266) covers lecithins in infant formula below 16 weeks specifically; not opened this session, so not cited — check it before making any infant-specific claim."

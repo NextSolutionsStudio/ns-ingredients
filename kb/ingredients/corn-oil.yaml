@@ -1,0 +1,57 @@
+id: corn-oil
+type: fat
+names:
+  en:
+    - corn oil
+    - maize oil
+  pl:
+    - olej kukurydziany
+    - olej z kiełków kukurydzy
+    - olej roślinny kukurydziany
+  de:
+    - Maiskeimöl
+    - Maisöl
+summary:
+  en: >-
+    Vegetable oil extracted from maize (corn) germ, commonly used as a refined cooking, frying and bakery oil.
+    Maize is also a major genetically engineered crop globally.
+  pl: >-
+    Olej roślinny pozyskiwany z zarodków (kiełków) kukurydzy, powszechnie stosowany w postaci rafinowanej do
+    smażenia i w przemyśle spożywczym. Kukurydza należy także do głównych upraw modyfikowanych genetycznie na
+    świecie.
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Obtained from maize germ (Reg (EU) No 1169/2011 Annex VII Part A point 8)."
+      pl: "Pozyskiwany z zarodków kukurydzy (Rozp. (UE) nr 1169/2011 Załącznik VII część A pkt 8)."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, point 8"
+  - code: origin.vegetable_oil_derived
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Refined vegetable oil pressed or extracted from maize germ."
+      pl: "Rafinowany olej roślinny wytłaczany lub ekstrahowany z kiełków kukurydzy."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, point 8"
+  - code: origin.gmo_derived
+    certainty: maybe
+    kind: estimate
+    grade: B
+    note:
+      en: >-
+        USDA ERS reports over 90% GE maize adoption in US production (92% HT); EU-grown non-GM maize oil is
+        also common, so origin.gmo_derived is maybe when region is unspecified.
+      pl: >-
+        USDA ERS podaje ponad 90% udziału kukurydzy modyfikowanej genetycznie w USA (92% HT); na rynku UE
+        powszechny jest też olej z kukurydzy non-GM, dlatego przy braku wskazania pochodzenia jest to maybe.
+    sources:
+      - id: usda-ers-ge-2025
+review_status: draft
+provenance: ai-drafted

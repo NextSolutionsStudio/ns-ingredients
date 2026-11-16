@@ -1,0 +1,53 @@
+id: vegetable-fat
+type: fat
+names:
+  en:
+    - vegetable fat
+    - vegetable fats
+    - vegetable oil
+    - vegetable oils
+  pl:
+    - tłuszcz roślinny
+    - tłuszcze roślinne
+    - olej roślinny
+    - oleje roślinne
+  de:
+    - Pflanzenfett
+    - Pflanzenfette
+    - Pflanzenöl
+    - Pflanzenöle
+summary:
+  en: >-
+    Generic umbrella term for refined oils and fats of vegetable origin. Under EU Regulation (EU) No
+    1169/2011 Annex VII Part A points 8-9, EU food labels using 'vegetable oils' or 'vegetable fats' must
+    follow immediately with a list of the specific vegetable origins (such as palm, rapeseed or shea).
+  pl: >-
+    Ogólne określenie rafinowanych olejów i tłuszczów pochodzenia roślinnego. Zgodnie z rozporządzeniem (UE)
+    nr 1169/2011 (Załącznik VII część A pkt 8-9) etykieta w UE używająca określenia 'oleje roślinne' lub
+    'tłuszcze roślinne' musi bezpośrednio po nim wymienić konkretne pochodzenie roślinne (np. palmowy,
+    rzepakowy, shea).
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Defined in EU law as refined oils or fats of vegetable origin (Reg (EU) No 1169/2011 Annex VII Part A points 8-9)."
+      pl: "Zdefiniowany w prawie UE jako rafinowane oleje lub tłuszcze pochodzenia roślinnego (Rozp. (UE) nr 1169/2011 Załącznik VII część A pkt 8-9)."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8-9"
+  - code: origin.vegetable_oil_derived
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Generic vegetable oil/fat category; in EU compliant lists, specific botanical species follow in parentheses."
+      pl: "Ogólna kategoria olejów/tłuszczów roślinnych; w wykazach zgodnych z prawem UE konkretne gatunki roślin są wymieniane w nawiasie."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8-9"
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "No ethics.palm_oil assertion placed on the generic wrapper: EU Reg 1169/2011 Annex VII Part A points 8-9 mandates specific species disclosure in parentheses, so palm-containing mixes are flagged directly on child palm-oil / palm-kernel-oil matches."

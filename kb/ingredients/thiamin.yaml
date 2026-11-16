@@ -30,6 +30,33 @@ summary:
     monoazotan tiaminy. Według przeglądu NNR 2023 nie było możliwe ustalenie bezpiecznego górnego poziomu
     spożycia tiaminy ze względu na brak danych.
 assertions:
+  - code: origin.chemical_synthesis
+    certainty: 'yes'
+    kind: estimate
+    grade: B
+    note:
+      en: >-
+        Commercial thiamine hydrochloride and mononitrate are manufactured industrially via multi-step
+        chemical synthesis coupling substituted pyrimidine and thiazole heterocyclic rings.
+      pl: >-
+        Handlowy chlorowodorek i monoazotan tiaminy wytwarza się przemysłowo w wieloetapowej syntezie
+        chemicznej łączącej pierścień pirymidynowy i tiazolowy.
+    sources:
+      - id: acevedo-rocha-2019-bvit
+      - id: wang-2021-vitamins-pmc8247775
+  - code: origin.petrochemical_synthetic
+    certainty: maybe
+    kind: estimate
+    grade: B
+    note:
+      en: >-
+        Commercial chemical thiamine synthesis relies on petrochemical fine-chemical intermediates rather than
+        direct microbial fermentation.
+      pl: >-
+        Przemysłowa synteza chemiczna tiaminy opiera się na półproduktach petrochemicznych zamiast
+        bezpośredniej fermentacji mikrobiologicznej.
+    sources:
+      - id: acevedo-rocha-2019-bvit
   - code: diet.vegan
     certainty: 'yes'
     kind: estimate

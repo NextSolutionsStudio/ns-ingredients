@@ -1,0 +1,107 @@
+id: soybean-oil
+type: fat
+names:
+  en:
+    - soybean oil
+    - soya oil
+  pl:
+    - olej sojowy
+    - olej z soi
+    - olej roślinny sojowy
+  de:
+    - Sojaöl
+summary:
+  en: >-
+    Vegetable oil extracted from soybeans. Under EU food law (Reg 1169/2011 Annex II point 6(a)), fully
+    refined soybean oil and fat are exempt from mandatory soybean allergen labelling because refining
+    removes residual allergenic proteins, whereas unrefined or cold-pressed soybean oil remains subject to
+    soybean allergen disclosure. Soy is also widely genetically engineered globally.
+  pl: >-
+    Olej roślinny pozyskiwany z ziaren soi. W prawie UE (Rozp. 1169/2011 Załącznik II pkt 6 lit. a) w
+    pełni rafinowany olej i tłuszcz sojowy są wyłączone z obowiązkowego znakowania alergenu soi, ponieważ
+    rafinacja usuwa resztkowe białka alergenne, natomiast olej nierafinowany lub tłoczony na zimno nadal
+    podlega deklaracji alergenu. Soja jest ponadto na świecie często modyfikowana genetycznie.
+variants:
+  - id: fully-refined
+    names:
+      en:
+        - refined soybean oil
+        - fully refined soybean oil
+      pl:
+        - olej sojowy rafinowany
+        - rafinowany olej sojowy
+        - w pełni rafinowany olej sojowy
+      de:
+        - raffiniertes Sojaöl
+    process:
+      en: "Fully refined (degummed, neutralised, bleached and deodorised), removing soybean proteins."
+      pl: "W pełni rafinowany (odgumowany, odkwaszony, odbarwiany i dezodoryzowany), co usuwa białka soi."
+    tells:
+      - 'rafinowan\w*\s+(?:olej\s+)?sojow'
+      - 'olej\s+sojow\w*\s+rafinowan'
+      - 'refined\s+soy(?:bean|a)\s+oil'
+      - 'raffiniert\w*\s+soja'
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Obtained from soybean seeds (Reg (EU) No 1169/2011 Annex VII Part A point 8)."
+      pl: "Pozyskiwany z nasion soi (Rozp. (UE) nr 1169/2011 Załącznik VII część A pkt 8)."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, point 8"
+  - code: origin.vegetable_oil_derived
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Plant seed oil pressed or extracted from soybeans."
+      pl: "Olej z nasion roślinnych wytłaczany lub ekstrahowany z soi."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, point 8"
+  - code: origin.gmo_derived
+    certainty: maybe
+    kind: estimate
+    grade: B
+    note:
+      en: >-
+        USDA ERS reports 96% herbicide-tolerant GE adoption on US soybean acreage; EU imports include both
+        GM and identity-preserved non-GM soybean supplies (GM labelling rules apply above 0.9%).
+      pl: >-
+        USDA ERS podaje 96% udziału odmian genetycznie modyfikowanych HT w uprawach soi w USA; dostawy w UE
+        obejmują zarówno surowiec GM, jak i certyfikowany non-GM (powyżej 0,9% obowiązuje znakowanie).
+    sources:
+      - id: usda-ers-ge-2025
+  - code: allergen.soybeans
+    certainty: maybe
+    kind: fact
+    grade: A
+    note:
+      en: >-
+        Bare 'soybean oil' without stating 'fully refined' may be unrefined or cold-pressed and retain trace
+        soy proteins; Reg (EU) No 1169/2011 Annex II point 6(a) exempts only fully refined soybean oil and fat.
+      pl: >-
+        Samo określenie 'olej sojowy' bez wskazania pełnej rafinacji może dotyczyć oleju nierafinowanego lub
+        tłoczonego na zimno z resztkami białka soi; Rozp. (UE) nr 1169/2011 Załącznik II pkt 6(a) zwalnia z
+        obowiązku deklaracji alergenu wyłącznie olej w pełni rafinowany.
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex II, point 6(a)"
+  - code: allergen.soybeans
+    variant: fully-refined
+    certainty: 'no'
+    kind: fact
+    grade: A
+    note:
+      en: "Fully refined soybean oil and fat are explicitly exempted from soy allergen declaration under Reg (EU) No 1169/2011 Annex II point 6(a)."
+      pl: "W pełni rafinowany olej i tłuszcz sojowy są wprost wyłączone z deklaracji alergenu soi na mocy Rozp. (UE) nr 1169/2011 Załącznik II pkt 6(a)."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex II, point 6(a)"
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "No prior >= 0.5 set on fully-refined so bare 'olej sojowy' retains allergen.soybeans: maybe conservatively while explicit refined labels resolve to fully-refined (allergen.soybeans: no)."

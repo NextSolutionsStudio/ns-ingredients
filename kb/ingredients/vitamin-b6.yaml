@@ -26,6 +26,35 @@ summary:
     EFSA ustaliła górny tolerowany poziom spożycia (UL) dla dorosłych wynoszący 12 mg/dobę (w tym w ciąży i
     laktacji) ze względu na neuropatię obwodową przy długotrwałym wysokim spożyciu z suplementów.
 assertions:
+  - code: origin.chemical_synthesis
+    certainty: 'yes'
+    kind: estimate
+    grade: B
+    note:
+      en: >-
+        Commercial pyridoxine hydrochloride is manufactured industrially via multi-step chemical synthesis
+        (such as oxazole-dienophile Diels-Alder ring construction), while microbial fermentation remains
+        largely developmental.
+      pl: >-
+        Handlowy chlorowodorek pirydoksyny wytwarza się przemysłowo w drodze wieloetapowej syntezy chemicznej
+        (np. synteza Dielsa-Aldera z oksazoli i dienofili); fermentacja mikrobiologiczna pozostaje głównie na
+        etapie badawczym.
+    sources:
+      - id: acevedo-rocha-2019-bvit
+      - id: wang-2021-vitamins-pmc8247775
+  - code: origin.petrochemical_synthetic
+    certainty: maybe
+    kind: estimate
+    grade: B
+    note:
+      en: >-
+        Total chemical synthesis of pyridoxine relies predominantly on non-renewable petrochemical fine-chemical
+        intermediates.
+      pl: >-
+        Całkowita synteza chemiczna pirydoksyny opiera się głównie na nieodnawialnych półproduktach
+        petrochemicznych.
+    sources:
+      - id: acevedo-rocha-2019-bvit
   - code: diet.vegan
     certainty: 'yes'
     kind: estimate
@@ -79,6 +108,3 @@ provenance: ai-drafted
 review_notes:
   - >-
     Added to prevent "witamina B6" from fuzzy-matching E101 (riboflavin, vitamin B2) at 0.71.
-  - >-
-    Chemical synthesis route for pyridoxine was not opened directly, so no origin.chemical_synthesis assertion
-    is recorded.

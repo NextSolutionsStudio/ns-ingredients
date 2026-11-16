@@ -25,6 +25,24 @@ summary:
   pl: >-
     Octan sodu (E 262(i)) i dioctan sodu, związek octanu sodu z kwasem octowym (E 262(ii)); stosowane jako
     regulatory kwasowości i substancje konserwujące, np. w pieczywie i przetworach mięsnych.
+assertions:
+  - code: origin.chemical_synthesis
+    certainty: 'yes'
+    kind: estimate
+    grade: B
+    note:
+      en: >-
+        Neutralised from acetic acid with sodium hydroxide or sodium carbonate; JECFA INS 260 specifications
+        cover industrial acetic acid production via methanol/CO carbonylation or hydrocarbon/acetaldehyde
+        oxidation (bio-fermentation acetic acid also exists in the market, hence estimate).
+      pl: >-
+        Otrzymywany przez zobojętnienie kwasu octowego wodorotlenkiem lub węglanem sodu; specyfikacje
+        JECFA INS 260 opisują przemysłową produkcję kwasu octowego przez karbonylowanie metanolu lub
+        utlenianie węglowodorów/aldehydu octowego (na rynku występuje też kwas z fermentacji, stąd szacunek).
+    sources:
+      - id: jecfa-acetates-260-262
+      - id: reg-231-2012
+        locator: E 262(i)-(ii)
 regulatory:
   - jurisdiction: EU
     status: authorised
