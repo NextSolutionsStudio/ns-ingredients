@@ -1,0 +1,58 @@
+id: tuna
+type: ingredient
+parent: fish
+names:
+  en:
+    - tuna
+  pl:
+    - tuńczyk
+    - tuńczyka
+  de:
+    - Thunfisch
+summary:
+  en: >-
+    Saltwater fish of the tribe Thunnini (mackerel family Scombridae); regulated as a fish allergen under EU
+    Annex II item 4.
+  pl: >-
+    Ryba morska z plemienia Thunnini (rodzina makrelowatych Scombridae); regulowana jako alergen rybny w
+    ramach Aneksu II UE, punkt 4.
+assertions:
+  - code: allergen.fish
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Fish; regulated allergen under EU Annex II item 4.
+      pl: Ryba; regulowany alergen w Aneksie II UE, punkt 4.
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 4
+  - code: origin.fish
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A saltwater fish.
+      pl: Ryba morska.
+    sources:
+      - id: reg-1169-2011
+  - code: diet.vegan
+    certainty: 'no'
+    kind: fact
+    grade: A
+    note:
+      en: An animal product.
+      pl: Produkt zwierzęcy.
+    sources:
+      - id: reg-1169-2011
+  - code: diet.vegetarian
+    certainty: 'no'
+    kind: fact
+    grade: A
+    note:
+      en: Fish flesh is not compatible with a vegetarian diet.
+      pl: Mięso rybne nie jest zgodne z dietą wegetariańską.
+    sources:
+      - id: reg-1169-2011
+review_status: draft
+provenance: ai-drafted

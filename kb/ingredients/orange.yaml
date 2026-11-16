@@ -1,0 +1,34 @@
+id: orange
+type: ingredient
+names:
+  en:
+    - orange
+    - oranges
+  pl:
+    - pomarańcza
+    - pomarańcze
+    - skórka pomarańczowa
+    - skórka z pomarańczy
+  de:
+    - Orange
+    - Orangen
+summary:
+  en: >-
+    Sweet orange (Citrus × sinensis), whole fruit or peel. Orange juice is not covered here: juices count as
+    free sugars.
+  pl: >-
+    Pomarańcza (Citrus × sinensis), owoc lub skórka. Sok pomarańczowy nie jest tu ujęty: soki liczą się jako
+    cukry wolne.
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A citrus fruit.
+      pl: Owoc cytrusowy.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted

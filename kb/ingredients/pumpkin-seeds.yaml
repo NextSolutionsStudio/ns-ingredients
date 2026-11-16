@@ -1,0 +1,29 @@
+id: pumpkin-seeds
+type: ingredient
+names:
+  en:
+    - pumpkin seeds
+    - pumpkin seed
+    - pepitas
+  pl:
+    - pestki dyni
+    - nasiona dyni
+    - ziarna dyni
+  de:
+    - Kürbiskerne
+summary:
+  en: Edible seeds of pumpkin/squash (Cucurbita pepo and related Cucurbita species).
+  pl: Jadalne nasiona dyni (Cucurbita pepo i pokrewnych gatunków z rodzaju Cucurbita).
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A seed.
+      pl: Nasiona.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted

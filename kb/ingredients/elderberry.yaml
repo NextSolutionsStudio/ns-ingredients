@@ -1,0 +1,31 @@
+id: elderberry
+type: ingredient
+names:
+  en:
+    - elderberry
+    - elderberries
+    - black elderberry
+  pl:
+    - czarny bez
+    - owoce czarnego bzu
+    - bzu czarnego
+  de:
+    - Holunder
+    - Holunderbeeren
+    - schwarzer Holunder
+summary:
+  en: Black elderberry (Sambucus nigra), fruit used in jams, syrups and juices.
+  pl: Czarny bez (Sambucus nigra), owoce stosowane w konfiturach, syropach i sokach.
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A fruit.
+      pl: Owoc.
+    sources:
+      - id: reg-1169-2011
+        locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
+review_status: draft
+provenance: ai-drafted
