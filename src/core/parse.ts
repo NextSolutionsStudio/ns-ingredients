@@ -323,6 +323,8 @@ const JOINED_RE = / - |\.\s/;
 const WORD_RE = /[\p{L}\p{N}\p{M}]+/uy;
 /** Words read on each side of a separator when testing variant tells across it (see `nameSpans`). */
 const TELL_WORDS = 6;
+/** And at most this many characters a side: one long word must not pass the word limit. */
+const TELL_CHARS = 60;
 
 /**
  * Where s prints a name the KB holds whole: each run of two or more words, outside brackets, that normalises
@@ -357,7 +359,7 @@ function nameSpans(s: string, kb: NameOracle): Span[] {
   }
   // Variant tells ("gluten ?free" declares gluten-free oats). They are written for one item's text, often with
   // `.*` or `^`, so they are never run over the whole segment: a separator is kept when a tell fires on the two
-  // parts it joins, read as one, and on neither part alone. Only TELL_WORDS words on each side are read: a
+  // parts it joins, read as one, and on neither part alone. Only TELL_WORDS words, at most TELL_CHARS characters, on each side are read: a
   // declaration printed across a separator is a short phrase, and a `.*` tell over an unbounded part
   // backtracks ("kakao obniz " × 991 took seconds). So the work per separator is bounded.
   const tells = kb.tells?.() ?? [];
@@ -372,7 +374,7 @@ function nameSpans(s: string, kb: NameOracle): Span[] {
     for (let g = 1; g < gaps.length - 1; g++) {
       const from = Math.max(gaps[g - 1], gaps[g] - TELL_WORDS),
         to = Math.min(gaps[g + 1], gaps[g] + TELL_WORDS);
-      const left = text(from, gaps[g]), right = text(gaps[g], to);
+      const left = text(from, gaps[g]).slice(-TELL_CHARS), right = text(gaps[g], to).slice(0, TELL_CHARS);
       if (fires(`${left} ${right}`) && !fires(left) && !fires(right)) {
         spans.push([words[from].a, words[to - 1].b]);
       }

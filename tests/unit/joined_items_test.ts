@@ -367,8 +367,15 @@ Deno.test("a long dash or full-stop list costs a few matcher calls per part, nev
 
 Deno.test("variant tells across a separator read a few words, never a whole long part", () => {
   // Cocoa's tell "kakao.*obniz.*tluszcz" over 991 × "kakao obniz " backtracked for ~6.7 s (main: ~11 ms).
-  const text = "Ingredients: sugar - " + "kakao obniz ".repeat(991);
-  assert(text.length <= 12_000);
-  const { ms } = costOf(text);
-  assert(ms < 1_000, `${ms.toFixed(0)} ms`);
+  // One long word ("kakaoobniz" × 1190) passed a word limit alone and took ~9 s: characters are capped too.
+  for (
+    const text of [
+      "Ingredients: sugar - " + "kakao obniz ".repeat(991),
+      "Ingredients: sugar - " + "kakaoobniz".repeat(1190),
+    ]
+  ) {
+    assert(text.length <= 12_000);
+    const { ms } = costOf(text);
+    assert(ms < 1_000, `${text.slice(21, 40)}…: ${ms.toFixed(0)} ms`);
+  }
 });
