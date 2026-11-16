@@ -1,0 +1,201 @@
+id: wheat-germ-oil
+type: fat
+parent: wheat
+names:
+  en:
+    - wheat germ oil
+    - wheatgerm oil
+    - non-hydrogenated wheat germ oil
+    - unhydrogenated wheat germ oil
+    - non-hydrogenated wheatgerm oil
+    - unhydrogenated wheatgerm oil
+  pl:
+    - olej z kiełków pszenicy
+    - olej z zarodków pszenicy
+    - olej roślinny z kiełków pszenicy
+    - olej roślinny z zarodków pszenicy
+  de:
+    - Weizenkeimöl
+summary:
+  en: >-
+    Vegetable oil pressed or extracted from wheat germ. As a product derived from wheat, it falls under EU
+    Annex II item 1 (cereals containing gluten); the item's exemptions do not include wheat germ oil.
+  pl: >-
+    Olej roślinny tłoczony lub ekstrahowany z kiełków pszenicy. Jako produkt z pszenicy podlega punktowi 1
+    Aneksu II UE (zboża zawierające gluten); wyłączenia z tego punktu nie obejmują oleju z kiełków pszenicy.
+variants:
+  - id: hydrogenated
+    names:
+      en:
+        - hydrogenated wheat germ oil
+        - hydrogenated wheatgerm oil
+      pl:
+        - utwardzony olej z kiełków pszenicy
+        - olej z kiełków pszenicy utwardzony
+        - uwodorniony olej z kiełków pszenicy
+        - olej z kiełków pszenicy uwodorniony
+        - utwardzony olej z zarodków pszenicy
+        - olej z zarodków pszenicy utwardzony
+        - uwodorniony olej z zarodków pszenicy
+        - olej z zarodków pszenicy uwodorniony
+        - utwardzony olej roślinny z kiełków pszenicy
+        - olej roślinny z kiełków pszenicy utwardzony
+        - uwodorniony olej roślinny z kiełków pszenicy
+        - olej roślinny z kiełków pszenicy uwodorniony
+        - utwardzony olej roślinny z zarodków pszenicy
+        - olej roślinny z zarodków pszenicy utwardzony
+        - uwodorniony olej roślinny z zarodków pszenicy
+        - olej roślinny z zarodków pszenicy uwodorniony
+    process:
+      en: "Wheat germ oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
+      pl: "Olej z kiełków pszenicy utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
+    tells:
+      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)'
+  - id: partially-hydrogenated
+    names:
+      en:
+        - partially hydrogenated wheat germ oil
+        - partially hydrogenated wheatgerm oil
+      pl:
+        - częściowo utwardzony olej z kiełków pszenicy
+        - olej z kiełków pszenicy częściowo utwardzony
+        - częściowo uwodorniony olej z kiełków pszenicy
+        - olej z kiełków pszenicy częściowo uwodorniony
+        - częściowo utwardzony olej z zarodków pszenicy
+        - olej z zarodków pszenicy częściowo utwardzony
+        - częściowo uwodorniony olej z zarodków pszenicy
+        - olej z zarodków pszenicy częściowo uwodorniony
+        - częściowo utwardzony olej roślinny z kiełków pszenicy
+        - olej roślinny z kiełków pszenicy częściowo utwardzony
+        - częściowo uwodorniony olej roślinny z kiełków pszenicy
+        - olej roślinny z kiełków pszenicy częściowo uwodorniony
+        - częściowo utwardzony olej roślinny z zarodków pszenicy
+        - olej roślinny z zarodków pszenicy częściowo utwardzony
+        - częściowo uwodorniony olej roślinny z zarodków pszenicy
+        - olej roślinny z zarodków pszenicy częściowo uwodorniony
+    process:
+      en: "Wheat germ oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
+      pl: "Olej z kiełków pszenicy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
+    tells:
+      - 'czesciowo (?:utwardzon|uwodorn)'
+      - 'partially hydrogenated'
+      - 'teilweise gehartet'
+  - id: fully-hydrogenated
+    names:
+      en:
+        - fully hydrogenated wheat germ oil
+        - totally hydrogenated wheat germ oil
+        - fully hydrogenated wheatgerm oil
+        - totally hydrogenated wheatgerm oil
+      pl:
+        - całkowicie utwardzony olej z kiełków pszenicy
+        - olej z kiełków pszenicy całkowicie utwardzony
+        - całkowicie uwodorniony olej z kiełków pszenicy
+        - olej z kiełków pszenicy całkowicie uwodorniony
+        - w pełni utwardzony olej z kiełków pszenicy
+        - olej z kiełków pszenicy w pełni utwardzony
+        - w pełni uwodorniony olej z kiełków pszenicy
+        - olej z kiełków pszenicy w pełni uwodorniony
+        - całkowicie utwardzony olej z zarodków pszenicy
+        - olej z zarodków pszenicy całkowicie utwardzony
+        - całkowicie uwodorniony olej z zarodków pszenicy
+        - olej z zarodków pszenicy całkowicie uwodorniony
+        - w pełni utwardzony olej z zarodków pszenicy
+        - olej z zarodków pszenicy w pełni utwardzony
+        - w pełni uwodorniony olej z zarodków pszenicy
+        - olej z zarodków pszenicy w pełni uwodorniony
+        - całkowicie utwardzony olej roślinny z kiełków pszenicy
+        - olej roślinny z kiełków pszenicy całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny z kiełków pszenicy
+        - olej roślinny z kiełków pszenicy całkowicie uwodorniony
+        - w pełni utwardzony olej roślinny z kiełków pszenicy
+        - olej roślinny z kiełków pszenicy w pełni utwardzony
+        - w pełni uwodorniony olej roślinny z kiełków pszenicy
+        - olej roślinny z kiełków pszenicy w pełni uwodorniony
+        - całkowicie utwardzony olej roślinny z zarodków pszenicy
+        - olej roślinny z zarodków pszenicy całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny z zarodków pszenicy
+        - olej roślinny z zarodków pszenicy całkowicie uwodorniony
+        - w pełni utwardzony olej roślinny z zarodków pszenicy
+        - olej roślinny z zarodków pszenicy w pełni utwardzony
+        - w pełni uwodorniony olej roślinny z zarodków pszenicy
+        - olej roślinny z zarodków pszenicy w pełni uwodorniony
+    process:
+      en: "Wheat germ oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
+      pl: "Olej z kiełków pszenicy ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
+    tells:
+      - 'calkowicie (?:utwardzon|uwodorn)'
+      - 'w pelni (?:utwardzon|uwodorn)'
+      - 'fully hydrogenated'
+      - 'totally hydrogenated'
+      - 'vollstandig gehartet'
+assertions:
+  - code: origin.vegetable_oil_derived
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A pressed vegetable oil; EU labelling requires its specific plant origin to be named.
+      pl: Wyciskany olej roślinny; przepisy UE o etykietowaniu wymagają podania jego konkretnego pochodzenia rośliny.
+    sources:
+      - id: reg-1169-2011
+        locator: Annex VII Part A, point 8
+  - code: allergen.gluten
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Product derived from wheat; EU Annex II item 1, whose exemptions (glucose syrups, maltodextrins, distillates) do not cover the oil.
+      pl: Produkt z pszenicy; Aneks II UE, punkt 1, którego wyłączenia (syropy glukozowe, maltodekstryny, destylaty) nie obejmują oleju.
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 1
+  - code: processing.hydrogenated
+    variant: hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares hydrogenation without specifying partial or full, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje utwardzenie (bez wskazania, czy częściowe, czy całkowite), czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: processing.hydrogenated
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares partial hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje częściowe utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: health.trans_fat_source
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Partial hydrogenation is the main industrial source of trans fat; EU food sold to consumers is capped at 2 g trans fat per 100 g of fat."
+      pl: "Częściowe utwardzanie jest głównym przemysłowym źródłem tłuszczów trans; żywność sprzedawana konsumentom w UE ma limit 2 g tłuszczów trans na 100 g tłuszczu."
+    sources:
+      - id: reg-2019-649
+  - code: processing.hydrogenated
+    variant: fully-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares full hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje całkowite utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Added in batch b2: without it the generic 'olej roślinny' took 'olej roślinny z kiełków pszenicy' and the
+    gluten allergen was lost (Grok 4.7 P3). Identity-only beyond origin and the allergen.

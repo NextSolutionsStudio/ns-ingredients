@@ -18,6 +18,9 @@ names:
     - tłuszcz roślinny laskowy
     - oleje roślinne laskowe
     - laskowy olej roślinny
+    - olej orzechowy laskowy
+    - olej roślinny orzechowy laskowy
+    - olej z orzechów laskowych orzechowy
   de:
     - Haselnussöl
 summary:
@@ -50,6 +53,30 @@ variants:
         - olej laskowy utwardzony
         - uwodorniony olej laskowy
         - olej laskowy uwodorniony
+        - utwardzony olej roślinny laskowy
+        - olej roślinny laskowy utwardzony
+        - uwodorniony olej roślinny laskowy
+        - olej roślinny laskowy uwodorniony
+        - utwardzony tłuszcz roślinny laskowy
+        - tłuszcz roślinny laskowy utwardzony
+        - uwodorniony tłuszcz roślinny laskowy
+        - tłuszcz roślinny laskowy uwodorniony
+        - utwardzone oleje roślinne laskowe
+        - oleje roślinne laskowe utwardzone
+        - uwodornione oleje roślinne laskowe
+        - oleje roślinne laskowe uwodornione
+        - utwardzony olej orzechowy laskowy
+        - olej orzechowy laskowy utwardzony
+        - uwodorniony olej orzechowy laskowy
+        - olej orzechowy laskowy uwodorniony
+        - utwardzony olej roślinny orzechowy laskowy
+        - olej roślinny orzechowy laskowy utwardzony
+        - uwodorniony olej roślinny orzechowy laskowy
+        - olej roślinny orzechowy laskowy uwodorniony
+        - utwardzony olej z orzechów laskowych orzechowy
+        - olej z orzechów laskowych orzechowy utwardzony
+        - uwodorniony olej z orzechów laskowych orzechowy
+        - olej z orzechów laskowych orzechowy uwodorniony
     process:
       en: "Hazelnut oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej z orzechów laskowych utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
@@ -77,6 +104,30 @@ variants:
         - olej laskowy częściowo utwardzony
         - częściowo uwodorniony olej laskowy
         - olej laskowy częściowo uwodorniony
+        - częściowo utwardzony olej roślinny laskowy
+        - olej roślinny laskowy częściowo utwardzony
+        - częściowo uwodorniony olej roślinny laskowy
+        - olej roślinny laskowy częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny laskowy
+        - tłuszcz roślinny laskowy częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny laskowy
+        - tłuszcz roślinny laskowy częściowo uwodorniony
+        - częściowo utwardzone oleje roślinne laskowe
+        - oleje roślinne laskowe częściowo utwardzone
+        - częściowo uwodornione oleje roślinne laskowe
+        - oleje roślinne laskowe częściowo uwodornione
+        - częściowo utwardzony olej orzechowy laskowy
+        - olej orzechowy laskowy częściowo utwardzony
+        - częściowo uwodorniony olej orzechowy laskowy
+        - olej orzechowy laskowy częściowo uwodorniony
+        - częściowo utwardzony olej roślinny orzechowy laskowy
+        - olej roślinny orzechowy laskowy częściowo utwardzony
+        - częściowo uwodorniony olej roślinny orzechowy laskowy
+        - olej roślinny orzechowy laskowy częściowo uwodorniony
+        - częściowo utwardzony olej z orzechów laskowych orzechowy
+        - olej z orzechów laskowych orzechowy częściowo utwardzony
+        - częściowo uwodorniony olej z orzechów laskowych orzechowy
+        - olej z orzechów laskowych orzechowy częściowo uwodorniony
     process:
       en: "Hazelnut oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
       pl: "Olej z orzechów laskowych, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
@@ -124,6 +175,54 @@ variants:
         - olej laskowy w pełni utwardzony
         - w pełni uwodorniony olej laskowy
         - olej laskowy w pełni uwodorniony
+        - całkowicie utwardzony olej roślinny laskowy
+        - olej roślinny laskowy całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny laskowy
+        - olej roślinny laskowy całkowicie uwodorniony
+        - w pełni utwardzony olej roślinny laskowy
+        - olej roślinny laskowy w pełni utwardzony
+        - w pełni uwodorniony olej roślinny laskowy
+        - olej roślinny laskowy w pełni uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny laskowy
+        - tłuszcz roślinny laskowy całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny laskowy
+        - tłuszcz roślinny laskowy całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz roślinny laskowy
+        - tłuszcz roślinny laskowy w pełni utwardzony
+        - w pełni uwodorniony tłuszcz roślinny laskowy
+        - tłuszcz roślinny laskowy w pełni uwodorniony
+        - całkowicie utwardzone oleje roślinne laskowe
+        - oleje roślinne laskowe całkowicie utwardzone
+        - całkowicie uwodornione oleje roślinne laskowe
+        - oleje roślinne laskowe całkowicie uwodornione
+        - w pełni utwardzone oleje roślinne laskowe
+        - oleje roślinne laskowe w pełni utwardzone
+        - w pełni uwodornione oleje roślinne laskowe
+        - oleje roślinne laskowe w pełni uwodornione
+        - całkowicie utwardzony olej orzechowy laskowy
+        - olej orzechowy laskowy całkowicie utwardzony
+        - całkowicie uwodorniony olej orzechowy laskowy
+        - olej orzechowy laskowy całkowicie uwodorniony
+        - w pełni utwardzony olej orzechowy laskowy
+        - olej orzechowy laskowy w pełni utwardzony
+        - w pełni uwodorniony olej orzechowy laskowy
+        - olej orzechowy laskowy w pełni uwodorniony
+        - całkowicie utwardzony olej roślinny orzechowy laskowy
+        - olej roślinny orzechowy laskowy całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny orzechowy laskowy
+        - olej roślinny orzechowy laskowy całkowicie uwodorniony
+        - w pełni utwardzony olej roślinny orzechowy laskowy
+        - olej roślinny orzechowy laskowy w pełni utwardzony
+        - w pełni uwodorniony olej roślinny orzechowy laskowy
+        - olej roślinny orzechowy laskowy w pełni uwodorniony
+        - całkowicie utwardzony olej z orzechów laskowych orzechowy
+        - olej z orzechów laskowych orzechowy całkowicie utwardzony
+        - całkowicie uwodorniony olej z orzechów laskowych orzechowy
+        - olej z orzechów laskowych orzechowy całkowicie uwodorniony
+        - w pełni utwardzony olej z orzechów laskowych orzechowy
+        - olej z orzechów laskowych orzechowy w pełni utwardzony
+        - w pełni uwodorniony olej z orzechów laskowych orzechowy
+        - olej z orzechów laskowych orzechowy w pełni uwodorniony
     process:
       en: "Hazelnut oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
       pl: "Olej z orzechów laskowych ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."

@@ -11,6 +11,8 @@ names:
     - non-hydrogenated flaxseed oil
     - non hydrogenated flaxseed oil
     - unhydrogenated flaxseed oil
+    - non-hydrogenated cold-pressed flaxseed oil
+    - unhydrogenated cold-pressed flaxseed oil
   pl:
     - olej lniany
     - olej roślinny lniany
@@ -39,6 +41,7 @@ variants:
       en:
         - hydrogenated linseed oil
         - hydrogenated flaxseed oil
+        - hydrogenated cold-pressed flaxseed oil
       pl:
         - utwardzony olej lniany
         - olej lniany utwardzony
@@ -64,6 +67,14 @@ variants:
         - tłuszcze roślinne lniane uwodornione
         - uwodornione oleje roślinne lniane
         - oleje roślinne lniane uwodornione
+        - uwodorniony olej z siemienia lnianego
+        - olej z siemienia lnianego uwodorniony
+        - uwodorniony olej z nasion lnu
+        - olej z nasion lnu uwodorniony
+        - utwardzone oleje roślinne lniany
+        - oleje roślinne lniany utwardzone
+        - uwodornione oleje roślinne lniany
+        - oleje roślinne lniany uwodornione
       de:
         - gehärtetes Leinöl
         - gehärtetes Leinsamenöl
@@ -77,6 +88,7 @@ variants:
       en:
         - partially hydrogenated linseed oil
         - partially hydrogenated flaxseed oil
+        - partially hydrogenated cold-pressed flaxseed oil
       pl:
         - częściowo utwardzony olej lniany
         - olej lniany częściowo utwardzony
@@ -102,6 +114,14 @@ variants:
         - tłuszcze roślinne lniane częściowo uwodornione
         - częściowo uwodornione oleje roślinne lniane
         - oleje roślinne lniane częściowo uwodornione
+        - częściowo uwodorniony olej z siemienia lnianego
+        - olej z siemienia lnianego częściowo uwodorniony
+        - częściowo uwodorniony olej z nasion lnu
+        - olej z nasion lnu częściowo uwodorniony
+        - częściowo utwardzone oleje roślinne lniany
+        - oleje roślinne lniany częściowo utwardzone
+        - częściowo uwodornione oleje roślinne lniany
+        - oleje roślinne lniany częściowo uwodornione
       de:
         - teilweise gehärtetes Leinöl
         - teilweise gehärtetes Leinsamenöl
@@ -118,6 +138,9 @@ variants:
         - fully hydrogenated linseed oil
         - totally hydrogenated linseed oil
         - fully hydrogenated flaxseed oil
+        - totally hydrogenated flaxseed oil
+        - fully hydrogenated cold-pressed flaxseed oil
+        - totally hydrogenated cold-pressed flaxseed oil
       pl:
         - całkowicie utwardzony olej lniany
         - olej lniany całkowicie utwardzony
@@ -163,6 +186,26 @@ variants:
         - tłuszcze roślinne lniane w pełni uwodornione
         - w pełni uwodornione oleje roślinne lniane
         - oleje roślinne lniane w pełni uwodornione
+        - całkowicie uwodorniony olej z siemienia lnianego
+        - olej z siemienia lnianego całkowicie uwodorniony
+        - w pełni utwardzony olej z siemienia lnianego
+        - olej z siemienia lnianego w pełni utwardzony
+        - w pełni uwodorniony olej z siemienia lnianego
+        - olej z siemienia lnianego w pełni uwodorniony
+        - całkowicie uwodorniony olej z nasion lnu
+        - olej z nasion lnu całkowicie uwodorniony
+        - w pełni utwardzony olej z nasion lnu
+        - olej z nasion lnu w pełni utwardzony
+        - w pełni uwodorniony olej z nasion lnu
+        - olej z nasion lnu w pełni uwodorniony
+        - całkowicie utwardzone oleje roślinne lniany
+        - oleje roślinne lniany całkowicie utwardzone
+        - całkowicie uwodornione oleje roślinne lniany
+        - oleje roślinne lniany całkowicie uwodornione
+        - w pełni utwardzone oleje roślinne lniany
+        - oleje roślinne lniany w pełni utwardzone
+        - w pełni uwodornione oleje roślinne lniany
+        - oleje roślinne lniany w pełni uwodornione
       de:
         - vollständig gehärtetes Leinöl
         - vollständig gehärtetes Leinsamenöl

@@ -10,6 +10,8 @@ names:
     - unhydrogenated cashew oil
     - non-hydrogenated cashew nut oil
     - unhydrogenated cashew nut oil
+    - non-hydrogenated cashews oil
+    - unhydrogenated cashews oil
   pl:
     - olej z orzechów nerkowca
     - olej z nerkowców
@@ -30,6 +32,7 @@ variants:
       en:
         - hydrogenated cashew oil
         - hydrogenated cashew nut oil
+        - hydrogenated cashews oil
       pl:
         - utwardzony olej z orzechów nerkowca
         - olej z orzechów nerkowca utwardzony
@@ -57,6 +60,7 @@ variants:
       en:
         - partially hydrogenated cashew oil
         - partially hydrogenated cashew nut oil
+        - partially hydrogenated cashews oil
       pl:
         - częściowo utwardzony olej z orzechów nerkowca
         - olej z orzechów nerkowca częściowo utwardzony
@@ -88,6 +92,8 @@ variants:
         - totally hydrogenated cashew oil
         - fully hydrogenated cashew nut oil
         - totally hydrogenated cashew nut oil
+        - fully hydrogenated cashews oil
+        - totally hydrogenated cashews oil
       pl:
         - całkowicie utwardzony olej z orzechów nerkowca
         - olej z orzechów nerkowca całkowicie utwardzony

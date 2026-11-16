@@ -10,6 +10,8 @@ names:
     - unhydrogenated almond oil
     - non-hydrogenated sweet almond oil
     - unhydrogenated sweet almond oil
+    - non-hydrogenated almonds oil
+    - unhydrogenated almonds oil
   pl:
     - olej migdałowy
     - olej z migdałów
@@ -17,6 +19,7 @@ names:
     - tłuszcz roślinny migdałowy
     - oleje roślinne migdałowe
     - olej roślinny z migdałów
+    - olej orzechowy migdałowy
   de:
     - Mandelöl
 summary:
@@ -32,6 +35,7 @@ variants:
       en:
         - hydrogenated almond oil
         - hydrogenated sweet almond oil
+        - hydrogenated almonds oil
       pl:
         - utwardzony olej migdałowy
         - olej migdałowy utwardzony
@@ -49,6 +53,18 @@ variants:
         - olej roślinny z migdałów utwardzony
         - uwodorniony olej roślinny z migdałów
         - olej roślinny z migdałów uwodorniony
+        - utwardzony tłuszcz roślinny migdałowy
+        - tłuszcz roślinny migdałowy utwardzony
+        - uwodorniony tłuszcz roślinny migdałowy
+        - tłuszcz roślinny migdałowy uwodorniony
+        - utwardzone oleje roślinne migdałowe
+        - oleje roślinne migdałowe utwardzone
+        - uwodornione oleje roślinne migdałowe
+        - oleje roślinne migdałowe uwodornione
+        - utwardzony olej orzechowy migdałowy
+        - olej orzechowy migdałowy utwardzony
+        - uwodorniony olej orzechowy migdałowy
+        - olej orzechowy migdałowy uwodorniony
     process:
       en: "Almond oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej migdałowy utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
@@ -59,6 +75,7 @@ variants:
       en:
         - partially hydrogenated almond oil
         - partially hydrogenated sweet almond oil
+        - partially hydrogenated almonds oil
       pl:
         - częściowo utwardzony olej migdałowy
         - olej migdałowy częściowo utwardzony
@@ -76,6 +93,18 @@ variants:
         - olej roślinny z migdałów częściowo utwardzony
         - częściowo uwodorniony olej roślinny z migdałów
         - olej roślinny z migdałów częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny migdałowy
+        - tłuszcz roślinny migdałowy częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny migdałowy
+        - tłuszcz roślinny migdałowy częściowo uwodorniony
+        - częściowo utwardzone oleje roślinne migdałowe
+        - oleje roślinne migdałowe częściowo utwardzone
+        - częściowo uwodornione oleje roślinne migdałowe
+        - oleje roślinne migdałowe częściowo uwodornione
+        - częściowo utwardzony olej orzechowy migdałowy
+        - olej orzechowy migdałowy częściowo utwardzony
+        - częściowo uwodorniony olej orzechowy migdałowy
+        - olej orzechowy migdałowy częściowo uwodorniony
     process:
       en: "Almond oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
       pl: "Olej migdałowy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
@@ -90,6 +119,8 @@ variants:
         - totally hydrogenated almond oil
         - fully hydrogenated sweet almond oil
         - totally hydrogenated sweet almond oil
+        - fully hydrogenated almonds oil
+        - totally hydrogenated almonds oil
       pl:
         - całkowicie utwardzony olej migdałowy
         - olej migdałowy całkowicie utwardzony
@@ -123,6 +154,30 @@ variants:
         - olej roślinny z migdałów w pełni utwardzony
         - w pełni uwodorniony olej roślinny z migdałów
         - olej roślinny z migdałów w pełni uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny migdałowy
+        - tłuszcz roślinny migdałowy całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny migdałowy
+        - tłuszcz roślinny migdałowy całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz roślinny migdałowy
+        - tłuszcz roślinny migdałowy w pełni utwardzony
+        - w pełni uwodorniony tłuszcz roślinny migdałowy
+        - tłuszcz roślinny migdałowy w pełni uwodorniony
+        - całkowicie utwardzone oleje roślinne migdałowe
+        - oleje roślinne migdałowe całkowicie utwardzone
+        - całkowicie uwodornione oleje roślinne migdałowe
+        - oleje roślinne migdałowe całkowicie uwodornione
+        - w pełni utwardzone oleje roślinne migdałowe
+        - oleje roślinne migdałowe w pełni utwardzone
+        - w pełni uwodornione oleje roślinne migdałowe
+        - oleje roślinne migdałowe w pełni uwodornione
+        - całkowicie utwardzony olej orzechowy migdałowy
+        - olej orzechowy migdałowy całkowicie utwardzony
+        - całkowicie uwodorniony olej orzechowy migdałowy
+        - olej orzechowy migdałowy całkowicie uwodorniony
+        - w pełni utwardzony olej orzechowy migdałowy
+        - olej orzechowy migdałowy w pełni utwardzony
+        - w pełni uwodorniony olej orzechowy migdałowy
+        - olej orzechowy migdałowy w pełni uwodorniony
     process:
       en: "Almond oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
       pl: "Olej migdałowy ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."

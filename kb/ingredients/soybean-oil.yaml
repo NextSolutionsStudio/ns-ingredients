@@ -167,6 +167,14 @@ variants:
         - tłuszcze roślinne z soi uwodornione
         - uwodornione oleje roślinne z soi
         - oleje roślinne z soi uwodornione
+        - utwardzone oleje roślinne sojowy
+        - oleje roślinne sojowy utwardzone
+        - uwodornione oleje roślinne sojowy
+        - oleje roślinne sojowy uwodornione
+        - utwardzony olej roślinny z nasion soi
+        - olej roślinny z nasion soi utwardzony
+        - uwodorniony olej roślinny z nasion soi
+        - olej roślinny z nasion soi uwodorniony
       de:
         - gehärtetes Sojaöl
     process:
@@ -220,6 +228,14 @@ variants:
         - tłuszcze roślinne z soi częściowo uwodornione
         - częściowo uwodornione oleje roślinne z soi
         - oleje roślinne z soi częściowo uwodornione
+        - częściowo utwardzone oleje roślinne sojowy
+        - oleje roślinne sojowy częściowo utwardzone
+        - częściowo uwodornione oleje roślinne sojowy
+        - oleje roślinne sojowy częściowo uwodornione
+        - częściowo utwardzony olej roślinny z nasion soi
+        - olej roślinny z nasion soi częściowo utwardzony
+        - częściowo uwodorniony olej roślinny z nasion soi
+        - olej roślinny z nasion soi częściowo uwodorniony
       de:
         - teilweise gehärtetes Sojaöl
     process:
@@ -235,6 +251,7 @@ variants:
         - fully hydrogenated soybean oil
         - totally hydrogenated soybean oil
         - fully hydrogenated soya oil
+        - totally hydrogenated soya oil
       pl:
         - całkowicie utwardzony olej sojowy
         - olej sojowy całkowicie utwardzony
@@ -316,6 +333,22 @@ variants:
         - tłuszcze roślinne z soi w pełni uwodornione
         - w pełni uwodornione oleje roślinne z soi
         - oleje roślinne z soi w pełni uwodornione
+        - całkowicie utwardzone oleje roślinne sojowy
+        - oleje roślinne sojowy całkowicie utwardzone
+        - całkowicie uwodornione oleje roślinne sojowy
+        - oleje roślinne sojowy całkowicie uwodornione
+        - w pełni utwardzone oleje roślinne sojowy
+        - oleje roślinne sojowy w pełni utwardzone
+        - w pełni uwodornione oleje roślinne sojowy
+        - oleje roślinne sojowy w pełni uwodornione
+        - całkowicie utwardzony olej roślinny z nasion soi
+        - olej roślinny z nasion soi całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny z nasion soi
+        - olej roślinny z nasion soi całkowicie uwodorniony
+        - w pełni utwardzony olej roślinny z nasion soi
+        - olej roślinny z nasion soi w pełni utwardzony
+        - w pełni uwodorniony olej roślinny z nasion soi
+        - olej roślinny z nasion soi w pełni uwodorniony
       de:
         - vollständig gehärtetes Sojaöl
     process:

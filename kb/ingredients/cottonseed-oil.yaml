@@ -7,6 +7,8 @@ names:
     - non-hydrogenated cottonseed oil
     - non hydrogenated cottonseed oil
     - unhydrogenated cottonseed oil
+    - non-hydrogenated refined cottonseed oil
+    - unhydrogenated refined cottonseed oil
   pl:
     - olej bawełniany
     - olej z nasion bawełny
@@ -35,6 +37,7 @@ variants:
     names:
       en:
         - hydrogenated cottonseed oil
+        - hydrogenated refined cottonseed oil
       pl:
         - utwardzony olej bawełniany
         - olej bawełniany utwardzony
@@ -56,6 +59,14 @@ variants:
         - tłuszcze roślinne bawełniane uwodornione
         - uwodornione oleje roślinne bawełniane
         - oleje roślinne bawełniane uwodornione
+        - utwardzony olej z nasion bawełny
+        - olej z nasion bawełny utwardzony
+        - uwodorniony olej z nasion bawełny
+        - olej z nasion bawełny uwodorniony
+        - utwardzone oleje roślinne bawełniany
+        - oleje roślinne bawełniany utwardzone
+        - uwodornione oleje roślinne bawełniany
+        - oleje roślinne bawełniany uwodornione
       de:
         - gehärtetes Baumwollsaatöl
     process:
@@ -67,6 +78,7 @@ variants:
     names:
       en:
         - partially hydrogenated cottonseed oil
+        - partially hydrogenated refined cottonseed oil
       pl:
         - częściowo utwardzony olej bawełniany
         - olej bawełniany częściowo utwardzony
@@ -88,6 +100,14 @@ variants:
         - tłuszcze roślinne bawełniane częściowo uwodornione
         - częściowo uwodornione oleje roślinne bawełniane
         - oleje roślinne bawełniane częściowo uwodornione
+        - częściowo utwardzony olej z nasion bawełny
+        - olej z nasion bawełny częściowo utwardzony
+        - częściowo uwodorniony olej z nasion bawełny
+        - olej z nasion bawełny częściowo uwodorniony
+        - częściowo utwardzone oleje roślinne bawełniany
+        - oleje roślinne bawełniany częściowo utwardzone
+        - częściowo uwodornione oleje roślinne bawełniany
+        - oleje roślinne bawełniany częściowo uwodornione
       de:
         - teilweise gehärtetes Baumwollsaatöl
     process:
@@ -102,6 +122,8 @@ variants:
       en:
         - fully hydrogenated cottonseed oil
         - totally hydrogenated cottonseed oil
+        - fully hydrogenated refined cottonseed oil
+        - totally hydrogenated refined cottonseed oil
       pl:
         - całkowicie utwardzony olej bawełniany
         - olej bawełniany całkowicie utwardzony
@@ -143,6 +165,22 @@ variants:
         - tłuszcze roślinne bawełniane w pełni uwodornione
         - w pełni uwodornione oleje roślinne bawełniane
         - oleje roślinne bawełniane w pełni uwodornione
+        - całkowicie utwardzony olej z nasion bawełny
+        - olej z nasion bawełny całkowicie utwardzony
+        - całkowicie uwodorniony olej z nasion bawełny
+        - olej z nasion bawełny całkowicie uwodorniony
+        - w pełni utwardzony olej z nasion bawełny
+        - olej z nasion bawełny w pełni utwardzony
+        - w pełni uwodorniony olej z nasion bawełny
+        - olej z nasion bawełny w pełni uwodorniony
+        - całkowicie utwardzone oleje roślinne bawełniany
+        - oleje roślinne bawełniany całkowicie utwardzone
+        - całkowicie uwodornione oleje roślinne bawełniany
+        - oleje roślinne bawełniany całkowicie uwodornione
+        - w pełni utwardzone oleje roślinne bawełniany
+        - oleje roślinne bawełniany w pełni utwardzone
+        - w pełni uwodornione oleje roślinne bawełniany
+        - oleje roślinne bawełniany w pełni uwodornione
       de:
         - vollständig gehärtetes Baumwollsaatöl
     process:

@@ -11,6 +11,10 @@ names:
     - unhydrogenated sesame oil
     - non-hydrogenated sesame seed oil
     - unhydrogenated sesame seed oil
+    - non-hydrogenated refined sesame oil
+    - unhydrogenated refined sesame oil
+    - non-hydrogenated toasted sesame oil
+    - unhydrogenated toasted sesame oil
   pl:
     - olej sezamowy
     - rafinowany olej sezamowy
@@ -38,6 +42,8 @@ variants:
       en:
         - hydrogenated sesame oil
         - hydrogenated sesame seed oil
+        - hydrogenated refined sesame oil
+        - hydrogenated toasted sesame oil
       pl:
         - utwardzony olej sezamowy
         - olej sezamowy utwardzony
@@ -55,6 +61,22 @@ variants:
         - olej z sezamu utwardzony
         - uwodorniony olej z sezamu
         - olej z sezamu uwodorniony
+        - utwardzony tłuszcz roślinny sezamowy
+        - tłuszcz roślinny sezamowy utwardzony
+        - uwodorniony tłuszcz roślinny sezamowy
+        - tłuszcz roślinny sezamowy uwodorniony
+        - utwardzone oleje roślinne sezamowe
+        - oleje roślinne sezamowe utwardzone
+        - uwodornione oleje roślinne sezamowe
+        - oleje roślinne sezamowe uwodornione
+        - utwardzone tłuszcze roślinne sezamowe
+        - tłuszcze roślinne sezamowe utwardzone
+        - uwodornione tłuszcze roślinne sezamowe
+        - tłuszcze roślinne sezamowe uwodornione
+        - utwardzony olej z nasion sezamu
+        - olej z nasion sezamu utwardzony
+        - uwodorniony olej z nasion sezamu
+        - olej z nasion sezamu uwodorniony
     process:
       en: "Sesame oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej sezamowy utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
@@ -65,6 +87,8 @@ variants:
       en:
         - partially hydrogenated sesame oil
         - partially hydrogenated sesame seed oil
+        - partially hydrogenated refined sesame oil
+        - partially hydrogenated toasted sesame oil
       pl:
         - częściowo utwardzony olej sezamowy
         - olej sezamowy częściowo utwardzony
@@ -82,6 +106,22 @@ variants:
         - olej z sezamu częściowo utwardzony
         - częściowo uwodorniony olej z sezamu
         - olej z sezamu częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny sezamowy
+        - tłuszcz roślinny sezamowy częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny sezamowy
+        - tłuszcz roślinny sezamowy częściowo uwodorniony
+        - częściowo utwardzone oleje roślinne sezamowe
+        - oleje roślinne sezamowe częściowo utwardzone
+        - częściowo uwodornione oleje roślinne sezamowe
+        - oleje roślinne sezamowe częściowo uwodornione
+        - częściowo utwardzone tłuszcze roślinne sezamowe
+        - tłuszcze roślinne sezamowe częściowo utwardzone
+        - częściowo uwodornione tłuszcze roślinne sezamowe
+        - tłuszcze roślinne sezamowe częściowo uwodornione
+        - częściowo utwardzony olej z nasion sezamu
+        - olej z nasion sezamu częściowo utwardzony
+        - częściowo uwodorniony olej z nasion sezamu
+        - olej z nasion sezamu częściowo uwodorniony
     process:
       en: "Sesame oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
       pl: "Olej sezamowy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
@@ -96,6 +136,10 @@ variants:
         - totally hydrogenated sesame oil
         - fully hydrogenated sesame seed oil
         - totally hydrogenated sesame seed oil
+        - fully hydrogenated refined sesame oil
+        - totally hydrogenated refined sesame oil
+        - fully hydrogenated toasted sesame oil
+        - totally hydrogenated toasted sesame oil
       pl:
         - całkowicie utwardzony olej sezamowy
         - olej sezamowy całkowicie utwardzony
@@ -129,6 +173,38 @@ variants:
         - olej z sezamu w pełni utwardzony
         - w pełni uwodorniony olej z sezamu
         - olej z sezamu w pełni uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny sezamowy
+        - tłuszcz roślinny sezamowy całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny sezamowy
+        - tłuszcz roślinny sezamowy całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz roślinny sezamowy
+        - tłuszcz roślinny sezamowy w pełni utwardzony
+        - w pełni uwodorniony tłuszcz roślinny sezamowy
+        - tłuszcz roślinny sezamowy w pełni uwodorniony
+        - całkowicie utwardzone oleje roślinne sezamowe
+        - oleje roślinne sezamowe całkowicie utwardzone
+        - całkowicie uwodornione oleje roślinne sezamowe
+        - oleje roślinne sezamowe całkowicie uwodornione
+        - w pełni utwardzone oleje roślinne sezamowe
+        - oleje roślinne sezamowe w pełni utwardzone
+        - w pełni uwodornione oleje roślinne sezamowe
+        - oleje roślinne sezamowe w pełni uwodornione
+        - całkowicie utwardzone tłuszcze roślinne sezamowe
+        - tłuszcze roślinne sezamowe całkowicie utwardzone
+        - całkowicie uwodornione tłuszcze roślinne sezamowe
+        - tłuszcze roślinne sezamowe całkowicie uwodornione
+        - w pełni utwardzone tłuszcze roślinne sezamowe
+        - tłuszcze roślinne sezamowe w pełni utwardzone
+        - w pełni uwodornione tłuszcze roślinne sezamowe
+        - tłuszcze roślinne sezamowe w pełni uwodornione
+        - całkowicie utwardzony olej z nasion sezamu
+        - olej z nasion sezamu całkowicie utwardzony
+        - całkowicie uwodorniony olej z nasion sezamu
+        - olej z nasion sezamu całkowicie uwodorniony
+        - w pełni utwardzony olej z nasion sezamu
+        - olej z nasion sezamu w pełni utwardzony
+        - w pełni uwodorniony olej z nasion sezamu
+        - olej z nasion sezamu w pełni uwodorniony
     process:
       en: "Sesame oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
       pl: "Olej sezamowy ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
