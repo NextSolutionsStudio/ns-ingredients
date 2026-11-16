@@ -2,7 +2,7 @@ id: rapeseed-oil
 type: fat
 names:
   en: [rapeseed oil, canola oil, non-hydrogenated rapeseed oil, non hydrogenated rapeseed oil, unhydrogenated rapeseed oil, non-hydrogenated canola oil, non hydrogenated canola oil, unhydrogenated canola oil]
-  pl: [olej rzepakowy, olej roślinny rzepakowy, tłuszcz roślinny rzepakowy, rzepakowy olej roślinny, oleje roślinne rzepakowe, oleje roślinne rzepakowy]
+  pl: [olej rzepakowy, olej roślinny rzepakowy, tłuszcz roślinny rzepakowy, rzepakowy olej roślinny, tłuszcze roślinne rzepakowe, oleje roślinne rzepakowe, oleje roślinne rzepakowy]
   de: [Rapsöl, ungehärtetes Rapsöl, nicht gehärtetes Rapsöl]
 summary:
   en: >-
@@ -23,7 +23,7 @@ variants:
   - id: hydrogenated
     names:
       en: [hydrogenated rapeseed oil, hydrogenated canola oil]
-      pl: [utwardzony olej rzepakowy, olej rzepakowy utwardzony, uwodorniony olej rzepakowy, olej rzepakowy uwodorniony]
+      pl: [utwardzony olej rzepakowy, olej rzepakowy utwardzony, uwodorniony olej rzepakowy, olej rzepakowy uwodorniony, utwardzony tłuszcz roślinny rzepakowy, tłuszcz roślinny rzepakowy utwardzony, utwardzony olej roślinny rzepakowy, olej roślinny rzepakowy utwardzony, utwardzone tłuszcze roślinne rzepakowe, tłuszcze roślinne rzepakowe utwardzone, utwardzone oleje roślinne rzepakowe, oleje roślinne rzepakowe utwardzone]
       de: [gehärtetes Rapsöl]
     process:
       en: "Rapeseed oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
@@ -32,7 +32,7 @@ variants:
   - id: partially-hydrogenated
     names:
       en: [partially hydrogenated rapeseed oil, partially hydrogenated canola oil]
-      pl: [częściowo utwardzony olej rzepakowy, olej rzepakowy częściowo utwardzony, częściowo uwodorniony olej rzepakowy, olej rzepakowy częściowo uwodorniony]
+      pl: [częściowo utwardzony olej rzepakowy, olej rzepakowy częściowo utwardzony, częściowo uwodorniony olej rzepakowy, olej rzepakowy częściowo uwodorniony, częściowo utwardzony tłuszcz roślinny rzepakowy, tłuszcz roślinny rzepakowy częściowo utwardzony, częściowo utwardzony olej roślinny rzepakowy, olej roślinny rzepakowy częściowo utwardzony, częściowo utwardzone tłuszcze roślinne rzepakowe, tłuszcze roślinne rzepakowe częściowo utwardzone, częściowo utwardzone oleje roślinne rzepakowe, oleje roślinne rzepakowe częściowo utwardzone]
       de: [teilweise gehärtetes Rapsöl]
     process:
       en: "Rapeseed oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
@@ -41,7 +41,7 @@ variants:
   - id: fully-hydrogenated
     names:
       en: [fully hydrogenated rapeseed oil, totally hydrogenated rapeseed oil, fully hydrogenated canola oil]
-      pl: [całkowicie utwardzony olej rzepakowy, olej rzepakowy całkowicie utwardzony, w pełni utwardzony olej rzepakowy, olej rzepakowy w pełni utwardzony, całkowicie uwodorniony olej rzepakowy, olej rzepakowy całkowicie uwodorniony, w pełni uwodorniony olej rzepakowy, olej rzepakowy w pełni uwodorniony]
+      pl: [całkowicie utwardzony olej rzepakowy, olej rzepakowy całkowicie utwardzony, w pełni utwardzony olej rzepakowy, olej rzepakowy w pełni utwardzony, całkowicie uwodorniony olej rzepakowy, olej rzepakowy całkowicie uwodorniony, w pełni uwodorniony olej rzepakowy, olej rzepakowy w pełni uwodorniony, całkowicie utwardzony tłuszcz roślinny rzepakowy, tłuszcz roślinny rzepakowy całkowicie utwardzony, całkowicie utwardzony olej roślinny rzepakowy, olej roślinny rzepakowy całkowicie utwardzony, całkowicie utwardzone tłuszcze roślinne rzepakowe, tłuszcze roślinne rzepakowe całkowicie utwardzone, całkowicie utwardzone oleje roślinne rzepakowe, oleje roślinne rzepakowe całkowicie utwardzone]
       de: [vollständig gehärtetes Rapsöl]
     process:
       en: "Rapeseed oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."

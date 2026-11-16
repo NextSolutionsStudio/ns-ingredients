@@ -36,11 +36,10 @@ assertions:
     note:
       en: >-
         EFSA (2018) Section 3.1.3 documents manufacture either by direct reaction of fatty acids with magnesium
-        oxide/hydroxide/carbonate or by saponification (sodium hydroxide) followed by precipitation with
-        magnesium sulfate or chloride.
+        oxide or hydroxide, or via a sodium soap followed by precipitation with a magnesium salt.
       pl: >-
         Sekcja 3.1.3 opinii EFSA (2018) dokumentuje wytwarzanie przez bezpośrednią reakcję kwasów tłuszczowych
-        ze związkami magnezu albo przez zmydlanie zasadą sodową i strącanie solą magnezową.
+        z tlenkiem lub wodorotlenkiem magnezu albo przez mydło sodowe i wytrącanie solą magnezową.
     sources:
       - id: efsa-e470-2018
         locator: Section 3.1.3

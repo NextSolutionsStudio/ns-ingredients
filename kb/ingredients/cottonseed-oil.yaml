@@ -14,6 +14,7 @@ names:
     - olej roślinny bawełniany
     - tłuszcz roślinny bawełniany
     - bawełniany olej roślinny
+    - tłuszcze roślinne bawełniane
     - oleje roślinne bawełniane
     - oleje roślinne bawełniany
   de:
@@ -39,6 +40,14 @@ variants:
         - olej bawełniany utwardzony
         - uwodorniony olej bawełniany
         - olej bawełniany uwodorniony
+        - utwardzony tłuszcz roślinny bawełniany
+        - tłuszcz roślinny bawełniany utwardzony
+        - utwardzony olej roślinny bawełniany
+        - olej roślinny bawełniany utwardzony
+        - utwardzone tłuszcze roślinne bawełniane
+        - tłuszcze roślinne bawełniane utwardzone
+        - utwardzone oleje roślinne bawełniane
+        - oleje roślinne bawełniane utwardzone
       de:
         - gehärtetes Baumwollsaatöl
     process:
@@ -55,6 +64,14 @@ variants:
         - olej bawełniany częściowo utwardzony
         - częściowo uwodorniony olej bawełniany
         - olej bawełniany częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny bawełniany
+        - tłuszcz roślinny bawełniany częściowo utwardzony
+        - częściowo utwardzony olej roślinny bawełniany
+        - olej roślinny bawełniany częściowo utwardzony
+        - częściowo utwardzone tłuszcze roślinne bawełniane
+        - tłuszcze roślinne bawełniane częściowo utwardzone
+        - częściowo utwardzone oleje roślinne bawełniane
+        - oleje roślinne bawełniane częściowo utwardzone
       de:
         - teilweise gehärtetes Baumwollsaatöl
     process:
@@ -78,6 +95,14 @@ variants:
         - olej bawełniany całkowicie uwodorniony
         - w pełni uwodorniony olej bawełniany
         - olej bawełniany w pełni uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny bawełniany
+        - tłuszcz roślinny bawełniany całkowicie utwardzony
+        - całkowicie utwardzony olej roślinny bawełniany
+        - olej roślinny bawełniany całkowicie utwardzony
+        - całkowicie utwardzone tłuszcze roślinne bawełniane
+        - tłuszcze roślinne bawełniane całkowicie utwardzone
+        - całkowicie utwardzone oleje roślinne bawełniane
+        - oleje roślinne bawełniane całkowicie utwardzone
       de:
         - vollständig gehärtetes Baumwollsaatöl
     process:

@@ -95,7 +95,7 @@ sources:
   - id: pmc8701098-vitd2-yeast
     type: observational
     title: "Safety Assessment of Vitamin D and Its Photo-Isomers in UV-Irradiated Baker's Yeast"
-    authors: "Schmiech T, Schäfer M, Jahreis G, Greiner R"
+    authors: "Schümmer, Stangl, Wätjen"
     year: 2021
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8701098/
     doi: 10.3390/foods10123142

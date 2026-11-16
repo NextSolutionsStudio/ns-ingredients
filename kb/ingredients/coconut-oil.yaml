@@ -44,7 +44,7 @@ variants:
   - id: hydrogenated
     names:
       en: [hydrogenated coconut oil, hydrogenated coconut fat]
-      pl: [utwardzony olej kokosowy, olej kokosowy utwardzony, uwodorniony olej kokosowy, olej kokosowy uwodorniony, utwardzony tłuszcz kokosowy, tłuszcz kokosowy utwardzony, uwodorniony tłuszcz kokosowy, tłuszcz kokosowy uwodorniony]
+      pl: [utwardzony olej kokosowy, olej kokosowy utwardzony, uwodorniony olej kokosowy, olej kokosowy uwodorniony, utwardzony tłuszcz kokosowy, tłuszcz kokosowy utwardzony, uwodorniony tłuszcz kokosowy, tłuszcz kokosowy uwodorniony, utwardzony tłuszcz roślinny kokosowy, tłuszcz roślinny kokosowy utwardzony, utwardzony olej roślinny kokosowy, olej roślinny kokosowy utwardzony, utwardzone tłuszcze roślinne kokosowe, tłuszcze roślinne kokosowe utwardzone, utwardzone oleje roślinne kokosowe, oleje roślinne kokosowe utwardzone]
       de: [gehärtetes Kokosöl, gehärtetes Kokosfett]
     process:
       en: "Coconut oil or fat hardened by hydrogenation; the label does not specify partial or full hydrogenation."
@@ -53,7 +53,7 @@ variants:
   - id: partially-hydrogenated
     names:
       en: [partially hydrogenated coconut oil, partially hydrogenated coconut fat]
-      pl: [częściowo utwardzony olej kokosowy, olej kokosowy częściowo utwardzony, częściowo uwodorniony olej kokosowy, olej kokosowy częściowo uwodorniony, częściowo utwardzony tłuszcz kokosowy, tłuszcz kokosowy częściowo utwardzony, częściowo uwodorniony tłuszcz kokosowy, tłuszcz kokosowy częściowo uwodorniony]
+      pl: [częściowo utwardzony olej kokosowy, olej kokosowy częściowo utwardzony, częściowo uwodorniony olej kokosowy, olej kokosowy częściowo uwodorniony, częściowo utwardzony tłuszcz kokosowy, tłuszcz kokosowy częściowo utwardzony, częściowo uwodorniony tłuszcz kokosowy, tłuszcz kokosowy częściowo uwodorniony, częściowo utwardzony tłuszcz roślinny kokosowy, tłuszcz roślinny kokosowy częściowo utwardzony, częściowo utwardzony olej roślinny kokosowy, olej roślinny kokosowy częściowo utwardzony, częściowo utwardzone tłuszcze roślinne kokosowe, tłuszcze roślinne kokosowe częściowo utwardzone, częściowo utwardzone oleje roślinne kokosowe, oleje roślinne kokosowe częściowo utwardzone]
       de: [teilweise gehärtetes Kokosöl, teilweise gehärtetes Kokosfett]
     process:
       en: "Coconut oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
@@ -62,7 +62,7 @@ variants:
   - id: fully-hydrogenated
     names:
       en: [fully hydrogenated coconut oil, totally hydrogenated coconut oil, fully hydrogenated coconut fat]
-      pl: [całkowicie utwardzony olej kokosowy, olej kokosowy całkowicie utwardzony, w pełni utwardzony olej kokosowy, olej kokosowy w pełni utwardzony, całkowicie uwodorniony olej kokosowy, olej kokosowy całkowicie uwodorniony, w pełni uwodorniony olej kokosowy, olej kokosowy w pełni uwodorniony, całkowicie utwardzony tłuszcz kokosowy, tłuszcz kokosowy całkowicie utwardzony, w pełni utwardzony tłuszcz kokosowy, tłuszcz kokosowy w pełni utwardzony, całkowicie uwodorniony tłuszcz kokosowy, tłuszcz kokosowy całkowicie uwodorniony, w pełni uwodorniony tłuszcz kokosowy, tłuszcz kokosowy w pełni uwodorniony]
+      pl: [całkowicie utwardzony olej kokosowy, olej kokosowy całkowicie utwardzony, w pełni utwardzony olej kokosowy, olej kokosowy w pełni utwardzony, całkowicie uwodorniony olej kokosowy, olej kokosowy całkowicie uwodorniony, w pełni uwodorniony olej kokosowy, olej kokosowy w pełni uwodorniony, całkowicie utwardzony tłuszcz kokosowy, tłuszcz kokosowy całkowicie utwardzony, w pełni utwardzony tłuszcz kokosowy, tłuszcz kokosowy w pełni utwardzony, całkowicie uwodorniony tłuszcz kokosowy, tłuszcz kokosowy całkowicie uwodorniony, w pełni uwodorniony tłuszcz kokosowy, tłuszcz kokosowy w pełni uwodorniony, całkowicie utwardzony tłuszcz roślinny kokosowy, tłuszcz roślinny kokosowy całkowicie utwardzony, całkowicie utwardzony olej roślinny kokosowy, olej roślinny kokosowy całkowicie utwardzony, całkowicie utwardzone tłuszcze roślinne kokosowe, tłuszcze roślinne kokosowe całkowicie utwardzone, całkowicie utwardzone oleje roślinne kokosowe, oleje roślinne kokosowe całkowicie utwardzone]
       de: [vollständig gehärtetes Kokosöl, vollständig gehärtetes Kokosfett]
     process:
       en: "Coconut oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."

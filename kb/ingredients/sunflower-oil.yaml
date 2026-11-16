@@ -2,7 +2,7 @@ id: sunflower-oil
 type: fat
 names:
   en: [sunflower oil, sunflower seed oil, non-hydrogenated sunflower oil, non hydrogenated sunflower oil, unhydrogenated sunflower oil, non-hydrogenated sunflower seed oil, non hydrogenated sunflower seed oil, unhydrogenated sunflower seed oil]
-  pl: [olej słonecznikowy, olej roślinny słonecznikowy, tłuszcz roślinny słonecznikowy, słonecznikowy olej roślinny, oleje roślinne słonecznikowe, oleje roślinne słonecznikowy]
+  pl: [olej słonecznikowy, olej roślinny słonecznikowy, tłuszcz roślinny słonecznikowy, słonecznikowy olej roślinny, tłuszcze roślinne słonecznikowe, oleje roślinne słonecznikowe, oleje roślinne słonecznikowy]
   de: [Sonnenblumenöl, ungehärtetes Sonnenblumenöl, nicht gehärtetes Sonnenblumenöl]
 summary:
   en: >-
@@ -28,7 +28,7 @@ variants:
   - id: hydrogenated
     names:
       en: [hydrogenated sunflower oil]
-      pl: [utwardzony olej słonecznikowy, olej słonecznikowy utwardzony, uwodorniony olej słonecznikowy, olej słonecznikowy uwodorniony]
+      pl: [utwardzony olej słonecznikowy, olej słonecznikowy utwardzony, uwodorniony olej słonecznikowy, olej słonecznikowy uwodorniony, utwardzony tłuszcz roślinny słonecznikowy, tłuszcz roślinny słonecznikowy utwardzony, utwardzony olej roślinny słonecznikowy, olej roślinny słonecznikowy utwardzony, utwardzone tłuszcze roślinne słonecznikowe, tłuszcze roślinne słonecznikowe utwardzone, utwardzone oleje roślinne słonecznikowe, oleje roślinne słonecznikowe utwardzone]
       de: [gehärtetes Sonnenblumenöl]
     process:
       en: "Sunflower oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
@@ -37,7 +37,7 @@ variants:
   - id: partially-hydrogenated
     names:
       en: [partially hydrogenated sunflower oil]
-      pl: [częściowo utwardzony olej słonecznikowy, olej słonecznikowy częściowo utwardzony, częściowo uwodorniony olej słonecznikowy, olej słonecznikowy częściowo uwodorniony]
+      pl: [częściowo utwardzony olej słonecznikowy, olej słonecznikowy częściowo utwardzony, częściowo uwodorniony olej słonecznikowy, olej słonecznikowy częściowo uwodorniony, częściowo utwardzony tłuszcz roślinny słonecznikowy, tłuszcz roślinny słonecznikowy częściowo utwardzony, częściowo utwardzony olej roślinny słonecznikowy, olej roślinny słonecznikowy częściowo utwardzony, częściowo utwardzone tłuszcze roślinne słonecznikowe, tłuszcze roślinne słonecznikowe częściowo utwardzone, częściowo utwardzone oleje roślinne słonecznikowe, oleje roślinne słonecznikowe częściowo utwardzone]
       de: [teilweise gehärtetes Sonnenblumenöl]
     process:
       en: "Sunflower oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
@@ -46,7 +46,7 @@ variants:
   - id: fully-hydrogenated
     names:
       en: [fully hydrogenated sunflower oil, totally hydrogenated sunflower oil]
-      pl: [całkowicie utwardzony olej słonecznikowy, olej słonecznikowy całkowicie utwardzony, w pełni utwardzony olej słonecznikowy, olej słonecznikowy w pełni utwardzony, całkowicie uwodorniony olej słonecznikowy, olej słonecznikowy całkowicie uwodorniony, w pełni uwodorniony olej słonecznikowy, olej słonecznikowy w pełni uwodorniony]
+      pl: [całkowicie utwardzony olej słonecznikowy, olej słonecznikowy całkowicie utwardzony, w pełni utwardzony olej słonecznikowy, olej słonecznikowy w pełni utwardzony, całkowicie uwodorniony olej słonecznikowy, olej słonecznikowy całkowicie uwodorniony, w pełni uwodorniony olej słonecznikowy, olej słonecznikowy w pełni uwodorniony, całkowicie utwardzony tłuszcz roślinny słonecznikowy, tłuszcz roślinny słonecznikowy całkowicie utwardzony, całkowicie utwardzony olej roślinny słonecznikowy, olej roślinny słonecznikowy całkowicie utwardzony, całkowicie utwardzone tłuszcze roślinne słonecznikowe, tłuszcze roślinne słonecznikowe całkowicie utwardzone, całkowicie utwardzone oleje roślinne słonecznikowe, oleje roślinne słonecznikowe całkowicie utwardzone]
       de: [vollständig gehärtetes Sonnenblumenöl]
     process:
       en: "Sunflower oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."

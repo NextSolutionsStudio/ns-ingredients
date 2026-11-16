@@ -26,14 +26,6 @@ summary:
     i potwierdził to samo ADI. W organizmie rozkłada się z uwolnieniem fenyloalaniny, więc prawo UE
     wymaga ostrzeżenia na etykiecie dla osób z fenyloketonurią.
 assertions:
-  - code: origin.chemical_synthesis
-    certainty: yes
-    kind: estimate
-    grade: B
-    note:
-      en: "Manufactured by coupling L-aspartic acid and L-phenylalanine methyl ester (chemically via protected aspartic anhydride or enzymatically via protease catalysis) and crystallisation."
-      pl: "Wytwarzany przez sprzęganie kwasu L-asparaginowego i estru metylowego L-fenyloalaniny (chemicznie przez chroniony bezwodnik asparaginowy lub enzymatycznie z udziałem proteazy) oraz krystalizację."
-    sources: [{ id: efsa-aspartame-2013 }]
   - code: processing.non_sugar_sweetener
     certainty: yes
     kind: fact
@@ -99,5 +91,5 @@ reference_values:
 review_status: draft
 provenance: ai-drafted
 review_notes:
-  - "origin.chemical_synthesis graded B/estimate because sources-pack/efsa-2013-aspartame.txt was empty; synthesis pathway verified via search_web summary of EFSA 2013 Opinion 3496 (PMC4004269) rather than full PDF §3.1.3."
+  - "origin.chemical_synthesis omitted: sources-pack/efsa-2013-aspartame.txt was empty and EFSA 2013 §3.1.3 was not opened (would also require checking whether chemical synthesis vs enzymatic coupling covers all units)."
   - "diet.vegan not asserted: no opened source this session confirms whether the phenylalanine/aspartic acid feedstocks are exclusively fermentation-derived."

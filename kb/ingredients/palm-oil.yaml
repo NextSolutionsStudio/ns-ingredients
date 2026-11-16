@@ -47,7 +47,7 @@ variants:
   - id: hydrogenated
     names:
       en: [hydrogenated palm oil, hydrogenated palm fat]
-      pl: [utwardzony olej palmowy, olej palmowy utwardzony, uwodorniony olej palmowy, olej palmowy uwodorniony, utwardzony tłuszcz palmowy, tłuszcz palmowy utwardzony, uwodorniony tłuszcz palmowy, tłuszcz palmowy uwodorniony]
+      pl: [utwardzony olej palmowy, olej palmowy utwardzony, uwodorniony olej palmowy, olej palmowy uwodorniony, utwardzony tłuszcz palmowy, tłuszcz palmowy utwardzony, uwodorniony tłuszcz palmowy, tłuszcz palmowy uwodorniony, utwardzony tłuszcz roślinny palmowy, tłuszcz roślinny palmowy utwardzony, utwardzony olej roślinny palmowy, olej roślinny palmowy utwardzony, utwardzone tłuszcze roślinne palmowe, tłuszcze roślinne palmowe utwardzone, utwardzone oleje roślinne palmowe, oleje roślinne palmowe utwardzone]
       de: [gehärtetes Palmöl, gehärtetes Palmfett]
     process:
       en: "Palm oil or palm fat hardened by hydrogenation; the label does not specify partial or full hydrogenation."
@@ -56,7 +56,7 @@ variants:
   - id: partially-hydrogenated
     names:
       en: [partially hydrogenated palm oil, partially hydrogenated palm fat]
-      pl: [olej palmowy częściowo utwardzony, częściowo utwardzony olej palmowy, tłuszcz palmowy częściowo utwardzony, częściowo utwardzony tłuszcz palmowy, olej palmowy częściowo uwodorniony, częściowo uwodorniony olej palmowy, tłuszcz palmowy częściowo uwodorniony, częściowo uwodorniony tłuszcz palmowy]
+      pl: [olej palmowy częściowo utwardzony, częściowo utwardzony olej palmowy, tłuszcz palmowy częściowo utwardzony, częściowo utwardzony tłuszcz palmowy, olej palmowy częściowo uwodorniony, częściowo uwodorniony olej palmowy, tłuszcz palmowy częściowo uwodorniony, częściowo uwodorniony tłuszcz palmowy, częściowo utwardzony tłuszcz roślinny palmowy, tłuszcz roślinny palmowy częściowo utwardzony, częściowo utwardzony olej roślinny palmowy, olej roślinny palmowy częściowo utwardzony, częściowo utwardzone tłuszcze roślinne palmowe, tłuszcze roślinne palmowe częściowo utwardzone, częściowo utwardzone oleje roślinne palmowe, oleje roślinne palmowe częściowo utwardzone]
       de: [teilweise gehärtetes Palmöl, teilweise gehärtetes Palmfett]
     process:
       en: "Palm oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
@@ -65,7 +65,7 @@ variants:
   - id: fully-hydrogenated
     names:
       en: [fully hydrogenated palm oil, totally hydrogenated palm oil, fully hydrogenated palm fat]
-      pl: [olej palmowy całkowicie utwardzony, całkowicie utwardzony olej palmowy, tłuszcz palmowy całkowicie utwardzony, całkowicie utwardzony tłuszcz palmowy, olej palmowy w pełni utwardzony, w pełni utwardzony olej palmowy, tłuszcz palmowy w pełni utwardzony, w pełni utwardzony tłuszcz palmowy, olej palmowy całkowicie uwodorniony, całkowicie uwodorniony olej palmowy, tłuszcz palmowy całkowicie uwodorniony, całkowicie uwodorniony tłuszcz palmowy, olej palmowy w pełni uwodorniony, w pełni uwodorniony olej palmowy, tłuszcz palmowy w pełni uwodorniony, w pełni uwodorniony tłuszcz palmowy]
+      pl: [olej palmowy całkowicie utwardzony, całkowicie utwardzony olej palmowy, tłuszcz palmowy całkowicie utwardzony, całkowicie utwardzony tłuszcz palmowy, olej palmowy w pełni utwardzony, w pełni utwardzony olej palmowy, tłuszcz palmowy w pełni utwardzony, w pełni utwardzony tłuszcz palmowy, olej palmowy całkowicie uwodorniony, całkowicie uwodorniony olej palmowy, tłuszcz palmowy całkowicie uwodorniony, całkowicie uwodorniony tłuszcz palmowy, olej palmowy w pełni uwodorniony, w pełni uwodorniony olej palmowy, tłuszcz palmowy w pełni uwodorniony, w pełni uwodorniony tłuszcz palmowy, całkowicie utwardzony tłuszcz roślinny palmowy, tłuszcz roślinny palmowy całkowicie utwardzony, całkowicie utwardzony olej roślinny palmowy, olej roślinny palmowy całkowicie utwardzony, całkowicie utwardzone tłuszcze roślinne palmowe, tłuszcze roślinne palmowe całkowicie utwardzone, całkowicie utwardzone oleje roślinne palmowe, oleje roślinne palmowe całkowicie utwardzone]
       de: [vollständig gehärtetes Palmöl, vollständig gehärtetes Palmfett]
     process:
       en: "Palm oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
