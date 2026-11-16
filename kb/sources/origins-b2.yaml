@@ -47,69 +47,6 @@ sources:
     accessed: '2026-11-16'
     note: "Full text §§3.1, 3.2.1, 3.2.3.3 read in sources-pack/efsa-e473-sucrose-esters.txt."
 
-  - id: efsa-e481-e482-2013
-    type: regulatory_opinion
-    title: "Scientific Opinion on the re-evaluation of sodium stearoyl-2-lactylate (E 481) and calcium stearoyl-2-lactylate (E 482) as food additives"
-    publisher: EFSA
-    authors: EFSA ANS Panel
-    year: 2013
-    url: https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2013.3144
-    doi: 10.2903/j.efsa.2013.3144
-    licence: CC-BY-4.0
-    accessed: '2026-11-16'
-    note: "Summary excerpt via search_web only (direct PDF not fetched); cross-checked with JECFA INS 481(i) and Reg (EU) No 231/2012 E 481 Definition."
-
-  - id: efsa-e304-2015
-    type: regulatory_opinion
-    title: "Scientific Opinion on the re-evaluation of ascorbyl palmitate (E 304(i)) and ascorbyl stearate (E 304(ii)) as food additives"
-    publisher: EFSA
-    authors: EFSA ANS Panel
-    year: 2015
-    url: https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2015.4289
-    doi: 10.2903/j.efsa.2015.4289
-    licence: CC-BY-4.0
-    accessed: '2026-11-16'
-    note: "Abstract read in sources-pack/efsa-e304-ascorbyl-palmitate.txt (PMC13189431); esterification/fatty-acid synthesis excerpts retrieved via search_web + JECFA INS 304."
-
-  - id: efsa-ascorbates-2015
-    type: regulatory_opinion
-    title: "Scientific Opinion on the re-evaluation of ascorbic acid (E 300), sodium ascorbate (E 301) and calcium ascorbate (E 302) as food additives"
-    publisher: EFSA
-    authors: EFSA ANS Panel
-    year: 2015
-    url: https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2015.4087
-    doi: 10.2903/j.efsa.2015.4087
-    licence: CC-BY-4.0
-    accessed: '2026-11-16'
-    note: "Manufacturing excerpt retrieved via search_web only (direct PDF not fetched): carbohydrate fermentation + chemical synthesis of L-ascorbic acid neutralised with sodium base for E 301."
-
-  - id: jecfa-edta-e385
-    type: monograph
-    title: "Calcium disodium ethylenediaminetetraacetate (INS 385) - Combined Compendium of Food Additive Specifications"
-    publisher: FAO/WHO JECFA
-    url: https://www.fao.org/fileadmin/user_upload/jecfa/foodadditives/chem/ista/calcium-disodium-ethylenediaminetetraacetate.pdf
-    licence: CC-BY-NC-SA-3.0-IGO
-    accessed: '2026-11-16'
-    note: "JECFA monograph excerpt retrieved via search_web: chemical synthesis from ethylenediamine, formaldehyde and cyanide/NaOH; residual formaldehyde limit <= 5 mg/kg."
-
-  - id: jecfa-ammonium-carbonate-503
-    type: monograph
-    title: "Ammonium carbonate (INS 503(i)) and ammonium hydrogen carbonate (INS 503(ii)) - JECFA Food Additive Specifications"
-    publisher: FAO/WHO JECFA
-    url: https://www.fao.org/food-safety-quality/scientific-advice/jecfa/jecfa-additives/en/
-    licence: CC-BY-NC-SA-3.0-IGO
-    accessed: '2026-11-16'
-    note: "JECFA entry excerpt retrieved via search_web: manufactured by reaction of ammonia and carbon dioxide."
-
-  - id: jecfa-acetates-260-262
-    type: monograph
-    title: "Acetic acid, glacial (INS 260) and Sodium acetate (INS 262(i)) - Combined Compendium of Food Additive Specifications"
-    publisher: FAO/WHO JECFA
-    url: https://www.fao.org/food-safety-quality/scientific-advice/jecfa/jecfa-additives/en/
-    licence: CC-BY-NC-SA-3.0-IGO
-    accessed: '2026-11-16'
-    note: "JECFA specifications excerpt retrieved via search_web: INS 260 commercial synthesis via hydrocarbon/acetaldehyde oxidation or methanol/CO reaction, neutralised with sodium alkali to INS 262."
-
   - id: usgs-mcs-soda-ash-2025
     type: dataset
     title: "Mineral Commodity Summaries 2025 - Soda Ash"
@@ -119,7 +56,7 @@ sources:
     doi: 10.3133/mcs2025
     licence: public-domain
     accessed: '2026-11-16'
-    note: "USGS Soda Ash summary retrieved via search_web: covers both natural mineral refining from trona/brines (US, Turkey) and synthetic chemical Solvay production (China, larger global volume share)."
+    note: "USGS Soda Ash Statistics and Information page opened: defines natural soda ash (refined from trona or sodium-carbonate-bearing brines) and synthetic soda ash (manufactured from chemical processes)."
 
   - id: acevedo-rocha-2019-bvit
     type: review
@@ -130,7 +67,7 @@ sources:
     doi: 10.1016/j.copbio.2018.07.006
     licence: publisher-subscription
     accessed: '2026-11-16'
-    note: "Abstract/summary retrieved via search_web and sources-pack/review-b-vitamin-manufacture.txt: fossil-derived chemical synthesis remains dominant for B1, B3, B5 and B6 vs emerging fermentative routes."
+    note: "Abstract only (PMID 30138794, sources-pack/review-b-vitamin-manufacture.txt): most current B-vitamin production uses non-renewable chemical methods; fermentative bioprocesses still face hurdles to reach the market."
 
   - id: wang-2021-vitamins-pmc8247775
     type: review
@@ -141,7 +78,7 @@ sources:
     doi: 10.3389/fbioe.2021.661562
     licence: CC-BY-4.0
     accessed: '2026-11-16'
-    note: "PMC open-access summary retrieved via search_web: documents commercial chemical synthesis of thiamine, niacin, pantothenic acid and pyridoxine alongside metabolic engineering research."
+    note: "Full text opened (PMC8247775, Europe PMC): reviews B-vitamin (B1, B3, B5, B6) and vitamin C production, noting most B vitamins are manufactured by chemical synthesis alongside developing microbial cell factories, and commercial L-ascorbic acid manufacture via the Reichstein process and two-step fermentation."
 
   - id: tao-yeast-extract-pmc9998214
     type: review
@@ -151,9 +88,9 @@ sources:
     url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9998214/
     doi: 10.4014/jmb.2207.07057
     pmid: '36474327'
-    licence: CC-BY-NC-4.0
+    licence: CC-BY-4.0
     accessed: '2026-11-16'
-    note: "PMC abstract/summary retrieved via search_web + sources-pack/review-yeast-extract.txt: produced via autolysis/enzymatic hydrolysis of propagated or spent brewer's Saccharomyces cerevisiae biomass."
+    note: "Full text opened (PMC9998214, Europe PMC): yeast extract is prepared mainly from waste brewer's yeast (Saccharomyces cerevisiae, alongside baker's yeast) predominantly via autolysis, as well as plasmolysis, enzymatic lysis or physical disruption."
 
   - id: pmc8701098-vitd2-yeast
     type: observational
@@ -164,7 +101,7 @@ sources:
     doi: 10.3390/foods10123142
     licence: CC-BY-4.0
     accessed: '2026-11-16'
-    note: "PMC open-access summary retrieved via search_web: UV-B photoconversion of fungal/yeast ergosterol (Saccharomyces cerevisiae or mushrooms) to ergocalciferol (vitamin D2)."
+    note: "Full text opened (PMC8701098, Europe PMC): UV-B photoconversion of fungal/yeast ergosterol (Saccharomyces cerevisiae or mushrooms) to ergocalciferol (vitamin D2)."
 
   - id: gadelha-2014-gossypol-pmc4033412
     type: review
@@ -175,7 +112,7 @@ sources:
     doi: 10.1155/2014/231635
     licence: CC-BY-3.0
     accessed: '2026-11-16'
-    note: "Summary retrieved via search_web + sources-pack/review-cottonseed-oil-gossypol.txt: solvent extraction and alkali refining removes free gossypol from cottonseed oil."
+    note: "Full text opened (PMC4033412, Europe PMC): reviews gossypol in cotton (Gossypium spp.) seeds and cottonseed oil/meal toxicity in animal feed."
 
   - id: usda-ers-ge-2025
     type: dataset
@@ -185,7 +122,7 @@ sources:
     url: https://www.ers.usda.gov/data-products/adoption-of-genetically-engineered-crops-in-the-us/
     licence: public-domain
     accessed: '2026-11-16'
-    note: "USDA ERS summary retrieved via search_web: >90% of U.S. soybean (96% HT), corn (92% HT), and upland cotton (93% HT) acreage planted with genetically engineered varieties."
+    note: "USDA ERS data product landing page opened: summarizes adoption of herbicide-tolerant and insect-resistant corn, cotton, and soybeans in the United States (2000-25); downloadable XLSX/CSV tables not opened."
 
   - id: gutierrez-2025-soda-ash
     type: review

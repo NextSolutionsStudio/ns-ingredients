@@ -36,31 +36,22 @@ assertions:
   - code: origin.chemical_synthesis
     certainty: 'yes'
     kind: estimate
-    grade: B
+    grade: C
     note:
       en: >-
-        Industrial calcium D-pantothenate and dexpanthenol are manufactured primarily by chemical synthesis
-        condensing resolved D-pantolactone (from isobutyraldehyde, formaldehyde and cyanide/CO precursors)
-        with beta-alanine salts.
+        Most current B-vitamin production uses non-renewable chemical methods while fermentative processes still
+        face hurdles to reach the market (Acevedo-Rocha et al. 2019); Wang et al. (2021) note that most B
+        vitamins are manufactured by chemical synthesis alongside developing microbial routes for D-pantothenic
+        acid.
       pl: >-
-        Przemysłowy D-pantotenian wapnia i dekspantenol wytwarza się głównie w syntezie chemicznej przez
-        kondensację rozdzielonego D-pantolaktonu z solami beta-alaniny.
+        Większość obecnych metod produkcji witamin z grupy B opiera się na metodach chemicznych z
+        nieodnawialnych źródeł, a procesy fermentacyjne napotykają jeszcze bariery w drodze na rynek
+        (Acevedo-Rocha i in. 2019); Wang i in. (2021) wskazują, że większość witamin z grupy B wytwarza się w
+        syntezie chemicznej, obok rozwijanych metod mikrobiologicznych dla kwasu D-pantotenowego.
     sources:
       - id: acevedo-rocha-2019-bvit
       - id: wang-2021-vitamins-pmc8247775
-  - code: origin.petrochemical_synthetic
-    certainty: maybe
-    kind: estimate
-    grade: B
-    note:
-      en: >-
-        Chemical pantolactone/beta-alanine synthesis relies largely on petrochemical precursors, though
-        fermentative/biocatalytic routes are emerging.
-      pl: >-
-        Chemiczna synteza pantolaktonu i beta-alaniny opiera się w dużej mierze na surowcach
-        petrochemicznych, choć rozwijane są także ścieżki fermentacyjne i biokatalityczne.
-    sources:
-      - id: acevedo-rocha-2019-bvit
+        locator: "Water-Soluble Vitamins - B Vitamins & Vitamin B5"
   - code: diet.vegan
     certainty: 'yes'
     kind: estimate

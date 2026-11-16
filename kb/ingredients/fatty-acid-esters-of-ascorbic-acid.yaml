@@ -12,15 +12,15 @@ functions:
   - antioxidant
 summary:
   en: >-
-    Fat-soluble antioxidants formed by chemically esterifying L-ascorbic acid (vitamin C) with palmitic acid
-    (E 304(i), ascorbyl palmitate) or stearic acid (E 304(ii), ascorbyl stearate). Used in oils, margarines
-    and infant formulae to prevent fat rancidity. Commercial palmitic and stearic acids can derive from
-    vegetable oils (such as palm oil) or animal fats.
+    Fat-soluble antioxidants consisting of esters of L-ascorbic acid (vitamin C) with palmitic acid (E 304(i),
+    ascorbyl palmitate) or stearic acid (E 304(ii), ascorbyl stearate). Used in oils, margarines and infant
+    formulae to prevent fat rancidity. EU specifications define E 304(i)-(ii) chemically without naming
+    whether the fatty acids derive from vegetable oils or animal fats.
   pl: >-
-    Przeciwutleniacze rozpuszczalne w tłuszczach, otrzymywane przez chemiczną estryfikację kwasu
-    L-askorbinowego (witaminy C) kwasem palmitynowym (E 304(i), palmitynian askorbylu) lub kwasem
-    stearynowym (E 304(ii), stearynian askorbylu). Stosowane m.in. w olejach i margarynach; kwasy
-    tłuszczowe mogą pochodzić z olejów roślinnych (np. palmowego) lub tłuszczów zwierzęcych.
+    Przeciwutleniacze rozpuszczalne w tłuszczach: estry kwasu L-askorbinowego (witaminy C) z kwasem
+    palmitynowym (E 304(i), palmitynian askorbylu) lub kwasem stearynowym (E 304(ii), stearynian askorbylu).
+    Stosowane m.in. w olejach i margarynach; specyfikacje UE definiują E 304(i)-(ii) bez wskazania, czy kwasy
+    tłuszczowe pochodzą z olejów roślinnych czy tłuszczów zwierzęcych.
 variants:
   - id: ascorbyl-palmitate
     names:
@@ -61,32 +61,20 @@ variants:
       - 'ascorbyl\s*stearat'
       - 'e\s*304\s*ii\b'
 assertions:
-  - code: origin.chemical_synthesis
-    certainty: 'yes'
-    kind: estimate
-    grade: B
-    note:
-      en: >-
-        EFSA (2015) and JECFA INS 304 document commercial manufacture by acid-catalysed chemical esterification
-        (sulfuric acid) or enzymatic esterification of L-ascorbic acid with palmitic or stearic acid.
-      pl: >-
-        EFSA (2015) i monografia JECFA INS 304 dokumentują produkcję handlową przez estryfikację kwasu
-        L-askorbinowego kwasem palmitynowym lub stearynowym (zwykle w obecności kwasu siarkowego).
-    sources:
-      - id: efsa-e304-2015
   - code: origin.vegetable_oil_derived
     certainty: maybe
     kind: estimate
     grade: B
     note:
       en: >-
-        Palmitic and stearic acid feedstocks used for E 304(i)/(ii) are commonly obtained from vegetable oils
-        (such as palm oil), though JECFA/EU purity specifications do not restrict against animal fats.
+        Reg (EU) No 231/2012 specifies E 304(i) (ascorbyl palmitate) and E 304(ii) (ascorbyl stearate) by
+        chemical identity without naming the fat source of the palmitic or stearic acid moiety; vegetable oils
+        are a plausible source, which food labels do not disclose.
       pl: >-
-        Kwas palmitynowy i stearynowy używane do wytwarzania E 304(i)/(ii) pochodzą często z olejów
-        roślinnych (np. oleju palmowego), lecz specyfikacje nie wykluczają tłuszczów zwierzęcych.
+        Rozporządzenie (UE) nr 231/2012 definiuje E 304(i) (palmitynian askorbylu) i E 304(ii) (stearynian
+        askorbylu) wyłącznie przez tożsamość chemiczną, nigdy nie podając źródła tłuszczu dla reszty kwasu
+        palmitynowego lub stearynowego; oleje roślinne są jednym z możliwych źródeł, czego etykieta nie ujawnia.
     sources:
-      - id: efsa-e304-2015
       - id: reg-231-2012
         locator: E 304(i)-(ii)
   - code: origin.animal
@@ -95,13 +83,13 @@ assertions:
     grade: B
     note:
       en: >-
-        Reg (EU) No 231/2012 specifications for E 304(i)-(ii) do not exclude palmitic or stearic acid derived
-        from animal fats, and labels do not distinguish botanical vs animal fat origin.
+        Reg (EU) No 231/2012 specifies E 304(i)-(ii) by chemical identity without naming or excluding an animal
+        fat source for the palmitic or stearic acid moiety, and food labels do not disclose the fat source.
       pl: >-
-        Specyfikacje E 304(i)-(ii) w rozporządzeniu (UE) nr 231/2012 nie wykluczają kwasu palmitynowego lub
-        stearynowego pochodzenia zwierzęcego, a etykieta nie rozróżnia ich źródła.
+        Rozporządzenie (UE) nr 231/2012 definiuje E 304(i)-(ii) wyłącznie przez tożsamość chemiczną, nigdy nie
+        podając ani nie wykluczając źródła zwierzęcego dla reszty kwasu palmitynowego lub stearynowego, a
+        etykieta nie ujawnia pochodzenia tłuszczu.
     sources:
-      - id: efsa-e304-2015
       - id: reg-231-2012
         locator: E 304(i)-(ii)
 regulatory:
@@ -115,3 +103,4 @@ review_status: draft
 provenance: ai-drafted
 review_notes:
   - "Covers EU additive group E 304 (sub-items E 304(i) ascorbyl palmitate and E 304(ii) ascorbyl stearate); generated Wikidata divides these across e304 and e305."
+  - "EFSA 2015 re-evaluation (doi:10.2903/j.efsa.2015.4289, PMID 42169855, abstract only in sources-pack/efsa-e304-ascorbyl-palmitate.txt) discusses pre-systemic hydrolysis and safety (no ADI established, no safety concern) without describing esterification manufacture; Reg (EU) No 231/2012 E 304(i)-(ii) states chemical identity only, so origin.chemical_synthesis was omitted."

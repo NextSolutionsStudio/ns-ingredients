@@ -18,7 +18,6 @@ names:
     - kwaśny węglan sodu
     - soda oczyszczona
     - soda do pieczenia
-    - soda amoniakalna
     - bikarbonat
   de:
     - Natriumcarbonate
@@ -44,29 +43,65 @@ assertions:
     grade: B
     note:
       en: >-
-        Synthetic soda ash is produced at large global scale via the Solvay ammonia-soda process from
-        sodium chloride brine, limestone and ammonia (USGS MCS 2025 reports synthetic production accounts for
-        the larger global share, led by China).
+        Soda ash is either manufactured by chemical synthesis — chiefly the Solvay process from sodium chloride
+        brine, calcined limestone (CaCO3) and cyclic ammonia, which accounts for ~75% of world production
+        (Gutierrez et al. 2025, Section 1 & Table 1) — or refined from natural mineral deposits (USGS).
       pl: >-
-        Syntetyczna soda kalcynowana jest wytwarzana na wielką skalę w procesie Solvaya z solanki, kamienia
-        wapiennego i amoniaku (USGS MCS 2025 wskazuje większy udział produkcji syntetycznej na świecie).
+        Soda kalcynowana jest wytwarzana albo w drodze syntezy chemicznej — głównie w procesie Solvaya z
+        solanki NaCl, wypalanego wapienia (CaCO3) i zawracanego amoniaku, co stanowi ok. 75% światowej
+        produkcji (Gutierrez i in. 2025, sekcja 1 i tabela 1) — albo oczyszczana ze złóż mineralnych (USGS).
     sources:
       - id: usgs-mcs-soda-ash-2025
+      - id: gutierrez-2025-soda-ash
+        locator: "Section 1 & Table 1"
   - code: origin.mineral
-    certainty: yes
+    certainty: maybe
     kind: estimate
     grade: B
     note:
       en: >-
-        Both commercial routes to soda ash start from mineral raw materials: natural soda ash is refined
-        directly from mined trona ore, nahcolite or mineral brines (USGS MCS 2025), while the synthetic
-        Solvay route (~75% of global production) reacts sodium chloride brine with calcined limestone
-        (CaCO3) (Gutierrez et al. 2025, Section 1 & Table 1).
+        Natural soda ash is refined from the mineral trona or sodium-carbonate-bearing brines (USGS), whereas
+        ~75% of global soda ash output is produced synthetically by the Solvay process from NaCl brine and
+        calcined limestone (Gutierrez et al. 2025, Section 1 & Table 1); labels do not state which route was
+        used.
       pl: >-
-        Obie przemysłowe drogi otrzymywania sody opierają się na surowcach mineralnych: soda naturalna jest
-        oczyszczana bezpośrednio z wydobywanej trony, nahkolitu lub solanek mineralnych (USGS MCS 2025),
-        natomiast synteza Solvaya (ok. 75% światowej produkcji) wykorzystuje solankę (NaCl) i wypalany
-        wapień (CaCO3) (Gutierrez i in. 2025, sekcja 1 i tabela 1).
+        Naturalna soda kalcynowana jest oczyszczana z minerału trony lub solanek bogatych w węglan sodu
+        (USGS), natomiast ok. 75% światowej produkcji powstaje syntetycznie w procesie Solvaya z solanki NaCl
+        i wypalanego wapienia (Gutierrez i in. 2025, sekcja 1 i tabela 1); etykiety nie wskazują użytej metody.
+    sources:
+      - id: usgs-mcs-soda-ash-2025
+      - id: gutierrez-2025-soda-ash
+        locator: "Section 1 & Table 1"
+  - code: diet.vegan
+    certainty: 'yes'
+    kind: estimate
+    grade: B
+    note:
+      en: >-
+        Both commercial routes — refining natural trona or sodium-carbonate brines (USGS) and chemical synthesis
+        such as the Solvay process from NaCl brine and calcined limestone (~75% of world output; Gutierrez et al.
+        2025, Section 1 & Table 1) — use mineral/inorganic feedstocks with no animal material.
+      pl: >-
+        Obie drogi przemysłowe — oczyszczanie naturalnej trony lub solanek (USGS) oraz synteza chemiczna, np.
+        proces Solvaya z solanki NaCl i wapienia (~75% światowej produkcji; Gutierrez i in. 2025, sekcja 1 i
+        tabela 1) — wykorzystują surowce mineralne i nieorganiczne bez udziału materiału zwierzęcego.
+    sources:
+      - id: usgs-mcs-soda-ash-2025
+      - id: gutierrez-2025-soda-ash
+        locator: "Section 1 & Table 1"
+  - code: diet.vegetarian
+    certainty: 'yes'
+    kind: estimate
+    grade: B
+    note:
+      en: >-
+        Both commercial routes — refining natural trona or sodium-carbonate brines (USGS) and chemical synthesis
+        such as the Solvay process from NaCl brine and calcined limestone (~75% of world output; Gutierrez et al.
+        2025, Section 1 & Table 1) — use mineral/inorganic feedstocks with no animal material.
+      pl: >-
+        Obie drogi przemysłowe — oczyszczanie naturalnej trony lub solanek (USGS) oraz synteza chemiczna, np.
+        proces Solvaya z solanki NaCl i wapienia (~75% światowej produkcji; Gutierrez i in. 2025, sekcja 1 i
+        tabela 1) — wykorzystują surowce mineralne i nieorganiczne bez udziału materiału zwierzęcego.
     sources:
       - id: usgs-mcs-soda-ash-2025
       - id: gutierrez-2025-soda-ash

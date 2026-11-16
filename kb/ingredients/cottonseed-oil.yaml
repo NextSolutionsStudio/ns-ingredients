@@ -11,18 +11,18 @@ names:
     - olej roślinny bawełniany
     - tłuszcz roślinny bawełniany
     - bawełniany olej roślinny
+    - oleje roślinne bawełniane
+    - oleje roślinne bawełniany
   de:
     - Baumwollsaatöl
     - Baumwollsamenöl
 summary:
   en: >-
-    Vegetable oil extracted from cotton seeds (Gossypium spp.). Crude cottonseed oil naturally contains
-    gossypol, which is removed during alkali refining to produce edible food-grade refined cottonseed oil.
-    Upland cotton is also widely genetically engineered.
+    Vegetable oil extracted from cotton seeds (Gossypium spp.). Cotton seeds naturally contain gossypol, and
+    upland cotton is widely cultivated in genetically engineered varieties.
   pl: >-
-    Olej roślinny pozyskiwany z nasion bawełny (Gossypium spp.). Surowy olej zawiera naturalnie gossypol,
-    który usuwa się w trakcie rafinacji alkalicznej, uzyskując jadalny olej spożywczy. Bawełna jest również
-    na świecie powszechnie modyfikowana genetycznie.
+    Olej roślinny pozyskiwany z nasion bawełny (Gossypium spp.). Nasiona bawełny zawierają naturalnie
+    gossypol, a bawełna jest na świecie powszechnie uprawiana w odmianach modyfikowanych genetycznie.
 variants:
   - id: hydrogenated
     names:
@@ -100,19 +100,24 @@ assertions:
     kind: fact
     grade: A
     note:
-      en: "Extracted and alkali-refined vegetable seed oil (to remove gossypol for edible use)."
-      pl: "Ekstrahowany i rafinowany alkalicznie olej z nasion roślinnych (w celu usunięcia gossypolu)."
+      en: "Vegetable oil extracted from cotton seeds (Reg (EU) No 1169/2011 Annex VII Part A point 8)."
+      pl: "Olej roślinny pozyskiwany z nasion bawełny (Rozp. (UE) nr 1169/2011 Załącznik VII część A pkt 8)."
     sources:
       - id: reg-1169-2011
         locator: "Annex VII Part A, point 8"
-      - id: gadelha-2014-gossypol-pmc4033412
   - code: origin.gmo_derived
     certainty: maybe
     kind: estimate
     grade: B
     note:
-      en: "USDA ERS reports 93% herbicide-tolerant GE adoption on US upland cotton acreage; EU GM labelling applies where applicable."
-      pl: "USDA ERS podaje 93% udziału odmian HT w uprawach bawełny w USA; w UE obowiązują przepisy dotyczące znakowania GM."
+      en: >-
+        Upland cotton is tracked in the USDA ERS series 'Adoption of Genetically Engineered Crops in the United
+        States' (herbicide-tolerant and insect-resistant varieties); non-GM supplies also exist and an
+        ingredient list does not show origin.
+      pl: >-
+        Bawełna jest ujęta w serii USDA ERS „Adoption of Genetically Engineered Crops in the United States”
+        (odmiany odporne na herbicydy i owady); istnieją też surowce non-GM, a wykaz składników nie wskazuje
+        pochodzenia.
     sources:
       - id: usda-ers-ge-2025
   - code: processing.hydrogenated

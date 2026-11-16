@@ -208,8 +208,8 @@ assertions:
     kind: estimate
     grade: B
     note:
-      en: "Soybean is heavily genetically engineered globally (USDA ERS reports 96% HT GE adoption on US soybean acreage); non-GM soy lecithin exists and EU GM labelling rules apply above 0.9%."
-      pl: "Soja jest na świecie powszechnie modyfikowana genetycznie (USDA ERS podaje 96% udziału odmian HT w USA); istnieje też lecytyna ze soi niemodyfikowanej, a w UE obowiązuje znakowanie powyżej 0,9%."
+      en: "Soybean is tracked in the USDA ERS series 'Adoption of Genetically Engineered Crops in the United States' (herbicide-tolerant and insect-resistant varieties); non-GM soy lecithin also exists and an ingredient list does not show origin."
+      pl: "Soja jest ujęta w serii USDA ERS „Adoption of Genetically Engineered Crops in the United States” (odmiany odporne na herbicydy i owady); istnieje też lecytyna z soi non-GM, a wykaz składników nie wskazuje pochodzenia."
     sources: [{ id: usda-ers-ge-2025 }]
   - code: origin.vegetable_oil_derived
     variant: sunflower

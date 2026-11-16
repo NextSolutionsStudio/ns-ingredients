@@ -33,30 +33,21 @@ assertions:
   - code: origin.chemical_synthesis
     certainty: 'yes'
     kind: estimate
-    grade: B
+    grade: C
     note:
       en: >-
-        Commercial thiamine hydrochloride and mononitrate are manufactured industrially via multi-step
-        chemical synthesis coupling substituted pyrimidine and thiazole heterocyclic rings.
+        Most current B-vitamin production uses non-renewable chemical methods while fermentative processes still
+        face hurdles to reach the market (Acevedo-Rocha et al. 2019); Wang et al. (2021) note that chemical
+        production of thiamine has very low cost and engineered fermentation strains are not yet industrialised.
       pl: >-
-        Handlowy chlorowodorek i monoazotan tiaminy wytwarza się przemysłowo w wieloetapowej syntezie
-        chemicznej łączącej pierścień pirymidynowy i tiazolowy.
+        Większość obecnych metod produkcji witamin z grupy B opiera się na metodach chemicznych z
+        nieodnawialnych źródeł, a procesy fermentacyjne napotykają jeszcze bariery w drodze na rynek
+        (Acevedo-Rocha i in. 2019); Wang i in. (2021) wskazują, że chemiczna produkcja tiaminy jest bardzo
+        tania, a szczepy fermentacyjne nie osiągnęły jeszcze skali przemysłowej.
     sources:
       - id: acevedo-rocha-2019-bvit
       - id: wang-2021-vitamins-pmc8247775
-  - code: origin.petrochemical_synthetic
-    certainty: maybe
-    kind: estimate
-    grade: B
-    note:
-      en: >-
-        Commercial chemical thiamine synthesis relies on petrochemical fine-chemical intermediates rather than
-        direct microbial fermentation.
-      pl: >-
-        Przemysłowa synteza chemiczna tiaminy opiera się na półproduktach petrochemicznych zamiast
-        bezpośredniej fermentacji mikrobiologicznej.
-    sources:
-      - id: acevedo-rocha-2019-bvit
+        locator: "Water-Soluble Vitamins - Vitamin B1"
   - code: diet.vegan
     certainty: 'yes'
     kind: estimate

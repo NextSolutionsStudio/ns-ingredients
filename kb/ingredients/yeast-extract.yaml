@@ -22,13 +22,16 @@ assertions:
     grade: B
     note:
       en: >-
-        Manufactured by autolysis or enzymatic hydrolysis of Saccharomyces cerevisiae yeast biomass propagated
-        by aerobic fermentation (including spent brewer's yeast).
+        Prepared mainly from waste brewer's yeast (fermentation-derived Saccharomyces cerevisiae, alongside
+        baker's yeast), predominantly by autolysis (as well as plasmolysis, enzymatic lysis or physical
+        disruption) to release soluble cellular contents.
       pl: >-
-        Wytwarzany przez autolizę lub hydrolizę enzymatyczną biomasy drożdży Saccharomyces cerevisiae
-        namnażanej w fermentacji tlenowej (w tym z drożdży browarniczych).
+        Wytwarzany głównie z odpadowych drożdży browarniczych (Saccharomyces cerevisiae z fermentacji, obok
+        drożdży piekarskich), przede wszystkim przez autolizę (a także plazmolizę, lizę enzymatyczną lub
+        rozbijanie fizyczne) w celu uwolnienia rozpuszczalnej zawartości komórek.
     sources:
       - id: tao-yeast-extract-pmc9998214
+        locator: "Abstract & Yeast Extract Production Technology"
 review_status: draft
 provenance: ai-drafted
 review_notes:

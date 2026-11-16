@@ -10,6 +10,8 @@ names:
     - olej roślinny sojowy
     - tłuszcz roślinny sojowy
     - sojowy olej roślinny
+    - oleje roślinne sojowe
+    - oleje roślinne sojowy
   de:
     - Sojaöl
 summary:
@@ -148,11 +150,13 @@ assertions:
     grade: B
     note:
       en: >-
-        USDA ERS reports 96% herbicide-tolerant GE adoption on US soybean acreage; EU imports include both
-        GM and identity-preserved non-GM soybean supplies (GM labelling rules apply above 0.9%).
+        Soybean is tracked in the USDA ERS series 'Adoption of Genetically Engineered Crops in the United
+        States' (herbicide-tolerant and insect-resistant varieties); non-GM supplies also exist and an
+        ingredient list does not show origin.
       pl: >-
-        USDA ERS podaje 96% udziału odmian genetycznie modyfikowanych HT w uprawach soi w USA; dostawy w UE
-        obejmują zarówno surowiec GM, jak i certyfikowany non-GM (powyżej 0,9% obowiązuje znakowanie).
+        Soja jest ujęta w serii USDA ERS „Adoption of Genetically Engineered Crops in the United States”
+        (odmiany odporne na herbicydy i owady); istnieją też surowce non-GM, a wykaz składników nie wskazuje
+        pochodzenia.
     sources:
       - id: usda-ers-ge-2025
   - code: allergen.soybeans

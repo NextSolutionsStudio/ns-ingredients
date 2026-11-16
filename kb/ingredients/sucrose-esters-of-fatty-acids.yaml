@@ -48,17 +48,17 @@ assertions:
     grade: A
     note:
       en: >-
-        EFSA (2023) Section 3.2.1 reports that industry manufactures E 473 mainly from fatty acids derived from
-        vegetable oils (including palm, palm kernel and coconut), though animal fats are legally permitted.
+        EFSA (2023) Section 3.2.3.3 notes palm oil, palm kernel oil and coconut oil as reported vegetable-oil
+        sources of the fatty acids used for E 473, though Reg (EU) No 231/2012 also permits animal fats.
       pl: >-
-        Sekcja 3.2.1 opinii EFSA (2023) wskazuje, że przemysł wytwarza E 473 głównie z kwasów tłuszczowych z
-        olejów roślinnych (m.in. palmowego, z ziaren palmowych i kokosowego), choć tłuszcze zwierzęce są
-        prawnie dopuszczone.
+        Sekcja 3.2.3.3 opinii EFSA (2023) wymienia olej palmowy, z ziaren palmowych i kokosowy jako zgłaszane
+        roślinne źródła kwasów tłuszczowych do produkcji E 473, choć rozp. (UE) nr 231/2012 dopuszcza też
+        tłuszcze zwierzęce.
     sources:
       - id: reg-231-2012
         locator: E 473 (Definition)
       - id: efsa-e473-2023
-        locator: Section 3.2.1
+        locator: Section 3.2.3.3
   - code: origin.animal
     certainty: maybe
     kind: fact
@@ -80,14 +80,14 @@ assertions:
     grade: B
     note:
       en: >-
-        EFSA (2023) Section 3.2.1 explicitly notes industry reports palm oil and palm kernel oil (alongside
-        coconut oil) as commercial fatty-acid sources for E 473 manufacture.
+        EFSA (2023) Section 3.2.3.3 notes industry reports palm oil and palm kernel oil (alongside coconut oil)
+        as fatty-acid sources for E 473 manufacture.
       pl: >-
-        Sekcja 3.2.1 opinii EFSA (2023) wprost podaje, że przemysł zgłasza olej palmowy i z ziaren palmowych
-        (obok kokosowego) jako źródła kwasów tłuszczowych do produkcji E 473.
+        Sekcja 3.2.3.3 opinii EFSA (2023) podaje, że przemysł zgłasza olej palmowy i z ziaren palmowych (obok
+        kokosowego) jako źródła kwasów tłuszczowych do produkcji E 473.
     sources:
       - id: efsa-e473-2023
-        locator: Section 3.2.1
+        locator: Section 3.2.3.3
 regulatory:
   - jurisdiction: EU
     status: authorised

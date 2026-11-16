@@ -10,6 +10,8 @@ names:
     - olej roślinny kukurydziany
     - tłuszcz roślinny kukurydziany
     - kukurydziany olej roślinny
+    - oleje roślinne kukurydziane
+    - oleje roślinne kukurydziany
   de:
     - Maiskeimöl
     - Maisöl
@@ -114,11 +116,13 @@ assertions:
     grade: B
     note:
       en: >-
-        USDA ERS reports over 90% GE maize adoption in US production (92% HT); EU-grown non-GM maize oil is
-        also common, so origin.gmo_derived is maybe when region is unspecified.
+        Maize (corn) is tracked in the USDA ERS series 'Adoption of Genetically Engineered Crops in the United
+        States' (herbicide-tolerant and insect-resistant varieties); non-GM supplies also exist and an
+        ingredient list does not show origin.
       pl: >-
-        USDA ERS podaje ponad 90% udziału kukurydzy modyfikowanej genetycznie w USA (92% HT); na rynku UE
-        powszechny jest też olej z kukurydzy non-GM, dlatego przy braku wskazania pochodzenia jest to maybe.
+        Kukurydza jest ujęta w serii USDA ERS „Adoption of Genetically Engineered Crops in the United States”
+        (odmiany odporne na herbicydy i owady); istnieją też surowce non-GM, a wykaz składników nie wskazuje
+        pochodzenia.
     sources:
       - id: usda-ers-ge-2025
   - code: processing.hydrogenated

@@ -17,34 +17,25 @@ summary:
   pl: 'Sól sodowa kwasu askorbinowego (witaminy C), stosowana jako przeciwutleniacz, np. w peklowanych wędlinach.'
 assertions:
   - code: origin.microbial_fermentation
-    certainty: 'yes'
+    certainty: maybe
     kind: estimate
     grade: B
     note:
       en: >-
-        Parent L-ascorbic acid is manufactured industrially by microbial fermentation of D-glucose/sorbitol
-        intermediates combined with chemical conversion, then neutralised with sodium bicarbonate or
-        hydroxide to yield E 301.
+        E 301 is the monosodium salt of L-ascorbic acid (Reg (EU) No 231/2012 E 301). Parent L-ascorbic acid
+        is manufactured industrially via the Reichstein process (six chemical steps and one microbial
+        fermentation step from D-glucose/sorbitol) or via two-step bacterial fermentation routes (Wang et al.
+        2021), so a label cannot show which route or degree of fermentation was used.
       pl: >-
-        Wyjściowy kwas L-askorbinowy wytwarza się przemysłowo w procesie fermentacji mikrobiologicznej
-        półproduktów z D-glukozy/sorbitolu w połączeniu z konwersją chemiczną, a następnie zobojętnia
-        wodorowęglanem lub wodorotlenkiem sodu do E 301.
+        E 301 to sól monosodowa kwasu L-askorbinowego (Rozp. (UE) nr 231/2012 E 301). Wyjściowy kwas
+        L-askorbinowy wytwarza się przemysłowo metodą Reichsteina (sześć etapów chemicznych i jeden etap
+        fermentacji mikrobiologicznej z D-glukozy/sorbitolu) lub w dwuetapowych procesach fermentacji
+        bakteryjnej (Wang i in. 2021), więc etykieta nie wskazuje użytej metody ani udziału fermentacji.
     sources:
-      - id: efsa-ascorbates-2015
-  - code: origin.chemical_synthesis
-    certainty: 'yes'
-    kind: estimate
-    grade: B
-    note:
-      en: >-
-        Both the chemical conversion steps in parent ascorbic acid production (Reichstein or modern
-        two-step route) and neutralisation with sodium alkali to form sodium ascorbate involve industrial
-        chemical synthesis.
-      pl: >-
-        Zarówno etapy konwersji chemicznej w produkcji wyjściowego kwasu askorbinowego, jak i
-        zobojętnianie zasadą sodową do askorbinianu sodu obejmują przemysłową syntezę chemiczną.
-    sources:
-      - id: efsa-ascorbates-2015
+      - id: reg-231-2012
+        locator: "E 301"
+      - id: wang-2021-vitamins-pmc8247775
+        locator: "Water-Soluble Vitamins - Vitamin C & Figure 2"
 regulatory:
   - jurisdiction: EU
     status: authorised
@@ -60,5 +51,6 @@ review_status: draft
 provenance: ai-drafted
 review_notes:
   - >-
-    Manufacturing overview for E 300-302 (fermentation + chemical synthesis + sodium neutralisation)
-    retrieved via search_web summary of efsa-ascorbates-2015 (full PDF not opened).
+    EFSA 2015 opinion (doi:10.2903/j.efsa.2015.4087) returned a Wiley cookie wall and could not be opened;
+    left out origin.chemical_synthesis and kept origin.microbial_fermentation: maybe aligned with parent
+    ascorbic-acid.

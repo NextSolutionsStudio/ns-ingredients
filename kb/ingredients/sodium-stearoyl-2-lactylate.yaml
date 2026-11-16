@@ -33,45 +33,42 @@ assertions:
     grade: A
     note:
       en: >-
-        Reg (EU) No 231/2012 E 481 Definition and EFSA (2013) document manufacture by reacting stearic acid
-        and lactic acid with sodium neutralisation.
+        Reg (EU) No 231/2012 E 481 Definition specifies manufacture by reacting stearic acid and lactic acid
+        with sodium neutralisation.
       pl: >-
-        Definicja E 481 w rozporządzeniu (UE) nr 231/2012 oraz opinia EFSA (2013) dokumentują wytwarzanie w
-        reakcji kwasu stearynowego i kwasu mlekowego z zobojętnieniem sodowym.
+        Definicja E 481 w rozporządzeniu (UE) nr 231/2012 opisuje wytwarzanie w reakcji kwasu stearynowego i
+        kwasu mlekowego z zobojętnieniem sodowym.
     sources:
       - id: reg-231-2012
         locator: E 481 (Definition)
-      - id: efsa-e481-e482-2013
   - code: origin.vegetable_oil_derived
     certainty: maybe
     kind: estimate
     grade: B
     note:
       en: >-
-        Commercial food-grade stearic acid is commonly derived from vegetable oils (such as palm or oilseed
-        fractions), though EU specifications do not restrict it against animal fat sources.
+        Reg (EU) No 231/2012 E 481 Definition specifies commercial stearic acid without naming its botanical or
+        animal fat source; vegetable oils are a plausible source, which food labels do not disclose.
       pl: >-
-        Handlowy kwas stearynowy klasy spożywczej pochodzi często z olejów roślinnych (np. frakcji oleju
-        palmowego lub nasion oleistych), lecz specyfikacje UE nie wykluczają tłuszczów zwierzęcych.
+        Definicja E 481 w rozporządzeniu (UE) nr 231/2012 wskazuje handlowy kwas stearynowy bez określenia
+        jego roślinnego lub zwierzęcego źródła; oleje roślinne są możliwym źródłem, czego etykieta nie ujawnia.
     sources:
       - id: reg-231-2012
         locator: E 481 (Definition)
-      - id: efsa-e481-e482-2013
   - code: origin.animal
     certainty: maybe
     kind: estimate
     grade: B
     note:
       en: >-
-        Commercial stearic acid permitted for E 481 manufacture may also be produced from animal fats, and food
-        ingredient lists do not specify the fat source.
+        Reg (EU) No 231/2012 E 481 Definition does not exclude commercial stearic acid derived from animal fats,
+        and food ingredient lists do not specify the fat source.
       pl: >-
-        Handlowy kwas stearynowy dopuszczony do wytwarzania E 481 może pochodzić również z tłuszczów
-        zwierzęcych, a etykieta nie wskazuje źródła kwasu tłuszczowego.
+        Definicja E 481 w rozporządzeniu (UE) nr 231/2012 nie wyklucza handlowego kwasu stearynowego z
+        tłuszczów zwierzęcych, a etykieta nie wskazuje źródła kwasu tłuszczowego.
     sources:
       - id: reg-231-2012
         locator: E 481 (Definition)
-      - id: efsa-e481-e482-2013
 regulatory:
   - jurisdiction: EU
     status: authorised
@@ -83,3 +80,4 @@ review_status: draft
 provenance: ai-drafted
 review_notes:
   - "Created to give curated E481 coverage and fix 'stearoilo-2-mleczan sodu' matching sodium lactates (e325)."
+  - "EFSA 2013 opinion (doi:10.2903/j.efsa.2013.3144) returned a Wiley cookie wall and was not opened, so only Reg (EU) No 231/2012 E 481 Definition is cited."

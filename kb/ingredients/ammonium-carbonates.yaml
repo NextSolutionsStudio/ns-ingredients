@@ -14,6 +14,7 @@ names:
     - węglan amonu
     - wodorowęglan amonu
     - kwaśny węglan amonu
+    - soda amoniakalna
   de:
     - Ammoniumcarbonate
     - Ammoniumcarbonat
@@ -31,22 +32,6 @@ summary:
     Substancja spulchniająca do płaskich wypieków, np. herbatników i pierników: przy ogrzewaniu rozkłada się
     na amoniak, dwutlenek węgla i wodę, które ulatniają się. E 503(i) to mieszanina karbaminianu, węglanu i
     wodorowęglanu amonu; E 503(ii) to wodorowęglan amonu.
-assertions:
-  - code: origin.chemical_synthesis
-    certainty: 'yes'
-    kind: estimate
-    grade: B
-    note:
-      en: >-
-        Synthesised by reacting anhydrous ammonia and carbon dioxide under controlled aqueous conditions
-        (JECFA INS 503 specifications).
-      pl: >-
-        Syntezowany w reakcji bezwodnego amoniaku i dwutlenku węgla w kontrolowanych warunkach wodnych
-        (specyfikacja JECFA INS 503).
-    sources:
-      - id: jecfa-ammonium-carbonate-503
-      - id: reg-231-2012
-        locator: E 503(i)-(ii)
 regulatory:
   - jurisdiction: EU
     status: authorised
@@ -62,8 +47,9 @@ review_status: draft
 provenance: ai-drafted
 review_notes:
   - >-
-    Identity-only: no EFSA re-evaluation of E 503 was found and the JECFA database redirected away from the
-    fetch tool, so no assessment or reference value is recorded.
+    Identity-only: no EFSA re-evaluation of E 503 was found and the JECFA URL returned 404, so no assessment,
+    origin or diet assertion is recorded (Reg (EU) No 231/2012 E 503(i)-(ii) states composition only, not
+    synthesis).
   - >-
     Composition from Reg 231/2012 (E 503(i), E 503(ii) definitions). The decomposition on baking is general
     chemistry, stated in the summary only.

@@ -29,32 +29,21 @@ assertions:
   - code: origin.chemical_synthesis
     certainty: 'yes'
     kind: estimate
-    grade: B
+    grade: C
     note:
       en: >-
-        Commercial pyridoxine hydrochloride is manufactured industrially via multi-step chemical synthesis
-        (such as oxazole-dienophile Diels-Alder ring construction), while microbial fermentation remains
-        largely developmental.
+        Most current B-vitamin production uses non-renewable chemical methods while fermentative processes still
+        face hurdles to reach the market (Acevedo-Rocha et al. 2019); Wang et al. (2021) note that fermentative
+        production of vitamin B6 still requires further development to meet commercial demand.
       pl: >-
-        Handlowy chlorowodorek pirydoksyny wytwarza się przemysłowo w drodze wieloetapowej syntezy chemicznej
-        (np. synteza Dielsa-Aldera z oksazoli i dienofili); fermentacja mikrobiologiczna pozostaje głównie na
-        etapie badawczym.
+        Większość obecnych metod produkcji witamin z grupy B opiera się na metodach chemicznych z
+        nieodnawialnych źródeł, a procesy fermentacyjne napotykają jeszcze bariery w drodze na rynek
+        (Acevedo-Rocha i in. 2019); Wang i in. (2021) wskazują, że fermentacyjna produkcja witaminy B6 wymaga
+        dalszego rozwoju, aby sprostać zapotrzebowaniu handlowemu.
     sources:
       - id: acevedo-rocha-2019-bvit
       - id: wang-2021-vitamins-pmc8247775
-  - code: origin.petrochemical_synthetic
-    certainty: maybe
-    kind: estimate
-    grade: B
-    note:
-      en: >-
-        Total chemical synthesis of pyridoxine relies predominantly on non-renewable petrochemical fine-chemical
-        intermediates.
-      pl: >-
-        Całkowita synteza chemiczna pirydoksyny opiera się głównie na nieodnawialnych półproduktach
-        petrochemicznych.
-    sources:
-      - id: acevedo-rocha-2019-bvit
+        locator: "Water-Soluble Vitamins - Vitamin B6"
   - code: diet.vegan
     certainty: 'yes'
     kind: estimate

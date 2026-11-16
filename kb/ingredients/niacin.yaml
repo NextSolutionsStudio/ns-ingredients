@@ -80,32 +80,23 @@ assertions:
   - code: origin.chemical_synthesis
     certainty: 'yes'
     kind: estimate
-    grade: B
+    grade: C
     note:
       en: >-
-        Commercial nicotinic acid and nicotinamide for food fortification and supplements are produced
-        predominantly by industrial chemical synthesis (oxidation of alkylpyridines such as
-        3-methylpyridine or hydrolysis of 3-cyanopyridine), alongside biocatalytic nitrilase steps.
+        Most current B-vitamin production uses non-renewable chemical methods while fermentative processes still
+        face hurdles to reach the market (Acevedo-Rocha et al. 2019); Wang et al. (2021) note that most B
+        vitamins are manufactured by chemical synthesis and no systematic commercial fermentation process for
+        nicotinic acid or nicotinamide has been described.
       pl: >-
-        Handlowy kwas nikotynowy i nikotynamid do wzbogacania żywności i suplementów wytwarza się głównie w
-        drodze przemysłowej syntezy chemicznej (utlenianie alkilopirydyn, np. 3-metylopirydyny, lub hydroliza
-        3-cyjanopirydyny), czasem z etapami biokatalitycznymi.
+        Większość obecnych metod produkcji witamin z grupy B opiera się na metodach chemicznych z
+        nieodnawialnych źródeł, a procesy fermentacyjne napotykają jeszcze bariery w drodze na rynek
+        (Acevedo-Rocha i in. 2019); Wang i in. (2021) wskazują, że większość witamin z grupy B wytwarza się w
+        syntezie chemicznej i nie opisano komercyjnego procesu fermentacyjnego dla kwasu nikotynowego ani
+        nikotynamidu.
     sources:
       - id: acevedo-rocha-2019-bvit
       - id: wang-2021-vitamins-pmc8247775
-  - code: origin.petrochemical_synthetic
-    certainty: maybe
-    kind: estimate
-    grade: B
-    note:
-      en: >-
-        Traditional alkylpyridine feedstocks (3-methylpyridine, 5-ethyl-2-methylpyridine) derive mainly from
-        petrochemical or coal-tar chemical intermediates.
-      pl: >-
-        Tradycyjne surowce alkilopirydynowe (3-metylopirydyna, 5-etylo-2-metylopirydyna) pochodzą głównie z
-        półproduktów petrochemicznych lub węglopochodnych.
-    sources:
-      - id: acevedo-rocha-2019-bvit
+        locator: "Water-Soluble Vitamins - B Vitamins & Vitamin B3"
   - code: diet.vegan
     certainty: 'yes'
     kind: estimate
