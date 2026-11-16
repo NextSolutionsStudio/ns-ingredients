@@ -18,6 +18,22 @@ names:
     - not partially hydrogenated soya oil
     - not fully hydrogenated soya oil
     - non partially hydrogenated soya oil
+    - not hydrogenated fully refined soya oil
+    - not partially hydrogenated fully refined soya oil
+    - not fully hydrogenated fully refined soya oil
+    - non partially hydrogenated fully refined soya oil
+    - not hydrogenated fully refined soybean oil
+    - not partially hydrogenated fully refined soybean oil
+    - not fully hydrogenated fully refined soybean oil
+    - non partially hydrogenated fully refined soybean oil
+    - not hydrogenated refined soya oil
+    - not partially hydrogenated refined soya oil
+    - not fully hydrogenated refined soya oil
+    - non partially hydrogenated refined soya oil
+    - not hydrogenated refined soybean oil
+    - not partially hydrogenated refined soybean oil
+    - not fully hydrogenated refined soybean oil
+    - non partially hydrogenated refined soybean oil
   pl:
     - olej sojowy
     - olej z soi

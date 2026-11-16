@@ -19,6 +19,10 @@ names:
     - not partially hydrogenated shea fat
     - not fully hydrogenated shea fat
     - non partially hydrogenated shea fat
+    - not hydrogenated shea oil
+    - not partially hydrogenated shea oil
+    - not fully hydrogenated shea oil
+    - non partially hydrogenated shea oil
   pl:
     - tłuszcz shea
     - masło shea
