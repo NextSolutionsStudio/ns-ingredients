@@ -412,6 +412,13 @@ Deno.test("an item's own variant tells read at most TELL_TEXT_MAX characters of 
   const gel = run(`Ingredients: gelatine (${"sugar, ".repeat(77)}${"salt, ".repeat(5)}fishmint)`, "en");
   assertEquals(gel.items[0].variant?.id, undefined);
   assert(!gel.flags.some((f) => f.code === "allergen.fish"));
+  // A tell that excludes a phrase must not pass because the phrase fell past a cut: here a window ending at
+  // "extra" read as plain "virgin" olive oil, where main says extra virgin. Over the cap, no variant is declared.
+  const olive = run(
+    `Ingredients: oliwa z oliwek (${"cukier, ".repeat(65)}z pierwszego tloczenia extra virgin)`,
+    "en",
+  );
+  assert(olive.items[0].variant?.id !== "virgin", `olive variant: ${olive.items[0].variant?.id}`);
   // The cap is far above any real item: a tell near the start still fires.
   assert(TELL_TEXT_MAX >= 400);
   assertEquals(
