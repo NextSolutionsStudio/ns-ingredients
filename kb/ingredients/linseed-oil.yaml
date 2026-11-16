@@ -56,6 +56,14 @@ variants:
         - tłuszcze roślinne lniane utwardzone
         - utwardzone oleje roślinne lniane
         - oleje roślinne lniane utwardzone
+        - uwodorniony tłuszcz roślinny lniany
+        - tłuszcz roślinny lniany uwodorniony
+        - uwodorniony olej roślinny lniany
+        - olej roślinny lniany uwodorniony
+        - uwodornione tłuszcze roślinne lniane
+        - tłuszcze roślinne lniane uwodornione
+        - uwodornione oleje roślinne lniane
+        - oleje roślinne lniane uwodornione
       de:
         - gehärtetes Leinöl
         - gehärtetes Leinsamenöl
@@ -86,6 +94,14 @@ variants:
         - tłuszcze roślinne lniane częściowo utwardzone
         - częściowo utwardzone oleje roślinne lniane
         - oleje roślinne lniane częściowo utwardzone
+        - częściowo uwodorniony tłuszcz roślinny lniany
+        - tłuszcz roślinny lniany częściowo uwodorniony
+        - częściowo uwodorniony olej roślinny lniany
+        - olej roślinny lniany częściowo uwodorniony
+        - częściowo uwodornione tłuszcze roślinne lniane
+        - tłuszcze roślinne lniane częściowo uwodornione
+        - częściowo uwodornione oleje roślinne lniane
+        - oleje roślinne lniane częściowo uwodornione
       de:
         - teilweise gehärtetes Leinöl
         - teilweise gehärtetes Leinsamenöl
@@ -123,6 +139,30 @@ variants:
         - tłuszcze roślinne lniane całkowicie utwardzone
         - całkowicie utwardzone oleje roślinne lniane
         - oleje roślinne lniane całkowicie utwardzone
+        - całkowicie uwodorniony tłuszcz roślinny lniany
+        - tłuszcz roślinny lniany całkowicie uwodorniony
+        - całkowicie uwodorniony olej roślinny lniany
+        - olej roślinny lniany całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz roślinny lniany
+        - tłuszcz roślinny lniany w pełni utwardzony
+        - w pełni utwardzony olej roślinny lniany
+        - olej roślinny lniany w pełni utwardzony
+        - w pełni uwodorniony tłuszcz roślinny lniany
+        - tłuszcz roślinny lniany w pełni uwodorniony
+        - w pełni uwodorniony olej roślinny lniany
+        - olej roślinny lniany w pełni uwodorniony
+        - całkowicie uwodornione tłuszcze roślinne lniane
+        - tłuszcze roślinne lniane całkowicie uwodornione
+        - całkowicie uwodornione oleje roślinne lniane
+        - oleje roślinne lniane całkowicie uwodornione
+        - w pełni utwardzone tłuszcze roślinne lniane
+        - tłuszcze roślinne lniane w pełni utwardzone
+        - w pełni utwardzone oleje roślinne lniane
+        - oleje roślinne lniane w pełni utwardzone
+        - w pełni uwodornione tłuszcze roślinne lniane
+        - tłuszcze roślinne lniane w pełni uwodornione
+        - w pełni uwodornione oleje roślinne lniane
+        - oleje roślinne lniane w pełni uwodornione
       de:
         - vollständig gehärtetes Leinöl
         - vollständig gehärtetes Leinsamenöl

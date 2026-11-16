@@ -121,6 +121,22 @@ variants:
         - tłuszcze roślinne sojowe utwardzone
         - utwardzone oleje roślinne sojowe
         - oleje roślinne sojowe utwardzone
+        - rafinowany olej sojowy utwardzony
+        - utwardzony rafinowany olej sojowy
+        - w pełni rafinowany olej sojowy utwardzony
+        - utwardzony w pełni rafinowany olej sojowy
+        - uwodorniony tłuszcz roślinny sojowy
+        - tłuszcz roślinny sojowy uwodorniony
+        - uwodorniony olej roślinny sojowy
+        - olej roślinny sojowy uwodorniony
+        - rafinowany olej sojowy uwodorniony
+        - uwodorniony rafinowany olej sojowy
+        - w pełni rafinowany olej sojowy uwodorniony
+        - uwodorniony w pełni rafinowany olej sojowy
+        - uwodornione tłuszcze roślinne sojowe
+        - tłuszcze roślinne sojowe uwodornione
+        - uwodornione oleje roślinne sojowe
+        - oleje roślinne sojowe uwodornione
       de:
         - gehärtetes Sojaöl
     process:
@@ -150,6 +166,22 @@ variants:
         - tłuszcze roślinne sojowe częściowo utwardzone
         - częściowo utwardzone oleje roślinne sojowe
         - oleje roślinne sojowe częściowo utwardzone
+        - rafinowany olej sojowy częściowo utwardzony
+        - częściowo utwardzony rafinowany olej sojowy
+        - w pełni rafinowany olej sojowy częściowo utwardzony
+        - częściowo utwardzony w pełni rafinowany olej sojowy
+        - częściowo uwodorniony tłuszcz roślinny sojowy
+        - tłuszcz roślinny sojowy częściowo uwodorniony
+        - częściowo uwodorniony olej roślinny sojowy
+        - olej roślinny sojowy częściowo uwodorniony
+        - rafinowany olej sojowy częściowo uwodorniony
+        - częściowo uwodorniony rafinowany olej sojowy
+        - w pełni rafinowany olej sojowy częściowo uwodorniony
+        - częściowo uwodorniony w pełni rafinowany olej sojowy
+        - częściowo uwodornione tłuszcze roślinne sojowe
+        - tłuszcze roślinne sojowe częściowo uwodornione
+        - częściowo uwodornione oleje roślinne sojowe
+        - oleje roślinne sojowe częściowo uwodornione
       de:
         - teilweise gehärtetes Sojaöl
     process:
@@ -190,6 +222,46 @@ variants:
         - tłuszcze roślinne sojowe całkowicie utwardzone
         - całkowicie utwardzone oleje roślinne sojowe
         - oleje roślinne sojowe całkowicie utwardzone
+        - rafinowany olej sojowy całkowicie utwardzony
+        - całkowicie utwardzony rafinowany olej sojowy
+        - w pełni rafinowany olej sojowy całkowicie utwardzony
+        - całkowicie utwardzony w pełni rafinowany olej sojowy
+        - całkowicie uwodorniony tłuszcz roślinny sojowy
+        - tłuszcz roślinny sojowy całkowicie uwodorniony
+        - całkowicie uwodorniony olej roślinny sojowy
+        - olej roślinny sojowy całkowicie uwodorniony
+        - rafinowany olej sojowy całkowicie uwodorniony
+        - całkowicie uwodorniony rafinowany olej sojowy
+        - w pełni rafinowany olej sojowy całkowicie uwodorniony
+        - całkowicie uwodorniony w pełni rafinowany olej sojowy
+        - w pełni utwardzony tłuszcz roślinny sojowy
+        - tłuszcz roślinny sojowy w pełni utwardzony
+        - w pełni utwardzony olej roślinny sojowy
+        - olej roślinny sojowy w pełni utwardzony
+        - rafinowany olej sojowy w pełni utwardzony
+        - w pełni utwardzony rafinowany olej sojowy
+        - w pełni rafinowany olej sojowy w pełni utwardzony
+        - w pełni utwardzony w pełni rafinowany olej sojowy
+        - w pełni uwodorniony tłuszcz roślinny sojowy
+        - tłuszcz roślinny sojowy w pełni uwodorniony
+        - w pełni uwodorniony olej roślinny sojowy
+        - olej roślinny sojowy w pełni uwodorniony
+        - rafinowany olej sojowy w pełni uwodorniony
+        - w pełni uwodorniony rafinowany olej sojowy
+        - w pełni rafinowany olej sojowy w pełni uwodorniony
+        - w pełni uwodorniony w pełni rafinowany olej sojowy
+        - całkowicie uwodornione tłuszcze roślinne sojowe
+        - tłuszcze roślinne sojowe całkowicie uwodornione
+        - całkowicie uwodornione oleje roślinne sojowe
+        - oleje roślinne sojowe całkowicie uwodornione
+        - w pełni utwardzone tłuszcze roślinne sojowe
+        - tłuszcze roślinne sojowe w pełni utwardzone
+        - w pełni utwardzone oleje roślinne sojowe
+        - oleje roślinne sojowe w pełni utwardzone
+        - w pełni uwodornione tłuszcze roślinne sojowe
+        - tłuszcze roślinne sojowe w pełni uwodornione
+        - w pełni uwodornione oleje roślinne sojowe
+        - oleje roślinne sojowe w pełni uwodornione
       de:
         - vollständig gehärtetes Sojaöl
     process:

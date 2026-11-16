@@ -5,6 +5,12 @@ names:
     - shea butter
     - shea fat
     - shea
+    - non-hydrogenated shea butter
+    - unhydrogenated shea butter
+    - non-hydrogenated shea fat
+    - unhydrogenated shea fat
+    - non-hydrogenated shea oil
+    - unhydrogenated shea oil
   pl:
     - tłuszcz shea
     - masło shea
@@ -15,6 +21,10 @@ names:
     - oleje roślinne shea
   de:
     - Sheabutter
+    - ungehärtete Sheabutter
+    - nicht gehärtete Sheabutter
+    - ungehärtetes Sheafett
+    - nicht gehärtetes Sheafett
 summary:
   en: >-
     Fat pressed from the nuts of the shea tree (Vitellaria paradoxa), used in chocolate fillings and as a
@@ -48,6 +58,10 @@ variants:
         - tłuszcze roślinne shea utwardzone
         - utwardzone oleje roślinne shea
         - oleje roślinne shea utwardzone
+        - utwardzony masło shea
+        - masło shea utwardzony
+        - uwodorniony masło shea
+        - masło shea uwodorniony
       de:
         - gehärtete Sheabutter
         - gehärtetes Sheafett
@@ -81,6 +95,10 @@ variants:
         - tłuszcze roślinne shea częściowo utwardzone
         - częściowo utwardzone oleje roślinne shea
         - oleje roślinne shea częściowo utwardzone
+        - częściowo utwardzony masło shea
+        - masło shea częściowo utwardzony
+        - częściowo uwodorniony masło shea
+        - masło shea częściowo uwodorniony
       de:
         - teilweise gehärtete Sheabutter
         - teilweise gehärtetes Sheafett
@@ -121,6 +139,16 @@ variants:
         - tłuszcze roślinne shea całkowicie utwardzone
         - całkowicie utwardzone oleje roślinne shea
         - oleje roślinne shea całkowicie utwardzone
+        - całkowicie utwardzony masło shea
+        - masło shea całkowicie utwardzony
+        - całkowicie uwodorniony masło shea
+        - masło shea całkowicie uwodorniony
+        - w pełni utwardzony masło shea
+        - masło shea w pełni utwardzony
+        - w pełni uwodorniony tłuszcz shea
+        - tłuszcz shea w pełni uwodorniony
+        - w pełni uwodorniony masło shea
+        - masło shea w pełni uwodorniony
       de:
         - vollständig gehärtete Sheabutter
         - vollständig gehärtetes Sheafett
