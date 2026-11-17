@@ -6,6 +6,10 @@ names:
     - tigernut oil
     - tiger nuts oil
     - earth almond oil
+    - earth almonds oil
+    - tigernuts oil
+    - chufa nut oil
+    - chufa nuts oil
     - chufa oil
     - cyperus esculentus oil
     - not hydrogenated chufa oil
@@ -44,6 +48,30 @@ names:
     - unhydrogenated chufa oil
     - non-hydrogenated cyperus esculentus oil
     - unhydrogenated cyperus esculentus oil
+    - not hydrogenated chufa nut oil
+    - not partially hydrogenated chufa nut oil
+    - not fully hydrogenated chufa nut oil
+    - non partially hydrogenated chufa nut oil
+    - not hydrogenated chufa nuts oil
+    - not partially hydrogenated chufa nuts oil
+    - not fully hydrogenated chufa nuts oil
+    - non partially hydrogenated chufa nuts oil
+    - not hydrogenated earth almonds oil
+    - not partially hydrogenated earth almonds oil
+    - not fully hydrogenated earth almonds oil
+    - non partially hydrogenated earth almonds oil
+    - not hydrogenated tigernuts oil
+    - not partially hydrogenated tigernuts oil
+    - not fully hydrogenated tigernuts oil
+    - non partially hydrogenated tigernuts oil
+    - non-hydrogenated earth almonds oil
+    - unhydrogenated earth almonds oil
+    - non-hydrogenated tigernuts oil
+    - unhydrogenated tigernuts oil
+    - non-hydrogenated chufa nut oil
+    - unhydrogenated chufa nut oil
+    - non-hydrogenated chufa nuts oil
+    - unhydrogenated chufa nuts oil
   pl:
     - olej z migdałów ziemnych
     - olej z migdała ziemnego
@@ -51,6 +79,7 @@ names:
     - olej z orzeszków tygrysich
     - olej z cibory jadalnej
     - olej cibory jadalnej
+    - olej z bulw cibory jadalnej
     - tłuszcz roślinny z cibory jadalnej
     - tłuszcze roślinne z cibory jadalnej
     - olej roślinny z cibory jadalnej
@@ -359,6 +388,66 @@ names:
     - nieuwodornione oleje roślinne z orzeszków tygrysich
     - oleje roślinne z orzeszków tygrysich nieuwodornione
     - oleje roślinne nieuwodornione z orzeszków tygrysich
+    - tłuszcz roślinny z bulw cibory jadalnej
+    - tłuszcze roślinne z bulw cibory jadalnej
+    - olej roślinny z bulw cibory jadalnej
+    - oleje roślinne z bulw cibory jadalnej
+    - nie utwardzony olej z bulw cibory jadalnej
+    - olej z bulw cibory jadalnej nie utwardzony
+    - nie uwodorniony olej z bulw cibory jadalnej
+    - olej z bulw cibory jadalnej nie uwodorniony
+    - nieutwardzony olej z bulw cibory jadalnej
+    - olej z bulw cibory jadalnej nieutwardzony
+    - nieuwodorniony olej z bulw cibory jadalnej
+    - olej z bulw cibory jadalnej nieuwodorniony
+    - nie utwardzony tłuszcz roślinny z bulw cibory jadalnej
+    - tłuszcz roślinny z bulw cibory jadalnej nie utwardzony
+    - tłuszcz roślinny nie utwardzony z bulw cibory jadalnej
+    - nie uwodorniony tłuszcz roślinny z bulw cibory jadalnej
+    - tłuszcz roślinny z bulw cibory jadalnej nie uwodorniony
+    - tłuszcz roślinny nie uwodorniony z bulw cibory jadalnej
+    - nieutwardzony tłuszcz roślinny z bulw cibory jadalnej
+    - tłuszcz roślinny z bulw cibory jadalnej nieutwardzony
+    - tłuszcz roślinny nieutwardzony z bulw cibory jadalnej
+    - nieuwodorniony tłuszcz roślinny z bulw cibory jadalnej
+    - tłuszcz roślinny z bulw cibory jadalnej nieuwodorniony
+    - tłuszcz roślinny nieuwodorniony z bulw cibory jadalnej
+    - nie utwardzone tłuszcze roślinne z bulw cibory jadalnej
+    - tłuszcze roślinne z bulw cibory jadalnej nie utwardzone
+    - tłuszcze roślinne nie utwardzone z bulw cibory jadalnej
+    - nie uwodornione tłuszcze roślinne z bulw cibory jadalnej
+    - tłuszcze roślinne z bulw cibory jadalnej nie uwodornione
+    - tłuszcze roślinne nie uwodornione z bulw cibory jadalnej
+    - nieutwardzone tłuszcze roślinne z bulw cibory jadalnej
+    - tłuszcze roślinne z bulw cibory jadalnej nieutwardzone
+    - tłuszcze roślinne nieutwardzone z bulw cibory jadalnej
+    - nieuwodornione tłuszcze roślinne z bulw cibory jadalnej
+    - tłuszcze roślinne z bulw cibory jadalnej nieuwodornione
+    - tłuszcze roślinne nieuwodornione z bulw cibory jadalnej
+    - nie utwardzony olej roślinny z bulw cibory jadalnej
+    - olej roślinny z bulw cibory jadalnej nie utwardzony
+    - olej roślinny nie utwardzony z bulw cibory jadalnej
+    - nie uwodorniony olej roślinny z bulw cibory jadalnej
+    - olej roślinny z bulw cibory jadalnej nie uwodorniony
+    - olej roślinny nie uwodorniony z bulw cibory jadalnej
+    - nieutwardzony olej roślinny z bulw cibory jadalnej
+    - olej roślinny z bulw cibory jadalnej nieutwardzony
+    - olej roślinny nieutwardzony z bulw cibory jadalnej
+    - nieuwodorniony olej roślinny z bulw cibory jadalnej
+    - olej roślinny z bulw cibory jadalnej nieuwodorniony
+    - olej roślinny nieuwodorniony z bulw cibory jadalnej
+    - nie utwardzone oleje roślinne z bulw cibory jadalnej
+    - oleje roślinne z bulw cibory jadalnej nie utwardzone
+    - oleje roślinne nie utwardzone z bulw cibory jadalnej
+    - nie uwodornione oleje roślinne z bulw cibory jadalnej
+    - oleje roślinne z bulw cibory jadalnej nie uwodornione
+    - oleje roślinne nie uwodornione z bulw cibory jadalnej
+    - nieutwardzone oleje roślinne z bulw cibory jadalnej
+    - oleje roślinne z bulw cibory jadalnej nieutwardzone
+    - oleje roślinne nieutwardzone z bulw cibory jadalnej
+    - nieuwodornione oleje roślinne z bulw cibory jadalnej
+    - oleje roślinne z bulw cibory jadalnej nieuwodornione
+    - oleje roślinne nieuwodornione z bulw cibory jadalnej
   de:
     - Erdmandelöl
     - Tigernussöl
@@ -381,6 +470,10 @@ variants:
         - hydrogenated earth almond oil
         - hydrogenated chufa oil
         - hydrogenated cyperus esculentus oil
+        - hydrogenated earth almonds oil
+        - hydrogenated tigernuts oil
+        - hydrogenated chufa nut oil
+        - hydrogenated chufa nuts oil
       pl:
         - utwardzony olej z migdałów ziemnych
         - olej z migdałów ziemnych utwardzony
@@ -526,6 +619,34 @@ variants:
         - uwodornione oleje roślinne z orzeszków tygrysich
         - oleje roślinne z orzeszków tygrysich uwodornione
         - oleje roślinne uwodornione z orzeszków tygrysich
+        - utwardzony olej z bulw cibory jadalnej
+        - olej z bulw cibory jadalnej utwardzony
+        - uwodorniony olej z bulw cibory jadalnej
+        - olej z bulw cibory jadalnej uwodorniony
+        - utwardzony tłuszcz roślinny z bulw cibory jadalnej
+        - tłuszcz roślinny z bulw cibory jadalnej utwardzony
+        - tłuszcz roślinny utwardzony z bulw cibory jadalnej
+        - uwodorniony tłuszcz roślinny z bulw cibory jadalnej
+        - tłuszcz roślinny z bulw cibory jadalnej uwodorniony
+        - tłuszcz roślinny uwodorniony z bulw cibory jadalnej
+        - utwardzone tłuszcze roślinne z bulw cibory jadalnej
+        - tłuszcze roślinne z bulw cibory jadalnej utwardzone
+        - tłuszcze roślinne utwardzone z bulw cibory jadalnej
+        - uwodornione tłuszcze roślinne z bulw cibory jadalnej
+        - tłuszcze roślinne z bulw cibory jadalnej uwodornione
+        - tłuszcze roślinne uwodornione z bulw cibory jadalnej
+        - utwardzony olej roślinny z bulw cibory jadalnej
+        - olej roślinny z bulw cibory jadalnej utwardzony
+        - olej roślinny utwardzony z bulw cibory jadalnej
+        - uwodorniony olej roślinny z bulw cibory jadalnej
+        - olej roślinny z bulw cibory jadalnej uwodorniony
+        - olej roślinny uwodorniony z bulw cibory jadalnej
+        - utwardzone oleje roślinne z bulw cibory jadalnej
+        - oleje roślinne z bulw cibory jadalnej utwardzone
+        - oleje roślinne utwardzone z bulw cibory jadalnej
+        - uwodornione oleje roślinne z bulw cibory jadalnej
+        - oleje roślinne z bulw cibory jadalnej uwodornione
+        - oleje roślinne uwodornione z bulw cibory jadalnej
     process:
       en: "Tiger nut oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej z migdałów ziemnych utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
@@ -540,6 +661,10 @@ variants:
         - partially hydrogenated earth almond oil
         - partially hydrogenated chufa oil
         - partially hydrogenated cyperus esculentus oil
+        - partially hydrogenated earth almonds oil
+        - partially hydrogenated tigernuts oil
+        - partially hydrogenated chufa nut oil
+        - partially hydrogenated chufa nuts oil
       pl:
         - częściowo utwardzony olej z migdałów ziemnych
         - olej z migdałów ziemnych częściowo utwardzony
@@ -685,6 +810,34 @@ variants:
         - częściowo uwodornione oleje roślinne z orzeszków tygrysich
         - oleje roślinne z orzeszków tygrysich częściowo uwodornione
         - oleje roślinne częściowo uwodornione z orzeszków tygrysich
+        - częściowo utwardzony olej z bulw cibory jadalnej
+        - olej z bulw cibory jadalnej częściowo utwardzony
+        - częściowo uwodorniony olej z bulw cibory jadalnej
+        - olej z bulw cibory jadalnej częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny z bulw cibory jadalnej
+        - tłuszcz roślinny z bulw cibory jadalnej częściowo utwardzony
+        - tłuszcz roślinny częściowo utwardzony z bulw cibory jadalnej
+        - częściowo uwodorniony tłuszcz roślinny z bulw cibory jadalnej
+        - tłuszcz roślinny z bulw cibory jadalnej częściowo uwodorniony
+        - tłuszcz roślinny częściowo uwodorniony z bulw cibory jadalnej
+        - częściowo utwardzone tłuszcze roślinne z bulw cibory jadalnej
+        - tłuszcze roślinne z bulw cibory jadalnej częściowo utwardzone
+        - tłuszcze roślinne częściowo utwardzone z bulw cibory jadalnej
+        - częściowo uwodornione tłuszcze roślinne z bulw cibory jadalnej
+        - tłuszcze roślinne z bulw cibory jadalnej częściowo uwodornione
+        - tłuszcze roślinne częściowo uwodornione z bulw cibory jadalnej
+        - częściowo utwardzony olej roślinny z bulw cibory jadalnej
+        - olej roślinny z bulw cibory jadalnej częściowo utwardzony
+        - olej roślinny częściowo utwardzony z bulw cibory jadalnej
+        - częściowo uwodorniony olej roślinny z bulw cibory jadalnej
+        - olej roślinny z bulw cibory jadalnej częściowo uwodorniony
+        - olej roślinny częściowo uwodorniony z bulw cibory jadalnej
+        - częściowo utwardzone oleje roślinne z bulw cibory jadalnej
+        - oleje roślinne z bulw cibory jadalnej częściowo utwardzone
+        - oleje roślinne częściowo utwardzone z bulw cibory jadalnej
+        - częściowo uwodornione oleje roślinne z bulw cibory jadalnej
+        - oleje roślinne z bulw cibory jadalnej częściowo uwodornione
+        - oleje roślinne częściowo uwodornione z bulw cibory jadalnej
     process:
       en: "Tiger nut oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
       pl: "Olej z migdałów ziemnych, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
@@ -707,6 +860,14 @@ variants:
         - totally hydrogenated chufa oil
         - fully hydrogenated cyperus esculentus oil
         - totally hydrogenated cyperus esculentus oil
+        - fully hydrogenated earth almonds oil
+        - totally hydrogenated earth almonds oil
+        - fully hydrogenated tigernuts oil
+        - totally hydrogenated tigernuts oil
+        - fully hydrogenated chufa nut oil
+        - totally hydrogenated chufa nut oil
+        - fully hydrogenated chufa nuts oil
+        - totally hydrogenated chufa nuts oil
       pl:
         - całkowicie utwardzony olej z migdałów ziemnych
         - olej z migdałów ziemnych całkowicie utwardzony
@@ -996,6 +1157,62 @@ variants:
         - w pełni uwodornione oleje roślinne z orzeszków tygrysich
         - oleje roślinne z orzeszków tygrysich w pełni uwodornione
         - oleje roślinne w pełni uwodornione z orzeszków tygrysich
+        - całkowicie utwardzony olej z bulw cibory jadalnej
+        - olej z bulw cibory jadalnej całkowicie utwardzony
+        - całkowicie uwodorniony olej z bulw cibory jadalnej
+        - olej z bulw cibory jadalnej całkowicie uwodorniony
+        - w pełni utwardzony olej z bulw cibory jadalnej
+        - olej z bulw cibory jadalnej w pełni utwardzony
+        - w pełni uwodorniony olej z bulw cibory jadalnej
+        - olej z bulw cibory jadalnej w pełni uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny z bulw cibory jadalnej
+        - tłuszcz roślinny z bulw cibory jadalnej całkowicie utwardzony
+        - tłuszcz roślinny całkowicie utwardzony z bulw cibory jadalnej
+        - całkowicie uwodorniony tłuszcz roślinny z bulw cibory jadalnej
+        - tłuszcz roślinny z bulw cibory jadalnej całkowicie uwodorniony
+        - tłuszcz roślinny całkowicie uwodorniony z bulw cibory jadalnej
+        - w pełni utwardzony tłuszcz roślinny z bulw cibory jadalnej
+        - tłuszcz roślinny z bulw cibory jadalnej w pełni utwardzony
+        - tłuszcz roślinny w pełni utwardzony z bulw cibory jadalnej
+        - w pełni uwodorniony tłuszcz roślinny z bulw cibory jadalnej
+        - tłuszcz roślinny z bulw cibory jadalnej w pełni uwodorniony
+        - tłuszcz roślinny w pełni uwodorniony z bulw cibory jadalnej
+        - całkowicie utwardzone tłuszcze roślinne z bulw cibory jadalnej
+        - tłuszcze roślinne z bulw cibory jadalnej całkowicie utwardzone
+        - tłuszcze roślinne całkowicie utwardzone z bulw cibory jadalnej
+        - całkowicie uwodornione tłuszcze roślinne z bulw cibory jadalnej
+        - tłuszcze roślinne z bulw cibory jadalnej całkowicie uwodornione
+        - tłuszcze roślinne całkowicie uwodornione z bulw cibory jadalnej
+        - w pełni utwardzone tłuszcze roślinne z bulw cibory jadalnej
+        - tłuszcze roślinne z bulw cibory jadalnej w pełni utwardzone
+        - tłuszcze roślinne w pełni utwardzone z bulw cibory jadalnej
+        - w pełni uwodornione tłuszcze roślinne z bulw cibory jadalnej
+        - tłuszcze roślinne z bulw cibory jadalnej w pełni uwodornione
+        - tłuszcze roślinne w pełni uwodornione z bulw cibory jadalnej
+        - całkowicie utwardzony olej roślinny z bulw cibory jadalnej
+        - olej roślinny z bulw cibory jadalnej całkowicie utwardzony
+        - olej roślinny całkowicie utwardzony z bulw cibory jadalnej
+        - całkowicie uwodorniony olej roślinny z bulw cibory jadalnej
+        - olej roślinny z bulw cibory jadalnej całkowicie uwodorniony
+        - olej roślinny całkowicie uwodorniony z bulw cibory jadalnej
+        - w pełni utwardzony olej roślinny z bulw cibory jadalnej
+        - olej roślinny z bulw cibory jadalnej w pełni utwardzony
+        - olej roślinny w pełni utwardzony z bulw cibory jadalnej
+        - w pełni uwodorniony olej roślinny z bulw cibory jadalnej
+        - olej roślinny z bulw cibory jadalnej w pełni uwodorniony
+        - olej roślinny w pełni uwodorniony z bulw cibory jadalnej
+        - całkowicie utwardzone oleje roślinne z bulw cibory jadalnej
+        - oleje roślinne z bulw cibory jadalnej całkowicie utwardzone
+        - oleje roślinne całkowicie utwardzone z bulw cibory jadalnej
+        - całkowicie uwodornione oleje roślinne z bulw cibory jadalnej
+        - oleje roślinne z bulw cibory jadalnej całkowicie uwodornione
+        - oleje roślinne całkowicie uwodornione z bulw cibory jadalnej
+        - w pełni utwardzone oleje roślinne z bulw cibory jadalnej
+        - oleje roślinne z bulw cibory jadalnej w pełni utwardzone
+        - oleje roślinne w pełni utwardzone z bulw cibory jadalnej
+        - w pełni uwodornione oleje roślinne z bulw cibory jadalnej
+        - oleje roślinne z bulw cibory jadalnej w pełni uwodornione
+        - oleje roślinne w pełni uwodornione z bulw cibory jadalnej
     process:
       en: "Tiger nut oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
       pl: "Olej z migdałów ziemnych ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
