@@ -2,6 +2,7 @@
 // disagree about what a name means. Built once per KB version (a few ms for thousands of names).
 import type {
   AssertionT,
+  ExactNamesT,
   FunctionClassT,
   ImplicationT,
   IngredientT,
@@ -67,6 +68,11 @@ export class KbIndex {
   readonly classes = new Map<string, FunctionClassT>();
   readonly names: NameEntry[] = [];
   private readonly byNorm = new Map<string, NameEntry>();
+  /** Normalised `exact_names`: whole-item matches only (exact or fuzzy), never a sub-phrase or a search hit. */
+  private readonly exactOnly = new Set<string>();
+  /** The first word of every exact-only name, and the most words one has: the occurrence scan's bounds. */
+  private readonly exactFirst = new Set<string>();
+  private exactMaxTokens = 0;
   private readonly byE = new Map<string, string>();
   private readonly classByNorm = new Map<string, string>();
   private readonly tells = new Map<string, { variant: VariantT; res: RegExp[] }[]>();
@@ -75,8 +81,13 @@ export class KbIndex {
   private readonly textIndex = new Map<string, string>();
   /** Words a longer name begins with ("gluten", "gluten free", "gluten free wheat"); built on first use. */
   private namePrefixes?: Set<string>;
-  /** trigram → indices into names: fuzzy matching only visits names that share a trigram with the query. */
+  /**
+   * trigram → indices into names, ordered by name length (then index): fuzzy matching only visits names that share a
+   * trigram with the query and whose length is within its slack, the only names that can be returned.
+   */
   private readonly postings = new Map<string, number[]>();
+  /** names[i].norm.length, for the binary search over a posting list. */
+  private nameLen = new Int32Array(0);
   private shared = new Int32Array(0);
   readonly counts: KbBundle["counts"];
 
@@ -101,6 +112,7 @@ export class KbIndex {
           this.tells.set(ing.id, list);
         }
       }
+      for (const n of allNames(ing.exact_names)) this.addExactName(n.name, n.lang, ing.id);
       for (const a of ing.assertions ?? []) {
         if (a.certainty !== "yes" && a.certainty !== "maybe") continue;
         (this.tagIndex.get(a.code) ?? this.tagIndex.set(a.code, new Set()).get(a.code)!).add(ing.id);
@@ -109,26 +121,42 @@ export class KbIndex {
       const process = (ing.variants ?? []).map((v) => Object.values(v.process).join(" ")).join(" ");
       this.textIndex.set(ing.id, ` ${normName(`${summary} ${process}`)} `);
     }
-    this.names.forEach((n, i) => {
-      for (const t of n.tri) (this.postings.get(t) ?? this.postings.set(t, []).get(t)!).push(i);
-    });
+    this.nameLen = Int32Array.from(this.names, (n) => n.norm.length);
+    // Pushing the names in (length, index) order leaves every posting list in that order.
+    const order = this.names.map((_, i) => i).sort((a, b) => this.nameLen[a] - this.nameLen[b] || a - b);
+    for (const i of order) {
+      for (const t of this.names[i].tri) (this.postings.get(t) ?? this.postings.set(t, []).get(t)!).push(i);
+    }
     this.shared = new Int32Array(this.names.length);
   }
 
   /**
    * The name with the highest pg_trgm similarity to `norm` (ties: earliest name), among names of a
-   * comparable length. Same answer as scoring every name, at the cost of the query's posting lists — a
-   * 12 kB label of unknown words must not cost a linear scan per word.
+   * comparable length (`|length - norm.length| <= slack`, both edges included). Same answer as scoring every
+   * name, at the cost of the in-window part of the query's posting lists — a 12 kB label of unknown words must
+   * not cost a linear scan per word, nor a walk over every long generated name that shares an "-ny" trigram.
    */
   nearestName(norm: string): { entry: NameEntry; sim: number } | null {
     const q = trigrams(norm);
+    const slack = Math.max(4, norm.length * 0.4);
+    const lo = norm.length - slack, hi = norm.length + slack;
     const touched: number[] = [];
     for (const t of q) {
-      for (const i of this.postings.get(t) ?? []) if (this.shared[i]++ === 0) touched.push(i);
+      const list = this.postings.get(t);
+      if (!list) continue;
+      let a = 0, b = list.length; // first name with length >= lo
+      while (a < b) {
+        const m = (a + b) >> 1;
+        if (this.nameLen[list[m]] < lo) a = m + 1;
+        else b = m;
+      }
+      for (let k = a; k < list.length && this.nameLen[list[k]] <= hi; k++) {
+        const i = list[k];
+        if (this.shared[i]++ === 0) touched.push(i);
+      }
     }
     let best = -1;
     let bestSim = 0;
-    const slack = Math.max(4, norm.length * 0.4);
     for (const i of touched) {
       const inter = this.shared[i];
       this.shared[i] = 0;
@@ -151,6 +179,63 @@ export class KbIndex {
     if (!existing) this.names.push(entry);
     else this.names[this.names.indexOf(existing)] = entry;
     this.byNorm.set(norm, entry);
+  }
+
+  /** An exact-only name, unless the norm is already another name's (the validator reports the clash). */
+  private addExactName(name: string, lang: string, ingredientId: string) {
+    const norm = normName(name);
+    if (!norm || this.byNorm.has(norm)) return;
+    const entry: NameEntry = { norm, display: name, lang, ingredientId, tri: trigrams(norm) };
+    this.names.push(entry);
+    this.byNorm.set(norm, entry);
+    this.exactOnly.add(norm);
+    const words = norm.split(" ");
+    this.exactFirst.add(words[0]);
+    this.exactMaxTokens = Math.max(this.exactMaxTokens, words.length);
+  }
+
+  /** Each exact-only name that occurs in the item, as word indexes: the longest one at each start. */
+  private claimSpans(tokens: string[]): [number, number][] {
+    const out: [number, number][] = [];
+    if (!this.exactOnly.size) return out;
+    for (let s = 0; s < tokens.length; s++) {
+      if (!this.exactFirst.has(tokens[s])) continue;
+      for (let len = Math.min(tokens.length - s, this.exactMaxTokens); len >= 1; len--) {
+        if (this.exactOnly.has(tokens.slice(s, s + len).join(" "))) {
+          out.push([s, s + len - 1]);
+          break;
+        }
+      }
+    }
+    return out;
+  }
+
+  /**
+   * Whether the sub-phrase pass skips words `start`..`end`, from the item's claims, precomputed once per item so each
+   * span costs O(1): a span is skipped when it starts inside a claim, unless it starts at the claim, runs past it, and
+   * no food comes before it (a plain name lying wholly before `start`, starting outside every claim).
+   */
+  private claimGuard(tokens: string[], claims: [number, number][]): (start: number, end: number) => boolean {
+    const n = tokens.length;
+    const inside = new Uint8Array(n); // after a claim's first word
+    const inAny = new Uint8Array(n);
+    const endAt = new Int32Array(n).fill(-1); // the end of the claim that starts at a word
+    for (const [s, e] of claims) {
+      endAt[s] = Math.max(endAt[s], e);
+      inAny[s] = 1;
+      for (let i = s + 1; i <= e; i++) inside[i] = inAny[i] = 1;
+    }
+    const before = new Uint8Array(n + 1); // before[k]: a food lies wholly in words 0..k-1
+    for (let k = 1; k <= n; k++) {
+      before[k] = before[k - 1];
+      for (let s = Math.max(0, k - SUBPHRASE_MAX_TOKENS); !before[k] && s < k; s++) {
+        if (inAny[s]) continue;
+        const span = tokens.slice(s, k).join(" ");
+        if (this.byNorm.has(span) && !this.exactOnly.has(span)) before[k] = 1;
+      }
+    }
+    return (start, end) =>
+      inside[start] === 1 || (endAt[start] >= 0 && !(end > endAt[start] && !before[start]));
   }
 
   get(id: string): IngredientT | undefined {
@@ -222,11 +307,20 @@ export class KbIndex {
       };
     }
     const tokens = norm.split(" ");
+    // An exact-only name is a claim ("bez utwardzonych tluszczow", "free from hydrogenated oil"): it matches only a
+    // whole item, and no sub-phrase that starts inside it is read, so neither it, nor a word of it ("bez" as elder),
+    // nor a name it denies outranks a food before or after it ("olej sezamowy bez utwardzonych tluszczow"). Only a
+    // name that starts at the claim and runs past it is read, a food's own negated name ("bio non hydrogenated
+    // coconut fat"), and only when no plain name lies before it outside the claims ("sesame oil not partially
+    // hydrogenated rapeseed oil" stays sesame oil).
+    const claims = this.claimSpans(tokens);
+    const skip = claims.length ? this.claimGuard(tokens, claims) : null;
     // Longest known sub-phrase: "koncentrat bialka serwatkowego instant" → "koncentrat bialka serwatkowego".
     for (let len = Math.min(tokens.length - 1, SUBPHRASE_MAX_TOKENS); len >= 1; len--) {
       for (let start = 0; start + len <= tokens.length; start++) {
+        if (skip?.(start, start + len - 1)) continue;
         const span = tokens.slice(start, start + len).join(" ");
-        if (span.length < 3) continue;
+        if (span.length < 3 || this.exactOnly.has(span)) continue;
         const e = this.byNorm.get(span);
         if (e) {
           const coverage = span.length / norm.length;
@@ -307,6 +401,7 @@ export class KbIndex {
     }
     const q3 = trigrams(norm);
     for (const n of this.names) {
+      if (this.exactOnly.has(n.norm)) continue;
       let score = 0;
       let type: SearchHit["matchType"] = "fuzzy";
       if (n.norm === norm) [score, type] = [1, "exact"];
@@ -357,7 +452,7 @@ export class KbIndex {
   }
 }
 
-function allNames(names: NamesT | undefined): { name: string; lang: string }[] {
+function allNames(names: NamesT | ExactNamesT | undefined): { name: string; lang: string }[] {
   if (!names) return [];
   const out: { name: string; lang: string }[] = [];
   for (const [lang, list] of Object.entries(names)) for (const name of list ?? []) out.push({ name, lang });

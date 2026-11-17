@@ -21,13 +21,16 @@ Deno.test("a worst-case request stays inside its CPU budget", () => {
   let text = "Składniki: ";
   for (let i = 0; text.length < 11_900; i++) text += `nieznany skladnik ${i.toString(36)}qx, `;
   const index = new KbIndex(bundle!);
-  const times = [0, 1, 2].map(() => {
-    const t = performance.now();
-    analyze(index, text);
-    return performance.now() - t;
-  });
-  const best = Math.min(...times);
-  assert(best < 150, `worst case took ${best.toFixed(0)} ms`);
+  // and one 12 kB item of repeated claims: the exact-name guard must not grow with claims × spans (Sol 6.1, #13)
+  for (const t of [text, "Ingredients: " + "non hydrogenated ".repeat(700)]) {
+    const times = [0, 1, 2].map(() => {
+      const t0 = performance.now();
+      analyze(index, t);
+      return performance.now() - t0;
+    });
+    const best = Math.min(...times);
+    assert(best < 150, `worst case took ${best.toFixed(0)} ms: ${t.slice(0, 40)}…`);
+  }
 });
 
 Deno.test("golden corpus meets the quality floors", async () => {
