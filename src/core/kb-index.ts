@@ -74,15 +74,38 @@ const SUBPHRASE_MAX_TOKENS = 7;
 export const TELL_TEXT_MAX = 500;
 /**
  * At most this many words between a negator and the variant name it denies ("without the addition of partially
- * hydrogenated …", "free of the use of hydrogenated …", "free from the addition of any …"), each one of
- * DENIAL_FILLERS.
+ * hydrogenated …", "free of the use of hydrogenated …", "free from the addition of any …", "without ever using …").
  */
 const DENIAL_GAP_MAX = 5;
 /**
- * The words (normalised) that may stand between a negator and the variant name it denies: articles, the connectors
- * the KB's negators take ("free from", "wolny od", "ohne Zusatz von") and the verbs and nouns of an exclusion
- * ("using", "added", "the addition of", "bez stosowania", "bez dodatku"). Any other word, a food ("sugars") or an
- * affirmation ("with"), is no evidence that the negation reaches the name.
+ * Words that end a negation before a later name: a conjunction or an affirmation ("without added sugars with
+ * partially hydrogenated …", "bez cukru i z …", "ohne Zucker mit …"). Polish "a" is left out: it is also the English
+ * article, a filler.
+ */
+const DENIAL_BREAKS = new Set([
+  "with",
+  "and",
+  "but",
+  "plus",
+  "also",
+  "z",
+  "ze",
+  "i",
+  "oraz",
+  "ale",
+  "lecz",
+  "takze",
+  "rowniez",
+  "mit",
+  "und",
+  "aber",
+  "sowie",
+  "auch",
+]);
+/**
+ * The words (normalised) of an exclusion: articles, the connectors the KB's negators take ("free from", "wolny od",
+ * "ohne Zusatz von") and the verbs and nouns of an exclusion ("using", "added", "the addition of", "bez stosowania",
+ * "bez dodatku"). Never a break, and never read as a food.
  */
 const DENIAL_FILLERS = new Set([
   // en
@@ -538,9 +561,12 @@ export class KbIndex {
    * negation is scoped to the name, so `match` reads it like a claim ("without using partially hydrogenated rapeseed
    * oil"); "drop" (the plain entry, as #14 reads it) when it is not.
    * Scoped means: between the negator (the nearest start from which the tells fail) and the name lie at most
-   * DENIAL_GAP_MAX words, each one of DENIAL_FILLERS. So a negator after the name ("… poultry fat without added
-   * sugar") keeps the variant, and one that denies something else ("without added sugars with partially
-   * hydrogenated poultry fat") leaves the plain food.
+   * DENIAL_GAP_MAX words, and none of them ends the negation: no break (DENIAL_BREAKS) and no word of a KB name
+   * (`nameWords`: "sugar", "completely refined"), filler words aside. So the words of an exclusion, whatever they are
+   * ("without ever using", "without in any way adding"), keep the negation on the name. A negator after the name
+   * ("… poultry fat without added sugar") keeps the variant, and one that denies something else ("without added
+   * sugars with partially hydrogenated poultry fat", "without sugar partially hydrogenated poultry fat", "not
+   * completely refined hydrogenated soybean oil") leaves the plain food.
    */
   private variantReading(
     e: NameEntry,
@@ -562,8 +588,26 @@ export class KbIndex {
     let k = start - 1;
     while (k > 0 && fires(k)) k--;
     const gap = tokens.slice(k + 1, start);
-    return gap.length <= DENIAL_GAP_MAX && gap.every((w) => DENIAL_FILLERS.has(w)) ? "deny" : "drop";
+    if (gap.length > DENIAL_GAP_MAX) return "drop";
+    const ends = (w: string) => !DENIAL_FILLERS.has(w) && (DENIAL_BREAKS.has(w) || this.nameWords().has(w));
+    return gap.some(ends) ? "drop" : "deny";
   }
+
+  /**
+   * Every word of a food's or a variant's own name (claims aside): what a negation that reaches one denies is that
+   * word ("not completely refined hydrogenated soybean oil", "without sugar …"), not a later name. The words of an
+   * exclusion ("ever", "using", "in any way") are in none.
+   */
+  private nameWords(): Set<string> {
+    if (!this.nameWordSet) {
+      this.nameWordSet = new Set();
+      for (const n of this.byNorm.keys()) {
+        if (!this.exactOnly.has(n)) { for (const w of n.split(" ")) this.nameWordSet.add(w); }
+      }
+    }
+    return this.nameWordSet;
+  }
+  private nameWordSet?: Set<string>;
 
   /**
    * The variants with tells that an item may deny or drop (`variantReading`): every allergen, diet and origin assertion of the

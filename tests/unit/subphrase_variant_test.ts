@@ -142,7 +142,8 @@ Deno.test("a denied variant name of an allergen food keeps the allergen at maybe
     ingredients: [
       {
         id: "soybean-oil",
-        names: { en: ["soybean oil"] },
+        // "refined" is a word of a name, as on b2's KB: a negation that reaches it denies that word (#18)
+        names: { en: ["soybean oil", "refined soybean oil"] },
         variants: [{
           id: "hydrogenated",
           names: { en: ["hydrogenated soybean oil"] },
@@ -700,4 +701,47 @@ Deno.test("the exempt oil a denied name ends in keeps its exemption (Sol 6.1 on 
   }
   // named affirmatively, the hydrogenated oil keeps the KB's soy maybe
   assertEquals(soyFlag("Ingredients: hydrogenated fully refined soybean oil", idx)?.certainty, "maybe");
+});
+
+Deno.test("the words of an exclusion keep the negation on the name, whatever they are (Sol 6.1 on #10 at f1a6e25, P2 2)", () => {
+  const idx = new KbIndex({
+    version: "t",
+    counts: {},
+    implications: IMPL,
+    sources: [],
+    classes: [],
+    ingredients: [
+      {
+        id: "poultry-fat",
+        names: { en: ["poultry fat"] },
+        variants: [{
+          id: "partially-hydrogenated",
+          names: { en: ["partially hydrogenated poultry fat"] },
+          process: { en: "p" },
+          tells: [PH],
+        }],
+        assertions: [says("origin.animal"), { ...says("diet.vegan"), certainty: "no" }],
+      },
+      { id: "olive-oil", names: { en: ["olive oil"] } },
+      { id: "sugar", names: { en: ["sugar"] } },
+    ],
+  } as unknown as KbBundle);
+  for (const f of ["ever using", "ever adding", "in any way using", "at any point adding"]) {
+    const label = `Ingredients: olive oil (without ${f} partially hydrogenated poultry fat)`;
+    const r = analyze(idx, label, { lang: "en" });
+    assertEquals(r.items[0].children?.[0]?.match?.ingredient_id === "poultry-fat", false, label);
+    assertEquals(r.flags.some((x) => x.code === "origin.animal"), false, label);
+    assertEquals(r.diets.vegan.status === "no", false, label);
+  }
+  // a food the KB knows, or a break, between them ends the negation: the food after it is the food
+  for (
+    const text of [
+      "without sugar partially hydrogenated poultry fat",
+      "without colours and partially hydrogenated poultry fat",
+    ]
+  ) {
+    const r = analyze(idx, `Ingredients: ${text}`, { lang: "en" });
+    assertEquals(r.items[0].match?.ingredient_id, "poultry-fat", text);
+    assertEquals(r.flags.some((x) => x.code === "origin.animal"), true, text);
+  }
 });
