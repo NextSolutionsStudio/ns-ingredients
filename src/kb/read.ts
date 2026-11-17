@@ -231,6 +231,8 @@ export async function readKb(root: string): Promise<KbReadResult> {
     }
   }
 
+  errors.push(...exactNameClashes(all));
+
   for (const s of sources.data.sources) {
     if (!usedSources.has(s.id)) warnings.push(`source ${s.id} is never cited`);
   }
@@ -248,4 +250,40 @@ export async function readKb(root: string): Promise<KbReadResult> {
     counts: { curated: curated.length, generated: kept.length, superseded },
   };
   return { bundle: errors.length ? null : bundle, errors, warnings };
+}
+
+/**
+ * An exact name hides every sub-phrase that starts inside it, so it may not be any other name: not a name, variant
+ * name or exact name of another entry, and not a plain name of its own entry. Always an error, curated or not, so a
+ * flag can never silently hide another food's name.
+ */
+export function exactNameClashes(all: IngredientT[]): string[] {
+  const exact = new Map<string, string>();
+  const errors: string[] = [];
+  for (const ing of all) {
+    for (const list of Object.values(ing.exact_names ?? {})) {
+      for (const n of list ?? []) {
+        const k = normName(n);
+        if (!k) continue;
+        const prev = exact.get(k);
+        if (prev && prev !== ing.id) {
+          errors.push(`exact name "${k}" is claimed by both ${prev} and ${ing.id}`);
+        } else exact.set(k, ing.id);
+      }
+    }
+  }
+  if (!exact.size) return errors;
+  for (const ing of all) {
+    const plain = [
+      ...Object.values(ing.names),
+      ...(ing.variants ?? []).flatMap((v) => Object.values(v.names ?? {})),
+    ];
+    for (const list of plain) {
+      for (const n of list ?? []) {
+        const owner = exact.get(normName(n));
+        if (owner) errors.push(`name "${normName(n)}" of ${ing.id} is also an exact name of ${owner}`);
+      }
+    }
+  }
+  return errors;
 }
