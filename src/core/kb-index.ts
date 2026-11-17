@@ -300,8 +300,12 @@ export class KbIndex {
     return this.namePrefixes.has(norm);
   }
 
-  /** Resolve one item's name (no brackets) to an ingredient. */
-  match(text: string): NameMatch | null {
+  /**
+   * Resolve one item's name (no brackets) to an ingredient. `excluded`, when given, receives the ingredients whose
+   * variant name the item names and denies ("without using partially hydrogenated sesame oil"): such a name is read
+   * like a claim, so it is never the match, and a caller keeps only the food's allergens, at "maybe" (b2 policy B).
+   */
+  match(text: string, excluded?: string[]): NameMatch | null {
     const norm = normName(text);
     if (!norm) return null;
     const exact = this.byNorm.get(norm);
@@ -323,18 +327,29 @@ export class KbIndex {
     // hydrogenated rapeseed oil" stays sesame oil).
     const claims = this.claimSpans(tokens);
     const skip = claims.length ? this.claimGuard(tokens, claims) : null;
+    // A variant name its tells deny ("without using partially hydrogenated poultry fat") is read like a claim: no
+    // sub-phrase that starts inside it is read, and no fuzzy match to that food is taken, so neither the variant nor
+    // the plain food inside it is the match.
+    const blocked = new Uint8Array(tokens.length);
+    let blockedIng: Set<string> | undefined;
     // Longest known sub-phrase: "koncentrat bialka serwatkowego instant" → "koncentrat bialka serwatkowego".
     for (let len = Math.min(tokens.length - 1, SUBPHRASE_MAX_TOKENS); len >= 1; len--) {
       for (let start = 0; start + len <= tokens.length; start++) {
-        if (skip?.(start, start + len - 1)) continue;
+        if (blocked[start] || skip?.(start, start + len - 1)) continue;
         const span = tokens.slice(start, start + len).join(" ");
         if (span.length < 3 || this.exactOnly.has(span)) continue;
         const e = this.byNorm.get(span);
         if (e) {
+          if (this.deniedVariant(e, norm)) {
+            blocked.fill(1, start, start + len);
+            if (!blockedIng?.has(e.ingredientId)) excluded?.push(e.ingredientId);
+            (blockedIng ??= new Set()).add(e.ingredientId);
+            continue;
+          }
           const coverage = span.length / norm.length;
           return {
             ingredientId: e.ingredientId,
-            variantId: this.confirmedVariant(e, norm),
+            variantId: e.variantId,
             matchType: "sub_phrase",
             confidence: Math.round((0.6 + 0.35 * coverage) * 100) / 100,
             matched: span,
@@ -344,7 +359,10 @@ export class KbIndex {
     }
     if (norm.length >= 5) {
       const hit = this.nearestName(norm);
-      const best = hit && distinctivePartsAgree(norm, hit.entry.norm) ? hit.entry : null;
+      const best =
+        hit && distinctivePartsAgree(norm, hit.entry.norm) && !blockedIng?.has(hit.entry.ingredientId)
+          ? hit.entry
+          : null;
       const bestSim = hit?.sim ?? 0;
       if (best && bestSim >= FUZZY_MIN) {
         return {
@@ -375,27 +393,27 @@ export class KbIndex {
   }
 
   /**
-   * The variant a sub-phrase names, only when one of the variant's tells fires on the whole item. The tells carry the
-   * KB's negation guards, so "without using partially hydrogenated rapeseed oil" names the hydrogenated variant but
-   * does not select it: the item is the plain oil, and its tells decide. A variant with no tells, one whose drop would
-   * change an allergen, diet or origin it asserts (`markDroppable`), and an item past TELL_TEXT_MAX keep the name's
-   * variant as before.
+   * Whether the item denies the variant a name selects: a droppable variant (`markDroppable`) none of whose tells
+   * fires on the whole item. The tells carry the KB's negation guards, so "without using partially hydrogenated
+   * rapeseed oil" names the hydrogenated variant and denies it, and `match` reads that name like a claim. A variant
+   * with no tells, a non-droppable one, and an item past TELL_TEXT_MAX are never denied.
    */
-  private confirmedVariant(e: NameEntry, norm: string): string | undefined {
+  private deniedVariant(e: NameEntry, norm: string): boolean {
     if (
       !e.variantId || norm.length > TELL_TEXT_MAX || !this.droppable.has(`${e.ingredientId}/${e.variantId}`)
     ) {
-      return e.variantId;
+      return false;
     }
     const t = this.tells.get(e.ingredientId)?.find((x) => x.variant.id === e.variantId);
-    return !t || t.res.some((re) => re.test(norm)) ? e.variantId : undefined;
+    return !!t && !t.res.some((re) => re.test(norm));
   }
 
   /**
-   * The variants with tells that a sub-phrase may name without selecting: every allergen, diet and origin assertion
-   * of the variant is made, with the same certainty, by the entry's own reading (its unscoped assertions, else its
-   * most likely prior variant's, at most "maybe"). So dropping one never loses an allergen or turns a diet verdict:
-   * "soy lecithin" or "wheat starch" keeps its variant even where its tells do not fire.
+   * The variants with tells that an item may deny (`deniedVariant`): every allergen, diet and origin assertion of the
+   * variant is made, with the same certainty, by the entry's own reading (its unscoped assertions, else its most
+   * likely prior variant's, at most "maybe"), so a denial never loses an allergen or turns a diet verdict: "soy
+   * lecithin" or "wheat starch" keeps its variant even where its tells do not fire. And its tells must fire on each
+   * of its names inside a longer neutral item ("x <name> x"), so a denial is always a negation the tells read.
    */
   private markDroppable(ing: IngredientT) {
     const scoped = (id?: string) =>
@@ -409,9 +427,12 @@ export class KbIndex {
       }
     }
     for (const v of ing.variants ?? []) {
-      if (v.tells?.length && scoped(v.id).every((a) => own.get(a.code) === a.certainty)) {
-        this.droppable.add(`${ing.id}/${v.id}`);
-      }
+      if (!v.tells?.length || !scoped(v.id).every((a) => own.get(a.code) === a.certainty)) continue;
+      // and only if its tells fire on each of its names inside a longer neutral item, so a denial is a negation
+      // the tells read, never an anchored tell that a neutral item cannot meet
+      const res = v.tells.map((s) => new RegExp(s, "u"));
+      const names = allNames(v.names).map((n) => normName(n.name)).filter(Boolean);
+      if (names.every((n) => res.some((re) => re.test(`x ${n} x`)))) this.droppable.add(`${ing.id}/${v.id}`);
     }
   }
 
