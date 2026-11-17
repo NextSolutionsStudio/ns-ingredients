@@ -1,8 +1,8 @@
 id: hydrogenated-fat
 type: fat
 names:
-  en: [hydrogenated fat or oil]
-  pl: [tłuszcz utwardzony, utwardzony oil, utwardzone oil, uwodorniony oil, uwodornione oil, olej hydrogenated]
+  en: [hydrogenated fat or oil, hydrogenated oil, hydrogenated oils, hydrogenated fat, hydrogenated fats]
+  pl: [tłuszcz utwardzony, utwardzony oil, utwardzone oil, uwodorniony oil, uwodornione oil, olej hydrogenated, olej uwodorniony, uwodorniony olej, olej utwardzony, utwardzony olej, tłuszcz uwodorniony, uwodorniony tłuszcz, utwardzony tłuszcz, oleje uwodornione, uwodornione oleje, oleje utwardzone, utwardzone oleje, tłuszcze uwodornione, uwodornione tłuszcze, tłuszcze utwardzone, utwardzone tłuszcze]
 summary:
   en: >-
     A fat or oil that the label calls hardened (hydrogenated) without saying whether it is vegetable or animal,
@@ -17,20 +17,20 @@ summary:
 variants:
   - id: partially-hydrogenated
     names:
-      en: [partially hydrogenated fat or oil]
-      pl: [tłuszcz częściowo utwardzony, częściowo utwardzony oil, częściowo utwardzone oil, częściowo uwodorniony oil, częściowo uwodornione oil, olej partially hydrogenated]
+      en: [partially hydrogenated fat or oil, partially hydrogenated oil, partially hydrogenated oils, partially hydrogenated fat, partially hydrogenated fats]
+      pl: [tłuszcz częściowo utwardzony, częściowo utwardzony oil, częściowo utwardzone oil, częściowo uwodorniony oil, częściowo uwodornione oil, olej partially hydrogenated, olej częściowo uwodorniony, częściowo uwodorniony olej, olej częściowo utwardzony, częściowo utwardzony olej, tłuszcz częściowo uwodorniony, częściowo uwodorniony tłuszcz, częściowo utwardzony tłuszcz, oleje częściowo uwodornione, częściowo uwodornione oleje, oleje częściowo utwardzone, częściowo utwardzone oleje, tłuszcze częściowo uwodornione, częściowo uwodornione tłuszcze, tłuszcze częściowo utwardzone, częściowo utwardzone tłuszcze]
     process:
       en: "Some but not all double bonds are hydrogenated, leaving a mix of natural cis and industrially formed trans unsaturated fatty acids."
       pl: "Utwardzeniu podlega część, nie wszystkie, wiązania podwójne, co pozostawia mieszankę naturalnych (cis) i powstałych przemysłowo (trans) nienasyconych kwasów tłuszczowych."
-    tells: ['(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )czesciowo (?:utwardzon|uwodorn)', '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )partially hydrogenated', '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )teilweise gehartet']
+    tells: ['(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )czesciowo (?:utwardzon|uwodorn)', '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )partially hydrogenated', '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )teilweise gehartet']
   - id: fully-hydrogenated
     names:
-      en: [fully hydrogenated fat or oil]
-      pl: [tłuszcz całkowicie utwardzony, całkowicie utwardzony oil, całkowicie utwardzone oil, całkowicie uwodorniony oil, całkowicie uwodornione oil, w pełni utwardzony oil, w pełni utwardzone oil, w pełni uwodorniony oil, w pełni uwodornione oil, olej fully hydrogenated, olej totally hydrogenated]
+      en: [fully hydrogenated fat or oil, fully hydrogenated oil, fully hydrogenated oils, fully hydrogenated fat, fully hydrogenated fats]
+      pl: [tłuszcz całkowicie utwardzony, całkowicie utwardzony oil, całkowicie utwardzone oil, całkowicie uwodorniony oil, całkowicie uwodornione oil, w pełni utwardzony oil, w pełni utwardzone oil, w pełni uwodorniony oil, w pełni uwodornione oil, olej fully hydrogenated, olej totally hydrogenated, olej całkowicie uwodorniony, całkowicie uwodorniony olej, olej całkowicie utwardzony, całkowicie utwardzony olej, tłuszcz całkowicie uwodorniony, całkowicie uwodorniony tłuszcz, całkowicie utwardzony tłuszcz, oleje całkowicie uwodornione, całkowicie uwodornione oleje, oleje całkowicie utwardzone, całkowicie utwardzone oleje, tłuszcze całkowicie uwodornione, całkowicie uwodornione tłuszcze, tłuszcze całkowicie utwardzone, całkowicie utwardzone tłuszcze, olej w pełni uwodorniony, w pełni uwodorniony olej, olej w pełni utwardzony, w pełni utwardzony olej, tłuszcz w pełni uwodorniony, w pełni uwodorniony tłuszcz, tłuszcz w pełni utwardzony, w pełni utwardzony tłuszcz, oleje w pełni uwodornione, w pełni uwodornione oleje, oleje w pełni utwardzone, w pełni utwardzone oleje, tłuszcze w pełni uwodornione, w pełni uwodornione tłuszcze, tłuszcze w pełni utwardzone, w pełni utwardzone tłuszcze]
     process:
       en: "All double bonds are hydrogenated; the fat is fully saturated, very hard, and contains essentially no trans fat."
       pl: "Wszystkie wiązania podwójne są utwardzone; tłuszcz jest w pełni nasycony, bardzo twardy i praktycznie nie zawiera tłuszczów trans."
-    tells: ['(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )calkowicie (?:utwardzon|uwodorn)', '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )fully hydrogenated', '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )totally hydrogenated', '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )w pelni (?:utwardzon|uwodorn)', '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )vollstandig gehartet']
+    tells: ['(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )calkowicie (?:utwardzon|uwodorn)', '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )fully hydrogenated', '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )totally hydrogenated', '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )w pelni (?:utwardzon|uwodorn)', '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )vollstandig gehartet']
 assertions:
   - code: processing.hydrogenated
     certainty: yes
