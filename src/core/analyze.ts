@@ -336,6 +336,8 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
   const deniedFoods = new Set<string>();
   /** Per qualifier path, the variant its name selects ("(from fully refined hydrogenated soybean oil)"). */
   const qualifierVariants = new Map<string, string[]>();
+  /** Per qualifier path, the names it denies, read by its parent as its own. */
+  const qualifierDenied = new Map<string, DeniedName[]>();
   /** Per item path, the words of it and of its brackets that denied names cover: emphasis there reasserts nothing. */
   const deniedTexts = new Map<string, DeniedText[]>();
 
@@ -355,7 +357,17 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
     // Qualifiers ("z soi") and bare E-number annotations are resolved for their parent.
     if (item.role === "qualifier") {
       const named = item.name.replace(/^(?:z|ze|from|of|aus|von)\s+/iu, "");
-      const m = index.match(named);
+      // a qualifier's denied names are read as an item's are (policy B), by its parent ("(from not fully refined
+      // hydrogenated soybean oil)": soy maybe; Sol 6.1 on #18 at 2668948)
+      const qx: DeniedName[] = [];
+      const m = index.match(named, qx);
+      if (qx.length) {
+        qualifierDenied.set(item.path, qx);
+        const tokens = normName(named).split(" ");
+        const covered = new Uint8Array(tokens.length);
+        for (const x of qx) covered.fill(1, x.start, x.end);
+        deniedTexts.set(item.path, [{ tokens, covered }]);
+      }
       if (m) base.match = toMatch(index, m.ingredientId, m.matchType, m.confidence);
       // the variant its name selects, else those its tells select ("(from fully refined soybean oil)")
       const vs = m?.variantId
@@ -508,7 +520,7 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
       for (const x of excluded) covered.fill(1, x.start, x.end);
       denied.push({ tokens, covered });
     }
-    for (const x of excluded) {
+    for (const x of [...excluded, ...children.flatMap((c) => qualifierDenied.get(c.path) ?? [])]) {
       const q = index.get(x.ingredientId);
       if (!q) continue;
       const exempt = exemptFrom(q, x.variantId);
