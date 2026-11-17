@@ -329,7 +329,7 @@ Deno.test("a negator that denies something else leaves the food (Sol 6.1 on #15 
       "without added sugar with partially hydrogenated poultry fat",
       "without added sugars with partially hydrogenated poultry fat",
       "without artificial colours with partially hydrogenated poultry fat",
-      // more words than DENIAL_GAP_MAX lie between them
+      // words that are no filler lie between them
       "without any added flavour and with partially hydrogenated poultry fat",
     ]
   ) {
@@ -553,4 +553,151 @@ Deno.test("a denied variant name past the sub-phrase window is found (pc-opus on
   assertEquals(r.flags.find((f) => f.code === "allergen.nuts")?.certainty, "maybe");
   // the generic hydrogenated fat inside the denied name is not the match
   assertEquals(r.flags.some((f) => f.code === "processing.hydrogenated"), false);
+});
+
+Deno.test("a denied name blocks its words after a claim and through a longer filler (Sol 6.1 on #10 at 7da39cb, P2 2)", () => {
+  const idx = new KbIndex({
+    version: "t",
+    counts: {},
+    implications: IMPL,
+    sources: [],
+    classes: [],
+    ingredients: [
+      {
+        id: "poultry-fat",
+        names: { en: ["poultry fat"] },
+        variants: [{
+          id: "partially-hydrogenated",
+          names: { en: ["partially hydrogenated poultry fat"] },
+          process: { en: "p" },
+          tells: [String.raw`^(?!.*\b(?:without|free)\b).*\bpartially hydrogenated\b`],
+        }],
+        assertions: [says("origin.animal"), { ...says("diet.vegan"), certainty: "no" }],
+      },
+      { id: "olive-oil", names: { en: ["olive oil"] } },
+      {
+        id: "claim",
+        names: { en: ["a claim"] },
+        exact_names: { en: ["without the use of partially hydrogenated"] },
+      },
+    ],
+  } as unknown as KbBundle);
+  for (
+    const text of [
+      // the name starts inside a claim: the plain food it ends in, after the claim, is not read either
+      "without the use of partially hydrogenated poultry fat",
+      // four and five fillers between the negator and the name
+      "free of the use of partially hydrogenated poultry fat",
+      "free from the addition of any partially hydrogenated poultry fat",
+    ]
+  ) {
+    const ex: DeniedName[] = [];
+    assertEquals(idx.match(text, ex)?.ingredientId === "poultry-fat", false, text);
+    assertEquals(idx.match(text)?.ingredientId === "poultry-fat", false, text);
+    assertEquals(ex.map((x) => x.ingredientId), ["poultry-fat"], text);
+    const r = analyze(idx, `Ingredients: olive oil (${text})`, { lang: "en" });
+    assertEquals(r.items[0].children?.[0]?.match?.ingredient_id === "poultry-fat", false, text);
+    assertEquals(r.flags.some((x) => x.code === "origin.animal"), false, text);
+    assertEquals(r.diets.vegan.status === "no", false, text);
+  }
+  // the food named affirmatively after the claim's words is still the food
+  const r = analyze(idx, "Ingredients: olive oil, partially hydrogenated poultry fat", { lang: "en" });
+  assertEquals(r.items[1].match?.ingredient_id, "poultry-fat");
+  assertEquals(r.flags.some((x) => x.code === "origin.animal"), true);
+});
+
+Deno.test("a variant name inside a food's own negated name does not block the food (#17 sweep)", () => {
+  // "not partially hydrogenated rapeseed oil" is the plain oil's own name; after "gluten-free", a food before the
+  // claim, it is not the match, but the oil it names still is, and "gluten" inside "gluten-free" is not
+  const idx = new KbIndex({
+    version: "t",
+    counts: {},
+    implications: [...IMPL, impl("allergen.gluten", "allergen")],
+    sources: [],
+    classes: [],
+    ingredients: [
+      {
+        id: "rapeseed-oil",
+        names: { en: ["rapeseed oil", "not partially hydrogenated rapeseed oil"] },
+        variants: [{
+          id: "partially-hydrogenated",
+          names: { en: ["partially hydrogenated rapeseed oil"] },
+          process: { en: "p" },
+          tells: [PH.replace("without|", "without|not|")],
+        }],
+      },
+      { id: "gluten", names: { en: ["gluten"] }, assertions: [says("allergen.gluten")] },
+      { id: "claim", names: { en: ["a claim"] }, exact_names: { en: ["not partially hydrogenated"] } },
+    ],
+  } as unknown as KbBundle);
+  for (
+    const label of [
+      "Ingredients: gluten-free not partially hydrogenated rapeseed oil",
+      "Ingredients: olive oil, gluten-free not partially hydrogenated rapeseed oil",
+    ]
+  ) {
+    const r = analyze(idx, label, { lang: "en" });
+    assertEquals(r.items.at(-1)?.match?.ingredient_id, "rapeseed-oil", label);
+    assertEquals(r.flags.some((x) => x.code === "allergen.gluten"), false, label);
+  }
+});
+
+// Sol 6.1 on #10 at 7da39cb, P2 3: as on b2's KB, the exempt variant has no names and an anchored whole-item tell.
+function refinedSoyIndex(): KbIndex {
+  return new KbIndex({
+    version: "t",
+    counts: {},
+    implications: IMPL,
+    sources: [],
+    classes: [],
+    ingredients: [
+      {
+        id: "soybean-oil",
+        names: { en: ["soybean oil"] },
+        variants: [
+          { id: "unrefined", names: { en: ["unrefined soybean oil"] }, process: { en: "p" }, prior: 0.5 },
+          {
+            id: "fully-refined",
+            process: { en: "p" },
+            prior: 0.45,
+            tells: ["^(?:fully )?refined soybean oil$"],
+          },
+          {
+            id: "hydrogenated",
+            names: {
+              en: [
+                "hydrogenated soybean oil",
+                "hydrogenated fully refined soybean oil",
+                "refined hydrogenated soybean oil",
+              ],
+            },
+            process: { en: "p" },
+            tells: [SOY_TELL],
+          },
+        ],
+        assertions: [
+          says("allergen.soybeans", "unrefined"),
+          { ...says("allergen.soybeans", "fully-refined"), certainty: "no" },
+          { ...says("allergen.soybeans", "hydrogenated"), certainty: "maybe" },
+        ],
+      },
+      { id: "rapeseed-oil", names: { en: ["rapeseed oil"] } },
+    ],
+  } as unknown as KbBundle);
+}
+
+Deno.test("the exempt oil a denied name ends in keeps its exemption (Sol 6.1 on #10 at 7da39cb, P2 3)", () => {
+  const idx = refinedSoyIndex();
+  for (const f of ["", "added ", "using "]) {
+    // the name ends in fully refined soybean oil, which Annex II 6(a) exempts, as the KB's claims naming it carry no soy
+    const refined = `Ingredients: rapeseed oil (without ${f}hydrogenated fully refined soybean oil)`;
+    assertEquals(soyFlag(refined, idx), undefined, refined);
+    // a name that does not end in the refined oil keeps the food's allergen at maybe (policy B)
+    for (const oil of ["hydrogenated soybean oil", "refined hydrogenated soybean oil"]) {
+      const label = `Ingredients: rapeseed oil (without ${f}${oil})`;
+      assertEquals(soyFlag(label, idx)?.certainty, "maybe", label);
+    }
+  }
+  // named affirmatively, the hydrogenated oil keeps the KB's soy maybe
+  assertEquals(soyFlag("Ingredients: hydrogenated fully refined soybean oil", idx)?.certainty, "maybe");
 });
