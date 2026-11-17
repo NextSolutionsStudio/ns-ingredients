@@ -112,6 +112,42 @@ names:
     - tłuszcz kaczy nieutwardzony
     - nieuwodorniony tłuszcz kaczy
     - tłuszcz kaczy nieuwodorniony
+    - tłuszcz nie utwardzony drobiowy
+    - tłuszcz nie uwodorniony drobiowy
+    - tłuszcz nieutwardzony drobiowy
+    - tłuszcz nieuwodorniony drobiowy
+    - tłuszcz nie utwardzony kurzy
+    - tłuszcz nie uwodorniony kurzy
+    - tłuszcz nieutwardzony kurzy
+    - tłuszcz nieuwodorniony kurzy
+    - tłuszcz nie utwardzony z kury
+    - tłuszcz nie uwodorniony z kury
+    - tłuszcz nieutwardzony z kury
+    - tłuszcz nieuwodorniony z kury
+    - tłuszcz nie utwardzony kurczęcy
+    - tłuszcz nie uwodorniony kurczęcy
+    - tłuszcz nieutwardzony kurczęcy
+    - tłuszcz nieuwodorniony kurczęcy
+    - tłuszcz nie utwardzony z kurczaka
+    - tłuszcz nie uwodorniony z kurczaka
+    - tłuszcz nieutwardzony z kurczaka
+    - tłuszcz nieuwodorniony z kurczaka
+    - smalec nie utwardzony drobiowy
+    - smalec nie uwodorniony drobiowy
+    - smalec nieutwardzony drobiowy
+    - smalec nieuwodorniony drobiowy
+    - tłuszcz nie utwardzony gęsi
+    - tłuszcz nie uwodorniony gęsi
+    - tłuszcz nieutwardzony gęsi
+    - tłuszcz nieuwodorniony gęsi
+    - smalec nie utwardzony gęsi
+    - smalec nie uwodorniony gęsi
+    - smalec nieutwardzony gęsi
+    - smalec nieuwodorniony gęsi
+    - tłuszcz nie utwardzony kaczy
+    - tłuszcz nie uwodorniony kaczy
+    - tłuszcz nieutwardzony kaczy
+    - tłuszcz nieuwodorniony kaczy
   de:
     - Geflügelfett
     - Hühnerfett
@@ -169,6 +205,24 @@ variants:
         - tłuszcz kaczy utwardzony
         - uwodorniony tłuszcz kaczy
         - tłuszcz kaczy uwodorniony
+        - tłuszcz utwardzony drobiowy
+        - tłuszcz uwodorniony drobiowy
+        - tłuszcz utwardzony kurzy
+        - tłuszcz uwodorniony kurzy
+        - tłuszcz utwardzony z kury
+        - tłuszcz uwodorniony z kury
+        - tłuszcz utwardzony kurczęcy
+        - tłuszcz uwodorniony kurczęcy
+        - tłuszcz utwardzony z kurczaka
+        - tłuszcz uwodorniony z kurczaka
+        - smalec utwardzony drobiowy
+        - smalec uwodorniony drobiowy
+        - tłuszcz utwardzony gęsi
+        - tłuszcz uwodorniony gęsi
+        - smalec utwardzony gęsi
+        - smalec uwodorniony gęsi
+        - tłuszcz utwardzony kaczy
+        - tłuszcz uwodorniony kaczy
     process:
       en: "Poultry fat hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Tłuszcz drobiowy utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
@@ -218,6 +272,24 @@ variants:
         - tłuszcz kaczy częściowo utwardzony
         - częściowo uwodorniony tłuszcz kaczy
         - tłuszcz kaczy częściowo uwodorniony
+        - tłuszcz częściowo utwardzony drobiowy
+        - tłuszcz częściowo uwodorniony drobiowy
+        - tłuszcz częściowo utwardzony kurzy
+        - tłuszcz częściowo uwodorniony kurzy
+        - tłuszcz częściowo utwardzony z kury
+        - tłuszcz częściowo uwodorniony z kury
+        - tłuszcz częściowo utwardzony kurczęcy
+        - tłuszcz częściowo uwodorniony kurczęcy
+        - tłuszcz częściowo utwardzony z kurczaka
+        - tłuszcz częściowo uwodorniony z kurczaka
+        - smalec częściowo utwardzony drobiowy
+        - smalec częściowo uwodorniony drobiowy
+        - tłuszcz częściowo utwardzony gęsi
+        - tłuszcz częściowo uwodorniony gęsi
+        - smalec częściowo utwardzony gęsi
+        - smalec częściowo uwodorniony gęsi
+        - tłuszcz częściowo utwardzony kaczy
+        - tłuszcz częściowo uwodorniony kaczy
     process:
       en: "Poultry fat in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
       pl: "Tłuszcz drobiowy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
@@ -309,6 +381,42 @@ variants:
         - tłuszcz kaczy w pełni utwardzony
         - w pełni uwodorniony tłuszcz kaczy
         - tłuszcz kaczy w pełni uwodorniony
+        - tłuszcz całkowicie utwardzony drobiowy
+        - tłuszcz całkowicie uwodorniony drobiowy
+        - tłuszcz w pełni utwardzony drobiowy
+        - tłuszcz w pełni uwodorniony drobiowy
+        - tłuszcz całkowicie utwardzony kurzy
+        - tłuszcz całkowicie uwodorniony kurzy
+        - tłuszcz w pełni utwardzony kurzy
+        - tłuszcz w pełni uwodorniony kurzy
+        - tłuszcz całkowicie utwardzony z kury
+        - tłuszcz całkowicie uwodorniony z kury
+        - tłuszcz w pełni utwardzony z kury
+        - tłuszcz w pełni uwodorniony z kury
+        - tłuszcz całkowicie utwardzony kurczęcy
+        - tłuszcz całkowicie uwodorniony kurczęcy
+        - tłuszcz w pełni utwardzony kurczęcy
+        - tłuszcz w pełni uwodorniony kurczęcy
+        - tłuszcz całkowicie utwardzony z kurczaka
+        - tłuszcz całkowicie uwodorniony z kurczaka
+        - tłuszcz w pełni utwardzony z kurczaka
+        - tłuszcz w pełni uwodorniony z kurczaka
+        - smalec całkowicie utwardzony drobiowy
+        - smalec całkowicie uwodorniony drobiowy
+        - smalec w pełni utwardzony drobiowy
+        - smalec w pełni uwodorniony drobiowy
+        - tłuszcz całkowicie utwardzony gęsi
+        - tłuszcz całkowicie uwodorniony gęsi
+        - tłuszcz w pełni utwardzony gęsi
+        - tłuszcz w pełni uwodorniony gęsi
+        - smalec całkowicie utwardzony gęsi
+        - smalec całkowicie uwodorniony gęsi
+        - smalec w pełni utwardzony gęsi
+        - smalec w pełni uwodorniony gęsi
+        - tłuszcz całkowicie utwardzony kaczy
+        - tłuszcz całkowicie uwodorniony kaczy
+        - tłuszcz w pełni utwardzony kaczy
+        - tłuszcz w pełni uwodorniony kaczy
     process:
       en: "Poultry fat with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
       pl: "Tłuszcz drobiowy ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."

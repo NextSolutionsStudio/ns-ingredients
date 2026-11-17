@@ -45,6 +45,14 @@ names:
     - smalec wieprzowy nieutwardzony
     - nieuwodorniony smalec wieprzowy
     - smalec wieprzowy nieuwodorniony
+    - tłuszcz nie utwardzony wieprzowy
+    - tłuszcz nie uwodorniony wieprzowy
+    - tłuszcz nieutwardzony wieprzowy
+    - tłuszcz nieuwodorniony wieprzowy
+    - smalec nie utwardzony wieprzowy
+    - smalec nie uwodorniony wieprzowy
+    - smalec nieutwardzony wieprzowy
+    - smalec nieuwodorniony wieprzowy
   de:
     - Schweineschmalz
     - Schweinefett
@@ -70,6 +78,10 @@ variants:
         - smalec utwardzony
         - uwodorniony smalec
         - smalec uwodorniony
+        - tłuszcz utwardzony wieprzowy
+        - tłuszcz uwodorniony wieprzowy
+        - smalec utwardzony wieprzowy
+        - smalec uwodorniony wieprzowy
     process:
       en: "Pork fat hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Tłuszcz wieprzowy utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
@@ -93,6 +105,10 @@ variants:
         - smalec częściowo utwardzony
         - częściowo uwodorniony smalec
         - smalec częściowo uwodorniony
+        - tłuszcz częściowo utwardzony wieprzowy
+        - tłuszcz częściowo uwodorniony wieprzowy
+        - smalec częściowo utwardzony wieprzowy
+        - smalec częściowo uwodorniony wieprzowy
     process:
       en: "Pork fat in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
       pl: "Tłuszcz wieprzowy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
@@ -132,6 +148,14 @@ variants:
         - smalec w pełni utwardzony
         - w pełni uwodorniony smalec
         - smalec w pełni uwodorniony
+        - tłuszcz całkowicie utwardzony wieprzowy
+        - tłuszcz całkowicie uwodorniony wieprzowy
+        - tłuszcz w pełni utwardzony wieprzowy
+        - tłuszcz w pełni uwodorniony wieprzowy
+        - smalec całkowicie utwardzony wieprzowy
+        - smalec całkowicie uwodorniony wieprzowy
+        - smalec w pełni utwardzony wieprzowy
+        - smalec w pełni uwodorniony wieprzowy
     process:
       en: "Pork fat with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
       pl: "Tłuszcz wieprzowy ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."

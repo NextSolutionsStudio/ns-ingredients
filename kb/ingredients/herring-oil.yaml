@@ -29,6 +29,14 @@ names:
     - olej ze śledzi nieutwardzony
     - nieuwodorniony olej ze śledzi
     - olej ze śledzi nieuwodorniony
+    - olej nie utwardzony ze śledzia
+    - olej nie uwodorniony ze śledzia
+    - olej nieutwardzony ze śledzia
+    - olej nieuwodorniony ze śledzia
+    - olej nie utwardzony ze śledzi
+    - olej nie uwodorniony ze śledzi
+    - olej nieutwardzony ze śledzi
+    - olej nieuwodorniony ze śledzi
   de:
     - Heringsöl
 summary:
@@ -52,6 +60,10 @@ variants:
         - olej ze śledzi utwardzony
         - uwodorniony olej ze śledzi
         - olej ze śledzi uwodorniony
+        - olej utwardzony ze śledzia
+        - olej uwodorniony ze śledzia
+        - olej utwardzony ze śledzi
+        - olej uwodorniony ze śledzi
     process:
       en: "Herring oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej ze śledzia utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
@@ -70,6 +82,10 @@ variants:
         - olej ze śledzi częściowo utwardzony
         - częściowo uwodorniony olej ze śledzi
         - olej ze śledzi częściowo uwodorniony
+        - olej częściowo utwardzony ze śledzia
+        - olej częściowo uwodorniony ze śledzia
+        - olej częściowo utwardzony ze śledzi
+        - olej częściowo uwodorniony ze śledzi
     process:
       en: "Herring oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
       pl: "Olej ze śledzia, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
@@ -99,6 +115,14 @@ variants:
         - olej ze śledzi w pełni utwardzony
         - w pełni uwodorniony olej ze śledzi
         - olej ze śledzi w pełni uwodorniony
+        - olej całkowicie utwardzony ze śledzia
+        - olej całkowicie uwodorniony ze śledzia
+        - olej w pełni utwardzony ze śledzia
+        - olej w pełni uwodorniony ze śledzia
+        - olej całkowicie utwardzony ze śledzi
+        - olej całkowicie uwodorniony ze śledzi
+        - olej w pełni utwardzony ze śledzi
+        - olej w pełni uwodorniony ze śledzi
     process:
       en: "Herring oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
       pl: "Olej ze śledzia ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."

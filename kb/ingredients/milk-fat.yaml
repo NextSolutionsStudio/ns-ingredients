@@ -2,7 +2,7 @@ id: milk-fat
 type: fat
 names:
   en: [milk fat, butterfat, anhydrous milk fat, non-hydrogenated milk fat, unhydrogenated milk fat, non-hydrogenated anhydrous milk fat, unhydrogenated anhydrous milk fat, not hydrogenated anhydrous milk fat, not partially hydrogenated anhydrous milk fat, not fully hydrogenated anhydrous milk fat, non partially hydrogenated anhydrous milk fat, not hydrogenated milk fat, not partially hydrogenated milk fat, not fully hydrogenated milk fat, non partially hydrogenated milk fat]
-  pl: [tłuszcz mleczny, bezwodny tłuszcz mleczny, nie utwardzony tłuszcz mleczny, tłuszcz mleczny nie utwardzony, nie uwodorniony tłuszcz mleczny, tłuszcz mleczny nie uwodorniony, nieutwardzony tłuszcz mleczny, tłuszcz mleczny nieutwardzony, nieuwodorniony tłuszcz mleczny, tłuszcz mleczny nieuwodorniony, tłuszcz z mleka, tłuszcz mleka, nie utwardzony tłuszcz z mleka, tłuszcz z mleka nie utwardzony, nie uwodorniony tłuszcz z mleka, tłuszcz z mleka nie uwodorniony, nieutwardzony tłuszcz z mleka, tłuszcz z mleka nieutwardzony, nieuwodorniony tłuszcz z mleka, tłuszcz z mleka nieuwodorniony, nie utwardzony tłuszcz mleka, tłuszcz mleka nie utwardzony, nie uwodorniony tłuszcz mleka, tłuszcz mleka nie uwodorniony, nieutwardzony tłuszcz mleka, tłuszcz mleka nieutwardzony, nieuwodorniony tłuszcz mleka, tłuszcz mleka nieuwodorniony]
+  pl: [tłuszcz mleczny, bezwodny tłuszcz mleczny, nie utwardzony tłuszcz mleczny, tłuszcz mleczny nie utwardzony, nie uwodorniony tłuszcz mleczny, tłuszcz mleczny nie uwodorniony, nieutwardzony tłuszcz mleczny, tłuszcz mleczny nieutwardzony, nieuwodorniony tłuszcz mleczny, tłuszcz mleczny nieuwodorniony, tłuszcz z mleka, tłuszcz mleka, nie utwardzony tłuszcz z mleka, tłuszcz z mleka nie utwardzony, nie uwodorniony tłuszcz z mleka, tłuszcz z mleka nie uwodorniony, nieutwardzony tłuszcz z mleka, tłuszcz z mleka nieutwardzony, nieuwodorniony tłuszcz z mleka, tłuszcz z mleka nieuwodorniony, nie utwardzony tłuszcz mleka, tłuszcz mleka nie utwardzony, nie uwodorniony tłuszcz mleka, tłuszcz mleka nie uwodorniony, nieutwardzony tłuszcz mleka, tłuszcz mleka nieutwardzony, nieuwodorniony tłuszcz mleka, tłuszcz mleka nieuwodorniony, tłuszcz nie utwardzony mleczny, tłuszcz nie uwodorniony mleczny, tłuszcz nieutwardzony mleczny, tłuszcz nieuwodorniony mleczny, tłuszcz nie utwardzony z mleka, tłuszcz nie uwodorniony z mleka, tłuszcz nieutwardzony z mleka, tłuszcz nieuwodorniony z mleka, tłuszcz nie utwardzony mleka, tłuszcz nie uwodorniony mleka, tłuszcz nieutwardzony mleka, tłuszcz nieuwodorniony mleka]
   de: [Milchfett, Butterreinfett]
 summary:
   en: "The fat fraction of milk, isolated to near-pure fat (anhydrous milk fat/butterfat removes essentially all water and milk solids); one of the EU's fourteen regulated allergens (milk) regardless of how little non-fat milk solid remains."
@@ -27,6 +27,12 @@ variants:
         - tłuszcz mleka utwardzony
         - uwodorniony tłuszcz mleka
         - tłuszcz mleka uwodorniony
+        - tłuszcz utwardzony mleczny
+        - tłuszcz uwodorniony mleczny
+        - tłuszcz utwardzony z mleka
+        - tłuszcz uwodorniony z mleka
+        - tłuszcz utwardzony mleka
+        - tłuszcz uwodorniony mleka
     process:
       en: "Milk fat hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Tłuszcz mleczny utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
@@ -50,6 +56,12 @@ variants:
         - tłuszcz mleka częściowo utwardzony
         - częściowo uwodorniony tłuszcz mleka
         - tłuszcz mleka częściowo uwodorniony
+        - tłuszcz częściowo utwardzony mleczny
+        - tłuszcz częściowo uwodorniony mleczny
+        - tłuszcz częściowo utwardzony z mleka
+        - tłuszcz częściowo uwodorniony z mleka
+        - tłuszcz częściowo utwardzony mleka
+        - tłuszcz częściowo uwodorniony mleka
     process:
       en: "Milk fat in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
       pl: "Tłuszcz mleczny, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
@@ -89,6 +101,18 @@ variants:
         - tłuszcz mleka w pełni utwardzony
         - w pełni uwodorniony tłuszcz mleka
         - tłuszcz mleka w pełni uwodorniony
+        - tłuszcz całkowicie utwardzony mleczny
+        - tłuszcz całkowicie uwodorniony mleczny
+        - tłuszcz w pełni utwardzony mleczny
+        - tłuszcz w pełni uwodorniony mleczny
+        - tłuszcz całkowicie utwardzony z mleka
+        - tłuszcz całkowicie uwodorniony z mleka
+        - tłuszcz w pełni utwardzony z mleka
+        - tłuszcz w pełni uwodorniony z mleka
+        - tłuszcz całkowicie utwardzony mleka
+        - tłuszcz całkowicie uwodorniony mleka
+        - tłuszcz w pełni utwardzony mleka
+        - tłuszcz w pełni uwodorniony mleka
     process:
       en: "Milk fat with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
       pl: "Tłuszcz mleczny ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
