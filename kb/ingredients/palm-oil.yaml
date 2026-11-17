@@ -52,7 +52,7 @@ variants:
     process:
       en: "Palm oil or palm fat hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej lub tłuszcz palmowy utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
-    tells: ['(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!not )(?<!teilweise )(?<!vollstandig )(?<!nicht )(?<!bez )(?<!brak )(?<!nie poddany )(?<!niepoddany )(?<!nie poddawany )(?<!without )(?<!free from )(?<!free of )(?<!no )(?<!ohne )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)']
+    tells: ['(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!partially )(?<!fully )(?<!totally )(?<!teilweise )(?<!vollstandig )(?<!\bnie )(?<!\bnon )(?<!\bnot )(?<!\bno )(?<!\bnicht )(?<!\bohne )(?<!\bwithout )(?<!\bfree from )(?<!\bfree of )(?<!\b(?:bez|brak)(?: procesu)? )(?<!\bnie ?podda(?:wa)?n[ye](?: procesowi)? )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)']
   - id: partially-hydrogenated
     names:
       en: [partially hydrogenated palm oil, partially hydrogenated palm fat, partially hydrogenated vegetable oil from palm, partially hydrogenated vegetable fat from palm, partially hydrogenated vegetable oils from palm, partially hydrogenated vegetable fats from palm, partially hydrogenated vegetable oil from palm fruit, partially hydrogenated vegetable fat from palm fruit, partially hydrogenated vegetable oils from palm fruit, partially hydrogenated vegetable fats from palm fruit]

@@ -49,7 +49,7 @@ variants:
     process:
       en: "Coconut oil or fat hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej lub tłuszcz kokosowy utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
-    tells: ['(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!not )(?<!teilweise )(?<!vollstandig )(?<!nicht )(?<!bez )(?<!brak )(?<!nie poddany )(?<!niepoddany )(?<!nie poddawany )(?<!without )(?<!free from )(?<!free of )(?<!no )(?<!ohne )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)']
+    tells: ['(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!partially )(?<!fully )(?<!totally )(?<!teilweise )(?<!vollstandig )(?<!\bnie )(?<!\bnon )(?<!\bnot )(?<!\bno )(?<!\bnicht )(?<!\bohne )(?<!\bwithout )(?<!\bfree from )(?<!\bfree of )(?<!\b(?:bez|brak)(?: procesu)? )(?<!\bnie ?podda(?:wa)?n[ye](?: procesowi)? )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)']
   - id: partially-hydrogenated
     names:
       en: [partially hydrogenated coconut oil, partially hydrogenated coconut fat, partially hydrogenated vegetable oil from coconut, partially hydrogenated vegetable fat from coconut, partially hydrogenated vegetable oils from coconut, partially hydrogenated vegetable fats from coconut, partially hydrogenated vegetable oil from coconuts, partially hydrogenated vegetable fat from coconuts, partially hydrogenated vegetable oils from coconuts, partially hydrogenated vegetable fats from coconuts]
