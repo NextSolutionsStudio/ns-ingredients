@@ -303,7 +303,7 @@ function soyIndex(provenance?: string): KbIndex {
 const soyFlag = (label: string, idx = soyIndex()) =>
   analyze(idx, label, { lang: "en" }).flags.find((f) => f.code === "allergen.soybeans");
 
-Deno.test("a negator after the name does not deny it (Sol 6.1 on #15 at b71a92d, P2 1)", () => {
+Deno.test("a negator that denies something else leaves the name (Sol 6.1 on #15 at b71a92d and 8dc421e, P2 1)", () => {
   const idx = new KbIndex({
     version: "t",
     counts: {},
@@ -320,14 +320,26 @@ Deno.test("a negator after the name does not deny it (Sol 6.1 on #15 at b71a92d,
         tells: [PH],
       }],
       assertions: [says("origin.animal"), { ...says("diet.vegan"), certainty: "no" }],
-    }],
+    }, { id: "sugar", names: { en: ["sugar"] } }],
   } as unknown as KbBundle);
-  const r = analyze(idx, "Ingredients: partially hydrogenated poultry fat without added sugar", {
-    lang: "en",
-  });
-  assertEquals(r.items[0].match?.ingredient_id, "poultry-fat");
-  assertEquals(r.flags.some((x) => x.code === "origin.animal"), true);
-  assertEquals(r.diets.vegan.status, "no");
+  for (
+    const text of [
+      // the negator comes after the name
+      "partially hydrogenated poultry fat without added sugar",
+      // another food lies between the negator and the name
+      "without added sugar with partially hydrogenated poultry fat",
+      // more words than DENIAL_GAP_MAX lie between them
+      "without any added flavour and with partially hydrogenated poultry fat",
+    ]
+  ) {
+    const r = analyze(idx, `Ingredients: ${text}`, { lang: "en" });
+    const own = r.items.find((x) => x.match?.ingredient_id === "poultry-fat");
+    assertEquals(own?.match?.ingredient_id, "poultry-fat", text);
+    assertEquals(r.flags.some((x) => x.code === "origin.animal"), true, text);
+    assertEquals(r.diets.vegan.status, "no", text);
+  }
+  // a negator right before it, through a short filler, still denies it
+  assertEquals(idx.match("without the addition of partially hydrogenated poultry fat"), null);
 });
 
 Deno.test("a denied name is read whatever else wins the match (Sol 6.1 on #15 at b71a92d, P2 2)", () => {
@@ -350,8 +362,17 @@ Deno.test("capitals inside a denied name do not reassert its allergen (Sol 6.1 o
     const soy = soyFlag(label);
     assertEquals([soy?.certainty, soy?.kind], ["maybe", "estimate"], label);
   }
-  // capitals outside a denial still name the allergen
+  // capitals outside a denial still name the allergen, beside one too (Sol 6.1 on #15 at 8dc421e, P2 2)
   assertEquals(soyFlag("Ingredients: olive oil, SOY")?.certainty, "yes");
+  for (
+    const label of [
+      "Ingredients: olive oil with SOY (without using hydrogenated soy oil)",
+      "Ingredients: SOY oil, olive oil (without using hydrogenated SOY oil)",
+    ]
+  ) {
+    const soy = soyFlag(label);
+    assertEquals([soy?.certainty, soy?.kind], ["yes", "fact"], label);
+  }
 });
 
 Deno.test("a denied name's AI-drafted entry is disclosed (Sol 6.1 on #15 at b71a92d, P3 1)", () => {

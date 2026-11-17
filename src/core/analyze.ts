@@ -288,8 +288,8 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
   const dietInputs: DietInput[] = [];
   /** Entries a denied variant name contributes allergens from: no diet input, but their provenance counts. */
   const deniedFoods = new Set<string>();
-  /** Per item path, the words of the denied names in it and in its brackets: emphasis there reasserts nothing. */
-  const deniedWords = new Map<string, Set<string>>();
+  /** Per item path, the denied names spelt in it and in its brackets (`DeniedName.matched`, one per occurrence). */
+  const deniedNames = new Map<string, string[]>();
 
   const resolveItem = (item: ParsedItem, parentFn?: string, parentNorm?: string): ItemResult => {
     const base: ItemResult = {
@@ -444,10 +444,10 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
 
     // A variant name the item denies ("without using partially hydrogenated sesame oil") is read like a claim (b2
     // policy B): the food's own allergens stand at "maybe", and nothing else of it (no origin, diet or processing).
-    const denied = new Set<string>();
-    for (const c of children) for (const w of deniedWords.get(c.path) ?? []) denied.add(w);
+    const denied: string[] = [];
+    for (const c of children) denied.push(...deniedNames.get(c.path) ?? []);
     for (const x of excluded) {
-      for (const w of x.matched.split(" ")) denied.add(w);
+      denied.push(x.matched);
       const q = index.get(x.ingredientId);
       if (!q) continue;
       deniedFoods.add(q.id);
@@ -468,11 +468,12 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
         if (c.role === "qualifier") dietInputs.push({ path: c.path, ingredient: q });
       }
     }
-    if (denied.size) deniedWords.set(item.path, denied);
+    if (denied.length) deniedNames.set(item.path, denied);
     const unknownEmphasis: string[] = [];
     for (const w of item.emphasized) {
-      // "without using hydrogenated SOY oil": the capitals sit inside a denied name, whose allergens stand at maybe
-      if (denied.size && normName(w).split(" ").every((t) => denied.has(t))) continue;
+      // "without using hydrogenated SOY oil": every occurrence of the word sits inside a denied name, whose
+      // allergens stand at maybe; one outside ("olive oil with SOY (without using hydrogenated soy oil)") still counts
+      if (denied.length && insideDenied(normName(w), normName(item.raw), denied)) continue;
       const em = index.match(w);
       const q = em && em.confidence >= 0.9 ? index.get(em.ingredientId) : undefined;
       if (q) { for (const a of allergenAssertions(q)) addFlag(a, trig(item.path, q.id, "emphasis", a)); }
@@ -667,6 +668,18 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
   for (const id of deniedFoods) touched.add(id);
   result.ai_generated_content = [...touched].some((id) => index.get(id)?.provenance === "ai-drafted");
   return result;
+}
+
+/** Whether every occurrence of the words `w` in the item's text `item` lies inside one of its denied names. */
+function insideDenied(w: string, item: string, denied: string[]): boolean {
+  if (!w) return false;
+  const count = (hay: string) => {
+    let n = 0;
+    for (let i = ` ${hay} `.indexOf(` ${w} `); i >= 0; i = ` ${hay} `.indexOf(` ${w} `, i + 1)) n++;
+    return n;
+  };
+  const inItem = count(item);
+  return inItem > 0 && inItem <= denied.reduce((n, d) => n + count(d), 0);
 }
 
 // Position is the only amount signal a bare list carries: it runs in descending order of weight, though

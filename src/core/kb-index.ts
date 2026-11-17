@@ -66,6 +66,11 @@ const SUBPHRASE_MAX_TOKENS = 7;
  * real result and bounds the work.
  */
 export const TELL_TEXT_MAX = 500;
+/**
+ * At most this many words between a negator and the variant name it denies ("without the addition of partially
+ * hydrogenated …"); a longer gap reads as a negation of something else, as main reads it.
+ */
+const DENIAL_GAP_MAX = 3;
 /** A prior variant raises its flags only when it is more likely than not (`analyze`). */
 export const PRIOR_FLAG_MIN = 0.5;
 
@@ -356,13 +361,9 @@ export class KbIndex {
         if (span.length < 3 || this.exactOnly.has(span)) continue;
         const e = this.byNorm.get(span);
         if (!e) continue;
-        // the item up to the name's end: a negator after the name ("… poultry fat without added sugar") is no
-        // evidence that the name is denied
-        if (this.deniedVariant(e, tokens.slice(0, start + len).join(" "), norm.length)) {
+        if (this.deniedVariant(e, tokens, start, start + len, norm.length)) {
           blocked.fill(1, start, start + len);
-          if (!excluded?.some((x) => x.matched === span)) {
-            excluded?.push({ ingredientId: e.ingredientId, matched: span });
-          }
+          excluded?.push({ ingredientId: e.ingredientId, matched: span });
           (blockedIng ??= new Set()).add(e.ingredientId);
           continue;
         }
@@ -417,20 +418,45 @@ export class KbIndex {
   }
 
   /**
-   * Whether the item denies the variant a name selects: a droppable variant (`markDroppable`) none of whose tells
-   * fires on the item read up to the name's end (`upTo`, then a neutral word, as `markDroppable` reads a name). The
-   * tells carry the KB's negation guards, so "without using partially hydrogenated rapeseed oil" names the
-   * hydrogenated variant and denies it, and `match` reads that name like a claim. A variant with no tells, a
-   * non-droppable one, and an item past TELL_TEXT_MAX (`itemLength`) are never denied.
+   * Whether the item denies the variant the name at tokens[start, end) selects: a droppable variant
+   * (`markDroppable`) none of whose tells fires on the item read up to the name's end, with the negation scoped to
+   * that name. The tells carry the KB's negation guards, so "without using partially hydrogenated rapeseed oil" names
+   * the hydrogenated variant and denies it, and `match` reads that name like a claim. Scoped means: the words between
+   * the negator (the nearest start from which the tells fail) and the name are at most DENIAL_GAP_MAX and name
+   * nothing (no ingredient, variant, class or E-number). So a negator after the name ("… poultry fat without added
+   * sugar") or one that denies another food ("without added sugar with partially hydrogenated poultry fat") leaves
+   * the name as main reads it. A variant with no tells, a non-droppable one, and an item past TELL_TEXT_MAX
+   * (`itemLength`) are never denied.
    */
-  private deniedVariant(e: NameEntry, upTo: string, itemLength: number): boolean {
+  private deniedVariant(
+    e: NameEntry,
+    tokens: string[],
+    start: number,
+    end: number,
+    itemLength: number,
+  ): boolean {
     if (
       !e.variantId || itemLength > TELL_TEXT_MAX || !this.droppable.has(`${e.ingredientId}/${e.variantId}`)
     ) {
       return false;
     }
     const t = this.tells.get(e.ingredientId)?.find((x) => x.variant.id === e.variantId);
-    return !!t && !t.res.some((re) => re.test(`${upTo} x`));
+    if (!t) return false;
+    // read as `markDroppable` reads a name: between neutral words
+    const fires = (from: number) => t.res.some((re) => re.test(`x ${tokens.slice(from, end).join(" ")} x`));
+    if (fires(0)) return false;
+    let k = start - 1;
+    while (k > 0 && fires(k)) k--;
+    const gap = tokens.slice(k + 1, start);
+    if (gap.length > DENIAL_GAP_MAX) return false;
+    for (let i = 0; i < gap.length; i++) {
+      if (/^e\d{3}/.test(gap[i])) return false;
+      for (let j = i + 1; j <= gap.length; j++) {
+        const s = gap.slice(i, j).join(" ");
+        if (s.length >= 3 && (this.byNorm.has(s) || this.classByNorm.has(s))) return false;
+      }
+    }
+    return true;
   }
 
   /**
