@@ -1,7 +1,7 @@
 // Label analysis: parse → match → variants → implications → diets → profile.
 // Deterministic and side-effect free; the HTTP layer only validates and serialises.
 import type { AssertionT, IngredientT, Lang, TextT } from "../kb/schema.ts";
-import type { KbIndex, MatchType, NameMatch } from "./kb-index.ts";
+import type { DeniedName, KbIndex, MatchType, NameMatch } from "./kb-index.ts";
 import { PRIOR_FLAG_MIN } from "./kb-index.ts";
 import { baseENumber, findENumbers, guessLang, normName } from "./normalize.ts";
 import {
@@ -177,9 +177,12 @@ const txt = (t: TextT | undefined, lang: Lang): string => (t ? t[lang] ?? t.en :
 // E1400–E1452: modified starches, which can be wheat-derived; identity-only entries can't say.
 const isModifiedStarch = (e?: string) => !!e && /^E14[0-5]\d/.test(e);
 
-/** An item's own match: the matcher, else an E-number the name prints ("barwnik E150d"). */
-function matchName(index: KbIndex, name: string): NameMatch | null {
-  const m = name ? index.match(name) : null;
+/**
+ * An item's own match: the matcher, else an E-number the name prints ("barwnik E150d"). `excluded` receives the
+ * foods whose variant name the item denies (`KbIndex.match`).
+ */
+function matchName(index: KbIndex, name: string, excluded?: DeniedName[]): NameMatch | null {
+  const m = name ? index.match(name, excluded) : null;
   if (m && m.confidence >= 0.9) return m;
   const es = findENumbers(name);
   const byE = es.length ? index.byENumber(es[0].code) : undefined;
@@ -262,6 +265,20 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
     if (GRADE_RANK[full.grade] > GRADE_RANK[existing.grade]) existing.grade = full.grade;
   };
 
+  /**
+   * The allergens a food's own reading asserts (its unscoped ones, and its most likely prior variant's when that is
+   * more likely than not), for a variant name of it that the item denies.
+   */
+  const ownAllergens = (ing: IngredientT) => {
+    const top = (ing.variants ?? []).filter((v) => v.prior !== undefined)
+      .sort((x, y) => y.prior! - x.prior!)[0];
+    const topId = top && top.prior! >= PRIOR_FLAG_MIN ? top.id : undefined;
+    return (ing.assertions ?? []).filter((a) =>
+      a.code.startsWith("allergen.") && (a.certainty === "yes" || a.certainty === "maybe") &&
+      (!a.variant || a.variant === topId)
+    );
+  };
+
   /** Allergen assertions of an ingredient named inside a qualifier, emphasis or trace. */
   const allergenAssertions = (ing: IngredientT) =>
     (ing.assertions ?? []).filter((a) =>
@@ -269,6 +286,10 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
     );
 
   const dietInputs: DietInput[] = [];
+  /** Entries a denied variant name contributes allergens from: no diet input, but their provenance counts. */
+  const deniedFoods = new Set<string>();
+  /** Per item path, the denied names spelt in it and in its brackets (`DeniedName.matched`, one per occurrence). */
+  const deniedNames = new Map<string, string[]>();
 
   const resolveItem = (item: ParsedItem, parentFn?: string, parentNorm?: string): ItemResult => {
     const base: ItemResult = {
@@ -300,7 +321,8 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
     const headerClass = item.header ? index.classOf(item.header) : undefined;
     let fn = headerClass ?? parentFn;
 
-    let m = matchName(index, item.name);
+    const excluded: DeniedName[] = [];
+    let m = matchName(index, item.name, excluded);
     // A compound item ("Vitamins (…)", "polewa kakaowa (…)") is described by its parts; a fuzzy guess at
     // the header name is how "Vitamins" became vitamin C.
     if (m?.matchType === "fuzzy" && item.children.some((c) => c.role === "ingredient")) m = null;
@@ -420,6 +442,23 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
       dietInputs.push({ path: item.path }); // unmatched leaf → "unknown" for every diet
     }
 
+    // A variant name the item denies ("without using partially hydrogenated sesame oil") is read like a claim (b2
+    // policy B): the food's own allergens stand at "maybe", and nothing else of it (no origin, diet or processing).
+    const denied: string[] = [];
+    for (const c of children) denied.push(...deniedNames.get(c.path) ?? []);
+    for (const x of excluded) {
+      denied.push(x.matched);
+      const q = index.get(x.ingredientId);
+      if (!q) continue;
+      deniedFoods.add(q.id);
+      for (const a of ownAllergens(q)) {
+        addFlag(a, {
+          ...trig(item.path, q.id, "qualifier", a),
+          certainty: "maybe",
+          kind: a.kind === "fact" ? "estimate" : a.kind,
+        });
+      }
+    }
     // Sources named in qualifiers, children or CAPS emphasis carry their allergens to this item.
     for (const c of children) {
       if ((c.role === "qualifier" || c.role === "e_number") && c.match) {
@@ -429,8 +468,12 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
         if (c.role === "qualifier") dietInputs.push({ path: c.path, ingredient: q });
       }
     }
+    if (denied.length) deniedNames.set(item.path, denied);
     const unknownEmphasis: string[] = [];
     for (const w of item.emphasized) {
+      // "without using hydrogenated SOY oil": every occurrence of the word sits inside a denied name, whose
+      // allergens stand at maybe; one outside ("olive oil with SOY (without using hydrogenated soy oil)") still counts
+      if (denied.length && insideDenied(normName(w), normName(item.raw), denied)) continue;
       const em = index.match(w);
       const q = em && em.confidence >= 0.9 ? index.get(em.ingredientId) : undefined;
       if (q) { for (const a of allergenAssertions(q)) addFlag(a, trig(item.path, q.id, "emphasis", a)); }
@@ -622,8 +665,21 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
     }
   }
   const touched = new Set(dietInputs.map((d) => d.ingredient?.id).filter(Boolean) as string[]);
+  for (const id of deniedFoods) touched.add(id);
   result.ai_generated_content = [...touched].some((id) => index.get(id)?.provenance === "ai-drafted");
   return result;
+}
+
+/** Whether every occurrence of the words `w` in the item's text `item` lies inside one of its denied names. */
+function insideDenied(w: string, item: string, denied: string[]): boolean {
+  if (!w) return false;
+  const count = (hay: string) => {
+    let n = 0;
+    for (let i = ` ${hay} `.indexOf(` ${w} `); i >= 0; i = ` ${hay} `.indexOf(` ${w} `, i + 1)) n++;
+    return n;
+  };
+  const inItem = count(item);
+  return inItem > 0 && inItem <= denied.reduce((n, d) => n + count(d), 0);
 }
 
 // Position is the only amount signal a bare list carries: it runs in descending order of weight, though
