@@ -74,9 +74,10 @@ const SUBPHRASE_MAX_TOKENS = 7;
 export const TELL_TEXT_MAX = 500;
 /**
  * At most this many words between a negator and the variant name it denies ("without the addition of partially
- * hydrogenated …"), each one of DENIAL_FILLERS.
+ * hydrogenated …", "free of the use of hydrogenated …", "free from the addition of any …"), each one of
+ * DENIAL_FILLERS.
  */
-const DENIAL_GAP_MAX = 3;
+const DENIAL_GAP_MAX = 5;
 /**
  * The words (normalised) that may stand between a negator and the variant name it denies: articles, the connectors
  * the KB's negators take ("free from", "wolny od", "ohne Zusatz von") and the verbs and nouns of an exclusion
@@ -443,10 +444,16 @@ export class KbIndex {
       for (let start = 0; start + len <= tokens.length; start++) {
         if (blocked[start]) continue;
         if (skip?.(start, start + len - 1)) {
-          if (collect) {
-            const span = tokens.slice(start, start + len).join(" ");
-            const e = this.byNorm.get(span);
-            if (e && !this.exactOnly.has(span)) {
+          const span = tokens.slice(start, start + len).join(" ");
+          const e = this.byNorm.get(span);
+          if (e && !this.exactOnly.has(span)) {
+            // A variant name the item denies blocks its words here too, so the plain food it ends in is not read
+            // after the claim ("poultry fat" in "without the use of partially hydrogenated poultry fat").
+            if (this.variantReading(e, tokens, start, start + len, norm.length) === "deny") {
+              blocked.fill(1, start, start + len);
+              (blockedIng ??= new Set()).add(e.ingredientId);
+            }
+            if (collect) {
               deny(e.ingredientId, start, start + len, span);
               // and, as for a denied variant name, no fuzzy match to that food is taken
               (blockedIng ??= new Set()).add(e.ingredientId);
