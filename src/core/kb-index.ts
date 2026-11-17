@@ -52,6 +52,48 @@ const FUZZY_MIN = 0.55;
 const FUZZY_EDIT_MIN_SIM = 0.4;
 const SUBPHRASE_MAX_TOKENS = 7;
 /**
+ * Words that open a negation. A presence negator ("bez", "without", "no", "free from", "wolny od", "nie zawiera")
+ * denies what follows it: the words after it are a claim, not a name in the item ("olej sezamowy bez utwardzonych
+ * tluszczow", "without any partially hydrogenated rapeseed oil"). A property negator ("nie", "not", "non", "ani")
+ * denies a property of a food that is there ("not completely refined soybean oil"); at the start of an item that is
+ * left to the names ("non partially hydrogenated rapeseed oil" is the plain oil's name). "free" and "wolny" negate
+ * only before "from"/"of" and "od" ("gluten free", "z wolnego wybiegu" do not), and a GMO claim ("non gmo", "bez
+ * gmo") negates nothing about the food.
+ */
+type Negation = "presence" | "property";
+const NEGATION_OPENERS: Record<string, Negation> = {
+  bez: "presence",
+  brak: "presence",
+  without: "presence",
+  no: "presence",
+  zero: "presence",
+  ohne: "presence",
+  kein: "presence",
+  keine: "presence",
+  nie: "property",
+  ani: "property",
+  not: "property",
+  non: "property",
+};
+const NEGATION_OPENERS_BEFORE: Record<string, string[]> = {
+  free: ["from", "of"],
+  wolny: ["od"],
+  wolna: ["od"],
+  wolne: ["od"],
+  wolni: ["od"],
+  wolnego: ["od"],
+  wolnej: ["od"],
+};
+const GMO_WORDS = new Set(["gmo", "gm", "gmos"]);
+function negationAt(tokens: string[], k: number): Negation | undefined {
+  const w = tokens[k];
+  let kind = NEGATION_OPENERS[w] ??
+    (NEGATION_OPENERS_BEFORE[w]?.includes(tokens[k + 1]) ? "presence" : undefined);
+  if (!kind || tokens.slice(k + 1, k + 3).some((x) => GMO_WORDS.has(x))) return undefined;
+  if (w === "nie" && tokens[k + 1]?.startsWith("zawier")) kind = "presence";
+  return kind;
+}
+/**
  * The longest normalised item text variant tells are run on; longer text reads none. Tells are written for one item and some backtrack on
  * long input: cocoa's `kakao.*obniz.*tluszcz` over a 12,000-character item took ~4 s. On 1,400 real Polish labels
  * the longest text reaching a tell is 204 characters and every tell hit ends by character 51, so 500 changes no
@@ -222,21 +264,35 @@ export class KbIndex {
       };
     }
     const tokens = norm.split(" ");
+    // A sub-phrase that starts after the first word and reaches a negation is in the claim. After a food ("olej
+    // sezamowy bez ..."), it is never read when the negation denies presence, and only if nothing before it is a name
+    // when it denies a property ("zawiera nie zaleca sie ... woda"). In an item that opens with a presence negation, a
+    // name inside the claim is what it denies, so it is never read either.
+    let negAt = -1;
+    let negKind: Negation | undefined;
+    for (let k = 0; k < tokens.length && negAt < 0; k++) {
+      const n = negationAt(tokens, k);
+      if (n && (k > 0 || n === "presence")) [negAt, negKind] = [k, n];
+    }
+    const inClaim = (start: number, len: number) => negAt >= 0 && start > 0 && start + len > negAt;
     // Longest known sub-phrase: "koncentrat bialka serwatkowego instant" → "koncentrat bialka serwatkowego".
-    for (let len = Math.min(tokens.length - 1, SUBPHRASE_MAX_TOKENS); len >= 1; len--) {
-      for (let start = 0; start + len <= tokens.length; start++) {
-        const span = tokens.slice(start, start + len).join(" ");
-        if (span.length < 3) continue;
-        const e = this.byNorm.get(span);
-        if (e) {
-          const coverage = span.length / norm.length;
-          return {
-            ingredientId: e.ingredientId,
-            variantId: e.variantId,
-            matchType: "sub_phrase",
-            confidence: Math.round((0.6 + 0.35 * coverage) * 100) / 100,
-            matched: span,
-          };
+    for (const claimPass of negAt > 0 && negKind === "property" ? [false, true] : [false]) {
+      for (let len = Math.min(tokens.length - 1, SUBPHRASE_MAX_TOKENS); len >= 1; len--) {
+        for (let start = 0; start + len <= tokens.length; start++) {
+          if (inClaim(start, len) !== claimPass) continue;
+          const span = tokens.slice(start, start + len).join(" ");
+          if (span.length < 3) continue;
+          const e = this.byNorm.get(span);
+          if (e) {
+            const coverage = span.length / norm.length;
+            return {
+              ingredientId: e.ingredientId,
+              variantId: e.variantId,
+              matchType: "sub_phrase",
+              confidence: Math.round((0.6 + 0.35 * coverage) * 100) / 100,
+              matched: span,
+            };
+          }
         }
       }
     }
