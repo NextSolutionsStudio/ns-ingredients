@@ -288,8 +288,8 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
   const dietInputs: DietInput[] = [];
   /** Entries a denied variant name contributes allergens from: no diet input, but their provenance counts. */
   const deniedFoods = new Set<string>();
-  /** Per item path, the denied names spelt in it and in its brackets (`DeniedName.matched`, one per occurrence). */
-  const deniedNames = new Map<string, string[]>();
+  /** Per item path, the words of it and of its brackets that denied names cover: emphasis there reasserts nothing. */
+  const deniedTexts = new Map<string, DeniedText[]>();
 
   const resolveItem = (item: ParsedItem, parentFn?: string, parentNorm?: string): ItemResult => {
     const base: ItemResult = {
@@ -444,14 +444,20 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
 
     // A variant name the item denies ("without using partially hydrogenated sesame oil") is read like a claim (b2
     // policy B): the food's own allergens stand at "maybe", and nothing else of it (no origin, diet or processing).
-    const denied: string[] = [];
-    for (const c of children) denied.push(...deniedNames.get(c.path) ?? []);
+    const denied: DeniedText[] = [];
+    for (const c of children) denied.push(...deniedTexts.get(c.path) ?? []);
+    if (excluded.length) {
+      const tokens = normName(item.name).split(" ");
+      const covered = new Uint8Array(tokens.length);
+      for (const x of excluded) covered.fill(1, x.start, x.end);
+      denied.push({ tokens, covered });
+    }
     for (const x of excluded) {
-      denied.push(x.matched);
       const q = index.get(x.ingredientId);
       if (!q) continue;
-      deniedFoods.add(q.id);
-      for (const a of ownAllergens(q)) {
+      const own = ownAllergens(q);
+      if (own.length) deniedFoods.add(q.id);
+      for (const a of own) {
         addFlag(a, {
           ...trig(item.path, q.id, "qualifier", a),
           certainty: "maybe",
@@ -468,7 +474,7 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
         if (c.role === "qualifier") dietInputs.push({ path: c.path, ingredient: q });
       }
     }
-    if (denied.length) deniedNames.set(item.path, denied);
+    if (denied.length) deniedTexts.set(item.path, denied);
     const unknownEmphasis: string[] = [];
     for (const w of item.emphasized) {
       // "without using hydrogenated SOY oil": every occurrence of the word sits inside a denied name, whose
@@ -670,16 +676,28 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
   return result;
 }
 
-/** Whether every occurrence of the words `w` in the item's text `item` lies inside one of its denied names. */
-function insideDenied(w: string, item: string, denied: string[]): boolean {
+/** An item's normalised words, and which of them its denied names cover. */
+interface DeniedText {
+  tokens: string[];
+  covered: Uint8Array;
+}
+
+/**
+ * Whether every occurrence of the words `w` in the item's normalised text `item` lies inside its denied names: as
+ * many occurrences wholly on covered words of it and its brackets as in the whole text.
+ */
+function insideDenied(w: string, item: string, denied: DeniedText[]): boolean {
   if (!w) return false;
-  const count = (hay: string) => {
+  const ws = w.split(" ");
+  const occurrences = (tokens: string[], covered?: Uint8Array) => {
     let n = 0;
-    for (let i = ` ${hay} `.indexOf(` ${w} `); i >= 0; i = ` ${hay} `.indexOf(` ${w} `, i + 1)) n++;
+    for (let i = 0; i + ws.length <= tokens.length; i++) {
+      if (ws.every((x, j) => tokens[i + j] === x && (!covered || covered[i + j]))) n++;
+    }
     return n;
   };
-  const inItem = count(item);
-  return inItem > 0 && inItem <= denied.reduce((n, d) => n + count(d), 0);
+  const inItem = occurrences(item.split(" "));
+  return inItem > 0 && inItem <= denied.reduce((n, d) => n + occurrences(d.tokens, d.covered), 0);
 }
 
 // Position is the only amount signal a bare list carries: it runs in descending order of weight, though
