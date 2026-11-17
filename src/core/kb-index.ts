@@ -286,10 +286,14 @@ export class KbIndex {
     return own.id !== rest.id || this.nameBefore(tokens, k);
   }
 
-  /** Whether a known name lies wholly in the words before word `k` (a food the item names first). */
+  /**
+   * Whether a known name lies wholly in the words before word `k`: a food the item names first. A name that "free"
+   * follows is excluded, not named ("gluten free non hydrogenated sesame oil").
+   */
   private nameBefore(tokens: string[], k: number): boolean {
     for (let start = 0; start < k; start++) {
       for (let len = 1; start + len <= k && len <= SUBPHRASE_MAX_TOKENS; len++) {
+        if (tokens[start + len] === "free") continue;
         if (this.byNorm.has(tokens.slice(start, start + len).join(" "))) return true;
       }
     }

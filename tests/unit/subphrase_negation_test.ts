@@ -194,6 +194,16 @@ Deno.test("a food's own negated name after a modifier is the food (Sol 6.1 on d8
   // and the dash between it and the next item still splits them (Sol's second case)
   const r = analyze(tinyIndex(names), "Ingredients: bio non hydrogenated sesame oil - sugar", { lang: "en" });
   assertEquals(r.items.map((i) => i.match?.ingredient_id), ["t0", "t1"]);
+  // a name that "free" follows is excluded, not a food before the negator (Sol 6.1 on a2bde18)
+  for (
+    const [ex, text] of [["gluten", "gluten-free non-hydrogenated sesame oil"], [
+      "lactose",
+      "lactose-free non-hydrogenated sesame oil",
+    ]]
+  ) {
+    const m = tinyIndex([ex, ...names]).match(text);
+    assertEquals([m?.ingredientId, m?.matched], ["t1", "non hydrogenated sesame oil"], text);
+  }
   // after a food, even a food's own negated name is a claim (Sol 6.1 on 3d20ab7)
   const two = [
     "sesame oil",
