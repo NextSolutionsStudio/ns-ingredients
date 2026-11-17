@@ -30,70 +30,6 @@ names:
     - unhydrogenated goose fat
     - non-hydrogenated duck fat
     - unhydrogenated duck fat
-    - no hydrogenated chicken fat
-    - no partially hydrogenated chicken fat
-    - no fully hydrogenated chicken fat
-    - no totally hydrogenated chicken fat
-    - without hydrogenated chicken fat
-    - without partially hydrogenated chicken fat
-    - without fully hydrogenated chicken fat
-    - without totally hydrogenated chicken fat
-    - free from hydrogenated chicken fat
-    - free from partially hydrogenated chicken fat
-    - free from fully hydrogenated chicken fat
-    - free from totally hydrogenated chicken fat
-    - free of hydrogenated chicken fat
-    - free of partially hydrogenated chicken fat
-    - free of fully hydrogenated chicken fat
-    - free of totally hydrogenated chicken fat
-    - no hydrogenated duck fat
-    - no partially hydrogenated duck fat
-    - no fully hydrogenated duck fat
-    - no totally hydrogenated duck fat
-    - without hydrogenated duck fat
-    - without partially hydrogenated duck fat
-    - without fully hydrogenated duck fat
-    - without totally hydrogenated duck fat
-    - free from hydrogenated duck fat
-    - free from partially hydrogenated duck fat
-    - free from fully hydrogenated duck fat
-    - free from totally hydrogenated duck fat
-    - free of hydrogenated duck fat
-    - free of partially hydrogenated duck fat
-    - free of fully hydrogenated duck fat
-    - free of totally hydrogenated duck fat
-    - no hydrogenated goose fat
-    - no partially hydrogenated goose fat
-    - no fully hydrogenated goose fat
-    - no totally hydrogenated goose fat
-    - without hydrogenated goose fat
-    - without partially hydrogenated goose fat
-    - without fully hydrogenated goose fat
-    - without totally hydrogenated goose fat
-    - free from hydrogenated goose fat
-    - free from partially hydrogenated goose fat
-    - free from fully hydrogenated goose fat
-    - free from totally hydrogenated goose fat
-    - free of hydrogenated goose fat
-    - free of partially hydrogenated goose fat
-    - free of fully hydrogenated goose fat
-    - free of totally hydrogenated goose fat
-    - no hydrogenated poultry fat
-    - no partially hydrogenated poultry fat
-    - no fully hydrogenated poultry fat
-    - no totally hydrogenated poultry fat
-    - without hydrogenated poultry fat
-    - without partially hydrogenated poultry fat
-    - without fully hydrogenated poultry fat
-    - without totally hydrogenated poultry fat
-    - free from hydrogenated poultry fat
-    - free from partially hydrogenated poultry fat
-    - free from fully hydrogenated poultry fat
-    - free from totally hydrogenated poultry fat
-    - free of hydrogenated poultry fat
-    - free of partially hydrogenated poultry fat
-    - free of fully hydrogenated poultry fat
-    - free of totally hydrogenated poultry fat
   pl:
     - tłuszcz drobiowy
     - tłuszcz kurzy
@@ -217,6 +153,8 @@ names:
     - Hühnerfett
     - Gänsefett
     - Entenfett
+exact_names:
+  en: [no hydrogenated chicken fat, no partially hydrogenated chicken fat, no fully hydrogenated chicken fat, no totally hydrogenated chicken fat, without hydrogenated chicken fat, without partially hydrogenated chicken fat, without fully hydrogenated chicken fat, without totally hydrogenated chicken fat, free from hydrogenated chicken fat, free from partially hydrogenated chicken fat, free from fully hydrogenated chicken fat, free from totally hydrogenated chicken fat, free of hydrogenated chicken fat, free of partially hydrogenated chicken fat, free of fully hydrogenated chicken fat, free of totally hydrogenated chicken fat, no hydrogenated duck fat, no partially hydrogenated duck fat, no fully hydrogenated duck fat, no totally hydrogenated duck fat, without hydrogenated duck fat, without partially hydrogenated duck fat, without fully hydrogenated duck fat, without totally hydrogenated duck fat, free from hydrogenated duck fat, free from partially hydrogenated duck fat, free from fully hydrogenated duck fat, free from totally hydrogenated duck fat, free of hydrogenated duck fat, free of partially hydrogenated duck fat, free of fully hydrogenated duck fat, free of totally hydrogenated duck fat, no hydrogenated goose fat, no partially hydrogenated goose fat, no fully hydrogenated goose fat, no totally hydrogenated goose fat, without hydrogenated goose fat, without partially hydrogenated goose fat, without fully hydrogenated goose fat, without totally hydrogenated goose fat, free from hydrogenated goose fat, free from partially hydrogenated goose fat, free from fully hydrogenated goose fat, free from totally hydrogenated goose fat, free of hydrogenated goose fat, free of partially hydrogenated goose fat, free of fully hydrogenated goose fat, free of totally hydrogenated goose fat, no hydrogenated poultry fat, no partially hydrogenated poultry fat, no fully hydrogenated poultry fat, no totally hydrogenated poultry fat, without hydrogenated poultry fat, without partially hydrogenated poultry fat, without fully hydrogenated poultry fat, without totally hydrogenated poultry fat, free from hydrogenated poultry fat, free from partially hydrogenated poultry fat, free from fully hydrogenated poultry fat, free from totally hydrogenated poultry fat, free of hydrogenated poultry fat, free of partially hydrogenated poultry fat, free of fully hydrogenated poultry fat, free of totally hydrogenated poultry fat]
 summary:
   en: >-
     Rendered fat obtained from poultry (chicken, goose, duck or turkey tissues), used as an animal fat in

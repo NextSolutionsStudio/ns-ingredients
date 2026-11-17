@@ -13,22 +13,6 @@ names:
     - partially hydrogenated nut oil
     - fully hydrogenated nut oil
     - totally hydrogenated nut oil
-    - no hydrogenated nut oil
-    - no partially hydrogenated nut oil
-    - no fully hydrogenated nut oil
-    - no totally hydrogenated nut oil
-    - without hydrogenated nut oil
-    - without partially hydrogenated nut oil
-    - without fully hydrogenated nut oil
-    - without totally hydrogenated nut oil
-    - free from hydrogenated nut oil
-    - free from partially hydrogenated nut oil
-    - free from fully hydrogenated nut oil
-    - free from totally hydrogenated nut oil
-    - free of hydrogenated nut oil
-    - free of partially hydrogenated nut oil
-    - free of fully hydrogenated nut oil
-    - free of totally hydrogenated nut oil
   pl:
     - olej orzechowy
     - olej roślinny orzechowy
@@ -237,6 +221,8 @@ names:
     - orzechowy olej roślinny uwodorniony
   de:
     - Nussöl
+exact_names:
+  en: [no hydrogenated nut oil, no partially hydrogenated nut oil, no fully hydrogenated nut oil, no totally hydrogenated nut oil, without hydrogenated nut oil, without partially hydrogenated nut oil, without fully hydrogenated nut oil, without totally hydrogenated nut oil, free from hydrogenated nut oil, free from partially hydrogenated nut oil, free from fully hydrogenated nut oil, free from totally hydrogenated nut oil, free of hydrogenated nut oil, free of partially hydrogenated nut oil, free of fully hydrogenated nut oil, free of totally hydrogenated nut oil]
 summary:
   en: >-
     A label term for oil from nuts that does not name the nut. In Polish, "olej orzechowy" is used both for

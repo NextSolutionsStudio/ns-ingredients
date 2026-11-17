@@ -10,22 +10,6 @@ names:
     - not partially hydrogenated herring oil
     - not fully hydrogenated herring oil
     - non partially hydrogenated herring oil
-    - no hydrogenated herring oil
-    - no partially hydrogenated herring oil
-    - no fully hydrogenated herring oil
-    - no totally hydrogenated herring oil
-    - without hydrogenated herring oil
-    - without partially hydrogenated herring oil
-    - without fully hydrogenated herring oil
-    - without totally hydrogenated herring oil
-    - free from hydrogenated herring oil
-    - free from partially hydrogenated herring oil
-    - free from fully hydrogenated herring oil
-    - free from totally hydrogenated herring oil
-    - free of hydrogenated herring oil
-    - free of partially hydrogenated herring oil
-    - free of fully hydrogenated herring oil
-    - free of totally hydrogenated herring oil
   pl:
     - olej ze śledzia
     - olej ze śledzi
@@ -55,6 +39,8 @@ names:
     - olej nieuwodorniony ze śledzi
   de:
     - Heringsöl
+exact_names:
+  en: [no hydrogenated herring oil, no partially hydrogenated herring oil, no fully hydrogenated herring oil, no totally hydrogenated herring oil, without hydrogenated herring oil, without partially hydrogenated herring oil, without fully hydrogenated herring oil, without totally hydrogenated herring oil, free from hydrogenated herring oil, free from partially hydrogenated herring oil, free from fully hydrogenated herring oil, free from totally hydrogenated herring oil, free of hydrogenated herring oil, free of partially hydrogenated herring oil, free of fully hydrogenated herring oil, free of totally hydrogenated herring oil]
 summary:
   en: >-
     Marine fish oil extracted from herring (Clupea harengus). As a product derived from fish, it falls under EU

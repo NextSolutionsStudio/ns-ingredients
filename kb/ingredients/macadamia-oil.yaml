@@ -44,54 +44,6 @@ names:
     - non-hydrogenated nut oil from macadamia nuts
     - not hydrogenated nut oil from macadamia nuts
     - unhydrogenated nut oil from macadamia nuts
-    - no hydrogenated macadamia nut oil
-    - no partially hydrogenated macadamia nut oil
-    - no fully hydrogenated macadamia nut oil
-    - no totally hydrogenated macadamia nut oil
-    - without hydrogenated macadamia nut oil
-    - without partially hydrogenated macadamia nut oil
-    - without fully hydrogenated macadamia nut oil
-    - without totally hydrogenated macadamia nut oil
-    - free from hydrogenated macadamia nut oil
-    - free from partially hydrogenated macadamia nut oil
-    - free from fully hydrogenated macadamia nut oil
-    - free from totally hydrogenated macadamia nut oil
-    - free of hydrogenated macadamia nut oil
-    - free of partially hydrogenated macadamia nut oil
-    - free of fully hydrogenated macadamia nut oil
-    - free of totally hydrogenated macadamia nut oil
-    - no hydrogenated macadamia oil
-    - no partially hydrogenated macadamia oil
-    - no fully hydrogenated macadamia oil
-    - no totally hydrogenated macadamia oil
-    - without hydrogenated macadamia oil
-    - without partially hydrogenated macadamia oil
-    - without fully hydrogenated macadamia oil
-    - without totally hydrogenated macadamia oil
-    - free from hydrogenated macadamia oil
-    - free from partially hydrogenated macadamia oil
-    - free from fully hydrogenated macadamia oil
-    - free from totally hydrogenated macadamia oil
-    - free of hydrogenated macadamia oil
-    - free of partially hydrogenated macadamia oil
-    - free of fully hydrogenated macadamia oil
-    - free of totally hydrogenated macadamia oil
-    - no hydrogenated queensland nut oil
-    - no partially hydrogenated queensland nut oil
-    - no fully hydrogenated queensland nut oil
-    - no totally hydrogenated queensland nut oil
-    - without hydrogenated queensland nut oil
-    - without partially hydrogenated queensland nut oil
-    - without fully hydrogenated queensland nut oil
-    - without totally hydrogenated queensland nut oil
-    - free from hydrogenated queensland nut oil
-    - free from partially hydrogenated queensland nut oil
-    - free from fully hydrogenated queensland nut oil
-    - free from totally hydrogenated queensland nut oil
-    - free of hydrogenated queensland nut oil
-    - free of partially hydrogenated queensland nut oil
-    - free of fully hydrogenated queensland nut oil
-    - free of totally hydrogenated queensland nut oil
   pl:
     - olej z orzechów makadamia
     - olej makadamia
@@ -354,6 +306,8 @@ names:
   de:
     - Macadamiaöl
     - Macadamianussöl
+exact_names:
+  en: [no hydrogenated macadamia nut oil, no partially hydrogenated macadamia nut oil, no fully hydrogenated macadamia nut oil, no totally hydrogenated macadamia nut oil, without hydrogenated macadamia nut oil, without partially hydrogenated macadamia nut oil, without fully hydrogenated macadamia nut oil, without totally hydrogenated macadamia nut oil, free from hydrogenated macadamia nut oil, free from partially hydrogenated macadamia nut oil, free from fully hydrogenated macadamia nut oil, free from totally hydrogenated macadamia nut oil, free of hydrogenated macadamia nut oil, free of partially hydrogenated macadamia nut oil, free of fully hydrogenated macadamia nut oil, free of totally hydrogenated macadamia nut oil, no hydrogenated macadamia oil, no partially hydrogenated macadamia oil, no fully hydrogenated macadamia oil, no totally hydrogenated macadamia oil, without hydrogenated macadamia oil, without partially hydrogenated macadamia oil, without fully hydrogenated macadamia oil, without totally hydrogenated macadamia oil, free from hydrogenated macadamia oil, free from partially hydrogenated macadamia oil, free from fully hydrogenated macadamia oil, free from totally hydrogenated macadamia oil, free of hydrogenated macadamia oil, free of partially hydrogenated macadamia oil, free of fully hydrogenated macadamia oil, free of totally hydrogenated macadamia oil, no hydrogenated queensland nut oil, no partially hydrogenated queensland nut oil, no fully hydrogenated queensland nut oil, no totally hydrogenated queensland nut oil, without hydrogenated queensland nut oil, without partially hydrogenated queensland nut oil, without fully hydrogenated queensland nut oil, without totally hydrogenated queensland nut oil, free from hydrogenated queensland nut oil, free from partially hydrogenated queensland nut oil, free from fully hydrogenated queensland nut oil, free from totally hydrogenated queensland nut oil, free of hydrogenated queensland nut oil, free of partially hydrogenated queensland nut oil, free of fully hydrogenated queensland nut oil, free of totally hydrogenated queensland nut oil]
 summary:
   en: >-
     Vegetable oil pressed from macadamia or Queensland nuts (Macadamia ternifolia). As a product derived from macadamia or Queensland nuts, it falls

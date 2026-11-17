@@ -25,54 +25,6 @@ names:
     - not partially hydrogenated cold-pressed flaxseed oil
     - not fully hydrogenated cold-pressed flaxseed oil
     - non partially hydrogenated cold-pressed flaxseed oil
-    - no hydrogenated cold-pressed flaxseed oil
-    - no partially hydrogenated cold-pressed flaxseed oil
-    - no fully hydrogenated cold-pressed flaxseed oil
-    - no totally hydrogenated cold-pressed flaxseed oil
-    - without hydrogenated cold-pressed flaxseed oil
-    - without partially hydrogenated cold-pressed flaxseed oil
-    - without fully hydrogenated cold-pressed flaxseed oil
-    - without totally hydrogenated cold-pressed flaxseed oil
-    - free from hydrogenated cold-pressed flaxseed oil
-    - free from partially hydrogenated cold-pressed flaxseed oil
-    - free from fully hydrogenated cold-pressed flaxseed oil
-    - free from totally hydrogenated cold-pressed flaxseed oil
-    - free of hydrogenated cold-pressed flaxseed oil
-    - free of partially hydrogenated cold-pressed flaxseed oil
-    - free of fully hydrogenated cold-pressed flaxseed oil
-    - free of totally hydrogenated cold-pressed flaxseed oil
-    - no hydrogenated flaxseed oil
-    - no partially hydrogenated flaxseed oil
-    - no fully hydrogenated flaxseed oil
-    - no totally hydrogenated flaxseed oil
-    - without hydrogenated flaxseed oil
-    - without partially hydrogenated flaxseed oil
-    - without fully hydrogenated flaxseed oil
-    - without totally hydrogenated flaxseed oil
-    - free from hydrogenated flaxseed oil
-    - free from partially hydrogenated flaxseed oil
-    - free from fully hydrogenated flaxseed oil
-    - free from totally hydrogenated flaxseed oil
-    - free of hydrogenated flaxseed oil
-    - free of partially hydrogenated flaxseed oil
-    - free of fully hydrogenated flaxseed oil
-    - free of totally hydrogenated flaxseed oil
-    - no hydrogenated linseed oil
-    - no partially hydrogenated linseed oil
-    - no fully hydrogenated linseed oil
-    - no totally hydrogenated linseed oil
-    - without hydrogenated linseed oil
-    - without partially hydrogenated linseed oil
-    - without fully hydrogenated linseed oil
-    - without totally hydrogenated linseed oil
-    - free from hydrogenated linseed oil
-    - free from partially hydrogenated linseed oil
-    - free from fully hydrogenated linseed oil
-    - free from totally hydrogenated linseed oil
-    - free of hydrogenated linseed oil
-    - free of partially hydrogenated linseed oil
-    - free of fully hydrogenated linseed oil
-    - free of totally hydrogenated linseed oil
   pl:
     - olej lniany
     - olej roślinny lniany
@@ -180,6 +132,8 @@ names:
   de:
     - Leinöl
     - Leinsamenöl
+exact_names:
+  en: [no hydrogenated cold-pressed flaxseed oil, no partially hydrogenated cold-pressed flaxseed oil, no fully hydrogenated cold-pressed flaxseed oil, no totally hydrogenated cold-pressed flaxseed oil, without hydrogenated cold-pressed flaxseed oil, without partially hydrogenated cold-pressed flaxseed oil, without fully hydrogenated cold-pressed flaxseed oil, without totally hydrogenated cold-pressed flaxseed oil, free from hydrogenated cold-pressed flaxseed oil, free from partially hydrogenated cold-pressed flaxseed oil, free from fully hydrogenated cold-pressed flaxseed oil, free from totally hydrogenated cold-pressed flaxseed oil, free of hydrogenated cold-pressed flaxseed oil, free of partially hydrogenated cold-pressed flaxseed oil, free of fully hydrogenated cold-pressed flaxseed oil, free of totally hydrogenated cold-pressed flaxseed oil, no hydrogenated flaxseed oil, no partially hydrogenated flaxseed oil, no fully hydrogenated flaxseed oil, no totally hydrogenated flaxseed oil, without hydrogenated flaxseed oil, without partially hydrogenated flaxseed oil, without fully hydrogenated flaxseed oil, without totally hydrogenated flaxseed oil, free from hydrogenated flaxseed oil, free from partially hydrogenated flaxseed oil, free from fully hydrogenated flaxseed oil, free from totally hydrogenated flaxseed oil, free of hydrogenated flaxseed oil, free of partially hydrogenated flaxseed oil, free of fully hydrogenated flaxseed oil, free of totally hydrogenated flaxseed oil, no hydrogenated linseed oil, no partially hydrogenated linseed oil, no fully hydrogenated linseed oil, no totally hydrogenated linseed oil, without hydrogenated linseed oil, without partially hydrogenated linseed oil, without fully hydrogenated linseed oil, without totally hydrogenated linseed oil, free from hydrogenated linseed oil, free from partially hydrogenated linseed oil, free from fully hydrogenated linseed oil, free from totally hydrogenated linseed oil, free of hydrogenated linseed oil, free of partially hydrogenated linseed oil, free of fully hydrogenated linseed oil, free of totally hydrogenated linseed oil]
 summary:
   en: >-
     Vegetable oil pressed from flax seeds (Linum usitatissimum), rich in alpha-linolenic acid (an omega-3
