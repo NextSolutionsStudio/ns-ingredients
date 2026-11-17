@@ -97,6 +97,19 @@ const CLAIM_FILLERS: string[][] = [
 ];
 const GMO_WORDS = new Set(["gmo", "gm", "gmos"]);
 const PROPERTY_NEGATORS = new Set(["nie", "ani", "not", "non"]);
+const CONJUNCTIONS = new Set(["and", "or", "i", "lub", "oraz", "und"]);
+/**
+ * For each word of `normName(text)`, the index of the whitespace-separated chunk of `text` it came from, so a
+ * hyphenated compound ("milk-protein-free") reads as one. Falls back to one chunk per word if the counts disagree.
+ */
+function chunksOf(text: string, words: number): number[] {
+  const ids: number[] = [];
+  text.split(/\s+/).forEach((chunk, c) => {
+    const n = normName(chunk);
+    if (n) { for (const _ of n.split(" ")) ids.push(c); }
+  });
+  return ids.length === words ? ids : Array.from({ length: words }, (_, i) => i);
+}
 function wordsAt(tokens: string[], k: number, words: string[]): boolean {
   return words.every((w, j) => {
     const x = tokens[k + j];
@@ -278,36 +291,53 @@ export class KbIndex {
    * Whether the property negator at word `k` opens a claim: no name starts at it, or the one that does is only the
    * negator and another entry's name ("not" + hydrogenated-fat's "partially hydrogenated oil").
    */
-  private negatesAnotherName(tokens: string[], k: number): boolean {
+  private negatesAnotherName(tokens: string[], k: number, chunks: number[]): boolean {
     const own = this.nameAt(tokens, k, 2);
     if (!own.len) return true;
     const rest = this.nameAt(tokens, k + 1, 1);
     if (own.len > 1 + rest.len) return false;
-    return own.id !== rest.id || this.nameBefore(tokens, k);
+    return own.id !== rest.id || this.nameBefore(tokens, k, chunks);
   }
 
   /**
-   * Whether a known name lies wholly in the words before word `k`: a food the item names first. The words before a
-   * postposed "free" (one not followed by "from"/"of") are what it excludes, not foods: "gluten free", "milk protein
-   * free", "gluten and lactose free" before "non hydrogenated sesame oil".
+   * Whether a known name lies wholly in the words before word `k`, outside an exclusion: a food the item names first.
+   * An exclusion is a postposed "free" (one not followed by "from"/"of") and what it excludes: the words hyphenated
+   * to it ("milk-protein-free"), or the word before it when it stands alone ("gluten free"), and further words joined
+   * by "and"/"or"/"i"/"lub"/"oraz" ("soy and dairy free", "gluten- and lactose-free"). A name outside it is still a
+   * food ("sesame oil gluten-free ..."). `chunks` gives each word's whitespace-separated chunk of the item text.
    */
-  private nameBefore(tokens: string[], k: number): boolean {
-    let from = 0;
-    for (let f = 0; f < k; f++) {
-      if (tokens[f] === "free" && tokens[f + 1] !== "from" && tokens[f + 1] !== "of") from = f + 1;
+  private nameBefore(tokens: string[], k: number, chunks: number[]): boolean {
+    const excluded = new Set<number>();
+    for (let f = 1; f < k; f++) {
+      if (tokens[f] !== "free" || tokens[f + 1] === "from" || tokens[f + 1] === "of") continue;
+      let s = f;
+      while (s > 0 && chunks[s - 1] === chunks[f]) s--;
+      if (s === f) {
+        s = f - 1;
+        while (s > 0 && chunks[s - 1] === chunks[s]) s--;
+      }
+      while (s >= 2 && CONJUNCTIONS.has(tokens[s - 1])) {
+        s -= 2;
+        while (s > 0 && chunks[s - 1] === chunks[s]) s--;
+      }
+      for (let i = s; i <= f; i++) excluded.add(i);
     }
-    for (let start = from; start < k; start++) {
+    for (let start = 0; start < k; start++) {
       for (let len = 1; start + len <= k && len <= SUBPHRASE_MAX_TOKENS; len++) {
+        if (excluded.has(start + len - 1)) break;
+        if (excluded.has(start)) break;
         if (this.byNorm.has(tokens.slice(start, start + len).join(" "))) return true;
       }
     }
     return false;
   }
 
-  private claimSpan(tokens: string[]): [number, number] | null {
+  private claimSpan(tokens: string[], chunks: number[]): [number, number] | null {
     for (let k = 0; k < tokens.length; k++) {
       const opener = CLAIM_OPENERS.find((s) => wordsAt(tokens, k, s)) ??
-        (PROPERTY_NEGATORS.has(tokens[k]) && this.negatesAnotherName(tokens, k) ? [tokens[k]] : undefined);
+        (PROPERTY_NEGATORS.has(tokens[k]) && this.negatesAnotherName(tokens, k, chunks)
+          ? [tokens[k]]
+          : undefined);
       if (!opener) continue;
       let o = k + opener.length;
       o += CLAIM_FILLERS.find((s) => wordsAt(tokens, o, s))?.length ?? 0;
@@ -343,7 +373,7 @@ export class KbIndex {
     // bez utwardzonych tluszczow", "sesame oil no partially hydrogenated oil") or opening the item ("without any
     // partially hydrogenated rapeseed oil"). A claim at the start is still read whole ("bez utwardzonych tluszczow i
     // konserwantow"), and so are the words after what it denies ("bez laktozy mleko").
-    const claim = this.claimSpan(tokens);
+    const claim = this.claimSpan(tokens, chunksOf(text, tokens.length));
     // Longest known sub-phrase: "koncentrat bialka serwatkowego instant" → "koncentrat bialka serwatkowego".
     for (let len = Math.min(tokens.length - 1, SUBPHRASE_MAX_TOKENS); len >= 1; len--) {
       for (let start = 0; start + len <= tokens.length; start++) {

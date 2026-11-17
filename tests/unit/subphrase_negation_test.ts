@@ -215,6 +215,19 @@ Deno.test("a food's own negated name after a modifier is the food (Sol 6.1 on d8
     const m = tinyIndex([ex, ...names]).match(text);
     assertEquals([m?.ingredientId, m?.matched], ["t1", "non hydrogenated sesame oil"], text);
   }
+  // an exclusion does not erase a food named before it (Sol 6.1 on 271aa26)
+  const three = [
+    "sesame oil",
+    "gluten",
+    "not partially hydrogenated rapeseed oil|partially hydrogenated rapeseed oil|rapeseed oil",
+  ];
+  assertEquals(
+    hit(three, "sesame oil gluten-free not partially hydrogenated rapeseed oil"),
+    "sesame oil sub_phrase",
+  );
+  // and coordination without hyphens is one exclusion
+  const m2 = tinyIndex(["soy|dairy", ...names]).match("soy and dairy free non-hydrogenated sesame oil");
+  assertEquals([m2?.ingredientId, m2?.matched], ["t1", "non hydrogenated sesame oil"]);
   // after a food, even a food's own negated name is a claim (Sol 6.1 on 3d20ab7)
   const two = [
     "sesame oil",
