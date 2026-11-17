@@ -34,6 +34,13 @@ export interface NameMatch {
   matched: string;
 }
 
+/** A variant name an item spells out and denies (`KbIndex.match`): read like a claim, never the match. */
+export interface DeniedName {
+  ingredientId: string;
+  /** The normalised name as the item spells it. */
+  matched: string;
+}
+
 export interface SearchHit {
   id: string;
   score: number;
@@ -59,6 +66,56 @@ const SUBPHRASE_MAX_TOKENS = 7;
  * real result and bounds the work.
  */
 export const TELL_TEXT_MAX = 500;
+/**
+ * At most this many words between a negator and the variant name it denies ("without the addition of partially
+ * hydrogenated …"), each one of DENIAL_FILLERS.
+ */
+const DENIAL_GAP_MAX = 3;
+/**
+ * The words (normalised) that may stand between a negator and the variant name it denies: articles, the connectors
+ * the KB's negators take ("free from", "wolny od", "ohne Zusatz von") and the verbs and nouns of an exclusion
+ * ("using", "added", "the addition of", "bez stosowania", "bez dodatku"). Any other word, a food ("sugars") or an
+ * affirmation ("with"), is no evidence that the negation reaches the name.
+ */
+const DENIAL_FILLERS = new Set([
+  // en
+  "a",
+  "an",
+  "the",
+  "any",
+  "of",
+  "from",
+  "using",
+  "use",
+  "used",
+  "added",
+  "adding",
+  "addition",
+  "contain",
+  "contains",
+  "containing",
+  // pl
+  "od",
+  "stosowania",
+  "uzycia",
+  "uzywania",
+  "dodatku",
+  "dodawania",
+  "dodania",
+  "dodanego",
+  "dodanej",
+  "dodanych",
+  "zawiera",
+  "zawieraja",
+  "zawierajacy",
+  "zawierajace",
+  // de
+  "von",
+  "zusatz",
+  "verwendung",
+  "zugesetztem",
+  "zugesetzten",
+]);
 /** A prior variant raises its flags only when it is more likely than not (`analyze`). */
 export const PRIOR_FLAG_MIN = 0.5;
 
@@ -300,8 +357,13 @@ export class KbIndex {
     return this.namePrefixes.has(norm);
   }
 
-  /** Resolve one item's name (no brackets) to an ingredient. */
-  match(text: string): NameMatch | null {
+  /**
+   * Resolve one item's name (no brackets) to an ingredient. `excluded`, when given, receives every variant name the
+   * item spells out and denies ("without using partially hydrogenated sesame oil"), whatever else the item matches:
+   * such a name is read like a claim, so it is never the match, and a caller keeps only the food's allergens, at
+   * "maybe" (b2 policy B).
+   */
+  match(text: string, excluded?: DeniedName[]): NameMatch | null {
     const norm = normName(text);
     if (!norm) return null;
     const exact = this.byNorm.get(norm);
@@ -323,28 +385,56 @@ export class KbIndex {
     // hydrogenated rapeseed oil" stays sesame oil).
     const claims = this.claimSpans(tokens);
     const skip = claims.length ? this.claimGuard(tokens, claims) : null;
+    // A variant name its tells deny ("without using partially hydrogenated poultry fat") is read like a claim: no
+    // sub-phrase that starts inside it is read, and no fuzzy match to that food is taken, so neither the variant nor
+    // the plain food inside it is the match.
+    const blocked = new Uint8Array(tokens.length);
+    let blockedIng: Set<string> | undefined;
+    // With `excluded`, the scan goes on past the match for denied names only, so a longer name elsewhere in the item
+    // ("extra virgin olive oil without using hydrogenated soybean oil") cannot hide one.
+    const collect = !!excluded && norm.length <= TELL_TEXT_MAX;
+    let found: NameMatch | null = null;
+    let foundAt = 0;
+    let foundEnd = 0;
     // Longest known sub-phrase: "koncentrat bialka serwatkowego instant" → "koncentrat bialka serwatkowego".
-    for (let len = Math.min(tokens.length - 1, SUBPHRASE_MAX_TOKENS); len >= 1; len--) {
+    scan: for (let len = Math.min(tokens.length - 1, SUBPHRASE_MAX_TOKENS); len >= 1; len--) {
       for (let start = 0; start + len <= tokens.length; start++) {
-        if (skip?.(start, start + len - 1)) continue;
+        if (blocked[start] || skip?.(start, start + len - 1)) continue;
+        // a name inside the match is part of it
+        if (found && start < foundEnd && start + len > foundAt) continue;
         const span = tokens.slice(start, start + len).join(" ");
         if (span.length < 3 || this.exactOnly.has(span)) continue;
         const e = this.byNorm.get(span);
-        if (e) {
-          const coverage = span.length / norm.length;
-          return {
-            ingredientId: e.ingredientId,
-            variantId: this.confirmedVariant(e, norm),
-            matchType: "sub_phrase",
-            confidence: Math.round((0.6 + 0.35 * coverage) * 100) / 100,
-            matched: span,
-          };
+        if (!e) continue;
+        const reading = this.variantReading(e, tokens, start, start + len, norm.length);
+        if (reading === "deny") {
+          blocked.fill(1, start, start + len);
+          excluded?.push({ ingredientId: e.ingredientId, matched: span });
+          (blockedIng ??= new Set()).add(e.ingredientId);
+          continue;
         }
+        if (found) continue;
+        const coverage = span.length / norm.length;
+        found = {
+          ingredientId: e.ingredientId,
+          // a variant whose tells fail where the item does not deny it is the plain entry (#14)
+          variantId: reading === "drop" ? undefined : e.variantId,
+          matchType: "sub_phrase",
+          confidence: Math.round((0.6 + 0.35 * coverage) * 100) / 100,
+          matched: span,
+        };
+        foundAt = start;
+        foundEnd = start + len;
+        if (!collect) break scan;
       }
     }
+    if (found) return found;
     if (norm.length >= 5) {
       const hit = this.nearestName(norm);
-      const best = hit && distinctivePartsAgree(norm, hit.entry.norm) ? hit.entry : null;
+      const best =
+        hit && distinctivePartsAgree(norm, hit.entry.norm) && !blockedIng?.has(hit.entry.ingredientId)
+          ? hit.entry
+          : null;
       const bestSim = hit?.sim ?? 0;
       if (best && bestSim >= FUZZY_MIN) {
         return {
@@ -375,27 +465,45 @@ export class KbIndex {
   }
 
   /**
-   * The variant a sub-phrase names, only when one of the variant's tells fires on the whole item. The tells carry the
-   * KB's negation guards, so "without using partially hydrogenated rapeseed oil" names the hydrogenated variant but
-   * does not select it: the item is the plain oil, and its tells decide. A variant with no tells, one whose drop would
-   * change an allergen, diet or origin it asserts (`markDroppable`), and an item past TELL_TEXT_MAX keep the name's
-   * variant as before.
+   * How the item reads the variant the name at tokens[start, end) selects. "keep": the variant (no tells, not
+   * droppable (`markDroppable`), an item past TELL_TEXT_MAX (`itemLength`), or a tell fires on the item read up to
+   * the name's end). Otherwise the tells fail, and the KB's negation guards they carry say why: "deny" when the
+   * negation is scoped to the name, so `match` reads it like a claim ("without using partially hydrogenated rapeseed
+   * oil"); "drop" (the plain entry, as #14 reads it) when it is not.
+   * Scoped means: between the negator (the nearest start from which the tells fail) and the name lie at most
+   * DENIAL_GAP_MAX words, each one of DENIAL_FILLERS. So a negator after the name ("… poultry fat without added
+   * sugar") keeps the variant, and one that denies something else ("without added sugars with partially
+   * hydrogenated poultry fat") leaves the plain food.
    */
-  private confirmedVariant(e: NameEntry, norm: string): string | undefined {
+  private variantReading(
+    e: NameEntry,
+    tokens: string[],
+    start: number,
+    end: number,
+    itemLength: number,
+  ): "keep" | "drop" | "deny" {
     if (
-      !e.variantId || norm.length > TELL_TEXT_MAX || !this.droppable.has(`${e.ingredientId}/${e.variantId}`)
+      !e.variantId || itemLength > TELL_TEXT_MAX || !this.droppable.has(`${e.ingredientId}/${e.variantId}`)
     ) {
-      return e.variantId;
+      return "keep";
     }
     const t = this.tells.get(e.ingredientId)?.find((x) => x.variant.id === e.variantId);
-    return !t || t.res.some((re) => re.test(norm)) ? e.variantId : undefined;
+    if (!t) return "keep";
+    // read as `markDroppable` reads a name: between neutral words
+    const fires = (from: number) => t.res.some((re) => re.test(`x ${tokens.slice(from, end).join(" ")} x`));
+    if (fires(0)) return "keep";
+    let k = start - 1;
+    while (k > 0 && fires(k)) k--;
+    const gap = tokens.slice(k + 1, start);
+    return gap.length <= DENIAL_GAP_MAX && gap.every((w) => DENIAL_FILLERS.has(w)) ? "deny" : "drop";
   }
 
   /**
-   * The variants with tells that a sub-phrase may name without selecting: every allergen, diet and origin assertion
-   * of the variant is made, with the same certainty, by the entry's own reading (its unscoped assertions, else its
-   * most likely prior variant's, at most "maybe"). So dropping one never loses an allergen or turns a diet verdict:
-   * "soy lecithin" or "wheat starch" keeps its variant even where its tells do not fire.
+   * The variants with tells that an item may deny or drop (`variantReading`): every allergen, diet and origin assertion of the
+   * variant is made, with the same certainty, by the entry's own reading (its unscoped assertions, else its most
+   * likely prior variant's, at most "maybe"), so a denial never loses an allergen or turns a diet verdict: "soy
+   * lecithin" or "wheat starch" keeps its variant even where its tells do not fire. And its tells must fire on each
+   * of its names inside a longer neutral item ("x <name> x"), so a denial is always a negation the tells read.
    */
   private markDroppable(ing: IngredientT) {
     const scoped = (id?: string) =>
@@ -409,9 +517,12 @@ export class KbIndex {
       }
     }
     for (const v of ing.variants ?? []) {
-      if (v.tells?.length && scoped(v.id).every((a) => own.get(a.code) === a.certainty)) {
-        this.droppable.add(`${ing.id}/${v.id}`);
-      }
+      if (!v.tells?.length || !scoped(v.id).every((a) => own.get(a.code) === a.certainty)) continue;
+      // and only if its tells fire on each of its names inside a longer neutral item, so a denial is a negation
+      // the tells read, never an anchored tell that a neutral item cannot meet
+      const res = v.tells.map((s) => new RegExp(s, "u"));
+      const names = allNames(v.names).map((n) => normName(n.name)).filter(Boolean);
+      if (names.every((n) => res.some((re) => re.test(`x ${n} x`)))) this.droppable.add(`${ing.id}/${v.id}`);
     }
   }
 
