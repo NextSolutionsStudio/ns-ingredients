@@ -76,6 +76,18 @@ names:
     - olej shea nieutwardzony
     - nieuwodorniony olej shea
     - olej shea nieuwodorniony
+    - nie utwardzony olej roślinny shea
+    - nie uwodorniony olej roślinny shea
+    - nieutwardzony olej roślinny shea
+    - olej roślinny shea nieutwardzony
+    - nieuwodorniony olej roślinny shea
+    - olej roślinny shea nieuwodorniony
+    - nie utwardzony tłuszcz roślinny shea
+    - nie uwodorniony tłuszcz roślinny shea
+    - nieutwardzony tłuszcz roślinny shea
+    - tłuszcz roślinny shea nieutwardzony
+    - nieuwodorniony tłuszcz roślinny shea
+    - tłuszcz roślinny shea nieuwodorniony
   de:
     - Sheabutter
     - ungehärtete Sheabutter
@@ -112,6 +124,14 @@ variants:
         - masło shea utwardzone
         - uwodornione masło shea
         - masło shea uwodornione
+        - utwardzony olej roślinny shea
+        - olej roślinny shea utwardzony
+        - uwodorniony olej roślinny shea
+        - olej roślinny shea uwodorniony
+        - utwardzony tłuszcz roślinny shea
+        - tłuszcz roślinny shea utwardzony
+        - uwodorniony tłuszcz roślinny shea
+        - tłuszcz roślinny shea uwodorniony
       de:
         - gehärtete Sheabutter
         - gehärtetes Sheafett
@@ -142,6 +162,14 @@ variants:
         - masło shea częściowo utwardzone
         - częściowo uwodornione masło shea
         - masło shea częściowo uwodornione
+        - częściowo utwardzony olej roślinny shea
+        - olej roślinny shea częściowo utwardzony
+        - częściowo uwodorniony olej roślinny shea
+        - olej roślinny shea częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny shea
+        - tłuszcz roślinny shea częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny shea
+        - tłuszcz roślinny shea częściowo uwodorniony
       de:
         - teilweise gehärtete Sheabutter
         - teilweise gehärtetes Sheafett
@@ -191,6 +219,14 @@ variants:
         - masło shea w pełni uwodornione
         - w pełni uwodorniony olej shea
         - olej shea w pełni uwodorniony
+        - całkowicie utwardzony olej roślinny shea
+        - olej roślinny shea całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny shea
+        - olej roślinny shea całkowicie uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny shea
+        - tłuszcz roślinny shea całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny shea
+        - tłuszcz roślinny shea całkowicie uwodorniony
       de:
         - vollständig gehärtete Sheabutter
         - vollständig gehärtetes Sheafett
