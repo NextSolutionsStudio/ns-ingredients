@@ -7,15 +7,14 @@ exact_names:
   en: [no hydrogenated arachis oil, no partially hydrogenated arachis oil, no fully hydrogenated arachis oil, no totally hydrogenated arachis oil, without hydrogenated arachis oil, without partially hydrogenated arachis oil, without fully hydrogenated arachis oil, without totally hydrogenated arachis oil, free from hydrogenated arachis oil, free from partially hydrogenated arachis oil, free from fully hydrogenated arachis oil, free from totally hydrogenated arachis oil, free of hydrogenated arachis oil, free of partially hydrogenated arachis oil, free of fully hydrogenated arachis oil, free of totally hydrogenated arachis oil, no hydrogenated groundnut oil, no partially hydrogenated groundnut oil, no fully hydrogenated groundnut oil, no totally hydrogenated groundnut oil, without hydrogenated groundnut oil, without partially hydrogenated groundnut oil, without fully hydrogenated groundnut oil, without totally hydrogenated groundnut oil, free from hydrogenated groundnut oil, free from partially hydrogenated groundnut oil, free from fully hydrogenated groundnut oil, free from totally hydrogenated groundnut oil, free of hydrogenated groundnut oil, free of partially hydrogenated groundnut oil, free of fully hydrogenated groundnut oil, free of totally hydrogenated groundnut oil, no hydrogenated peanut oil, no partially hydrogenated peanut oil, no fully hydrogenated peanut oil, no totally hydrogenated peanut oil, without hydrogenated peanut oil, without partially hydrogenated peanut oil, without fully hydrogenated peanut oil, without totally hydrogenated peanut oil, free from hydrogenated peanut oil, free from partially hydrogenated peanut oil, free from fully hydrogenated peanut oil, free from totally hydrogenated peanut oil, free of hydrogenated peanut oil, free of partially hydrogenated peanut oil, free of fully hydrogenated peanut oil, free of totally hydrogenated peanut oil, no hydrogenated peanuts oil, no partially hydrogenated peanuts oil, no fully hydrogenated peanuts oil, no totally hydrogenated peanuts oil, without hydrogenated peanuts oil, without partially hydrogenated peanuts oil, without fully hydrogenated peanuts oil, without totally hydrogenated peanuts oil, free from hydrogenated peanuts oil, free from partially hydrogenated peanuts oil, free from fully hydrogenated peanuts oil, free from totally hydrogenated peanuts oil, free of hydrogenated peanuts oil, free of partially hydrogenated peanuts oil, free of fully hydrogenated peanuts oil, free of totally hydrogenated peanuts oil]
 summary:
   en: >-
-    A label claim that excludes hydrogenation on a fat or oil from peanuts ("without hydrogenated
-    soybean oil", "free from fully hydrogenated almond oil"). It excludes a process, not the food: a label
-    that names the oil this way often contains the plain oil, so the allergen stays possible. The claim
-    asserts nothing else: no hydrogenation, no origin, no diet.
+    A label claim that excludes hydrogenation on a fat or oil from peanuts ("without hydrogenated arachis
+    oil"). It excludes a process, not the food: a label that names the oil this way often contains the plain
+    oil, so the allergen stays possible. The claim asserts nothing else: no hydrogenation, no origin, no diet.
   pl: >-
-    Deklaracja na etykiecie, która wyklucza utwardzenie tłuszczu lub oleju z: orzeszki ziemne ("bez utwardzonego
-    oleju sojowego"). Wyklucza proces, nie składnik: etykieta, która tak wymienia olej, często zawiera
-    zwykły olej, więc alergen pozostaje możliwy. Deklaracja nie stwierdza nic więcej: ani utwardzenia,
-    ani pochodzenia, ani wpływu na dietę.
+    Deklaracja na etykiecie, która wyklucza utwardzenie tłuszczu lub oleju z orzeszków ziemnych. Wyklucza
+    proces, nie składnik: etykieta, która tak wymienia olej, często zawiera zwykły olej, więc alergen
+    pozostaje możliwy. Deklaracja nie stwierdza nic więcej: ani utwardzenia, ani pochodzenia, ani wpływu na
+    dietę.
 assertions:
   - code: allergen.peanuts
     certainty: maybe

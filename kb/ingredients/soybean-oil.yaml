@@ -882,20 +882,11 @@ variants:
       en:
         - hydrogenated soybean oil
         - hydrogenated soya oil
-        - fully refined hydrogenated soybean oil partially
-        - fully refined hydrogenated soybean oil partly
-        - fully refined hydrogenated soybean oil incompletely
-        - fully refined hydrogenated soybean oil not fully
-        - fully refined hydrogenated soybean oil not completely
         - refined hydrogenated soybean oil partially
         - refined hydrogenated soybean oil partly
         - refined hydrogenated soybean oil incompletely
         - refined hydrogenated soybean oil not fully
         - refined hydrogenated soybean oil not completely
-        - fully refined hydrogenated soybean oil
-        - hydrogenated fully refined soybean oil
-        - fully refined hydrogenated soya oil
-        - hydrogenated fully refined soya oil
         - refined hydrogenated soybean oil
         - hydrogenated refined soybean oil
         - refined hydrogenated soya oil
@@ -991,36 +982,18 @@ variants:
         - utwardzony rafinowany olej sojowy nie w pełni
         - utwardzony rafinowany olej sojowy nie do końca
         - utwardzony rafinowany olej sojowy niepełnie
-        - utwardzony w pełni rafinowany olej sojowy częściowo
-        - utwardzony w pełni rafinowany olej sojowy niecałkowicie
-        - utwardzony w pełni rafinowany olej sojowy nie całkowicie
-        - utwardzony w pełni rafinowany olej sojowy nie w pełni
-        - utwardzony w pełni rafinowany olej sojowy nie do końca
-        - utwardzony w pełni rafinowany olej sojowy niepełnie
         - uwodorniony rafinowany olej sojowy częściowo
         - uwodorniony rafinowany olej sojowy niecałkowicie
         - uwodorniony rafinowany olej sojowy nie całkowicie
         - uwodorniony rafinowany olej sojowy nie w pełni
         - uwodorniony rafinowany olej sojowy nie do końca
         - uwodorniony rafinowany olej sojowy niepełnie
-        - uwodorniony w pełni rafinowany olej sojowy częściowo
-        - uwodorniony w pełni rafinowany olej sojowy niecałkowicie
-        - uwodorniony w pełni rafinowany olej sojowy nie całkowicie
-        - uwodorniony w pełni rafinowany olej sojowy nie w pełni
-        - uwodorniony w pełni rafinowany olej sojowy nie do końca
-        - uwodorniony w pełni rafinowany olej sojowy niepełnie
         - rafinowany utwardzony olej sojowy częściowo
         - rafinowany utwardzony olej sojowy niecałkowicie
         - rafinowany utwardzony olej sojowy nie całkowicie
         - rafinowany utwardzony olej sojowy nie w pełni
         - rafinowany utwardzony olej sojowy nie do końca
         - rafinowany utwardzony olej sojowy niepełnie
-        - w pełni rafinowany utwardzony olej sojowy częściowo
-        - w pełni rafinowany utwardzony olej sojowy niecałkowicie
-        - w pełni rafinowany utwardzony olej sojowy nie całkowicie
-        - w pełni rafinowany utwardzony olej sojowy nie w pełni
-        - w pełni rafinowany utwardzony olej sojowy nie do końca
-        - w pełni rafinowany utwardzony olej sojowy niepełnie
         - utwardzony rafinowany olej z soi częściowo
         - utwardzony rafinowany olej z soi niecałkowicie
         - utwardzony rafinowany olej z soi nie całkowicie
@@ -1033,30 +1006,12 @@ variants:
         - rafinowany utwardzony olej z soi nie w pełni
         - rafinowany utwardzony olej z soi nie do końca
         - rafinowany utwardzony olej z soi niepełnie
-        - utwardzony w pełni rafinowany olej z soi częściowo
-        - utwardzony w pełni rafinowany olej z soi niecałkowicie
-        - utwardzony w pełni rafinowany olej z soi nie całkowicie
-        - utwardzony w pełni rafinowany olej z soi nie w pełni
-        - utwardzony w pełni rafinowany olej z soi nie do końca
-        - utwardzony w pełni rafinowany olej z soi niepełnie
-        - w pełni rafinowany utwardzony olej z soi częściowo
-        - w pełni rafinowany utwardzony olej z soi niecałkowicie
-        - w pełni rafinowany utwardzony olej z soi nie całkowicie
-        - w pełni rafinowany utwardzony olej z soi nie w pełni
-        - w pełni rafinowany utwardzony olej z soi nie do końca
-        - w pełni rafinowany utwardzony olej z soi niepełnie
         - rafinowany uwodorniony olej sojowy częściowo
         - rafinowany uwodorniony olej sojowy niecałkowicie
         - rafinowany uwodorniony olej sojowy nie całkowicie
         - rafinowany uwodorniony olej sojowy nie w pełni
         - rafinowany uwodorniony olej sojowy nie do końca
         - rafinowany uwodorniony olej sojowy niepełnie
-        - w pełni rafinowany uwodorniony olej sojowy częściowo
-        - w pełni rafinowany uwodorniony olej sojowy niecałkowicie
-        - w pełni rafinowany uwodorniony olej sojowy nie całkowicie
-        - w pełni rafinowany uwodorniony olej sojowy nie w pełni
-        - w pełni rafinowany uwodorniony olej sojowy nie do końca
-        - w pełni rafinowany uwodorniony olej sojowy niepełnie
         - uwodorniony rafinowany olej z soi częściowo
         - uwodorniony rafinowany olej z soi niecałkowicie
         - uwodorniony rafinowany olej z soi nie całkowicie
@@ -1069,66 +1024,30 @@ variants:
         - rafinowany uwodorniony olej z soi nie w pełni
         - rafinowany uwodorniony olej z soi nie do końca
         - rafinowany uwodorniony olej z soi niepełnie
-        - uwodorniony w pełni rafinowany olej z soi częściowo
-        - uwodorniony w pełni rafinowany olej z soi niecałkowicie
-        - uwodorniony w pełni rafinowany olej z soi nie całkowicie
-        - uwodorniony w pełni rafinowany olej z soi nie w pełni
-        - uwodorniony w pełni rafinowany olej z soi nie do końca
-        - uwodorniony w pełni rafinowany olej z soi niepełnie
-        - w pełni rafinowany uwodorniony olej z soi częściowo
-        - w pełni rafinowany uwodorniony olej z soi niecałkowicie
-        - w pełni rafinowany uwodorniony olej z soi nie całkowicie
-        - w pełni rafinowany uwodorniony olej z soi nie w pełni
-        - w pełni rafinowany uwodorniony olej z soi nie do końca
-        - w pełni rafinowany uwodorniony olej z soi niepełnie
         - rafinowany olej sojowy utwardzony
         - utwardzony rafinowany olej sojowy
-        - w pełni rafinowany olej sojowy utwardzony
-        - utwardzony w pełni rafinowany olej sojowy
         - rafinowany olej sojowy uwodorniony
         - uwodorniony rafinowany olej sojowy
-        - w pełni rafinowany olej sojowy uwodorniony
-        - uwodorniony w pełni rafinowany olej sojowy
         - olej sojowy rafinowany utwardzony
         - olej sojowy utwardzony rafinowany
         - rafinowany utwardzony olej sojowy
-        - olej sojowy w pełni rafinowany utwardzony
-        - olej sojowy utwardzony w pełni rafinowany
-        - w pełni rafinowany utwardzony olej sojowy
         - rafinowany olej z soi utwardzony
         - utwardzony rafinowany olej z soi
         - olej z soi rafinowany utwardzony
         - olej z soi utwardzony rafinowany
         - rafinowany utwardzony olej z soi
-        - w pełni rafinowany olej z soi utwardzony
-        - utwardzony w pełni rafinowany olej z soi
-        - olej z soi w pełni rafinowany utwardzony
-        - olej z soi utwardzony w pełni rafinowany
-        - w pełni rafinowany utwardzony olej z soi
         - olej sojowy rafinowany uwodorniony
         - olej sojowy uwodorniony rafinowany
         - rafinowany uwodorniony olej sojowy
-        - olej sojowy w pełni rafinowany uwodorniony
-        - olej sojowy uwodorniony w pełni rafinowany
-        - w pełni rafinowany uwodorniony olej sojowy
         - rafinowany olej z soi uwodorniony
         - uwodorniony rafinowany olej z soi
         - olej z soi rafinowany uwodorniony
         - olej z soi uwodorniony rafinowany
         - rafinowany uwodorniony olej z soi
-        - w pełni rafinowany olej z soi uwodorniony
-        - uwodorniony w pełni rafinowany olej z soi
-        - olej z soi w pełni rafinowany uwodorniony
-        - olej z soi uwodorniony w pełni rafinowany
-        - w pełni rafinowany uwodorniony olej z soi
         - utwardzony olej sojowy rafinowany
-        - utwardzony olej sojowy w pełni rafinowany
         - utwardzony olej z soi rafinowany
-        - utwardzony olej z soi w pełni rafinowany
         - uwodorniony olej sojowy rafinowany
-        - uwodorniony olej sojowy w pełni rafinowany
         - uwodorniony olej z soi rafinowany
-        - uwodorniony olej z soi w pełni rafinowany
         - olej roślinny utwardzony sojowy
         - olej roślinny uwodorniony sojowy
         - tłuszcz roślinny utwardzony sojowy
@@ -1237,28 +1156,19 @@ variants:
       en: "Soybean oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej sojowy utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
     tells:
-      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!partially )(?<!fully )(?<!totally )(?<!teilweise )(?<!vollstandig )(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:utwardzon|uwodornion|utwardzan[yea]\b|uwodornian[yea]\b|hydrogenated|gehartet)|(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:po|podda\w*|podlega\w*)(?: (?!(?:nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b)\S+){0,3}? (?:uwodornieni|uwodornian|utwardzeni|utwardzan)'
+      - '^(?!.*(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!partially )(?<!fully )(?<!totally )(?<!teilweise )(?<!vollstandig )(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:utwardzon|uwodornion|utwardzan[yea]\b|uwodornian[yea]\b|hydrogenated|gehartet)|(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:po|podda\w*|podlega\w*)(?: (?!(?:nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b)\S+){0,3}? (?:uwodornieni|uwodornian|utwardzeni|utwardzan))'
   - id: partially-hydrogenated
     names:
       en:
         - partially hydrogenated soybean oil
         - partially hydrogenated soya oil
-        - fully refined partially hydrogenated soybean oil partially
-        - fully refined partially hydrogenated soybean oil partly
-        - fully refined partially hydrogenated soybean oil incompletely
-        - fully refined partially hydrogenated soybean oil not fully
-        - fully refined partially hydrogenated soybean oil not completely
         - refined partially hydrogenated soybean oil partially
         - refined partially hydrogenated soybean oil partly
         - refined partially hydrogenated soybean oil incompletely
         - refined partially hydrogenated soybean oil not fully
         - refined partially hydrogenated soybean oil not completely
-        - partially hydrogenated fully refined soybean oil
-        - partially hydrogenated fully refined soya oil
         - partially hydrogenated refined soybean oil
         - partially hydrogenated refined soya oil
-        - fully refined partially hydrogenated soybean oil
-        - fully refined partially hydrogenated soya oil
         - refined partially hydrogenated soybean oil
         - refined partially hydrogenated soya oil
         - partially hydrogenated vegetable oil from soy
@@ -1352,144 +1262,72 @@ variants:
         - częściowo utwardzony rafinowany olej sojowy nie w pełni
         - częściowo utwardzony rafinowany olej sojowy nie do końca
         - częściowo utwardzony rafinowany olej sojowy niepełnie
-        - częściowo utwardzony w pełni rafinowany olej sojowy częściowo
-        - częściowo utwardzony w pełni rafinowany olej sojowy niecałkowicie
-        - częściowo utwardzony w pełni rafinowany olej sojowy nie całkowicie
-        - częściowo utwardzony w pełni rafinowany olej sojowy nie w pełni
-        - częściowo utwardzony w pełni rafinowany olej sojowy nie do końca
-        - częściowo utwardzony w pełni rafinowany olej sojowy niepełnie
         - częściowo uwodorniony rafinowany olej sojowy częściowo
         - częściowo uwodorniony rafinowany olej sojowy niecałkowicie
         - częściowo uwodorniony rafinowany olej sojowy nie całkowicie
         - częściowo uwodorniony rafinowany olej sojowy nie w pełni
         - częściowo uwodorniony rafinowany olej sojowy nie do końca
         - częściowo uwodorniony rafinowany olej sojowy niepełnie
-        - częściowo uwodorniony w pełni rafinowany olej sojowy częściowo
-        - częściowo uwodorniony w pełni rafinowany olej sojowy niecałkowicie
-        - częściowo uwodorniony w pełni rafinowany olej sojowy nie całkowicie
-        - częściowo uwodorniony w pełni rafinowany olej sojowy nie w pełni
-        - częściowo uwodorniony w pełni rafinowany olej sojowy nie do końca
-        - częściowo uwodorniony w pełni rafinowany olej sojowy niepełnie
         - częściowo utwardzony rafinowany olej z soi częściowo
         - częściowo utwardzony rafinowany olej z soi niecałkowicie
         - częściowo utwardzony rafinowany olej z soi nie całkowicie
         - częściowo utwardzony rafinowany olej z soi nie w pełni
         - częściowo utwardzony rafinowany olej z soi nie do końca
         - częściowo utwardzony rafinowany olej z soi niepełnie
-        - częściowo utwardzony w pełni rafinowany olej z soi częściowo
-        - częściowo utwardzony w pełni rafinowany olej z soi niecałkowicie
-        - częściowo utwardzony w pełni rafinowany olej z soi nie całkowicie
-        - częściowo utwardzony w pełni rafinowany olej z soi nie w pełni
-        - częściowo utwardzony w pełni rafinowany olej z soi nie do końca
-        - częściowo utwardzony w pełni rafinowany olej z soi niepełnie
         - częściowo uwodorniony rafinowany olej z soi częściowo
         - częściowo uwodorniony rafinowany olej z soi niecałkowicie
         - częściowo uwodorniony rafinowany olej z soi nie całkowicie
         - częściowo uwodorniony rafinowany olej z soi nie w pełni
         - częściowo uwodorniony rafinowany olej z soi nie do końca
         - częściowo uwodorniony rafinowany olej z soi niepełnie
-        - częściowo uwodorniony w pełni rafinowany olej z soi częściowo
-        - częściowo uwodorniony w pełni rafinowany olej z soi niecałkowicie
-        - częściowo uwodorniony w pełni rafinowany olej z soi nie całkowicie
-        - częściowo uwodorniony w pełni rafinowany olej z soi nie w pełni
-        - częściowo uwodorniony w pełni rafinowany olej z soi nie do końca
-        - częściowo uwodorniony w pełni rafinowany olej z soi niepełnie
         - rafinowany częściowo utwardzony olej sojowy częściowo
         - rafinowany częściowo utwardzony olej sojowy niecałkowicie
         - rafinowany częściowo utwardzony olej sojowy nie całkowicie
         - rafinowany częściowo utwardzony olej sojowy nie w pełni
         - rafinowany częściowo utwardzony olej sojowy nie do końca
         - rafinowany częściowo utwardzony olej sojowy niepełnie
-        - w pełni rafinowany częściowo utwardzony olej sojowy częściowo
-        - w pełni rafinowany częściowo utwardzony olej sojowy niecałkowicie
-        - w pełni rafinowany częściowo utwardzony olej sojowy nie całkowicie
-        - w pełni rafinowany częściowo utwardzony olej sojowy nie w pełni
-        - w pełni rafinowany częściowo utwardzony olej sojowy nie do końca
-        - w pełni rafinowany częściowo utwardzony olej sojowy niepełnie
         - rafinowany częściowo utwardzony olej z soi częściowo
         - rafinowany częściowo utwardzony olej z soi niecałkowicie
         - rafinowany częściowo utwardzony olej z soi nie całkowicie
         - rafinowany częściowo utwardzony olej z soi nie w pełni
         - rafinowany częściowo utwardzony olej z soi nie do końca
         - rafinowany częściowo utwardzony olej z soi niepełnie
-        - w pełni rafinowany częściowo utwardzony olej z soi częściowo
-        - w pełni rafinowany częściowo utwardzony olej z soi niecałkowicie
-        - w pełni rafinowany częściowo utwardzony olej z soi nie całkowicie
-        - w pełni rafinowany częściowo utwardzony olej z soi nie w pełni
-        - w pełni rafinowany częściowo utwardzony olej z soi nie do końca
-        - w pełni rafinowany częściowo utwardzony olej z soi niepełnie
         - rafinowany częściowo uwodorniony olej sojowy częściowo
         - rafinowany częściowo uwodorniony olej sojowy niecałkowicie
         - rafinowany częściowo uwodorniony olej sojowy nie całkowicie
         - rafinowany częściowo uwodorniony olej sojowy nie w pełni
         - rafinowany częściowo uwodorniony olej sojowy nie do końca
         - rafinowany częściowo uwodorniony olej sojowy niepełnie
-        - w pełni rafinowany częściowo uwodorniony olej sojowy częściowo
-        - w pełni rafinowany częściowo uwodorniony olej sojowy niecałkowicie
-        - w pełni rafinowany częściowo uwodorniony olej sojowy nie całkowicie
-        - w pełni rafinowany częściowo uwodorniony olej sojowy nie w pełni
-        - w pełni rafinowany częściowo uwodorniony olej sojowy nie do końca
-        - w pełni rafinowany częściowo uwodorniony olej sojowy niepełnie
         - rafinowany częściowo uwodorniony olej z soi częściowo
         - rafinowany częściowo uwodorniony olej z soi niecałkowicie
         - rafinowany częściowo uwodorniony olej z soi nie całkowicie
         - rafinowany częściowo uwodorniony olej z soi nie w pełni
         - rafinowany częściowo uwodorniony olej z soi nie do końca
         - rafinowany częściowo uwodorniony olej z soi niepełnie
-        - w pełni rafinowany częściowo uwodorniony olej z soi częściowo
-        - w pełni rafinowany częściowo uwodorniony olej z soi niecałkowicie
-        - w pełni rafinowany częściowo uwodorniony olej z soi nie całkowicie
-        - w pełni rafinowany częściowo uwodorniony olej z soi nie w pełni
-        - w pełni rafinowany częściowo uwodorniony olej z soi nie do końca
-        - w pełni rafinowany częściowo uwodorniony olej z soi niepełnie
         - rafinowany olej sojowy częściowo utwardzony
         - częściowo utwardzony rafinowany olej sojowy
-        - w pełni rafinowany olej sojowy częściowo utwardzony
-        - częściowo utwardzony w pełni rafinowany olej sojowy
         - rafinowany olej sojowy częściowo uwodorniony
         - częściowo uwodorniony rafinowany olej sojowy
-        - w pełni rafinowany olej sojowy częściowo uwodorniony
-        - częściowo uwodorniony w pełni rafinowany olej sojowy
         - olej sojowy częściowo utwardzony rafinowany
-        - olej sojowy częściowo utwardzony w pełni rafinowany
         - rafinowany olej z soi częściowo utwardzony
         - częściowo utwardzony rafinowany olej z soi
         - olej z soi częściowo utwardzony rafinowany
-        - w pełni rafinowany olej z soi częściowo utwardzony
-        - częściowo utwardzony w pełni rafinowany olej z soi
-        - olej z soi częściowo utwardzony w pełni rafinowany
         - olej sojowy częściowo uwodorniony rafinowany
-        - olej sojowy częściowo uwodorniony w pełni rafinowany
         - rafinowany olej z soi częściowo uwodorniony
         - częściowo uwodorniony rafinowany olej z soi
         - olej z soi częściowo uwodorniony rafinowany
-        - w pełni rafinowany olej z soi częściowo uwodorniony
-        - częściowo uwodorniony w pełni rafinowany olej z soi
-        - olej z soi częściowo uwodorniony w pełni rafinowany
         - częściowo utwardzony olej sojowy rafinowany
-        - częściowo utwardzony olej sojowy w pełni rafinowany
         - częściowo utwardzony olej z soi rafinowany
-        - częściowo utwardzony olej z soi w pełni rafinowany
         - częściowo uwodorniony olej sojowy rafinowany
-        - częściowo uwodorniony olej sojowy w pełni rafinowany
         - częściowo uwodorniony olej z soi rafinowany
-        - częściowo uwodorniony olej z soi w pełni rafinowany
         - rafinowany częściowo utwardzony olej sojowy
         - olej sojowy rafinowany częściowo utwardzony
-        - w pełni rafinowany częściowo utwardzony olej sojowy
-        - olej sojowy w pełni rafinowany częściowo utwardzony
         - rafinowany częściowo utwardzony olej z soi
         - olej z soi rafinowany częściowo utwardzony
-        - w pełni rafinowany częściowo utwardzony olej z soi
-        - olej z soi w pełni rafinowany częściowo utwardzony
         - rafinowany częściowo uwodorniony olej sojowy
         - olej sojowy rafinowany częściowo uwodorniony
-        - w pełni rafinowany częściowo uwodorniony olej sojowy
-        - olej sojowy w pełni rafinowany częściowo uwodorniony
         - rafinowany częściowo uwodorniony olej z soi
         - olej z soi rafinowany częściowo uwodorniony
-        - w pełni rafinowany częściowo uwodorniony olej z soi
-        - olej z soi w pełni rafinowany częściowo uwodorniony
         - olej roślinny częściowo utwardzony sojowy
         - olej roślinny częściowo uwodorniony sojowy
         - tłuszcz roślinny częściowo utwardzony sojowy
@@ -1598,9 +1436,9 @@ variants:
       en: "Soybean oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
       pl: "Olej sojowy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
     tells:
-      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )czesciowo (?:utwardzon|uwodorn)'
-      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )partially hydrogenated'
-      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )teilweise gehartet'
+      - '^(?!.*(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )czesciowo (?:utwardzon|uwodorn))'
+      - '^(?!.*(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )partially hydrogenated)'
+      - '^(?!.*(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )teilweise gehartet)'
   - id: fully-hydrogenated
     names:
       en:
@@ -1608,28 +1446,17 @@ variants:
         - totally hydrogenated soybean oil
         - fully hydrogenated soya oil
         - totally hydrogenated soya oil
-        - fully refined fully hydrogenated soybean oil partially
-        - fully refined fully hydrogenated soybean oil partly
-        - fully refined fully hydrogenated soybean oil incompletely
-        - fully refined fully hydrogenated soybean oil not fully
-        - fully refined fully hydrogenated soybean oil not completely
         - refined fully hydrogenated soybean oil partially
         - refined fully hydrogenated soybean oil partly
         - refined fully hydrogenated soybean oil incompletely
         - refined fully hydrogenated soybean oil not fully
         - refined fully hydrogenated soybean oil not completely
-        - fully refined fully hydrogenated soybean oil
-        - fully hydrogenated fully refined soybean oil
-        - fully refined fully hydrogenated soya oil
-        - fully hydrogenated fully refined soya oil
         - refined fully hydrogenated soybean oil
         - fully hydrogenated refined soybean oil
         - refined fully hydrogenated soya oil
         - fully hydrogenated refined soya oil
         - totally hydrogenated refined soybean oil
-        - totally hydrogenated fully refined soybean oil
         - totally hydrogenated refined soya oil
-        - totally hydrogenated fully refined soya oil
         - fully hydrogenated vegetable oil from soy
         - totally hydrogenated vegetable oil from soy
         - fully hydrogenated vegetable fat from soy
@@ -1757,60 +1584,30 @@ variants:
         - całkowicie utwardzony rafinowany olej sojowy nie w pełni
         - całkowicie utwardzony rafinowany olej sojowy nie do końca
         - całkowicie utwardzony rafinowany olej sojowy niepełnie
-        - całkowicie utwardzony w pełni rafinowany olej sojowy częściowo
-        - całkowicie utwardzony w pełni rafinowany olej sojowy niecałkowicie
-        - całkowicie utwardzony w pełni rafinowany olej sojowy nie całkowicie
-        - całkowicie utwardzony w pełni rafinowany olej sojowy nie w pełni
-        - całkowicie utwardzony w pełni rafinowany olej sojowy nie do końca
-        - całkowicie utwardzony w pełni rafinowany olej sojowy niepełnie
         - całkowicie uwodorniony rafinowany olej sojowy częściowo
         - całkowicie uwodorniony rafinowany olej sojowy niecałkowicie
         - całkowicie uwodorniony rafinowany olej sojowy nie całkowicie
         - całkowicie uwodorniony rafinowany olej sojowy nie w pełni
         - całkowicie uwodorniony rafinowany olej sojowy nie do końca
         - całkowicie uwodorniony rafinowany olej sojowy niepełnie
-        - całkowicie uwodorniony w pełni rafinowany olej sojowy częściowo
-        - całkowicie uwodorniony w pełni rafinowany olej sojowy niecałkowicie
-        - całkowicie uwodorniony w pełni rafinowany olej sojowy nie całkowicie
-        - całkowicie uwodorniony w pełni rafinowany olej sojowy nie w pełni
-        - całkowicie uwodorniony w pełni rafinowany olej sojowy nie do końca
-        - całkowicie uwodorniony w pełni rafinowany olej sojowy niepełnie
         - w pełni utwardzony rafinowany olej sojowy częściowo
         - w pełni utwardzony rafinowany olej sojowy niecałkowicie
         - w pełni utwardzony rafinowany olej sojowy nie całkowicie
         - w pełni utwardzony rafinowany olej sojowy nie w pełni
         - w pełni utwardzony rafinowany olej sojowy nie do końca
         - w pełni utwardzony rafinowany olej sojowy niepełnie
-        - w pełni utwardzony w pełni rafinowany olej sojowy częściowo
-        - w pełni utwardzony w pełni rafinowany olej sojowy niecałkowicie
-        - w pełni utwardzony w pełni rafinowany olej sojowy nie całkowicie
-        - w pełni utwardzony w pełni rafinowany olej sojowy nie w pełni
-        - w pełni utwardzony w pełni rafinowany olej sojowy nie do końca
-        - w pełni utwardzony w pełni rafinowany olej sojowy niepełnie
         - w pełni uwodorniony rafinowany olej sojowy częściowo
         - w pełni uwodorniony rafinowany olej sojowy niecałkowicie
         - w pełni uwodorniony rafinowany olej sojowy nie całkowicie
         - w pełni uwodorniony rafinowany olej sojowy nie w pełni
         - w pełni uwodorniony rafinowany olej sojowy nie do końca
         - w pełni uwodorniony rafinowany olej sojowy niepełnie
-        - w pełni uwodorniony w pełni rafinowany olej sojowy częściowo
-        - w pełni uwodorniony w pełni rafinowany olej sojowy niecałkowicie
-        - w pełni uwodorniony w pełni rafinowany olej sojowy nie całkowicie
-        - w pełni uwodorniony w pełni rafinowany olej sojowy nie w pełni
-        - w pełni uwodorniony w pełni rafinowany olej sojowy nie do końca
-        - w pełni uwodorniony w pełni rafinowany olej sojowy niepełnie
         - rafinowany całkowicie utwardzony olej sojowy częściowo
         - rafinowany całkowicie utwardzony olej sojowy niecałkowicie
         - rafinowany całkowicie utwardzony olej sojowy nie całkowicie
         - rafinowany całkowicie utwardzony olej sojowy nie w pełni
         - rafinowany całkowicie utwardzony olej sojowy nie do końca
         - rafinowany całkowicie utwardzony olej sojowy niepełnie
-        - w pełni rafinowany całkowicie utwardzony olej sojowy częściowo
-        - w pełni rafinowany całkowicie utwardzony olej sojowy niecałkowicie
-        - w pełni rafinowany całkowicie utwardzony olej sojowy nie całkowicie
-        - w pełni rafinowany całkowicie utwardzony olej sojowy nie w pełni
-        - w pełni rafinowany całkowicie utwardzony olej sojowy nie do końca
-        - w pełni rafinowany całkowicie utwardzony olej sojowy niepełnie
         - całkowicie utwardzony rafinowany olej z soi częściowo
         - całkowicie utwardzony rafinowany olej z soi niecałkowicie
         - całkowicie utwardzony rafinowany olej z soi nie całkowicie
@@ -1823,30 +1620,12 @@ variants:
         - rafinowany całkowicie utwardzony olej z soi nie w pełni
         - rafinowany całkowicie utwardzony olej z soi nie do końca
         - rafinowany całkowicie utwardzony olej z soi niepełnie
-        - całkowicie utwardzony w pełni rafinowany olej z soi częściowo
-        - całkowicie utwardzony w pełni rafinowany olej z soi niecałkowicie
-        - całkowicie utwardzony w pełni rafinowany olej z soi nie całkowicie
-        - całkowicie utwardzony w pełni rafinowany olej z soi nie w pełni
-        - całkowicie utwardzony w pełni rafinowany olej z soi nie do końca
-        - całkowicie utwardzony w pełni rafinowany olej z soi niepełnie
-        - w pełni rafinowany całkowicie utwardzony olej z soi częściowo
-        - w pełni rafinowany całkowicie utwardzony olej z soi niecałkowicie
-        - w pełni rafinowany całkowicie utwardzony olej z soi nie całkowicie
-        - w pełni rafinowany całkowicie utwardzony olej z soi nie w pełni
-        - w pełni rafinowany całkowicie utwardzony olej z soi nie do końca
-        - w pełni rafinowany całkowicie utwardzony olej z soi niepełnie
         - rafinowany całkowicie uwodorniony olej sojowy częściowo
         - rafinowany całkowicie uwodorniony olej sojowy niecałkowicie
         - rafinowany całkowicie uwodorniony olej sojowy nie całkowicie
         - rafinowany całkowicie uwodorniony olej sojowy nie w pełni
         - rafinowany całkowicie uwodorniony olej sojowy nie do końca
         - rafinowany całkowicie uwodorniony olej sojowy niepełnie
-        - w pełni rafinowany całkowicie uwodorniony olej sojowy częściowo
-        - w pełni rafinowany całkowicie uwodorniony olej sojowy niecałkowicie
-        - w pełni rafinowany całkowicie uwodorniony olej sojowy nie całkowicie
-        - w pełni rafinowany całkowicie uwodorniony olej sojowy nie w pełni
-        - w pełni rafinowany całkowicie uwodorniony olej sojowy nie do końca
-        - w pełni rafinowany całkowicie uwodorniony olej sojowy niepełnie
         - całkowicie uwodorniony rafinowany olej z soi częściowo
         - całkowicie uwodorniony rafinowany olej z soi niecałkowicie
         - całkowicie uwodorniony rafinowany olej z soi nie całkowicie
@@ -1859,30 +1638,12 @@ variants:
         - rafinowany całkowicie uwodorniony olej z soi nie w pełni
         - rafinowany całkowicie uwodorniony olej z soi nie do końca
         - rafinowany całkowicie uwodorniony olej z soi niepełnie
-        - całkowicie uwodorniony w pełni rafinowany olej z soi częściowo
-        - całkowicie uwodorniony w pełni rafinowany olej z soi niecałkowicie
-        - całkowicie uwodorniony w pełni rafinowany olej z soi nie całkowicie
-        - całkowicie uwodorniony w pełni rafinowany olej z soi nie w pełni
-        - całkowicie uwodorniony w pełni rafinowany olej z soi nie do końca
-        - całkowicie uwodorniony w pełni rafinowany olej z soi niepełnie
-        - w pełni rafinowany całkowicie uwodorniony olej z soi częściowo
-        - w pełni rafinowany całkowicie uwodorniony olej z soi niecałkowicie
-        - w pełni rafinowany całkowicie uwodorniony olej z soi nie całkowicie
-        - w pełni rafinowany całkowicie uwodorniony olej z soi nie w pełni
-        - w pełni rafinowany całkowicie uwodorniony olej z soi nie do końca
-        - w pełni rafinowany całkowicie uwodorniony olej z soi niepełnie
         - rafinowany w pełni utwardzony olej sojowy częściowo
         - rafinowany w pełni utwardzony olej sojowy niecałkowicie
         - rafinowany w pełni utwardzony olej sojowy nie całkowicie
         - rafinowany w pełni utwardzony olej sojowy nie w pełni
         - rafinowany w pełni utwardzony olej sojowy nie do końca
         - rafinowany w pełni utwardzony olej sojowy niepełnie
-        - w pełni rafinowany w pełni utwardzony olej sojowy częściowo
-        - w pełni rafinowany w pełni utwardzony olej sojowy niecałkowicie
-        - w pełni rafinowany w pełni utwardzony olej sojowy nie całkowicie
-        - w pełni rafinowany w pełni utwardzony olej sojowy nie w pełni
-        - w pełni rafinowany w pełni utwardzony olej sojowy nie do końca
-        - w pełni rafinowany w pełni utwardzony olej sojowy niepełnie
         - w pełni utwardzony rafinowany olej z soi częściowo
         - w pełni utwardzony rafinowany olej z soi niecałkowicie
         - w pełni utwardzony rafinowany olej z soi nie całkowicie
@@ -1895,30 +1656,12 @@ variants:
         - rafinowany w pełni utwardzony olej z soi nie w pełni
         - rafinowany w pełni utwardzony olej z soi nie do końca
         - rafinowany w pełni utwardzony olej z soi niepełnie
-        - w pełni utwardzony w pełni rafinowany olej z soi częściowo
-        - w pełni utwardzony w pełni rafinowany olej z soi niecałkowicie
-        - w pełni utwardzony w pełni rafinowany olej z soi nie całkowicie
-        - w pełni utwardzony w pełni rafinowany olej z soi nie w pełni
-        - w pełni utwardzony w pełni rafinowany olej z soi nie do końca
-        - w pełni utwardzony w pełni rafinowany olej z soi niepełnie
-        - w pełni rafinowany w pełni utwardzony olej z soi częściowo
-        - w pełni rafinowany w pełni utwardzony olej z soi niecałkowicie
-        - w pełni rafinowany w pełni utwardzony olej z soi nie całkowicie
-        - w pełni rafinowany w pełni utwardzony olej z soi nie w pełni
-        - w pełni rafinowany w pełni utwardzony olej z soi nie do końca
-        - w pełni rafinowany w pełni utwardzony olej z soi niepełnie
         - rafinowany w pełni uwodorniony olej sojowy częściowo
         - rafinowany w pełni uwodorniony olej sojowy niecałkowicie
         - rafinowany w pełni uwodorniony olej sojowy nie całkowicie
         - rafinowany w pełni uwodorniony olej sojowy nie w pełni
         - rafinowany w pełni uwodorniony olej sojowy nie do końca
         - rafinowany w pełni uwodorniony olej sojowy niepełnie
-        - w pełni rafinowany w pełni uwodorniony olej sojowy częściowo
-        - w pełni rafinowany w pełni uwodorniony olej sojowy niecałkowicie
-        - w pełni rafinowany w pełni uwodorniony olej sojowy nie całkowicie
-        - w pełni rafinowany w pełni uwodorniony olej sojowy nie w pełni
-        - w pełni rafinowany w pełni uwodorniony olej sojowy nie do końca
-        - w pełni rafinowany w pełni uwodorniony olej sojowy niepełnie
         - w pełni uwodorniony rafinowany olej z soi częściowo
         - w pełni uwodorniony rafinowany olej z soi niecałkowicie
         - w pełni uwodorniony rafinowany olej z soi nie całkowicie
@@ -1931,114 +1674,54 @@ variants:
         - rafinowany w pełni uwodorniony olej z soi nie w pełni
         - rafinowany w pełni uwodorniony olej z soi nie do końca
         - rafinowany w pełni uwodorniony olej z soi niepełnie
-        - w pełni uwodorniony w pełni rafinowany olej z soi częściowo
-        - w pełni uwodorniony w pełni rafinowany olej z soi niecałkowicie
-        - w pełni uwodorniony w pełni rafinowany olej z soi nie całkowicie
-        - w pełni uwodorniony w pełni rafinowany olej z soi nie w pełni
-        - w pełni uwodorniony w pełni rafinowany olej z soi nie do końca
-        - w pełni uwodorniony w pełni rafinowany olej z soi niepełnie
-        - w pełni rafinowany w pełni uwodorniony olej z soi częściowo
-        - w pełni rafinowany w pełni uwodorniony olej z soi niecałkowicie
-        - w pełni rafinowany w pełni uwodorniony olej z soi nie całkowicie
-        - w pełni rafinowany w pełni uwodorniony olej z soi nie w pełni
-        - w pełni rafinowany w pełni uwodorniony olej z soi nie do końca
-        - w pełni rafinowany w pełni uwodorniony olej z soi niepełnie
         - rafinowany olej sojowy całkowicie utwardzony
         - całkowicie utwardzony rafinowany olej sojowy
-        - w pełni rafinowany olej sojowy całkowicie utwardzony
-        - całkowicie utwardzony w pełni rafinowany olej sojowy
         - rafinowany olej sojowy całkowicie uwodorniony
         - całkowicie uwodorniony rafinowany olej sojowy
-        - w pełni rafinowany olej sojowy całkowicie uwodorniony
-        - całkowicie uwodorniony w pełni rafinowany olej sojowy
         - rafinowany olej sojowy w pełni utwardzony
         - w pełni utwardzony rafinowany olej sojowy
-        - w pełni rafinowany olej sojowy w pełni utwardzony
-        - w pełni utwardzony w pełni rafinowany olej sojowy
         - rafinowany olej sojowy w pełni uwodorniony
         - w pełni uwodorniony rafinowany olej sojowy
-        - w pełni rafinowany olej sojowy w pełni uwodorniony
-        - w pełni uwodorniony w pełni rafinowany olej sojowy
         - olej sojowy rafinowany całkowicie utwardzony
         - olej sojowy całkowicie utwardzony rafinowany
         - rafinowany całkowicie utwardzony olej sojowy
-        - olej sojowy w pełni rafinowany całkowicie utwardzony
-        - olej sojowy całkowicie utwardzony w pełni rafinowany
-        - w pełni rafinowany całkowicie utwardzony olej sojowy
         - rafinowany olej z soi całkowicie utwardzony
         - całkowicie utwardzony rafinowany olej z soi
         - olej z soi rafinowany całkowicie utwardzony
         - olej z soi całkowicie utwardzony rafinowany
         - rafinowany całkowicie utwardzony olej z soi
-        - w pełni rafinowany olej z soi całkowicie utwardzony
-        - całkowicie utwardzony w pełni rafinowany olej z soi
-        - olej z soi w pełni rafinowany całkowicie utwardzony
-        - olej z soi całkowicie utwardzony w pełni rafinowany
-        - w pełni rafinowany całkowicie utwardzony olej z soi
         - olej sojowy rafinowany całkowicie uwodorniony
         - olej sojowy całkowicie uwodorniony rafinowany
         - rafinowany całkowicie uwodorniony olej sojowy
-        - olej sojowy w pełni rafinowany całkowicie uwodorniony
-        - olej sojowy całkowicie uwodorniony w pełni rafinowany
-        - w pełni rafinowany całkowicie uwodorniony olej sojowy
         - rafinowany olej z soi całkowicie uwodorniony
         - całkowicie uwodorniony rafinowany olej z soi
         - olej z soi rafinowany całkowicie uwodorniony
         - olej z soi całkowicie uwodorniony rafinowany
         - rafinowany całkowicie uwodorniony olej z soi
-        - w pełni rafinowany olej z soi całkowicie uwodorniony
-        - całkowicie uwodorniony w pełni rafinowany olej z soi
-        - olej z soi w pełni rafinowany całkowicie uwodorniony
-        - olej z soi całkowicie uwodorniony w pełni rafinowany
-        - w pełni rafinowany całkowicie uwodorniony olej z soi
         - olej sojowy rafinowany w pełni utwardzony
         - olej sojowy w pełni utwardzony rafinowany
         - rafinowany w pełni utwardzony olej sojowy
-        - olej sojowy w pełni rafinowany w pełni utwardzony
-        - olej sojowy w pełni utwardzony w pełni rafinowany
-        - w pełni rafinowany w pełni utwardzony olej sojowy
         - rafinowany olej z soi w pełni utwardzony
         - w pełni utwardzony rafinowany olej z soi
         - olej z soi rafinowany w pełni utwardzony
         - olej z soi w pełni utwardzony rafinowany
         - rafinowany w pełni utwardzony olej z soi
-        - w pełni rafinowany olej z soi w pełni utwardzony
-        - w pełni utwardzony w pełni rafinowany olej z soi
-        - olej z soi w pełni rafinowany w pełni utwardzony
-        - olej z soi w pełni utwardzony w pełni rafinowany
-        - w pełni rafinowany w pełni utwardzony olej z soi
         - olej sojowy rafinowany w pełni uwodorniony
         - olej sojowy w pełni uwodorniony rafinowany
         - rafinowany w pełni uwodorniony olej sojowy
-        - olej sojowy w pełni rafinowany w pełni uwodorniony
-        - olej sojowy w pełni uwodorniony w pełni rafinowany
-        - w pełni rafinowany w pełni uwodorniony olej sojowy
         - rafinowany olej z soi w pełni uwodorniony
         - w pełni uwodorniony rafinowany olej z soi
         - olej z soi rafinowany w pełni uwodorniony
         - olej z soi w pełni uwodorniony rafinowany
         - rafinowany w pełni uwodorniony olej z soi
-        - w pełni rafinowany olej z soi w pełni uwodorniony
-        - w pełni uwodorniony w pełni rafinowany olej z soi
-        - olej z soi w pełni rafinowany w pełni uwodorniony
-        - olej z soi w pełni uwodorniony w pełni rafinowany
-        - w pełni rafinowany w pełni uwodorniony olej z soi
         - całkowicie utwardzony olej sojowy rafinowany
-        - całkowicie utwardzony olej sojowy w pełni rafinowany
         - całkowicie utwardzony olej z soi rafinowany
-        - całkowicie utwardzony olej z soi w pełni rafinowany
         - całkowicie uwodorniony olej sojowy rafinowany
-        - całkowicie uwodorniony olej sojowy w pełni rafinowany
         - całkowicie uwodorniony olej z soi rafinowany
-        - całkowicie uwodorniony olej z soi w pełni rafinowany
         - w pełni utwardzony olej sojowy rafinowany
-        - w pełni utwardzony olej sojowy w pełni rafinowany
         - w pełni utwardzony olej z soi rafinowany
-        - w pełni utwardzony olej z soi w pełni rafinowany
         - w pełni uwodorniony olej sojowy rafinowany
-        - w pełni uwodorniony olej sojowy w pełni rafinowany
         - w pełni uwodorniony olej z soi rafinowany
-        - w pełni uwodorniony olej z soi w pełni rafinowany
         - olej roślinny całkowicie utwardzony sojowy
         - olej roślinny całkowicie uwodorniony sojowy
         - w pełni utwardzony olej roślinny sojowy
@@ -2297,12 +1980,362 @@ variants:
       en: "Soybean oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
       pl: "Olej sojowy ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
     tells:
-      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )calkowicie (?:utwardzon|uwodorn)'
-      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )w pelni (?:utwardzon|uwodorn)'
-      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )fully hydrogenated'
-      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )totally hydrogenated'
-      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )vollstandig gehartet'
+      - '^(?!.*(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )calkowicie (?:utwardzon|uwodorn))'
+      - '^(?!.*(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )w pelni (?:utwardzon|uwodorn))'
+      - '^(?!.*(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )fully hydrogenated)'
+      - '^(?!.*(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )totally hydrogenated)'
+      - '^(?!.*(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )vollstandig gehartet)'
 
+  - id: hydrogenated-fully-refined
+    names:
+      en:
+        - fully refined hydrogenated soybean oil partially
+        - fully refined hydrogenated soybean oil partly
+        - fully refined hydrogenated soybean oil incompletely
+        - fully refined hydrogenated soybean oil not fully
+        - fully refined hydrogenated soybean oil not completely
+        - fully refined hydrogenated soybean oil
+        - hydrogenated fully refined soybean oil
+        - fully refined hydrogenated soya oil
+        - hydrogenated fully refined soya oil
+      pl:
+        - utwardzony w pełni rafinowany olej sojowy częściowo
+        - utwardzony w pełni rafinowany olej sojowy niecałkowicie
+        - utwardzony w pełni rafinowany olej sojowy nie całkowicie
+        - utwardzony w pełni rafinowany olej sojowy nie w pełni
+        - utwardzony w pełni rafinowany olej sojowy nie do końca
+        - utwardzony w pełni rafinowany olej sojowy niepełnie
+        - uwodorniony w pełni rafinowany olej sojowy częściowo
+        - uwodorniony w pełni rafinowany olej sojowy niecałkowicie
+        - uwodorniony w pełni rafinowany olej sojowy nie całkowicie
+        - uwodorniony w pełni rafinowany olej sojowy nie w pełni
+        - uwodorniony w pełni rafinowany olej sojowy nie do końca
+        - uwodorniony w pełni rafinowany olej sojowy niepełnie
+        - w pełni rafinowany utwardzony olej sojowy częściowo
+        - w pełni rafinowany utwardzony olej sojowy niecałkowicie
+        - w pełni rafinowany utwardzony olej sojowy nie całkowicie
+        - w pełni rafinowany utwardzony olej sojowy nie w pełni
+        - w pełni rafinowany utwardzony olej sojowy nie do końca
+        - w pełni rafinowany utwardzony olej sojowy niepełnie
+        - utwardzony w pełni rafinowany olej z soi częściowo
+        - utwardzony w pełni rafinowany olej z soi niecałkowicie
+        - utwardzony w pełni rafinowany olej z soi nie całkowicie
+        - utwardzony w pełni rafinowany olej z soi nie w pełni
+        - utwardzony w pełni rafinowany olej z soi nie do końca
+        - utwardzony w pełni rafinowany olej z soi niepełnie
+        - w pełni rafinowany utwardzony olej z soi częściowo
+        - w pełni rafinowany utwardzony olej z soi niecałkowicie
+        - w pełni rafinowany utwardzony olej z soi nie całkowicie
+        - w pełni rafinowany utwardzony olej z soi nie w pełni
+        - w pełni rafinowany utwardzony olej z soi nie do końca
+        - w pełni rafinowany utwardzony olej z soi niepełnie
+        - w pełni rafinowany uwodorniony olej sojowy częściowo
+        - w pełni rafinowany uwodorniony olej sojowy niecałkowicie
+        - w pełni rafinowany uwodorniony olej sojowy nie całkowicie
+        - w pełni rafinowany uwodorniony olej sojowy nie w pełni
+        - w pełni rafinowany uwodorniony olej sojowy nie do końca
+        - w pełni rafinowany uwodorniony olej sojowy niepełnie
+        - uwodorniony w pełni rafinowany olej z soi częściowo
+        - uwodorniony w pełni rafinowany olej z soi niecałkowicie
+        - uwodorniony w pełni rafinowany olej z soi nie całkowicie
+        - uwodorniony w pełni rafinowany olej z soi nie w pełni
+        - uwodorniony w pełni rafinowany olej z soi nie do końca
+        - uwodorniony w pełni rafinowany olej z soi niepełnie
+        - w pełni rafinowany uwodorniony olej z soi częściowo
+        - w pełni rafinowany uwodorniony olej z soi niecałkowicie
+        - w pełni rafinowany uwodorniony olej z soi nie całkowicie
+        - w pełni rafinowany uwodorniony olej z soi nie w pełni
+        - w pełni rafinowany uwodorniony olej z soi nie do końca
+        - w pełni rafinowany uwodorniony olej z soi niepełnie
+        - w pełni rafinowany olej sojowy utwardzony
+        - utwardzony w pełni rafinowany olej sojowy
+        - w pełni rafinowany olej sojowy uwodorniony
+        - uwodorniony w pełni rafinowany olej sojowy
+        - olej sojowy w pełni rafinowany utwardzony
+        - olej sojowy utwardzony w pełni rafinowany
+        - w pełni rafinowany utwardzony olej sojowy
+        - w pełni rafinowany olej z soi utwardzony
+        - utwardzony w pełni rafinowany olej z soi
+        - olej z soi w pełni rafinowany utwardzony
+        - olej z soi utwardzony w pełni rafinowany
+        - w pełni rafinowany utwardzony olej z soi
+        - olej sojowy w pełni rafinowany uwodorniony
+        - olej sojowy uwodorniony w pełni rafinowany
+        - w pełni rafinowany uwodorniony olej sojowy
+        - w pełni rafinowany olej z soi uwodorniony
+        - uwodorniony w pełni rafinowany olej z soi
+        - olej z soi w pełni rafinowany uwodorniony
+        - olej z soi uwodorniony w pełni rafinowany
+        - w pełni rafinowany uwodorniony olej z soi
+        - utwardzony olej sojowy w pełni rafinowany
+        - utwardzony olej z soi w pełni rafinowany
+        - uwodorniony olej sojowy w pełni rafinowany
+        - uwodorniony olej z soi w pełni rafinowany
+    process:
+      en: "Fully refined soybean oil hardened by hydrogenation, as the label states both; the label does not specify partial or full hydrogenation."
+      pl: "W pełni rafinowany olej sojowy utwardzony przez uwodornienie, jak podaje etykieta; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
+    tells:
+      - '^(?=.*(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!partially )(?<!fully )(?<!totally )(?<!teilweise )(?<!vollstandig )(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:utwardzon|uwodornion|utwardzan[yea]\b|uwodornian[yea]\b|hydrogenated|gehartet)|(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:po|podda\w*|podlega\w*)(?: (?!(?:nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b)\S+){0,3}? (?:uwodornieni|uwodornian|utwardzeni|utwardzan))'
+  - id: partially-hydrogenated-fully-refined
+    names:
+      en:
+        - fully refined partially hydrogenated soybean oil partially
+        - fully refined partially hydrogenated soybean oil partly
+        - fully refined partially hydrogenated soybean oil incompletely
+        - fully refined partially hydrogenated soybean oil not fully
+        - fully refined partially hydrogenated soybean oil not completely
+        - partially hydrogenated fully refined soybean oil
+        - partially hydrogenated fully refined soya oil
+        - fully refined partially hydrogenated soybean oil
+        - fully refined partially hydrogenated soya oil
+      pl:
+        - częściowo utwardzony w pełni rafinowany olej sojowy częściowo
+        - częściowo utwardzony w pełni rafinowany olej sojowy niecałkowicie
+        - częściowo utwardzony w pełni rafinowany olej sojowy nie całkowicie
+        - częściowo utwardzony w pełni rafinowany olej sojowy nie w pełni
+        - częściowo utwardzony w pełni rafinowany olej sojowy nie do końca
+        - częściowo utwardzony w pełni rafinowany olej sojowy niepełnie
+        - częściowo uwodorniony w pełni rafinowany olej sojowy częściowo
+        - częściowo uwodorniony w pełni rafinowany olej sojowy niecałkowicie
+        - częściowo uwodorniony w pełni rafinowany olej sojowy nie całkowicie
+        - częściowo uwodorniony w pełni rafinowany olej sojowy nie w pełni
+        - częściowo uwodorniony w pełni rafinowany olej sojowy nie do końca
+        - częściowo uwodorniony w pełni rafinowany olej sojowy niepełnie
+        - częściowo utwardzony w pełni rafinowany olej z soi częściowo
+        - częściowo utwardzony w pełni rafinowany olej z soi niecałkowicie
+        - częściowo utwardzony w pełni rafinowany olej z soi nie całkowicie
+        - częściowo utwardzony w pełni rafinowany olej z soi nie w pełni
+        - częściowo utwardzony w pełni rafinowany olej z soi nie do końca
+        - częściowo utwardzony w pełni rafinowany olej z soi niepełnie
+        - częściowo uwodorniony w pełni rafinowany olej z soi częściowo
+        - częściowo uwodorniony w pełni rafinowany olej z soi niecałkowicie
+        - częściowo uwodorniony w pełni rafinowany olej z soi nie całkowicie
+        - częściowo uwodorniony w pełni rafinowany olej z soi nie w pełni
+        - częściowo uwodorniony w pełni rafinowany olej z soi nie do końca
+        - częściowo uwodorniony w pełni rafinowany olej z soi niepełnie
+        - w pełni rafinowany częściowo utwardzony olej sojowy częściowo
+        - w pełni rafinowany częściowo utwardzony olej sojowy niecałkowicie
+        - w pełni rafinowany częściowo utwardzony olej sojowy nie całkowicie
+        - w pełni rafinowany częściowo utwardzony olej sojowy nie w pełni
+        - w pełni rafinowany częściowo utwardzony olej sojowy nie do końca
+        - w pełni rafinowany częściowo utwardzony olej sojowy niepełnie
+        - w pełni rafinowany częściowo utwardzony olej z soi częściowo
+        - w pełni rafinowany częściowo utwardzony olej z soi niecałkowicie
+        - w pełni rafinowany częściowo utwardzony olej z soi nie całkowicie
+        - w pełni rafinowany częściowo utwardzony olej z soi nie w pełni
+        - w pełni rafinowany częściowo utwardzony olej z soi nie do końca
+        - w pełni rafinowany częściowo utwardzony olej z soi niepełnie
+        - w pełni rafinowany częściowo uwodorniony olej sojowy częściowo
+        - w pełni rafinowany częściowo uwodorniony olej sojowy niecałkowicie
+        - w pełni rafinowany częściowo uwodorniony olej sojowy nie całkowicie
+        - w pełni rafinowany częściowo uwodorniony olej sojowy nie w pełni
+        - w pełni rafinowany częściowo uwodorniony olej sojowy nie do końca
+        - w pełni rafinowany częściowo uwodorniony olej sojowy niepełnie
+        - w pełni rafinowany częściowo uwodorniony olej z soi częściowo
+        - w pełni rafinowany częściowo uwodorniony olej z soi niecałkowicie
+        - w pełni rafinowany częściowo uwodorniony olej z soi nie całkowicie
+        - w pełni rafinowany częściowo uwodorniony olej z soi nie w pełni
+        - w pełni rafinowany częściowo uwodorniony olej z soi nie do końca
+        - w pełni rafinowany częściowo uwodorniony olej z soi niepełnie
+        - w pełni rafinowany olej sojowy częściowo utwardzony
+        - częściowo utwardzony w pełni rafinowany olej sojowy
+        - w pełni rafinowany olej sojowy częściowo uwodorniony
+        - częściowo uwodorniony w pełni rafinowany olej sojowy
+        - olej sojowy częściowo utwardzony w pełni rafinowany
+        - w pełni rafinowany olej z soi częściowo utwardzony
+        - częściowo utwardzony w pełni rafinowany olej z soi
+        - olej z soi częściowo utwardzony w pełni rafinowany
+        - olej sojowy częściowo uwodorniony w pełni rafinowany
+        - w pełni rafinowany olej z soi częściowo uwodorniony
+        - częściowo uwodorniony w pełni rafinowany olej z soi
+        - olej z soi częściowo uwodorniony w pełni rafinowany
+        - częściowo utwardzony olej sojowy w pełni rafinowany
+        - częściowo utwardzony olej z soi w pełni rafinowany
+        - częściowo uwodorniony olej sojowy w pełni rafinowany
+        - częściowo uwodorniony olej z soi w pełni rafinowany
+        - w pełni rafinowany częściowo utwardzony olej sojowy
+        - olej sojowy w pełni rafinowany częściowo utwardzony
+        - w pełni rafinowany częściowo utwardzony olej z soi
+        - olej z soi w pełni rafinowany częściowo utwardzony
+        - w pełni rafinowany częściowo uwodorniony olej sojowy
+        - olej sojowy w pełni rafinowany częściowo uwodorniony
+        - w pełni rafinowany częściowo uwodorniony olej z soi
+        - olej z soi w pełni rafinowany częściowo uwodorniony
+    process:
+      en: "Fully refined soybean oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids; the label states the full refining."
+      pl: "W pełni rafinowany olej sojowy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans; etykieta podaje pełną rafinację."
+    tells:
+      - '^(?=.*(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )czesciowo (?:utwardzon|uwodorn))'
+      - '^(?=.*(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )partially hydrogenated)'
+      - '^(?=.*(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )teilweise gehartet)'
+  - id: fully-hydrogenated-fully-refined
+    names:
+      en:
+        - fully refined fully hydrogenated soybean oil partially
+        - fully refined fully hydrogenated soybean oil partly
+        - fully refined fully hydrogenated soybean oil incompletely
+        - fully refined fully hydrogenated soybean oil not fully
+        - fully refined fully hydrogenated soybean oil not completely
+        - fully refined fully hydrogenated soybean oil
+        - fully hydrogenated fully refined soybean oil
+        - fully refined fully hydrogenated soya oil
+        - fully hydrogenated fully refined soya oil
+        - totally hydrogenated fully refined soybean oil
+        - totally hydrogenated fully refined soya oil
+      pl:
+        - całkowicie utwardzony w pełni rafinowany olej sojowy częściowo
+        - całkowicie utwardzony w pełni rafinowany olej sojowy niecałkowicie
+        - całkowicie utwardzony w pełni rafinowany olej sojowy nie całkowicie
+        - całkowicie utwardzony w pełni rafinowany olej sojowy nie w pełni
+        - całkowicie utwardzony w pełni rafinowany olej sojowy nie do końca
+        - całkowicie utwardzony w pełni rafinowany olej sojowy niepełnie
+        - całkowicie uwodorniony w pełni rafinowany olej sojowy częściowo
+        - całkowicie uwodorniony w pełni rafinowany olej sojowy niecałkowicie
+        - całkowicie uwodorniony w pełni rafinowany olej sojowy nie całkowicie
+        - całkowicie uwodorniony w pełni rafinowany olej sojowy nie w pełni
+        - całkowicie uwodorniony w pełni rafinowany olej sojowy nie do końca
+        - całkowicie uwodorniony w pełni rafinowany olej sojowy niepełnie
+        - w pełni utwardzony w pełni rafinowany olej sojowy częściowo
+        - w pełni utwardzony w pełni rafinowany olej sojowy niecałkowicie
+        - w pełni utwardzony w pełni rafinowany olej sojowy nie całkowicie
+        - w pełni utwardzony w pełni rafinowany olej sojowy nie w pełni
+        - w pełni utwardzony w pełni rafinowany olej sojowy nie do końca
+        - w pełni utwardzony w pełni rafinowany olej sojowy niepełnie
+        - w pełni uwodorniony w pełni rafinowany olej sojowy częściowo
+        - w pełni uwodorniony w pełni rafinowany olej sojowy niecałkowicie
+        - w pełni uwodorniony w pełni rafinowany olej sojowy nie całkowicie
+        - w pełni uwodorniony w pełni rafinowany olej sojowy nie w pełni
+        - w pełni uwodorniony w pełni rafinowany olej sojowy nie do końca
+        - w pełni uwodorniony w pełni rafinowany olej sojowy niepełnie
+        - w pełni rafinowany całkowicie utwardzony olej sojowy częściowo
+        - w pełni rafinowany całkowicie utwardzony olej sojowy niecałkowicie
+        - w pełni rafinowany całkowicie utwardzony olej sojowy nie całkowicie
+        - w pełni rafinowany całkowicie utwardzony olej sojowy nie w pełni
+        - w pełni rafinowany całkowicie utwardzony olej sojowy nie do końca
+        - w pełni rafinowany całkowicie utwardzony olej sojowy niepełnie
+        - całkowicie utwardzony w pełni rafinowany olej z soi częściowo
+        - całkowicie utwardzony w pełni rafinowany olej z soi niecałkowicie
+        - całkowicie utwardzony w pełni rafinowany olej z soi nie całkowicie
+        - całkowicie utwardzony w pełni rafinowany olej z soi nie w pełni
+        - całkowicie utwardzony w pełni rafinowany olej z soi nie do końca
+        - całkowicie utwardzony w pełni rafinowany olej z soi niepełnie
+        - w pełni rafinowany całkowicie utwardzony olej z soi częściowo
+        - w pełni rafinowany całkowicie utwardzony olej z soi niecałkowicie
+        - w pełni rafinowany całkowicie utwardzony olej z soi nie całkowicie
+        - w pełni rafinowany całkowicie utwardzony olej z soi nie w pełni
+        - w pełni rafinowany całkowicie utwardzony olej z soi nie do końca
+        - w pełni rafinowany całkowicie utwardzony olej z soi niepełnie
+        - w pełni rafinowany całkowicie uwodorniony olej sojowy częściowo
+        - w pełni rafinowany całkowicie uwodorniony olej sojowy niecałkowicie
+        - w pełni rafinowany całkowicie uwodorniony olej sojowy nie całkowicie
+        - w pełni rafinowany całkowicie uwodorniony olej sojowy nie w pełni
+        - w pełni rafinowany całkowicie uwodorniony olej sojowy nie do końca
+        - w pełni rafinowany całkowicie uwodorniony olej sojowy niepełnie
+        - całkowicie uwodorniony w pełni rafinowany olej z soi częściowo
+        - całkowicie uwodorniony w pełni rafinowany olej z soi niecałkowicie
+        - całkowicie uwodorniony w pełni rafinowany olej z soi nie całkowicie
+        - całkowicie uwodorniony w pełni rafinowany olej z soi nie w pełni
+        - całkowicie uwodorniony w pełni rafinowany olej z soi nie do końca
+        - całkowicie uwodorniony w pełni rafinowany olej z soi niepełnie
+        - w pełni rafinowany całkowicie uwodorniony olej z soi częściowo
+        - w pełni rafinowany całkowicie uwodorniony olej z soi niecałkowicie
+        - w pełni rafinowany całkowicie uwodorniony olej z soi nie całkowicie
+        - w pełni rafinowany całkowicie uwodorniony olej z soi nie w pełni
+        - w pełni rafinowany całkowicie uwodorniony olej z soi nie do końca
+        - w pełni rafinowany całkowicie uwodorniony olej z soi niepełnie
+        - w pełni rafinowany w pełni utwardzony olej sojowy częściowo
+        - w pełni rafinowany w pełni utwardzony olej sojowy niecałkowicie
+        - w pełni rafinowany w pełni utwardzony olej sojowy nie całkowicie
+        - w pełni rafinowany w pełni utwardzony olej sojowy nie w pełni
+        - w pełni rafinowany w pełni utwardzony olej sojowy nie do końca
+        - w pełni rafinowany w pełni utwardzony olej sojowy niepełnie
+        - w pełni utwardzony w pełni rafinowany olej z soi częściowo
+        - w pełni utwardzony w pełni rafinowany olej z soi niecałkowicie
+        - w pełni utwardzony w pełni rafinowany olej z soi nie całkowicie
+        - w pełni utwardzony w pełni rafinowany olej z soi nie w pełni
+        - w pełni utwardzony w pełni rafinowany olej z soi nie do końca
+        - w pełni utwardzony w pełni rafinowany olej z soi niepełnie
+        - w pełni rafinowany w pełni utwardzony olej z soi częściowo
+        - w pełni rafinowany w pełni utwardzony olej z soi niecałkowicie
+        - w pełni rafinowany w pełni utwardzony olej z soi nie całkowicie
+        - w pełni rafinowany w pełni utwardzony olej z soi nie w pełni
+        - w pełni rafinowany w pełni utwardzony olej z soi nie do końca
+        - w pełni rafinowany w pełni utwardzony olej z soi niepełnie
+        - w pełni rafinowany w pełni uwodorniony olej sojowy częściowo
+        - w pełni rafinowany w pełni uwodorniony olej sojowy niecałkowicie
+        - w pełni rafinowany w pełni uwodorniony olej sojowy nie całkowicie
+        - w pełni rafinowany w pełni uwodorniony olej sojowy nie w pełni
+        - w pełni rafinowany w pełni uwodorniony olej sojowy nie do końca
+        - w pełni rafinowany w pełni uwodorniony olej sojowy niepełnie
+        - w pełni uwodorniony w pełni rafinowany olej z soi częściowo
+        - w pełni uwodorniony w pełni rafinowany olej z soi niecałkowicie
+        - w pełni uwodorniony w pełni rafinowany olej z soi nie całkowicie
+        - w pełni uwodorniony w pełni rafinowany olej z soi nie w pełni
+        - w pełni uwodorniony w pełni rafinowany olej z soi nie do końca
+        - w pełni uwodorniony w pełni rafinowany olej z soi niepełnie
+        - w pełni rafinowany w pełni uwodorniony olej z soi częściowo
+        - w pełni rafinowany w pełni uwodorniony olej z soi niecałkowicie
+        - w pełni rafinowany w pełni uwodorniony olej z soi nie całkowicie
+        - w pełni rafinowany w pełni uwodorniony olej z soi nie w pełni
+        - w pełni rafinowany w pełni uwodorniony olej z soi nie do końca
+        - w pełni rafinowany w pełni uwodorniony olej z soi niepełnie
+        - w pełni rafinowany olej sojowy całkowicie utwardzony
+        - całkowicie utwardzony w pełni rafinowany olej sojowy
+        - w pełni rafinowany olej sojowy całkowicie uwodorniony
+        - całkowicie uwodorniony w pełni rafinowany olej sojowy
+        - w pełni rafinowany olej sojowy w pełni utwardzony
+        - w pełni utwardzony w pełni rafinowany olej sojowy
+        - w pełni rafinowany olej sojowy w pełni uwodorniony
+        - w pełni uwodorniony w pełni rafinowany olej sojowy
+        - olej sojowy w pełni rafinowany całkowicie utwardzony
+        - olej sojowy całkowicie utwardzony w pełni rafinowany
+        - w pełni rafinowany całkowicie utwardzony olej sojowy
+        - w pełni rafinowany olej z soi całkowicie utwardzony
+        - całkowicie utwardzony w pełni rafinowany olej z soi
+        - olej z soi w pełni rafinowany całkowicie utwardzony
+        - olej z soi całkowicie utwardzony w pełni rafinowany
+        - w pełni rafinowany całkowicie utwardzony olej z soi
+        - olej sojowy w pełni rafinowany całkowicie uwodorniony
+        - olej sojowy całkowicie uwodorniony w pełni rafinowany
+        - w pełni rafinowany całkowicie uwodorniony olej sojowy
+        - w pełni rafinowany olej z soi całkowicie uwodorniony
+        - całkowicie uwodorniony w pełni rafinowany olej z soi
+        - olej z soi w pełni rafinowany całkowicie uwodorniony
+        - olej z soi całkowicie uwodorniony w pełni rafinowany
+        - w pełni rafinowany całkowicie uwodorniony olej z soi
+        - olej sojowy w pełni rafinowany w pełni utwardzony
+        - olej sojowy w pełni utwardzony w pełni rafinowany
+        - w pełni rafinowany w pełni utwardzony olej sojowy
+        - w pełni rafinowany olej z soi w pełni utwardzony
+        - w pełni utwardzony w pełni rafinowany olej z soi
+        - olej z soi w pełni rafinowany w pełni utwardzony
+        - olej z soi w pełni utwardzony w pełni rafinowany
+        - w pełni rafinowany w pełni utwardzony olej z soi
+        - olej sojowy w pełni rafinowany w pełni uwodorniony
+        - olej sojowy w pełni uwodorniony w pełni rafinowany
+        - w pełni rafinowany w pełni uwodorniony olej sojowy
+        - w pełni rafinowany olej z soi w pełni uwodorniony
+        - w pełni uwodorniony w pełni rafinowany olej z soi
+        - olej z soi w pełni rafinowany w pełni uwodorniony
+        - olej z soi w pełni uwodorniony w pełni rafinowany
+        - w pełni rafinowany w pełni uwodorniony olej z soi
+        - całkowicie utwardzony olej sojowy w pełni rafinowany
+        - całkowicie utwardzony olej z soi w pełni rafinowany
+        - całkowicie uwodorniony olej sojowy w pełni rafinowany
+        - całkowicie uwodorniony olej z soi w pełni rafinowany
+        - w pełni utwardzony olej sojowy w pełni rafinowany
+        - w pełni utwardzony olej z soi w pełni rafinowany
+        - w pełni uwodorniony olej sojowy w pełni rafinowany
+        - w pełni uwodorniony olej z soi w pełni rafinowany
+    process:
+      en: "Fully refined soybean oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat; the label states the full refining."
+      pl: "W pełni rafinowany olej sojowy ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans; etykieta podaje pełną rafinację."
+    tells:
+      - '^(?=.*(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )calkowicie (?:utwardzon|uwodorn))'
+      - '^(?=.*(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )w pelni (?:utwardzon|uwodorn))'
+      - '^(?=.*(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )fully hydrogenated)'
+      - '^(?=.*(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )totally hydrogenated)'
+      - '^(?=.*(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )vollstandig gehartet)'
 assertions:
   - code: origin.plant
     certainty: 'yes'
@@ -2441,7 +2474,84 @@ assertions:
     sources:
       - id: reg-1169-2011
         locator: "Annex VII Part A, points 8 and 9"
+  - code: allergen.soybeans
+    variant: hydrogenated-fully-refined
+    certainty: 'no'
+    kind: fact
+    grade: A
+    note:
+      en: "The label states full refining: Reg (EU) No 1169/2011 Annex II point 6(a) exempts fully refined soybean oil and fat, and hydrogenation is a further process on that oil."
+      pl: "Etykieta podaje pełną rafinację: Rozp. (UE) nr 1169/2011 Załącznik II pkt 6(a) wyłącza w pełni rafinowany olej i tłuszcz sojowy, a utwardzenie jest dalszym procesem tego oleju."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex II, point 6(a)"
+  - code: processing.hydrogenated
+    variant: hydrogenated-fully-refined
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares hydrogenation without specifying partial or full, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje utwardzenie (bez wskazania, czy częściowe, czy całkowite), czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: allergen.soybeans
+    variant: partially-hydrogenated-fully-refined
+    certainty: 'no'
+    kind: fact
+    grade: A
+    note:
+      en: "The label states full refining: Reg (EU) No 1169/2011 Annex II point 6(a) exempts fully refined soybean oil and fat, and hydrogenation is a further process on that oil."
+      pl: "Etykieta podaje pełną rafinację: Rozp. (UE) nr 1169/2011 Załącznik II pkt 6(a) wyłącza w pełni rafinowany olej i tłuszcz sojowy, a utwardzenie jest dalszym procesem tego oleju."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex II, point 6(a)"
+  - code: processing.hydrogenated
+    variant: partially-hydrogenated-fully-refined
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares partial hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje częściowe utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: health.trans_fat_source
+    variant: partially-hydrogenated-fully-refined
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Partial hydrogenation is the main industrial source of trans fat; EU food sold to consumers is capped at 2 g trans fat per 100 g of fat."
+      pl: "Częściowe utwardzanie jest głównym przemysłowym źródłem tłuszczów trans; żywność sprzedawana konsumentom w UE ma limit 2 g tłuszczów trans na 100 g tłuszczu."
+    sources:
+      - id: reg-2019-649
+  - code: allergen.soybeans
+    variant: fully-hydrogenated-fully-refined
+    certainty: 'no'
+    kind: fact
+    grade: A
+    note:
+      en: "The label states full refining: Reg (EU) No 1169/2011 Annex II point 6(a) exempts fully refined soybean oil and fat, and hydrogenation is a further process on that oil."
+      pl: "Etykieta podaje pełną rafinację: Rozp. (UE) nr 1169/2011 Załącznik II pkt 6(a) wyłącza w pełni rafinowany olej i tłuszcz sojowy, a utwardzenie jest dalszym procesem tego oleju."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex II, point 6(a)"
+  - code: processing.hydrogenated
+    variant: fully-hydrogenated-fully-refined
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares full hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje całkowite utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
 review_status: draft
 provenance: ai-drafted
 review_notes:
   - "Allergen scoped to variants (option a): unrefined carries allergen.soybeans: yes with prior 0.5 (conservative safety prior, downgraded to maybe for silent labels like 'olej sojowy'), fully-refined carries allergen.soybeans: no with prior 0.45 so explicit refined labels resolve without a soy allergen flag, and hydrogenated / partially-hydrogenated / fully-hydrogenated carry allergen.soybeans: maybe because hydrogenation does not establish full refining under Reg (EU) No 1169/2011 Annex II point 6(a)."
+  - "Policy (B), 2026-11-17 (pc-opus, Sol 6.1 on #10 at f1a6e25): a name that states full refining with hydrogenation, in either word order, sits on a *-fully-refined variant with allergen.soybeans: no (Annex II point 6(a)) and the same hydrogenation assertions; plain 'refined' stays on the hydrogenation variants, soy maybe."

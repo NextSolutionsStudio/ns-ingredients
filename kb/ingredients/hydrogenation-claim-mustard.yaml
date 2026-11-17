@@ -7,15 +7,13 @@ exact_names:
   en: [no hydrogenated mustard oil, no partially hydrogenated mustard oil, no fully hydrogenated mustard oil, no totally hydrogenated mustard oil, without hydrogenated mustard oil, without partially hydrogenated mustard oil, without fully hydrogenated mustard oil, without totally hydrogenated mustard oil, free from hydrogenated mustard oil, free from partially hydrogenated mustard oil, free from fully hydrogenated mustard oil, free from totally hydrogenated mustard oil, free of hydrogenated mustard oil, free of partially hydrogenated mustard oil, free of fully hydrogenated mustard oil, free of totally hydrogenated mustard oil, no hydrogenated mustard seed oil, no partially hydrogenated mustard seed oil, no fully hydrogenated mustard seed oil, no totally hydrogenated mustard seed oil, without hydrogenated mustard seed oil, without partially hydrogenated mustard seed oil, without fully hydrogenated mustard seed oil, without totally hydrogenated mustard seed oil, free from hydrogenated mustard seed oil, free from partially hydrogenated mustard seed oil, free from fully hydrogenated mustard seed oil, free from totally hydrogenated mustard seed oil, free of hydrogenated mustard seed oil, free of partially hydrogenated mustard seed oil, free of fully hydrogenated mustard seed oil, free of totally hydrogenated mustard seed oil]
 summary:
   en: >-
-    A label claim that excludes hydrogenation on a fat or oil from mustard ("without hydrogenated
-    soybean oil", "free from fully hydrogenated almond oil"). It excludes a process, not the food: a label
-    that names the oil this way often contains the plain oil, so the allergen stays possible. The claim
-    asserts nothing else: no hydrogenation, no origin, no diet.
+    A label claim that excludes hydrogenation on a fat or oil from mustard ("without hydrogenated mustard
+    oil"). It excludes a process, not the food: a label that names the oil this way often contains the plain
+    oil, so the allergen stays possible. The claim asserts nothing else: no hydrogenation, no origin, no diet.
   pl: >-
-    Deklaracja na etykiecie, która wyklucza utwardzenie tłuszczu lub oleju z: gorczyca ("bez utwardzonego
-    oleju sojowego"). Wyklucza proces, nie składnik: etykieta, która tak wymienia olej, często zawiera
-    zwykły olej, więc alergen pozostaje możliwy. Deklaracja nie stwierdza nic więcej: ani utwardzenia,
-    ani pochodzenia, ani wpływu na dietę.
+    Deklaracja na etykiecie, która wyklucza utwardzenie tłuszczu lub oleju z gorczycy. Wyklucza proces, nie
+    składnik: etykieta, która tak wymienia olej, często zawiera zwykły olej, więc alergen pozostaje możliwy.
+    Deklaracja nie stwierdza nic więcej: ani utwardzenia, ani pochodzenia, ani wpływu na dietę.
 assertions:
   - code: allergen.mustard
     certainty: maybe
