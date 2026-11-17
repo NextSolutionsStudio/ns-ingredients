@@ -442,6 +442,93 @@ function nutIndex(): KbIndex {
     ],
   } as unknown as KbBundle);
 }
+// Sol 6.1 on #16 at 0fab984: the most complete name says which food.
+function specificIndex(): KbIndex {
+  return new KbIndex({
+    version: "t",
+    counts: {},
+    implications: [...IMPL, impl("allergen.nuts", "allergen"), impl("allergen.peanuts", "allergen")],
+    sources: [],
+    classes: [],
+    ingredients: [
+      {
+        id: "soybean-oil",
+        names: { en: ["soybean oil"] },
+        variants: [
+          { id: "unrefined", names: { en: ["unrefined soybean oil"] }, process: { en: "p" }, prior: 0.5 },
+          {
+            id: "fully-refined",
+            names: { en: ["fully refined soybean oil"] },
+            process: { en: "p" },
+            prior: 0.45,
+          },
+        ],
+        assertions: [
+          says("allergen.soybeans", "unrefined"),
+          { ...says("allergen.soybeans", "fully-refined"), certainty: "no" },
+        ],
+      },
+      {
+        id: "peanut-oil",
+        names: { en: ["peanut oil"] },
+        variants: [{
+          id: "partially-hydrogenated",
+          names: { en: ["partially hydrogenated nut oil from peanuts"] },
+          process: { en: "p" },
+          tells: [`${NEG}partially hydrogenated`],
+        }],
+        assertions: [says("allergen.peanuts")],
+      },
+      {
+        id: "unhydrogenated-fat",
+        names: { en: ["unhydrogenated fat"] },
+        exact_names: { en: ["no hydrogenated fully refined soybean oil"] },
+      },
+      {
+        id: "hydrogenation-claim-nuts-peanuts",
+        names: { en: ["nut claim"] },
+        exact_names: { en: ["no partially hydrogenated nut oil"] },
+        assertions: [
+          { ...says("allergen.nuts"), certainty: "maybe" },
+          { ...says("allergen.peanuts"), certainty: "maybe" },
+        ],
+      },
+      { id: "olive-oil", names: { en: ["olive oil"] } },
+    ],
+  } as unknown as KbBundle);
+}
+
+Deno.test("the most complete name inside a claim says which food (Sol 6.1 on #16 at 0fab984)", () => {
+  const idx = specificIndex();
+  const flag = (label: string, code: string) =>
+    analyze(idx, label, { lang: "en" }).flags.find((f) => f.code === code)?.certainty;
+  // the refined-soy claim carries no soy, standalone or embedded: the refined oil inside it adds none (Annex II 6(a))
+  for (
+    const label of [
+      "Ingredients: no hydrogenated fully refined soybean oil",
+      "Ingredients: olive oil (no hydrogenated fully refined soybean oil)",
+      "Ingredients: olive oil (contains no hydrogenated fully refined soybean oil)",
+    ]
+  ) {
+    assertEquals(flag(label, "allergen.soybeans"), undefined, label);
+  }
+  // the peanut source rules out the tree nuts an ambiguous claim would add
+  for (
+    const label of [
+      "Ingredients: contains no partially hydrogenated nut oil from peanuts",
+      "Ingredients: olive oil (contains no partially hydrogenated nut oil from peanuts)",
+    ]
+  ) {
+    assertEquals(flag(label, "allergen.peanuts"), "maybe", label);
+    assertEquals(flag(label, "allergen.nuts"), undefined, label);
+  }
+  // the ambiguous claim on its own still carries both
+  assertEquals(
+    flag("Ingredients: olive oil (contains no partially hydrogenated nut oil)", "allergen.nuts"),
+    "maybe",
+  );
+});
+
 const nuts = (label: string) =>
   analyze(nutIndex(), label, { lang: "en" }).flags.find((f) => f.code === "allergen.nuts")?.certainty;
 

@@ -270,6 +270,17 @@ export class KbIndex {
     this.exactMaxTokens = Math.max(this.exactMaxTokens, words.length);
   }
 
+  /** Whether a plain or variant name starts inside the claim at words [s, e] and runs past its end. */
+  private nameRunsPast(tokens: string[], s: number, e: number, longest: number): boolean {
+    for (let i = s + 1; i <= e; i++) {
+      for (let j = e + 2; j <= Math.min(tokens.length, i + longest); j++) {
+        const span = tokens.slice(i, j).join(" ");
+        if (this.byNorm.has(span) && !this.exactOnly.has(span)) return true;
+      }
+    }
+    return false;
+  }
+
   /** Each exact-only name that occurs in the item, as word indexes: the longest one at each start. */
   private claimSpans(tokens: string[]): [number, number][] {
     const out: [number, number][] = [];
@@ -404,15 +415,20 @@ export class KbIndex {
     // With `excluded`, the scan goes on past the match for denied names only, so a longer name elsewhere in the item
     // ("extra virgin olive oil without using hydrogenated soybean oil") cannot hide one.
     const collect = !!excluded && norm.length <= TELL_TEXT_MAX;
-    // one entry per food and stretch of words: a shorter name of the same food inside a denied one adds nothing
+    // The most complete name wins: a name whose words a denied name already covers is part of it, whatever its food
+    // ("fully refined soybean oil" inside the refined-soy claim adds no soy).
     const deny = (ingredientId: string, start: number, end: number, span: string) => {
-      if (excluded?.some((x) => x.ingredientId === ingredientId && x.start <= start && end <= x.end)) return;
+      if (excluded?.some((x) => x.start <= start && end <= x.end)) return;
       excluded?.push({ ingredientId, matched: span, start, end });
     };
+    const longest = Math.min(tokens.length - 1, Math.max(SUBPHRASE_MAX_TOKENS, this.denyMaxTokens));
     // A claim inside a longer item ("contains no partially hydrogenated almond oil") denies what it names: its own
-    // entry, and below, every name that starts inside it (which the claim guard keeps from being the match).
+    // entry, and below, every name that starts inside it (which the claim guard keeps from being the match). Unless a
+    // longer name starts inside the claim and runs past it ("no partially hydrogenated nut oil" inside "… nut oil from
+    // peanuts"): that name says which food, so its food stands, not the claim's.
     if (collect) {
       for (const [s, e] of claims) {
+        if (this.nameRunsPast(tokens, s, e, longest)) continue;
         const span = tokens.slice(s, e + 1).join(" ");
         const c = this.byNorm.get(span);
         if (c) deny(c.ingredientId, s, e + 1, span);
@@ -423,7 +439,6 @@ export class KbIndex {
     let foundEnd = 0;
     // Longest known sub-phrase: "koncentrat bialka serwatkowego instant" → "koncentrat bialka serwatkowego". Past
     // SUBPHRASE_MAX_TOKENS, only a denied variant name is looked for: it blocks, and is never the match.
-    const longest = Math.min(tokens.length - 1, Math.max(SUBPHRASE_MAX_TOKENS, this.denyMaxTokens));
     scan: for (let len = longest; len >= 1; len--) {
       for (let start = 0; start + len <= tokens.length; start++) {
         if (blocked[start]) continue;
@@ -431,7 +446,11 @@ export class KbIndex {
           if (collect) {
             const span = tokens.slice(start, start + len).join(" ");
             const e = this.byNorm.get(span);
-            if (e && !this.exactOnly.has(span)) deny(e.ingredientId, start, start + len, span);
+            if (e && !this.exactOnly.has(span)) {
+              deny(e.ingredientId, start, start + len, span);
+              // and, as for a denied variant name, no fuzzy match to that food is taken
+              (blockedIng ??= new Set()).add(e.ingredientId);
+            }
           }
           continue;
         }
