@@ -240,6 +240,54 @@ names:
     - nieuwodornione oleje roślinne z orzechów pekan
     - oleje roślinne z orzechów pekan nieuwodornione
     - oleje roślinne nieuwodornione z orzechów pekan
+    - nie utwardzony olej roślinny orzechowy pekanowy
+    - nie uwodorniony olej roślinny orzechowy pekanowy
+    - nieutwardzony olej roślinny orzechowy pekanowy
+    - nieuwodorniony olej roślinny orzechowy pekanowy
+    - nie utwardzony tłuszcz roślinny orzechowy pekanowy
+    - nie uwodorniony tłuszcz roślinny orzechowy pekanowy
+    - nieutwardzony tłuszcz roślinny orzechowy pekanowy
+    - nieuwodorniony tłuszcz roślinny orzechowy pekanowy
+    - nie utwardzone oleje roślinne orzechowe pekanowe
+    - nie uwodornione oleje roślinne orzechowe pekanowe
+    - nieutwardzone oleje roślinne orzechowe pekanowe
+    - nieuwodornione oleje roślinne orzechowe pekanowe
+    - nie utwardzone tłuszcze roślinne orzechowe pekanowe
+    - nie uwodornione tłuszcze roślinne orzechowe pekanowe
+    - nieutwardzone tłuszcze roślinne orzechowe pekanowe
+    - nieuwodornione tłuszcze roślinne orzechowe pekanowe
+    - nie utwardzony olej roślinny orzechowy pekan
+    - nie uwodorniony olej roślinny orzechowy pekan
+    - nieutwardzony olej roślinny orzechowy pekan
+    - nieuwodorniony olej roślinny orzechowy pekan
+    - nie utwardzony tłuszcz roślinny orzechowy pekan
+    - nie uwodorniony tłuszcz roślinny orzechowy pekan
+    - nieutwardzony tłuszcz roślinny orzechowy pekan
+    - nieuwodorniony tłuszcz roślinny orzechowy pekan
+    - nie utwardzone oleje roślinne orzechowe pekan
+    - nie uwodornione oleje roślinne orzechowe pekan
+    - nieutwardzone oleje roślinne orzechowe pekan
+    - nieuwodornione oleje roślinne orzechowe pekan
+    - nie utwardzone tłuszcze roślinne orzechowe pekan
+    - nie uwodornione tłuszcze roślinne orzechowe pekan
+    - nieutwardzone tłuszcze roślinne orzechowe pekan
+    - nieuwodornione tłuszcze roślinne orzechowe pekan
+    - nie utwardzony olej roślinny orzechowy z orzechów pekan
+    - nie uwodorniony olej roślinny orzechowy z orzechów pekan
+    - nieutwardzony olej roślinny orzechowy z orzechów pekan
+    - nieuwodorniony olej roślinny orzechowy z orzechów pekan
+    - nie utwardzony tłuszcz roślinny orzechowy z orzechów pekan
+    - nie uwodorniony tłuszcz roślinny orzechowy z orzechów pekan
+    - nieutwardzony tłuszcz roślinny orzechowy z orzechów pekan
+    - nieuwodorniony tłuszcz roślinny orzechowy z orzechów pekan
+    - nie utwardzone oleje roślinne orzechowe z orzechów pekan
+    - nie uwodornione oleje roślinne orzechowe z orzechów pekan
+    - nieutwardzone oleje roślinne orzechowe z orzechów pekan
+    - nieuwodornione oleje roślinne orzechowe z orzechów pekan
+    - nie utwardzone tłuszcze roślinne orzechowe z orzechów pekan
+    - nie uwodornione tłuszcze roślinne orzechowe z orzechów pekan
+    - nieutwardzone tłuszcze roślinne orzechowe z orzechów pekan
+    - nieuwodornione tłuszcze roślinne orzechowe z orzechów pekan
   de:
     - Pekannussöl
 summary:
@@ -341,6 +389,30 @@ variants:
         - uwodornione oleje roślinne z orzechów pekan
         - oleje roślinne z orzechów pekan uwodornione
         - oleje roślinne uwodornione z orzechów pekan
+        - utwardzony olej roślinny orzechowy pekanowy
+        - uwodorniony olej roślinny orzechowy pekanowy
+        - utwardzony tłuszcz roślinny orzechowy pekanowy
+        - uwodorniony tłuszcz roślinny orzechowy pekanowy
+        - utwardzone oleje roślinne orzechowe pekanowe
+        - uwodornione oleje roślinne orzechowe pekanowe
+        - utwardzone tłuszcze roślinne orzechowe pekanowe
+        - uwodornione tłuszcze roślinne orzechowe pekanowe
+        - utwardzony olej roślinny orzechowy pekan
+        - uwodorniony olej roślinny orzechowy pekan
+        - utwardzony tłuszcz roślinny orzechowy pekan
+        - uwodorniony tłuszcz roślinny orzechowy pekan
+        - utwardzone oleje roślinne orzechowe pekan
+        - uwodornione oleje roślinne orzechowe pekan
+        - utwardzone tłuszcze roślinne orzechowe pekan
+        - uwodornione tłuszcze roślinne orzechowe pekan
+        - utwardzony olej roślinny orzechowy z orzechów pekan
+        - uwodorniony olej roślinny orzechowy z orzechów pekan
+        - utwardzony tłuszcz roślinny orzechowy z orzechów pekan
+        - uwodorniony tłuszcz roślinny orzechowy z orzechów pekan
+        - utwardzone oleje roślinne orzechowe z orzechów pekan
+        - uwodornione oleje roślinne orzechowe z orzechów pekan
+        - utwardzone tłuszcze roślinne orzechowe z orzechów pekan
+        - uwodornione tłuszcze roślinne orzechowe z orzechów pekan
     process:
       en: "Pecan oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej z orzechów pekan utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
@@ -437,6 +509,30 @@ variants:
         - częściowo uwodornione oleje roślinne z orzechów pekan
         - oleje roślinne z orzechów pekan częściowo uwodornione
         - oleje roślinne częściowo uwodornione z orzechów pekan
+        - częściowo utwardzony olej roślinny orzechowy pekanowy
+        - częściowo uwodorniony olej roślinny orzechowy pekanowy
+        - częściowo utwardzony tłuszcz roślinny orzechowy pekanowy
+        - częściowo uwodorniony tłuszcz roślinny orzechowy pekanowy
+        - częściowo utwardzone oleje roślinne orzechowe pekanowe
+        - częściowo uwodornione oleje roślinne orzechowe pekanowe
+        - częściowo utwardzone tłuszcze roślinne orzechowe pekanowe
+        - częściowo uwodornione tłuszcze roślinne orzechowe pekanowe
+        - częściowo utwardzony olej roślinny orzechowy pekan
+        - częściowo uwodorniony olej roślinny orzechowy pekan
+        - częściowo utwardzony tłuszcz roślinny orzechowy pekan
+        - częściowo uwodorniony tłuszcz roślinny orzechowy pekan
+        - częściowo utwardzone oleje roślinne orzechowe pekan
+        - częściowo uwodornione oleje roślinne orzechowe pekan
+        - częściowo utwardzone tłuszcze roślinne orzechowe pekan
+        - częściowo uwodornione tłuszcze roślinne orzechowe pekan
+        - częściowo utwardzony olej roślinny orzechowy z orzechów pekan
+        - częściowo uwodorniony olej roślinny orzechowy z orzechów pekan
+        - częściowo utwardzony tłuszcz roślinny orzechowy z orzechów pekan
+        - częściowo uwodorniony tłuszcz roślinny orzechowy z orzechów pekan
+        - częściowo utwardzone oleje roślinne orzechowe z orzechów pekan
+        - częściowo uwodornione oleje roślinne orzechowe z orzechów pekan
+        - częściowo utwardzone tłuszcze roślinne orzechowe z orzechów pekan
+        - częściowo uwodornione tłuszcze roślinne orzechowe z orzechów pekan
     process:
       en: "Pecan oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
       pl: "Olej z orzechów pekan, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
@@ -622,6 +718,54 @@ variants:
         - w pełni uwodornione oleje roślinne z orzechów pekan
         - oleje roślinne z orzechów pekan w pełni uwodornione
         - oleje roślinne w pełni uwodornione z orzechów pekan
+        - całkowicie utwardzony olej roślinny orzechowy pekanowy
+        - całkowicie uwodorniony olej roślinny orzechowy pekanowy
+        - w pełni utwardzony olej roślinny orzechowy pekanowy
+        - w pełni uwodorniony olej roślinny orzechowy pekanowy
+        - całkowicie utwardzony tłuszcz roślinny orzechowy pekanowy
+        - całkowicie uwodorniony tłuszcz roślinny orzechowy pekanowy
+        - w pełni utwardzony tłuszcz roślinny orzechowy pekanowy
+        - w pełni uwodorniony tłuszcz roślinny orzechowy pekanowy
+        - całkowicie utwardzone oleje roślinne orzechowe pekanowe
+        - całkowicie uwodornione oleje roślinne orzechowe pekanowe
+        - w pełni utwardzone oleje roślinne orzechowe pekanowe
+        - w pełni uwodornione oleje roślinne orzechowe pekanowe
+        - całkowicie utwardzone tłuszcze roślinne orzechowe pekanowe
+        - całkowicie uwodornione tłuszcze roślinne orzechowe pekanowe
+        - w pełni utwardzone tłuszcze roślinne orzechowe pekanowe
+        - w pełni uwodornione tłuszcze roślinne orzechowe pekanowe
+        - całkowicie utwardzony olej roślinny orzechowy pekan
+        - całkowicie uwodorniony olej roślinny orzechowy pekan
+        - w pełni utwardzony olej roślinny orzechowy pekan
+        - w pełni uwodorniony olej roślinny orzechowy pekan
+        - całkowicie utwardzony tłuszcz roślinny orzechowy pekan
+        - całkowicie uwodorniony tłuszcz roślinny orzechowy pekan
+        - w pełni utwardzony tłuszcz roślinny orzechowy pekan
+        - w pełni uwodorniony tłuszcz roślinny orzechowy pekan
+        - całkowicie utwardzone oleje roślinne orzechowe pekan
+        - całkowicie uwodornione oleje roślinne orzechowe pekan
+        - w pełni utwardzone oleje roślinne orzechowe pekan
+        - w pełni uwodornione oleje roślinne orzechowe pekan
+        - całkowicie utwardzone tłuszcze roślinne orzechowe pekan
+        - całkowicie uwodornione tłuszcze roślinne orzechowe pekan
+        - w pełni utwardzone tłuszcze roślinne orzechowe pekan
+        - w pełni uwodornione tłuszcze roślinne orzechowe pekan
+        - całkowicie utwardzony olej roślinny orzechowy z orzechów pekan
+        - całkowicie uwodorniony olej roślinny orzechowy z orzechów pekan
+        - w pełni utwardzony olej roślinny orzechowy z orzechów pekan
+        - w pełni uwodorniony olej roślinny orzechowy z orzechów pekan
+        - całkowicie utwardzony tłuszcz roślinny orzechowy z orzechów pekan
+        - całkowicie uwodorniony tłuszcz roślinny orzechowy z orzechów pekan
+        - w pełni utwardzony tłuszcz roślinny orzechowy z orzechów pekan
+        - w pełni uwodorniony tłuszcz roślinny orzechowy z orzechów pekan
+        - całkowicie utwardzone oleje roślinne orzechowe z orzechów pekan
+        - całkowicie uwodornione oleje roślinne orzechowe z orzechów pekan
+        - w pełni utwardzone oleje roślinne orzechowe z orzechów pekan
+        - w pełni uwodornione oleje roślinne orzechowe z orzechów pekan
+        - całkowicie utwardzone tłuszcze roślinne orzechowe z orzechów pekan
+        - całkowicie uwodornione tłuszcze roślinne orzechowe z orzechów pekan
+        - w pełni utwardzone tłuszcze roślinne orzechowe z orzechów pekan
+        - w pełni uwodornione tłuszcze roślinne orzechowe z orzechów pekan
     process:
       en: "Pecan oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
       pl: "Olej z orzechów pekan ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."

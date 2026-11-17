@@ -186,6 +186,38 @@ names:
     - nieuwodornione oleje roślinne z pistacji
     - oleje roślinne z pistacji nieuwodornione
     - oleje roślinne nieuwodornione z pistacji
+    - nie utwardzony olej roślinny orzechowy pistacjowy
+    - nie uwodorniony olej roślinny orzechowy pistacjowy
+    - nieutwardzony olej roślinny orzechowy pistacjowy
+    - nieuwodorniony olej roślinny orzechowy pistacjowy
+    - nie utwardzony tłuszcz roślinny orzechowy pistacjowy
+    - nie uwodorniony tłuszcz roślinny orzechowy pistacjowy
+    - nieutwardzony tłuszcz roślinny orzechowy pistacjowy
+    - nieuwodorniony tłuszcz roślinny orzechowy pistacjowy
+    - nie utwardzone oleje roślinne orzechowe pistacjowe
+    - nie uwodornione oleje roślinne orzechowe pistacjowe
+    - nieutwardzone oleje roślinne orzechowe pistacjowe
+    - nieuwodornione oleje roślinne orzechowe pistacjowe
+    - nie utwardzone tłuszcze roślinne orzechowe pistacjowe
+    - nie uwodornione tłuszcze roślinne orzechowe pistacjowe
+    - nieutwardzone tłuszcze roślinne orzechowe pistacjowe
+    - nieuwodornione tłuszcze roślinne orzechowe pistacjowe
+    - nie utwardzony olej roślinny orzechowy z pistacji
+    - nie uwodorniony olej roślinny orzechowy z pistacji
+    - nieutwardzony olej roślinny orzechowy z pistacji
+    - nieuwodorniony olej roślinny orzechowy z pistacji
+    - nie utwardzony tłuszcz roślinny orzechowy z pistacji
+    - nie uwodorniony tłuszcz roślinny orzechowy z pistacji
+    - nieutwardzony tłuszcz roślinny orzechowy z pistacji
+    - nieuwodorniony tłuszcz roślinny orzechowy z pistacji
+    - nie utwardzone oleje roślinne orzechowe z pistacji
+    - nie uwodornione oleje roślinne orzechowe z pistacji
+    - nieutwardzone oleje roślinne orzechowe z pistacji
+    - nieuwodornione oleje roślinne orzechowe z pistacji
+    - nie utwardzone tłuszcze roślinne orzechowe z pistacji
+    - nie uwodornione tłuszcze roślinne orzechowe z pistacji
+    - nieutwardzone tłuszcze roślinne orzechowe z pistacji
+    - nieuwodornione tłuszcze roślinne orzechowe z pistacji
   de:
     - Pistazienöl
 summary:
@@ -264,6 +296,22 @@ variants:
         - uwodornione oleje roślinne z pistacji
         - oleje roślinne z pistacji uwodornione
         - oleje roślinne uwodornione z pistacji
+        - utwardzony olej roślinny orzechowy pistacjowy
+        - uwodorniony olej roślinny orzechowy pistacjowy
+        - utwardzony tłuszcz roślinny orzechowy pistacjowy
+        - uwodorniony tłuszcz roślinny orzechowy pistacjowy
+        - utwardzone oleje roślinne orzechowe pistacjowe
+        - uwodornione oleje roślinne orzechowe pistacjowe
+        - utwardzone tłuszcze roślinne orzechowe pistacjowe
+        - uwodornione tłuszcze roślinne orzechowe pistacjowe
+        - utwardzony olej roślinny orzechowy z pistacji
+        - uwodorniony olej roślinny orzechowy z pistacji
+        - utwardzony tłuszcz roślinny orzechowy z pistacji
+        - uwodorniony tłuszcz roślinny orzechowy z pistacji
+        - utwardzone oleje roślinne orzechowe z pistacji
+        - uwodornione oleje roślinne orzechowe z pistacji
+        - utwardzone tłuszcze roślinne orzechowe z pistacji
+        - uwodornione tłuszcze roślinne orzechowe z pistacji
     process:
       en: "Pistachio oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej pistacjowy utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
@@ -337,6 +385,22 @@ variants:
         - częściowo uwodornione oleje roślinne z pistacji
         - oleje roślinne z pistacji częściowo uwodornione
         - oleje roślinne częściowo uwodornione z pistacji
+        - częściowo utwardzony olej roślinny orzechowy pistacjowy
+        - częściowo uwodorniony olej roślinny orzechowy pistacjowy
+        - częściowo utwardzony tłuszcz roślinny orzechowy pistacjowy
+        - częściowo uwodorniony tłuszcz roślinny orzechowy pistacjowy
+        - częściowo utwardzone oleje roślinne orzechowe pistacjowe
+        - częściowo uwodornione oleje roślinne orzechowe pistacjowe
+        - częściowo utwardzone tłuszcze roślinne orzechowe pistacjowe
+        - częściowo uwodornione tłuszcze roślinne orzechowe pistacjowe
+        - częściowo utwardzony olej roślinny orzechowy z pistacji
+        - częściowo uwodorniony olej roślinny orzechowy z pistacji
+        - częściowo utwardzony tłuszcz roślinny orzechowy z pistacji
+        - częściowo uwodorniony tłuszcz roślinny orzechowy z pistacji
+        - częściowo utwardzone oleje roślinne orzechowe z pistacji
+        - częściowo uwodornione oleje roślinne orzechowe z pistacji
+        - częściowo utwardzone tłuszcze roślinne orzechowe z pistacji
+        - częściowo uwodornione tłuszcze roślinne orzechowe z pistacji
     process:
       en: "Pistachio oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
       pl: "Olej pistacjowy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
@@ -476,6 +540,38 @@ variants:
         - w pełni uwodornione oleje roślinne z pistacji
         - oleje roślinne z pistacji w pełni uwodornione
         - oleje roślinne w pełni uwodornione z pistacji
+        - całkowicie utwardzony olej roślinny orzechowy pistacjowy
+        - całkowicie uwodorniony olej roślinny orzechowy pistacjowy
+        - w pełni utwardzony olej roślinny orzechowy pistacjowy
+        - w pełni uwodorniony olej roślinny orzechowy pistacjowy
+        - całkowicie utwardzony tłuszcz roślinny orzechowy pistacjowy
+        - całkowicie uwodorniony tłuszcz roślinny orzechowy pistacjowy
+        - w pełni utwardzony tłuszcz roślinny orzechowy pistacjowy
+        - w pełni uwodorniony tłuszcz roślinny orzechowy pistacjowy
+        - całkowicie utwardzone oleje roślinne orzechowe pistacjowe
+        - całkowicie uwodornione oleje roślinne orzechowe pistacjowe
+        - w pełni utwardzone oleje roślinne orzechowe pistacjowe
+        - w pełni uwodornione oleje roślinne orzechowe pistacjowe
+        - całkowicie utwardzone tłuszcze roślinne orzechowe pistacjowe
+        - całkowicie uwodornione tłuszcze roślinne orzechowe pistacjowe
+        - w pełni utwardzone tłuszcze roślinne orzechowe pistacjowe
+        - w pełni uwodornione tłuszcze roślinne orzechowe pistacjowe
+        - całkowicie utwardzony olej roślinny orzechowy z pistacji
+        - całkowicie uwodorniony olej roślinny orzechowy z pistacji
+        - w pełni utwardzony olej roślinny orzechowy z pistacji
+        - w pełni uwodorniony olej roślinny orzechowy z pistacji
+        - całkowicie utwardzony tłuszcz roślinny orzechowy z pistacji
+        - całkowicie uwodorniony tłuszcz roślinny orzechowy z pistacji
+        - w pełni utwardzony tłuszcz roślinny orzechowy z pistacji
+        - w pełni uwodorniony tłuszcz roślinny orzechowy z pistacji
+        - całkowicie utwardzone oleje roślinne orzechowe z pistacji
+        - całkowicie uwodornione oleje roślinne orzechowe z pistacji
+        - w pełni utwardzone oleje roślinne orzechowe z pistacji
+        - w pełni uwodornione oleje roślinne orzechowe z pistacji
+        - całkowicie utwardzone tłuszcze roślinne orzechowe z pistacji
+        - całkowicie uwodornione tłuszcze roślinne orzechowe z pistacji
+        - w pełni utwardzone tłuszcze roślinne orzechowe z pistacji
+        - w pełni uwodornione tłuszcze roślinne orzechowe z pistacji
     process:
       en: "Pistachio oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
       pl: "Olej pistacjowy ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
