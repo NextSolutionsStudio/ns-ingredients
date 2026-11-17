@@ -1,8 +1,8 @@
 id: hydrogenated-fat
 type: fat
 names:
-  en: [hydrogenated fat or oil, hydrogenated fat, hydrogenated fats, hydrogenated oil, hydrogenated oils]
-  pl: [tłuszcz utwardzony, utwardzony oil, utwardzone oil, uwodorniony oil, uwodornione oil]
+  en: [hydrogenated fat or oil]
+  pl: [tłuszcz utwardzony, utwardzony oil, utwardzone oil, uwodorniony oil, uwodornione oil, olej hydrogenated]
 summary:
   en: >-
     A fat or oil that the label calls hardened (hydrogenated) without saying whether it is vegetable or animal,
@@ -17,16 +17,16 @@ summary:
 variants:
   - id: partially-hydrogenated
     names:
-      en: [partially hydrogenated fat or oil, partially hydrogenated fat, partially hydrogenated fats, partially hydrogenated oil, partially hydrogenated oils]
-      pl: [tłuszcz częściowo utwardzony, częściowo utwardzony oil, częściowo utwardzone oil, częściowo uwodorniony oil, częściowo uwodornione oil]
+      en: [partially hydrogenated fat or oil]
+      pl: [tłuszcz częściowo utwardzony, częściowo utwardzony oil, częściowo utwardzone oil, częściowo uwodorniony oil, częściowo uwodornione oil, olej partially hydrogenated]
     process:
       en: "Some but not all double bonds are hydrogenated, leaving a mix of natural cis and industrially formed trans unsaturated fatty acids."
       pl: "Utwardzeniu podlega część, nie wszystkie, wiązania podwójne, co pozostawia mieszankę naturalnych (cis) i powstałych przemysłowo (trans) nienasyconych kwasów tłuszczowych."
     tells: ['czesciowo (?:utwardzon|uwodorn)', '(?<!not )(?<!non )partially hydrogenated', 'teilweise gehartet']
   - id: fully-hydrogenated
     names:
-      en: [fully hydrogenated fat or oil, fully hydrogenated fat, fully hydrogenated fats, fully hydrogenated oil, fully hydrogenated oils, totally hydrogenated fat, totally hydrogenated oil]
-      pl: [tłuszcz całkowicie utwardzony, całkowicie utwardzony oil, całkowicie utwardzone oil, całkowicie uwodorniony oil, całkowicie uwodornione oil, w pełni utwardzony oil, w pełni utwardzone oil, w pełni uwodorniony oil, w pełni uwodornione oil]
+      en: [fully hydrogenated fat or oil]
+      pl: [tłuszcz całkowicie utwardzony, całkowicie utwardzony oil, całkowicie utwardzone oil, całkowicie uwodorniony oil, całkowicie uwodornione oil, w pełni utwardzony oil, w pełni utwardzone oil, w pełni uwodorniony oil, w pełni uwodornione oil, olej fully hydrogenated, olej totally hydrogenated]
     process:
       en: "All double bonds are hydrogenated; the fat is fully saturated, very hard, and contains essentially no trans fat."
       pl: "Wszystkie wiązania podwójne są utwardzone; tłuszcz jest w pełni nasycony, bardzo twardy i praktycznie nie zawiera tłuszczów trans."
@@ -52,5 +52,6 @@ assertions:
 review_status: draft
 provenance: ai-drafted
 review_notes:
+  - "Names of the form \"olej <English qualifier>\" are context-only too: the engine reads an English bracketed qualifier (\"vegetable oil (partially hydrogenated)\") first as \"olej <child>\". The English names are descriptive only, so no bare English alias can outrank a named source (\"non-hydrogenated oil from tuna\")."
   - "Names of the form \"<Polish qualifier> oil\" are context-only: the engine reads a bracketed qualifier after an oil or fat (\"olej sojowy (częściowo uwodorniony)\") as \"<qualifier> oil\". No label prints them, so they cannot outrank a source named in real text."
   - "No origin and no diet on purpose: a bare hardened fat may be vegetable or animal. Named oils and fats carry their own hydrogenation variants (palm, rapeseed, lard, ...)."

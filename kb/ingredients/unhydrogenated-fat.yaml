@@ -1,8 +1,8 @@
 id: unhydrogenated-fat
 type: fat
 names:
-  en: [non-hydrogenated oil, unhydrogenated oil, not hydrogenated oil, not partially hydrogenated oil, not fully hydrogenated oil, non partially hydrogenated oil, non-hydrogenated oils, unhydrogenated oils, not hydrogenated oils, not partially hydrogenated oils, not fully hydrogenated oils, non partially hydrogenated oils, non-hydrogenated fat, unhydrogenated fat, not hydrogenated fat, not partially hydrogenated fat, not fully hydrogenated fat, non partially hydrogenated fat, non-hydrogenated fats, unhydrogenated fats, not hydrogenated fats, not partially hydrogenated fats, not fully hydrogenated fats, non partially hydrogenated fats]
-  pl: [tłuszcz lub olej nieutwardzony, nie utwardzony oil, nie utwardzone oil, nie uwodorniony oil, nie uwodornione oil, nieutwardzony oil, nieutwardzone oil, nieuwodorniony oil, nieuwodornione oil]
+  en: [non-hydrogenated fat or oil]
+  pl: [tłuszcz lub olej nieutwardzony, nie utwardzony oil, nie utwardzone oil, nie uwodorniony oil, nie uwodornione oil, nieutwardzony oil, nieutwardzone oil, nieuwodorniony oil, nieuwodornione oil, olej non-hydrogenated, olej unhydrogenated, olej not hydrogenated, olej not partially hydrogenated, olej not fully hydrogenated]
 summary:
   en: >-
     A fat or oil that the label says is not hydrogenated, without naming whether it is vegetable or animal
@@ -16,5 +16,6 @@ assertions: []
 review_status: draft
 provenance: ai-drafted
 review_notes:
+  - "Names of the form \"olej <English qualifier>\" are context-only too: the engine reads an English bracketed qualifier (\"vegetable oil (partially hydrogenated)\") first as \"olej <child>\". The English names are descriptive only, so no bare English alias can outrank a named source (\"non-hydrogenated oil from tuna\")."
   - "Names of the form \"<Polish negation> oil\" are context-only, as on hydrogenated-fat: they resolve a bracketed \"(nieutwardzony)\" after an oil or fat."
   - "No origin, no diet and no processing on purpose: the label denies hydrogenation and does not name the source."
