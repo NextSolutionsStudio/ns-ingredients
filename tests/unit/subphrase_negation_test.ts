@@ -1,4 +1,5 @@
-// The sub-phrase pass must not let a negated claim, or a name inside it, outrank the food named before it.
+// The sub-phrase pass must not let a presence claim ("bez ...", "free from ...", "does not contain ..."), or a name
+// inside it, outrank the food the item names.
 import { assertEquals } from "@std/assert";
 import { KbIndex } from "../../src/core/kb-index.ts";
 import type { KbBundle } from "../../src/kb/schema.ts";
@@ -15,12 +16,12 @@ function tinyIndex(list: string[]): KbIndex {
 }
 
 /** The name the item resolves to, and how. */
-function hit(index: KbIndex, list: string[], text: string): string {
-  const m = index.match(text);
-  return m ? `${list[Number(m.ingredientId.slice(1))]} ${m.matchType}` : "-";
+function hit(names: string[], text: string): string {
+  const m = tinyIndex(names).match(text);
+  return m ? `${names[Number(m.ingredientId.slice(1))]} ${m.matchType}` : "-";
 }
 
-Deno.test("a negated claim after a named food does not outrank the food", () => {
+Deno.test("a presence claim after a food does not outrank the food", () => {
   for (
     const [names, text, want] of [
       [
@@ -51,11 +52,11 @@ Deno.test("a negated claim after a named food does not outrank the food", () => 
       ],
     ] as [string[], string, string][]
   ) {
-    assertEquals(hit(tinyIndex(names), names, text), `${want} sub_phrase`, text);
+    assertEquals(hit(names, text), `${want} sub_phrase`, text);
   }
 });
 
-Deno.test("a name inside the negated words does not outrank the food either", () => {
+Deno.test("a name inside the claim does not outrank the food either", () => {
   for (
     const [names, text, want] of [
       [
@@ -65,108 +66,123 @@ Deno.test("a name inside the negated words does not outrank the food either", ()
       ],
       [["peanut oil", "fully hydrogenated fat"], "peanut oil free from fully hydrogenated fat", "peanut oil"],
       [
-        ["olej sojowy", "czesciowo uwodornionych olejow"],
-        "olej sojowy bez częściowo uwodornionych olejów",
-        "olej sojowy",
+        ["sesame oil", "partially hydrogenated oil"],
+        "sesame oil without any partially hydrogenated oil",
+        "sesame oil",
       ],
     ] as [string[], string, string][]
   ) {
-    assertEquals(hit(tinyIndex(names), names, text), `${want} sub_phrase`, text);
+    assertEquals(hit(names, text), `${want} sub_phrase`, text);
   }
 });
 
-Deno.test("a claim still matches a whole item, and a sub-phrase from the first word is still read", () => {
-  const names = ["bez utwardzonych tluszczow", "mleko bez laktozy", "mleko", "olej sezamowy"];
-  const index = tinyIndex(names);
-  assertEquals(hit(index, names, "bez utwardzonych tłuszczów"), "bez utwardzonych tluszczow exact");
-  // the negator is the first word: the guard does not apply
-  assertEquals(
-    hit(index, names, "bez utwardzonych tłuszczów i konserwantów"),
-    "bez utwardzonych tluszczow sub_phrase",
-  );
-  // a span from the first word may reach the negator
-  assertEquals(hit(index, names, "mleko bez laktozy UHT"), "mleko bez laktozy sub_phrase");
-  // words before the negator are still read
-  assertEquals(hit(index, names, "rafinowany olej sezamowy bez konserwantów"), "olej sezamowy sub_phrase");
-});
-
-Deno.test("with no negator after the first word, the longest sub-phrase still wins", () => {
-  const names = ["sesame oil", "partially hydrogenated oil"];
-  assertEquals(
-    hit(tinyIndex(names), names, "sesame oil partially hydrogenated oil"),
-    "partially hydrogenated oil sub_phrase",
-  );
-});
-
-Deno.test("free and wolny negate only before from / of and od", () => {
-  // "gluten free" follows its object: the variant name across it still matches (joined_items_test has the dash form)
-  const fibre = ["gluten", "gluten free wheat fibre"];
-  assertEquals(
-    hit(tinyIndex(fibre), fibre, "BIO gluten free wheat fibre"),
-    "gluten free wheat fibre sub_phrase",
-  );
-  const eggs = ["jaja", "jaja z wolnego wybiegu"];
-  assertEquals(
-    hit(tinyIndex(eggs), eggs, "świeże jaja z wolnego wybiegu"),
-    "jaja z wolnego wybiegu sub_phrase",
-  );
-  const oil = ["sesame oil", "free from hydrogenated oil"];
-  assertEquals(hit(tinyIndex(oil), oil, "sesame oil free from hydrogenated oil"), "sesame oil sub_phrase");
-});
-
-Deno.test("after a food, a presence claim is never read as a sub-phrase; a property one only as a fallback", () => {
-  // "nie zawiera" denies presence: with no name before it, the claim is reached by the fuzzy pass, not by a name inside it
-  const claim = ["nie zawiera tluszczow utwardzonych", "tluszczow utwardzonych"];
-  const m = tinyIndex(claim).match("produkt nie zawiera tłuszczów utwardzonych");
-  assertEquals([m?.ingredientId, m?.matchType], ["t0", "fuzzy"]);
-  const oil = ["partially hydrogenated oil"];
-  assertEquals(
-    tinyIndex(oil).match("contains no partially hydrogenated oil")?.matchType === "sub_phrase",
-    false,
-  );
-  // "nie zaleca" denies a property: with nothing before it, the old pass still runs
-  const water = ["woda"];
-  assertEquals(
-    hit(tinyIndex(water), water, "zawiera nie zaleca się stosowania u dzieci woda"),
-    "woda sub_phrase",
-  );
-});
-
-Deno.test("an item that opens with a presence negation never takes a name inside it", () => {
+Deno.test("an item that opens with a presence claim does not take the name it denies", () => {
   const names = ["rapeseed oil", "partially hydrogenated rapeseed oil"];
-  const index = tinyIndex(names);
   for (
     const text of [
       "without any partially hydrogenated rapeseed oil",
       "bez dodatku partially hydrogenated rapeseed oil",
     ]
   ) {
-    const m = index.match(text);
+    const m = tinyIndex(names).match(text);
     assertEquals(m?.matchType === "sub_phrase", false, `${text}: ${m?.matched}`);
   }
-  // a GMO claim negates nothing about the food
+  // a GMO claim denies nothing about the food
   assertEquals(
-    hit(index, names, "non-GMO partially hydrogenated rapeseed oil"),
-    "partially hydrogenated rapeseed oil sub_phrase",
-  );
-  assertEquals(
-    hit(index, names, "bez GMO partially hydrogenated rapeseed oil"),
+    hit(names, "bez GMO partially hydrogenated rapeseed oil"),
     "partially hydrogenated rapeseed oil sub_phrase",
   );
 });
 
-Deno.test("an item that opens with a property negation is left to the names", () => {
-  // the food is there; only its property is denied ("not completely refined"), so the food's sub-phrase is read
-  const soy = ["soybean oil"];
-  assertEquals(hit(tinyIndex(soy), soy, "not completely refined soybean oil"), "soybean oil sub_phrase");
-  // a negated variant name needs its own plain name in the KB ("non partially hydrogenated rapeseed oil")
-  const names = [
-    "rapeseed oil",
-    "partially hydrogenated rapeseed oil",
-    "non partially hydrogenated rapeseed oil",
-  ];
+Deno.test("the words after what a claim denies are still read (Sol 6.1 on #13, P2 2)", () => {
   assertEquals(
-    hit(tinyIndex(names), names, "non partially hydrogenated rapeseed oil x"),
-    "non partially hydrogenated rapeseed oil sub_phrase",
+    hit(["lactose", "whey protein isolate"], "free from lactose whey protein isolate"),
+    "whey protein isolate sub_phrase",
+  );
+  assertEquals(hit(["mleko"], "bez laktozy mleko"), "mleko sub_phrase");
+  assertEquals(hit(["maka ryzowa"], "bez glutenu mąka ryżowa"), "maka ryzowa sub_phrase");
+  assertEquals(hit(["sugar", "apple juice"], "no added sugar apple juice"), "apple juice sub_phrase");
+  // a claim at the start is still read whole
+  assertEquals(
+    hit(["bez utwardzonych tluszczow"], "bez utwardzonych tłuszczów i konserwantów"),
+    "bez utwardzonych tluszczow sub_phrase",
+  );
+  // a span from the first word may reach the claim
+  assertEquals(hit(["mleko bez laktozy", "mleko"], "mleko bez laktozy UHT"), "mleko bez laktozy sub_phrase");
+});
+
+Deno.test("property negators and name words are not claims (Sol 6.1 on #13, P2 1 and P2 3)", () => {
+  // "non" in a name: the creamer, not gluten
+  assertEquals(
+    hit(["gluten", "non dairy creamer"], "gluten-free non-dairy creamer"),
+    "non dairy creamer sub_phrase",
+  );
+  // "bez" as elder: an opener with nothing after it is a word of a name, and a name before an opener is still read
+  for (
+    const text of [
+      "bio czarny bez",
+      "suszony czarny bez",
+      "czarny bez suszony",
+      "bio czarny bez liofilizowany",
+    ]
+  ) {
+    assertEquals(hit(["czarny bez"], text), "czarny bez sub_phrase", text);
+  }
+  // a known name that starts with a property negator is a name, not a claim
+  assertEquals(
+    hit(["olej sojowy", "nie uwodorniony olej sojowy"], "nie uwodorniony olej sojowy rafinowany"),
+    "nie uwodorniony olej sojowy sub_phrase",
+  );
+  // a property negation at the start denies a property: the food after it is read
+  assertEquals(hit(["soybean oil"], "not completely refined soybean oil"), "soybean oil sub_phrase");
+  // "free" and "wolny" open a claim only before "from"/"of" and "od"
+  assertEquals(
+    hit(["gluten", "gluten free wheat fibre"], "BIO gluten free wheat fibre"),
+    "gluten free wheat fibre sub_phrase",
+  );
+  assertEquals(
+    hit(["jaja", "jaja z wolnego wybiegu"], "świeże jaja z wolnego wybiegu"),
+    "jaja z wolnego wybiegu sub_phrase",
+  );
+  assertEquals(hit(["woda"], "zawiera nie zaleca się stosowania u dzieci woda"), "woda sub_phrase");
+});
+
+Deno.test("a property negation after a food does not outrank the food", () => {
+  assertEquals(
+    hit(["sesame oil", "partially hydrogenated oil"], "sesame oil not partially hydrogenated oil"),
+    "sesame oil sub_phrase",
+  );
+  assertEquals(
+    hit(["olej sezamowy", "czesciowo uwodorniony"], "olej sezamowy nie częściowo uwodorniony"),
+    "olej sezamowy sub_phrase",
+  );
+});
+
+Deno.test("a property claim that negates a name is a claim, though it has a name of its own", () => {
+  // "not partially hydrogenated oil" is "not" and the name "partially hydrogenated oil": after a food it is a claim
+  const names = ["sesame oil", "partially hydrogenated oil", "not partially hydrogenated oil"];
+  assertEquals(hit(names, "sesame oil not partially hydrogenated oil"), "sesame oil sub_phrase");
+  // alone, it is still its own name
+  assertEquals(hit(names, "not partially hydrogenated oil"), "not partially hydrogenated oil exact");
+});
+
+Deno.test("one claim, then a named food: the food is read (pc-opus)", () => {
+  assertEquals(
+    hit(["cukier", "mleko w proszku"], "bez dodatku cukru mleko w proszku"),
+    "mleko w proszku sub_phrase",
+  );
+  assertEquals(hit(["sugar", "peanut butter"], "no added sugar peanut butter"), "peanut butter sub_phrase");
+  assertEquals(
+    hit(["gluten", "platki owsiane"], "nie zawiera glutenu płatki owsiane"),
+    "platki owsiane sub_phrase",
+  );
+  // postposed "free" is not an opener: the name before it and after it are read as before
+  assertEquals(hit(["lactose free milk", "milk"], "lactose-free milk UHT"), "lactose free milk sub_phrase");
+});
+
+Deno.test("with no claim, the longest sub-phrase still wins", () => {
+  assertEquals(
+    hit(["sesame oil", "partially hydrogenated oil"], "sesame oil partially hydrogenated oil"),
+    "partially hydrogenated oil sub_phrase",
   );
 });

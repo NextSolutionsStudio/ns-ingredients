@@ -52,46 +52,54 @@ const FUZZY_MIN = 0.55;
 const FUZZY_EDIT_MIN_SIM = 0.4;
 const SUBPHRASE_MAX_TOKENS = 7;
 /**
- * Words that open a negation. A presence negator ("bez", "without", "no", "free from", "wolny od", "nie zawiera")
- * denies what follows it: the words after it are a claim, not a name in the item ("olej sezamowy bez utwardzonych
- * tluszczow", "without any partially hydrogenated rapeseed oil"). A property negator ("nie", "not", "non", "ani")
- * denies a property of a food that is there ("not completely refined soybean oil"); at the start of an item that is
- * left to the names ("non partially hydrogenated rapeseed oil" is the plain oil's name). "free" and "wolny" negate
- * only before "from"/"of" and "od" ("gluten free", "z wolnego wybiegu" do not), and a GMO claim ("non gmo", "bez
- * gmo") negates nothing about the food.
+ * Openers of a claim that denies the presence of what follows it ("bez utwardzonych tluszczow", "free from
+ * hydrogenated oil", "nie zawiera", "does not contain"), as word sequences; a word ending in "*" matches by prefix.
+ * A property negator ("nie", "not", "non", "ani") opens one too ("sesame oil not partially hydrogenated oil"), unless a
+ * name starts at it that is more than the negation of a name ("non dairy creamer" is a name; "not partially
+ * hydrogenated oil" is "not" and a name, so it is a claim).
  */
-type Negation = "presence" | "property";
-const NEGATION_OPENERS: Record<string, Negation> = {
-  bez: "presence",
-  brak: "presence",
-  without: "presence",
-  no: "presence",
-  zero: "presence",
-  ohne: "presence",
-  kein: "presence",
-  keine: "presence",
-  nie: "property",
-  ani: "property",
-  not: "property",
-  non: "property",
-};
-const NEGATION_OPENERS_BEFORE: Record<string, string[]> = {
-  free: ["from", "of"],
-  wolny: ["od"],
-  wolna: ["od"],
-  wolne: ["od"],
-  wolni: ["od"],
-  wolnego: ["od"],
-  wolnej: ["od"],
-};
+const CLAIM_OPENERS: string[][] = [
+  ["bez"],
+  ["brak"],
+  ["without"],
+  ["no"],
+  ["zero"],
+  ["ohne"],
+  ["kein"],
+  ["keine"],
+  ["free", "from"],
+  ["free", "of"],
+  ["wolny", "od"],
+  ["wolna", "od"],
+  ["wolne", "od"],
+  ["wolni", "od"],
+  ["wolnego", "od"],
+  ["wolnej", "od"],
+  ["nie", "zawier*"],
+  ["does", "not", "contain"],
+  ["do", "not", "contain"],
+  ["contains", "no"],
+  ["contain", "no"],
+  ["made", "without"],
+];
+/** Words between an opener and what it denies: "without any", "no added", "bez dodatku", "without the use of". */
+const CLAIM_FILLERS: string[][] = [
+  ["any"],
+  ["added"],
+  ["the", "use", "of"],
+  ["use", "of"],
+  ["dodatku"],
+  ["uzycia"],
+  ["zastosowania"],
+  ["zawartosci"],
+];
 const GMO_WORDS = new Set(["gmo", "gm", "gmos"]);
-function negationAt(tokens: string[], k: number): Negation | undefined {
-  const w = tokens[k];
-  let kind = NEGATION_OPENERS[w] ??
-    (NEGATION_OPENERS_BEFORE[w]?.includes(tokens[k + 1]) ? "presence" : undefined);
-  if (!kind || tokens.slice(k + 1, k + 3).some((x) => GMO_WORDS.has(x))) return undefined;
-  if (w === "nie" && tokens[k + 1]?.startsWith("zawier")) kind = "presence";
-  return kind;
+const PROPERTY_NEGATORS = new Set(["nie", "ani", "not", "non"]);
+function wordsAt(tokens: string[], k: number, words: string[]): boolean {
+  return words.every((w, j) => {
+    const x = tokens[k + j];
+    return x !== undefined && (w.endsWith("*") ? x.startsWith(w.slice(0, -1)) : x === w);
+  });
 }
 /**
  * The longest normalised item text variant tells are run on; longer text reads none. Tells are written for one item and some backtrack on
@@ -249,6 +257,41 @@ export class KbIndex {
     return this.namePrefixes.has(norm);
   }
 
+  /**
+   * The first presence claim in an item, as word indexes: from its opener through what it denies (the longest name
+   * right after the opener, else one word). A GMO claim denies nothing about the food, and an opener with nothing
+   * after it is a word of a name ("czarny bez").
+   */
+  /** The length in words of the longest name of at least `min` words that starts at word `k`, or 0. */
+  private nameAt(tokens: string[], k: number, min: number): number {
+    for (let len = Math.min(tokens.length - k, SUBPHRASE_MAX_TOKENS); len >= min; len--) {
+      if (this.byNorm.has(tokens.slice(k, k + len).join(" "))) return len;
+    }
+    return 0;
+  }
+
+  private claimSpan(tokens: string[]): [number, number] | null {
+    for (let k = 0; k < tokens.length; k++) {
+      const opener = CLAIM_OPENERS.find((s) => wordsAt(tokens, k, s)) ??
+        (PROPERTY_NEGATORS.has(tokens[k]) && this.nameAt(tokens, k, 2) <= 1 + this.nameAt(tokens, k + 1, 1)
+          ? [tokens[k]]
+          : undefined);
+      if (!opener) continue;
+      let o = k + opener.length;
+      o += CLAIM_FILLERS.find((s) => wordsAt(tokens, o, s))?.length ?? 0;
+      if (o >= tokens.length || tokens.slice(o, o + 2).some((x) => GMO_WORDS.has(x))) continue;
+      let end = o;
+      for (let len = Math.min(tokens.length - o, SUBPHRASE_MAX_TOKENS); len > 1; len--) {
+        if (this.byNorm.has(tokens.slice(o, o + len).join(" "))) {
+          end = o + len - 1;
+          break;
+        }
+      }
+      return [k, end];
+    }
+    return null;
+  }
+
   /** Resolve one item's name (no brackets) to an ingredient. */
   match(text: string): NameMatch | null {
     const norm = normName(text);
@@ -264,35 +307,27 @@ export class KbIndex {
       };
     }
     const tokens = norm.split(" ");
-    // A sub-phrase that starts after the first word and reaches a negation is in the claim. After a food ("olej
-    // sezamowy bez ..."), it is never read when the negation denies presence, and only if nothing before it is a name
-    // when it denies a property ("zawiera nie zaleca sie ... woda"). In an item that opens with a presence negation, a
-    // name inside the claim is what it denies, so it is never read either.
-    let negAt = -1;
-    let negKind: Negation | undefined;
-    for (let k = 0; k < tokens.length && negAt < 0; k++) {
-      const n = negationAt(tokens, k);
-      if (n && (k > 0 || n === "presence")) [negAt, negKind] = [k, n];
-    }
-    const inClaim = (start: number, len: number) => negAt >= 0 && start > 0 && start + len > negAt;
+    // A presence claim denies what it names, so no sub-phrase that starts in it is read: after a food ("olej sezamowy
+    // bez utwardzonych tluszczow", "sesame oil no partially hydrogenated oil") or opening the item ("without any
+    // partially hydrogenated rapeseed oil"). A claim at the start is still read whole ("bez utwardzonych tluszczow i
+    // konserwantow"), and so are the words after what it denies ("bez laktozy mleko").
+    const claim = this.claimSpan(tokens);
     // Longest known sub-phrase: "koncentrat bialka serwatkowego instant" → "koncentrat bialka serwatkowego".
-    for (const claimPass of negAt > 0 && negKind === "property" ? [false, true] : [false]) {
-      for (let len = Math.min(tokens.length - 1, SUBPHRASE_MAX_TOKENS); len >= 1; len--) {
-        for (let start = 0; start + len <= tokens.length; start++) {
-          if (inClaim(start, len) !== claimPass) continue;
-          const span = tokens.slice(start, start + len).join(" ");
-          if (span.length < 3) continue;
-          const e = this.byNorm.get(span);
-          if (e) {
-            const coverage = span.length / norm.length;
-            return {
-              ingredientId: e.ingredientId,
-              variantId: e.variantId,
-              matchType: "sub_phrase",
-              confidence: Math.round((0.6 + 0.35 * coverage) * 100) / 100,
-              matched: span,
-            };
-          }
+    for (let len = Math.min(tokens.length - 1, SUBPHRASE_MAX_TOKENS); len >= 1; len--) {
+      for (let start = 0; start + len <= tokens.length; start++) {
+        if (claim && start > 0 && start >= claim[0] && start <= claim[1]) continue;
+        const span = tokens.slice(start, start + len).join(" ");
+        if (span.length < 3) continue;
+        const e = this.byNorm.get(span);
+        if (e) {
+          const coverage = span.length / norm.length;
+          return {
+            ingredientId: e.ingredientId,
+            variantId: e.variantId,
+            matchType: "sub_phrase",
+            confidence: Math.round((0.6 + 0.35 * coverage) * 100) / 100,
+            matched: span,
+          };
         }
       }
     }
