@@ -45,7 +45,10 @@ export interface DeniedName {
   /** Its words, [start, end), in the item's normalised name. */
   start: number;
   end: number;
-  /** The variant the name selects, if any: a denial keeps the allergen "no" it asserts (an exemption it states). */
+  /**
+   * The variant the name selects, if any: a denial keeps the allergen "no" it asserts (an exemption it states). Left
+   * out where a "not" right before the name negates its words ("not fully refined …").
+   */
   variantId?: string;
 }
 
@@ -104,6 +107,11 @@ const DENIAL_BREAKS = new Set([
   "sowie",
   "auch",
 ]);
+/**
+ * Negators that negate the word after them, not a food: "not fully refined hydrogenated soybean oil" negates the full
+ * refining, so a denial they make right before a name keeps none of its variant's exemptions (`variantReading`).
+ */
+const ADJECTIVE_NEGATORS = /^(?:not|non|nie\w*|nicht)$/u;
 /**
  * The words (normalised) of an exclusion: articles, the connectors the KB's negators take ("free from", "wolny od",
  * "ohne Zusatz von") and the verbs and nouns of an exclusion ("using", "added", "the addition of", "bez stosowania",
@@ -480,12 +488,13 @@ export class KbIndex {
             // rapeseed oil" inside the food's own "not partially hydrogenated rapeseed oil", after "gluten-free").
             const held = inClaim.some(([s, t]) => s <= start && start + len <= t);
             inClaim.push([start, start + len]);
-            if (!held && this.variantReading(e, tokens, start, start + len, norm.length) === "deny") {
+            const r = held ? "keep" : this.variantReading(e, tokens, start, start + len, norm.length);
+            if (r === "deny" || r === "negate") {
               blocked.fill(1, start, start + len);
               (blockedIng ??= new Set()).add(e.ingredientId);
             }
             if (collect) {
-              deny(e.ingredientId, start, start + len, span, e.variantId);
+              deny(e.ingredientId, start, start + len, span, r === "negate" ? undefined : e.variantId);
               // and, as for a denied variant name, no fuzzy match to that food is taken
               (blockedIng ??= new Set()).add(e.ingredientId);
             }
@@ -499,9 +508,10 @@ export class KbIndex {
         const e = this.byNorm.get(span);
         if (!e) continue;
         const reading = this.variantReading(e, tokens, start, start + len, norm.length);
-        if (reading === "deny") {
+        if (reading === "deny" || reading === "negate") {
           blocked.fill(1, start, start + len);
-          deny(e.ingredientId, start, start + len, span, e.variantId);
+          // "negate": the "not" right before the name negates its own words, so it states no exemption
+          deny(e.ingredientId, start, start + len, span, reading === "negate" ? undefined : e.variantId);
           (blockedIng ??= new Set()).add(e.ingredientId);
           continue;
         }
@@ -569,6 +579,8 @@ export class KbIndex {
    * ("… poultry fat without added sugar") keeps the variant, and one that denies something else ("without added
    * sugars with partially hydrogenated poultry fat", "without sugar partially hydrogenated poultry fat", "not
    * completely refined hydrogenated soybean oil") leaves the plain food.
+   * "negate" is a denial whose negator negates the word after it (ADJECTIVE_NEGATORS) right before the name: it
+   * negates the name's own first words ("not fully refined hydrogenated soybean oil"), so the name states no exemption.
    */
   private variantReading(
     e: NameEntry,
@@ -576,7 +588,7 @@ export class KbIndex {
     start: number,
     end: number,
     itemLength: number,
-  ): "keep" | "drop" | "deny" {
+  ): "keep" | "drop" | "deny" | "negate" {
     if (
       !e.variantId || itemLength > TELL_TEXT_MAX || !this.droppable.has(`${e.ingredientId}/${e.variantId}`)
     ) {
@@ -592,7 +604,8 @@ export class KbIndex {
     const gap = tokens.slice(k + 1, start);
     if (gap.length > DENIAL_GAP_MAX) return "drop";
     const ends = (w: string) => !DENIAL_FILLERS.has(w) && (DENIAL_BREAKS.has(w) || this.nameWords().has(w));
-    return gap.some(ends) ? "drop" : "deny";
+    if (gap.some(ends)) return "drop";
+    return !gap.length && ADJECTIVE_NEGATORS.test(tokens[k]) ? "negate" : "deny";
   }
 
   /**
