@@ -101,7 +101,7 @@ Deno.test("a variant whose drop would lose an allergen or turn a diet keeps its 
   // a variant that asserts nothing of its own is denied where its tell does not fire: its name is read like a claim
   const ex: DeniedName[] = [];
   assertEquals(idx.match("without any sunflower lecithin", ex), null);
-  assertEquals(ex, [{ ingredientId: "lecithins", matched: "sunflower lecithin" }]);
+  assertEquals(ex, [{ ingredientId: "lecithins", matched: "sunflower lecithin", start: 2, end: 4 }]);
 });
 
 // Implications, so that a flag can fire at all.
@@ -386,4 +386,171 @@ Deno.test("a denied name's AI-drafted entry is disclosed (Sol 6.1 on #15 at b71a
       .ai_generated_content,
     false,
   );
+});
+
+// pc-opus's masked-form check on #15: claims and long names that hid an allergen food's denied name.
+const NEG = String.raw`^(?!.*\b(?:not|non|no|without|bez)\b).*\b`;
+function nutIndex(): KbIndex {
+  return new KbIndex({
+    version: "t",
+    counts: {},
+    implications: [...IMPL, impl("allergen.nuts", "allergen"), impl("processing.hydrogenated", "processing")],
+    sources: [],
+    classes: [],
+    ingredients: [
+      {
+        id: "almond-oil",
+        names: { en: ["almond oil", "vegetable oil from almonds"] },
+        variants: [{
+          id: "partially-hydrogenated",
+          names: {
+            en: ["partially hydrogenated almond oil", "partially hydrogenated vegetable oil from almonds"],
+          },
+          process: { en: "p" },
+          tells: [`${NEG}partially hydrogenated`],
+        }],
+        assertions: [says("allergen.nuts")],
+      },
+      {
+        id: "brazil-nut-oil",
+        names: { en: ["brazil nut oil"] },
+        variants: [{
+          id: "fully-hydrogenated",
+          names: { en: ["fully hydrogenated vegetable fat made from brazil nut kernels"] },
+          process: { en: "p" },
+          tells: [`${NEG}fully hydrogenated`],
+        }],
+        assertions: [says("allergen.nuts")],
+      },
+      {
+        id: "hydrogenated-vegetable-fat",
+        names: { en: ["hydrogenated vegetable oil", "fully hydrogenated vegetable fat"] },
+        assertions: [says("processing.hydrogenated")],
+      },
+      { id: "vegetable-fat", names: { en: ["vegetable oil", "not partially hydrogenated vegetable oil"] } },
+      {
+        id: "unhydrogenated-fat",
+        names: { en: ["unhydrogenated fat"] },
+        exact_names: { en: ["not partially hydrogenated", "contains no partially hydrogenated"] },
+      },
+      {
+        id: "hydrogenation-claim-nuts",
+        names: { en: ["nut claim"] },
+        exact_names: { en: ["no partially hydrogenated almond oil"] },
+        assertions: [{ ...says("allergen.nuts"), certainty: "maybe" }],
+      },
+    ],
+  } as unknown as KbBundle);
+}
+// Sol 6.1 on #16 at 0fab984: the most complete name says which food.
+function specificIndex(): KbIndex {
+  return new KbIndex({
+    version: "t",
+    counts: {},
+    implications: [...IMPL, impl("allergen.nuts", "allergen"), impl("allergen.peanuts", "allergen")],
+    sources: [],
+    classes: [],
+    ingredients: [
+      {
+        id: "soybean-oil",
+        names: { en: ["soybean oil"] },
+        variants: [
+          { id: "unrefined", names: { en: ["unrefined soybean oil"] }, process: { en: "p" }, prior: 0.5 },
+          {
+            id: "fully-refined",
+            names: { en: ["fully refined soybean oil"] },
+            process: { en: "p" },
+            prior: 0.45,
+          },
+        ],
+        assertions: [
+          says("allergen.soybeans", "unrefined"),
+          { ...says("allergen.soybeans", "fully-refined"), certainty: "no" },
+        ],
+      },
+      {
+        id: "peanut-oil",
+        names: { en: ["peanut oil"] },
+        variants: [{
+          id: "partially-hydrogenated",
+          names: { en: ["partially hydrogenated nut oil from peanuts"] },
+          process: { en: "p" },
+          tells: [`${NEG}partially hydrogenated`],
+        }],
+        assertions: [says("allergen.peanuts")],
+      },
+      {
+        id: "unhydrogenated-fat",
+        names: { en: ["unhydrogenated fat"] },
+        exact_names: { en: ["no hydrogenated fully refined soybean oil"] },
+      },
+      {
+        id: "hydrogenation-claim-nuts-peanuts",
+        names: { en: ["nut claim"] },
+        exact_names: { en: ["no partially hydrogenated nut oil"] },
+        assertions: [
+          { ...says("allergen.nuts"), certainty: "maybe" },
+          { ...says("allergen.peanuts"), certainty: "maybe" },
+        ],
+      },
+      { id: "olive-oil", names: { en: ["olive oil"] } },
+    ],
+  } as unknown as KbBundle);
+}
+
+Deno.test("the most complete name inside a claim says which food (Sol 6.1 on #16 at 0fab984)", () => {
+  const idx = specificIndex();
+  const flag = (label: string, code: string) =>
+    analyze(idx, label, { lang: "en" }).flags.find((f) => f.code === code)?.certainty;
+  // the refined-soy claim carries no soy, standalone or embedded: the refined oil inside it adds none (Annex II 6(a))
+  for (
+    const label of [
+      "Ingredients: no hydrogenated fully refined soybean oil",
+      "Ingredients: olive oil (no hydrogenated fully refined soybean oil)",
+      "Ingredients: olive oil (contains no hydrogenated fully refined soybean oil)",
+    ]
+  ) {
+    assertEquals(flag(label, "allergen.soybeans"), undefined, label);
+  }
+  // the peanut source rules out the tree nuts an ambiguous claim would add
+  for (
+    const label of [
+      "Ingredients: contains no partially hydrogenated nut oil from peanuts",
+      "Ingredients: olive oil (contains no partially hydrogenated nut oil from peanuts)",
+    ]
+  ) {
+    assertEquals(flag(label, "allergen.peanuts"), "maybe", label);
+    assertEquals(flag(label, "allergen.nuts"), undefined, label);
+  }
+  // the ambiguous claim on its own still carries both
+  assertEquals(
+    flag("Ingredients: olive oil (contains no partially hydrogenated nut oil)", "allergen.nuts"),
+    "maybe",
+  );
+});
+
+const nuts = (label: string) =>
+  analyze(nutIndex(), label, { lang: "en" }).flags.find((f) => f.code === "allergen.nuts")?.certainty;
+
+Deno.test("a claim inside a longer item denies what it names (pc-opus on #15)", () => {
+  for (
+    const text of [
+      // the per-allergen claim, inside "contains …"
+      "contains no partially hydrogenated almond oil",
+      // a generic claim before the allergen food's variant name, which a generic negated name would win
+      "not partially hydrogenated vegetable oil from almonds",
+    ]
+  ) {
+    for (const label of [`Ingredients: ${text}`, `Ingredients: rapeseed oil (${text})`]) {
+      assertEquals(nuts(label), "maybe", label);
+    }
+  }
+});
+
+Deno.test("a denied variant name past the sub-phrase window is found (pc-opus on #15)", () => {
+  const label = "Ingredients: without fully hydrogenated vegetable fat made from brazil nut kernels";
+  const r = analyze(nutIndex(), label, { lang: "en" });
+  assertEquals(r.flags.find((f) => f.code === "allergen.nuts")?.certainty, "maybe");
+  // the generic hydrogenated fat inside the denied name is not the match
+  assertEquals(r.flags.some((f) => f.code === "processing.hydrogenated"), false);
 });
