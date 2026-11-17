@@ -2,6 +2,7 @@
 // Deterministic and side-effect free; the HTTP layer only validates and serialises.
 import type { AssertionT, IngredientT, Lang, TextT } from "../kb/schema.ts";
 import type { KbIndex, MatchType, NameMatch } from "./kb-index.ts";
+import { PRIOR_FLAG_MIN } from "./kb-index.ts";
 import { baseENumber, findENumbers, guessLang, normName } from "./normalize.ts";
 import {
   assessNutrition,
@@ -151,7 +152,6 @@ export interface AnalysisResult {
   ai_generated_content: boolean;
 }
 
-const PRIOR_FLAG_MIN = 0.5;
 const SEVERITY_RANK = { info: 0, notice: 1, caution: 2, warning: 3 } as const;
 const CERTAINTY_RANK: Record<Certainty, number> = { no: 0, unknown: 1, maybe: 2, yes: 3 };
 const KIND_RANK = { opinion: 0, estimate: 1, fact: 2 } as const;

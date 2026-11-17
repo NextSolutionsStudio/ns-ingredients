@@ -59,6 +59,8 @@ const SUBPHRASE_MAX_TOKENS = 7;
  * real result and bounds the work.
  */
 export const TELL_TEXT_MAX = 500;
+/** A prior variant raises its flags only when it is more likely than not (`analyze`). */
+export const PRIOR_FLAG_MIN = 0.5;
 
 export class KbIndex {
   readonly version: string;
@@ -70,6 +72,11 @@ export class KbIndex {
   private readonly byNorm = new Map<string, NameEntry>();
   /** Normalised `exact_names`: whole-item matches only (exact or fuzzy), never a sub-phrase or a search hit. */
   private readonly exactOnly = new Set<string>();
+  /**
+   * `<ingredient>/<variant>` for each variant with tells whose drop to its entry's own reading changes nothing it
+   * asserts about allergens, diets or origins: the only variants a sub-phrase may name without selecting.
+   */
+  private readonly droppable = new Set<string>();
   /** The first word of every exact-only name, and the most words one has: the occurrence scan's bounds. */
   private readonly exactFirst = new Set<string>();
   private exactMaxTokens = 0;
@@ -113,6 +120,7 @@ export class KbIndex {
         }
       }
       for (const n of allNames(ing.exact_names)) this.addExactName(n.name, n.lang, ing.id);
+      this.markDroppable(ing);
       for (const a of ing.assertions ?? []) {
         if (a.certainty !== "yes" && a.certainty !== "maybe") continue;
         (this.tagIndex.get(a.code) ?? this.tagIndex.set(a.code, new Set()).get(a.code)!).add(ing.id);
@@ -326,7 +334,7 @@ export class KbIndex {
           const coverage = span.length / norm.length;
           return {
             ingredientId: e.ingredientId,
-            variantId: e.variantId,
+            variantId: this.confirmedVariant(e, norm),
             matchType: "sub_phrase",
             confidence: Math.round((0.6 + 0.35 * coverage) * 100) / 100,
             matched: span,
@@ -364,6 +372,47 @@ export class KbIndex {
       }
     }
     return null;
+  }
+
+  /**
+   * The variant a sub-phrase names, only when one of the variant's tells fires on the whole item. The tells carry the
+   * KB's negation guards, so "without using partially hydrogenated rapeseed oil" names the hydrogenated variant but
+   * does not select it: the item is the plain oil, and its tells decide. A variant with no tells, one whose drop would
+   * change an allergen, diet or origin it asserts (`markDroppable`), and an item past TELL_TEXT_MAX keep the name's
+   * variant as before.
+   */
+  private confirmedVariant(e: NameEntry, norm: string): string | undefined {
+    if (
+      !e.variantId || norm.length > TELL_TEXT_MAX || !this.droppable.has(`${e.ingredientId}/${e.variantId}`)
+    ) {
+      return e.variantId;
+    }
+    const t = this.tells.get(e.ingredientId)?.find((x) => x.variant.id === e.variantId);
+    return !t || t.res.some((re) => re.test(norm)) ? e.variantId : undefined;
+  }
+
+  /**
+   * The variants with tells that a sub-phrase may name without selecting: every allergen, diet and origin assertion
+   * of the variant is made, with the same certainty, by the entry's own reading (its unscoped assertions, else its
+   * most likely prior variant's, at most "maybe"). So dropping one never loses an allergen or turns a diet verdict:
+   * "soy lecithin" or "wheat starch" keeps its variant even where its tells do not fire.
+   */
+  private markDroppable(ing: IngredientT) {
+    const scoped = (id?: string) =>
+      (ing.assertions ?? []).filter((a) => a.variant === id && /^(allergen|diet|origin)\./.test(a.code));
+    let top: VariantT | undefined;
+    for (const v of ing.variants ?? []) if (v.prior !== undefined && (!top || v.prior > top.prior!)) top = v;
+    const own = new Map(scoped(undefined).map((a) => [a.code, a.certainty as string]));
+    if (top && top.prior! >= PRIOR_FLAG_MIN) {
+      for (const a of scoped(top.id)) {
+        if (!own.has(a.code)) own.set(a.code, a.certainty === "yes" ? "maybe" : a.certainty);
+      }
+    }
+    for (const v of ing.variants ?? []) {
+      if (v.tells?.length && scoped(v.id).every((a) => own.get(a.code) === a.certainty)) {
+        this.droppable.add(`${ing.id}/${v.id}`);
+      }
+    }
   }
 
   /** Variants whose label tells fire on this text (normalised). */
