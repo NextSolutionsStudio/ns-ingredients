@@ -22,7 +22,7 @@ variants:
     process:
       en: "Some but not all double bonds are hydrogenated, leaving a mix of natural cis and industrially formed trans unsaturated fatty acids."
       pl: "Utwardzeniu podlega część, nie wszystkie, wiązania podwójne, co pozostawia mieszankę naturalnych (cis) i powstałych przemysłowo (trans) nienasyconych kwasów tłuszczowych."
-    tells: ['czesciowo (?:utwardzon|uwodorn)', '(?<!not )(?<!non )partially hydrogenated', 'teilweise gehartet']
+    tells: ['(?<!\b(?:nie|bez|brak|not|non|no|without|ohne|nicht|free from|free of)(?: (?:podda\w*|zosta\w*|byl\w*|jest|sa|procesu|procesowi|procesom|czesciow\w*|calkowit\w*|peln\w*|partial\w*|full\w*|total\w*|subjected|to|been|was|were|is|any)){0,3} )czesciowo (?:utwardzon|uwodorn)', '(?<!\b(?:nie|bez|brak|not|non|no|without|ohne|nicht|free from|free of)(?: (?:podda\w*|zosta\w*|byl\w*|jest|sa|procesu|procesowi|procesom|czesciow\w*|calkowit\w*|peln\w*|partial\w*|full\w*|total\w*|subjected|to|been|was|were|is|any)){0,3} )partially hydrogenated', '(?<!\b(?:nie|bez|brak|not|non|no|without|ohne|nicht|free from|free of)(?: (?:podda\w*|zosta\w*|byl\w*|jest|sa|procesu|procesowi|procesom|czesciow\w*|calkowit\w*|peln\w*|partial\w*|full\w*|total\w*|subjected|to|been|was|were|is|any)){0,3} )teilweise gehartet']
   - id: fully-hydrogenated
     names:
       en: [fully hydrogenated fat or oil]
@@ -30,7 +30,7 @@ variants:
     process:
       en: "All double bonds are hydrogenated; the fat is fully saturated, very hard, and contains essentially no trans fat."
       pl: "Wszystkie wiązania podwójne są utwardzone; tłuszcz jest w pełni nasycony, bardzo twardy i praktycznie nie zawiera tłuszczów trans."
-    tells: ['calkowicie (?:utwardzon|uwodorn)', '(?<!not )(?<!non )fully hydrogenated', '(?<!not )(?<!non )totally hydrogenated', 'w pelni (?:utwardzon|uwodorn)', 'vollstandig gehartet']
+    tells: ['(?<!\b(?:nie|bez|brak|not|non|no|without|ohne|nicht|free from|free of)(?: (?:podda\w*|zosta\w*|byl\w*|jest|sa|procesu|procesowi|procesom|czesciow\w*|calkowit\w*|peln\w*|partial\w*|full\w*|total\w*|subjected|to|been|was|were|is|any)){0,3} )calkowicie (?:utwardzon|uwodorn)', '(?<!\b(?:nie|bez|brak|not|non|no|without|ohne|nicht|free from|free of)(?: (?:podda\w*|zosta\w*|byl\w*|jest|sa|procesu|procesowi|procesom|czesciow\w*|calkowit\w*|peln\w*|partial\w*|full\w*|total\w*|subjected|to|been|was|were|is|any)){0,3} )fully hydrogenated', '(?<!\b(?:nie|bez|brak|not|non|no|without|ohne|nicht|free from|free of)(?: (?:podda\w*|zosta\w*|byl\w*|jest|sa|procesu|procesowi|procesom|czesciow\w*|calkowit\w*|peln\w*|partial\w*|full\w*|total\w*|subjected|to|been|was|were|is|any)){0,3} )totally hydrogenated', '(?<!\b(?:nie|bez|brak|not|non|no|without|ohne|nicht|free from|free of)(?: (?:podda\w*|zosta\w*|byl\w*|jest|sa|procesu|procesowi|procesom|czesciow\w*|calkowit\w*|peln\w*|partial\w*|full\w*|total\w*|subjected|to|been|was|were|is|any)){0,3} )w pelni (?:utwardzon|uwodorn)', '(?<!\b(?:nie|bez|brak|not|non|no|without|ohne|nicht|free from|free of)(?: (?:podda\w*|zosta\w*|byl\w*|jest|sa|procesu|procesowi|procesom|czesciow\w*|calkowit\w*|peln\w*|partial\w*|full\w*|total\w*|subjected|to|been|was|were|is|any)){0,3} )vollstandig gehartet']
 assertions:
   - code: processing.hydrogenated
     certainty: yes
