@@ -287,13 +287,17 @@ export class KbIndex {
   }
 
   /**
-   * Whether a known name lies wholly in the words before word `k`: a food the item names first. A name that "free"
-   * follows is excluded, not named ("gluten free non hydrogenated sesame oil").
+   * Whether a known name lies wholly in the words before word `k`: a food the item names first. The words before a
+   * postposed "free" (one not followed by "from"/"of") are what it excludes, not foods: "gluten free", "milk protein
+   * free", "gluten and lactose free" before "non hydrogenated sesame oil".
    */
   private nameBefore(tokens: string[], k: number): boolean {
-    for (let start = 0; start < k; start++) {
+    let from = 0;
+    for (let f = 0; f < k; f++) {
+      if (tokens[f] === "free" && tokens[f + 1] !== "from" && tokens[f + 1] !== "of") from = f + 1;
+    }
+    for (let start = from; start < k; start++) {
       for (let len = 1; start + len <= k && len <= SUBPHRASE_MAX_TOKENS; len++) {
-        if (tokens[start + len] === "free") continue;
         if (this.byNorm.has(tokens.slice(start, start + len).join(" "))) return true;
       }
     }

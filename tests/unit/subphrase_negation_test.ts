@@ -204,6 +204,17 @@ Deno.test("a food's own negated name after a modifier is the food (Sol 6.1 on d8
     const m = tinyIndex([ex, ...names]).match(text);
     assertEquals([m?.ingredientId, m?.matched], ["t1", "non hydrogenated sesame oil"], text);
   }
+  // so are multiword exclusions: every word before a postposed "free" (Sol 6.1 on 3eb5f6b)
+  for (
+    const [ex, text] of [
+      ["milk|milk protein concentrate", "milk-protein-free non-hydrogenated sesame oil"],
+      ["wheat gluten|wheat", "wheat-gluten-free non-hydrogenated sesame oil"],
+      ["gluten|lactose", "gluten- and lactose-free non-hydrogenated sesame oil"],
+    ]
+  ) {
+    const m = tinyIndex([ex, ...names]).match(text);
+    assertEquals([m?.ingredientId, m?.matched], ["t1", "non hydrogenated sesame oil"], text);
+  }
   // after a food, even a food's own negated name is a claim (Sol 6.1 on 3d20ab7)
   const two = [
     "sesame oil",
