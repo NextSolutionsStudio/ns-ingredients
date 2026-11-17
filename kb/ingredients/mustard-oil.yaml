@@ -553,6 +553,16 @@ variants:
         - uwodornione oleje roślinne z ziaren gorczycy
         - oleje roślinne z ziaren gorczycy uwodornione
         - oleje roślinne uwodornione z ziaren gorczycy
+        - olej uwodorniony gorczycowy
+        - olej utwardzony gorczycowy
+        - olej uwodorniony musztardowy
+        - olej utwardzony musztardowy
+        - olej uwodorniony z gorczycy
+        - olej utwardzony z gorczycy
+        - olej uwodorniony z nasion gorczycy
+        - olej utwardzony z nasion gorczycy
+        - olej uwodorniony z ziaren gorczycy
+        - olej utwardzony z ziaren gorczycy
     process:
       en: "Mustard oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej gorczycowy utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
@@ -712,6 +722,16 @@ variants:
         - częściowo uwodornione oleje roślinne z ziaren gorczycy
         - oleje roślinne z ziaren gorczycy częściowo uwodornione
         - oleje roślinne częściowo uwodornione z ziaren gorczycy
+        - olej częściowo uwodorniony gorczycowy
+        - olej częściowo utwardzony gorczycowy
+        - olej częściowo uwodorniony musztardowy
+        - olej częściowo utwardzony musztardowy
+        - olej częściowo uwodorniony z gorczycy
+        - olej częściowo utwardzony z gorczycy
+        - olej częściowo uwodorniony z nasion gorczycy
+        - olej częściowo utwardzony z nasion gorczycy
+        - olej częściowo uwodorniony z ziaren gorczycy
+        - olej częściowo utwardzony z ziaren gorczycy
     process:
       en: "Mustard oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
       pl: "Olej gorczycowy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
@@ -1023,6 +1043,26 @@ variants:
         - w pełni uwodornione oleje roślinne z ziaren gorczycy
         - oleje roślinne z ziaren gorczycy w pełni uwodornione
         - oleje roślinne w pełni uwodornione z ziaren gorczycy
+        - olej całkowicie uwodorniony gorczycowy
+        - olej całkowicie utwardzony gorczycowy
+        - olej w pełni uwodorniony gorczycowy
+        - olej w pełni utwardzony gorczycowy
+        - olej całkowicie uwodorniony musztardowy
+        - olej całkowicie utwardzony musztardowy
+        - olej w pełni uwodorniony musztardowy
+        - olej w pełni utwardzony musztardowy
+        - olej całkowicie uwodorniony z gorczycy
+        - olej całkowicie utwardzony z gorczycy
+        - olej w pełni uwodorniony z gorczycy
+        - olej w pełni utwardzony z gorczycy
+        - olej całkowicie uwodorniony z nasion gorczycy
+        - olej całkowicie utwardzony z nasion gorczycy
+        - olej w pełni uwodorniony z nasion gorczycy
+        - olej w pełni utwardzony z nasion gorczycy
+        - olej całkowicie uwodorniony z ziaren gorczycy
+        - olej całkowicie utwardzony z ziaren gorczycy
+        - olej w pełni uwodorniony z ziaren gorczycy
+        - olej w pełni utwardzony z ziaren gorczycy
     process:
       en: "Mustard oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
       pl: "Olej gorczycowy ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."

@@ -360,6 +360,10 @@ variants:
         - uwodornione oleje roślinne orzechowe z migdałów
         - utwardzone tłuszcze roślinne orzechowe z migdałów
         - uwodornione tłuszcze roślinne orzechowe z migdałów
+        - olej uwodorniony migdałowy
+        - olej utwardzony migdałowy
+        - olej uwodorniony z migdałów
+        - olej utwardzony z migdałów
     process:
       en: "Almond oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej migdałowy utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
@@ -449,6 +453,10 @@ variants:
         - częściowo uwodornione oleje roślinne orzechowe z migdałów
         - częściowo utwardzone tłuszcze roślinne orzechowe z migdałów
         - częściowo uwodornione tłuszcze roślinne orzechowe z migdałów
+        - olej częściowo uwodorniony migdałowy
+        - olej częściowo utwardzony migdałowy
+        - olej częściowo uwodorniony z migdałów
+        - olej częściowo utwardzony z migdałów
     process:
       en: "Almond oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
       pl: "Olej migdałowy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
@@ -620,6 +628,14 @@ variants:
         - całkowicie uwodornione tłuszcze roślinne orzechowe z migdałów
         - w pełni utwardzone tłuszcze roślinne orzechowe z migdałów
         - w pełni uwodornione tłuszcze roślinne orzechowe z migdałów
+        - olej całkowicie uwodorniony migdałowy
+        - olej całkowicie utwardzony migdałowy
+        - olej w pełni uwodorniony migdałowy
+        - olej w pełni utwardzony migdałowy
+        - olej całkowicie uwodorniony z migdałów
+        - olej całkowicie utwardzony z migdałów
+        - olej w pełni uwodorniony z migdałów
+        - olej w pełni utwardzony z migdałów
     process:
       en: "Almond oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
       pl: "Olej migdałowy ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."

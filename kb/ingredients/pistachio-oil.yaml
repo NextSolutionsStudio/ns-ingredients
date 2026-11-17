@@ -360,6 +360,10 @@ variants:
         - uwodornione oleje roślinne orzechowe z pistacji
         - utwardzone tłuszcze roślinne orzechowe z pistacji
         - uwodornione tłuszcze roślinne orzechowe z pistacji
+        - olej uwodorniony pistacjowy
+        - olej utwardzony pistacjowy
+        - olej uwodorniony z pistacji
+        - olej utwardzony z pistacji
     process:
       en: "Pistachio oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej pistacjowy utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
@@ -449,6 +453,10 @@ variants:
         - częściowo uwodornione oleje roślinne orzechowe z pistacji
         - częściowo utwardzone tłuszcze roślinne orzechowe z pistacji
         - częściowo uwodornione tłuszcze roślinne orzechowe z pistacji
+        - olej częściowo uwodorniony pistacjowy
+        - olej częściowo utwardzony pistacjowy
+        - olej częściowo uwodorniony z pistacji
+        - olej częściowo utwardzony z pistacji
     process:
       en: "Pistachio oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
       pl: "Olej pistacjowy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
@@ -620,6 +628,14 @@ variants:
         - całkowicie uwodornione tłuszcze roślinne orzechowe z pistacji
         - w pełni utwardzone tłuszcze roślinne orzechowe z pistacji
         - w pełni uwodornione tłuszcze roślinne orzechowe z pistacji
+        - olej całkowicie uwodorniony pistacjowy
+        - olej całkowicie utwardzony pistacjowy
+        - olej w pełni uwodorniony pistacjowy
+        - olej w pełni utwardzony pistacjowy
+        - olej całkowicie uwodorniony z pistacji
+        - olej całkowicie utwardzony z pistacji
+        - olej w pełni uwodorniony z pistacji
+        - olej w pełni utwardzony z pistacji
     process:
       en: "Pistachio oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
       pl: "Olej pistacjowy ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."

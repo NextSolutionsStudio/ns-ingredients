@@ -513,6 +513,14 @@ variants:
         - uwodornione oleje roślinne z ziaren sezamu
         - oleje roślinne z ziaren sezamu uwodornione
         - oleje roślinne uwodornione z ziaren sezamu
+        - olej uwodorniony sezamowy
+        - olej utwardzony sezamowy
+        - olej uwodorniony z nasion sezamu
+        - olej utwardzony z nasion sezamu
+        - olej uwodorniony z sezamu
+        - olej utwardzony z sezamu
+        - olej uwodorniony z ziaren sezamu
+        - olej utwardzony z ziaren sezamu
     process:
       en: "Sesame oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej sezamowy utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
@@ -646,6 +654,14 @@ variants:
         - częściowo uwodornione oleje roślinne z ziaren sezamu
         - oleje roślinne z ziaren sezamu częściowo uwodornione
         - oleje roślinne częściowo uwodornione z ziaren sezamu
+        - olej częściowo uwodorniony sezamowy
+        - olej częściowo utwardzony sezamowy
+        - olej częściowo uwodorniony z nasion sezamu
+        - olej częściowo utwardzony z nasion sezamu
+        - olej częściowo uwodorniony z sezamu
+        - olej częściowo utwardzony z sezamu
+        - olej częściowo uwodorniony z ziaren sezamu
+        - olej częściowo utwardzony z ziaren sezamu
     process:
       en: "Sesame oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
       pl: "Olej sezamowy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
@@ -905,6 +921,22 @@ variants:
         - w pełni uwodornione oleje roślinne z ziaren sezamu
         - oleje roślinne z ziaren sezamu w pełni uwodornione
         - oleje roślinne w pełni uwodornione z ziaren sezamu
+        - olej całkowicie uwodorniony sezamowy
+        - olej całkowicie utwardzony sezamowy
+        - olej w pełni uwodorniony sezamowy
+        - olej w pełni utwardzony sezamowy
+        - olej całkowicie uwodorniony z nasion sezamu
+        - olej całkowicie utwardzony z nasion sezamu
+        - olej w pełni uwodorniony z nasion sezamu
+        - olej w pełni utwardzony z nasion sezamu
+        - olej całkowicie uwodorniony z sezamu
+        - olej całkowicie utwardzony z sezamu
+        - olej w pełni uwodorniony z sezamu
+        - olej w pełni utwardzony z sezamu
+        - olej całkowicie uwodorniony z ziaren sezamu
+        - olej całkowicie utwardzony z ziaren sezamu
+        - olej w pełni uwodorniony z ziaren sezamu
+        - olej w pełni utwardzony z ziaren sezamu
     process:
       en: "Sesame oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
       pl: "Olej sezamowy ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
