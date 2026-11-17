@@ -9,6 +9,10 @@ names:
     - not partially hydrogenated nut oil
     - not fully hydrogenated nut oil
     - non partially hydrogenated nut oil
+    - hydrogenated nut oil
+    - partially hydrogenated nut oil
+    - fully hydrogenated nut oil
+    - totally hydrogenated nut oil
   pl:
     - olej orzechowy
     - olej roślinny orzechowy
@@ -35,10 +39,7 @@ variants:
     process:
       en: "A nut oil whose label names no nut: peanut or a tree nut are both possible."
       pl: "Olej orzechowy, którego etykieta nie podaje orzecha: możliwe są zarówno orzeszki ziemne, jak i orzechy."
-    prior: 0.9
-    prior_rationale:
-      en: "When the label names no nut, both allergen readings stay possible; this is the reading the label leaves."
-      pl: "Gdy etykieta nie podaje orzecha, obie możliwości alergenowe pozostają; to odczyt, który zostawia etykieta."
+    tells: ['^(?!.*(?:orzech\w* (?:wlosk|lasko|nerkow|brazylij|pekan|makadami)|\bmigdal|\bpistacj|\bmakadami|\bpekan|\bnerkow|\bwalnut|\bhazelnut|\balmond|\bcashew|\bpistachio|\bmacadamia|\bpecan|\bbrazil nut))(?!.*(?:orzeszk\w* ziemn|orzech\w* ziemn|\barachid|\bpeanut|\bgroundnut)).+']
   - id: tree-nut-named
     process:
       en: "A nut oil whose label names a tree nut as its source (in the name or in brackets)."
@@ -50,18 +51,12 @@ variants:
       pl: "Olej orzechowy, którego etykieta podaje orzeszki ziemne jako źródło (w nazwie lub w nawiasie)."
     tells: ['(?:orzeszk\w* ziemn|orzech\w* ziemn|\barachid|\bpeanut|\bgroundnut)']
   - id: hydrogenated
-    names:
-      en:
-        - hydrogenated nut oil
     process:
       en: "Nut oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej orzechowy utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
     tells:
       - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!not )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)'
   - id: partially-hydrogenated
-    names:
-      en:
-        - partially hydrogenated nut oil
     process:
       en: "Nut oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
       pl: "Olej orzechowy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
@@ -70,10 +65,6 @@ variants:
       - '(?<!not )(?<!non )partially hydrogenated'
       - 'teilweise gehartet'
   - id: fully-hydrogenated
-    names:
-      en:
-        - fully hydrogenated nut oil
-        - totally hydrogenated nut oil
     process:
       en: "Nut oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
       pl: "Olej orzechowy ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
@@ -151,78 +142,6 @@ assertions:
         locator: Annex II item 5
   - code: allergen.nuts
     variant: source-not-named
-    certainty: maybe
-    kind: estimate
-    grade: C
-    note:
-      en: "The same name is used for walnut and other tree-nut oils (the dictionary lists walnut oil separately as 'olej z orzecha włoskiego'), so a tree nut is possible but not shown (Annex II item 8)."
-      pl: "Ta sama nazwa bywa używana dla oleju z orzechów włoskich i innych orzechów (słownik podaje olej z orzecha włoskiego osobno), więc orzechy są możliwe, ale nie wykazane (Aneks II, punkt 8)."
-    sources:
-      - id: foodinfo-allergy-dictionary-pl-en
-      - id: reg-1169-2011
-        locator: Annex II item 8
-  - code: allergen.peanuts
-    variant: hydrogenated
-    certainty: maybe
-    kind: estimate
-    grade: C
-    note:
-      en: "The Food-Info Polish allergy dictionary lists 'olej orzechowy' as peanut oil; the same name is also used for tree-nut oil, so peanut is possible but not shown (Annex II item 5)."
-      pl: "Słownik alergenów Food-Info podaje 'olej orzechowy' jako olej arachidowy; ta sama nazwa bywa używana dla oleju z orzechów, więc orzeszki ziemne są możliwe, ale nie wykazane (Aneks II, punkt 5)."
-    sources:
-      - id: foodinfo-allergy-dictionary-pl-en
-      - id: reg-1169-2011
-        locator: Annex II item 5
-  - code: allergen.nuts
-    variant: hydrogenated
-    certainty: maybe
-    kind: estimate
-    grade: C
-    note:
-      en: "The same name is used for walnut and other tree-nut oils (the dictionary lists walnut oil separately as 'olej z orzecha włoskiego'), so a tree nut is possible but not shown (Annex II item 8)."
-      pl: "Ta sama nazwa bywa używana dla oleju z orzechów włoskich i innych orzechów (słownik podaje olej z orzecha włoskiego osobno), więc orzechy są możliwe, ale nie wykazane (Aneks II, punkt 8)."
-    sources:
-      - id: foodinfo-allergy-dictionary-pl-en
-      - id: reg-1169-2011
-        locator: Annex II item 8
-  - code: allergen.peanuts
-    variant: partially-hydrogenated
-    certainty: maybe
-    kind: estimate
-    grade: C
-    note:
-      en: "The Food-Info Polish allergy dictionary lists 'olej orzechowy' as peanut oil; the same name is also used for tree-nut oil, so peanut is possible but not shown (Annex II item 5)."
-      pl: "Słownik alergenów Food-Info podaje 'olej orzechowy' jako olej arachidowy; ta sama nazwa bywa używana dla oleju z orzechów, więc orzeszki ziemne są możliwe, ale nie wykazane (Aneks II, punkt 5)."
-    sources:
-      - id: foodinfo-allergy-dictionary-pl-en
-      - id: reg-1169-2011
-        locator: Annex II item 5
-  - code: allergen.nuts
-    variant: partially-hydrogenated
-    certainty: maybe
-    kind: estimate
-    grade: C
-    note:
-      en: "The same name is used for walnut and other tree-nut oils (the dictionary lists walnut oil separately as 'olej z orzecha włoskiego'), so a tree nut is possible but not shown (Annex II item 8)."
-      pl: "Ta sama nazwa bywa używana dla oleju z orzechów włoskich i innych orzechów (słownik podaje olej z orzecha włoskiego osobno), więc orzechy są możliwe, ale nie wykazane (Aneks II, punkt 8)."
-    sources:
-      - id: foodinfo-allergy-dictionary-pl-en
-      - id: reg-1169-2011
-        locator: Annex II item 8
-  - code: allergen.peanuts
-    variant: fully-hydrogenated
-    certainty: maybe
-    kind: estimate
-    grade: C
-    note:
-      en: "The Food-Info Polish allergy dictionary lists 'olej orzechowy' as peanut oil; the same name is also used for tree-nut oil, so peanut is possible but not shown (Annex II item 5)."
-      pl: "Słownik alergenów Food-Info podaje 'olej orzechowy' jako olej arachidowy; ta sama nazwa bywa używana dla oleju z orzechów, więc orzeszki ziemne są możliwe, ale nie wykazane (Aneks II, punkt 5)."
-    sources:
-      - id: foodinfo-allergy-dictionary-pl-en
-      - id: reg-1169-2011
-        locator: Annex II item 5
-  - code: allergen.nuts
-    variant: fully-hydrogenated
     certainty: maybe
     kind: estimate
     grade: C

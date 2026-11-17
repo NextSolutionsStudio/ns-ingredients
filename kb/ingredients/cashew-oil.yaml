@@ -133,6 +133,78 @@ names:
     - nie uwodorniony tłuszcz roślinny z nerkowców
     - nie utwardzony tłuszcz roślinny z orzechów nerkowca
     - nie uwodorniony tłuszcz roślinny z orzechów nerkowca
+    - olej roślinny z nerkowców nie utwardzony
+    - olej roślinny nie utwardzony z nerkowców
+    - olej roślinny z nerkowców nie uwodorniony
+    - olej roślinny nie uwodorniony z nerkowców
+    - olej roślinny nieutwardzony z nerkowców
+    - olej roślinny nieuwodorniony z nerkowców
+    - olej roślinny z orzechów nerkowca nie utwardzony
+    - olej roślinny nie utwardzony z orzechów nerkowca
+    - olej roślinny z orzechów nerkowca nie uwodorniony
+    - olej roślinny nie uwodorniony z orzechów nerkowca
+    - olej roślinny nieutwardzony z orzechów nerkowca
+    - olej roślinny nieuwodorniony z orzechów nerkowca
+    - tłuszcz roślinny z nerkowców nie utwardzony
+    - tłuszcz roślinny nie utwardzony z nerkowców
+    - tłuszcz roślinny z nerkowców nie uwodorniony
+    - tłuszcz roślinny nie uwodorniony z nerkowców
+    - tłuszcz roślinny nieutwardzony z nerkowców
+    - tłuszcz roślinny nieuwodorniony z nerkowców
+    - nie utwardzone oleje roślinne z nerkowców
+    - oleje roślinne z nerkowców nie utwardzone
+    - oleje roślinne nie utwardzone z nerkowców
+    - nie uwodornione oleje roślinne z nerkowców
+    - oleje roślinne z nerkowców nie uwodornione
+    - oleje roślinne nie uwodornione z nerkowców
+    - nieutwardzone oleje roślinne z nerkowców
+    - oleje roślinne z nerkowców nieutwardzone
+    - oleje roślinne nieutwardzone z nerkowców
+    - nieuwodornione oleje roślinne z nerkowców
+    - oleje roślinne z nerkowców nieuwodornione
+    - oleje roślinne nieuwodornione z nerkowców
+    - nie utwardzone tłuszcze roślinne z nerkowców
+    - tłuszcze roślinne z nerkowców nie utwardzone
+    - tłuszcze roślinne nie utwardzone z nerkowców
+    - nie uwodornione tłuszcze roślinne z nerkowców
+    - tłuszcze roślinne z nerkowców nie uwodornione
+    - tłuszcze roślinne nie uwodornione z nerkowców
+    - nieutwardzone tłuszcze roślinne z nerkowców
+    - tłuszcze roślinne z nerkowców nieutwardzone
+    - tłuszcze roślinne nieutwardzone z nerkowców
+    - nieuwodornione tłuszcze roślinne z nerkowców
+    - tłuszcze roślinne z nerkowców nieuwodornione
+    - tłuszcze roślinne nieuwodornione z nerkowców
+    - tłuszcz roślinny z orzechów nerkowca nie utwardzony
+    - tłuszcz roślinny nie utwardzony z orzechów nerkowca
+    - tłuszcz roślinny z orzechów nerkowca nie uwodorniony
+    - tłuszcz roślinny nie uwodorniony z orzechów nerkowca
+    - tłuszcz roślinny nieutwardzony z orzechów nerkowca
+    - tłuszcz roślinny nieuwodorniony z orzechów nerkowca
+    - nie utwardzone oleje roślinne z orzechów nerkowca
+    - oleje roślinne z orzechów nerkowca nie utwardzone
+    - oleje roślinne nie utwardzone z orzechów nerkowca
+    - nie uwodornione oleje roślinne z orzechów nerkowca
+    - oleje roślinne z orzechów nerkowca nie uwodornione
+    - oleje roślinne nie uwodornione z orzechów nerkowca
+    - nieutwardzone oleje roślinne z orzechów nerkowca
+    - oleje roślinne z orzechów nerkowca nieutwardzone
+    - oleje roślinne nieutwardzone z orzechów nerkowca
+    - nieuwodornione oleje roślinne z orzechów nerkowca
+    - oleje roślinne z orzechów nerkowca nieuwodornione
+    - oleje roślinne nieuwodornione z orzechów nerkowca
+    - nie utwardzone tłuszcze roślinne z orzechów nerkowca
+    - tłuszcze roślinne z orzechów nerkowca nie utwardzone
+    - tłuszcze roślinne nie utwardzone z orzechów nerkowca
+    - nie uwodornione tłuszcze roślinne z orzechów nerkowca
+    - tłuszcze roślinne z orzechów nerkowca nie uwodornione
+    - tłuszcze roślinne nie uwodornione z orzechów nerkowca
+    - nieutwardzone tłuszcze roślinne z orzechów nerkowca
+    - tłuszcze roślinne z orzechów nerkowca nieutwardzone
+    - tłuszcze roślinne nieutwardzone z orzechów nerkowca
+    - nieuwodornione tłuszcze roślinne z orzechów nerkowca
+    - tłuszcze roślinne z orzechów nerkowca nieuwodornione
+    - tłuszcze roślinne nieuwodornione z orzechów nerkowca
   de:
     - Cashewöl
 summary:
@@ -184,6 +256,38 @@ variants:
         - tłuszcz roślinny z orzechów nerkowca utwardzony
         - uwodorniony tłuszcz roślinny z orzechów nerkowca
         - tłuszcz roślinny z orzechów nerkowca uwodorniony
+        - olej roślinny utwardzony z nerkowców
+        - olej roślinny uwodorniony z nerkowców
+        - olej roślinny utwardzony z orzechów nerkowca
+        - olej roślinny uwodorniony z orzechów nerkowca
+        - tłuszcz roślinny utwardzony z nerkowców
+        - tłuszcz roślinny uwodorniony z nerkowców
+        - utwardzone oleje roślinne z nerkowców
+        - oleje roślinne z nerkowców utwardzone
+        - oleje roślinne utwardzone z nerkowców
+        - uwodornione oleje roślinne z nerkowców
+        - oleje roślinne z nerkowców uwodornione
+        - oleje roślinne uwodornione z nerkowców
+        - utwardzone tłuszcze roślinne z nerkowców
+        - tłuszcze roślinne z nerkowców utwardzone
+        - tłuszcze roślinne utwardzone z nerkowców
+        - uwodornione tłuszcze roślinne z nerkowców
+        - tłuszcze roślinne z nerkowców uwodornione
+        - tłuszcze roślinne uwodornione z nerkowców
+        - tłuszcz roślinny utwardzony z orzechów nerkowca
+        - tłuszcz roślinny uwodorniony z orzechów nerkowca
+        - utwardzone oleje roślinne z orzechów nerkowca
+        - oleje roślinne z orzechów nerkowca utwardzone
+        - oleje roślinne utwardzone z orzechów nerkowca
+        - uwodornione oleje roślinne z orzechów nerkowca
+        - oleje roślinne z orzechów nerkowca uwodornione
+        - oleje roślinne uwodornione z orzechów nerkowca
+        - utwardzone tłuszcze roślinne z orzechów nerkowca
+        - tłuszcze roślinne z orzechów nerkowca utwardzone
+        - tłuszcze roślinne utwardzone z orzechów nerkowca
+        - uwodornione tłuszcze roślinne z orzechów nerkowca
+        - tłuszcze roślinne z orzechów nerkowca uwodornione
+        - tłuszcze roślinne uwodornione z orzechów nerkowca
     process:
       en: "Cashew oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej z orzechów nerkowca utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
@@ -230,6 +334,38 @@ variants:
         - tłuszcz roślinny z orzechów nerkowca częściowo utwardzony
         - częściowo uwodorniony tłuszcz roślinny z orzechów nerkowca
         - tłuszcz roślinny z orzechów nerkowca częściowo uwodorniony
+        - olej roślinny częściowo utwardzony z nerkowców
+        - olej roślinny częściowo uwodorniony z nerkowców
+        - olej roślinny częściowo utwardzony z orzechów nerkowca
+        - olej roślinny częściowo uwodorniony z orzechów nerkowca
+        - tłuszcz roślinny częściowo utwardzony z nerkowców
+        - tłuszcz roślinny częściowo uwodorniony z nerkowców
+        - częściowo utwardzone oleje roślinne z nerkowców
+        - oleje roślinne z nerkowców częściowo utwardzone
+        - oleje roślinne częściowo utwardzone z nerkowców
+        - częściowo uwodornione oleje roślinne z nerkowców
+        - oleje roślinne z nerkowców częściowo uwodornione
+        - oleje roślinne częściowo uwodornione z nerkowców
+        - częściowo utwardzone tłuszcze roślinne z nerkowców
+        - tłuszcze roślinne z nerkowców częściowo utwardzone
+        - tłuszcze roślinne częściowo utwardzone z nerkowców
+        - częściowo uwodornione tłuszcze roślinne z nerkowców
+        - tłuszcze roślinne z nerkowców częściowo uwodornione
+        - tłuszcze roślinne częściowo uwodornione z nerkowców
+        - tłuszcz roślinny częściowo utwardzony z orzechów nerkowca
+        - tłuszcz roślinny częściowo uwodorniony z orzechów nerkowca
+        - częściowo utwardzone oleje roślinne z orzechów nerkowca
+        - oleje roślinne z orzechów nerkowca częściowo utwardzone
+        - oleje roślinne częściowo utwardzone z orzechów nerkowca
+        - częściowo uwodornione oleje roślinne z orzechów nerkowca
+        - oleje roślinne z orzechów nerkowca częściowo uwodornione
+        - oleje roślinne częściowo uwodornione z orzechów nerkowca
+        - częściowo utwardzone tłuszcze roślinne z orzechów nerkowca
+        - tłuszcze roślinne z orzechów nerkowca częściowo utwardzone
+        - tłuszcze roślinne częściowo utwardzone z orzechów nerkowca
+        - częściowo uwodornione tłuszcze roślinne z orzechów nerkowca
+        - tłuszcze roślinne z orzechów nerkowca częściowo uwodornione
+        - tłuszcze roślinne częściowo uwodornione z orzechów nerkowca
     process:
       en: "Cashew oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
       pl: "Olej z orzechów nerkowca, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
@@ -299,6 +435,86 @@ variants:
         - tłuszcz roślinny z orzechów nerkowca całkowicie utwardzony
         - całkowicie uwodorniony tłuszcz roślinny z orzechów nerkowca
         - tłuszcz roślinny z orzechów nerkowca całkowicie uwodorniony
+        - olej roślinny całkowicie utwardzony z nerkowców
+        - olej roślinny całkowicie uwodorniony z nerkowców
+        - w pełni utwardzony olej roślinny z nerkowców
+        - olej roślinny z nerkowców w pełni utwardzony
+        - olej roślinny w pełni utwardzony z nerkowców
+        - w pełni uwodorniony olej roślinny z nerkowców
+        - olej roślinny z nerkowców w pełni uwodorniony
+        - olej roślinny w pełni uwodorniony z nerkowców
+        - olej roślinny całkowicie utwardzony z orzechów nerkowca
+        - olej roślinny całkowicie uwodorniony z orzechów nerkowca
+        - w pełni utwardzony olej roślinny z orzechów nerkowca
+        - olej roślinny z orzechów nerkowca w pełni utwardzony
+        - olej roślinny w pełni utwardzony z orzechów nerkowca
+        - w pełni uwodorniony olej roślinny z orzechów nerkowca
+        - olej roślinny z orzechów nerkowca w pełni uwodorniony
+        - olej roślinny w pełni uwodorniony z orzechów nerkowca
+        - tłuszcz roślinny całkowicie utwardzony z nerkowców
+        - tłuszcz roślinny całkowicie uwodorniony z nerkowców
+        - w pełni utwardzony tłuszcz roślinny z nerkowców
+        - tłuszcz roślinny z nerkowców w pełni utwardzony
+        - tłuszcz roślinny w pełni utwardzony z nerkowców
+        - w pełni uwodorniony tłuszcz roślinny z nerkowców
+        - tłuszcz roślinny z nerkowców w pełni uwodorniony
+        - tłuszcz roślinny w pełni uwodorniony z nerkowców
+        - całkowicie utwardzone oleje roślinne z nerkowców
+        - oleje roślinne z nerkowców całkowicie utwardzone
+        - oleje roślinne całkowicie utwardzone z nerkowców
+        - całkowicie uwodornione oleje roślinne z nerkowców
+        - oleje roślinne z nerkowców całkowicie uwodornione
+        - oleje roślinne całkowicie uwodornione z nerkowców
+        - w pełni utwardzone oleje roślinne z nerkowców
+        - oleje roślinne z nerkowców w pełni utwardzone
+        - oleje roślinne w pełni utwardzone z nerkowców
+        - w pełni uwodornione oleje roślinne z nerkowców
+        - oleje roślinne z nerkowców w pełni uwodornione
+        - oleje roślinne w pełni uwodornione z nerkowców
+        - całkowicie utwardzone tłuszcze roślinne z nerkowców
+        - tłuszcze roślinne z nerkowców całkowicie utwardzone
+        - tłuszcze roślinne całkowicie utwardzone z nerkowców
+        - całkowicie uwodornione tłuszcze roślinne z nerkowców
+        - tłuszcze roślinne z nerkowców całkowicie uwodornione
+        - tłuszcze roślinne całkowicie uwodornione z nerkowców
+        - w pełni utwardzone tłuszcze roślinne z nerkowców
+        - tłuszcze roślinne z nerkowców w pełni utwardzone
+        - tłuszcze roślinne w pełni utwardzone z nerkowców
+        - w pełni uwodornione tłuszcze roślinne z nerkowców
+        - tłuszcze roślinne z nerkowców w pełni uwodornione
+        - tłuszcze roślinne w pełni uwodornione z nerkowców
+        - tłuszcz roślinny całkowicie utwardzony z orzechów nerkowca
+        - tłuszcz roślinny całkowicie uwodorniony z orzechów nerkowca
+        - w pełni utwardzony tłuszcz roślinny z orzechów nerkowca
+        - tłuszcz roślinny z orzechów nerkowca w pełni utwardzony
+        - tłuszcz roślinny w pełni utwardzony z orzechów nerkowca
+        - w pełni uwodorniony tłuszcz roślinny z orzechów nerkowca
+        - tłuszcz roślinny z orzechów nerkowca w pełni uwodorniony
+        - tłuszcz roślinny w pełni uwodorniony z orzechów nerkowca
+        - całkowicie utwardzone oleje roślinne z orzechów nerkowca
+        - oleje roślinne z orzechów nerkowca całkowicie utwardzone
+        - oleje roślinne całkowicie utwardzone z orzechów nerkowca
+        - całkowicie uwodornione oleje roślinne z orzechów nerkowca
+        - oleje roślinne z orzechów nerkowca całkowicie uwodornione
+        - oleje roślinne całkowicie uwodornione z orzechów nerkowca
+        - w pełni utwardzone oleje roślinne z orzechów nerkowca
+        - oleje roślinne z orzechów nerkowca w pełni utwardzone
+        - oleje roślinne w pełni utwardzone z orzechów nerkowca
+        - w pełni uwodornione oleje roślinne z orzechów nerkowca
+        - oleje roślinne z orzechów nerkowca w pełni uwodornione
+        - oleje roślinne w pełni uwodornione z orzechów nerkowca
+        - całkowicie utwardzone tłuszcze roślinne z orzechów nerkowca
+        - tłuszcze roślinne z orzechów nerkowca całkowicie utwardzone
+        - tłuszcze roślinne całkowicie utwardzone z orzechów nerkowca
+        - całkowicie uwodornione tłuszcze roślinne z orzechów nerkowca
+        - tłuszcze roślinne z orzechów nerkowca całkowicie uwodornione
+        - tłuszcze roślinne całkowicie uwodornione z orzechów nerkowca
+        - w pełni utwardzone tłuszcze roślinne z orzechów nerkowca
+        - tłuszcze roślinne z orzechów nerkowca w pełni utwardzone
+        - tłuszcze roślinne w pełni utwardzone z orzechów nerkowca
+        - w pełni uwodornione tłuszcze roślinne z orzechów nerkowca
+        - tłuszcze roślinne z orzechów nerkowca w pełni uwodornione
+        - tłuszcze roślinne w pełni uwodornione z orzechów nerkowca
     process:
       en: "Cashew oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
       pl: "Olej z orzechów nerkowca ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
