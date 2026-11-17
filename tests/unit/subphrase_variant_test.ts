@@ -172,6 +172,17 @@ Deno.test("a denied variant name of an allergen food keeps the allergen at maybe
       assertEquals(r.flags.some((f) => f.code === "origin.plant"), false, label);
     }
   }
+  // the food named affirmatively beside its denied variant keeps "yes", in a qualifier or the item's own source (Sol 6.1
+  // on #18 at 165ecbd, P2 2)
+  for (
+    const label of [
+      "Ingredients: olive oil (from soybean oil without using hydrogenated soybean oil)",
+      "Ingredients: olive oil without using hydrogenated soybean oil (soybean oil)",
+    ]
+  ) {
+    const soy = analyze(idx, label, { lang: "en" }).flags.find((f) => f.code === "allergen.soybeans");
+    assertEquals(soy?.certainty, "yes", label);
+  }
   // a negator that reaches another word first ("not completely refined") denies nothing: the plain oil, as #14 reads it
   const ex: DeniedName[] = [];
   const plain = idx.match("not completely refined hydrogenated soybean oil", ex);
@@ -757,6 +768,18 @@ Deno.test("a stated full refining keeps the soy exemption on a hydrogenated oil,
       ]
     ) {
       assertEquals(soyFlag(label, idx), undefined, label);
+    }
+  }
+  // an adverb phrase may hold an article: without the verb it negates the full refining (soy maybe), with it it is
+  // the exclusion (no soy) (Sol 6.1 on #18 at 165ecbd)
+  for (const adv of ["not in any way", "not at any point", "not at all"]) {
+    for (
+      const host of [(x: string) => `Ingredients: ${x}`, (x: string) => `Ingredients: rapeseed oil (${x})`]
+    ) {
+      const negated = host(`${adv} fully refined hydrogenated soybean oil`);
+      assertEquals(soyFlag(negated, idx)?.certainty, "maybe", negated);
+      const excluded = host(`${adv} containing fully refined hydrogenated soybean oil`);
+      assertEquals(soyFlag(excluded, idx), undefined, excluded);
     }
   }
   // a qualifier's denied name is read as an item's: the food's own allergens at maybe (Sol 6.1 on #18 at 2668948)

@@ -179,6 +179,24 @@ const DENIAL_FILLERS = new Set([
   "zugesetztem",
   "zugesetzten",
 ]);
+/**
+ * The words of DENIAL_FILLERS that are no exclusion verb: articles and connectors. After an adjective negator they
+ * belong to an adverb phrase ("not in any way", "not at any point") or to the negated words, so `variantReading` reads
+ * past them to find the verb ("not in any way containing").
+ */
+const DENIAL_CONNECTORS = new Set([
+  "a",
+  "an",
+  "the",
+  "any",
+  "of",
+  "from",
+  "od",
+  "zadnego",
+  "zadnych",
+  "zadnej",
+  "von",
+]);
 /** A prior variant raises its flags only when it is more likely than not (`analyze`). */
 export const PRIOR_FLAG_MIN = 0.5;
 
@@ -625,9 +643,10 @@ export class KbIndex {
     // An adjective negator ("not", "nie") not followed by an exclusion verb ("not containing", "nie zawiera") negates
     // the words after it, through any adverb ("not quite fully refined", "not at all fully refined", "nie całkiem w
     // pełni rafinowany"): no exemption the name states stands (Sol 6.1 on #18 at 029b6bc).
-    // the exclusion verb may follow an adverb ("not ever containing", "not intentionally using": Sol 6.1 at 2668948)
+    // the exclusion verb may follow an adverb ("not ever containing", "not intentionally using": Sol 6.1 at 2668948),
+    // and an adverb phrase may hold an article ("not in any way", "not at any point": Sol 6.1 at 165ecbd)
     let v = k + 1;
-    while (v < start && DENIAL_ADVERBS.has(tokens[v])) v++;
+    while (v < start && (DENIAL_ADVERBS.has(tokens[v]) || DENIAL_CONNECTORS.has(tokens[v]))) v++;
     const adjectival = ADJECTIVE_NEGATORS.test(tokens[k] ?? "") && !DENIAL_FILLERS.has(tokens[v] ?? "");
     // Not denied: the plain entry (#14), except a variant that states an exemption, which stands as named ("bez cukru
     // całkowicie utwardzony w pełni rafinowany olej sojowy": hydrogenated, exempt; Sol 6.1 on #18 at 0547db1)

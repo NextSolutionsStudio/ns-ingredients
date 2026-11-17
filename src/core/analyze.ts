@@ -520,6 +520,21 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
       for (const x of excluded) covered.fill(1, x.start, x.end);
       denied.push({ tokens, covered });
     }
+    // Sources named in qualifiers, children or CAPS emphasis carry their allergens to this item.
+    for (const c of children) {
+      if ((c.role === "qualifier" || c.role === "e_number") && c.match) {
+        const q = index.get(c.match.ingredient_id);
+        if (!q) continue;
+        const allergens = c.role === "qualifier"
+          ? qualifierAllergens(q, qualifierVariants.get(c.path))
+          : allergenAssertions(q);
+        for (const a of allergens) addFlag(a, trig(item.path, q.id, "qualifier", a));
+        if (c.role === "qualifier") dietInputs.push({ path: c.path, ingredient: q });
+      }
+    }
+    // After the sources a qualifier names: a denied name's "maybe" never takes the trigger of the same food named
+    // affirmatively ("lecithin (from sesame oil without using partially hydrogenated sesame oil)" is sesame "yes";
+    // `addFlag` keeps a trigger's first certainty. Sol 6.1 on #18 at 165ecbd).
     for (const x of [...excluded, ...children.flatMap((c) => qualifierDenied.get(c.path) ?? [])]) {
       const q = index.get(x.ingredientId);
       if (!q) continue;
@@ -532,18 +547,6 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
           certainty: "maybe",
           kind: a.kind === "fact" ? "estimate" : a.kind,
         });
-      }
-    }
-    // Sources named in qualifiers, children or CAPS emphasis carry their allergens to this item.
-    for (const c of children) {
-      if ((c.role === "qualifier" || c.role === "e_number") && c.match) {
-        const q = index.get(c.match.ingredient_id);
-        if (!q) continue;
-        const allergens = c.role === "qualifier"
-          ? qualifierAllergens(q, qualifierVariants.get(c.path))
-          : allergenAssertions(q);
-        for (const a of allergens) addFlag(a, trig(item.path, q.id, "qualifier", a));
-        if (c.role === "qualifier") dietInputs.push({ path: c.path, ingredient: q });
       }
     }
     if (denied.length) deniedTexts.set(item.path, denied);
