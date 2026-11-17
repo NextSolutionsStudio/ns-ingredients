@@ -521,12 +521,12 @@ export class KbIndex {
       }
     }
     if (found) return found;
-    if (norm.length >= 5) {
+    // An item that denies a name is read through it: no fuzzy guess beside it, which ignores word order and could take
+    // a claim that reads the other way ("without using fully refined hydrogenated soybean oil" is nearest to "without
+    // fully hydrogenated refined soybean oil", a claim with soy).
+    if (norm.length >= 5 && !blockedIng?.size) {
       const hit = this.nearestName(norm);
-      const best =
-        hit && distinctivePartsAgree(norm, hit.entry.norm) && !blockedIng?.has(hit.entry.ingredientId)
-          ? hit.entry
-          : null;
+      const best = hit && distinctivePartsAgree(norm, hit.entry.norm) ? hit.entry : null;
       const bestSim = hit?.sim ?? 0;
       if (best && bestSim >= FUZZY_MIN) {
         return {

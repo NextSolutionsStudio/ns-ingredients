@@ -244,8 +244,8 @@ Deno.test("a denied variant name does not assert the plain food (Sol 6.1 on #10 
       assertEquals(child?.match?.ingredient_id === "poultry-fat", false, `${text} ${withClaim}`);
       assertEquals(r.flags.some((x) => x.code === "origin.animal"), false, `${text} ${withClaim}`);
       assertEquals(r.diets.vegan.status === "no", false, `${text} ${withClaim}`);
-      // with a claim name to reach, the fuzzy match finds the claim
-      if (withClaim) assertEquals(child?.match?.ingredient_id, "claim", text);
+      // the denial is the item's reading: no fuzzy guess beside it, claim name or not (#18)
+      assertEquals(child?.match ?? null, null, `${text} ${withClaim}`);
     }
   }
   // the plain food named affirmatively is still the food, with its origin and diet
