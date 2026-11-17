@@ -335,7 +335,7 @@ variants:
       en: "Corn oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej kukurydziany utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
     tells:
-      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!partially )(?<!fully )(?<!totally )(?<!teilweise )(?<!vollstandig )(?<!\b(?:nie ?podda\w*|nie|ani|bez|brak|not|non|no|without|ohne|nicht|free from|free of)(?: (?:podda\w*|zosta\w*|byl\w*|jest|sa|procesu|procesowi|procesom|czesciow\w*|calkowit\w*|peln\w*|partial\w*|full\w*|total\w*|subjected|to|been|was|were|is|any)){0,3} )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)'
+      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!partially )(?<!fully )(?<!totally )(?<!teilweise )(?<!vollstandig )(?<!\b(?:nie ?podda\w*|nie|ani|bez|brak|not|non|no|without|ohne|nicht|free from|free of)(?: (?:podda\w*|zosta\w*|byl\w*|jest|sa|procesu|procesowi|procesom|czesciow\w*|calkowit\w*|peln\w*|partial\w*|full\w*|total\w*|subjected|to|been|was|were|is|any)){0,3} )\b(?:utwardzon|uwodornion|utwardzan[yea]\b|uwodornian[yea]\b|hydrogenated|gehartet)|(?<!\b(?:nie ?podda\w*|nie|ani|bez|brak|not|non|no|without|ohne|nicht|free from|free of)(?: (?:podda\w*|zosta\w*|byl\w*|jest|sa|procesu|procesowi|procesom|czesciow\w*|calkowit\w*|peln\w*|partial\w*|full\w*|total\w*|subjected|to|been|was|were|is|any)){0,3} )\b(?:po|podda\w*|podlega\w*)(?: (?:czesciow|calkowit|peln)\w*)? (?:uwodornieni|uwodornian|utwardzeni|utwardzan)'
   - id: partially-hydrogenated
     names:
       en:
