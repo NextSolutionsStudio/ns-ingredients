@@ -55,8 +55,9 @@ const SUBPHRASE_MAX_TOKENS = 7;
  * Openers of a claim that denies the presence of what follows it ("bez utwardzonych tluszczow", "free from
  * hydrogenated oil", "nie zawiera", "does not contain"), as word sequences; a word ending in "*" matches by prefix.
  * A property negator ("nie", "not", "non", "ani") opens one too ("sesame oil not partially hydrogenated oil"), unless a
- * name starts at it that is more than the negation of a name ("non dairy creamer" is a name; "not partially
- * hydrogenated oil" is "not" and a name, so it is a claim).
+ * name starts at it that is more than the negation of another food's name: "non dairy creamer" is a name, and so is
+ * "non hydrogenated sesame oil", the plain oil negating its own variant; "not partially hydrogenated oil" negates
+ * another entry's name, so it is a claim.
  */
 const CLAIM_OPENERS: string[][] = [
   ["bez"],
@@ -263,19 +264,30 @@ export class KbIndex {
    * after it is a word of a name ("czarny bez").
    */
   /** The length in words of the longest name of at least `min` words that starts at word `k`, or 0. */
-  private nameAt(tokens: string[], k: number, min: number): number {
+  /** The longest name of at least `min` words that starts at word `k`: its length and entry. */
+  private nameAt(tokens: string[], k: number, min: number): { len: number; id?: string } {
     for (let len = Math.min(tokens.length - k, SUBPHRASE_MAX_TOKENS); len >= min; len--) {
-      if (this.byNorm.has(tokens.slice(k, k + len).join(" "))) return len;
+      const e = this.byNorm.get(tokens.slice(k, k + len).join(" "));
+      if (e) return { len, id: e.ingredientId };
     }
-    return 0;
+    return { len: 0 };
+  }
+
+  /**
+   * Whether the property negator at word `k` opens a claim: no name starts at it, or the one that does is only the
+   * negator and another entry's name ("not" + hydrogenated-fat's "partially hydrogenated oil").
+   */
+  private negatesAnotherName(tokens: string[], k: number): boolean {
+    const own = this.nameAt(tokens, k, 2);
+    if (!own.len) return true;
+    const rest = this.nameAt(tokens, k + 1, 1);
+    return own.len <= 1 + rest.len && own.id !== rest.id;
   }
 
   private claimSpan(tokens: string[]): [number, number] | null {
     for (let k = 0; k < tokens.length; k++) {
       const opener = CLAIM_OPENERS.find((s) => wordsAt(tokens, k, s)) ??
-        (PROPERTY_NEGATORS.has(tokens[k]) && this.nameAt(tokens, k, 2) <= 1 + this.nameAt(tokens, k + 1, 1)
-          ? [tokens[k]]
-          : undefined);
+        (PROPERTY_NEGATORS.has(tokens[k]) && this.negatesAnotherName(tokens, k) ? [tokens[k]] : undefined);
       if (!opener) continue;
       let o = k + opener.length;
       o += CLAIM_FILLERS.find((s) => wordsAt(tokens, o, s))?.length ?? 0;

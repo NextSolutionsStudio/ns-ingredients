@@ -2,8 +2,10 @@
 // inside it, outrank the food the item names.
 import { assertEquals } from "@std/assert";
 import { KbIndex } from "../../src/core/kb-index.ts";
+import { analyze } from "../../src/core/analyze.ts";
 import type { KbBundle } from "../../src/kb/schema.ts";
 
+/** One entry per name; a name list in brackets ("a|b") is one entry with both names. */
 function tinyIndex(list: string[]): KbIndex {
   return new KbIndex({
     version: "t",
@@ -11,7 +13,7 @@ function tinyIndex(list: string[]): KbIndex {
     implications: [],
     sources: [],
     classes: [],
-    ingredients: list.map((n, k) => ({ id: `t${k}`, names: { en: [n] } })),
+    ingredients: list.map((n, k) => ({ id: `t${k}`, names: { en: n.split("|") } })),
   } as unknown as KbBundle);
 }
 
@@ -178,6 +180,23 @@ Deno.test("one claim, then a named food: the food is read (pc-opus)", () => {
   );
   // postposed "free" is not an opener: the name before it and after it are read as before
   assertEquals(hit(["lactose free milk", "milk"], "lactose-free milk UHT"), "lactose free milk sub_phrase");
+});
+
+Deno.test("a food's own negated name after a modifier is the food (Sol 6.1 on d8f26e4)", () => {
+  // the plain oil's name negates its own variant's name: one entry, so it is a name, not a claim
+  const names = ["non hydrogenated sesame oil|hydrogenated sesame oil|sesame oil", "sugar"];
+  const m = tinyIndex(names).match("bio non hydrogenated sesame oil");
+  assertEquals([m?.ingredientId, m?.matchType, m?.matched], [
+    "t0",
+    "sub_phrase",
+    "non hydrogenated sesame oil",
+  ]);
+  // and the dash between it and the next item still splits them (Sol's second case)
+  const r = analyze(tinyIndex(names), "Ingredients: bio non hydrogenated sesame oil - sugar", { lang: "en" });
+  assertEquals(r.items.map((i) => i.match?.ingredient_id), ["t0", "t1"]);
+  // another entry's name after the negator is still a claim after a food
+  const other = ["sesame oil", "partially hydrogenated oil", "not partially hydrogenated oil"];
+  assertEquals(hit(other, "sesame oil not partially hydrogenated oil"), "sesame oil sub_phrase");
 });
 
 Deno.test("with no claim, the longest sub-phrase still wins", () => {
