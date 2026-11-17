@@ -413,6 +413,8 @@ export class KbIndex {
     // the plain food inside it is the match.
     const blocked = new Uint8Array(tokens.length);
     let blockedIng: Set<string> | undefined;
+    // the names that start inside a claim, as [start, end): longer ones first
+    const inClaim: [number, number][] = [];
     // With `excluded`, the scan goes on past the match for denied names only, so a longer name elsewhere in the item
     // ("extra virgin olive oil without using hydrogenated soybean oil") cannot hide one.
     const collect = !!excluded && norm.length <= TELL_TEXT_MAX;
@@ -448,8 +450,12 @@ export class KbIndex {
           const e = this.byNorm.get(span);
           if (e && !this.exactOnly.has(span)) {
             // A variant name the item denies blocks its words here too, so the plain food it ends in is not read
-            // after the claim ("poultry fat" in "without the use of partially hydrogenated poultry fat").
-            if (this.variantReading(e, tokens, start, start + len, norm.length) === "deny") {
+            // after the claim ("poultry fat" in "without the use of partially hydrogenated poultry fat"). Unless a
+            // longer name seen here holds it: it is part of that name, which says which food ("partially hydrogenated
+            // rapeseed oil" inside the food's own "not partially hydrogenated rapeseed oil", after "gluten-free").
+            const held = inClaim.some(([s, t]) => s <= start && start + len <= t);
+            inClaim.push([start, start + len]);
+            if (!held && this.variantReading(e, tokens, start, start + len, norm.length) === "deny") {
               blocked.fill(1, start, start + len);
               (blockedIng ??= new Set()).add(e.ingredientId);
             }

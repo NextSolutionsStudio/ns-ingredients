@@ -606,6 +606,42 @@ Deno.test("a denied name blocks its words after a claim and through a longer fil
   assertEquals(r.flags.some((x) => x.code === "origin.animal"), true);
 });
 
+Deno.test("a variant name inside a food's own negated name does not block the food (#17 sweep)", () => {
+  // "not partially hydrogenated rapeseed oil" is the plain oil's own name; after "gluten-free", a food before the
+  // claim, it is not the match, but the oil it names still is, and "gluten" inside "gluten-free" is not
+  const idx = new KbIndex({
+    version: "t",
+    counts: {},
+    implications: [...IMPL, impl("allergen.gluten", "allergen")],
+    sources: [],
+    classes: [],
+    ingredients: [
+      {
+        id: "rapeseed-oil",
+        names: { en: ["rapeseed oil", "not partially hydrogenated rapeseed oil"] },
+        variants: [{
+          id: "partially-hydrogenated",
+          names: { en: ["partially hydrogenated rapeseed oil"] },
+          process: { en: "p" },
+          tells: [PH.replace("without|", "without|not|")],
+        }],
+      },
+      { id: "gluten", names: { en: ["gluten"] }, assertions: [says("allergen.gluten")] },
+      { id: "claim", names: { en: ["a claim"] }, exact_names: { en: ["not partially hydrogenated"] } },
+    ],
+  } as unknown as KbBundle);
+  for (
+    const label of [
+      "Ingredients: gluten-free not partially hydrogenated rapeseed oil",
+      "Ingredients: olive oil, gluten-free not partially hydrogenated rapeseed oil",
+    ]
+  ) {
+    const r = analyze(idx, label, { lang: "en" });
+    assertEquals(r.items.at(-1)?.match?.ingredient_id, "rapeseed-oil", label);
+    assertEquals(r.flags.some((x) => x.code === "allergen.gluten"), false, label);
+  }
+});
+
 // Sol 6.1 on #10 at 7da39cb, P2 3: as on b2's KB, the exempt variant has no names and an anchored whole-item tell.
 function refinedSoyIndex(): KbIndex {
   return new KbIndex({
