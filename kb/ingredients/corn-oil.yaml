@@ -176,6 +176,58 @@ names:
     - oleje roślinne z kukurydzy nieutwardzone
     - nieuwodornione oleje roślinne z kukurydzy
     - oleje roślinne z kukurydzy nieuwodornione
+    - olej roślinny nie utwardzony kukurydziany
+    - olej roślinny nie uwodorniony kukurydziany
+    - olej roślinny nieutwardzony kukurydziany
+    - olej roślinny nieuwodorniony kukurydziany
+    - tłuszcz roślinny nie utwardzony kukurydziany
+    - tłuszcz roślinny nie uwodorniony kukurydziany
+    - tłuszcz roślinny nieutwardzony kukurydziany
+    - tłuszcz roślinny nieuwodorniony kukurydziany
+    - tłuszcze roślinne nie utwardzone kukurydziane
+    - tłuszcze roślinne nie uwodornione kukurydziane
+    - tłuszcze roślinne nieutwardzone kukurydziane
+    - tłuszcze roślinne nieuwodornione kukurydziane
+    - oleje roślinne nie utwardzone kukurydziane
+    - oleje roślinne nie uwodornione kukurydziane
+    - oleje roślinne nieutwardzone kukurydziane
+    - oleje roślinne nieuwodornione kukurydziane
+    - oleje roślinne nie utwardzone kukurydziany
+    - oleje roślinne nie uwodornione kukurydziany
+    - oleje roślinne nieutwardzone kukurydziany
+    - oleje roślinne nieuwodornione kukurydziany
+    - olej roślinny nie utwardzony z kiełków kukurydzy
+    - olej roślinny nie uwodorniony z kiełków kukurydzy
+    - olej roślinny nieutwardzony z kiełków kukurydzy
+    - olej roślinny nieuwodorniony z kiełków kukurydzy
+    - tłuszcz roślinny nie utwardzony z kiełków kukurydzy
+    - tłuszcz roślinny nie uwodorniony z kiełków kukurydzy
+    - tłuszcz roślinny nieutwardzony z kiełków kukurydzy
+    - tłuszcz roślinny nieuwodorniony z kiełków kukurydzy
+    - oleje roślinne nie utwardzone z kiełków kukurydzy
+    - oleje roślinne nie uwodornione z kiełków kukurydzy
+    - oleje roślinne nieutwardzone z kiełków kukurydzy
+    - oleje roślinne nieuwodornione z kiełków kukurydzy
+    - tłuszcze roślinne nie utwardzone z kiełków kukurydzy
+    - tłuszcze roślinne nie uwodornione z kiełków kukurydzy
+    - tłuszcze roślinne nieutwardzone z kiełków kukurydzy
+    - tłuszcze roślinne nieuwodornione z kiełków kukurydzy
+    - tłuszcz roślinny nie utwardzony z kukurydzy
+    - tłuszcz roślinny nie uwodorniony z kukurydzy
+    - tłuszcz roślinny nieutwardzony z kukurydzy
+    - tłuszcz roślinny nieuwodorniony z kukurydzy
+    - tłuszcze roślinne nie utwardzone z kukurydzy
+    - tłuszcze roślinne nie uwodornione z kukurydzy
+    - tłuszcze roślinne nieutwardzone z kukurydzy
+    - tłuszcze roślinne nieuwodornione z kukurydzy
+    - olej roślinny nie utwardzony z kukurydzy
+    - olej roślinny nie uwodorniony z kukurydzy
+    - olej roślinny nieutwardzony z kukurydzy
+    - olej roślinny nieuwodorniony z kukurydzy
+    - oleje roślinne nie utwardzone z kukurydzy
+    - oleje roślinne nie uwodornione z kukurydzy
+    - oleje roślinne nieutwardzone z kukurydzy
+    - oleje roślinne nieuwodornione z kukurydzy
   de:
     - Maiskeimöl
     - Maisöl
@@ -268,6 +320,32 @@ variants:
         - olej uwodorniony z kiełków kukurydzy
         - olej utwardzony z kukurydzy
         - olej uwodorniony z kukurydzy
+        - olej roślinny utwardzony kukurydziany
+        - olej roślinny uwodorniony kukurydziany
+        - tłuszcz roślinny utwardzony kukurydziany
+        - tłuszcz roślinny uwodorniony kukurydziany
+        - tłuszcze roślinne utwardzone kukurydziane
+        - tłuszcze roślinne uwodornione kukurydziane
+        - oleje roślinne utwardzone kukurydziane
+        - oleje roślinne uwodornione kukurydziane
+        - oleje roślinne utwardzone kukurydziany
+        - oleje roślinne uwodornione kukurydziany
+        - olej roślinny utwardzony z kiełków kukurydzy
+        - olej roślinny uwodorniony z kiełków kukurydzy
+        - tłuszcz roślinny utwardzony z kiełków kukurydzy
+        - tłuszcz roślinny uwodorniony z kiełków kukurydzy
+        - oleje roślinne utwardzone z kiełków kukurydzy
+        - oleje roślinne uwodornione z kiełków kukurydzy
+        - tłuszcze roślinne utwardzone z kiełków kukurydzy
+        - tłuszcze roślinne uwodornione z kiełków kukurydzy
+        - tłuszcz roślinny utwardzony z kukurydzy
+        - tłuszcz roślinny uwodorniony z kukurydzy
+        - tłuszcze roślinne utwardzone z kukurydzy
+        - tłuszcze roślinne uwodornione z kukurydzy
+        - olej roślinny utwardzony z kukurydzy
+        - olej roślinny uwodorniony z kukurydzy
+        - oleje roślinne utwardzone z kukurydzy
+        - oleje roślinne uwodornione z kukurydzy
       de:
         - gehärtetes Maiskeimöl
         - gehärtetes Maisöl
@@ -352,6 +430,32 @@ variants:
         - olej częściowo uwodorniony z kiełków kukurydzy
         - olej częściowo utwardzony z kukurydzy
         - olej częściowo uwodorniony z kukurydzy
+        - olej roślinny częściowo utwardzony kukurydziany
+        - olej roślinny częściowo uwodorniony kukurydziany
+        - tłuszcz roślinny częściowo utwardzony kukurydziany
+        - tłuszcz roślinny częściowo uwodorniony kukurydziany
+        - tłuszcze roślinne częściowo utwardzone kukurydziane
+        - tłuszcze roślinne częściowo uwodornione kukurydziane
+        - oleje roślinne częściowo utwardzone kukurydziane
+        - oleje roślinne częściowo uwodornione kukurydziane
+        - oleje roślinne częściowo utwardzone kukurydziany
+        - oleje roślinne częściowo uwodornione kukurydziany
+        - olej roślinny częściowo utwardzony z kiełków kukurydzy
+        - olej roślinny częściowo uwodorniony z kiełków kukurydzy
+        - tłuszcz roślinny częściowo utwardzony z kiełków kukurydzy
+        - tłuszcz roślinny częściowo uwodorniony z kiełków kukurydzy
+        - oleje roślinne częściowo utwardzone z kiełków kukurydzy
+        - oleje roślinne częściowo uwodornione z kiełków kukurydzy
+        - tłuszcze roślinne częściowo utwardzone z kiełków kukurydzy
+        - tłuszcze roślinne częściowo uwodornione z kiełków kukurydzy
+        - tłuszcz roślinny częściowo utwardzony z kukurydzy
+        - tłuszcz roślinny częściowo uwodorniony z kukurydzy
+        - tłuszcze roślinne częściowo utwardzone z kukurydzy
+        - tłuszcze roślinne częściowo uwodornione z kukurydzy
+        - olej roślinny częściowo utwardzony z kukurydzy
+        - olej roślinny częściowo uwodorniony z kukurydzy
+        - oleje roślinne częściowo utwardzone z kukurydzy
+        - oleje roślinne częściowo uwodornione z kukurydzy
       de:
         - teilweise gehärtetes Maiskeimöl
         - teilweise gehärtetes Maisöl
@@ -510,6 +614,58 @@ variants:
         - olej całkowicie uwodorniony z kukurydzy
         - olej w pełni utwardzony z kukurydzy
         - olej w pełni uwodorniony z kukurydzy
+        - olej roślinny całkowicie utwardzony kukurydziany
+        - olej roślinny całkowicie uwodorniony kukurydziany
+        - olej roślinny w pełni utwardzony kukurydziany
+        - olej roślinny w pełni uwodorniony kukurydziany
+        - tłuszcz roślinny całkowicie utwardzony kukurydziany
+        - tłuszcz roślinny całkowicie uwodorniony kukurydziany
+        - tłuszcz roślinny w pełni utwardzony kukurydziany
+        - tłuszcz roślinny w pełni uwodorniony kukurydziany
+        - tłuszcze roślinne całkowicie utwardzone kukurydziane
+        - tłuszcze roślinne całkowicie uwodornione kukurydziane
+        - tłuszcze roślinne w pełni utwardzone kukurydziane
+        - tłuszcze roślinne w pełni uwodornione kukurydziane
+        - oleje roślinne całkowicie utwardzone kukurydziane
+        - oleje roślinne całkowicie uwodornione kukurydziane
+        - oleje roślinne w pełni utwardzone kukurydziane
+        - oleje roślinne w pełni uwodornione kukurydziane
+        - oleje roślinne całkowicie utwardzone kukurydziany
+        - oleje roślinne całkowicie uwodornione kukurydziany
+        - oleje roślinne w pełni utwardzone kukurydziany
+        - oleje roślinne w pełni uwodornione kukurydziany
+        - olej roślinny całkowicie utwardzony z kiełków kukurydzy
+        - olej roślinny całkowicie uwodorniony z kiełków kukurydzy
+        - olej roślinny w pełni utwardzony z kiełków kukurydzy
+        - olej roślinny w pełni uwodorniony z kiełków kukurydzy
+        - tłuszcz roślinny całkowicie utwardzony z kiełków kukurydzy
+        - tłuszcz roślinny całkowicie uwodorniony z kiełków kukurydzy
+        - tłuszcz roślinny w pełni utwardzony z kiełków kukurydzy
+        - tłuszcz roślinny w pełni uwodorniony z kiełków kukurydzy
+        - oleje roślinne całkowicie utwardzone z kiełków kukurydzy
+        - oleje roślinne całkowicie uwodornione z kiełków kukurydzy
+        - oleje roślinne w pełni utwardzone z kiełków kukurydzy
+        - oleje roślinne w pełni uwodornione z kiełków kukurydzy
+        - tłuszcze roślinne całkowicie utwardzone z kiełków kukurydzy
+        - tłuszcze roślinne całkowicie uwodornione z kiełków kukurydzy
+        - tłuszcze roślinne w pełni utwardzone z kiełków kukurydzy
+        - tłuszcze roślinne w pełni uwodornione z kiełków kukurydzy
+        - tłuszcz roślinny całkowicie utwardzony z kukurydzy
+        - tłuszcz roślinny całkowicie uwodorniony z kukurydzy
+        - tłuszcz roślinny w pełni utwardzony z kukurydzy
+        - tłuszcz roślinny w pełni uwodorniony z kukurydzy
+        - tłuszcze roślinne całkowicie utwardzone z kukurydzy
+        - tłuszcze roślinne całkowicie uwodornione z kukurydzy
+        - tłuszcze roślinne w pełni utwardzone z kukurydzy
+        - tłuszcze roślinne w pełni uwodornione z kukurydzy
+        - olej roślinny całkowicie utwardzony z kukurydzy
+        - olej roślinny całkowicie uwodorniony z kukurydzy
+        - olej roślinny w pełni utwardzony z kukurydzy
+        - olej roślinny w pełni uwodorniony z kukurydzy
+        - oleje roślinne całkowicie utwardzone z kukurydzy
+        - oleje roślinne całkowicie uwodornione z kukurydzy
+        - oleje roślinne w pełni utwardzone z kukurydzy
+        - oleje roślinne w pełni uwodornione z kukurydzy
       de:
         - vollständig gehärtetes Maiskeimöl
         - vollständig gehärtetes Maisöl
