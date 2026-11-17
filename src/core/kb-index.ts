@@ -56,8 +56,9 @@ const SUBPHRASE_MAX_TOKENS = 7;
  * hydrogenated oil", "nie zawiera", "does not contain"), as word sequences; a word ending in "*" matches by prefix.
  * A property negator ("nie", "not", "non", "ani") opens one too ("sesame oil not partially hydrogenated oil"), unless a
  * name starts at it that is more than the negation of another food's name: "non dairy creamer" is a name, and so is
- * "non hydrogenated sesame oil", the plain oil negating its own variant; "not partially hydrogenated oil" negates
- * another entry's name, so it is a claim.
+ * "bio non hydrogenated sesame oil", the plain oil negating its own variant, when only modifiers stand before it;
+ * "not partially hydrogenated oil" negates another entry's name, and after a food ("sesame oil not partially
+ * hydrogenated rapeseed oil") even a food's own negated name is a claim.
  */
 const CLAIM_OPENERS: string[][] = [
   ["bez"],
@@ -281,7 +282,18 @@ export class KbIndex {
     const own = this.nameAt(tokens, k, 2);
     if (!own.len) return true;
     const rest = this.nameAt(tokens, k + 1, 1);
-    return own.len <= 1 + rest.len && own.id !== rest.id;
+    if (own.len > 1 + rest.len) return false;
+    return own.id !== rest.id || this.nameBefore(tokens, k);
+  }
+
+  /** Whether a known name lies wholly in the words before word `k` (a food the item names first). */
+  private nameBefore(tokens: string[], k: number): boolean {
+    for (let start = 0; start < k; start++) {
+      for (let len = 1; start + len <= k && len <= SUBPHRASE_MAX_TOKENS; len++) {
+        if (this.byNorm.has(tokens.slice(start, start + len).join(" "))) return true;
+      }
+    }
+    return false;
   }
 
   private claimSpan(tokens: string[]): [number, number] | null {
