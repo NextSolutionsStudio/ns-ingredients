@@ -101,7 +101,13 @@ Deno.test("a variant whose drop would lose an allergen or turn a diet keeps its 
   // a variant that asserts nothing of its own is denied where its tell does not fire: its name is read like a claim
   const ex: DeniedName[] = [];
   assertEquals(idx.match("without any sunflower lecithin", ex), null);
-  assertEquals(ex, [{ ingredientId: "lecithins", matched: "sunflower lecithin", start: 2, end: 4 }]);
+  assertEquals(ex, [{
+    ingredientId: "lecithins",
+    matched: "sunflower lecithin",
+    start: 2,
+    end: 4,
+    variantId: "sunflower",
+  }]);
 });
 
 // Implications, so that a flag can fire at all.
@@ -142,7 +148,8 @@ Deno.test("a denied variant name of an allergen food keeps the allergen at maybe
     ingredients: [
       {
         id: "soybean-oil",
-        names: { en: ["soybean oil"] },
+        // "refined" is a word of a name, as on b2's KB: a negation that reaches it denies that word (#18)
+        names: { en: ["soybean oil", "refined soybean oil"] },
         variants: [{
           id: "hydrogenated",
           names: { en: ["hydrogenated soybean oil"] },
@@ -164,6 +171,17 @@ Deno.test("a denied variant name of an allergen food keeps the allergen at maybe
       assertEquals([soy?.certainty, soy?.kind], ["maybe", "estimate"], label);
       assertEquals(r.flags.some((f) => f.code === "origin.plant"), false, label);
     }
+  }
+  // the food named affirmatively beside its denied variant keeps "yes", in a qualifier or the item's own source (Sol 6.1
+  // on #18 at 165ecbd, P2 2)
+  for (
+    const label of [
+      "Ingredients: olive oil (from soybean oil without using hydrogenated soybean oil)",
+      "Ingredients: olive oil without using hydrogenated soybean oil (soybean oil)",
+    ]
+  ) {
+    const soy = analyze(idx, label, { lang: "en" }).flags.find((f) => f.code === "allergen.soybeans");
+    assertEquals(soy?.certainty, "yes", label);
   }
   // a negator that reaches another word first ("not completely refined") denies nothing: the plain oil, as #14 reads it
   const ex: DeniedName[] = [];
@@ -237,8 +255,8 @@ Deno.test("a denied variant name does not assert the plain food (Sol 6.1 on #10 
       assertEquals(child?.match?.ingredient_id === "poultry-fat", false, `${text} ${withClaim}`);
       assertEquals(r.flags.some((x) => x.code === "origin.animal"), false, `${text} ${withClaim}`);
       assertEquals(r.diets.vegan.status === "no", false, `${text} ${withClaim}`);
-      // with a claim name to reach, the fuzzy match finds the claim
-      if (withClaim) assertEquals(child?.match?.ingredient_id, "claim", text);
+      // the denial is the item's reading: no fuzzy guess beside it, claim name or not (#18)
+      assertEquals(child?.match ?? null, null, `${text} ${withClaim}`);
     }
   }
   // the plain food named affirmatively is still the food, with its origin and diet
@@ -642,12 +660,13 @@ Deno.test("a variant name inside a food's own negated name does not block the fo
   }
 });
 
-// Sol 6.1 on #10 at 7da39cb, P2 3: as on b2's KB, the exempt variant has no names and an anchored whole-item tell.
+// Sol 6.1 on #10 at 7da39cb and f1a6e25, P2 3; pc-opus's policy (B): a stated full refining earns Annex II 6(a) on a
+// hydrogenated oil, in either word order, affirmative and denied; plain "refined" does not.
 function refinedSoyIndex(): KbIndex {
   return new KbIndex({
     version: "t",
     counts: {},
-    implications: IMPL,
+    implications: [...IMPL, impl("processing.hydrogenated", "processing")],
     sources: [],
     classes: [],
     ingredients: [
@@ -667,9 +686,17 @@ function refinedSoyIndex(): KbIndex {
             names: {
               en: [
                 "hydrogenated soybean oil",
-                "hydrogenated fully refined soybean oil",
                 "refined hydrogenated soybean oil",
+                "hydrogenated refined soybean oil",
               ],
+            },
+            process: { en: "p" },
+            tells: [SOY_TELL],
+          },
+          {
+            id: "hydrogenated-fully-refined",
+            names: {
+              en: ["hydrogenated fully refined soybean oil", "fully refined hydrogenated soybean oil"],
             },
             process: { en: "p" },
             tells: [SOY_TELL],
@@ -679,6 +706,9 @@ function refinedSoyIndex(): KbIndex {
           says("allergen.soybeans", "unrefined"),
           { ...says("allergen.soybeans", "fully-refined"), certainty: "no" },
           { ...says("allergen.soybeans", "hydrogenated"), certainty: "maybe" },
+          { ...says("allergen.soybeans", "hydrogenated-fully-refined"), certainty: "no" },
+          says("processing.hydrogenated", "hydrogenated"),
+          says("processing.hydrogenated", "hydrogenated-fully-refined"),
         ],
       },
       { id: "rapeseed-oil", names: { en: ["rapeseed oil"] } },
@@ -686,18 +716,233 @@ function refinedSoyIndex(): KbIndex {
   } as unknown as KbBundle);
 }
 
-Deno.test("the exempt oil a denied name ends in keeps its exemption (Sol 6.1 on #10 at 7da39cb, P2 3)", () => {
+Deno.test("a stated full refining keeps the soy exemption on a hydrogenated oil, either order (Sol 6.1 on #10 at f1a6e25, P2 3)", () => {
   const idx = refinedSoyIndex();
-  for (const f of ["", "added ", "using "]) {
-    // the name ends in fully refined soybean oil, which Annex II 6(a) exempts, as the KB's claims naming it carry no soy
-    const refined = `Ingredients: rapeseed oil (without ${f}hydrogenated fully refined soybean oil)`;
-    assertEquals(soyFlag(refined, idx), undefined, refined);
-    // a name that does not end in the refined oil keeps the food's allergen at maybe (policy B)
-    for (const oil of ["hydrogenated soybean oil", "refined hydrogenated soybean oil"]) {
+  const hydrogenated = (label: string) =>
+    analyze(idx, label, { lang: "en" }).flags.some((x) => x.code === "processing.hydrogenated");
+  for (const oil of ["hydrogenated fully refined soybean oil", "fully refined hydrogenated soybean oil"]) {
+    // named: the exemption and the hydrogenation both stand
+    for (const label of [`Ingredients: ${oil}`, `Ingredients: rapeseed oil (${oil})`]) {
+      assertEquals(soyFlag(label, idx), undefined, label);
+      assertEquals(hydrogenated(label), true, label);
+    }
+    // denied, with or without a filler: no soy, and no hydrogenation
+    for (const f of ["", "added ", "using ", "ever using "]) {
+      const label = `Ingredients: rapeseed oil (without ${f}${oil})`;
+      assertEquals(soyFlag(label, idx), undefined, label);
+      assertEquals(hydrogenated(label), false, label);
+    }
+  }
+  // plain "refined" states no full refining: soy maybe, named or denied (round 26)
+  for (
+    const oil of [
+      "hydrogenated soybean oil",
+      "refined hydrogenated soybean oil",
+      "hydrogenated refined soybean oil",
+    ]
+  ) {
+    assertEquals(soyFlag(`Ingredients: ${oil}`, idx)?.certainty, "maybe", oil);
+    for (const f of ["", "added ", "using "]) {
       const label = `Ingredients: rapeseed oil (without ${f}${oil})`;
       assertEquals(soyFlag(label, idx)?.certainty, "maybe", label);
     }
   }
-  // named affirmatively, the hydrogenated oil keeps the KB's soy maybe
-  assertEquals(soyFlag("Ingredients: hydrogenated fully refined soybean oil", idx)?.certainty, "maybe");
+  // a "not" before the name negates its full refining, through any adverb: soy maybe, never the exemption (#18
+  // battery, oil matrix; Sol 6.1 on #18 at 029b6bc)
+  for (
+    const oil of ["not quite", "not at all", "not entirely"].map((n) =>
+      `${n} fully refined hydrogenated soybean oil`
+    )
+  ) {
+    for (const label of [`Ingredients: ${oil}`, `Ingredients: rapeseed oil (${oil})`]) {
+      assertEquals(soyFlag(label, idx)?.certainty, "maybe", label);
+    }
+  }
+  // "not containing" is an exclusion verb, after an adverb too: the denial keeps the exemption (Sol 6.1 on #18 at
+  // 2668948)
+  for (const ex of ["not containing", "not ever containing", "not intentionally using"]) {
+    for (
+      const label of [
+        `Ingredients: ${ex} fully refined hydrogenated soybean oil`,
+        `Ingredients: rapeseed oil (${ex} fully refined hydrogenated soybean oil)`,
+      ]
+    ) {
+      assertEquals(soyFlag(label, idx), undefined, label);
+    }
+  }
+  // an adverb phrase may hold an article: without the verb it negates the full refining (soy maybe), with it it is
+  // the exclusion (no soy) (Sol 6.1 on #18 at 165ecbd)
+  for (const adv of ["not in any way", "not at any point", "not at all"]) {
+    for (
+      const host of [(x: string) => `Ingredients: ${x}`, (x: string) => `Ingredients: rapeseed oil (${x})`]
+    ) {
+      const negated = host(`${adv} fully refined hydrogenated soybean oil`);
+      assertEquals(soyFlag(negated, idx)?.certainty, "maybe", negated);
+      const excluded = host(`${adv} containing fully refined hydrogenated soybean oil`);
+      assertEquals(soyFlag(excluded, idx), undefined, excluded);
+    }
+  }
+  // two sources of one food: the explicit one's "yes" stands, in either order (Sol 6.1 on #18 at 0e08a29)
+  for (
+    const label of [
+      "Ingredients: rapeseed oil (from soybean oil, from unrefined soybean oil)",
+      "Ingredients: rapeseed oil (from unrefined soybean oil, from soybean oil)",
+    ]
+  ) {
+    assertEquals(soyFlag(label, idx)?.certainty, "yes", label);
+  }
+  // a qualifier's denied name is read as an item's: the food's own allergens at maybe (Sol 6.1 on #18 at 2668948)
+  assertEquals(
+    soyFlag("Ingredients: rapeseed oil (from not fully refined hydrogenated soybean oil)", idx)?.certainty,
+    "maybe",
+  );
+  // a "not" right before the name negates its full refining: soy maybe, never the exemption (#18 battery, oil matrix)
+  for (
+    const label of [
+      "Ingredients: not fully refined hydrogenated soybean oil",
+      "Ingredients: rapeseed oil (not fully refined hydrogenated soybean oil)",
+    ]
+  ) {
+    assertEquals(soyFlag(label, idx)?.certainty, "maybe", label);
+  }
+  // an exclusion of something else leaves the variant as named: exempt and hydrogenated (Sol 6.1 on #18 at 0547db1,
+  // P2 2), not the food's own reading
+  for (
+    const label of [
+      "Ingredients: without rapeseed oil fully refined hydrogenated soybean oil",
+      "Ingredients: without preservatives fully refined hydrogenated soybean oil",
+      "Ingredients: olive oil (without preservatives fully refined hydrogenated soybean oil)",
+    ]
+  ) {
+    assertEquals(soyFlag(label, idx), undefined, label);
+    assertEquals(hydrogenated(label), true, label);
+  }
+});
+
+Deno.test("the words of an exclusion keep the negation on the name, whatever they are (Sol 6.1 on #10 at f1a6e25, P2 2)", () => {
+  const idx = new KbIndex({
+    version: "t",
+    counts: {},
+    implications: IMPL,
+    sources: [],
+    classes: [],
+    ingredients: [
+      {
+        id: "poultry-fat",
+        names: { en: ["poultry fat"] },
+        variants: [{
+          id: "partially-hydrogenated",
+          names: { en: ["partially hydrogenated poultry fat"] },
+          process: { en: "p" },
+          tells: [PH],
+        }],
+        assertions: [says("origin.animal"), { ...says("diet.vegan"), certainty: "no" }],
+      },
+      { id: "olive-oil", names: { en: ["olive oil"] } },
+      { id: "sugar", names: { en: ["sugar"] } },
+    ],
+  } as unknown as KbBundle);
+  for (const f of ["ever using", "ever adding", "in any way using", "at any point adding"]) {
+    const label = `Ingredients: olive oil (without ${f} partially hydrogenated poultry fat)`;
+    const r = analyze(idx, label, { lang: "en" });
+    assertEquals(r.items[0].children?.[0]?.match?.ingredient_id === "poultry-fat", false, label);
+    assertEquals(r.flags.some((x) => x.code === "origin.animal"), false, label);
+    assertEquals(r.diets.vegan.status === "no", false, label);
+  }
+  // a negator more than DENIAL_GAP_MAX (5) words before the name does not reach it (pc-opus: keep it in the window)
+  const far = analyze(
+    idx,
+    "Ingredients: without ever in any way at all using partially hydrogenated poultry fat",
+    {
+      lang: "en",
+    },
+  );
+  assertEquals(far.items[0].match?.ingredient_id, "poultry-fat");
+  // any other word ends the negation, a food the KB knows or not (Sol 6.1 on #18 at c16374b, P2 1): the food after
+  // it is the food
+  for (
+    const label of [
+      "Ingredients: without preservatives partially hydrogenated poultry fat",
+      "Ingredients: rapeseed oil (without preservatives partially hydrogenated poultry fat)",
+    ]
+  ) {
+    const r = analyze(idx, label, { lang: "en" });
+    assertEquals(r.flags.some((x) => x.code === "origin.animal"), true, label);
+    assertEquals(r.diets.vegan.status, "no", label);
+  }
+  // a food the KB knows, or a break, between them ends the negation: the food after it is the food
+  for (
+    const text of [
+      "without sugar partially hydrogenated poultry fat",
+      "without colours and partially hydrogenated poultry fat",
+    ]
+  ) {
+    const r = analyze(idx, `Ingredients: ${text}`, { lang: "en" });
+    assertEquals(r.items[0].match?.ingredient_id, "poultry-fat", text);
+    assertEquals(r.flags.some((x) => x.code === "origin.animal"), true, text);
+  }
+});
+
+Deno.test("a qualifier that names a food carries its likely variant's allergens at maybe (pc-opus on #18)", () => {
+  // "(bez GMO olej sojowy)" reads as a qualifier; the oil's soy sits on its likely (unrefined) variant, as on b2's KB
+  const idx = new KbIndex({
+    version: "t",
+    counts: {},
+    implications: IMPL,
+    sources: [],
+    classes: [],
+    ingredients: [
+      {
+        id: "soybean-oil",
+        // as on b2's KB, "fully refined soybean oil" is the food's own name and its tell selects the exempt variant
+        names: { en: ["soybean oil", "fully refined soybean oil"], pl: ["olej sojowy"] },
+        variants: [
+          { id: "unrefined", names: { en: ["unrefined soybean oil"] }, process: { en: "p" }, prior: 0.5 },
+          {
+            id: "fully-refined",
+            process: { en: "p" },
+            prior: 0.45,
+            tells: ["^(?:fully )?refined soybean oil$"],
+          },
+          {
+            id: "hydrogenated-fully-refined",
+            names: { en: ["fully refined hydrogenated soybean oil"] },
+            process: { en: "p" },
+            tells: [SOY_TELL],
+          },
+        ],
+        assertions: [
+          says("allergen.soybeans", "unrefined"),
+          { ...says("allergen.soybeans", "fully-refined"), certainty: "no" },
+          { ...says("allergen.soybeans", "hydrogenated-fully-refined"), certainty: "no" },
+        ],
+      },
+      { id: "soy", names: { en: ["soy"], pl: ["soja", "soi"] }, assertions: [says("allergen.soybeans")] },
+    ],
+  } as unknown as KbBundle);
+  for (
+    const label of [
+      "Składniki: czekolada (bez GMO olej sojowy)",
+      "Ingredients: chocolate (non-GMO soybean oil)",
+    ]
+  ) {
+    const soy = analyze(idx, label, { lang: "pl" }).flags.find((f) => f.code === "allergen.soybeans");
+    assertEquals(soy?.certainty, "maybe", label);
+  }
+  // a qualifier that names an exempt variant keeps the exemption, not the prior (Sol 6.1 on #18 at c16374b, P2 2)
+  const exempt = analyze(idx, "Ingredients: rapeseed oil (from fully refined hydrogenated soybean oil)", {
+    lang: "en",
+  });
+  assertEquals(exempt.flags.find((f) => f.code === "allergen.soybeans"), undefined);
+  // and one that names the food, whose tell selects the exempt variant (Sol 6.1 on #18 at 0547db1, P2 1)
+  const told = analyze(idx, "Ingredients: rapeseed oil (from fully refined soybean oil)", { lang: "en" });
+  assertEquals(told.flags.find((f) => f.code === "allergen.soybeans"), undefined);
+  // a source the food asserts outright keeps "yes"
+  assertEquals(
+    analyze(idx, "Składniki: lecytyna (z soi)", { lang: "pl" }).flags.find((f) =>
+      f.code === "allergen.soybeans"
+    )
+      ?.certainty,
+    "yes",
+  );
 });

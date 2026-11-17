@@ -256,7 +256,23 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
       });
       return;
     }
-    if (existing.triggers.some((t) => t.path === full.path && t.ingredient_id === full.ingredient_id)) return;
+    const same = existing.triggers.findIndex((t) =>
+      t.path === full.path && t.ingredient_id === full.ingredient_id
+    );
+    if (same >= 0) {
+      // One trigger per item and food, holding its strongest evidence, whatever order it came in: "vegetable fat (from
+      // soybean oil, from unrefined soybean oil)" is soy "yes" (Sol 6.1 on #18 at 0e08a29)
+      if (CERTAINTY_RANK[full.certainty] <= CERTAINTY_RANK[existing.triggers[same].certainty]) return;
+      existing.triggers[same] = full;
+      const ts = existing.triggers;
+      existing.certainty = ts.reduce(
+        (x, t) => CERTAINTY_RANK[t.certainty] > CERTAINTY_RANK[x] ? t.certainty : x,
+        ts[0].certainty,
+      );
+      existing.kind = ts.reduce((x, t) => KIND_RANK[t.kind] > KIND_RANK[x] ? t.kind : x, ts[0].kind);
+      existing.grade = ts.reduce((x, t) => GRADE_RANK[t.grade] > GRADE_RANK[x] ? t.grade : x, ts[0].grade);
+      return;
+    }
     existing.triggers.push(full);
     if (CERTAINTY_RANK[full.certainty] > CERTAINTY_RANK[existing.certainty]) {
       existing.certainty = full.certainty;
@@ -280,20 +296,47 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
   };
 
   /**
-   * The allergens a denied name of `ing` is exempt from: those a variant of the food asserts "no" for whose tells fire
-   * on the name's head, its words from some point to the end ("fully refined soybean oil" in "hydrogenated fully
-   * refined soybean oil": Annex II 6(a)), as the KB's claims that name that oil carry none.
+   * The allergens a denied name is exempt from: those the variant its name selects asserts "no" for ("fully refined
+   * hydrogenated soybean oil": Annex II 6(a)). A name that states no exemption keeps the food's own allergens.
    */
-  const exemptFrom = (ing: IngredientT, norm: string) => {
-    const out = new Set<string>();
-    const no = (ing.assertions ?? []).filter((a) =>
-      a.variant && a.code.startsWith("allergen.") && a.certainty === "no"
+  const exemptFrom = (ing: IngredientT, variantId?: string) =>
+    new Set(
+      (ing.assertions ?? []).filter((a) =>
+        variantId && a.variant === variantId && a.code.startsWith("allergen.") && a.certainty === "no"
+      ).map((a) => a.code),
     );
-    if (!no.length) return out;
-    const words = norm.split(" ");
-    for (let i = 0; i < words.length; i++) {
-      const fired = new Set(index.tellsFor(ing.id, words.slice(i).join(" ")).map((v) => v.id));
-      for (const a of no) if (fired.has(a.variant!)) out.add(a.code);
+
+  /**
+   * A qualifier's allergens: those its food asserts ("z soi"); then those of the variant its name selects, the
+   * variant's "no" an exemption ("(from fully refined hydrogenated soybean oil)": no soy, Sol 6.1 on #18 at c16374b);
+   * else those of its most likely prior variant at "maybe", as the food named as an item shows them ("(bez GMO olej
+   * sojowy)": soy maybe, as "olej sojowy").
+   */
+  const qualifierAllergens = (ing: IngredientT, variantIds?: string[]) => {
+    const out: AssertionT[] = allergenAssertions(ing);
+    if (variantIds?.length) {
+      const scoped = (ing.assertions ?? []).filter((a) =>
+        !!a.variant && variantIds.includes(a.variant) && a.code.startsWith("allergen.")
+      );
+      // exempt only where every variant the qualifier names says "no"
+      const exempt = new Set(
+        scoped.filter((a) => a.certainty === "no").map((a) => a.code).filter((code) =>
+          variantIds.every((v) =>
+            scoped.some((a) => a.variant === v && a.code === code && a.certainty === "no")
+          )
+        ),
+      );
+      return [
+        ...out.filter((a) => !exempt.has(a.code)),
+        ...scoped.filter((a) =>
+          (a.certainty === "yes" || a.certainty === "maybe") && !out.some((b) => b.code === a.code)
+        ),
+      ];
+    }
+    for (const a of ownAllergens(ing)) {
+      if (a.variant && !out.some((b) => b.code === a.code)) {
+        out.push({ ...a, certainty: "maybe", kind: a.kind === "fact" ? "estimate" : a.kind });
+      }
     }
     return out;
   };
@@ -307,6 +350,10 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
   const dietInputs: DietInput[] = [];
   /** Entries a denied variant name contributes allergens from: no diet input, but their provenance counts. */
   const deniedFoods = new Set<string>();
+  /** Per qualifier path, the variant its name selects ("(from fully refined hydrogenated soybean oil)"). */
+  const qualifierVariants = new Map<string, string[]>();
+  /** Per qualifier path, the names it denies, read by its parent as its own. */
+  const qualifierDenied = new Map<string, DeniedName[]>();
   /** Per item path, the words of it and of its brackets that denied names cover: emphasis there reasserts nothing. */
   const deniedTexts = new Map<string, DeniedText[]>();
 
@@ -325,8 +372,26 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
 
     // Qualifiers ("z soi") and bare E-number annotations are resolved for their parent.
     if (item.role === "qualifier") {
-      const m = index.match(item.name.replace(/^(?:z|ze|from|of|aus|von)\s+/iu, ""));
+      const named = item.name.replace(/^(?:z|ze|from|of|aus|von)\s+/iu, "");
+      // a qualifier's denied names are read as an item's are (policy B), by its parent ("(from not fully refined
+      // hydrogenated soybean oil)": soy maybe; Sol 6.1 on #18 at 2668948)
+      const qx: DeniedName[] = [];
+      const m = index.match(named, qx);
+      if (qx.length) {
+        qualifierDenied.set(item.path, qx);
+        const tokens = normName(named).split(" ");
+        const covered = new Uint8Array(tokens.length);
+        for (const x of qx) covered.fill(1, x.start, x.end);
+        deniedTexts.set(item.path, [{ tokens, covered }]);
+      }
       if (m) base.match = toMatch(index, m.ingredientId, m.matchType, m.confidence);
+      // the variant its name selects, else those its tells select ("(from fully refined soybean oil)")
+      const vs = m?.variantId
+        ? [m.variantId]
+        : m
+        ? index.tellsFor(m.ingredientId, named).map((v) => v.id)
+        : [];
+      if (vs.length) qualifierVariants.set(item.path, vs);
       return base;
     }
     if (item.role === "e_number") {
@@ -471,10 +536,25 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
       for (const x of excluded) covered.fill(1, x.start, x.end);
       denied.push({ tokens, covered });
     }
-    for (const x of excluded) {
+    // Sources named in qualifiers, children or CAPS emphasis carry their allergens to this item.
+    for (const c of children) {
+      if ((c.role === "qualifier" || c.role === "e_number") && c.match) {
+        const q = index.get(c.match.ingredient_id);
+        if (!q) continue;
+        const allergens = c.role === "qualifier"
+          ? qualifierAllergens(q, qualifierVariants.get(c.path))
+          : allergenAssertions(q);
+        for (const a of allergens) addFlag(a, trig(item.path, q.id, "qualifier", a));
+        if (c.role === "qualifier") dietInputs.push({ path: c.path, ingredient: q });
+      }
+    }
+    // After the sources a qualifier names: a denied name's "maybe" never takes the trigger of the same food named
+    // affirmatively ("lecithin (from sesame oil without using partially hydrogenated sesame oil)" is sesame "yes";
+    // `addFlag` keeps a trigger's first certainty. Sol 6.1 on #18 at 165ecbd).
+    for (const x of [...excluded, ...children.flatMap((c) => qualifierDenied.get(c.path) ?? [])]) {
       const q = index.get(x.ingredientId);
       if (!q) continue;
-      const exempt = exemptFrom(q, x.matched);
+      const exempt = exemptFrom(q, x.variantId);
       const own = ownAllergens(q).filter((a) => !exempt.has(a.code));
       if (own.length) deniedFoods.add(q.id);
       for (const a of own) {
@@ -483,15 +563,6 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
           certainty: "maybe",
           kind: a.kind === "fact" ? "estimate" : a.kind,
         });
-      }
-    }
-    // Sources named in qualifiers, children or CAPS emphasis carry their allergens to this item.
-    for (const c of children) {
-      if ((c.role === "qualifier" || c.role === "e_number") && c.match) {
-        const q = index.get(c.match.ingredient_id);
-        if (!q) continue;
-        for (const a of allergenAssertions(q)) addFlag(a, trig(item.path, q.id, "qualifier", a));
-        if (c.role === "qualifier") dietInputs.push({ path: c.path, ingredient: q });
       }
     }
     if (denied.length) deniedTexts.set(item.path, denied);

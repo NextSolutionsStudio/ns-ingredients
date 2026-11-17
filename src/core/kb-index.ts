@@ -45,6 +45,11 @@ export interface DeniedName {
   /** Its words, [start, end), in the item's normalised name. */
   start: number;
   end: number;
+  /**
+   * The variant the name selects, if any: a denial keeps the allergen "no" it asserts (an exemption it states). Left
+   * out where a "not" right before the name negates its words ("not fully refined …").
+   */
+  variantId?: string;
 }
 
 export interface SearchHit {
@@ -74,15 +79,63 @@ const SUBPHRASE_MAX_TOKENS = 7;
 export const TELL_TEXT_MAX = 500;
 /**
  * At most this many words between a negator and the variant name it denies ("without the addition of partially
- * hydrogenated …", "free of the use of hydrogenated …", "free from the addition of any …"), each one of
- * DENIAL_FILLERS.
+ * hydrogenated …", "free of the use of hydrogenated …", "free from the addition of any …", "without ever using …").
  */
 const DENIAL_GAP_MAX = 5;
 /**
- * The words (normalised) that may stand between a negator and the variant name it denies: articles, the connectors
- * the KB's negators take ("free from", "wolny od", "ohne Zusatz von") and the verbs and nouns of an exclusion
- * ("using", "added", "the addition of", "bez stosowania", "bez dodatku"). Any other word, a food ("sugars") or an
- * affirmation ("with"), is no evidence that the negation reaches the name.
+ * The adverbs of an exclusion, which may stand between a negator and the name it denies, as DENIAL_FILLERS may
+ * ("without ever using", "without in any way adding", "bez w ogóle dodatku", "ohne jemals …"). Any other word, a food
+ * the KB knows or not ("sugar", "konserwantów", "artificial colours"), ends the negation: the name after it is the
+ * food (Sol 6.1 on #18 at c16374b).
+ */
+const DENIAL_ADVERBS = new Set([
+  // en
+  "ever",
+  "never",
+  "at",
+  "all",
+  "in",
+  "way",
+  "point",
+  "time",
+  "whatsoever",
+  "deliberately",
+  "intentionally",
+  "knowingly",
+  "even",
+  "having",
+  "been",
+  // pl
+  "nigdy",
+  "w",
+  "ogole",
+  "zadnym",
+  "razie",
+  "zupelnie",
+  "absolutnie",
+  "celowo",
+  "jakiegokolwiek",
+  "jakichkolwiek",
+  "jakiejkolwiek",
+  // de
+  "jemals",
+  "niemals",
+  "gar",
+  "irgendwelche",
+  "irgendwelchen",
+  "jeglichem",
+  "jeglichen",
+  "jeglicher",
+]);
+/**
+ * Negators that negate the word after them, not a food: "not fully refined hydrogenated soybean oil" negates the full
+ * refining, so a denial they make right before a name keeps none of its variant's exemptions (`variantReading`).
+ */
+const ADJECTIVE_NEGATORS = /^(?:not|non|nie\w*|nicht)$/u;
+/**
+ * The words (normalised) of an exclusion: articles, the connectors the KB's negators take ("free from", "wolny od",
+ * "ohne Zusatz von") and the verbs and nouns of an exclusion ("using", "added", "the addition of", "bez stosowania",
+ * "bez dodatku"). Never a break, and never read as a food.
  */
 const DENIAL_FILLERS = new Set([
   // en
@@ -126,6 +179,24 @@ const DENIAL_FILLERS = new Set([
   "zugesetztem",
   "zugesetzten",
 ]);
+/**
+ * The words of DENIAL_FILLERS that are no exclusion verb: articles and connectors. After an adjective negator they
+ * belong to an adverb phrase ("not in any way", "not at any point") or to the negated words, so `variantReading` reads
+ * past them to find the verb ("not in any way containing").
+ */
+const DENIAL_CONNECTORS = new Set([
+  "a",
+  "an",
+  "the",
+  "any",
+  "of",
+  "from",
+  "od",
+  "zadnego",
+  "zadnych",
+  "zadnej",
+  "von",
+]);
 /** A prior variant raises its flags only when it is more likely than not (`analyze`). */
 export const PRIOR_FLAG_MIN = 0.5;
 
@@ -144,6 +215,8 @@ export class KbIndex {
    * asserts about allergens, diets or origins: the only variants a sub-phrase may name without selecting.
    */
   private readonly droppable = new Set<string>();
+  /** The droppable variants that state an allergen exemption the food's own reading does not make (`markDroppable`). */
+  private readonly exempting = new Set<string>();
   /** The most words a droppable variant name has: how far past SUBPHRASE_MAX_TOKENS a denial is looked for. */
   private denyMaxTokens = 0;
   /** The first word of every exact-only name, and the most words one has: the occurrence scan's bounds. */
@@ -420,9 +493,9 @@ export class KbIndex {
     const collect = !!excluded && norm.length <= TELL_TEXT_MAX;
     // The most complete name wins: a name whose words a denied name already covers is part of it, whatever its food
     // ("fully refined soybean oil" inside the refined-soy claim adds no soy).
-    const deny = (ingredientId: string, start: number, end: number, span: string) => {
+    const deny = (ingredientId: string, start: number, end: number, span: string, variantId?: string) => {
       if (excluded?.some((x) => x.start <= start && end <= x.end)) return;
-      excluded?.push({ ingredientId, matched: span, start, end });
+      excluded?.push({ ingredientId, matched: span, start, end, ...(variantId ? { variantId } : {}) });
     };
     const longest = Math.min(tokens.length - 1, Math.max(SUBPHRASE_MAX_TOKENS, this.denyMaxTokens));
     // A claim inside a longer item ("contains no partially hydrogenated almond oil") denies what it names: its own
@@ -434,7 +507,7 @@ export class KbIndex {
         if (this.nameRunsPast(tokens, s, e, longest)) continue;
         const span = tokens.slice(s, e + 1).join(" ");
         const c = this.byNorm.get(span);
-        if (c) deny(c.ingredientId, s, e + 1, span);
+        if (c) deny(c.ingredientId, s, e + 1, span, c.variantId);
       }
     }
     let found: NameMatch | null = null;
@@ -455,12 +528,13 @@ export class KbIndex {
             // rapeseed oil" inside the food's own "not partially hydrogenated rapeseed oil", after "gluten-free").
             const held = inClaim.some(([s, t]) => s <= start && start + len <= t);
             inClaim.push([start, start + len]);
-            if (!held && this.variantReading(e, tokens, start, start + len, norm.length) === "deny") {
+            const r = held ? "keep" : this.variantReading(e, tokens, start, start + len, norm.length);
+            if (r === "deny" || r === "negate") {
               blocked.fill(1, start, start + len);
               (blockedIng ??= new Set()).add(e.ingredientId);
             }
             if (collect) {
-              deny(e.ingredientId, start, start + len, span);
+              deny(e.ingredientId, start, start + len, span, r === "negate" ? undefined : e.variantId);
               // and, as for a denied variant name, no fuzzy match to that food is taken
               (blockedIng ??= new Set()).add(e.ingredientId);
             }
@@ -474,9 +548,10 @@ export class KbIndex {
         const e = this.byNorm.get(span);
         if (!e) continue;
         const reading = this.variantReading(e, tokens, start, start + len, norm.length);
-        if (reading === "deny") {
+        if (reading === "deny" || reading === "negate") {
           blocked.fill(1, start, start + len);
-          deny(e.ingredientId, start, start + len, span);
+          // "negate": the "not" right before the name negates its own words, so it states no exemption
+          deny(e.ingredientId, start, start + len, span, reading === "negate" ? undefined : e.variantId);
           (blockedIng ??= new Set()).add(e.ingredientId);
           continue;
         }
@@ -496,12 +571,12 @@ export class KbIndex {
       }
     }
     if (found) return found;
-    if (norm.length >= 5) {
+    // An item that denies a name is read through it: no fuzzy guess beside it, which ignores word order and could take
+    // a claim that reads the other way ("without using fully refined hydrogenated soybean oil" is nearest to "without
+    // fully hydrogenated refined soybean oil", a claim with soy).
+    if (norm.length >= 5 && !blockedIng?.size) {
       const hit = this.nearestName(norm);
-      const best =
-        hit && distinctivePartsAgree(norm, hit.entry.norm) && !blockedIng?.has(hit.entry.ingredientId)
-          ? hit.entry
-          : null;
+      const best = hit && distinctivePartsAgree(norm, hit.entry.norm) ? hit.entry : null;
       const bestSim = hit?.sim ?? 0;
       if (best && bestSim >= FUZZY_MIN) {
         return {
@@ -538,9 +613,12 @@ export class KbIndex {
    * negation is scoped to the name, so `match` reads it like a claim ("without using partially hydrogenated rapeseed
    * oil"); "drop" (the plain entry, as #14 reads it) when it is not.
    * Scoped means: between the negator (the nearest start from which the tells fail) and the name lie at most
-   * DENIAL_GAP_MAX words, each one of DENIAL_FILLERS. So a negator after the name ("… poultry fat without added
-   * sugar") keeps the variant, and one that denies something else ("without added sugars with partially
-   * hydrogenated poultry fat") leaves the plain food.
+   * DENIAL_GAP_MAX words, each a word of an exclusion (DENIAL_FILLERS, DENIAL_ADVERBS: "without ever using", "without
+   * in any way adding"). A negator after the name ("… poultry fat without added sugar") keeps the variant, and one
+   * that denies something else ("without added sugars with partially hydrogenated poultry fat", "bez konserwantów
+   * częściowo utwardzony tłuszcz drobiowy", "not completely refined hydrogenated soybean oil") leaves the plain food.
+   * "negate" is a denial whose negator negates the word after it (ADJECTIVE_NEGATORS) right before the name: it
+   * negates the name's own first words ("not fully refined hydrogenated soybean oil"), so the name states no exemption.
    */
   private variantReading(
     e: NameEntry,
@@ -548,7 +626,7 @@ export class KbIndex {
     start: number,
     end: number,
     itemLength: number,
-  ): "keep" | "drop" | "deny" {
+  ): "keep" | "drop" | "deny" | "negate" {
     if (
       !e.variantId || itemLength > TELL_TEXT_MAX || !this.droppable.has(`${e.ingredientId}/${e.variantId}`)
     ) {
@@ -562,7 +640,20 @@ export class KbIndex {
     let k = start - 1;
     while (k > 0 && fires(k)) k--;
     const gap = tokens.slice(k + 1, start);
-    return gap.length <= DENIAL_GAP_MAX && gap.every((w) => DENIAL_FILLERS.has(w)) ? "deny" : "drop";
+    // An adjective negator ("not", "nie") not followed by an exclusion verb ("not containing", "nie zawiera") negates
+    // the words after it, through any adverb ("not quite fully refined", "not at all fully refined", "nie całkiem w
+    // pełni rafinowany"): no exemption the name states stands (Sol 6.1 on #18 at 029b6bc).
+    // the exclusion verb may follow an adverb ("not ever containing", "not intentionally using": Sol 6.1 at 2668948),
+    // and an adverb phrase may hold an article ("not in any way", "not at any point": Sol 6.1 at 165ecbd)
+    let v = k + 1;
+    while (v < start && (DENIAL_ADVERBS.has(tokens[v]) || DENIAL_CONNECTORS.has(tokens[v]))) v++;
+    const adjectival = ADJECTIVE_NEGATORS.test(tokens[k] ?? "") && !DENIAL_FILLERS.has(tokens[v] ?? "");
+    // Not denied: the plain entry (#14), except a variant that states an exemption, which stands as named ("bez cukru
+    // całkowicie utwardzony w pełni rafinowany olej sojowy": hydrogenated, exempt; Sol 6.1 on #18 at 0547db1)
+    const notDenied = this.exempting.has(`${e.ingredientId}/${e.variantId}`) && !adjectival ? "keep" : "drop";
+    if (gap.length > DENIAL_GAP_MAX) return notDenied;
+    if (!gap.every((w) => DENIAL_FILLERS.has(w) || DENIAL_ADVERBS.has(w))) return notDenied;
+    return adjectival ? "negate" : "deny";
   }
 
   /**
@@ -583,14 +674,23 @@ export class KbIndex {
         if (!own.has(a.code)) own.set(a.code, a.certainty === "yes" ? "maybe" : a.certainty);
       }
     }
+    // A variant may also state an allergen exemption ("no") where the food's own reading has the allergen ("fully
+    // refined hydrogenated soybean oil", Annex II 6(a)): a denial keeps the exemption (`analyze`), and where the
+    // negation does not reach it the variant stands as named (`variantReading`), never the food's own reading.
+    const exempts = (a: AssertionT) =>
+      a.code.startsWith("allergen.") && a.certainty === "no" &&
+      (own.get(a.code) === "yes" || own.get(a.code) === "maybe");
     for (const v of ing.variants ?? []) {
-      if (!v.tells?.length || !scoped(v.id).every((a) => own.get(a.code) === a.certainty)) continue;
+      if (!v.tells?.length || !scoped(v.id).every((a) => own.get(a.code) === a.certainty || exempts(a))) {
+        continue;
+      }
       // and only if its tells fire on each of its names inside a longer neutral item, so a denial is a negation
       // the tells read, never an anchored tell that a neutral item cannot meet
       const res = v.tells.map((s) => new RegExp(s, "u"));
       const names = allNames(v.names).map((n) => normName(n.name)).filter(Boolean);
       if (!names.every((n) => res.some((re) => re.test(`x ${n} x`)))) continue;
       this.droppable.add(`${ing.id}/${v.id}`);
+      if (scoped(v.id).some(exempts)) this.exempting.add(`${ing.id}/${v.id}`);
       for (const n of names) this.denyMaxTokens = Math.max(this.denyMaxTokens, n.split(" ").length);
     }
   }
