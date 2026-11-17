@@ -300,7 +300,7 @@ variants:
       en: "Fish oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej rybny utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
     tells:
-      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!not )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)'
+      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!not )(?<!teilweise )(?<!vollstandig )(?<!nicht )(?<!bez )(?<!brak )(?<!nie poddany )(?<!niepoddany )(?<!nie poddawany )(?<!without )(?<!free from )(?<!free of )(?<!no )(?<!ohne )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)'
   - id: partially-hydrogenated
     names:
       en:
