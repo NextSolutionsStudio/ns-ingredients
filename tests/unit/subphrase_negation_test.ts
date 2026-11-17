@@ -389,3 +389,27 @@ Deno.test("an exact name may be no other name anywhere (validator)", () => {
     'exact name "no x" is claimed by both a and b',
   ]);
 });
+
+Deno.test("repeated claims stay inside the CPU budget (Sol 6.1 on 6280534)", () => {
+  // 12 kB of one claim, and of claims between foods: the guard is built once per item, not once per span
+  const index = tinyIndex([
+    "non hydrogenated sesame oil|sesame oil",
+    "sugar",
+    "!non hydrogenated",
+    "!bez utwardzonych tluszczow",
+  ]);
+  for (
+    const text of [
+      "Ingredients: " + "non hydrogenated ".repeat(700),
+      "Ingredients: " + "sugar non hydrogenated sesame oil bez utwardzonych tłuszczów ".repeat(180),
+    ]
+  ) {
+    const times = [0, 1, 2].map(() => {
+      const t = performance.now();
+      analyze(index, text, { lang: "en" });
+      return performance.now() - t;
+    });
+    const best = Math.min(...times);
+    assertEquals(best < 150, true, `${text.slice(13, 40)}…: ${best.toFixed(0)} ms`);
+  }
+});

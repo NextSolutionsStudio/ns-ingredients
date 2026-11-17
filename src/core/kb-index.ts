@@ -210,16 +210,32 @@ export class KbIndex {
     return out;
   }
 
-  /** Whether a plain name lies wholly in the words before word `k`, starting outside every claim: a food named first. */
-  private nameBefore(tokens: string[], k: number, claims: [number, number][]): boolean {
-    for (let start = 0; start < k; start++) {
-      if (claims.some(([s, e]) => start >= s && start <= e)) continue;
-      for (let len = 1; start + len <= k && len <= SUBPHRASE_MAX_TOKENS; len++) {
-        const span = tokens.slice(start, start + len).join(" ");
-        if (this.byNorm.has(span) && !this.exactOnly.has(span)) return true;
+  /**
+   * Whether the sub-phrase pass skips words `start`..`end`, from the item's claims, precomputed once per item so each
+   * span costs O(1): a span is skipped when it starts inside a claim, unless it starts at the claim, runs past it, and
+   * no food comes before it (a plain name lying wholly before `start`, starting outside every claim).
+   */
+  private claimGuard(tokens: string[], claims: [number, number][]): (start: number, end: number) => boolean {
+    const n = tokens.length;
+    const inside = new Uint8Array(n); // after a claim's first word
+    const inAny = new Uint8Array(n);
+    const endAt = new Int32Array(n).fill(-1); // the end of the claim that starts at a word
+    for (const [s, e] of claims) {
+      endAt[s] = Math.max(endAt[s], e);
+      inAny[s] = 1;
+      for (let i = s + 1; i <= e; i++) inside[i] = inAny[i] = 1;
+    }
+    const before = new Uint8Array(n + 1); // before[k]: a food lies wholly in words 0..k-1
+    for (let k = 1; k <= n; k++) {
+      before[k] = before[k - 1];
+      for (let s = Math.max(0, k - SUBPHRASE_MAX_TOKENS); !before[k] && s < k; s++) {
+        if (inAny[s]) continue;
+        const span = tokens.slice(s, k).join(" ");
+        if (this.byNorm.has(span) && !this.exactOnly.has(span)) before[k] = 1;
       }
     }
-    return false;
+    return (start, end) =>
+      inside[start] === 1 || (endAt[start] >= 0 && !(end > endAt[start] && !before[start]));
   }
 
   get(id: string): IngredientT | undefined {
@@ -298,15 +314,11 @@ export class KbIndex {
     // coconut fat"), and only when no plain name lies before it outside the claims ("sesame oil not partially
     // hydrogenated rapeseed oil" stays sesame oil).
     const claims = this.claimSpans(tokens);
+    const skip = claims.length ? this.claimGuard(tokens, claims) : null;
     // Longest known sub-phrase: "koncentrat bialka serwatkowego instant" → "koncentrat bialka serwatkowego".
     for (let len = Math.min(tokens.length - 1, SUBPHRASE_MAX_TOKENS); len >= 1; len--) {
       for (let start = 0; start + len <= tokens.length; start++) {
-        if (
-          claims.some(([s, e]) =>
-            start >= s && start <= e &&
-            !(start === s && start + len - 1 > e && !this.nameBefore(tokens, start, claims))
-          )
-        ) continue;
+        if (skip?.(start, start + len - 1)) continue;
         const span = tokens.slice(start, start + len).join(" ");
         if (span.length < 3 || this.exactOnly.has(span)) continue;
         const e = this.byNorm.get(span);
