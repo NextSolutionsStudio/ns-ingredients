@@ -903,6 +903,11 @@ variants:
         - hydrogenated vegetable fat from soya
         - hydrogenated vegetable oils from soya
         - hydrogenated vegetable fats from soya
+        - fully refined hydrogenated soybean oil partially
+        - fully refined hydrogenated soybean oil partly
+        - fully refined hydrogenated soybean oil incompletely
+        - fully refined hydrogenated soybean oil not fully
+        - fully refined hydrogenated soybean oil not completely
       pl:
         - utwardzony olej sojowy
         - olej sojowy utwardzony
@@ -1150,13 +1155,61 @@ variants:
         - uwodornione oleje roślinne z ziarna soi
         - oleje roślinne z ziarna soi uwodornione
         - oleje roślinne uwodornione z ziarna soi
+        - utwardzony w pełni rafinowany olej sojowy częściowo
+        - utwardzony w pełni rafinowany olej sojowy niecałkowicie
+        - utwardzony w pełni rafinowany olej sojowy nie całkowicie
+        - utwardzony w pełni rafinowany olej sojowy nie w pełni
+        - utwardzony w pełni rafinowany olej sojowy nie do końca
+        - utwardzony w pełni rafinowany olej sojowy niepełnie
+        - uwodorniony w pełni rafinowany olej sojowy częściowo
+        - uwodorniony w pełni rafinowany olej sojowy niecałkowicie
+        - uwodorniony w pełni rafinowany olej sojowy nie całkowicie
+        - uwodorniony w pełni rafinowany olej sojowy nie w pełni
+        - uwodorniony w pełni rafinowany olej sojowy nie do końca
+        - uwodorniony w pełni rafinowany olej sojowy niepełnie
+        - w pełni rafinowany utwardzony olej sojowy częściowo
+        - w pełni rafinowany utwardzony olej sojowy niecałkowicie
+        - w pełni rafinowany utwardzony olej sojowy nie całkowicie
+        - w pełni rafinowany utwardzony olej sojowy nie w pełni
+        - w pełni rafinowany utwardzony olej sojowy nie do końca
+        - w pełni rafinowany utwardzony olej sojowy niepełnie
+        - utwardzony w pełni rafinowany olej z soi częściowo
+        - utwardzony w pełni rafinowany olej z soi niecałkowicie
+        - utwardzony w pełni rafinowany olej z soi nie całkowicie
+        - utwardzony w pełni rafinowany olej z soi nie w pełni
+        - utwardzony w pełni rafinowany olej z soi nie do końca
+        - utwardzony w pełni rafinowany olej z soi niepełnie
+        - w pełni rafinowany utwardzony olej z soi częściowo
+        - w pełni rafinowany utwardzony olej z soi niecałkowicie
+        - w pełni rafinowany utwardzony olej z soi nie całkowicie
+        - w pełni rafinowany utwardzony olej z soi nie w pełni
+        - w pełni rafinowany utwardzony olej z soi nie do końca
+        - w pełni rafinowany utwardzony olej z soi niepełnie
+        - w pełni rafinowany uwodorniony olej sojowy częściowo
+        - w pełni rafinowany uwodorniony olej sojowy niecałkowicie
+        - w pełni rafinowany uwodorniony olej sojowy nie całkowicie
+        - w pełni rafinowany uwodorniony olej sojowy nie w pełni
+        - w pełni rafinowany uwodorniony olej sojowy nie do końca
+        - w pełni rafinowany uwodorniony olej sojowy niepełnie
+        - uwodorniony w pełni rafinowany olej z soi częściowo
+        - uwodorniony w pełni rafinowany olej z soi niecałkowicie
+        - uwodorniony w pełni rafinowany olej z soi nie całkowicie
+        - uwodorniony w pełni rafinowany olej z soi nie w pełni
+        - uwodorniony w pełni rafinowany olej z soi nie do końca
+        - uwodorniony w pełni rafinowany olej z soi niepełnie
+        - w pełni rafinowany uwodorniony olej z soi częściowo
+        - w pełni rafinowany uwodorniony olej z soi niecałkowicie
+        - w pełni rafinowany uwodorniony olej z soi nie całkowicie
+        - w pełni rafinowany uwodorniony olej z soi nie w pełni
+        - w pełni rafinowany uwodorniony olej z soi nie do końca
+        - w pełni rafinowany uwodorniony olej z soi niepełnie
       de:
         - gehärtetes Sojaöl
     process:
       en: "Soybean oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej sojowy utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
     tells:
-      - '^(?!.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!partially )(?<!fully )(?<!totally )(?<!teilweise )(?<!vollstandig )(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:utwardzon|uwodornion|utwardzan[yea]\b|uwodornian[yea]\b|hydrogenated|gehartet)|(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:po|podda\w*|podlega\w*)(?: (?!(?:nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b)\S+){0,3}? (?:uwodornieni|uwodornian|utwardzeni|utwardzan))'
+      - '^(?!(?=.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert))(?!.*\b(?:partially|partly|incompletely|not fully|not completely|czesciowo|niecalkowicie|nie calkowicie|nie w pelni|nie do konca|niepelnie)(?: x)?$)).*?(?:(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!partially )(?<!fully )(?<!totally )(?<!teilweise )(?<!vollstandig )(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:utwardzon|uwodornion|utwardzan[yea]\b|uwodornian[yea]\b|hydrogenated|gehartet)|(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:po|podda\w*|podlega\w*)(?: (?!(?:nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b)\S+){0,3}? (?:uwodornieni|uwodornian|utwardzeni|utwardzan))'
   - id: partially-hydrogenated
     names:
       en:
@@ -1183,6 +1236,11 @@ variants:
         - partially hydrogenated vegetable fat from soya
         - partially hydrogenated vegetable oils from soya
         - partially hydrogenated vegetable fats from soya
+        - fully refined partially hydrogenated soybean oil partially
+        - fully refined partially hydrogenated soybean oil partly
+        - fully refined partially hydrogenated soybean oil incompletely
+        - fully refined partially hydrogenated soybean oil not fully
+        - fully refined partially hydrogenated soybean oil not completely
       pl:
         - częściowo utwardzony olej sojowy
         - olej sojowy częściowo utwardzony
@@ -1430,15 +1488,63 @@ variants:
         - częściowo uwodornione oleje roślinne z ziarna soi
         - oleje roślinne z ziarna soi częściowo uwodornione
         - oleje roślinne częściowo uwodornione z ziarna soi
+        - częściowo utwardzony w pełni rafinowany olej sojowy częściowo
+        - częściowo utwardzony w pełni rafinowany olej sojowy niecałkowicie
+        - częściowo utwardzony w pełni rafinowany olej sojowy nie całkowicie
+        - częściowo utwardzony w pełni rafinowany olej sojowy nie w pełni
+        - częściowo utwardzony w pełni rafinowany olej sojowy nie do końca
+        - częściowo utwardzony w pełni rafinowany olej sojowy niepełnie
+        - częściowo uwodorniony w pełni rafinowany olej sojowy częściowo
+        - częściowo uwodorniony w pełni rafinowany olej sojowy niecałkowicie
+        - częściowo uwodorniony w pełni rafinowany olej sojowy nie całkowicie
+        - częściowo uwodorniony w pełni rafinowany olej sojowy nie w pełni
+        - częściowo uwodorniony w pełni rafinowany olej sojowy nie do końca
+        - częściowo uwodorniony w pełni rafinowany olej sojowy niepełnie
+        - częściowo utwardzony w pełni rafinowany olej z soi częściowo
+        - częściowo utwardzony w pełni rafinowany olej z soi niecałkowicie
+        - częściowo utwardzony w pełni rafinowany olej z soi nie całkowicie
+        - częściowo utwardzony w pełni rafinowany olej z soi nie w pełni
+        - częściowo utwardzony w pełni rafinowany olej z soi nie do końca
+        - częściowo utwardzony w pełni rafinowany olej z soi niepełnie
+        - częściowo uwodorniony w pełni rafinowany olej z soi częściowo
+        - częściowo uwodorniony w pełni rafinowany olej z soi niecałkowicie
+        - częściowo uwodorniony w pełni rafinowany olej z soi nie całkowicie
+        - częściowo uwodorniony w pełni rafinowany olej z soi nie w pełni
+        - częściowo uwodorniony w pełni rafinowany olej z soi nie do końca
+        - częściowo uwodorniony w pełni rafinowany olej z soi niepełnie
+        - w pełni rafinowany częściowo utwardzony olej sojowy częściowo
+        - w pełni rafinowany częściowo utwardzony olej sojowy niecałkowicie
+        - w pełni rafinowany częściowo utwardzony olej sojowy nie całkowicie
+        - w pełni rafinowany częściowo utwardzony olej sojowy nie w pełni
+        - w pełni rafinowany częściowo utwardzony olej sojowy nie do końca
+        - w pełni rafinowany częściowo utwardzony olej sojowy niepełnie
+        - w pełni rafinowany częściowo utwardzony olej z soi częściowo
+        - w pełni rafinowany częściowo utwardzony olej z soi niecałkowicie
+        - w pełni rafinowany częściowo utwardzony olej z soi nie całkowicie
+        - w pełni rafinowany częściowo utwardzony olej z soi nie w pełni
+        - w pełni rafinowany częściowo utwardzony olej z soi nie do końca
+        - w pełni rafinowany częściowo utwardzony olej z soi niepełnie
+        - w pełni rafinowany częściowo uwodorniony olej sojowy częściowo
+        - w pełni rafinowany częściowo uwodorniony olej sojowy niecałkowicie
+        - w pełni rafinowany częściowo uwodorniony olej sojowy nie całkowicie
+        - w pełni rafinowany częściowo uwodorniony olej sojowy nie w pełni
+        - w pełni rafinowany częściowo uwodorniony olej sojowy nie do końca
+        - w pełni rafinowany częściowo uwodorniony olej sojowy niepełnie
+        - w pełni rafinowany częściowo uwodorniony olej z soi częściowo
+        - w pełni rafinowany częściowo uwodorniony olej z soi niecałkowicie
+        - w pełni rafinowany częściowo uwodorniony olej z soi nie całkowicie
+        - w pełni rafinowany częściowo uwodorniony olej z soi nie w pełni
+        - w pełni rafinowany częściowo uwodorniony olej z soi nie do końca
+        - w pełni rafinowany częściowo uwodorniony olej z soi niepełnie
       de:
         - teilweise gehärtetes Sojaöl
     process:
       en: "Soybean oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
       pl: "Olej sojowy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
     tells:
-      - '^(?!.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )czesciowo (?:utwardzon|uwodorn))'
-      - '^(?!.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )partially hydrogenated)'
-      - '^(?!.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )teilweise gehartet)'
+      - '^(?!(?=.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert))(?!.*\b(?:partially|partly|incompletely|not fully|not completely|czesciowo|niecalkowicie|nie calkowicie|nie w pelni|nie do konca|niepelnie)(?: x)?$)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )czesciowo (?:utwardzon|uwodorn))'
+      - '^(?!(?=.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert))(?!.*\b(?:partially|partly|incompletely|not fully|not completely|czesciowo|niecalkowicie|nie calkowicie|nie w pelni|nie do konca|niepelnie)(?: x)?$)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )partially hydrogenated)'
+      - '^(?!(?=.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert))(?!.*\b(?:partially|partly|incompletely|not fully|not completely|czesciowo|niecalkowicie|nie calkowicie|nie w pelni|nie do konca|niepelnie)(?: x)?$)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )teilweise gehartet)'
   - id: fully-hydrogenated
     names:
       en:
@@ -1481,6 +1587,11 @@ variants:
         - totally hydrogenated vegetable oils from soya
         - fully hydrogenated vegetable fats from soya
         - totally hydrogenated vegetable fats from soya
+        - fully refined fully hydrogenated soybean oil partially
+        - fully refined fully hydrogenated soybean oil partly
+        - fully refined fully hydrogenated soybean oil incompletely
+        - fully refined fully hydrogenated soybean oil not fully
+        - fully refined fully hydrogenated soybean oil not completely
       pl:
         - całkowicie utwardzony olej sojowy
         - olej sojowy całkowicie utwardzony
@@ -1974,215 +2085,6 @@ variants:
         - w pełni uwodornione oleje roślinne z ziarna soi
         - oleje roślinne z ziarna soi w pełni uwodornione
         - oleje roślinne w pełni uwodornione z ziarna soi
-      de:
-        - vollständig gehärtetes Sojaöl
-    process:
-      en: "Soybean oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
-      pl: "Olej sojowy ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
-    tells:
-      - '^(?!.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )calkowicie (?:utwardzon|uwodorn))'
-      - '^(?!.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )w pelni (?:utwardzon|uwodorn))'
-      - '^(?!.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )fully hydrogenated)'
-      - '^(?!.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )totally hydrogenated)'
-      - '^(?!.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )vollstandig gehartet)'
-
-  - id: hydrogenated-fully-refined
-    names:
-      en:
-        - fully refined hydrogenated soybean oil partially
-        - fully refined hydrogenated soybean oil partly
-        - fully refined hydrogenated soybean oil incompletely
-        - fully refined hydrogenated soybean oil not fully
-        - fully refined hydrogenated soybean oil not completely
-        - fully refined hydrogenated soybean oil
-        - hydrogenated fully refined soybean oil
-        - fully refined hydrogenated soya oil
-        - hydrogenated fully refined soya oil
-      pl:
-        - utwardzony w pełni rafinowany olej sojowy częściowo
-        - utwardzony w pełni rafinowany olej sojowy niecałkowicie
-        - utwardzony w pełni rafinowany olej sojowy nie całkowicie
-        - utwardzony w pełni rafinowany olej sojowy nie w pełni
-        - utwardzony w pełni rafinowany olej sojowy nie do końca
-        - utwardzony w pełni rafinowany olej sojowy niepełnie
-        - uwodorniony w pełni rafinowany olej sojowy częściowo
-        - uwodorniony w pełni rafinowany olej sojowy niecałkowicie
-        - uwodorniony w pełni rafinowany olej sojowy nie całkowicie
-        - uwodorniony w pełni rafinowany olej sojowy nie w pełni
-        - uwodorniony w pełni rafinowany olej sojowy nie do końca
-        - uwodorniony w pełni rafinowany olej sojowy niepełnie
-        - w pełni rafinowany utwardzony olej sojowy częściowo
-        - w pełni rafinowany utwardzony olej sojowy niecałkowicie
-        - w pełni rafinowany utwardzony olej sojowy nie całkowicie
-        - w pełni rafinowany utwardzony olej sojowy nie w pełni
-        - w pełni rafinowany utwardzony olej sojowy nie do końca
-        - w pełni rafinowany utwardzony olej sojowy niepełnie
-        - utwardzony w pełni rafinowany olej z soi częściowo
-        - utwardzony w pełni rafinowany olej z soi niecałkowicie
-        - utwardzony w pełni rafinowany olej z soi nie całkowicie
-        - utwardzony w pełni rafinowany olej z soi nie w pełni
-        - utwardzony w pełni rafinowany olej z soi nie do końca
-        - utwardzony w pełni rafinowany olej z soi niepełnie
-        - w pełni rafinowany utwardzony olej z soi częściowo
-        - w pełni rafinowany utwardzony olej z soi niecałkowicie
-        - w pełni rafinowany utwardzony olej z soi nie całkowicie
-        - w pełni rafinowany utwardzony olej z soi nie w pełni
-        - w pełni rafinowany utwardzony olej z soi nie do końca
-        - w pełni rafinowany utwardzony olej z soi niepełnie
-        - w pełni rafinowany uwodorniony olej sojowy częściowo
-        - w pełni rafinowany uwodorniony olej sojowy niecałkowicie
-        - w pełni rafinowany uwodorniony olej sojowy nie całkowicie
-        - w pełni rafinowany uwodorniony olej sojowy nie w pełni
-        - w pełni rafinowany uwodorniony olej sojowy nie do końca
-        - w pełni rafinowany uwodorniony olej sojowy niepełnie
-        - uwodorniony w pełni rafinowany olej z soi częściowo
-        - uwodorniony w pełni rafinowany olej z soi niecałkowicie
-        - uwodorniony w pełni rafinowany olej z soi nie całkowicie
-        - uwodorniony w pełni rafinowany olej z soi nie w pełni
-        - uwodorniony w pełni rafinowany olej z soi nie do końca
-        - uwodorniony w pełni rafinowany olej z soi niepełnie
-        - w pełni rafinowany uwodorniony olej z soi częściowo
-        - w pełni rafinowany uwodorniony olej z soi niecałkowicie
-        - w pełni rafinowany uwodorniony olej z soi nie całkowicie
-        - w pełni rafinowany uwodorniony olej z soi nie w pełni
-        - w pełni rafinowany uwodorniony olej z soi nie do końca
-        - w pełni rafinowany uwodorniony olej z soi niepełnie
-        - w pełni rafinowany olej sojowy utwardzony
-        - utwardzony w pełni rafinowany olej sojowy
-        - w pełni rafinowany olej sojowy uwodorniony
-        - uwodorniony w pełni rafinowany olej sojowy
-        - olej sojowy w pełni rafinowany utwardzony
-        - olej sojowy utwardzony w pełni rafinowany
-        - w pełni rafinowany utwardzony olej sojowy
-        - w pełni rafinowany olej z soi utwardzony
-        - utwardzony w pełni rafinowany olej z soi
-        - olej z soi w pełni rafinowany utwardzony
-        - olej z soi utwardzony w pełni rafinowany
-        - w pełni rafinowany utwardzony olej z soi
-        - olej sojowy w pełni rafinowany uwodorniony
-        - olej sojowy uwodorniony w pełni rafinowany
-        - w pełni rafinowany uwodorniony olej sojowy
-        - w pełni rafinowany olej z soi uwodorniony
-        - uwodorniony w pełni rafinowany olej z soi
-        - olej z soi w pełni rafinowany uwodorniony
-        - olej z soi uwodorniony w pełni rafinowany
-        - w pełni rafinowany uwodorniony olej z soi
-        - utwardzony olej sojowy w pełni rafinowany
-        - utwardzony olej z soi w pełni rafinowany
-        - uwodorniony olej sojowy w pełni rafinowany
-        - uwodorniony olej z soi w pełni rafinowany
-    process:
-      en: "Fully refined soybean oil hardened by hydrogenation, as the label states both; the label does not specify partial or full hydrogenation."
-      pl: "W pełni rafinowany olej sojowy utwardzony przez uwodornienie, jak podaje etykieta; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
-    tells:
-      - '^(?=.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!partially )(?<!fully )(?<!totally )(?<!teilweise )(?<!vollstandig )(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:utwardzon|uwodornion|utwardzan[yea]\b|uwodornian[yea]\b|hydrogenated|gehartet)|(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:po|podda\w*|podlega\w*)(?: (?!(?:nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b)\S+){0,3}? (?:uwodornieni|uwodornian|utwardzeni|utwardzan))'
-  - id: partially-hydrogenated-fully-refined
-    names:
-      en:
-        - fully refined partially hydrogenated soybean oil partially
-        - fully refined partially hydrogenated soybean oil partly
-        - fully refined partially hydrogenated soybean oil incompletely
-        - fully refined partially hydrogenated soybean oil not fully
-        - fully refined partially hydrogenated soybean oil not completely
-        - partially hydrogenated fully refined soybean oil
-        - partially hydrogenated fully refined soya oil
-        - fully refined partially hydrogenated soybean oil
-        - fully refined partially hydrogenated soya oil
-      pl:
-        - częściowo utwardzony w pełni rafinowany olej sojowy częściowo
-        - częściowo utwardzony w pełni rafinowany olej sojowy niecałkowicie
-        - częściowo utwardzony w pełni rafinowany olej sojowy nie całkowicie
-        - częściowo utwardzony w pełni rafinowany olej sojowy nie w pełni
-        - częściowo utwardzony w pełni rafinowany olej sojowy nie do końca
-        - częściowo utwardzony w pełni rafinowany olej sojowy niepełnie
-        - częściowo uwodorniony w pełni rafinowany olej sojowy częściowo
-        - częściowo uwodorniony w pełni rafinowany olej sojowy niecałkowicie
-        - częściowo uwodorniony w pełni rafinowany olej sojowy nie całkowicie
-        - częściowo uwodorniony w pełni rafinowany olej sojowy nie w pełni
-        - częściowo uwodorniony w pełni rafinowany olej sojowy nie do końca
-        - częściowo uwodorniony w pełni rafinowany olej sojowy niepełnie
-        - częściowo utwardzony w pełni rafinowany olej z soi częściowo
-        - częściowo utwardzony w pełni rafinowany olej z soi niecałkowicie
-        - częściowo utwardzony w pełni rafinowany olej z soi nie całkowicie
-        - częściowo utwardzony w pełni rafinowany olej z soi nie w pełni
-        - częściowo utwardzony w pełni rafinowany olej z soi nie do końca
-        - częściowo utwardzony w pełni rafinowany olej z soi niepełnie
-        - częściowo uwodorniony w pełni rafinowany olej z soi częściowo
-        - częściowo uwodorniony w pełni rafinowany olej z soi niecałkowicie
-        - częściowo uwodorniony w pełni rafinowany olej z soi nie całkowicie
-        - częściowo uwodorniony w pełni rafinowany olej z soi nie w pełni
-        - częściowo uwodorniony w pełni rafinowany olej z soi nie do końca
-        - częściowo uwodorniony w pełni rafinowany olej z soi niepełnie
-        - w pełni rafinowany częściowo utwardzony olej sojowy częściowo
-        - w pełni rafinowany częściowo utwardzony olej sojowy niecałkowicie
-        - w pełni rafinowany częściowo utwardzony olej sojowy nie całkowicie
-        - w pełni rafinowany częściowo utwardzony olej sojowy nie w pełni
-        - w pełni rafinowany częściowo utwardzony olej sojowy nie do końca
-        - w pełni rafinowany częściowo utwardzony olej sojowy niepełnie
-        - w pełni rafinowany częściowo utwardzony olej z soi częściowo
-        - w pełni rafinowany częściowo utwardzony olej z soi niecałkowicie
-        - w pełni rafinowany częściowo utwardzony olej z soi nie całkowicie
-        - w pełni rafinowany częściowo utwardzony olej z soi nie w pełni
-        - w pełni rafinowany częściowo utwardzony olej z soi nie do końca
-        - w pełni rafinowany częściowo utwardzony olej z soi niepełnie
-        - w pełni rafinowany częściowo uwodorniony olej sojowy częściowo
-        - w pełni rafinowany częściowo uwodorniony olej sojowy niecałkowicie
-        - w pełni rafinowany częściowo uwodorniony olej sojowy nie całkowicie
-        - w pełni rafinowany częściowo uwodorniony olej sojowy nie w pełni
-        - w pełni rafinowany częściowo uwodorniony olej sojowy nie do końca
-        - w pełni rafinowany częściowo uwodorniony olej sojowy niepełnie
-        - w pełni rafinowany częściowo uwodorniony olej z soi częściowo
-        - w pełni rafinowany częściowo uwodorniony olej z soi niecałkowicie
-        - w pełni rafinowany częściowo uwodorniony olej z soi nie całkowicie
-        - w pełni rafinowany częściowo uwodorniony olej z soi nie w pełni
-        - w pełni rafinowany częściowo uwodorniony olej z soi nie do końca
-        - w pełni rafinowany częściowo uwodorniony olej z soi niepełnie
-        - w pełni rafinowany olej sojowy częściowo utwardzony
-        - częściowo utwardzony w pełni rafinowany olej sojowy
-        - w pełni rafinowany olej sojowy częściowo uwodorniony
-        - częściowo uwodorniony w pełni rafinowany olej sojowy
-        - olej sojowy częściowo utwardzony w pełni rafinowany
-        - w pełni rafinowany olej z soi częściowo utwardzony
-        - częściowo utwardzony w pełni rafinowany olej z soi
-        - olej z soi częściowo utwardzony w pełni rafinowany
-        - olej sojowy częściowo uwodorniony w pełni rafinowany
-        - w pełni rafinowany olej z soi częściowo uwodorniony
-        - częściowo uwodorniony w pełni rafinowany olej z soi
-        - olej z soi częściowo uwodorniony w pełni rafinowany
-        - częściowo utwardzony olej sojowy w pełni rafinowany
-        - częściowo utwardzony olej z soi w pełni rafinowany
-        - częściowo uwodorniony olej sojowy w pełni rafinowany
-        - częściowo uwodorniony olej z soi w pełni rafinowany
-        - w pełni rafinowany częściowo utwardzony olej sojowy
-        - olej sojowy w pełni rafinowany częściowo utwardzony
-        - w pełni rafinowany częściowo utwardzony olej z soi
-        - olej z soi w pełni rafinowany częściowo utwardzony
-        - w pełni rafinowany częściowo uwodorniony olej sojowy
-        - olej sojowy w pełni rafinowany częściowo uwodorniony
-        - w pełni rafinowany częściowo uwodorniony olej z soi
-        - olej z soi w pełni rafinowany częściowo uwodorniony
-    process:
-      en: "Fully refined soybean oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids; the label states the full refining."
-      pl: "W pełni rafinowany olej sojowy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans; etykieta podaje pełną rafinację."
-    tells:
-      - '^(?=.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )czesciowo (?:utwardzon|uwodorn))'
-      - '^(?=.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )partially hydrogenated)'
-      - '^(?=.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )teilweise gehartet)'
-  - id: fully-hydrogenated-fully-refined
-    names:
-      en:
-        - fully refined fully hydrogenated soybean oil partially
-        - fully refined fully hydrogenated soybean oil partly
-        - fully refined fully hydrogenated soybean oil incompletely
-        - fully refined fully hydrogenated soybean oil not fully
-        - fully refined fully hydrogenated soybean oil not completely
-        - fully refined fully hydrogenated soybean oil
-        - fully hydrogenated fully refined soybean oil
-        - fully refined fully hydrogenated soya oil
-        - fully hydrogenated fully refined soya oil
-        - totally hydrogenated fully refined soybean oil
-        - totally hydrogenated fully refined soya oil
-      pl:
         - całkowicie utwardzony w pełni rafinowany olej sojowy częściowo
         - całkowicie utwardzony w pełni rafinowany olej sojowy niecałkowicie
         - całkowicie utwardzony w pełni rafinowany olej sojowy nie całkowicie
@@ -2279,6 +2181,104 @@ variants:
         - w pełni rafinowany w pełni uwodorniony olej z soi nie w pełni
         - w pełni rafinowany w pełni uwodorniony olej z soi nie do końca
         - w pełni rafinowany w pełni uwodorniony olej z soi niepełnie
+      de:
+        - vollständig gehärtetes Sojaöl
+    process:
+      en: "Soybean oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
+      pl: "Olej sojowy ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
+    tells:
+      - '^(?!(?=.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert))(?!.*\b(?:partially|partly|incompletely|not fully|not completely|czesciowo|niecalkowicie|nie calkowicie|nie w pelni|nie do konca|niepelnie)(?: x)?$)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )calkowicie (?:utwardzon|uwodorn))'
+      - '^(?!(?=.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert))(?!.*\b(?:partially|partly|incompletely|not fully|not completely|czesciowo|niecalkowicie|nie calkowicie|nie w pelni|nie do konca|niepelnie)(?: x)?$)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )w pelni (?:utwardzon|uwodorn))'
+      - '^(?!(?=.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert))(?!.*\b(?:partially|partly|incompletely|not fully|not completely|czesciowo|niecalkowicie|nie calkowicie|nie w pelni|nie do konca|niepelnie)(?: x)?$)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )fully hydrogenated)'
+      - '^(?!(?=.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert))(?!.*\b(?:partially|partly|incompletely|not fully|not completely|czesciowo|niecalkowicie|nie calkowicie|nie w pelni|nie do konca|niepelnie)(?: x)?$)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )totally hydrogenated)'
+      - '^(?!(?=.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert))(?!.*\b(?:partially|partly|incompletely|not fully|not completely|czesciowo|niecalkowicie|nie calkowicie|nie w pelni|nie do konca|niepelnie)(?: x)?$)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )vollstandig gehartet)'
+
+  - id: hydrogenated-fully-refined
+    names:
+      en:
+        - fully refined hydrogenated soybean oil
+        - hydrogenated fully refined soybean oil
+        - fully refined hydrogenated soya oil
+        - hydrogenated fully refined soya oil
+      pl:
+        - w pełni rafinowany olej sojowy utwardzony
+        - utwardzony w pełni rafinowany olej sojowy
+        - w pełni rafinowany olej sojowy uwodorniony
+        - uwodorniony w pełni rafinowany olej sojowy
+        - olej sojowy w pełni rafinowany utwardzony
+        - olej sojowy utwardzony w pełni rafinowany
+        - w pełni rafinowany utwardzony olej sojowy
+        - w pełni rafinowany olej z soi utwardzony
+        - utwardzony w pełni rafinowany olej z soi
+        - olej z soi w pełni rafinowany utwardzony
+        - olej z soi utwardzony w pełni rafinowany
+        - w pełni rafinowany utwardzony olej z soi
+        - olej sojowy w pełni rafinowany uwodorniony
+        - olej sojowy uwodorniony w pełni rafinowany
+        - w pełni rafinowany uwodorniony olej sojowy
+        - w pełni rafinowany olej z soi uwodorniony
+        - uwodorniony w pełni rafinowany olej z soi
+        - olej z soi w pełni rafinowany uwodorniony
+        - olej z soi uwodorniony w pełni rafinowany
+        - w pełni rafinowany uwodorniony olej z soi
+        - utwardzony olej sojowy w pełni rafinowany
+        - utwardzony olej z soi w pełni rafinowany
+        - uwodorniony olej sojowy w pełni rafinowany
+        - uwodorniony olej z soi w pełni rafinowany
+    process:
+      en: "Fully refined soybean oil hardened by hydrogenation, as the label states both; the label does not specify partial or full hydrogenation."
+      pl: "W pełni rafinowany olej sojowy utwardzony przez uwodornienie, jak podaje etykieta; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
+    tells:
+      - '^(?=.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert))(?!.*\b(?:partially|partly|incompletely|not fully|not completely|czesciowo|niecalkowicie|nie calkowicie|nie w pelni|nie do konca|niepelnie)(?: x)?$).*?(?:(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!partially )(?<!fully )(?<!totally )(?<!teilweise )(?<!vollstandig )(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:utwardzon|uwodornion|utwardzan[yea]\b|uwodornian[yea]\b|hydrogenated|gehartet)|(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:po|podda\w*|podlega\w*)(?: (?!(?:nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b)\S+){0,3}? (?:uwodornieni|uwodornian|utwardzeni|utwardzan))'
+  - id: partially-hydrogenated-fully-refined
+    names:
+      en:
+        - partially hydrogenated fully refined soybean oil
+        - partially hydrogenated fully refined soya oil
+        - fully refined partially hydrogenated soybean oil
+        - fully refined partially hydrogenated soya oil
+      pl:
+        - w pełni rafinowany olej sojowy częściowo utwardzony
+        - częściowo utwardzony w pełni rafinowany olej sojowy
+        - w pełni rafinowany olej sojowy częściowo uwodorniony
+        - częściowo uwodorniony w pełni rafinowany olej sojowy
+        - olej sojowy częściowo utwardzony w pełni rafinowany
+        - w pełni rafinowany olej z soi częściowo utwardzony
+        - częściowo utwardzony w pełni rafinowany olej z soi
+        - olej z soi częściowo utwardzony w pełni rafinowany
+        - olej sojowy częściowo uwodorniony w pełni rafinowany
+        - w pełni rafinowany olej z soi częściowo uwodorniony
+        - częściowo uwodorniony w pełni rafinowany olej z soi
+        - olej z soi częściowo uwodorniony w pełni rafinowany
+        - częściowo utwardzony olej sojowy w pełni rafinowany
+        - częściowo utwardzony olej z soi w pełni rafinowany
+        - częściowo uwodorniony olej sojowy w pełni rafinowany
+        - częściowo uwodorniony olej z soi w pełni rafinowany
+        - w pełni rafinowany częściowo utwardzony olej sojowy
+        - olej sojowy w pełni rafinowany częściowo utwardzony
+        - w pełni rafinowany częściowo utwardzony olej z soi
+        - olej z soi w pełni rafinowany częściowo utwardzony
+        - w pełni rafinowany częściowo uwodorniony olej sojowy
+        - olej sojowy w pełni rafinowany częściowo uwodorniony
+        - w pełni rafinowany częściowo uwodorniony olej z soi
+        - olej z soi w pełni rafinowany częściowo uwodorniony
+    process:
+      en: "Fully refined soybean oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids; the label states the full refining."
+      pl: "W pełni rafinowany olej sojowy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans; etykieta podaje pełną rafinację."
+    tells:
+      - '^(?=.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert))(?!.*\b(?:partially|partly|incompletely|not fully|not completely|czesciowo|niecalkowicie|nie calkowicie|nie w pelni|nie do konca|niepelnie)(?: x)?$).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )czesciowo (?:utwardzon|uwodorn))'
+      - '^(?=.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert))(?!.*\b(?:partially|partly|incompletely|not fully|not completely|czesciowo|niecalkowicie|nie calkowicie|nie w pelni|nie do konca|niepelnie)(?: x)?$).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )partially hydrogenated)'
+      - '^(?=.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert))(?!.*\b(?:partially|partly|incompletely|not fully|not completely|czesciowo|niecalkowicie|nie calkowicie|nie w pelni|nie do konca|niepelnie)(?: x)?$).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )teilweise gehartet)'
+  - id: fully-hydrogenated-fully-refined
+    names:
+      en:
+        - fully refined fully hydrogenated soybean oil
+        - fully hydrogenated fully refined soybean oil
+        - fully refined fully hydrogenated soya oil
+        - fully hydrogenated fully refined soya oil
+        - totally hydrogenated fully refined soybean oil
+        - totally hydrogenated fully refined soya oil
+      pl:
         - w pełni rafinowany olej sojowy całkowicie utwardzony
         - całkowicie utwardzony w pełni rafinowany olej sojowy
         - w pełni rafinowany olej sojowy całkowicie uwodorniony
@@ -2331,11 +2331,11 @@ variants:
       en: "Fully refined soybean oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat; the label states the full refining."
       pl: "W pełni rafinowany olej sojowy ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans; etykieta podaje pełną rafinację."
     tells:
-      - '^(?=.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )calkowicie (?:utwardzon|uwodorn))'
-      - '^(?=.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )w pelni (?:utwardzon|uwodorn))'
-      - '^(?=.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )fully hydrogenated)'
-      - '^(?=.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )totally hydrogenated)'
-      - '^(?=.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert)).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )vollstandig gehartet)'
+      - '^(?=.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert))(?!.*\b(?:partially|partly|incompletely|not fully|not completely|czesciowo|niecalkowicie|nie calkowicie|nie w pelni|nie do konca|niepelnie)(?: x)?$).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )calkowicie (?:utwardzon|uwodorn))'
+      - '^(?=.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert))(?!.*\b(?:partially|partly|incompletely|not fully|not completely|czesciowo|niecalkowicie|nie calkowicie|nie w pelni|nie do konca|niepelnie)(?: x)?$).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )w pelni (?:utwardzon|uwodorn))'
+      - '^(?=.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert))(?!.*\b(?:partially|partly|incompletely|not fully|not completely|czesciowo|niecalkowicie|nie calkowicie|nie w pelni|nie do konca|niepelnie)(?: x)?$).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )fully hydrogenated)'
+      - '^(?=.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert))(?!.*\b(?:partially|partly|incompletely|not fully|not completely|czesciowo|niecalkowicie|nie calkowicie|nie w pelni|nie do konca|niepelnie)(?: x)?$).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )totally hydrogenated)'
+      - '^(?=.*(?<!\b(?:not|non|nie|nicht)(?: (?!(?:zawiera\w*|contain\w*|enthalt\w*|gmo|gm|genetycz\w*|modyfik\w*|hydrogenat\w*|utwardz\w*|uwodorn\w*|gehartet|partially|fully|totally|czesciowo|calkowicie|teilweise|vollstandig)\b)\S+){0,3} )(?:\b(?:fully|totally) refined\b|\b(?:w pelni|calkowicie) rafinowan|\bvollraffiniert))(?!.*\b(?:partially|partly|incompletely|not fully|not completely|czesciowo|niecalkowicie|nie calkowicie|nie w pelni|nie do konca|niepelnie)(?: x)?$).*?(?:(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )vollstandig gehartet)'
 assertions:
   - code: origin.plant
     certainty: 'yes'
