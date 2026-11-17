@@ -235,17 +235,17 @@ variants:
     process:
       en: "A nut oil whose label names no nut: peanut or a tree nut are both possible. A named nut outside Annex II (pine nut, coconut) is not this variant."
       pl: "Olej orzechowy, którego etykieta nie podaje orzecha: możliwe są zarówno orzeszki ziemne, jak i orzechy. Orzech spoza Aneksu II (piniowy, kokosowy) to nie ten wariant."
-    tells: ['^(?!.*(?:piniow|\bpinii|cedrow|\bpine\b|\bcedar\b|pinien|zirbel|zedern|kokos|kasztan|tygrys|\bshea\b|coconut|chestnut|tiger ?nut|kastanie|erdmandel))(?!.*(?:orzech\w* (?:wlosk|lasko|nerkow|brazylij|pekan|makadami)|\bmigdal|\bpistacj|\bmakadami|\bpekan|\bnerkow|\bwalnut|\bhazelnut|\balmond|\bcashew|\bpistachio|\bmacadamia|\bpecan|\bbrazil nut))(?!.*(?:orzeszk\w* ziemn|orzech\w* ziemn|\barachid|\bpeanut|\bgroundnut)).+']
+    tells: ['^(?!.*(?:piniow|\bpinii|cedrow|\bpine\b|\bcedar\b|pinien|zirbel|zedern|kokos|kasztan|tygrys|\bshea\b|coconut|chestnut|tiger ?nut|kastanie|erdmandel))(?!.*(?:orzech\w* (?:wlosk|lasko|nerkow|brazylij|pekan|makadami|queensland)|\bmigdal|\bpistacj|\bmakadami|\bpekan|\bnerkow|\blaskow|\bwlosk|\bbrazylij|\bwalnut|\bhazelnut|\bfilbert|\balmond|\bcashew|\bpistachio|\bmacadamia|\bpecan|\bbrazil nut|\bqueensland|\bmandel|haselnus|walnus|paranus|pistazi))(?!.*(?:orzeszk\w* ziemn|orzech\w* ziemn|\bziemn(?:e|ych|y|a|ymi)\b|\barachid|\barachis|\bpeanut|\bgroundnut|erdnus)).+']
   - id: tree-nut-named
     process:
       en: "A nut oil whose label names a tree nut as its source (in the name or in brackets)."
       pl: "Olej orzechowy, którego etykieta podaje orzech jako źródło (w nazwie lub w nawiasie)."
-    tells: ['(?:orzech\w* (?:wlosk|lasko|nerkow|brazylij|pekan|makadami)|\bmigdal|\bpistacj|\bmakadami|\bpekan|\bnerkow|\bwalnut|\bhazelnut|\balmond|\bcashew|\bpistachio|\bmacadamia|\bpecan|\bbrazil nut)']
+    tells: ['(?:orzech\w* (?:wlosk|lasko|nerkow|brazylij|pekan|makadami|queensland)|\bmigdal|\bpistacj|\bmakadami|\bpekan|\bnerkow|\blaskow|\bwlosk|\bbrazylij|\bwalnut|\bhazelnut|\bfilbert|\balmond|\bcashew|\bpistachio|\bmacadamia|\bpecan|\bbrazil nut|\bqueensland|\bmandel|haselnus|walnus|paranus|pistazi)']
   - id: peanut-named
     process:
       en: "A nut oil whose label names peanuts as its source (in the name or in brackets)."
       pl: "Olej orzechowy, którego etykieta podaje orzeszki ziemne jako źródło (w nazwie lub w nawiasie)."
-    tells: ['(?:orzeszk\w* ziemn|orzech\w* ziemn|\barachid|\bpeanut|\bgroundnut)']
+    tells: ['(?:orzeszk\w* ziemn|orzech\w* ziemn|\bziemn(?:e|ych|y|a|ymi)\b|\barachid|\barachis|\bpeanut|\bgroundnut|erdnus)']
   - id: hydrogenated
     process:
       en: "Nut oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
