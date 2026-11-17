@@ -736,6 +736,22 @@ Deno.test("a stated full refining keeps the soy exemption on a hydrogenated oil,
       assertEquals(soyFlag(label, idx)?.certainty, "maybe", label);
     }
   }
+  // a "not" before the name negates its full refining, through any adverb: soy maybe, never the exemption (#18
+  // battery, oil matrix; Sol 6.1 on #18 at 029b6bc)
+  for (
+    const oil of ["not quite", "not at all", "not entirely"].map((n) =>
+      `${n} fully refined hydrogenated soybean oil`
+    )
+  ) {
+    for (const label of [`Ingredients: ${oil}`, `Ingredients: rapeseed oil (${oil})`]) {
+      assertEquals(soyFlag(label, idx)?.certainty, "maybe", label);
+    }
+  }
+  // "not containing" is an exclusion verb: the denial keeps the exemption
+  assertEquals(
+    soyFlag("Ingredients: rapeseed oil (not containing fully refined hydrogenated soybean oil)", idx),
+    undefined,
+  );
   // a "not" right before the name negates its full refining: soy maybe, never the exemption (#18 battery, oil matrix)
   for (
     const label of [

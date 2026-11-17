@@ -622,12 +622,16 @@ export class KbIndex {
     let k = start - 1;
     while (k > 0 && fires(k)) k--;
     const gap = tokens.slice(k + 1, start);
+    // An adjective negator ("not", "nie") not followed by an exclusion verb ("not containing", "nie zawiera") negates
+    // the words after it, through any adverb ("not quite fully refined", "not at all fully refined", "nie całkiem w
+    // pełni rafinowany"): no exemption the name states stands (Sol 6.1 on #18 at 029b6bc).
+    const adjectival = ADJECTIVE_NEGATORS.test(tokens[k] ?? "") && !DENIAL_FILLERS.has(tokens[k + 1] ?? "");
     // Not denied: the plain entry (#14), except a variant that states an exemption, which stands as named ("bez cukru
     // całkowicie utwardzony w pełni rafinowany olej sojowy": hydrogenated, exempt; Sol 6.1 on #18 at 0547db1)
-    const notDenied = this.exempting.has(`${e.ingredientId}/${e.variantId}`) ? "keep" : "drop";
+    const notDenied = this.exempting.has(`${e.ingredientId}/${e.variantId}`) && !adjectival ? "keep" : "drop";
     if (gap.length > DENIAL_GAP_MAX) return notDenied;
     if (!gap.every((w) => DENIAL_FILLERS.has(w) || DENIAL_ADVERBS.has(w))) return notDenied;
-    return !gap.length && ADJECTIVE_NEGATORS.test(tokens[k]) ? "negate" : "deny";
+    return adjectival ? "negate" : "deny";
   }
 
   /**
