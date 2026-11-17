@@ -1,0 +1,345 @@
+id: tiger-nut-oil
+type: fat
+names:
+  en:
+    - tiger nut oil
+    - tigernut oil
+    - tiger nuts oil
+    - earth almond oil
+    - chufa oil
+    - cyperus esculentus oil
+    - not hydrogenated chufa oil
+    - not partially hydrogenated chufa oil
+    - not fully hydrogenated chufa oil
+    - non partially hydrogenated chufa oil
+    - not hydrogenated cyperus esculentus oil
+    - not partially hydrogenated cyperus esculentus oil
+    - not fully hydrogenated cyperus esculentus oil
+    - non partially hydrogenated cyperus esculentus oil
+    - not hydrogenated earth almond oil
+    - not partially hydrogenated earth almond oil
+    - not fully hydrogenated earth almond oil
+    - non partially hydrogenated earth almond oil
+    - not hydrogenated tiger nut oil
+    - not partially hydrogenated tiger nut oil
+    - not fully hydrogenated tiger nut oil
+    - non partially hydrogenated tiger nut oil
+    - not hydrogenated tiger nuts oil
+    - not partially hydrogenated tiger nuts oil
+    - not fully hydrogenated tiger nuts oil
+    - non partially hydrogenated tiger nuts oil
+    - not hydrogenated tigernut oil
+    - not partially hydrogenated tigernut oil
+    - not fully hydrogenated tigernut oil
+    - non partially hydrogenated tigernut oil
+    - non-hydrogenated tiger nut oil
+    - unhydrogenated tiger nut oil
+    - non-hydrogenated tigernut oil
+    - unhydrogenated tigernut oil
+    - non-hydrogenated tiger nuts oil
+    - unhydrogenated tiger nuts oil
+    - non-hydrogenated earth almond oil
+    - unhydrogenated earth almond oil
+    - non-hydrogenated chufa oil
+    - unhydrogenated chufa oil
+    - non-hydrogenated cyperus esculentus oil
+    - unhydrogenated cyperus esculentus oil
+  pl:
+    - olej z migdałów ziemnych
+    - olej z migdała ziemnego
+    - olej z orzechów tygrysich
+    - olej z orzeszków tygrysich
+    - olej z cibory jadalnej
+    - olej cibory jadalnej
+    - tłuszcz roślinny z cibory jadalnej
+    - tłuszcze roślinne z cibory jadalnej
+    - olej roślinny z cibory jadalnej
+    - oleje roślinne z cibory jadalnej
+    - tłuszcz roślinny z migdała ziemnego
+    - tłuszcze roślinne z migdała ziemnego
+    - olej roślinny z migdała ziemnego
+    - oleje roślinne z migdała ziemnego
+    - tłuszcz roślinny z migdałów ziemnych
+    - tłuszcze roślinne z migdałów ziemnych
+    - olej roślinny z migdałów ziemnych
+    - oleje roślinne z migdałów ziemnych
+    - tłuszcz roślinny z orzechów tygrysich
+    - tłuszcze roślinne z orzechów tygrysich
+    - olej roślinny z orzechów tygrysich
+    - oleje roślinne z orzechów tygrysich
+    - tłuszcz roślinny z orzeszków tygrysich
+    - tłuszcze roślinne z orzeszków tygrysich
+    - olej roślinny z orzeszków tygrysich
+    - oleje roślinne z orzeszków tygrysich
+    - nie utwardzony olej z migdałów ziemnych
+    - olej z migdałów ziemnych nie utwardzony
+    - nie uwodorniony olej z migdałów ziemnych
+    - olej z migdałów ziemnych nie uwodorniony
+    - nieutwardzony olej z migdałów ziemnych
+    - olej z migdałów ziemnych nieutwardzony
+    - nieuwodorniony olej z migdałów ziemnych
+    - olej z migdałów ziemnych nieuwodorniony
+    - nie utwardzony olej z migdała ziemnego
+    - olej z migdała ziemnego nie utwardzony
+    - nie uwodorniony olej z migdała ziemnego
+    - olej z migdała ziemnego nie uwodorniony
+    - nieutwardzony olej z migdała ziemnego
+    - olej z migdała ziemnego nieutwardzony
+    - nieuwodorniony olej z migdała ziemnego
+    - olej z migdała ziemnego nieuwodorniony
+    - nie utwardzony olej z orzechów tygrysich
+    - olej z orzechów tygrysich nie utwardzony
+    - nie uwodorniony olej z orzechów tygrysich
+    - olej z orzechów tygrysich nie uwodorniony
+    - nieutwardzony olej z orzechów tygrysich
+    - olej z orzechów tygrysich nieutwardzony
+    - nieuwodorniony olej z orzechów tygrysich
+    - olej z orzechów tygrysich nieuwodorniony
+    - nie utwardzony olej z orzeszków tygrysich
+    - olej z orzeszków tygrysich nie utwardzony
+    - nie uwodorniony olej z orzeszków tygrysich
+    - olej z orzeszków tygrysich nie uwodorniony
+    - nieutwardzony olej z orzeszków tygrysich
+    - olej z orzeszków tygrysich nieutwardzony
+    - nieuwodorniony olej z orzeszków tygrysich
+    - olej z orzeszków tygrysich nieuwodorniony
+    - nie utwardzony olej z cibory jadalnej
+    - olej z cibory jadalnej nie utwardzony
+    - nie uwodorniony olej z cibory jadalnej
+    - olej z cibory jadalnej nie uwodorniony
+    - nieutwardzony olej z cibory jadalnej
+    - olej z cibory jadalnej nieutwardzony
+    - nieuwodorniony olej z cibory jadalnej
+    - olej z cibory jadalnej nieuwodorniony
+    - nie utwardzony olej cibory jadalnej
+    - olej cibory jadalnej nie utwardzony
+    - nie uwodorniony olej cibory jadalnej
+    - olej cibory jadalnej nie uwodorniony
+    - nieutwardzony olej cibory jadalnej
+    - olej cibory jadalnej nieutwardzony
+    - nieuwodorniony olej cibory jadalnej
+    - olej cibory jadalnej nieuwodorniony
+  de:
+    - Erdmandelöl
+    - Tigernussöl
+summary:
+  en: >-
+    Vegetable oil pressed from tiger nuts (earth almonds), the tubers of Cyperus esculentus. Despite the names, tiger
+    nuts are neither almonds nor peanuts nor any tree nut listed in EU Annex II item 8, so the oil carries no nut or
+    peanut allergen declaration.
+  pl: >-
+    Olej roślinny tłoczony z migdałów ziemnych (orzechów tygrysich), bulw cibory jadalnej (Cyperus esculentus). Mimo
+    nazwy migdały ziemne nie są migdałami, orzeszkami ziemnymi ani żadnym orzechem z Aneksu II UE (punkt 8), więc olej
+    nie podlega deklaracji alergenu orzechów ani orzeszków ziemnych.
+variants:
+  - id: hydrogenated
+    names:
+      en:
+        - hydrogenated tiger nut oil
+        - hydrogenated tigernut oil
+        - hydrogenated tiger nuts oil
+        - hydrogenated earth almond oil
+        - hydrogenated chufa oil
+        - hydrogenated cyperus esculentus oil
+      pl:
+        - utwardzony olej z migdałów ziemnych
+        - olej z migdałów ziemnych utwardzony
+        - uwodorniony olej z migdałów ziemnych
+        - olej z migdałów ziemnych uwodorniony
+        - utwardzony olej z migdała ziemnego
+        - olej z migdała ziemnego utwardzony
+        - uwodorniony olej z migdała ziemnego
+        - olej z migdała ziemnego uwodorniony
+        - utwardzony olej z orzechów tygrysich
+        - olej z orzechów tygrysich utwardzony
+        - uwodorniony olej z orzechów tygrysich
+        - olej z orzechów tygrysich uwodorniony
+        - utwardzony olej z orzeszków tygrysich
+        - olej z orzeszków tygrysich utwardzony
+        - uwodorniony olej z orzeszków tygrysich
+        - olej z orzeszków tygrysich uwodorniony
+        - utwardzony olej z cibory jadalnej
+        - olej z cibory jadalnej utwardzony
+        - uwodorniony olej z cibory jadalnej
+        - olej z cibory jadalnej uwodorniony
+        - utwardzony olej cibory jadalnej
+        - olej cibory jadalnej utwardzony
+        - uwodorniony olej cibory jadalnej
+        - olej cibory jadalnej uwodorniony
+    process:
+      en: "Tiger nut oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
+      pl: "Olej z migdałów ziemnych utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
+    tells:
+      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!nie )(?<!partially )(?<!fully )(?<!totally )(?<!non )(?<!not )(?<!teilweise )(?<!vollstandig )(?<!nicht )\b(?:utwardzon|uwodorn|hydrogenated|gehartet)'
+  - id: partially-hydrogenated
+    names:
+      en:
+        - partially hydrogenated tiger nut oil
+        - partially hydrogenated tigernut oil
+        - partially hydrogenated tiger nuts oil
+        - partially hydrogenated earth almond oil
+        - partially hydrogenated chufa oil
+        - partially hydrogenated cyperus esculentus oil
+      pl:
+        - częściowo utwardzony olej z migdałów ziemnych
+        - olej z migdałów ziemnych częściowo utwardzony
+        - częściowo uwodorniony olej z migdałów ziemnych
+        - olej z migdałów ziemnych częściowo uwodorniony
+        - częściowo utwardzony olej z migdała ziemnego
+        - olej z migdała ziemnego częściowo utwardzony
+        - częściowo uwodorniony olej z migdała ziemnego
+        - olej z migdała ziemnego częściowo uwodorniony
+        - częściowo utwardzony olej z orzechów tygrysich
+        - olej z orzechów tygrysich częściowo utwardzony
+        - częściowo uwodorniony olej z orzechów tygrysich
+        - olej z orzechów tygrysich częściowo uwodorniony
+        - częściowo utwardzony olej z orzeszków tygrysich
+        - olej z orzeszków tygrysich częściowo utwardzony
+        - częściowo uwodorniony olej z orzeszków tygrysich
+        - olej z orzeszków tygrysich częściowo uwodorniony
+        - częściowo utwardzony olej z cibory jadalnej
+        - olej z cibory jadalnej częściowo utwardzony
+        - częściowo uwodorniony olej z cibory jadalnej
+        - olej z cibory jadalnej częściowo uwodorniony
+        - częściowo utwardzony olej cibory jadalnej
+        - olej cibory jadalnej częściowo utwardzony
+        - częściowo uwodorniony olej cibory jadalnej
+        - olej cibory jadalnej częściowo uwodorniony
+    process:
+      en: "Tiger nut oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
+      pl: "Olej z migdałów ziemnych, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
+    tells:
+      - 'czesciowo (?:utwardzon|uwodorn)'
+      - '(?<!not )(?<!non )partially hydrogenated'
+      - 'teilweise gehartet'
+  - id: fully-hydrogenated
+    names:
+      en:
+        - fully hydrogenated tiger nut oil
+        - totally hydrogenated tiger nut oil
+        - fully hydrogenated tigernut oil
+        - totally hydrogenated tigernut oil
+        - fully hydrogenated tiger nuts oil
+        - totally hydrogenated tiger nuts oil
+        - fully hydrogenated earth almond oil
+        - totally hydrogenated earth almond oil
+        - fully hydrogenated chufa oil
+        - totally hydrogenated chufa oil
+        - fully hydrogenated cyperus esculentus oil
+        - totally hydrogenated cyperus esculentus oil
+      pl:
+        - całkowicie utwardzony olej z migdałów ziemnych
+        - olej z migdałów ziemnych całkowicie utwardzony
+        - całkowicie uwodorniony olej z migdałów ziemnych
+        - olej z migdałów ziemnych całkowicie uwodorniony
+        - w pełni utwardzony olej z migdałów ziemnych
+        - olej z migdałów ziemnych w pełni utwardzony
+        - w pełni uwodorniony olej z migdałów ziemnych
+        - olej z migdałów ziemnych w pełni uwodorniony
+        - całkowicie utwardzony olej z migdała ziemnego
+        - olej z migdała ziemnego całkowicie utwardzony
+        - całkowicie uwodorniony olej z migdała ziemnego
+        - olej z migdała ziemnego całkowicie uwodorniony
+        - w pełni utwardzony olej z migdała ziemnego
+        - olej z migdała ziemnego w pełni utwardzony
+        - w pełni uwodorniony olej z migdała ziemnego
+        - olej z migdała ziemnego w pełni uwodorniony
+        - całkowicie utwardzony olej z orzechów tygrysich
+        - olej z orzechów tygrysich całkowicie utwardzony
+        - całkowicie uwodorniony olej z orzechów tygrysich
+        - olej z orzechów tygrysich całkowicie uwodorniony
+        - w pełni utwardzony olej z orzechów tygrysich
+        - olej z orzechów tygrysich w pełni utwardzony
+        - w pełni uwodorniony olej z orzechów tygrysich
+        - olej z orzechów tygrysich w pełni uwodorniony
+        - całkowicie utwardzony olej z orzeszków tygrysich
+        - olej z orzeszków tygrysich całkowicie utwardzony
+        - całkowicie uwodorniony olej z orzeszków tygrysich
+        - olej z orzeszków tygrysich całkowicie uwodorniony
+        - w pełni utwardzony olej z orzeszków tygrysich
+        - olej z orzeszków tygrysich w pełni utwardzony
+        - w pełni uwodorniony olej z orzeszków tygrysich
+        - olej z orzeszków tygrysich w pełni uwodorniony
+        - całkowicie utwardzony olej z cibory jadalnej
+        - olej z cibory jadalnej całkowicie utwardzony
+        - całkowicie uwodorniony olej z cibory jadalnej
+        - olej z cibory jadalnej całkowicie uwodorniony
+        - w pełni utwardzony olej z cibory jadalnej
+        - olej z cibory jadalnej w pełni utwardzony
+        - w pełni uwodorniony olej z cibory jadalnej
+        - olej z cibory jadalnej w pełni uwodorniony
+        - całkowicie utwardzony olej cibory jadalnej
+        - olej cibory jadalnej całkowicie utwardzony
+        - całkowicie uwodorniony olej cibory jadalnej
+        - olej cibory jadalnej całkowicie uwodorniony
+        - w pełni utwardzony olej cibory jadalnej
+        - olej cibory jadalnej w pełni utwardzony
+        - w pełni uwodorniony olej cibory jadalnej
+        - olej cibory jadalnej w pełni uwodorniony
+    process:
+      en: "Tiger nut oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
+      pl: "Olej z migdałów ziemnych ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
+    tells:
+      - 'calkowicie (?:utwardzon|uwodorn)'
+      - 'w pelni (?:utwardzon|uwodorn)'
+      - '(?<!not )(?<!non )fully hydrogenated'
+      - '(?<!not )(?<!non )totally hydrogenated'
+      - 'vollstandig gehartet'
+assertions:
+  - code: origin.vegetable_oil_derived
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A pressed vegetable oil; EU labelling requires its specific plant origin to be named.
+      pl: Wyciskany olej roślinny; przepisy UE o etykietowaniu wymagają podania jego konkretnego pochodzenia rośliny.
+    sources:
+      - id: reg-1169-2011
+        locator: Annex VII Part A, point 8
+  - code: processing.hydrogenated
+    variant: hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares hydrogenation without specifying partial or full, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje utwardzenie (bez wskazania, czy częściowe, czy całkowite), czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: processing.hydrogenated
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares partial hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje częściowe utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: health.trans_fat_source
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Partial hydrogenation is the main industrial source of trans fat; EU food sold to consumers is capped at 2 g trans fat per 100 g of fat."
+      pl: "Częściowe utwardzanie jest głównym przemysłowym źródłem tłuszczów trans; żywność sprzedawana konsumentom w UE ma limit 2 g tłuszczów trans na 100 g tłuszczu."
+    sources:
+      - id: reg-2019-649
+  - code: processing.hydrogenated
+    variant: fully-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares full hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje całkowite utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "No allergen.nuts on purpose: Annex II item 8 lists almonds, hazelnuts, walnuts, cashews, pecans, Brazil nuts, pistachios and macadamia nuts, not tiger nuts (tubers of Cyperus esculentus, sold as 'migdały ziemne')."
