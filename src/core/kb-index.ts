@@ -34,6 +34,13 @@ export interface NameMatch {
   matched: string;
 }
 
+/** A variant name an item spells out and denies (`KbIndex.match`): read like a claim, never the match. */
+export interface DeniedName {
+  ingredientId: string;
+  /** The normalised name as the item spells it. */
+  matched: string;
+}
+
 export interface SearchHit {
   id: string;
   score: number;
@@ -301,11 +308,12 @@ export class KbIndex {
   }
 
   /**
-   * Resolve one item's name (no brackets) to an ingredient. `excluded`, when given, receives the ingredients whose
-   * variant name the item names and denies ("without using partially hydrogenated sesame oil"): such a name is read
-   * like a claim, so it is never the match, and a caller keeps only the food's allergens, at "maybe" (b2 policy B).
+   * Resolve one item's name (no brackets) to an ingredient. `excluded`, when given, receives every variant name the
+   * item spells out and denies ("without using partially hydrogenated sesame oil"), whatever else the item matches:
+   * such a name is read like a claim, so it is never the match, and a caller keeps only the food's allergens, at
+   * "maybe" (b2 policy B).
    */
-  match(text: string, excluded?: string[]): NameMatch | null {
+  match(text: string, excluded?: DeniedName[]): NameMatch | null {
     const norm = normName(text);
     if (!norm) return null;
     const exact = this.byNorm.get(norm);
@@ -332,31 +340,47 @@ export class KbIndex {
     // the plain food inside it is the match.
     const blocked = new Uint8Array(tokens.length);
     let blockedIng: Set<string> | undefined;
+    // With `excluded`, the scan goes on past the match for denied names only, so a longer name elsewhere in the item
+    // ("extra virgin olive oil without using hydrogenated soybean oil") cannot hide one.
+    const collect = !!excluded && norm.length <= TELL_TEXT_MAX;
+    let found: NameMatch | null = null;
+    let foundAt = 0;
+    let foundEnd = 0;
     // Longest known sub-phrase: "koncentrat bialka serwatkowego instant" → "koncentrat bialka serwatkowego".
-    for (let len = Math.min(tokens.length - 1, SUBPHRASE_MAX_TOKENS); len >= 1; len--) {
+    scan: for (let len = Math.min(tokens.length - 1, SUBPHRASE_MAX_TOKENS); len >= 1; len--) {
       for (let start = 0; start + len <= tokens.length; start++) {
         if (blocked[start] || skip?.(start, start + len - 1)) continue;
+        // a name inside the match is part of it
+        if (found && start < foundEnd && start + len > foundAt) continue;
         const span = tokens.slice(start, start + len).join(" ");
         if (span.length < 3 || this.exactOnly.has(span)) continue;
         const e = this.byNorm.get(span);
-        if (e) {
-          if (this.deniedVariant(e, norm)) {
-            blocked.fill(1, start, start + len);
-            if (!blockedIng?.has(e.ingredientId)) excluded?.push(e.ingredientId);
-            (blockedIng ??= new Set()).add(e.ingredientId);
-            continue;
+        if (!e) continue;
+        // the item up to the name's end: a negator after the name ("… poultry fat without added sugar") is no
+        // evidence that the name is denied
+        if (this.deniedVariant(e, tokens.slice(0, start + len).join(" "), norm.length)) {
+          blocked.fill(1, start, start + len);
+          if (!excluded?.some((x) => x.matched === span)) {
+            excluded?.push({ ingredientId: e.ingredientId, matched: span });
           }
-          const coverage = span.length / norm.length;
-          return {
-            ingredientId: e.ingredientId,
-            variantId: e.variantId,
-            matchType: "sub_phrase",
-            confidence: Math.round((0.6 + 0.35 * coverage) * 100) / 100,
-            matched: span,
-          };
+          (blockedIng ??= new Set()).add(e.ingredientId);
+          continue;
         }
+        if (found) continue;
+        const coverage = span.length / norm.length;
+        found = {
+          ingredientId: e.ingredientId,
+          variantId: e.variantId,
+          matchType: "sub_phrase",
+          confidence: Math.round((0.6 + 0.35 * coverage) * 100) / 100,
+          matched: span,
+        };
+        foundAt = start;
+        foundEnd = start + len;
+        if (!collect) break scan;
       }
     }
+    if (found) return found;
     if (norm.length >= 5) {
       const hit = this.nearestName(norm);
       const best =
@@ -394,18 +418,19 @@ export class KbIndex {
 
   /**
    * Whether the item denies the variant a name selects: a droppable variant (`markDroppable`) none of whose tells
-   * fires on the whole item. The tells carry the KB's negation guards, so "without using partially hydrogenated
-   * rapeseed oil" names the hydrogenated variant and denies it, and `match` reads that name like a claim. A variant
-   * with no tells, a non-droppable one, and an item past TELL_TEXT_MAX are never denied.
+   * fires on the item read up to the name's end (`upTo`, then a neutral word, as `markDroppable` reads a name). The
+   * tells carry the KB's negation guards, so "without using partially hydrogenated rapeseed oil" names the
+   * hydrogenated variant and denies it, and `match` reads that name like a claim. A variant with no tells, a
+   * non-droppable one, and an item past TELL_TEXT_MAX (`itemLength`) are never denied.
    */
-  private deniedVariant(e: NameEntry, norm: string): boolean {
+  private deniedVariant(e: NameEntry, upTo: string, itemLength: number): boolean {
     if (
-      !e.variantId || norm.length > TELL_TEXT_MAX || !this.droppable.has(`${e.ingredientId}/${e.variantId}`)
+      !e.variantId || itemLength > TELL_TEXT_MAX || !this.droppable.has(`${e.ingredientId}/${e.variantId}`)
     ) {
       return false;
     }
     const t = this.tells.get(e.ingredientId)?.find((x) => x.variant.id === e.variantId);
-    return !!t && !t.res.some((re) => re.test(norm));
+    return !!t && !t.res.some((re) => re.test(`${upTo} x`));
   }
 
   /**

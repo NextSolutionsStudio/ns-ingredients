@@ -3,7 +3,7 @@
 // does not select it. Such a denied name reads like a claim: nothing that starts inside it is read, so the plain food
 // inside it is not asserted either (#15).
 import { assertEquals } from "@std/assert";
-import { KbIndex } from "../../src/core/kb-index.ts";
+import { type DeniedName, KbIndex } from "../../src/core/kb-index.ts";
 import { analyze } from "../../src/core/analyze.ts";
 import type { KbBundle } from "../../src/kb/schema.ts";
 
@@ -99,9 +99,9 @@ Deno.test("a variant whose drop would lose an allergen or turn a diet keeps its 
   // the soy variant carries an allergen the entry does not: even where its tell does not fire, it is kept
   assertEquals(idx.match("without any soy lecithin")?.variantId, "soy");
   // a variant that asserts nothing of its own is denied where its tell does not fire: its name is read like a claim
-  const ex: string[] = [];
+  const ex: DeniedName[] = [];
   assertEquals(idx.match("without any sunflower lecithin", ex), null);
-  assertEquals(ex, ["lecithins"]);
+  assertEquals(ex, [{ ingredientId: "lecithins", matched: "sunflower lecithin" }]);
 });
 
 // Implications, so that a flag can fire at all.
@@ -160,9 +160,9 @@ Deno.test("a denied variant name of an allergen food keeps the allergen at maybe
       "without using hydrogenated soybean oil",
     ]
   ) {
-    const ex: string[] = [];
+    const ex: DeniedName[] = [];
     assertEquals(idx.match(text, ex), null, text);
-    assertEquals(ex, ["soybean-oil"], text);
+    assertEquals(ex.map((x) => x.ingredientId), ["soybean-oil"], text);
     for (const label of [`Ingredients: ${text}`, `Ingredients: olive oil (${text})`]) {
       const r = analyze(idx, label, { lang: "en" });
       const soy = r.flags.find((f) => f.code === "allergen.soybeans");
@@ -270,4 +270,98 @@ Deno.test("a variant whose tells a neutral item cannot meet is never denied", ()
     }],
   } as unknown as KbBundle);
   assertEquals(idx.match("organic cane sugar")?.variantId, "cane");
+});
+
+// Sol 6.1 on #15 at b71a92d: a soybean oil whose hydrogenated variant a negator denies, an emphasised soy source, and
+// a longer olive-oil name.
+const SOY_TELL = String.raw`^(?!.*\b(?:not|without)\b).*\bhydrogenated\b`;
+function soyIndex(provenance?: string): KbIndex {
+  return new KbIndex({
+    version: "t",
+    counts: {},
+    implications: IMPL,
+    sources: [],
+    classes: [],
+    ingredients: [
+      {
+        id: "soybean-oil",
+        names: { en: ["soybean oil"] },
+        variants: [{
+          id: "hydrogenated",
+          names: { en: ["hydrogenated soybean oil", "hydrogenated soy oil"] },
+          process: { en: "p" },
+          tells: [SOY_TELL],
+        }],
+        assertions: [says("allergen.soybeans"), says("origin.plant")],
+        ...(provenance ? { provenance } : {}),
+      },
+      { id: "soy", names: { en: ["soy"] }, assertions: [says("allergen.soybeans")] },
+      { id: "olive-oil", names: { en: ["olive oil", "extra virgin olive oil"] } },
+    ],
+  } as unknown as KbBundle);
+}
+const soyFlag = (label: string, idx = soyIndex()) =>
+  analyze(idx, label, { lang: "en" }).flags.find((f) => f.code === "allergen.soybeans");
+
+Deno.test("a negator after the name does not deny it (Sol 6.1 on #15 at b71a92d, P2 1)", () => {
+  const idx = new KbIndex({
+    version: "t",
+    counts: {},
+    implications: IMPL,
+    sources: [],
+    classes: [],
+    ingredients: [{
+      id: "poultry-fat",
+      names: { en: ["poultry fat"] },
+      variants: [{
+        id: "partially-hydrogenated",
+        names: { en: ["partially hydrogenated poultry fat"] },
+        process: { en: "p" },
+        tells: [PH],
+      }],
+      assertions: [says("origin.animal"), { ...says("diet.vegan"), certainty: "no" }],
+    }],
+  } as unknown as KbBundle);
+  const r = analyze(idx, "Ingredients: partially hydrogenated poultry fat without added sugar", {
+    lang: "en",
+  });
+  assertEquals(r.items[0].match?.ingredient_id, "poultry-fat");
+  assertEquals(r.flags.some((x) => x.code === "origin.animal"), true);
+  assertEquals(r.diets.vegan.status, "no");
+});
+
+Deno.test("a denied name is read whatever else wins the match (Sol 6.1 on #15 at b71a92d, P2 2)", () => {
+  for (const host of ["olive oil", "extra virgin olive oil"]) {
+    const label = `Ingredients: ${host} without using hydrogenated soybean oil`;
+    const r = analyze(soyIndex(), label, { lang: "en" });
+    assertEquals(r.items[0].match?.ingredient_id, "olive-oil", label);
+    const soy = r.flags.find((f) => f.code === "allergen.soybeans");
+    assertEquals([soy?.certainty, soy?.kind], ["maybe", "estimate"], label);
+  }
+});
+
+Deno.test("capitals inside a denied name do not reassert its allergen (Sol 6.1 on #15 at b71a92d, P2 3)", () => {
+  for (
+    const label of [
+      "Ingredients: olive oil (without using hydrogenated SOY oil)",
+      "Ingredients: without using hydrogenated SOY oil",
+    ]
+  ) {
+    const soy = soyFlag(label);
+    assertEquals([soy?.certainty, soy?.kind], ["maybe", "estimate"], label);
+  }
+  // capitals outside a denial still name the allergen
+  assertEquals(soyFlag("Ingredients: olive oil, SOY")?.certainty, "yes");
+});
+
+Deno.test("a denied name's AI-drafted entry is disclosed (Sol 6.1 on #15 at b71a92d, P3 1)", () => {
+  const r = analyze(soyIndex("ai-drafted"), "Ingredients: without using hydrogenated soybean oil", {
+    lang: "en",
+  });
+  assertEquals(r.ai_generated_content, true);
+  assertEquals(
+    analyze(soyIndex(), "Ingredients: without using hydrogenated soybean oil", { lang: "en" })
+      .ai_generated_content,
+    false,
+  );
 });

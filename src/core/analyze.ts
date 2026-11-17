@@ -1,7 +1,7 @@
 // Label analysis: parse → match → variants → implications → diets → profile.
 // Deterministic and side-effect free; the HTTP layer only validates and serialises.
 import type { AssertionT, IngredientT, Lang, TextT } from "../kb/schema.ts";
-import type { KbIndex, MatchType, NameMatch } from "./kb-index.ts";
+import type { DeniedName, KbIndex, MatchType, NameMatch } from "./kb-index.ts";
 import { PRIOR_FLAG_MIN } from "./kb-index.ts";
 import { baseENumber, findENumbers, guessLang, normName } from "./normalize.ts";
 import {
@@ -181,7 +181,7 @@ const isModifiedStarch = (e?: string) => !!e && /^E14[0-5]\d/.test(e);
  * An item's own match: the matcher, else an E-number the name prints ("barwnik E150d"). `excluded` receives the
  * foods whose variant name the item denies (`KbIndex.match`).
  */
-function matchName(index: KbIndex, name: string, excluded?: string[]): NameMatch | null {
+function matchName(index: KbIndex, name: string, excluded?: DeniedName[]): NameMatch | null {
   const m = name ? index.match(name, excluded) : null;
   if (m && m.confidence >= 0.9) return m;
   const es = findENumbers(name);
@@ -286,6 +286,10 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
     );
 
   const dietInputs: DietInput[] = [];
+  /** Entries a denied variant name contributes allergens from: no diet input, but their provenance counts. */
+  const deniedFoods = new Set<string>();
+  /** Per item path, the words of the denied names in it and in its brackets: emphasis there reasserts nothing. */
+  const deniedWords = new Map<string, Set<string>>();
 
   const resolveItem = (item: ParsedItem, parentFn?: string, parentNorm?: string): ItemResult => {
     const base: ItemResult = {
@@ -317,7 +321,7 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
     const headerClass = item.header ? index.classOf(item.header) : undefined;
     let fn = headerClass ?? parentFn;
 
-    const excluded: string[] = [];
+    const excluded: DeniedName[] = [];
     let m = matchName(index, item.name, excluded);
     // A compound item ("Vitamins (…)", "polewa kakaowa (…)") is described by its parts; a fuzzy guess at
     // the header name is how "Vitamins" became vitamin C.
@@ -440,9 +444,13 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
 
     // A variant name the item denies ("without using partially hydrogenated sesame oil") is read like a claim (b2
     // policy B): the food's own allergens stand at "maybe", and nothing else of it (no origin, diet or processing).
-    for (const id of excluded) {
-      const q = index.get(id);
+    const denied = new Set<string>();
+    for (const c of children) for (const w of deniedWords.get(c.path) ?? []) denied.add(w);
+    for (const x of excluded) {
+      for (const w of x.matched.split(" ")) denied.add(w);
+      const q = index.get(x.ingredientId);
       if (!q) continue;
+      deniedFoods.add(q.id);
       for (const a of ownAllergens(q)) {
         addFlag(a, {
           ...trig(item.path, q.id, "qualifier", a),
@@ -460,8 +468,11 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
         if (c.role === "qualifier") dietInputs.push({ path: c.path, ingredient: q });
       }
     }
+    if (denied.size) deniedWords.set(item.path, denied);
     const unknownEmphasis: string[] = [];
     for (const w of item.emphasized) {
+      // "without using hydrogenated SOY oil": the capitals sit inside a denied name, whose allergens stand at maybe
+      if (denied.size && normName(w).split(" ").every((t) => denied.has(t))) continue;
       const em = index.match(w);
       const q = em && em.confidence >= 0.9 ? index.get(em.ingredientId) : undefined;
       if (q) { for (const a of allergenAssertions(q)) addFlag(a, trig(item.path, q.id, "emphasis", a)); }
@@ -653,6 +664,7 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
     }
   }
   const touched = new Set(dietInputs.map((d) => d.ingredient?.id).filter(Boolean) as string[]);
+  for (const id of deniedFoods) touched.add(id);
   result.ai_generated_content = [...touched].some((id) => index.get(id)?.provenance === "ai-drafted");
   return result;
 }
