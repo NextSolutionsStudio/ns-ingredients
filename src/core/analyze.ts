@@ -279,6 +279,25 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
     );
   };
 
+  /**
+   * The allergens a denied name of `ing` is exempt from: those a variant of the food asserts "no" for whose tells fire
+   * on the name's head, its words from some point to the end ("fully refined soybean oil" in "hydrogenated fully
+   * refined soybean oil": Annex II 6(a)), as the KB's claims that name that oil carry none.
+   */
+  const exemptFrom = (ing: IngredientT, norm: string) => {
+    const out = new Set<string>();
+    const no = (ing.assertions ?? []).filter((a) =>
+      a.variant && a.code.startsWith("allergen.") && a.certainty === "no"
+    );
+    if (!no.length) return out;
+    const words = norm.split(" ");
+    for (let i = 0; i < words.length; i++) {
+      const fired = new Set(index.tellsFor(ing.id, words.slice(i).join(" ")).map((v) => v.id));
+      for (const a of no) if (fired.has(a.variant!)) out.add(a.code);
+    }
+    return out;
+  };
+
   /** Allergen assertions of an ingredient named inside a qualifier, emphasis or trace. */
   const allergenAssertions = (ing: IngredientT) =>
     (ing.assertions ?? []).filter((a) =>
@@ -455,7 +474,8 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
     for (const x of excluded) {
       const q = index.get(x.ingredientId);
       if (!q) continue;
-      const own = ownAllergens(q);
+      const exempt = exemptFrom(q, x.matched);
+      const own = ownAllergens(q).filter((a) => !exempt.has(a.code));
       if (own.length) deniedFoods.add(q.id);
       for (const a of own) {
         addFlag(a, {
