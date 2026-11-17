@@ -17,6 +17,106 @@ names:
     - not partially hydrogenated walnuts oil
     - not fully hydrogenated walnuts oil
     - non partially hydrogenated walnuts oil
+    - vegetable oil from walnuts
+    - non-hydrogenated vegetable oil from walnuts
+    - not hydrogenated vegetable oil from walnuts
+    - unhydrogenated vegetable oil from walnuts
+    - not partially hydrogenated vegetable oil from walnuts
+    - vegetable oil of walnuts
+    - non-hydrogenated vegetable oil of walnuts
+    - not hydrogenated vegetable oil of walnuts
+    - unhydrogenated vegetable oil of walnuts
+    - not partially hydrogenated vegetable oil of walnuts
+    - vegetable fat from walnuts
+    - non-hydrogenated vegetable fat from walnuts
+    - not hydrogenated vegetable fat from walnuts
+    - unhydrogenated vegetable fat from walnuts
+    - not partially hydrogenated vegetable fat from walnuts
+    - vegetable fat of walnuts
+    - non-hydrogenated vegetable fat of walnuts
+    - not hydrogenated vegetable fat of walnuts
+    - unhydrogenated vegetable fat of walnuts
+    - not partially hydrogenated vegetable fat of walnuts
+    - vegetable oils from walnuts
+    - non-hydrogenated vegetable oils from walnuts
+    - not hydrogenated vegetable oils from walnuts
+    - unhydrogenated vegetable oils from walnuts
+    - not partially hydrogenated vegetable oils from walnuts
+    - vegetable oils of walnuts
+    - non-hydrogenated vegetable oils of walnuts
+    - not hydrogenated vegetable oils of walnuts
+    - unhydrogenated vegetable oils of walnuts
+    - not partially hydrogenated vegetable oils of walnuts
+    - vegetable fats from walnuts
+    - non-hydrogenated vegetable fats from walnuts
+    - not hydrogenated vegetable fats from walnuts
+    - unhydrogenated vegetable fats from walnuts
+    - not partially hydrogenated vegetable fats from walnuts
+    - vegetable fats of walnuts
+    - non-hydrogenated vegetable fats of walnuts
+    - not hydrogenated vegetable fats of walnuts
+    - unhydrogenated vegetable fats of walnuts
+    - not partially hydrogenated vegetable fats of walnuts
+    - nut oil from walnuts
+    - non-hydrogenated nut oil from walnuts
+    - not hydrogenated nut oil from walnuts
+    - unhydrogenated nut oil from walnuts
+    - not partially hydrogenated nut oil from walnuts
+    - nut oil of walnuts
+    - non-hydrogenated nut oil of walnuts
+    - not hydrogenated nut oil of walnuts
+    - unhydrogenated nut oil of walnuts
+    - not partially hydrogenated nut oil of walnuts
+    - vegetable oil from walnut
+    - non-hydrogenated vegetable oil from walnut
+    - not hydrogenated vegetable oil from walnut
+    - unhydrogenated vegetable oil from walnut
+    - not partially hydrogenated vegetable oil from walnut
+    - vegetable oil of walnut
+    - non-hydrogenated vegetable oil of walnut
+    - not hydrogenated vegetable oil of walnut
+    - unhydrogenated vegetable oil of walnut
+    - not partially hydrogenated vegetable oil of walnut
+    - vegetable fat from walnut
+    - non-hydrogenated vegetable fat from walnut
+    - not hydrogenated vegetable fat from walnut
+    - unhydrogenated vegetable fat from walnut
+    - not partially hydrogenated vegetable fat from walnut
+    - vegetable fat of walnut
+    - non-hydrogenated vegetable fat of walnut
+    - not hydrogenated vegetable fat of walnut
+    - unhydrogenated vegetable fat of walnut
+    - not partially hydrogenated vegetable fat of walnut
+    - vegetable oils from walnut
+    - non-hydrogenated vegetable oils from walnut
+    - not hydrogenated vegetable oils from walnut
+    - unhydrogenated vegetable oils from walnut
+    - not partially hydrogenated vegetable oils from walnut
+    - vegetable oils of walnut
+    - non-hydrogenated vegetable oils of walnut
+    - not hydrogenated vegetable oils of walnut
+    - unhydrogenated vegetable oils of walnut
+    - not partially hydrogenated vegetable oils of walnut
+    - vegetable fats from walnut
+    - non-hydrogenated vegetable fats from walnut
+    - not hydrogenated vegetable fats from walnut
+    - unhydrogenated vegetable fats from walnut
+    - not partially hydrogenated vegetable fats from walnut
+    - vegetable fats of walnut
+    - non-hydrogenated vegetable fats of walnut
+    - not hydrogenated vegetable fats of walnut
+    - unhydrogenated vegetable fats of walnut
+    - not partially hydrogenated vegetable fats of walnut
+    - nut oil from walnut
+    - non-hydrogenated nut oil from walnut
+    - not hydrogenated nut oil from walnut
+    - unhydrogenated nut oil from walnut
+    - not partially hydrogenated nut oil from walnut
+    - nut oil of walnut
+    - non-hydrogenated nut oil of walnut
+    - not hydrogenated nut oil of walnut
+    - unhydrogenated nut oil of walnut
+    - not partially hydrogenated nut oil of walnut
   pl:
     - olej z orzechów włoskich
     - olej z orzecha włoskiego
@@ -482,6 +582,26 @@ variants:
       en:
         - hydrogenated walnut oil
         - hydrogenated walnuts oil
+        - hydrogenated vegetable oil from walnuts
+        - hydrogenated vegetable oil of walnuts
+        - hydrogenated vegetable fat from walnuts
+        - hydrogenated vegetable fat of walnuts
+        - hydrogenated vegetable oils from walnuts
+        - hydrogenated vegetable oils of walnuts
+        - hydrogenated vegetable fats from walnuts
+        - hydrogenated vegetable fats of walnuts
+        - hydrogenated nut oil from walnuts
+        - hydrogenated nut oil of walnuts
+        - hydrogenated vegetable oil from walnut
+        - hydrogenated vegetable oil of walnut
+        - hydrogenated vegetable fat from walnut
+        - hydrogenated vegetable fat of walnut
+        - hydrogenated vegetable oils from walnut
+        - hydrogenated vegetable oils of walnut
+        - hydrogenated vegetable fats from walnut
+        - hydrogenated vegetable fats of walnut
+        - hydrogenated nut oil from walnut
+        - hydrogenated nut oil of walnut
       pl:
         - utwardzony olej z orzechów włoskich
         - olej z orzechów włoskich utwardzony
@@ -697,6 +817,26 @@ variants:
       en:
         - partially hydrogenated walnut oil
         - partially hydrogenated walnuts oil
+        - partially hydrogenated vegetable oil from walnuts
+        - partially hydrogenated vegetable oil of walnuts
+        - partially hydrogenated vegetable fat from walnuts
+        - partially hydrogenated vegetable fat of walnuts
+        - partially hydrogenated vegetable oils from walnuts
+        - partially hydrogenated vegetable oils of walnuts
+        - partially hydrogenated vegetable fats from walnuts
+        - partially hydrogenated vegetable fats of walnuts
+        - partially hydrogenated nut oil from walnuts
+        - partially hydrogenated nut oil of walnuts
+        - partially hydrogenated vegetable oil from walnut
+        - partially hydrogenated vegetable oil of walnut
+        - partially hydrogenated vegetable fat from walnut
+        - partially hydrogenated vegetable fat of walnut
+        - partially hydrogenated vegetable oils from walnut
+        - partially hydrogenated vegetable oils of walnut
+        - partially hydrogenated vegetable fats from walnut
+        - partially hydrogenated vegetable fats of walnut
+        - partially hydrogenated nut oil from walnut
+        - partially hydrogenated nut oil of walnut
       pl:
         - częściowo utwardzony olej z orzechów włoskich
         - olej z orzechów włoskich częściowo utwardzony
@@ -916,6 +1056,46 @@ variants:
         - totally hydrogenated walnut oil
         - fully hydrogenated walnuts oil
         - totally hydrogenated walnuts oil
+        - fully hydrogenated vegetable oil from walnuts
+        - totally hydrogenated vegetable oil from walnuts
+        - fully hydrogenated vegetable oil of walnuts
+        - totally hydrogenated vegetable oil of walnuts
+        - fully hydrogenated vegetable fat from walnuts
+        - totally hydrogenated vegetable fat from walnuts
+        - fully hydrogenated vegetable fat of walnuts
+        - totally hydrogenated vegetable fat of walnuts
+        - fully hydrogenated vegetable oils from walnuts
+        - totally hydrogenated vegetable oils from walnuts
+        - fully hydrogenated vegetable oils of walnuts
+        - totally hydrogenated vegetable oils of walnuts
+        - fully hydrogenated vegetable fats from walnuts
+        - totally hydrogenated vegetable fats from walnuts
+        - fully hydrogenated vegetable fats of walnuts
+        - totally hydrogenated vegetable fats of walnuts
+        - fully hydrogenated nut oil from walnuts
+        - totally hydrogenated nut oil from walnuts
+        - fully hydrogenated nut oil of walnuts
+        - totally hydrogenated nut oil of walnuts
+        - fully hydrogenated vegetable oil from walnut
+        - totally hydrogenated vegetable oil from walnut
+        - fully hydrogenated vegetable oil of walnut
+        - totally hydrogenated vegetable oil of walnut
+        - fully hydrogenated vegetable fat from walnut
+        - totally hydrogenated vegetable fat from walnut
+        - fully hydrogenated vegetable fat of walnut
+        - totally hydrogenated vegetable fat of walnut
+        - fully hydrogenated vegetable oils from walnut
+        - totally hydrogenated vegetable oils from walnut
+        - fully hydrogenated vegetable oils of walnut
+        - totally hydrogenated vegetable oils of walnut
+        - fully hydrogenated vegetable fats from walnut
+        - totally hydrogenated vegetable fats from walnut
+        - fully hydrogenated vegetable fats of walnut
+        - totally hydrogenated vegetable fats of walnut
+        - fully hydrogenated nut oil from walnut
+        - totally hydrogenated nut oil from walnut
+        - fully hydrogenated nut oil of walnut
+        - totally hydrogenated nut oil of walnut
       pl:
         - całkowicie utwardzony olej z orzechów włoskich
         - olej z orzechów włoskich całkowicie utwardzony

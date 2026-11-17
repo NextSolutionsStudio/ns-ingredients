@@ -24,6 +24,106 @@ names:
     - not partially hydrogenated almonds oil
     - not fully hydrogenated almonds oil
     - non partially hydrogenated almonds oil
+    - vegetable oil from almonds
+    - non-hydrogenated vegetable oil from almonds
+    - not hydrogenated vegetable oil from almonds
+    - unhydrogenated vegetable oil from almonds
+    - not partially hydrogenated vegetable oil from almonds
+    - vegetable oil of almonds
+    - non-hydrogenated vegetable oil of almonds
+    - not hydrogenated vegetable oil of almonds
+    - unhydrogenated vegetable oil of almonds
+    - not partially hydrogenated vegetable oil of almonds
+    - vegetable fat from almonds
+    - non-hydrogenated vegetable fat from almonds
+    - not hydrogenated vegetable fat from almonds
+    - unhydrogenated vegetable fat from almonds
+    - not partially hydrogenated vegetable fat from almonds
+    - vegetable fat of almonds
+    - non-hydrogenated vegetable fat of almonds
+    - not hydrogenated vegetable fat of almonds
+    - unhydrogenated vegetable fat of almonds
+    - not partially hydrogenated vegetable fat of almonds
+    - vegetable oils from almonds
+    - non-hydrogenated vegetable oils from almonds
+    - not hydrogenated vegetable oils from almonds
+    - unhydrogenated vegetable oils from almonds
+    - not partially hydrogenated vegetable oils from almonds
+    - vegetable oils of almonds
+    - non-hydrogenated vegetable oils of almonds
+    - not hydrogenated vegetable oils of almonds
+    - unhydrogenated vegetable oils of almonds
+    - not partially hydrogenated vegetable oils of almonds
+    - vegetable fats from almonds
+    - non-hydrogenated vegetable fats from almonds
+    - not hydrogenated vegetable fats from almonds
+    - unhydrogenated vegetable fats from almonds
+    - not partially hydrogenated vegetable fats from almonds
+    - vegetable fats of almonds
+    - non-hydrogenated vegetable fats of almonds
+    - not hydrogenated vegetable fats of almonds
+    - unhydrogenated vegetable fats of almonds
+    - not partially hydrogenated vegetable fats of almonds
+    - nut oil from almonds
+    - non-hydrogenated nut oil from almonds
+    - not hydrogenated nut oil from almonds
+    - unhydrogenated nut oil from almonds
+    - not partially hydrogenated nut oil from almonds
+    - nut oil of almonds
+    - non-hydrogenated nut oil of almonds
+    - not hydrogenated nut oil of almonds
+    - unhydrogenated nut oil of almonds
+    - not partially hydrogenated nut oil of almonds
+    - vegetable oil from almond
+    - non-hydrogenated vegetable oil from almond
+    - not hydrogenated vegetable oil from almond
+    - unhydrogenated vegetable oil from almond
+    - not partially hydrogenated vegetable oil from almond
+    - vegetable oil of almond
+    - non-hydrogenated vegetable oil of almond
+    - not hydrogenated vegetable oil of almond
+    - unhydrogenated vegetable oil of almond
+    - not partially hydrogenated vegetable oil of almond
+    - vegetable fat from almond
+    - non-hydrogenated vegetable fat from almond
+    - not hydrogenated vegetable fat from almond
+    - unhydrogenated vegetable fat from almond
+    - not partially hydrogenated vegetable fat from almond
+    - vegetable fat of almond
+    - non-hydrogenated vegetable fat of almond
+    - not hydrogenated vegetable fat of almond
+    - unhydrogenated vegetable fat of almond
+    - not partially hydrogenated vegetable fat of almond
+    - vegetable oils from almond
+    - non-hydrogenated vegetable oils from almond
+    - not hydrogenated vegetable oils from almond
+    - unhydrogenated vegetable oils from almond
+    - not partially hydrogenated vegetable oils from almond
+    - vegetable oils of almond
+    - non-hydrogenated vegetable oils of almond
+    - not hydrogenated vegetable oils of almond
+    - unhydrogenated vegetable oils of almond
+    - not partially hydrogenated vegetable oils of almond
+    - vegetable fats from almond
+    - non-hydrogenated vegetable fats from almond
+    - not hydrogenated vegetable fats from almond
+    - unhydrogenated vegetable fats from almond
+    - not partially hydrogenated vegetable fats from almond
+    - vegetable fats of almond
+    - non-hydrogenated vegetable fats of almond
+    - not hydrogenated vegetable fats of almond
+    - unhydrogenated vegetable fats of almond
+    - not partially hydrogenated vegetable fats of almond
+    - nut oil from almond
+    - non-hydrogenated nut oil from almond
+    - not hydrogenated nut oil from almond
+    - unhydrogenated nut oil from almond
+    - not partially hydrogenated nut oil from almond
+    - nut oil of almond
+    - non-hydrogenated nut oil of almond
+    - not hydrogenated nut oil of almond
+    - unhydrogenated nut oil of almond
+    - not partially hydrogenated nut oil of almond
   pl:
     - olej migdałowy
     - olej z migdałów
@@ -384,6 +484,26 @@ variants:
         - hydrogenated almond oil
         - hydrogenated sweet almond oil
         - hydrogenated almonds oil
+        - hydrogenated vegetable oil from almonds
+        - hydrogenated vegetable oil of almonds
+        - hydrogenated vegetable fat from almonds
+        - hydrogenated vegetable fat of almonds
+        - hydrogenated vegetable oils from almonds
+        - hydrogenated vegetable oils of almonds
+        - hydrogenated vegetable fats from almonds
+        - hydrogenated vegetable fats of almonds
+        - hydrogenated nut oil from almonds
+        - hydrogenated nut oil of almonds
+        - hydrogenated vegetable oil from almond
+        - hydrogenated vegetable oil of almond
+        - hydrogenated vegetable fat from almond
+        - hydrogenated vegetable fat of almond
+        - hydrogenated vegetable oils from almond
+        - hydrogenated vegetable oils of almond
+        - hydrogenated vegetable fats from almond
+        - hydrogenated vegetable fats of almond
+        - hydrogenated nut oil from almond
+        - hydrogenated nut oil of almond
       pl:
         - utwardzony olej migdałowy
         - olej migdałowy utwardzony
@@ -552,6 +672,26 @@ variants:
         - partially hydrogenated almond oil
         - partially hydrogenated sweet almond oil
         - partially hydrogenated almonds oil
+        - partially hydrogenated vegetable oil from almonds
+        - partially hydrogenated vegetable oil of almonds
+        - partially hydrogenated vegetable fat from almonds
+        - partially hydrogenated vegetable fat of almonds
+        - partially hydrogenated vegetable oils from almonds
+        - partially hydrogenated vegetable oils of almonds
+        - partially hydrogenated vegetable fats from almonds
+        - partially hydrogenated vegetable fats of almonds
+        - partially hydrogenated nut oil from almonds
+        - partially hydrogenated nut oil of almonds
+        - partially hydrogenated vegetable oil from almond
+        - partially hydrogenated vegetable oil of almond
+        - partially hydrogenated vegetable fat from almond
+        - partially hydrogenated vegetable fat of almond
+        - partially hydrogenated vegetable oils from almond
+        - partially hydrogenated vegetable oils of almond
+        - partially hydrogenated vegetable fats from almond
+        - partially hydrogenated vegetable fats of almond
+        - partially hydrogenated nut oil from almond
+        - partially hydrogenated nut oil of almond
       pl:
         - częściowo utwardzony olej migdałowy
         - olej migdałowy częściowo utwardzony
@@ -725,6 +865,46 @@ variants:
         - totally hydrogenated sweet almond oil
         - fully hydrogenated almonds oil
         - totally hydrogenated almonds oil
+        - fully hydrogenated vegetable oil from almonds
+        - totally hydrogenated vegetable oil from almonds
+        - fully hydrogenated vegetable oil of almonds
+        - totally hydrogenated vegetable oil of almonds
+        - fully hydrogenated vegetable fat from almonds
+        - totally hydrogenated vegetable fat from almonds
+        - fully hydrogenated vegetable fat of almonds
+        - totally hydrogenated vegetable fat of almonds
+        - fully hydrogenated vegetable oils from almonds
+        - totally hydrogenated vegetable oils from almonds
+        - fully hydrogenated vegetable oils of almonds
+        - totally hydrogenated vegetable oils of almonds
+        - fully hydrogenated vegetable fats from almonds
+        - totally hydrogenated vegetable fats from almonds
+        - fully hydrogenated vegetable fats of almonds
+        - totally hydrogenated vegetable fats of almonds
+        - fully hydrogenated nut oil from almonds
+        - totally hydrogenated nut oil from almonds
+        - fully hydrogenated nut oil of almonds
+        - totally hydrogenated nut oil of almonds
+        - fully hydrogenated vegetable oil from almond
+        - totally hydrogenated vegetable oil from almond
+        - fully hydrogenated vegetable oil of almond
+        - totally hydrogenated vegetable oil of almond
+        - fully hydrogenated vegetable fat from almond
+        - totally hydrogenated vegetable fat from almond
+        - fully hydrogenated vegetable fat of almond
+        - totally hydrogenated vegetable fat of almond
+        - fully hydrogenated vegetable oils from almond
+        - totally hydrogenated vegetable oils from almond
+        - fully hydrogenated vegetable oils of almond
+        - totally hydrogenated vegetable oils of almond
+        - fully hydrogenated vegetable fats from almond
+        - totally hydrogenated vegetable fats from almond
+        - fully hydrogenated vegetable fats of almond
+        - totally hydrogenated vegetable fats of almond
+        - fully hydrogenated nut oil from almond
+        - totally hydrogenated nut oil from almond
+        - fully hydrogenated nut oil of almond
+        - totally hydrogenated nut oil of almond
       pl:
         - całkowicie utwardzony olej migdałowy
         - olej migdałowy całkowicie utwardzony

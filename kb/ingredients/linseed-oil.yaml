@@ -25,6 +25,126 @@ names:
     - not partially hydrogenated cold-pressed flaxseed oil
     - not fully hydrogenated cold-pressed flaxseed oil
     - non partially hydrogenated cold-pressed flaxseed oil
+    - vegetable oil from linseed
+    - non-hydrogenated vegetable oil from linseed
+    - not hydrogenated vegetable oil from linseed
+    - unhydrogenated vegetable oil from linseed
+    - not partially hydrogenated vegetable oil from linseed
+    - vegetable oil of linseed
+    - non-hydrogenated vegetable oil of linseed
+    - not hydrogenated vegetable oil of linseed
+    - unhydrogenated vegetable oil of linseed
+    - not partially hydrogenated vegetable oil of linseed
+    - vegetable fat from linseed
+    - non-hydrogenated vegetable fat from linseed
+    - not hydrogenated vegetable fat from linseed
+    - unhydrogenated vegetable fat from linseed
+    - not partially hydrogenated vegetable fat from linseed
+    - vegetable fat of linseed
+    - non-hydrogenated vegetable fat of linseed
+    - not hydrogenated vegetable fat of linseed
+    - unhydrogenated vegetable fat of linseed
+    - not partially hydrogenated vegetable fat of linseed
+    - vegetable oils from linseed
+    - non-hydrogenated vegetable oils from linseed
+    - not hydrogenated vegetable oils from linseed
+    - unhydrogenated vegetable oils from linseed
+    - not partially hydrogenated vegetable oils from linseed
+    - vegetable oils of linseed
+    - non-hydrogenated vegetable oils of linseed
+    - not hydrogenated vegetable oils of linseed
+    - unhydrogenated vegetable oils of linseed
+    - not partially hydrogenated vegetable oils of linseed
+    - vegetable fats from linseed
+    - non-hydrogenated vegetable fats from linseed
+    - not hydrogenated vegetable fats from linseed
+    - unhydrogenated vegetable fats from linseed
+    - not partially hydrogenated vegetable fats from linseed
+    - vegetable fats of linseed
+    - non-hydrogenated vegetable fats of linseed
+    - not hydrogenated vegetable fats of linseed
+    - unhydrogenated vegetable fats of linseed
+    - not partially hydrogenated vegetable fats of linseed
+    - vegetable oil from flaxseed
+    - non-hydrogenated vegetable oil from flaxseed
+    - not hydrogenated vegetable oil from flaxseed
+    - unhydrogenated vegetable oil from flaxseed
+    - not partially hydrogenated vegetable oil from flaxseed
+    - vegetable oil of flaxseed
+    - non-hydrogenated vegetable oil of flaxseed
+    - not hydrogenated vegetable oil of flaxseed
+    - unhydrogenated vegetable oil of flaxseed
+    - not partially hydrogenated vegetable oil of flaxseed
+    - vegetable fat from flaxseed
+    - non-hydrogenated vegetable fat from flaxseed
+    - not hydrogenated vegetable fat from flaxseed
+    - unhydrogenated vegetable fat from flaxseed
+    - not partially hydrogenated vegetable fat from flaxseed
+    - vegetable fat of flaxseed
+    - non-hydrogenated vegetable fat of flaxseed
+    - not hydrogenated vegetable fat of flaxseed
+    - unhydrogenated vegetable fat of flaxseed
+    - not partially hydrogenated vegetable fat of flaxseed
+    - vegetable oils from flaxseed
+    - non-hydrogenated vegetable oils from flaxseed
+    - not hydrogenated vegetable oils from flaxseed
+    - unhydrogenated vegetable oils from flaxseed
+    - not partially hydrogenated vegetable oils from flaxseed
+    - vegetable oils of flaxseed
+    - non-hydrogenated vegetable oils of flaxseed
+    - not hydrogenated vegetable oils of flaxseed
+    - unhydrogenated vegetable oils of flaxseed
+    - not partially hydrogenated vegetable oils of flaxseed
+    - vegetable fats from flaxseed
+    - non-hydrogenated vegetable fats from flaxseed
+    - not hydrogenated vegetable fats from flaxseed
+    - unhydrogenated vegetable fats from flaxseed
+    - not partially hydrogenated vegetable fats from flaxseed
+    - vegetable fats of flaxseed
+    - non-hydrogenated vegetable fats of flaxseed
+    - not hydrogenated vegetable fats of flaxseed
+    - unhydrogenated vegetable fats of flaxseed
+    - not partially hydrogenated vegetable fats of flaxseed
+    - vegetable oil from flax
+    - non-hydrogenated vegetable oil from flax
+    - not hydrogenated vegetable oil from flax
+    - unhydrogenated vegetable oil from flax
+    - not partially hydrogenated vegetable oil from flax
+    - vegetable oil of flax
+    - non-hydrogenated vegetable oil of flax
+    - not hydrogenated vegetable oil of flax
+    - unhydrogenated vegetable oil of flax
+    - not partially hydrogenated vegetable oil of flax
+    - vegetable fat from flax
+    - non-hydrogenated vegetable fat from flax
+    - not hydrogenated vegetable fat from flax
+    - unhydrogenated vegetable fat from flax
+    - not partially hydrogenated vegetable fat from flax
+    - vegetable fat of flax
+    - non-hydrogenated vegetable fat of flax
+    - not hydrogenated vegetable fat of flax
+    - unhydrogenated vegetable fat of flax
+    - not partially hydrogenated vegetable fat of flax
+    - vegetable oils from flax
+    - non-hydrogenated vegetable oils from flax
+    - not hydrogenated vegetable oils from flax
+    - unhydrogenated vegetable oils from flax
+    - not partially hydrogenated vegetable oils from flax
+    - vegetable oils of flax
+    - non-hydrogenated vegetable oils of flax
+    - not hydrogenated vegetable oils of flax
+    - unhydrogenated vegetable oils of flax
+    - not partially hydrogenated vegetable oils of flax
+    - vegetable fats from flax
+    - non-hydrogenated vegetable fats from flax
+    - not hydrogenated vegetable fats from flax
+    - unhydrogenated vegetable fats from flax
+    - not partially hydrogenated vegetable fats from flax
+    - vegetable fats of flax
+    - non-hydrogenated vegetable fats of flax
+    - not hydrogenated vegetable fats of flax
+    - unhydrogenated vegetable fats of flax
+    - not partially hydrogenated vegetable fats of flax
   pl:
     - olej lniany
     - olej roślinny lniany
@@ -319,6 +439,30 @@ variants:
         - hydrogenated linseed oil
         - hydrogenated flaxseed oil
         - hydrogenated cold-pressed flaxseed oil
+        - hydrogenated vegetable oil from linseed
+        - hydrogenated vegetable oil of linseed
+        - hydrogenated vegetable fat from linseed
+        - hydrogenated vegetable fat of linseed
+        - hydrogenated vegetable oils from linseed
+        - hydrogenated vegetable oils of linseed
+        - hydrogenated vegetable fats from linseed
+        - hydrogenated vegetable fats of linseed
+        - hydrogenated vegetable oil from flaxseed
+        - hydrogenated vegetable oil of flaxseed
+        - hydrogenated vegetable fat from flaxseed
+        - hydrogenated vegetable fat of flaxseed
+        - hydrogenated vegetable oils from flaxseed
+        - hydrogenated vegetable oils of flaxseed
+        - hydrogenated vegetable fats from flaxseed
+        - hydrogenated vegetable fats of flaxseed
+        - hydrogenated vegetable oil from flax
+        - hydrogenated vegetable oil of flax
+        - hydrogenated vegetable fat from flax
+        - hydrogenated vegetable fat of flax
+        - hydrogenated vegetable oils from flax
+        - hydrogenated vegetable oils of flax
+        - hydrogenated vegetable fats from flax
+        - hydrogenated vegetable fats of flax
       pl:
         - utwardzony olej lniany
         - olej lniany utwardzony
@@ -460,6 +604,30 @@ variants:
         - partially hydrogenated linseed oil
         - partially hydrogenated flaxseed oil
         - partially hydrogenated cold-pressed flaxseed oil
+        - partially hydrogenated vegetable oil from linseed
+        - partially hydrogenated vegetable oil of linseed
+        - partially hydrogenated vegetable fat from linseed
+        - partially hydrogenated vegetable fat of linseed
+        - partially hydrogenated vegetable oils from linseed
+        - partially hydrogenated vegetable oils of linseed
+        - partially hydrogenated vegetable fats from linseed
+        - partially hydrogenated vegetable fats of linseed
+        - partially hydrogenated vegetable oil from flaxseed
+        - partially hydrogenated vegetable oil of flaxseed
+        - partially hydrogenated vegetable fat from flaxseed
+        - partially hydrogenated vegetable fat of flaxseed
+        - partially hydrogenated vegetable oils from flaxseed
+        - partially hydrogenated vegetable oils of flaxseed
+        - partially hydrogenated vegetable fats from flaxseed
+        - partially hydrogenated vegetable fats of flaxseed
+        - partially hydrogenated vegetable oil from flax
+        - partially hydrogenated vegetable oil of flax
+        - partially hydrogenated vegetable fat from flax
+        - partially hydrogenated vegetable fat of flax
+        - partially hydrogenated vegetable oils from flax
+        - partially hydrogenated vegetable oils of flax
+        - partially hydrogenated vegetable fats from flax
+        - partially hydrogenated vegetable fats of flax
       pl:
         - częściowo utwardzony olej lniany
         - olej lniany częściowo utwardzony
@@ -606,6 +774,54 @@ variants:
         - totally hydrogenated flaxseed oil
         - fully hydrogenated cold-pressed flaxseed oil
         - totally hydrogenated cold-pressed flaxseed oil
+        - fully hydrogenated vegetable oil from linseed
+        - totally hydrogenated vegetable oil from linseed
+        - fully hydrogenated vegetable oil of linseed
+        - totally hydrogenated vegetable oil of linseed
+        - fully hydrogenated vegetable fat from linseed
+        - totally hydrogenated vegetable fat from linseed
+        - fully hydrogenated vegetable fat of linseed
+        - totally hydrogenated vegetable fat of linseed
+        - fully hydrogenated vegetable oils from linseed
+        - totally hydrogenated vegetable oils from linseed
+        - fully hydrogenated vegetable oils of linseed
+        - totally hydrogenated vegetable oils of linseed
+        - fully hydrogenated vegetable fats from linseed
+        - totally hydrogenated vegetable fats from linseed
+        - fully hydrogenated vegetable fats of linseed
+        - totally hydrogenated vegetable fats of linseed
+        - fully hydrogenated vegetable oil from flaxseed
+        - totally hydrogenated vegetable oil from flaxseed
+        - fully hydrogenated vegetable oil of flaxseed
+        - totally hydrogenated vegetable oil of flaxseed
+        - fully hydrogenated vegetable fat from flaxseed
+        - totally hydrogenated vegetable fat from flaxseed
+        - fully hydrogenated vegetable fat of flaxseed
+        - totally hydrogenated vegetable fat of flaxseed
+        - fully hydrogenated vegetable oils from flaxseed
+        - totally hydrogenated vegetable oils from flaxseed
+        - fully hydrogenated vegetable oils of flaxseed
+        - totally hydrogenated vegetable oils of flaxseed
+        - fully hydrogenated vegetable fats from flaxseed
+        - totally hydrogenated vegetable fats from flaxseed
+        - fully hydrogenated vegetable fats of flaxseed
+        - totally hydrogenated vegetable fats of flaxseed
+        - fully hydrogenated vegetable oil from flax
+        - totally hydrogenated vegetable oil from flax
+        - fully hydrogenated vegetable oil of flax
+        - totally hydrogenated vegetable oil of flax
+        - fully hydrogenated vegetable fat from flax
+        - totally hydrogenated vegetable fat from flax
+        - fully hydrogenated vegetable fat of flax
+        - totally hydrogenated vegetable fat of flax
+        - fully hydrogenated vegetable oils from flax
+        - totally hydrogenated vegetable oils from flax
+        - fully hydrogenated vegetable oils of flax
+        - totally hydrogenated vegetable oils of flax
+        - fully hydrogenated vegetable fats from flax
+        - totally hydrogenated vegetable fats from flax
+        - fully hydrogenated vegetable fats of flax
+        - totally hydrogenated vegetable fats of flax
       pl:
         - całkowicie utwardzony olej lniany
         - olej lniany całkowicie utwardzony

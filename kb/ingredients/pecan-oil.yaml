@@ -17,6 +17,106 @@ names:
     - not partially hydrogenated pecan oil
     - not fully hydrogenated pecan oil
     - non partially hydrogenated pecan oil
+    - vegetable oil from pecans
+    - non-hydrogenated vegetable oil from pecans
+    - not hydrogenated vegetable oil from pecans
+    - unhydrogenated vegetable oil from pecans
+    - not partially hydrogenated vegetable oil from pecans
+    - vegetable oil of pecans
+    - non-hydrogenated vegetable oil of pecans
+    - not hydrogenated vegetable oil of pecans
+    - unhydrogenated vegetable oil of pecans
+    - not partially hydrogenated vegetable oil of pecans
+    - vegetable fat from pecans
+    - non-hydrogenated vegetable fat from pecans
+    - not hydrogenated vegetable fat from pecans
+    - unhydrogenated vegetable fat from pecans
+    - not partially hydrogenated vegetable fat from pecans
+    - vegetable fat of pecans
+    - non-hydrogenated vegetable fat of pecans
+    - not hydrogenated vegetable fat of pecans
+    - unhydrogenated vegetable fat of pecans
+    - not partially hydrogenated vegetable fat of pecans
+    - vegetable oils from pecans
+    - non-hydrogenated vegetable oils from pecans
+    - not hydrogenated vegetable oils from pecans
+    - unhydrogenated vegetable oils from pecans
+    - not partially hydrogenated vegetable oils from pecans
+    - vegetable oils of pecans
+    - non-hydrogenated vegetable oils of pecans
+    - not hydrogenated vegetable oils of pecans
+    - unhydrogenated vegetable oils of pecans
+    - not partially hydrogenated vegetable oils of pecans
+    - vegetable fats from pecans
+    - non-hydrogenated vegetable fats from pecans
+    - not hydrogenated vegetable fats from pecans
+    - unhydrogenated vegetable fats from pecans
+    - not partially hydrogenated vegetable fats from pecans
+    - vegetable fats of pecans
+    - non-hydrogenated vegetable fats of pecans
+    - not hydrogenated vegetable fats of pecans
+    - unhydrogenated vegetable fats of pecans
+    - not partially hydrogenated vegetable fats of pecans
+    - nut oil from pecans
+    - non-hydrogenated nut oil from pecans
+    - not hydrogenated nut oil from pecans
+    - unhydrogenated nut oil from pecans
+    - not partially hydrogenated nut oil from pecans
+    - nut oil of pecans
+    - non-hydrogenated nut oil of pecans
+    - not hydrogenated nut oil of pecans
+    - unhydrogenated nut oil of pecans
+    - not partially hydrogenated nut oil of pecans
+    - vegetable oil from pecan nuts
+    - non-hydrogenated vegetable oil from pecan nuts
+    - not hydrogenated vegetable oil from pecan nuts
+    - unhydrogenated vegetable oil from pecan nuts
+    - not partially hydrogenated vegetable oil from pecan nuts
+    - vegetable oil of pecan nuts
+    - non-hydrogenated vegetable oil of pecan nuts
+    - not hydrogenated vegetable oil of pecan nuts
+    - unhydrogenated vegetable oil of pecan nuts
+    - not partially hydrogenated vegetable oil of pecan nuts
+    - vegetable fat from pecan nuts
+    - non-hydrogenated vegetable fat from pecan nuts
+    - not hydrogenated vegetable fat from pecan nuts
+    - unhydrogenated vegetable fat from pecan nuts
+    - not partially hydrogenated vegetable fat from pecan nuts
+    - vegetable fat of pecan nuts
+    - non-hydrogenated vegetable fat of pecan nuts
+    - not hydrogenated vegetable fat of pecan nuts
+    - unhydrogenated vegetable fat of pecan nuts
+    - not partially hydrogenated vegetable fat of pecan nuts
+    - vegetable oils from pecan nuts
+    - non-hydrogenated vegetable oils from pecan nuts
+    - not hydrogenated vegetable oils from pecan nuts
+    - unhydrogenated vegetable oils from pecan nuts
+    - not partially hydrogenated vegetable oils from pecan nuts
+    - vegetable oils of pecan nuts
+    - non-hydrogenated vegetable oils of pecan nuts
+    - not hydrogenated vegetable oils of pecan nuts
+    - unhydrogenated vegetable oils of pecan nuts
+    - not partially hydrogenated vegetable oils of pecan nuts
+    - vegetable fats from pecan nuts
+    - non-hydrogenated vegetable fats from pecan nuts
+    - not hydrogenated vegetable fats from pecan nuts
+    - unhydrogenated vegetable fats from pecan nuts
+    - not partially hydrogenated vegetable fats from pecan nuts
+    - vegetable fats of pecan nuts
+    - non-hydrogenated vegetable fats of pecan nuts
+    - not hydrogenated vegetable fats of pecan nuts
+    - unhydrogenated vegetable fats of pecan nuts
+    - not partially hydrogenated vegetable fats of pecan nuts
+    - nut oil from pecan nuts
+    - non-hydrogenated nut oil from pecan nuts
+    - not hydrogenated nut oil from pecan nuts
+    - unhydrogenated nut oil from pecan nuts
+    - not partially hydrogenated nut oil from pecan nuts
+    - nut oil of pecan nuts
+    - non-hydrogenated nut oil of pecan nuts
+    - not hydrogenated nut oil of pecan nuts
+    - unhydrogenated nut oil of pecan nuts
+    - not partially hydrogenated nut oil of pecan nuts
   pl:
     - olej z orzechów pekan
     - olej pekanowy
@@ -531,6 +631,26 @@ variants:
       en:
         - hydrogenated pecan oil
         - hydrogenated pecan nut oil
+        - hydrogenated vegetable oil from pecans
+        - hydrogenated vegetable oil of pecans
+        - hydrogenated vegetable fat from pecans
+        - hydrogenated vegetable fat of pecans
+        - hydrogenated vegetable oils from pecans
+        - hydrogenated vegetable oils of pecans
+        - hydrogenated vegetable fats from pecans
+        - hydrogenated vegetable fats of pecans
+        - hydrogenated nut oil from pecans
+        - hydrogenated nut oil of pecans
+        - hydrogenated vegetable oil from pecan nuts
+        - hydrogenated vegetable oil of pecan nuts
+        - hydrogenated vegetable fat from pecan nuts
+        - hydrogenated vegetable fat of pecan nuts
+        - hydrogenated vegetable oils from pecan nuts
+        - hydrogenated vegetable oils of pecan nuts
+        - hydrogenated vegetable fats from pecan nuts
+        - hydrogenated vegetable fats of pecan nuts
+        - hydrogenated nut oil from pecan nuts
+        - hydrogenated nut oil of pecan nuts
       pl:
         - utwardzony olej z orzechów pekan
         - olej z orzechów pekan utwardzony
@@ -770,6 +890,26 @@ variants:
       en:
         - partially hydrogenated pecan oil
         - partially hydrogenated pecan nut oil
+        - partially hydrogenated vegetable oil from pecans
+        - partially hydrogenated vegetable oil of pecans
+        - partially hydrogenated vegetable fat from pecans
+        - partially hydrogenated vegetable fat of pecans
+        - partially hydrogenated vegetable oils from pecans
+        - partially hydrogenated vegetable oils of pecans
+        - partially hydrogenated vegetable fats from pecans
+        - partially hydrogenated vegetable fats of pecans
+        - partially hydrogenated nut oil from pecans
+        - partially hydrogenated nut oil of pecans
+        - partially hydrogenated vegetable oil from pecan nuts
+        - partially hydrogenated vegetable oil of pecan nuts
+        - partially hydrogenated vegetable fat from pecan nuts
+        - partially hydrogenated vegetable fat of pecan nuts
+        - partially hydrogenated vegetable oils from pecan nuts
+        - partially hydrogenated vegetable oils of pecan nuts
+        - partially hydrogenated vegetable fats from pecan nuts
+        - partially hydrogenated vegetable fats of pecan nuts
+        - partially hydrogenated nut oil from pecan nuts
+        - partially hydrogenated nut oil of pecan nuts
       pl:
         - częściowo utwardzony olej z orzechów pekan
         - olej z orzechów pekan częściowo utwardzony
@@ -1013,6 +1153,46 @@ variants:
         - totally hydrogenated pecan oil
         - fully hydrogenated pecan nut oil
         - totally hydrogenated pecan nut oil
+        - fully hydrogenated vegetable oil from pecans
+        - totally hydrogenated vegetable oil from pecans
+        - fully hydrogenated vegetable oil of pecans
+        - totally hydrogenated vegetable oil of pecans
+        - fully hydrogenated vegetable fat from pecans
+        - totally hydrogenated vegetable fat from pecans
+        - fully hydrogenated vegetable fat of pecans
+        - totally hydrogenated vegetable fat of pecans
+        - fully hydrogenated vegetable oils from pecans
+        - totally hydrogenated vegetable oils from pecans
+        - fully hydrogenated vegetable oils of pecans
+        - totally hydrogenated vegetable oils of pecans
+        - fully hydrogenated vegetable fats from pecans
+        - totally hydrogenated vegetable fats from pecans
+        - fully hydrogenated vegetable fats of pecans
+        - totally hydrogenated vegetable fats of pecans
+        - fully hydrogenated nut oil from pecans
+        - totally hydrogenated nut oil from pecans
+        - fully hydrogenated nut oil of pecans
+        - totally hydrogenated nut oil of pecans
+        - fully hydrogenated vegetable oil from pecan nuts
+        - totally hydrogenated vegetable oil from pecan nuts
+        - fully hydrogenated vegetable oil of pecan nuts
+        - totally hydrogenated vegetable oil of pecan nuts
+        - fully hydrogenated vegetable fat from pecan nuts
+        - totally hydrogenated vegetable fat from pecan nuts
+        - fully hydrogenated vegetable fat of pecan nuts
+        - totally hydrogenated vegetable fat of pecan nuts
+        - fully hydrogenated vegetable oils from pecan nuts
+        - totally hydrogenated vegetable oils from pecan nuts
+        - fully hydrogenated vegetable oils of pecan nuts
+        - totally hydrogenated vegetable oils of pecan nuts
+        - fully hydrogenated vegetable fats from pecan nuts
+        - totally hydrogenated vegetable fats from pecan nuts
+        - fully hydrogenated vegetable fats of pecan nuts
+        - totally hydrogenated vegetable fats of pecan nuts
+        - fully hydrogenated nut oil from pecan nuts
+        - totally hydrogenated nut oil from pecan nuts
+        - fully hydrogenated nut oil of pecan nuts
+        - totally hydrogenated nut oil of pecan nuts
       pl:
         - całkowicie utwardzony olej z orzechów pekan
         - olej z orzechów pekan całkowicie utwardzony

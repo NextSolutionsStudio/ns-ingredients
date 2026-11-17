@@ -17,6 +17,56 @@ names:
     - not partially hydrogenated brazil nuts oil
     - not fully hydrogenated brazil nuts oil
     - non partially hydrogenated brazil nuts oil
+    - vegetable oil from brazil nuts
+    - non-hydrogenated vegetable oil from brazil nuts
+    - not hydrogenated vegetable oil from brazil nuts
+    - unhydrogenated vegetable oil from brazil nuts
+    - not partially hydrogenated vegetable oil from brazil nuts
+    - vegetable oil of brazil nuts
+    - non-hydrogenated vegetable oil of brazil nuts
+    - not hydrogenated vegetable oil of brazil nuts
+    - unhydrogenated vegetable oil of brazil nuts
+    - not partially hydrogenated vegetable oil of brazil nuts
+    - vegetable fat from brazil nuts
+    - non-hydrogenated vegetable fat from brazil nuts
+    - not hydrogenated vegetable fat from brazil nuts
+    - unhydrogenated vegetable fat from brazil nuts
+    - not partially hydrogenated vegetable fat from brazil nuts
+    - vegetable fat of brazil nuts
+    - non-hydrogenated vegetable fat of brazil nuts
+    - not hydrogenated vegetable fat of brazil nuts
+    - unhydrogenated vegetable fat of brazil nuts
+    - not partially hydrogenated vegetable fat of brazil nuts
+    - vegetable oils from brazil nuts
+    - non-hydrogenated vegetable oils from brazil nuts
+    - not hydrogenated vegetable oils from brazil nuts
+    - unhydrogenated vegetable oils from brazil nuts
+    - not partially hydrogenated vegetable oils from brazil nuts
+    - vegetable oils of brazil nuts
+    - non-hydrogenated vegetable oils of brazil nuts
+    - not hydrogenated vegetable oils of brazil nuts
+    - unhydrogenated vegetable oils of brazil nuts
+    - not partially hydrogenated vegetable oils of brazil nuts
+    - vegetable fats from brazil nuts
+    - non-hydrogenated vegetable fats from brazil nuts
+    - not hydrogenated vegetable fats from brazil nuts
+    - unhydrogenated vegetable fats from brazil nuts
+    - not partially hydrogenated vegetable fats from brazil nuts
+    - vegetable fats of brazil nuts
+    - non-hydrogenated vegetable fats of brazil nuts
+    - not hydrogenated vegetable fats of brazil nuts
+    - unhydrogenated vegetable fats of brazil nuts
+    - not partially hydrogenated vegetable fats of brazil nuts
+    - nut oil from brazil nuts
+    - non-hydrogenated nut oil from brazil nuts
+    - not hydrogenated nut oil from brazil nuts
+    - unhydrogenated nut oil from brazil nuts
+    - not partially hydrogenated nut oil from brazil nuts
+    - nut oil of brazil nuts
+    - non-hydrogenated nut oil of brazil nuts
+    - not hydrogenated nut oil of brazil nuts
+    - unhydrogenated nut oil of brazil nuts
+    - not partially hydrogenated nut oil of brazil nuts
   pl:
     - olej z orzechów brazylijskich
     - olej orzechowy brazylijski
@@ -308,6 +358,16 @@ variants:
       en:
         - hydrogenated brazil nut oil
         - hydrogenated brazil nuts oil
+        - hydrogenated vegetable oil from brazil nuts
+        - hydrogenated vegetable oil of brazil nuts
+        - hydrogenated vegetable fat from brazil nuts
+        - hydrogenated vegetable fat of brazil nuts
+        - hydrogenated vegetable oils from brazil nuts
+        - hydrogenated vegetable oils of brazil nuts
+        - hydrogenated vegetable fats from brazil nuts
+        - hydrogenated vegetable fats of brazil nuts
+        - hydrogenated nut oil from brazil nuts
+        - hydrogenated nut oil of brazil nuts
       pl:
         - utwardzony olej z orzechów brazylijskich
         - olej z orzechów brazylijskich utwardzony
@@ -445,6 +505,16 @@ variants:
       en:
         - partially hydrogenated brazil nut oil
         - partially hydrogenated brazil nuts oil
+        - partially hydrogenated vegetable oil from brazil nuts
+        - partially hydrogenated vegetable oil of brazil nuts
+        - partially hydrogenated vegetable fat from brazil nuts
+        - partially hydrogenated vegetable fat of brazil nuts
+        - partially hydrogenated vegetable oils from brazil nuts
+        - partially hydrogenated vegetable oils of brazil nuts
+        - partially hydrogenated vegetable fats from brazil nuts
+        - partially hydrogenated vegetable fats of brazil nuts
+        - partially hydrogenated nut oil from brazil nuts
+        - partially hydrogenated nut oil of brazil nuts
       pl:
         - częściowo utwardzony olej z orzechów brazylijskich
         - olej z orzechów brazylijskich częściowo utwardzony
@@ -586,6 +656,26 @@ variants:
         - totally hydrogenated brazil nut oil
         - fully hydrogenated brazil nuts oil
         - totally hydrogenated brazil nuts oil
+        - fully hydrogenated vegetable oil from brazil nuts
+        - totally hydrogenated vegetable oil from brazil nuts
+        - fully hydrogenated vegetable oil of brazil nuts
+        - totally hydrogenated vegetable oil of brazil nuts
+        - fully hydrogenated vegetable fat from brazil nuts
+        - totally hydrogenated vegetable fat from brazil nuts
+        - fully hydrogenated vegetable fat of brazil nuts
+        - totally hydrogenated vegetable fat of brazil nuts
+        - fully hydrogenated vegetable oils from brazil nuts
+        - totally hydrogenated vegetable oils from brazil nuts
+        - fully hydrogenated vegetable oils of brazil nuts
+        - totally hydrogenated vegetable oils of brazil nuts
+        - fully hydrogenated vegetable fats from brazil nuts
+        - totally hydrogenated vegetable fats from brazil nuts
+        - fully hydrogenated vegetable fats of brazil nuts
+        - totally hydrogenated vegetable fats of brazil nuts
+        - fully hydrogenated nut oil from brazil nuts
+        - totally hydrogenated nut oil from brazil nuts
+        - fully hydrogenated nut oil of brazil nuts
+        - totally hydrogenated nut oil of brazil nuts
       pl:
         - całkowicie utwardzony olej z orzechów brazylijskich
         - olej z orzechów brazylijskich całkowicie utwardzony

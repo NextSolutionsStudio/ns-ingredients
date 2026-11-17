@@ -24,6 +24,106 @@ names:
     - non partially hydrogenated pistachios oil
     - non-hydrogenated pistachios oil
     - unhydrogenated pistachios oil
+    - vegetable oil from pistachios
+    - non-hydrogenated vegetable oil from pistachios
+    - not hydrogenated vegetable oil from pistachios
+    - unhydrogenated vegetable oil from pistachios
+    - not partially hydrogenated vegetable oil from pistachios
+    - vegetable oil of pistachios
+    - non-hydrogenated vegetable oil of pistachios
+    - not hydrogenated vegetable oil of pistachios
+    - unhydrogenated vegetable oil of pistachios
+    - not partially hydrogenated vegetable oil of pistachios
+    - vegetable fat from pistachios
+    - non-hydrogenated vegetable fat from pistachios
+    - not hydrogenated vegetable fat from pistachios
+    - unhydrogenated vegetable fat from pistachios
+    - not partially hydrogenated vegetable fat from pistachios
+    - vegetable fat of pistachios
+    - non-hydrogenated vegetable fat of pistachios
+    - not hydrogenated vegetable fat of pistachios
+    - unhydrogenated vegetable fat of pistachios
+    - not partially hydrogenated vegetable fat of pistachios
+    - vegetable oils from pistachios
+    - non-hydrogenated vegetable oils from pistachios
+    - not hydrogenated vegetable oils from pistachios
+    - unhydrogenated vegetable oils from pistachios
+    - not partially hydrogenated vegetable oils from pistachios
+    - vegetable oils of pistachios
+    - non-hydrogenated vegetable oils of pistachios
+    - not hydrogenated vegetable oils of pistachios
+    - unhydrogenated vegetable oils of pistachios
+    - not partially hydrogenated vegetable oils of pistachios
+    - vegetable fats from pistachios
+    - non-hydrogenated vegetable fats from pistachios
+    - not hydrogenated vegetable fats from pistachios
+    - unhydrogenated vegetable fats from pistachios
+    - not partially hydrogenated vegetable fats from pistachios
+    - vegetable fats of pistachios
+    - non-hydrogenated vegetable fats of pistachios
+    - not hydrogenated vegetable fats of pistachios
+    - unhydrogenated vegetable fats of pistachios
+    - not partially hydrogenated vegetable fats of pistachios
+    - nut oil from pistachios
+    - non-hydrogenated nut oil from pistachios
+    - not hydrogenated nut oil from pistachios
+    - unhydrogenated nut oil from pistachios
+    - not partially hydrogenated nut oil from pistachios
+    - nut oil of pistachios
+    - non-hydrogenated nut oil of pistachios
+    - not hydrogenated nut oil of pistachios
+    - unhydrogenated nut oil of pistachios
+    - not partially hydrogenated nut oil of pistachios
+    - vegetable oil from pistachio nuts
+    - non-hydrogenated vegetable oil from pistachio nuts
+    - not hydrogenated vegetable oil from pistachio nuts
+    - unhydrogenated vegetable oil from pistachio nuts
+    - not partially hydrogenated vegetable oil from pistachio nuts
+    - vegetable oil of pistachio nuts
+    - non-hydrogenated vegetable oil of pistachio nuts
+    - not hydrogenated vegetable oil of pistachio nuts
+    - unhydrogenated vegetable oil of pistachio nuts
+    - not partially hydrogenated vegetable oil of pistachio nuts
+    - vegetable fat from pistachio nuts
+    - non-hydrogenated vegetable fat from pistachio nuts
+    - not hydrogenated vegetable fat from pistachio nuts
+    - unhydrogenated vegetable fat from pistachio nuts
+    - not partially hydrogenated vegetable fat from pistachio nuts
+    - vegetable fat of pistachio nuts
+    - non-hydrogenated vegetable fat of pistachio nuts
+    - not hydrogenated vegetable fat of pistachio nuts
+    - unhydrogenated vegetable fat of pistachio nuts
+    - not partially hydrogenated vegetable fat of pistachio nuts
+    - vegetable oils from pistachio nuts
+    - non-hydrogenated vegetable oils from pistachio nuts
+    - not hydrogenated vegetable oils from pistachio nuts
+    - unhydrogenated vegetable oils from pistachio nuts
+    - not partially hydrogenated vegetable oils from pistachio nuts
+    - vegetable oils of pistachio nuts
+    - non-hydrogenated vegetable oils of pistachio nuts
+    - not hydrogenated vegetable oils of pistachio nuts
+    - unhydrogenated vegetable oils of pistachio nuts
+    - not partially hydrogenated vegetable oils of pistachio nuts
+    - vegetable fats from pistachio nuts
+    - non-hydrogenated vegetable fats from pistachio nuts
+    - not hydrogenated vegetable fats from pistachio nuts
+    - unhydrogenated vegetable fats from pistachio nuts
+    - not partially hydrogenated vegetable fats from pistachio nuts
+    - vegetable fats of pistachio nuts
+    - non-hydrogenated vegetable fats of pistachio nuts
+    - not hydrogenated vegetable fats of pistachio nuts
+    - unhydrogenated vegetable fats of pistachio nuts
+    - not partially hydrogenated vegetable fats of pistachio nuts
+    - nut oil from pistachio nuts
+    - non-hydrogenated nut oil from pistachio nuts
+    - not hydrogenated nut oil from pistachio nuts
+    - unhydrogenated nut oil from pistachio nuts
+    - not partially hydrogenated nut oil from pistachio nuts
+    - nut oil of pistachio nuts
+    - non-hydrogenated nut oil of pistachio nuts
+    - not hydrogenated nut oil of pistachio nuts
+    - unhydrogenated nut oil of pistachio nuts
+    - not partially hydrogenated nut oil of pistachio nuts
   pl:
     - olej pistacjowy
     - olej z pistacji
@@ -382,6 +482,26 @@ variants:
         - hydrogenated pistachio oil
         - hydrogenated pistachio nut oil
         - hydrogenated pistachios oil
+        - hydrogenated vegetable oil from pistachios
+        - hydrogenated vegetable oil of pistachios
+        - hydrogenated vegetable fat from pistachios
+        - hydrogenated vegetable fat of pistachios
+        - hydrogenated vegetable oils from pistachios
+        - hydrogenated vegetable oils of pistachios
+        - hydrogenated vegetable fats from pistachios
+        - hydrogenated vegetable fats of pistachios
+        - hydrogenated nut oil from pistachios
+        - hydrogenated nut oil of pistachios
+        - hydrogenated vegetable oil from pistachio nuts
+        - hydrogenated vegetable oil of pistachio nuts
+        - hydrogenated vegetable fat from pistachio nuts
+        - hydrogenated vegetable fat of pistachio nuts
+        - hydrogenated vegetable oils from pistachio nuts
+        - hydrogenated vegetable oils of pistachio nuts
+        - hydrogenated vegetable fats from pistachio nuts
+        - hydrogenated vegetable fats of pistachio nuts
+        - hydrogenated nut oil from pistachio nuts
+        - hydrogenated nut oil of pistachio nuts
       pl:
         - utwardzony olej pistacjowy
         - olej pistacjowy utwardzony
@@ -550,6 +670,26 @@ variants:
         - partially hydrogenated pistachio oil
         - partially hydrogenated pistachio nut oil
         - partially hydrogenated pistachios oil
+        - partially hydrogenated vegetable oil from pistachios
+        - partially hydrogenated vegetable oil of pistachios
+        - partially hydrogenated vegetable fat from pistachios
+        - partially hydrogenated vegetable fat of pistachios
+        - partially hydrogenated vegetable oils from pistachios
+        - partially hydrogenated vegetable oils of pistachios
+        - partially hydrogenated vegetable fats from pistachios
+        - partially hydrogenated vegetable fats of pistachios
+        - partially hydrogenated nut oil from pistachios
+        - partially hydrogenated nut oil of pistachios
+        - partially hydrogenated vegetable oil from pistachio nuts
+        - partially hydrogenated vegetable oil of pistachio nuts
+        - partially hydrogenated vegetable fat from pistachio nuts
+        - partially hydrogenated vegetable fat of pistachio nuts
+        - partially hydrogenated vegetable oils from pistachio nuts
+        - partially hydrogenated vegetable oils of pistachio nuts
+        - partially hydrogenated vegetable fats from pistachio nuts
+        - partially hydrogenated vegetable fats of pistachio nuts
+        - partially hydrogenated nut oil from pistachio nuts
+        - partially hydrogenated nut oil of pistachio nuts
       pl:
         - częściowo utwardzony olej pistacjowy
         - olej pistacjowy częściowo utwardzony
@@ -723,6 +863,46 @@ variants:
         - totally hydrogenated pistachio nut oil
         - fully hydrogenated pistachios oil
         - totally hydrogenated pistachios oil
+        - fully hydrogenated vegetable oil from pistachios
+        - totally hydrogenated vegetable oil from pistachios
+        - fully hydrogenated vegetable oil of pistachios
+        - totally hydrogenated vegetable oil of pistachios
+        - fully hydrogenated vegetable fat from pistachios
+        - totally hydrogenated vegetable fat from pistachios
+        - fully hydrogenated vegetable fat of pistachios
+        - totally hydrogenated vegetable fat of pistachios
+        - fully hydrogenated vegetable oils from pistachios
+        - totally hydrogenated vegetable oils from pistachios
+        - fully hydrogenated vegetable oils of pistachios
+        - totally hydrogenated vegetable oils of pistachios
+        - fully hydrogenated vegetable fats from pistachios
+        - totally hydrogenated vegetable fats from pistachios
+        - fully hydrogenated vegetable fats of pistachios
+        - totally hydrogenated vegetable fats of pistachios
+        - fully hydrogenated nut oil from pistachios
+        - totally hydrogenated nut oil from pistachios
+        - fully hydrogenated nut oil of pistachios
+        - totally hydrogenated nut oil of pistachios
+        - fully hydrogenated vegetable oil from pistachio nuts
+        - totally hydrogenated vegetable oil from pistachio nuts
+        - fully hydrogenated vegetable oil of pistachio nuts
+        - totally hydrogenated vegetable oil of pistachio nuts
+        - fully hydrogenated vegetable fat from pistachio nuts
+        - totally hydrogenated vegetable fat from pistachio nuts
+        - fully hydrogenated vegetable fat of pistachio nuts
+        - totally hydrogenated vegetable fat of pistachio nuts
+        - fully hydrogenated vegetable oils from pistachio nuts
+        - totally hydrogenated vegetable oils from pistachio nuts
+        - fully hydrogenated vegetable oils of pistachio nuts
+        - totally hydrogenated vegetable oils of pistachio nuts
+        - fully hydrogenated vegetable fats from pistachio nuts
+        - totally hydrogenated vegetable fats from pistachio nuts
+        - fully hydrogenated vegetable fats of pistachio nuts
+        - totally hydrogenated vegetable fats of pistachio nuts
+        - fully hydrogenated nut oil from pistachio nuts
+        - totally hydrogenated nut oil from pistachio nuts
+        - fully hydrogenated nut oil of pistachio nuts
+        - totally hydrogenated nut oil of pistachio nuts
       pl:
         - całkowicie utwardzony olej pistacjowy
         - olej pistacjowy całkowicie utwardzony

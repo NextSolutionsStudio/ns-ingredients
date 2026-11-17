@@ -37,6 +37,106 @@ names:
     - unhydrogenated pine nuts oil
     - non-hydrogenated cedar nut oil
     - unhydrogenated cedar nut oil
+    - vegetable oil from pine nuts
+    - non-hydrogenated vegetable oil from pine nuts
+    - not hydrogenated vegetable oil from pine nuts
+    - unhydrogenated vegetable oil from pine nuts
+    - not partially hydrogenated vegetable oil from pine nuts
+    - vegetable oil of pine nuts
+    - non-hydrogenated vegetable oil of pine nuts
+    - not hydrogenated vegetable oil of pine nuts
+    - unhydrogenated vegetable oil of pine nuts
+    - not partially hydrogenated vegetable oil of pine nuts
+    - vegetable fat from pine nuts
+    - non-hydrogenated vegetable fat from pine nuts
+    - not hydrogenated vegetable fat from pine nuts
+    - unhydrogenated vegetable fat from pine nuts
+    - not partially hydrogenated vegetable fat from pine nuts
+    - vegetable fat of pine nuts
+    - non-hydrogenated vegetable fat of pine nuts
+    - not hydrogenated vegetable fat of pine nuts
+    - unhydrogenated vegetable fat of pine nuts
+    - not partially hydrogenated vegetable fat of pine nuts
+    - vegetable oils from pine nuts
+    - non-hydrogenated vegetable oils from pine nuts
+    - not hydrogenated vegetable oils from pine nuts
+    - unhydrogenated vegetable oils from pine nuts
+    - not partially hydrogenated vegetable oils from pine nuts
+    - vegetable oils of pine nuts
+    - non-hydrogenated vegetable oils of pine nuts
+    - not hydrogenated vegetable oils of pine nuts
+    - unhydrogenated vegetable oils of pine nuts
+    - not partially hydrogenated vegetable oils of pine nuts
+    - vegetable fats from pine nuts
+    - non-hydrogenated vegetable fats from pine nuts
+    - not hydrogenated vegetable fats from pine nuts
+    - unhydrogenated vegetable fats from pine nuts
+    - not partially hydrogenated vegetable fats from pine nuts
+    - vegetable fats of pine nuts
+    - non-hydrogenated vegetable fats of pine nuts
+    - not hydrogenated vegetable fats of pine nuts
+    - unhydrogenated vegetable fats of pine nuts
+    - not partially hydrogenated vegetable fats of pine nuts
+    - nut oil from pine nuts
+    - non-hydrogenated nut oil from pine nuts
+    - not hydrogenated nut oil from pine nuts
+    - unhydrogenated nut oil from pine nuts
+    - not partially hydrogenated nut oil from pine nuts
+    - nut oil of pine nuts
+    - non-hydrogenated nut oil of pine nuts
+    - not hydrogenated nut oil of pine nuts
+    - unhydrogenated nut oil of pine nuts
+    - not partially hydrogenated nut oil of pine nuts
+    - vegetable oil from pine kernels
+    - non-hydrogenated vegetable oil from pine kernels
+    - not hydrogenated vegetable oil from pine kernels
+    - unhydrogenated vegetable oil from pine kernels
+    - not partially hydrogenated vegetable oil from pine kernels
+    - vegetable oil of pine kernels
+    - non-hydrogenated vegetable oil of pine kernels
+    - not hydrogenated vegetable oil of pine kernels
+    - unhydrogenated vegetable oil of pine kernels
+    - not partially hydrogenated vegetable oil of pine kernels
+    - vegetable fat from pine kernels
+    - non-hydrogenated vegetable fat from pine kernels
+    - not hydrogenated vegetable fat from pine kernels
+    - unhydrogenated vegetable fat from pine kernels
+    - not partially hydrogenated vegetable fat from pine kernels
+    - vegetable fat of pine kernels
+    - non-hydrogenated vegetable fat of pine kernels
+    - not hydrogenated vegetable fat of pine kernels
+    - unhydrogenated vegetable fat of pine kernels
+    - not partially hydrogenated vegetable fat of pine kernels
+    - vegetable oils from pine kernels
+    - non-hydrogenated vegetable oils from pine kernels
+    - not hydrogenated vegetable oils from pine kernels
+    - unhydrogenated vegetable oils from pine kernels
+    - not partially hydrogenated vegetable oils from pine kernels
+    - vegetable oils of pine kernels
+    - non-hydrogenated vegetable oils of pine kernels
+    - not hydrogenated vegetable oils of pine kernels
+    - unhydrogenated vegetable oils of pine kernels
+    - not partially hydrogenated vegetable oils of pine kernels
+    - vegetable fats from pine kernels
+    - non-hydrogenated vegetable fats from pine kernels
+    - not hydrogenated vegetable fats from pine kernels
+    - unhydrogenated vegetable fats from pine kernels
+    - not partially hydrogenated vegetable fats from pine kernels
+    - vegetable fats of pine kernels
+    - non-hydrogenated vegetable fats of pine kernels
+    - not hydrogenated vegetable fats of pine kernels
+    - unhydrogenated vegetable fats of pine kernels
+    - not partially hydrogenated vegetable fats of pine kernels
+    - nut oil from pine kernels
+    - non-hydrogenated nut oil from pine kernels
+    - not hydrogenated nut oil from pine kernels
+    - unhydrogenated nut oil from pine kernels
+    - not partially hydrogenated nut oil from pine kernels
+    - nut oil of pine kernels
+    - non-hydrogenated nut oil of pine kernels
+    - not hydrogenated nut oil of pine kernels
+    - unhydrogenated nut oil of pine kernels
+    - not partially hydrogenated nut oil of pine kernels
   pl:
     - olej z orzeszków piniowych
     - olej z orzeszków pinii
@@ -739,6 +839,26 @@ variants:
         - hydrogenated pine seed oil
         - hydrogenated pine nuts oil
         - hydrogenated cedar nut oil
+        - hydrogenated vegetable oil from pine nuts
+        - hydrogenated vegetable oil of pine nuts
+        - hydrogenated vegetable fat from pine nuts
+        - hydrogenated vegetable fat of pine nuts
+        - hydrogenated vegetable oils from pine nuts
+        - hydrogenated vegetable oils of pine nuts
+        - hydrogenated vegetable fats from pine nuts
+        - hydrogenated vegetable fats of pine nuts
+        - hydrogenated nut oil from pine nuts
+        - hydrogenated nut oil of pine nuts
+        - hydrogenated vegetable oil from pine kernels
+        - hydrogenated vegetable oil of pine kernels
+        - hydrogenated vegetable fat from pine kernels
+        - hydrogenated vegetable fat of pine kernels
+        - hydrogenated vegetable oils from pine kernels
+        - hydrogenated vegetable oils of pine kernels
+        - hydrogenated vegetable fats from pine kernels
+        - hydrogenated vegetable fats of pine kernels
+        - hydrogenated nut oil from pine kernels
+        - hydrogenated nut oil of pine kernels
       pl:
         - utwardzony olej z orzeszków piniowych
         - olej z orzeszków piniowych utwardzony
@@ -1065,6 +1185,26 @@ variants:
         - partially hydrogenated pine seed oil
         - partially hydrogenated pine nuts oil
         - partially hydrogenated cedar nut oil
+        - partially hydrogenated vegetable oil from pine nuts
+        - partially hydrogenated vegetable oil of pine nuts
+        - partially hydrogenated vegetable fat from pine nuts
+        - partially hydrogenated vegetable fat of pine nuts
+        - partially hydrogenated vegetable oils from pine nuts
+        - partially hydrogenated vegetable oils of pine nuts
+        - partially hydrogenated vegetable fats from pine nuts
+        - partially hydrogenated vegetable fats of pine nuts
+        - partially hydrogenated nut oil from pine nuts
+        - partially hydrogenated nut oil of pine nuts
+        - partially hydrogenated vegetable oil from pine kernels
+        - partially hydrogenated vegetable oil of pine kernels
+        - partially hydrogenated vegetable fat from pine kernels
+        - partially hydrogenated vegetable fat of pine kernels
+        - partially hydrogenated vegetable oils from pine kernels
+        - partially hydrogenated vegetable oils of pine kernels
+        - partially hydrogenated vegetable fats from pine kernels
+        - partially hydrogenated vegetable fats of pine kernels
+        - partially hydrogenated nut oil from pine kernels
+        - partially hydrogenated nut oil of pine kernels
       pl:
         - częściowo utwardzony olej z orzeszków piniowych
         - olej z orzeszków piniowych częściowo utwardzony
@@ -1398,6 +1538,46 @@ variants:
         - totally hydrogenated pine nuts oil
         - fully hydrogenated cedar nut oil
         - totally hydrogenated cedar nut oil
+        - fully hydrogenated vegetable oil from pine nuts
+        - totally hydrogenated vegetable oil from pine nuts
+        - fully hydrogenated vegetable oil of pine nuts
+        - totally hydrogenated vegetable oil of pine nuts
+        - fully hydrogenated vegetable fat from pine nuts
+        - totally hydrogenated vegetable fat from pine nuts
+        - fully hydrogenated vegetable fat of pine nuts
+        - totally hydrogenated vegetable fat of pine nuts
+        - fully hydrogenated vegetable oils from pine nuts
+        - totally hydrogenated vegetable oils from pine nuts
+        - fully hydrogenated vegetable oils of pine nuts
+        - totally hydrogenated vegetable oils of pine nuts
+        - fully hydrogenated vegetable fats from pine nuts
+        - totally hydrogenated vegetable fats from pine nuts
+        - fully hydrogenated vegetable fats of pine nuts
+        - totally hydrogenated vegetable fats of pine nuts
+        - fully hydrogenated nut oil from pine nuts
+        - totally hydrogenated nut oil from pine nuts
+        - fully hydrogenated nut oil of pine nuts
+        - totally hydrogenated nut oil of pine nuts
+        - fully hydrogenated vegetable oil from pine kernels
+        - totally hydrogenated vegetable oil from pine kernels
+        - fully hydrogenated vegetable oil of pine kernels
+        - totally hydrogenated vegetable oil of pine kernels
+        - fully hydrogenated vegetable fat from pine kernels
+        - totally hydrogenated vegetable fat from pine kernels
+        - fully hydrogenated vegetable fat of pine kernels
+        - totally hydrogenated vegetable fat of pine kernels
+        - fully hydrogenated vegetable oils from pine kernels
+        - totally hydrogenated vegetable oils from pine kernels
+        - fully hydrogenated vegetable oils of pine kernels
+        - totally hydrogenated vegetable oils of pine kernels
+        - fully hydrogenated vegetable fats from pine kernels
+        - totally hydrogenated vegetable fats from pine kernels
+        - fully hydrogenated vegetable fats of pine kernels
+        - totally hydrogenated vegetable fats of pine kernels
+        - fully hydrogenated nut oil from pine kernels
+        - totally hydrogenated nut oil from pine kernels
+        - fully hydrogenated nut oil of pine kernels
+        - totally hydrogenated nut oil of pine kernels
       pl:
         - całkowicie utwardzony olej z orzeszków piniowych
         - olej z orzeszków piniowych całkowicie utwardzony

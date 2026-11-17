@@ -17,6 +17,106 @@ names:
     - not partially hydrogenated hazelnuts oil
     - not fully hydrogenated hazelnuts oil
     - non partially hydrogenated hazelnuts oil
+    - vegetable oil from hazelnuts
+    - non-hydrogenated vegetable oil from hazelnuts
+    - not hydrogenated vegetable oil from hazelnuts
+    - unhydrogenated vegetable oil from hazelnuts
+    - not partially hydrogenated vegetable oil from hazelnuts
+    - vegetable oil of hazelnuts
+    - non-hydrogenated vegetable oil of hazelnuts
+    - not hydrogenated vegetable oil of hazelnuts
+    - unhydrogenated vegetable oil of hazelnuts
+    - not partially hydrogenated vegetable oil of hazelnuts
+    - vegetable fat from hazelnuts
+    - non-hydrogenated vegetable fat from hazelnuts
+    - not hydrogenated vegetable fat from hazelnuts
+    - unhydrogenated vegetable fat from hazelnuts
+    - not partially hydrogenated vegetable fat from hazelnuts
+    - vegetable fat of hazelnuts
+    - non-hydrogenated vegetable fat of hazelnuts
+    - not hydrogenated vegetable fat of hazelnuts
+    - unhydrogenated vegetable fat of hazelnuts
+    - not partially hydrogenated vegetable fat of hazelnuts
+    - vegetable oils from hazelnuts
+    - non-hydrogenated vegetable oils from hazelnuts
+    - not hydrogenated vegetable oils from hazelnuts
+    - unhydrogenated vegetable oils from hazelnuts
+    - not partially hydrogenated vegetable oils from hazelnuts
+    - vegetable oils of hazelnuts
+    - non-hydrogenated vegetable oils of hazelnuts
+    - not hydrogenated vegetable oils of hazelnuts
+    - unhydrogenated vegetable oils of hazelnuts
+    - not partially hydrogenated vegetable oils of hazelnuts
+    - vegetable fats from hazelnuts
+    - non-hydrogenated vegetable fats from hazelnuts
+    - not hydrogenated vegetable fats from hazelnuts
+    - unhydrogenated vegetable fats from hazelnuts
+    - not partially hydrogenated vegetable fats from hazelnuts
+    - vegetable fats of hazelnuts
+    - non-hydrogenated vegetable fats of hazelnuts
+    - not hydrogenated vegetable fats of hazelnuts
+    - unhydrogenated vegetable fats of hazelnuts
+    - not partially hydrogenated vegetable fats of hazelnuts
+    - nut oil from hazelnuts
+    - non-hydrogenated nut oil from hazelnuts
+    - not hydrogenated nut oil from hazelnuts
+    - unhydrogenated nut oil from hazelnuts
+    - not partially hydrogenated nut oil from hazelnuts
+    - nut oil of hazelnuts
+    - non-hydrogenated nut oil of hazelnuts
+    - not hydrogenated nut oil of hazelnuts
+    - unhydrogenated nut oil of hazelnuts
+    - not partially hydrogenated nut oil of hazelnuts
+    - vegetable oil from hazelnut
+    - non-hydrogenated vegetable oil from hazelnut
+    - not hydrogenated vegetable oil from hazelnut
+    - unhydrogenated vegetable oil from hazelnut
+    - not partially hydrogenated vegetable oil from hazelnut
+    - vegetable oil of hazelnut
+    - non-hydrogenated vegetable oil of hazelnut
+    - not hydrogenated vegetable oil of hazelnut
+    - unhydrogenated vegetable oil of hazelnut
+    - not partially hydrogenated vegetable oil of hazelnut
+    - vegetable fat from hazelnut
+    - non-hydrogenated vegetable fat from hazelnut
+    - not hydrogenated vegetable fat from hazelnut
+    - unhydrogenated vegetable fat from hazelnut
+    - not partially hydrogenated vegetable fat from hazelnut
+    - vegetable fat of hazelnut
+    - non-hydrogenated vegetable fat of hazelnut
+    - not hydrogenated vegetable fat of hazelnut
+    - unhydrogenated vegetable fat of hazelnut
+    - not partially hydrogenated vegetable fat of hazelnut
+    - vegetable oils from hazelnut
+    - non-hydrogenated vegetable oils from hazelnut
+    - not hydrogenated vegetable oils from hazelnut
+    - unhydrogenated vegetable oils from hazelnut
+    - not partially hydrogenated vegetable oils from hazelnut
+    - vegetable oils of hazelnut
+    - non-hydrogenated vegetable oils of hazelnut
+    - not hydrogenated vegetable oils of hazelnut
+    - unhydrogenated vegetable oils of hazelnut
+    - not partially hydrogenated vegetable oils of hazelnut
+    - vegetable fats from hazelnut
+    - non-hydrogenated vegetable fats from hazelnut
+    - not hydrogenated vegetable fats from hazelnut
+    - unhydrogenated vegetable fats from hazelnut
+    - not partially hydrogenated vegetable fats from hazelnut
+    - vegetable fats of hazelnut
+    - non-hydrogenated vegetable fats of hazelnut
+    - not hydrogenated vegetable fats of hazelnut
+    - unhydrogenated vegetable fats of hazelnut
+    - not partially hydrogenated vegetable fats of hazelnut
+    - nut oil from hazelnut
+    - non-hydrogenated nut oil from hazelnut
+    - not hydrogenated nut oil from hazelnut
+    - unhydrogenated nut oil from hazelnut
+    - not partially hydrogenated nut oil from hazelnut
+    - nut oil of hazelnut
+    - non-hydrogenated nut oil of hazelnut
+    - not hydrogenated nut oil of hazelnut
+    - unhydrogenated nut oil of hazelnut
+    - not partially hydrogenated nut oil of hazelnut
   pl:
     - olej z orzechów laskowych
     - olej roślinny z orzechów laskowych
@@ -548,6 +648,26 @@ variants:
       en:
         - hydrogenated hazelnut oil
         - hydrogenated hazelnuts oil
+        - hydrogenated vegetable oil from hazelnuts
+        - hydrogenated vegetable oil of hazelnuts
+        - hydrogenated vegetable fat from hazelnuts
+        - hydrogenated vegetable fat of hazelnuts
+        - hydrogenated vegetable oils from hazelnuts
+        - hydrogenated vegetable oils of hazelnuts
+        - hydrogenated vegetable fats from hazelnuts
+        - hydrogenated vegetable fats of hazelnuts
+        - hydrogenated nut oil from hazelnuts
+        - hydrogenated nut oil of hazelnuts
+        - hydrogenated vegetable oil from hazelnut
+        - hydrogenated vegetable oil of hazelnut
+        - hydrogenated vegetable fat from hazelnut
+        - hydrogenated vegetable fat of hazelnut
+        - hydrogenated vegetable oils from hazelnut
+        - hydrogenated vegetable oils of hazelnut
+        - hydrogenated vegetable fats from hazelnut
+        - hydrogenated vegetable fats of hazelnut
+        - hydrogenated nut oil from hazelnut
+        - hydrogenated nut oil of hazelnut
       pl:
         - utwardzony olej z orzechów laskowych
         - olej z orzechów laskowych utwardzony
@@ -793,6 +913,26 @@ variants:
       en:
         - partially hydrogenated hazelnut oil
         - partially hydrogenated hazelnuts oil
+        - partially hydrogenated vegetable oil from hazelnuts
+        - partially hydrogenated vegetable oil of hazelnuts
+        - partially hydrogenated vegetable fat from hazelnuts
+        - partially hydrogenated vegetable fat of hazelnuts
+        - partially hydrogenated vegetable oils from hazelnuts
+        - partially hydrogenated vegetable oils of hazelnuts
+        - partially hydrogenated vegetable fats from hazelnuts
+        - partially hydrogenated vegetable fats of hazelnuts
+        - partially hydrogenated nut oil from hazelnuts
+        - partially hydrogenated nut oil of hazelnuts
+        - partially hydrogenated vegetable oil from hazelnut
+        - partially hydrogenated vegetable oil of hazelnut
+        - partially hydrogenated vegetable fat from hazelnut
+        - partially hydrogenated vegetable fat of hazelnut
+        - partially hydrogenated vegetable oils from hazelnut
+        - partially hydrogenated vegetable oils of hazelnut
+        - partially hydrogenated vegetable fats from hazelnut
+        - partially hydrogenated vegetable fats of hazelnut
+        - partially hydrogenated nut oil from hazelnut
+        - partially hydrogenated nut oil of hazelnut
       pl:
         - częściowo utwardzony olej z orzechów laskowych
         - olej z orzechów laskowych częściowo utwardzony
@@ -1042,6 +1182,46 @@ variants:
         - totally hydrogenated hazelnut oil
         - fully hydrogenated hazelnuts oil
         - totally hydrogenated hazelnuts oil
+        - fully hydrogenated vegetable oil from hazelnuts
+        - totally hydrogenated vegetable oil from hazelnuts
+        - fully hydrogenated vegetable oil of hazelnuts
+        - totally hydrogenated vegetable oil of hazelnuts
+        - fully hydrogenated vegetable fat from hazelnuts
+        - totally hydrogenated vegetable fat from hazelnuts
+        - fully hydrogenated vegetable fat of hazelnuts
+        - totally hydrogenated vegetable fat of hazelnuts
+        - fully hydrogenated vegetable oils from hazelnuts
+        - totally hydrogenated vegetable oils from hazelnuts
+        - fully hydrogenated vegetable oils of hazelnuts
+        - totally hydrogenated vegetable oils of hazelnuts
+        - fully hydrogenated vegetable fats from hazelnuts
+        - totally hydrogenated vegetable fats from hazelnuts
+        - fully hydrogenated vegetable fats of hazelnuts
+        - totally hydrogenated vegetable fats of hazelnuts
+        - fully hydrogenated nut oil from hazelnuts
+        - totally hydrogenated nut oil from hazelnuts
+        - fully hydrogenated nut oil of hazelnuts
+        - totally hydrogenated nut oil of hazelnuts
+        - fully hydrogenated vegetable oil from hazelnut
+        - totally hydrogenated vegetable oil from hazelnut
+        - fully hydrogenated vegetable oil of hazelnut
+        - totally hydrogenated vegetable oil of hazelnut
+        - fully hydrogenated vegetable fat from hazelnut
+        - totally hydrogenated vegetable fat from hazelnut
+        - fully hydrogenated vegetable fat of hazelnut
+        - totally hydrogenated vegetable fat of hazelnut
+        - fully hydrogenated vegetable oils from hazelnut
+        - totally hydrogenated vegetable oils from hazelnut
+        - fully hydrogenated vegetable oils of hazelnut
+        - totally hydrogenated vegetable oils of hazelnut
+        - fully hydrogenated vegetable fats from hazelnut
+        - totally hydrogenated vegetable fats from hazelnut
+        - fully hydrogenated vegetable fats of hazelnut
+        - totally hydrogenated vegetable fats of hazelnut
+        - fully hydrogenated nut oil from hazelnut
+        - totally hydrogenated nut oil from hazelnut
+        - fully hydrogenated nut oil of hazelnut
+        - totally hydrogenated nut oil of hazelnut
       pl:
         - całkowicie utwardzony olej z orzechów laskowych
         - olej z orzechów laskowych całkowicie utwardzony

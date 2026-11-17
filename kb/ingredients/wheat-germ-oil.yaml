@@ -17,6 +17,46 @@ names:
     - not partially hydrogenated wheatgerm oil
     - not fully hydrogenated wheatgerm oil
     - non partially hydrogenated wheatgerm oil
+    - vegetable oil from wheat germ
+    - non-hydrogenated vegetable oil from wheat germ
+    - not hydrogenated vegetable oil from wheat germ
+    - unhydrogenated vegetable oil from wheat germ
+    - not partially hydrogenated vegetable oil from wheat germ
+    - vegetable oil of wheat germ
+    - non-hydrogenated vegetable oil of wheat germ
+    - not hydrogenated vegetable oil of wheat germ
+    - unhydrogenated vegetable oil of wheat germ
+    - not partially hydrogenated vegetable oil of wheat germ
+    - vegetable fat from wheat germ
+    - non-hydrogenated vegetable fat from wheat germ
+    - not hydrogenated vegetable fat from wheat germ
+    - unhydrogenated vegetable fat from wheat germ
+    - not partially hydrogenated vegetable fat from wheat germ
+    - vegetable fat of wheat germ
+    - non-hydrogenated vegetable fat of wheat germ
+    - not hydrogenated vegetable fat of wheat germ
+    - unhydrogenated vegetable fat of wheat germ
+    - not partially hydrogenated vegetable fat of wheat germ
+    - vegetable oils from wheat germ
+    - non-hydrogenated vegetable oils from wheat germ
+    - not hydrogenated vegetable oils from wheat germ
+    - unhydrogenated vegetable oils from wheat germ
+    - not partially hydrogenated vegetable oils from wheat germ
+    - vegetable oils of wheat germ
+    - non-hydrogenated vegetable oils of wheat germ
+    - not hydrogenated vegetable oils of wheat germ
+    - unhydrogenated vegetable oils of wheat germ
+    - not partially hydrogenated vegetable oils of wheat germ
+    - vegetable fats from wheat germ
+    - non-hydrogenated vegetable fats from wheat germ
+    - not hydrogenated vegetable fats from wheat germ
+    - unhydrogenated vegetable fats from wheat germ
+    - not partially hydrogenated vegetable fats from wheat germ
+    - vegetable fats of wheat germ
+    - non-hydrogenated vegetable fats of wheat germ
+    - not hydrogenated vegetable fats of wheat germ
+    - unhydrogenated vegetable fats of wheat germ
+    - not partially hydrogenated vegetable fats of wheat germ
   pl:
     - olej z kiełków pszenicy
     - olej z zarodków pszenicy
@@ -228,6 +268,14 @@ variants:
       en:
         - hydrogenated wheat germ oil
         - hydrogenated wheatgerm oil
+        - hydrogenated vegetable oil from wheat germ
+        - hydrogenated vegetable oil of wheat germ
+        - hydrogenated vegetable fat from wheat germ
+        - hydrogenated vegetable fat of wheat germ
+        - hydrogenated vegetable oils from wheat germ
+        - hydrogenated vegetable oils of wheat germ
+        - hydrogenated vegetable fats from wheat germ
+        - hydrogenated vegetable fats of wheat germ
       pl:
         - utwardzony olej z kiełków pszenicy
         - olej z kiełków pszenicy utwardzony
@@ -329,6 +377,14 @@ variants:
       en:
         - partially hydrogenated wheat germ oil
         - partially hydrogenated wheatgerm oil
+        - partially hydrogenated vegetable oil from wheat germ
+        - partially hydrogenated vegetable oil of wheat germ
+        - partially hydrogenated vegetable fat from wheat germ
+        - partially hydrogenated vegetable fat of wheat germ
+        - partially hydrogenated vegetable oils from wheat germ
+        - partially hydrogenated vegetable oils of wheat germ
+        - partially hydrogenated vegetable fats from wheat germ
+        - partially hydrogenated vegetable fats of wheat germ
       pl:
         - częściowo utwardzony olej z kiełków pszenicy
         - olej z kiełków pszenicy częściowo utwardzony
@@ -434,6 +490,22 @@ variants:
         - totally hydrogenated wheat germ oil
         - fully hydrogenated wheatgerm oil
         - totally hydrogenated wheatgerm oil
+        - fully hydrogenated vegetable oil from wheat germ
+        - totally hydrogenated vegetable oil from wheat germ
+        - fully hydrogenated vegetable oil of wheat germ
+        - totally hydrogenated vegetable oil of wheat germ
+        - fully hydrogenated vegetable fat from wheat germ
+        - totally hydrogenated vegetable fat from wheat germ
+        - fully hydrogenated vegetable fat of wheat germ
+        - totally hydrogenated vegetable fat of wheat germ
+        - fully hydrogenated vegetable oils from wheat germ
+        - totally hydrogenated vegetable oils from wheat germ
+        - fully hydrogenated vegetable oils of wheat germ
+        - totally hydrogenated vegetable oils of wheat germ
+        - fully hydrogenated vegetable fats from wheat germ
+        - totally hydrogenated vegetable fats from wheat germ
+        - fully hydrogenated vegetable fats of wheat germ
+        - totally hydrogenated vegetable fats of wheat germ
       pl:
         - całkowicie utwardzony olej z kiełków pszenicy
         - olej z kiełków pszenicy całkowicie utwardzony

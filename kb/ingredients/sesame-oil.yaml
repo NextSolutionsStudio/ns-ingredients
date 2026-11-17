@@ -31,6 +31,126 @@ names:
     - not partially hydrogenated toasted sesame oil
     - not fully hydrogenated toasted sesame oil
     - non partially hydrogenated toasted sesame oil
+    - vegetable oil from sesame
+    - non-hydrogenated vegetable oil from sesame
+    - not hydrogenated vegetable oil from sesame
+    - unhydrogenated vegetable oil from sesame
+    - not partially hydrogenated vegetable oil from sesame
+    - vegetable oil of sesame
+    - non-hydrogenated vegetable oil of sesame
+    - not hydrogenated vegetable oil of sesame
+    - unhydrogenated vegetable oil of sesame
+    - not partially hydrogenated vegetable oil of sesame
+    - vegetable fat from sesame
+    - non-hydrogenated vegetable fat from sesame
+    - not hydrogenated vegetable fat from sesame
+    - unhydrogenated vegetable fat from sesame
+    - not partially hydrogenated vegetable fat from sesame
+    - vegetable fat of sesame
+    - non-hydrogenated vegetable fat of sesame
+    - not hydrogenated vegetable fat of sesame
+    - unhydrogenated vegetable fat of sesame
+    - not partially hydrogenated vegetable fat of sesame
+    - vegetable oils from sesame
+    - non-hydrogenated vegetable oils from sesame
+    - not hydrogenated vegetable oils from sesame
+    - unhydrogenated vegetable oils from sesame
+    - not partially hydrogenated vegetable oils from sesame
+    - vegetable oils of sesame
+    - non-hydrogenated vegetable oils of sesame
+    - not hydrogenated vegetable oils of sesame
+    - unhydrogenated vegetable oils of sesame
+    - not partially hydrogenated vegetable oils of sesame
+    - vegetable fats from sesame
+    - non-hydrogenated vegetable fats from sesame
+    - not hydrogenated vegetable fats from sesame
+    - unhydrogenated vegetable fats from sesame
+    - not partially hydrogenated vegetable fats from sesame
+    - vegetable fats of sesame
+    - non-hydrogenated vegetable fats of sesame
+    - not hydrogenated vegetable fats of sesame
+    - unhydrogenated vegetable fats of sesame
+    - not partially hydrogenated vegetable fats of sesame
+    - vegetable oil from sesame seeds
+    - non-hydrogenated vegetable oil from sesame seeds
+    - not hydrogenated vegetable oil from sesame seeds
+    - unhydrogenated vegetable oil from sesame seeds
+    - not partially hydrogenated vegetable oil from sesame seeds
+    - vegetable oil of sesame seeds
+    - non-hydrogenated vegetable oil of sesame seeds
+    - not hydrogenated vegetable oil of sesame seeds
+    - unhydrogenated vegetable oil of sesame seeds
+    - not partially hydrogenated vegetable oil of sesame seeds
+    - vegetable fat from sesame seeds
+    - non-hydrogenated vegetable fat from sesame seeds
+    - not hydrogenated vegetable fat from sesame seeds
+    - unhydrogenated vegetable fat from sesame seeds
+    - not partially hydrogenated vegetable fat from sesame seeds
+    - vegetable fat of sesame seeds
+    - non-hydrogenated vegetable fat of sesame seeds
+    - not hydrogenated vegetable fat of sesame seeds
+    - unhydrogenated vegetable fat of sesame seeds
+    - not partially hydrogenated vegetable fat of sesame seeds
+    - vegetable oils from sesame seeds
+    - non-hydrogenated vegetable oils from sesame seeds
+    - not hydrogenated vegetable oils from sesame seeds
+    - unhydrogenated vegetable oils from sesame seeds
+    - not partially hydrogenated vegetable oils from sesame seeds
+    - vegetable oils of sesame seeds
+    - non-hydrogenated vegetable oils of sesame seeds
+    - not hydrogenated vegetable oils of sesame seeds
+    - unhydrogenated vegetable oils of sesame seeds
+    - not partially hydrogenated vegetable oils of sesame seeds
+    - vegetable fats from sesame seeds
+    - non-hydrogenated vegetable fats from sesame seeds
+    - not hydrogenated vegetable fats from sesame seeds
+    - unhydrogenated vegetable fats from sesame seeds
+    - not partially hydrogenated vegetable fats from sesame seeds
+    - vegetable fats of sesame seeds
+    - non-hydrogenated vegetable fats of sesame seeds
+    - not hydrogenated vegetable fats of sesame seeds
+    - unhydrogenated vegetable fats of sesame seeds
+    - not partially hydrogenated vegetable fats of sesame seeds
+    - vegetable oil from sesame seed
+    - non-hydrogenated vegetable oil from sesame seed
+    - not hydrogenated vegetable oil from sesame seed
+    - unhydrogenated vegetable oil from sesame seed
+    - not partially hydrogenated vegetable oil from sesame seed
+    - vegetable oil of sesame seed
+    - non-hydrogenated vegetable oil of sesame seed
+    - not hydrogenated vegetable oil of sesame seed
+    - unhydrogenated vegetable oil of sesame seed
+    - not partially hydrogenated vegetable oil of sesame seed
+    - vegetable fat from sesame seed
+    - non-hydrogenated vegetable fat from sesame seed
+    - not hydrogenated vegetable fat from sesame seed
+    - unhydrogenated vegetable fat from sesame seed
+    - not partially hydrogenated vegetable fat from sesame seed
+    - vegetable fat of sesame seed
+    - non-hydrogenated vegetable fat of sesame seed
+    - not hydrogenated vegetable fat of sesame seed
+    - unhydrogenated vegetable fat of sesame seed
+    - not partially hydrogenated vegetable fat of sesame seed
+    - vegetable oils from sesame seed
+    - non-hydrogenated vegetable oils from sesame seed
+    - not hydrogenated vegetable oils from sesame seed
+    - unhydrogenated vegetable oils from sesame seed
+    - not partially hydrogenated vegetable oils from sesame seed
+    - vegetable oils of sesame seed
+    - non-hydrogenated vegetable oils of sesame seed
+    - not hydrogenated vegetable oils of sesame seed
+    - unhydrogenated vegetable oils of sesame seed
+    - not partially hydrogenated vegetable oils of sesame seed
+    - vegetable fats from sesame seed
+    - non-hydrogenated vegetable fats from sesame seed
+    - not hydrogenated vegetable fats from sesame seed
+    - unhydrogenated vegetable fats from sesame seed
+    - not partially hydrogenated vegetable fats from sesame seed
+    - vegetable fats of sesame seed
+    - non-hydrogenated vegetable fats of sesame seed
+    - not hydrogenated vegetable fats of sesame seed
+    - unhydrogenated vegetable fats of sesame seed
+    - not partially hydrogenated vegetable fats of sesame seed
   pl:
     - olej sezamowy
     - rafinowany olej sezamowy
@@ -312,6 +432,30 @@ variants:
         - hydrogenated sesame seed oil
         - hydrogenated refined sesame oil
         - hydrogenated toasted sesame oil
+        - hydrogenated vegetable oil from sesame
+        - hydrogenated vegetable oil of sesame
+        - hydrogenated vegetable fat from sesame
+        - hydrogenated vegetable fat of sesame
+        - hydrogenated vegetable oils from sesame
+        - hydrogenated vegetable oils of sesame
+        - hydrogenated vegetable fats from sesame
+        - hydrogenated vegetable fats of sesame
+        - hydrogenated vegetable oil from sesame seeds
+        - hydrogenated vegetable oil of sesame seeds
+        - hydrogenated vegetable fat from sesame seeds
+        - hydrogenated vegetable fat of sesame seeds
+        - hydrogenated vegetable oils from sesame seeds
+        - hydrogenated vegetable oils of sesame seeds
+        - hydrogenated vegetable fats from sesame seeds
+        - hydrogenated vegetable fats of sesame seeds
+        - hydrogenated vegetable oil from sesame seed
+        - hydrogenated vegetable oil of sesame seed
+        - hydrogenated vegetable fat from sesame seed
+        - hydrogenated vegetable fat of sesame seed
+        - hydrogenated vegetable oils from sesame seed
+        - hydrogenated vegetable oils of sesame seed
+        - hydrogenated vegetable fats from sesame seed
+        - hydrogenated vegetable fats of sesame seed
       pl:
         - utwardzony olej sezamowy
         - olej sezamowy utwardzony
@@ -445,6 +589,30 @@ variants:
         - partially hydrogenated sesame seed oil
         - partially hydrogenated refined sesame oil
         - partially hydrogenated toasted sesame oil
+        - partially hydrogenated vegetable oil from sesame
+        - partially hydrogenated vegetable oil of sesame
+        - partially hydrogenated vegetable fat from sesame
+        - partially hydrogenated vegetable fat of sesame
+        - partially hydrogenated vegetable oils from sesame
+        - partially hydrogenated vegetable oils of sesame
+        - partially hydrogenated vegetable fats from sesame
+        - partially hydrogenated vegetable fats of sesame
+        - partially hydrogenated vegetable oil from sesame seeds
+        - partially hydrogenated vegetable oil of sesame seeds
+        - partially hydrogenated vegetable fat from sesame seeds
+        - partially hydrogenated vegetable fat of sesame seeds
+        - partially hydrogenated vegetable oils from sesame seeds
+        - partially hydrogenated vegetable oils of sesame seeds
+        - partially hydrogenated vegetable fats from sesame seeds
+        - partially hydrogenated vegetable fats of sesame seeds
+        - partially hydrogenated vegetable oil from sesame seed
+        - partially hydrogenated vegetable oil of sesame seed
+        - partially hydrogenated vegetable fat from sesame seed
+        - partially hydrogenated vegetable fat of sesame seed
+        - partially hydrogenated vegetable oils from sesame seed
+        - partially hydrogenated vegetable oils of sesame seed
+        - partially hydrogenated vegetable fats from sesame seed
+        - partially hydrogenated vegetable fats of sesame seed
       pl:
         - częściowo utwardzony olej sezamowy
         - olej sezamowy częściowo utwardzony
@@ -584,6 +752,54 @@ variants:
         - totally hydrogenated refined sesame oil
         - fully hydrogenated toasted sesame oil
         - totally hydrogenated toasted sesame oil
+        - fully hydrogenated vegetable oil from sesame
+        - totally hydrogenated vegetable oil from sesame
+        - fully hydrogenated vegetable oil of sesame
+        - totally hydrogenated vegetable oil of sesame
+        - fully hydrogenated vegetable fat from sesame
+        - totally hydrogenated vegetable fat from sesame
+        - fully hydrogenated vegetable fat of sesame
+        - totally hydrogenated vegetable fat of sesame
+        - fully hydrogenated vegetable oils from sesame
+        - totally hydrogenated vegetable oils from sesame
+        - fully hydrogenated vegetable oils of sesame
+        - totally hydrogenated vegetable oils of sesame
+        - fully hydrogenated vegetable fats from sesame
+        - totally hydrogenated vegetable fats from sesame
+        - fully hydrogenated vegetable fats of sesame
+        - totally hydrogenated vegetable fats of sesame
+        - fully hydrogenated vegetable oil from sesame seeds
+        - totally hydrogenated vegetable oil from sesame seeds
+        - fully hydrogenated vegetable oil of sesame seeds
+        - totally hydrogenated vegetable oil of sesame seeds
+        - fully hydrogenated vegetable fat from sesame seeds
+        - totally hydrogenated vegetable fat from sesame seeds
+        - fully hydrogenated vegetable fat of sesame seeds
+        - totally hydrogenated vegetable fat of sesame seeds
+        - fully hydrogenated vegetable oils from sesame seeds
+        - totally hydrogenated vegetable oils from sesame seeds
+        - fully hydrogenated vegetable oils of sesame seeds
+        - totally hydrogenated vegetable oils of sesame seeds
+        - fully hydrogenated vegetable fats from sesame seeds
+        - totally hydrogenated vegetable fats from sesame seeds
+        - fully hydrogenated vegetable fats of sesame seeds
+        - totally hydrogenated vegetable fats of sesame seeds
+        - fully hydrogenated vegetable oil from sesame seed
+        - totally hydrogenated vegetable oil from sesame seed
+        - fully hydrogenated vegetable oil of sesame seed
+        - totally hydrogenated vegetable oil of sesame seed
+        - fully hydrogenated vegetable fat from sesame seed
+        - totally hydrogenated vegetable fat from sesame seed
+        - fully hydrogenated vegetable fat of sesame seed
+        - totally hydrogenated vegetable fat of sesame seed
+        - fully hydrogenated vegetable oils from sesame seed
+        - totally hydrogenated vegetable oils from sesame seed
+        - fully hydrogenated vegetable oils of sesame seed
+        - totally hydrogenated vegetable oils of sesame seed
+        - fully hydrogenated vegetable fats from sesame seed
+        - totally hydrogenated vegetable fats from sesame seed
+        - fully hydrogenated vegetable fats of sesame seed
+        - totally hydrogenated vegetable fats of sesame seed
       pl:
         - całkowicie utwardzony olej sezamowy
         - olej sezamowy całkowicie utwardzony

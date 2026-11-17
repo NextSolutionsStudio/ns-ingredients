@@ -17,6 +17,86 @@ names:
     - not partially hydrogenated refined cottonseed oil
     - not fully hydrogenated refined cottonseed oil
     - non partially hydrogenated refined cottonseed oil
+    - vegetable oil from cottonseed
+    - non-hydrogenated vegetable oil from cottonseed
+    - not hydrogenated vegetable oil from cottonseed
+    - unhydrogenated vegetable oil from cottonseed
+    - not partially hydrogenated vegetable oil from cottonseed
+    - vegetable oil of cottonseed
+    - non-hydrogenated vegetable oil of cottonseed
+    - not hydrogenated vegetable oil of cottonseed
+    - unhydrogenated vegetable oil of cottonseed
+    - not partially hydrogenated vegetable oil of cottonseed
+    - vegetable fat from cottonseed
+    - non-hydrogenated vegetable fat from cottonseed
+    - not hydrogenated vegetable fat from cottonseed
+    - unhydrogenated vegetable fat from cottonseed
+    - not partially hydrogenated vegetable fat from cottonseed
+    - vegetable fat of cottonseed
+    - non-hydrogenated vegetable fat of cottonseed
+    - not hydrogenated vegetable fat of cottonseed
+    - unhydrogenated vegetable fat of cottonseed
+    - not partially hydrogenated vegetable fat of cottonseed
+    - vegetable oils from cottonseed
+    - non-hydrogenated vegetable oils from cottonseed
+    - not hydrogenated vegetable oils from cottonseed
+    - unhydrogenated vegetable oils from cottonseed
+    - not partially hydrogenated vegetable oils from cottonseed
+    - vegetable oils of cottonseed
+    - non-hydrogenated vegetable oils of cottonseed
+    - not hydrogenated vegetable oils of cottonseed
+    - unhydrogenated vegetable oils of cottonseed
+    - not partially hydrogenated vegetable oils of cottonseed
+    - vegetable fats from cottonseed
+    - non-hydrogenated vegetable fats from cottonseed
+    - not hydrogenated vegetable fats from cottonseed
+    - unhydrogenated vegetable fats from cottonseed
+    - not partially hydrogenated vegetable fats from cottonseed
+    - vegetable fats of cottonseed
+    - non-hydrogenated vegetable fats of cottonseed
+    - not hydrogenated vegetable fats of cottonseed
+    - unhydrogenated vegetable fats of cottonseed
+    - not partially hydrogenated vegetable fats of cottonseed
+    - vegetable oil from cotton seed
+    - non-hydrogenated vegetable oil from cotton seed
+    - not hydrogenated vegetable oil from cotton seed
+    - unhydrogenated vegetable oil from cotton seed
+    - not partially hydrogenated vegetable oil from cotton seed
+    - vegetable oil of cotton seed
+    - non-hydrogenated vegetable oil of cotton seed
+    - not hydrogenated vegetable oil of cotton seed
+    - unhydrogenated vegetable oil of cotton seed
+    - not partially hydrogenated vegetable oil of cotton seed
+    - vegetable fat from cotton seed
+    - non-hydrogenated vegetable fat from cotton seed
+    - not hydrogenated vegetable fat from cotton seed
+    - unhydrogenated vegetable fat from cotton seed
+    - not partially hydrogenated vegetable fat from cotton seed
+    - vegetable fat of cotton seed
+    - non-hydrogenated vegetable fat of cotton seed
+    - not hydrogenated vegetable fat of cotton seed
+    - unhydrogenated vegetable fat of cotton seed
+    - not partially hydrogenated vegetable fat of cotton seed
+    - vegetable oils from cotton seed
+    - non-hydrogenated vegetable oils from cotton seed
+    - not hydrogenated vegetable oils from cotton seed
+    - unhydrogenated vegetable oils from cotton seed
+    - not partially hydrogenated vegetable oils from cotton seed
+    - vegetable oils of cotton seed
+    - non-hydrogenated vegetable oils of cotton seed
+    - not hydrogenated vegetable oils of cotton seed
+    - unhydrogenated vegetable oils of cotton seed
+    - not partially hydrogenated vegetable oils of cotton seed
+    - vegetable fats from cotton seed
+    - non-hydrogenated vegetable fats from cotton seed
+    - not hydrogenated vegetable fats from cotton seed
+    - unhydrogenated vegetable fats from cotton seed
+    - not partially hydrogenated vegetable fats from cotton seed
+    - vegetable fats of cotton seed
+    - non-hydrogenated vegetable fats of cotton seed
+    - not hydrogenated vegetable fats of cotton seed
+    - unhydrogenated vegetable fats of cotton seed
+    - not partially hydrogenated vegetable fats of cotton seed
   pl:
     - olej bawełniany
     - olej z nasion bawełny
@@ -247,6 +327,22 @@ variants:
       en:
         - hydrogenated cottonseed oil
         - hydrogenated refined cottonseed oil
+        - hydrogenated vegetable oil from cottonseed
+        - hydrogenated vegetable oil of cottonseed
+        - hydrogenated vegetable fat from cottonseed
+        - hydrogenated vegetable fat of cottonseed
+        - hydrogenated vegetable oils from cottonseed
+        - hydrogenated vegetable oils of cottonseed
+        - hydrogenated vegetable fats from cottonseed
+        - hydrogenated vegetable fats of cottonseed
+        - hydrogenated vegetable oil from cotton seed
+        - hydrogenated vegetable oil of cotton seed
+        - hydrogenated vegetable fat from cotton seed
+        - hydrogenated vegetable fat of cotton seed
+        - hydrogenated vegetable oils from cotton seed
+        - hydrogenated vegetable oils of cotton seed
+        - hydrogenated vegetable fats from cotton seed
+        - hydrogenated vegetable fats of cotton seed
       pl:
         - utwardzony olej bawełniany
         - olej bawełniany utwardzony
@@ -356,6 +452,22 @@ variants:
       en:
         - partially hydrogenated cottonseed oil
         - partially hydrogenated refined cottonseed oil
+        - partially hydrogenated vegetable oil from cottonseed
+        - partially hydrogenated vegetable oil of cottonseed
+        - partially hydrogenated vegetable fat from cottonseed
+        - partially hydrogenated vegetable fat of cottonseed
+        - partially hydrogenated vegetable oils from cottonseed
+        - partially hydrogenated vegetable oils of cottonseed
+        - partially hydrogenated vegetable fats from cottonseed
+        - partially hydrogenated vegetable fats of cottonseed
+        - partially hydrogenated vegetable oil from cotton seed
+        - partially hydrogenated vegetable oil of cotton seed
+        - partially hydrogenated vegetable fat from cotton seed
+        - partially hydrogenated vegetable fat of cotton seed
+        - partially hydrogenated vegetable oils from cotton seed
+        - partially hydrogenated vegetable oils of cotton seed
+        - partially hydrogenated vegetable fats from cotton seed
+        - partially hydrogenated vegetable fats of cotton seed
       pl:
         - częściowo utwardzony olej bawełniany
         - olej bawełniany częściowo utwardzony
@@ -469,6 +581,38 @@ variants:
         - totally hydrogenated cottonseed oil
         - fully hydrogenated refined cottonseed oil
         - totally hydrogenated refined cottonseed oil
+        - fully hydrogenated vegetable oil from cottonseed
+        - totally hydrogenated vegetable oil from cottonseed
+        - fully hydrogenated vegetable oil of cottonseed
+        - totally hydrogenated vegetable oil of cottonseed
+        - fully hydrogenated vegetable fat from cottonseed
+        - totally hydrogenated vegetable fat from cottonseed
+        - fully hydrogenated vegetable fat of cottonseed
+        - totally hydrogenated vegetable fat of cottonseed
+        - fully hydrogenated vegetable oils from cottonseed
+        - totally hydrogenated vegetable oils from cottonseed
+        - fully hydrogenated vegetable oils of cottonseed
+        - totally hydrogenated vegetable oils of cottonseed
+        - fully hydrogenated vegetable fats from cottonseed
+        - totally hydrogenated vegetable fats from cottonseed
+        - fully hydrogenated vegetable fats of cottonseed
+        - totally hydrogenated vegetable fats of cottonseed
+        - fully hydrogenated vegetable oil from cotton seed
+        - totally hydrogenated vegetable oil from cotton seed
+        - fully hydrogenated vegetable oil of cotton seed
+        - totally hydrogenated vegetable oil of cotton seed
+        - fully hydrogenated vegetable fat from cotton seed
+        - totally hydrogenated vegetable fat from cotton seed
+        - fully hydrogenated vegetable fat of cotton seed
+        - totally hydrogenated vegetable fat of cotton seed
+        - fully hydrogenated vegetable oils from cotton seed
+        - totally hydrogenated vegetable oils from cotton seed
+        - fully hydrogenated vegetable oils of cotton seed
+        - totally hydrogenated vegetable oils of cotton seed
+        - fully hydrogenated vegetable fats from cotton seed
+        - totally hydrogenated vegetable fats from cotton seed
+        - fully hydrogenated vegetable fats of cotton seed
+        - totally hydrogenated vegetable fats of cotton seed
       pl:
         - całkowicie utwardzony olej bawełniany
         - olej bawełniany całkowicie utwardzony

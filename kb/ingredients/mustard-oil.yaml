@@ -17,6 +17,126 @@ names:
     - not partially hydrogenated mustard seed oil
     - not fully hydrogenated mustard seed oil
     - non partially hydrogenated mustard seed oil
+    - vegetable oil from mustard
+    - non-hydrogenated vegetable oil from mustard
+    - not hydrogenated vegetable oil from mustard
+    - unhydrogenated vegetable oil from mustard
+    - not partially hydrogenated vegetable oil from mustard
+    - vegetable oil of mustard
+    - non-hydrogenated vegetable oil of mustard
+    - not hydrogenated vegetable oil of mustard
+    - unhydrogenated vegetable oil of mustard
+    - not partially hydrogenated vegetable oil of mustard
+    - vegetable fat from mustard
+    - non-hydrogenated vegetable fat from mustard
+    - not hydrogenated vegetable fat from mustard
+    - unhydrogenated vegetable fat from mustard
+    - not partially hydrogenated vegetable fat from mustard
+    - vegetable fat of mustard
+    - non-hydrogenated vegetable fat of mustard
+    - not hydrogenated vegetable fat of mustard
+    - unhydrogenated vegetable fat of mustard
+    - not partially hydrogenated vegetable fat of mustard
+    - vegetable oils from mustard
+    - non-hydrogenated vegetable oils from mustard
+    - not hydrogenated vegetable oils from mustard
+    - unhydrogenated vegetable oils from mustard
+    - not partially hydrogenated vegetable oils from mustard
+    - vegetable oils of mustard
+    - non-hydrogenated vegetable oils of mustard
+    - not hydrogenated vegetable oils of mustard
+    - unhydrogenated vegetable oils of mustard
+    - not partially hydrogenated vegetable oils of mustard
+    - vegetable fats from mustard
+    - non-hydrogenated vegetable fats from mustard
+    - not hydrogenated vegetable fats from mustard
+    - unhydrogenated vegetable fats from mustard
+    - not partially hydrogenated vegetable fats from mustard
+    - vegetable fats of mustard
+    - non-hydrogenated vegetable fats of mustard
+    - not hydrogenated vegetable fats of mustard
+    - unhydrogenated vegetable fats of mustard
+    - not partially hydrogenated vegetable fats of mustard
+    - vegetable oil from mustard seeds
+    - non-hydrogenated vegetable oil from mustard seeds
+    - not hydrogenated vegetable oil from mustard seeds
+    - unhydrogenated vegetable oil from mustard seeds
+    - not partially hydrogenated vegetable oil from mustard seeds
+    - vegetable oil of mustard seeds
+    - non-hydrogenated vegetable oil of mustard seeds
+    - not hydrogenated vegetable oil of mustard seeds
+    - unhydrogenated vegetable oil of mustard seeds
+    - not partially hydrogenated vegetable oil of mustard seeds
+    - vegetable fat from mustard seeds
+    - non-hydrogenated vegetable fat from mustard seeds
+    - not hydrogenated vegetable fat from mustard seeds
+    - unhydrogenated vegetable fat from mustard seeds
+    - not partially hydrogenated vegetable fat from mustard seeds
+    - vegetable fat of mustard seeds
+    - non-hydrogenated vegetable fat of mustard seeds
+    - not hydrogenated vegetable fat of mustard seeds
+    - unhydrogenated vegetable fat of mustard seeds
+    - not partially hydrogenated vegetable fat of mustard seeds
+    - vegetable oils from mustard seeds
+    - non-hydrogenated vegetable oils from mustard seeds
+    - not hydrogenated vegetable oils from mustard seeds
+    - unhydrogenated vegetable oils from mustard seeds
+    - not partially hydrogenated vegetable oils from mustard seeds
+    - vegetable oils of mustard seeds
+    - non-hydrogenated vegetable oils of mustard seeds
+    - not hydrogenated vegetable oils of mustard seeds
+    - unhydrogenated vegetable oils of mustard seeds
+    - not partially hydrogenated vegetable oils of mustard seeds
+    - vegetable fats from mustard seeds
+    - non-hydrogenated vegetable fats from mustard seeds
+    - not hydrogenated vegetable fats from mustard seeds
+    - unhydrogenated vegetable fats from mustard seeds
+    - not partially hydrogenated vegetable fats from mustard seeds
+    - vegetable fats of mustard seeds
+    - non-hydrogenated vegetable fats of mustard seeds
+    - not hydrogenated vegetable fats of mustard seeds
+    - unhydrogenated vegetable fats of mustard seeds
+    - not partially hydrogenated vegetable fats of mustard seeds
+    - vegetable oil from mustard seed
+    - non-hydrogenated vegetable oil from mustard seed
+    - not hydrogenated vegetable oil from mustard seed
+    - unhydrogenated vegetable oil from mustard seed
+    - not partially hydrogenated vegetable oil from mustard seed
+    - vegetable oil of mustard seed
+    - non-hydrogenated vegetable oil of mustard seed
+    - not hydrogenated vegetable oil of mustard seed
+    - unhydrogenated vegetable oil of mustard seed
+    - not partially hydrogenated vegetable oil of mustard seed
+    - vegetable fat from mustard seed
+    - non-hydrogenated vegetable fat from mustard seed
+    - not hydrogenated vegetable fat from mustard seed
+    - unhydrogenated vegetable fat from mustard seed
+    - not partially hydrogenated vegetable fat from mustard seed
+    - vegetable fat of mustard seed
+    - non-hydrogenated vegetable fat of mustard seed
+    - not hydrogenated vegetable fat of mustard seed
+    - unhydrogenated vegetable fat of mustard seed
+    - not partially hydrogenated vegetable fat of mustard seed
+    - vegetable oils from mustard seed
+    - non-hydrogenated vegetable oils from mustard seed
+    - not hydrogenated vegetable oils from mustard seed
+    - unhydrogenated vegetable oils from mustard seed
+    - not partially hydrogenated vegetable oils from mustard seed
+    - vegetable oils of mustard seed
+    - non-hydrogenated vegetable oils of mustard seed
+    - not hydrogenated vegetable oils of mustard seed
+    - unhydrogenated vegetable oils of mustard seed
+    - not partially hydrogenated vegetable oils of mustard seed
+    - vegetable fats from mustard seed
+    - non-hydrogenated vegetable fats from mustard seed
+    - not hydrogenated vegetable fats from mustard seed
+    - unhydrogenated vegetable fats from mustard seed
+    - not partially hydrogenated vegetable fats from mustard seed
+    - vegetable fats of mustard seed
+    - non-hydrogenated vegetable fats of mustard seed
+    - not hydrogenated vegetable fats of mustard seed
+    - unhydrogenated vegetable fats of mustard seed
+    - not partially hydrogenated vegetable fats of mustard seed
   pl:
     - olej gorczycowy
     - olej musztardowy
@@ -360,6 +480,30 @@ variants:
       en:
         - hydrogenated mustard oil
         - hydrogenated mustard seed oil
+        - hydrogenated vegetable oil from mustard
+        - hydrogenated vegetable oil of mustard
+        - hydrogenated vegetable fat from mustard
+        - hydrogenated vegetable fat of mustard
+        - hydrogenated vegetable oils from mustard
+        - hydrogenated vegetable oils of mustard
+        - hydrogenated vegetable fats from mustard
+        - hydrogenated vegetable fats of mustard
+        - hydrogenated vegetable oil from mustard seeds
+        - hydrogenated vegetable oil of mustard seeds
+        - hydrogenated vegetable fat from mustard seeds
+        - hydrogenated vegetable fat of mustard seeds
+        - hydrogenated vegetable oils from mustard seeds
+        - hydrogenated vegetable oils of mustard seeds
+        - hydrogenated vegetable fats from mustard seeds
+        - hydrogenated vegetable fats of mustard seeds
+        - hydrogenated vegetable oil from mustard seed
+        - hydrogenated vegetable oil of mustard seed
+        - hydrogenated vegetable fat from mustard seed
+        - hydrogenated vegetable fat of mustard seed
+        - hydrogenated vegetable oils from mustard seed
+        - hydrogenated vegetable oils of mustard seed
+        - hydrogenated vegetable fats from mustard seed
+        - hydrogenated vegetable fats of mustard seed
       pl:
         - utwardzony olej gorczycowy
         - olej gorczycowy utwardzony
@@ -521,6 +665,30 @@ variants:
       en:
         - partially hydrogenated mustard oil
         - partially hydrogenated mustard seed oil
+        - partially hydrogenated vegetable oil from mustard
+        - partially hydrogenated vegetable oil of mustard
+        - partially hydrogenated vegetable fat from mustard
+        - partially hydrogenated vegetable fat of mustard
+        - partially hydrogenated vegetable oils from mustard
+        - partially hydrogenated vegetable oils of mustard
+        - partially hydrogenated vegetable fats from mustard
+        - partially hydrogenated vegetable fats of mustard
+        - partially hydrogenated vegetable oil from mustard seeds
+        - partially hydrogenated vegetable oil of mustard seeds
+        - partially hydrogenated vegetable fat from mustard seeds
+        - partially hydrogenated vegetable fat of mustard seeds
+        - partially hydrogenated vegetable oils from mustard seeds
+        - partially hydrogenated vegetable oils of mustard seeds
+        - partially hydrogenated vegetable fats from mustard seeds
+        - partially hydrogenated vegetable fats of mustard seeds
+        - partially hydrogenated vegetable oil from mustard seed
+        - partially hydrogenated vegetable oil of mustard seed
+        - partially hydrogenated vegetable fat from mustard seed
+        - partially hydrogenated vegetable fat of mustard seed
+        - partially hydrogenated vegetable oils from mustard seed
+        - partially hydrogenated vegetable oils of mustard seed
+        - partially hydrogenated vegetable fats from mustard seed
+        - partially hydrogenated vegetable fats of mustard seed
       pl:
         - częściowo utwardzony olej gorczycowy
         - olej gorczycowy częściowo utwardzony
@@ -686,6 +854,54 @@ variants:
         - totally hydrogenated mustard oil
         - fully hydrogenated mustard seed oil
         - totally hydrogenated mustard seed oil
+        - fully hydrogenated vegetable oil from mustard
+        - totally hydrogenated vegetable oil from mustard
+        - fully hydrogenated vegetable oil of mustard
+        - totally hydrogenated vegetable oil of mustard
+        - fully hydrogenated vegetable fat from mustard
+        - totally hydrogenated vegetable fat from mustard
+        - fully hydrogenated vegetable fat of mustard
+        - totally hydrogenated vegetable fat of mustard
+        - fully hydrogenated vegetable oils from mustard
+        - totally hydrogenated vegetable oils from mustard
+        - fully hydrogenated vegetable oils of mustard
+        - totally hydrogenated vegetable oils of mustard
+        - fully hydrogenated vegetable fats from mustard
+        - totally hydrogenated vegetable fats from mustard
+        - fully hydrogenated vegetable fats of mustard
+        - totally hydrogenated vegetable fats of mustard
+        - fully hydrogenated vegetable oil from mustard seeds
+        - totally hydrogenated vegetable oil from mustard seeds
+        - fully hydrogenated vegetable oil of mustard seeds
+        - totally hydrogenated vegetable oil of mustard seeds
+        - fully hydrogenated vegetable fat from mustard seeds
+        - totally hydrogenated vegetable fat from mustard seeds
+        - fully hydrogenated vegetable fat of mustard seeds
+        - totally hydrogenated vegetable fat of mustard seeds
+        - fully hydrogenated vegetable oils from mustard seeds
+        - totally hydrogenated vegetable oils from mustard seeds
+        - fully hydrogenated vegetable oils of mustard seeds
+        - totally hydrogenated vegetable oils of mustard seeds
+        - fully hydrogenated vegetable fats from mustard seeds
+        - totally hydrogenated vegetable fats from mustard seeds
+        - fully hydrogenated vegetable fats of mustard seeds
+        - totally hydrogenated vegetable fats of mustard seeds
+        - fully hydrogenated vegetable oil from mustard seed
+        - totally hydrogenated vegetable oil from mustard seed
+        - fully hydrogenated vegetable oil of mustard seed
+        - totally hydrogenated vegetable oil of mustard seed
+        - fully hydrogenated vegetable fat from mustard seed
+        - totally hydrogenated vegetable fat from mustard seed
+        - fully hydrogenated vegetable fat of mustard seed
+        - totally hydrogenated vegetable fat of mustard seed
+        - fully hydrogenated vegetable oils from mustard seed
+        - totally hydrogenated vegetable oils from mustard seed
+        - fully hydrogenated vegetable oils of mustard seed
+        - totally hydrogenated vegetable oils of mustard seed
+        - fully hydrogenated vegetable fats from mustard seed
+        - totally hydrogenated vegetable fats from mustard seed
+        - fully hydrogenated vegetable fats of mustard seed
+        - totally hydrogenated vegetable fats of mustard seed
       pl:
         - całkowicie utwardzony olej gorczycowy
         - olej gorczycowy całkowicie utwardzony

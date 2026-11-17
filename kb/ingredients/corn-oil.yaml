@@ -18,6 +18,86 @@ names:
     - not partially hydrogenated maize oil
     - not fully hydrogenated maize oil
     - non partially hydrogenated maize oil
+    - vegetable oil from corn
+    - non-hydrogenated vegetable oil from corn
+    - not hydrogenated vegetable oil from corn
+    - unhydrogenated vegetable oil from corn
+    - not partially hydrogenated vegetable oil from corn
+    - vegetable oil of corn
+    - non-hydrogenated vegetable oil of corn
+    - not hydrogenated vegetable oil of corn
+    - unhydrogenated vegetable oil of corn
+    - not partially hydrogenated vegetable oil of corn
+    - vegetable fat from corn
+    - non-hydrogenated vegetable fat from corn
+    - not hydrogenated vegetable fat from corn
+    - unhydrogenated vegetable fat from corn
+    - not partially hydrogenated vegetable fat from corn
+    - vegetable fat of corn
+    - non-hydrogenated vegetable fat of corn
+    - not hydrogenated vegetable fat of corn
+    - unhydrogenated vegetable fat of corn
+    - not partially hydrogenated vegetable fat of corn
+    - vegetable oils from corn
+    - non-hydrogenated vegetable oils from corn
+    - not hydrogenated vegetable oils from corn
+    - unhydrogenated vegetable oils from corn
+    - not partially hydrogenated vegetable oils from corn
+    - vegetable oils of corn
+    - non-hydrogenated vegetable oils of corn
+    - not hydrogenated vegetable oils of corn
+    - unhydrogenated vegetable oils of corn
+    - not partially hydrogenated vegetable oils of corn
+    - vegetable fats from corn
+    - non-hydrogenated vegetable fats from corn
+    - not hydrogenated vegetable fats from corn
+    - unhydrogenated vegetable fats from corn
+    - not partially hydrogenated vegetable fats from corn
+    - vegetable fats of corn
+    - non-hydrogenated vegetable fats of corn
+    - not hydrogenated vegetable fats of corn
+    - unhydrogenated vegetable fats of corn
+    - not partially hydrogenated vegetable fats of corn
+    - vegetable oil from maize
+    - non-hydrogenated vegetable oil from maize
+    - not hydrogenated vegetable oil from maize
+    - unhydrogenated vegetable oil from maize
+    - not partially hydrogenated vegetable oil from maize
+    - vegetable oil of maize
+    - non-hydrogenated vegetable oil of maize
+    - not hydrogenated vegetable oil of maize
+    - unhydrogenated vegetable oil of maize
+    - not partially hydrogenated vegetable oil of maize
+    - vegetable fat from maize
+    - non-hydrogenated vegetable fat from maize
+    - not hydrogenated vegetable fat from maize
+    - unhydrogenated vegetable fat from maize
+    - not partially hydrogenated vegetable fat from maize
+    - vegetable fat of maize
+    - non-hydrogenated vegetable fat of maize
+    - not hydrogenated vegetable fat of maize
+    - unhydrogenated vegetable fat of maize
+    - not partially hydrogenated vegetable fat of maize
+    - vegetable oils from maize
+    - non-hydrogenated vegetable oils from maize
+    - not hydrogenated vegetable oils from maize
+    - unhydrogenated vegetable oils from maize
+    - not partially hydrogenated vegetable oils from maize
+    - vegetable oils of maize
+    - non-hydrogenated vegetable oils of maize
+    - not hydrogenated vegetable oils of maize
+    - unhydrogenated vegetable oils of maize
+    - not partially hydrogenated vegetable oils of maize
+    - vegetable fats from maize
+    - non-hydrogenated vegetable fats from maize
+    - not hydrogenated vegetable fats from maize
+    - unhydrogenated vegetable fats from maize
+    - not partially hydrogenated vegetable fats from maize
+    - vegetable fats of maize
+    - non-hydrogenated vegetable fats of maize
+    - not hydrogenated vegetable fats of maize
+    - unhydrogenated vegetable fats of maize
+    - not partially hydrogenated vegetable fats of maize
   pl:
     - olej kukurydziany
     - olej z kiełków kukurydzy
@@ -249,6 +329,22 @@ variants:
       en:
         - hydrogenated corn oil
         - hydrogenated maize oil
+        - hydrogenated vegetable oil from corn
+        - hydrogenated vegetable oil of corn
+        - hydrogenated vegetable fat from corn
+        - hydrogenated vegetable fat of corn
+        - hydrogenated vegetable oils from corn
+        - hydrogenated vegetable oils of corn
+        - hydrogenated vegetable fats from corn
+        - hydrogenated vegetable fats of corn
+        - hydrogenated vegetable oil from maize
+        - hydrogenated vegetable oil of maize
+        - hydrogenated vegetable fat from maize
+        - hydrogenated vegetable fat of maize
+        - hydrogenated vegetable oils from maize
+        - hydrogenated vegetable oils of maize
+        - hydrogenated vegetable fats from maize
+        - hydrogenated vegetable fats of maize
       pl:
         - utwardzony olej kukurydziany
         - olej kukurydziany utwardzony
@@ -359,6 +455,22 @@ variants:
       en:
         - partially hydrogenated corn oil
         - partially hydrogenated maize oil
+        - partially hydrogenated vegetable oil from corn
+        - partially hydrogenated vegetable oil of corn
+        - partially hydrogenated vegetable fat from corn
+        - partially hydrogenated vegetable fat of corn
+        - partially hydrogenated vegetable oils from corn
+        - partially hydrogenated vegetable oils of corn
+        - partially hydrogenated vegetable fats from corn
+        - partially hydrogenated vegetable fats of corn
+        - partially hydrogenated vegetable oil from maize
+        - partially hydrogenated vegetable oil of maize
+        - partially hydrogenated vegetable fat from maize
+        - partially hydrogenated vegetable fat of maize
+        - partially hydrogenated vegetable oils from maize
+        - partially hydrogenated vegetable oils of maize
+        - partially hydrogenated vegetable fats from maize
+        - partially hydrogenated vegetable fats of maize
       pl:
         - częściowo utwardzony olej kukurydziany
         - olej kukurydziany częściowo utwardzony
@@ -473,6 +585,38 @@ variants:
         - totally hydrogenated corn oil
         - fully hydrogenated maize oil
         - totally hydrogenated maize oil
+        - fully hydrogenated vegetable oil from corn
+        - totally hydrogenated vegetable oil from corn
+        - fully hydrogenated vegetable oil of corn
+        - totally hydrogenated vegetable oil of corn
+        - fully hydrogenated vegetable fat from corn
+        - totally hydrogenated vegetable fat from corn
+        - fully hydrogenated vegetable fat of corn
+        - totally hydrogenated vegetable fat of corn
+        - fully hydrogenated vegetable oils from corn
+        - totally hydrogenated vegetable oils from corn
+        - fully hydrogenated vegetable oils of corn
+        - totally hydrogenated vegetable oils of corn
+        - fully hydrogenated vegetable fats from corn
+        - totally hydrogenated vegetable fats from corn
+        - fully hydrogenated vegetable fats of corn
+        - totally hydrogenated vegetable fats of corn
+        - fully hydrogenated vegetable oil from maize
+        - totally hydrogenated vegetable oil from maize
+        - fully hydrogenated vegetable oil of maize
+        - totally hydrogenated vegetable oil of maize
+        - fully hydrogenated vegetable fat from maize
+        - totally hydrogenated vegetable fat from maize
+        - fully hydrogenated vegetable fat of maize
+        - totally hydrogenated vegetable fat of maize
+        - fully hydrogenated vegetable oils from maize
+        - totally hydrogenated vegetable oils from maize
+        - fully hydrogenated vegetable oils of maize
+        - totally hydrogenated vegetable oils of maize
+        - fully hydrogenated vegetable fats from maize
+        - totally hydrogenated vegetable fats from maize
+        - fully hydrogenated vegetable fats of maize
+        - totally hydrogenated vegetable fats of maize
       pl:
         - całkowicie utwardzony olej kukurydziany
         - olej kukurydziany całkowicie utwardzony
