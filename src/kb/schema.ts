@@ -18,6 +18,13 @@ export const Names = z.object({
   de: z.array(z.string().min(1)).optional(),
 }).strict();
 
+/** Names in any language, none required: see `Ingredient.exact_names`. */
+export const ExactNames = z.object({
+  en: z.array(z.string().min(1)).optional(),
+  pl: z.array(z.string().min(1)).optional(),
+  de: z.array(z.string().min(1)).optional(),
+}).strict();
+
 export const CERTAINTIES = ["yes", "no", "maybe", "unknown"] as const;
 export const KINDS = ["fact", "estimate", "opinion"] as const;
 export const GRADES = ["A", "B", "C", "D"] as const;
@@ -154,6 +161,13 @@ export const Ingredient = z.object({
     foodon: z.string().optional(),
   }).strict().optional(),
   names: Names,
+  /**
+   * Names that resolve only a whole item, exactly or by fuzzy match ("bez utwardzonych tłuszczów", "free from
+   * hydrogenated oil"): never part of a longer item, never a search hit. Inside a longer item one marks a claim, and
+   * no sub-phrase that starts inside it is read (only a name that opens the item and runs past it), so a claim never
+   * outranks a food before or after it.
+   */
+  exact_names: ExactNames.optional(),
   functions: z.array(slug).optional(),
   summary: Text.optional(),
   variants: z.array(Variant).optional(),
@@ -175,6 +189,7 @@ export type IngredientT = z.infer<typeof Ingredient>;
 export type GlycemicT = z.infer<typeof Glycemic>;
 export type TextT = z.infer<typeof Text>;
 export type NamesT = z.infer<typeof Names>;
+export type ExactNamesT = z.infer<typeof ExactNames>;
 
 export const SourcesFile = z.object({ sources: z.array(Source) }).strict();
 export const ImplicationsFile = z.object({ implications: z.array(Implication) }).strict();

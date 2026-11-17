@@ -2,6 +2,7 @@
 // disagree about what a name means. Built once per KB version (a few ms for thousands of names).
 import type {
   AssertionT,
+  ExactNamesT,
   FunctionClassT,
   ImplicationT,
   IngredientT,
@@ -52,71 +53,6 @@ const FUZZY_MIN = 0.55;
 const FUZZY_EDIT_MIN_SIM = 0.4;
 const SUBPHRASE_MAX_TOKENS = 7;
 /**
- * Openers of a claim that denies the presence of what follows it ("bez utwardzonych tluszczow", "free from
- * hydrogenated oil", "nie zawiera", "does not contain"), as word sequences; a word ending in "*" matches by prefix.
- * A property negator ("nie", "not", "non", "ani") opens one too ("sesame oil not partially hydrogenated oil"), unless a
- * name starts at it that is more than the negation of another food's name: "non dairy creamer" is a name, and so is
- * "bio non hydrogenated sesame oil", the plain oil negating its own variant, when only modifiers stand before it;
- * "not partially hydrogenated oil" negates another entry's name, and after a food ("sesame oil not partially
- * hydrogenated rapeseed oil") even a food's own negated name is a claim.
- */
-const CLAIM_OPENERS: string[][] = [
-  ["bez"],
-  ["brak"],
-  ["without"],
-  ["no"],
-  ["zero"],
-  ["ohne"],
-  ["kein"],
-  ["keine"],
-  ["free", "from"],
-  ["free", "of"],
-  ["wolny", "od"],
-  ["wolna", "od"],
-  ["wolne", "od"],
-  ["wolni", "od"],
-  ["wolnego", "od"],
-  ["wolnej", "od"],
-  ["nie", "zawier*"],
-  ["does", "not", "contain"],
-  ["do", "not", "contain"],
-  ["contains", "no"],
-  ["contain", "no"],
-  ["made", "without"],
-];
-/** Words between an opener and what it denies: "without any", "no added", "bez dodatku", "without the use of". */
-const CLAIM_FILLERS: string[][] = [
-  ["any"],
-  ["added"],
-  ["the", "use", "of"],
-  ["use", "of"],
-  ["dodatku"],
-  ["uzycia"],
-  ["zastosowania"],
-  ["zawartosci"],
-];
-const GMO_WORDS = new Set(["gmo", "gm", "gmos"]);
-const PROPERTY_NEGATORS = new Set(["nie", "ani", "not", "non"]);
-const CONJUNCTIONS = new Set(["and", "or", "i", "lub", "oraz", "und"]);
-/**
- * For each word of `normName(text)`, the index of the whitespace-separated chunk of `text` it came from, so a
- * hyphenated compound ("milk-protein-free") reads as one. Falls back to one chunk per word if the counts disagree.
- */
-function chunksOf(text: string, words: number): number[] {
-  const ids: number[] = [];
-  text.split(/\s+/).forEach((chunk, c) => {
-    const n = normName(chunk);
-    if (n) { for (const _ of n.split(" ")) ids.push(c); }
-  });
-  return ids.length === words ? ids : Array.from({ length: words }, (_, i) => i);
-}
-function wordsAt(tokens: string[], k: number, words: string[]): boolean {
-  return words.every((w, j) => {
-    const x = tokens[k + j];
-    return x !== undefined && (w.endsWith("*") ? x.startsWith(w.slice(0, -1)) : x === w);
-  });
-}
-/**
  * The longest normalised item text variant tells are run on; longer text reads none. Tells are written for one item and some backtrack on
  * long input: cocoa's `kakao.*obniz.*tluszcz` over a 12,000-character item took ~4 s. On 1,400 real Polish labels
  * the longest text reaching a tell is 204 characters and every tell hit ends by character 51, so 500 changes no
@@ -132,6 +68,11 @@ export class KbIndex {
   readonly classes = new Map<string, FunctionClassT>();
   readonly names: NameEntry[] = [];
   private readonly byNorm = new Map<string, NameEntry>();
+  /** Normalised `exact_names`: whole-item matches only (exact or fuzzy), never a sub-phrase or a search hit. */
+  private readonly exactOnly = new Set<string>();
+  /** The first word of every exact-only name, and the most words one has: the occurrence scan's bounds. */
+  private readonly exactFirst = new Set<string>();
+  private exactMaxTokens = 0;
   private readonly byE = new Map<string, string>();
   private readonly classByNorm = new Map<string, string>();
   private readonly tells = new Map<string, { variant: VariantT; res: RegExp[] }[]>();
@@ -171,6 +112,7 @@ export class KbIndex {
           this.tells.set(ing.id, list);
         }
       }
+      for (const n of allNames(ing.exact_names)) this.addExactName(n.name, n.lang, ing.id);
       for (const a of ing.assertions ?? []) {
         if (a.certainty !== "yes" && a.certainty !== "maybe") continue;
         (this.tagIndex.get(a.code) ?? this.tagIndex.set(a.code, new Set()).get(a.code)!).add(ing.id);
@@ -239,6 +181,35 @@ export class KbIndex {
     this.byNorm.set(norm, entry);
   }
 
+  /** An exact-only name, unless the norm is already another name's (the validator reports the clash). */
+  private addExactName(name: string, lang: string, ingredientId: string) {
+    const norm = normName(name);
+    if (!norm || this.byNorm.has(norm)) return;
+    const entry: NameEntry = { norm, display: name, lang, ingredientId, tri: trigrams(norm) };
+    this.names.push(entry);
+    this.byNorm.set(norm, entry);
+    this.exactOnly.add(norm);
+    const words = norm.split(" ");
+    this.exactFirst.add(words[0]);
+    this.exactMaxTokens = Math.max(this.exactMaxTokens, words.length);
+  }
+
+  /** Each exact-only name that occurs in the item, as word indexes: the longest one at each start. */
+  private claimSpans(tokens: string[]): [number, number][] {
+    const out: [number, number][] = [];
+    if (!this.exactOnly.size) return out;
+    for (let s = 0; s < tokens.length; s++) {
+      if (!this.exactFirst.has(tokens[s])) continue;
+      for (let len = Math.min(tokens.length - s, this.exactMaxTokens); len >= 1; len--) {
+        if (this.exactOnly.has(tokens.slice(s, s + len).join(" "))) {
+          out.push([s, s + len - 1]);
+          break;
+        }
+      }
+    }
+    return out;
+  }
+
   get(id: string): IngredientT | undefined {
     const direct = this.ingredients.get(id.toLowerCase());
     if (direct) return direct;
@@ -293,88 +264,6 @@ export class KbIndex {
     return this.namePrefixes.has(norm);
   }
 
-  /**
-   * The first presence claim in an item, as word indexes: from its opener through what it denies (the longest name
-   * right after the opener, else one word). A GMO claim denies nothing about the food, and an opener with nothing
-   * after it is a word of a name ("czarny bez").
-   */
-  /** The length in words of the longest name of at least `min` words that starts at word `k`, or 0. */
-  /** The longest name of at least `min` words that starts at word `k`: its length and entry. */
-  private nameAt(tokens: string[], k: number, min: number): { len: number; id?: string } {
-    for (let len = Math.min(tokens.length - k, SUBPHRASE_MAX_TOKENS); len >= min; len--) {
-      const e = this.byNorm.get(tokens.slice(k, k + len).join(" "));
-      if (e) return { len, id: e.ingredientId };
-    }
-    return { len: 0 };
-  }
-
-  /**
-   * Whether the property negator at word `k` opens a claim: no name starts at it, or the one that does is only the
-   * negator and another entry's name ("not" + hydrogenated-fat's "partially hydrogenated oil").
-   */
-  private negatesAnotherName(tokens: string[], k: number, chunks: number[]): boolean {
-    const own = this.nameAt(tokens, k, 2);
-    if (!own.len) return true;
-    const rest = this.nameAt(tokens, k + 1, 1);
-    if (own.len > 1 + rest.len) return false;
-    return own.id !== rest.id || this.nameBefore(tokens, k, chunks);
-  }
-
-  /**
-   * Whether a known name lies wholly in the words before word `k`, outside an exclusion: a food the item names first.
-   * An exclusion is a postposed "free" (one not followed by "from"/"of") and what it excludes: the words hyphenated
-   * to it ("milk-protein-free"), or the word before it when it stands alone ("gluten free"), and further words joined
-   * by "and"/"or"/"i"/"lub"/"oraz" ("soy and dairy free", "gluten- and lactose-free"). A name outside it is still a
-   * food ("sesame oil gluten-free ..."). `chunks` gives each word's whitespace-separated chunk of the item text.
-   */
-  private nameBefore(tokens: string[], k: number, chunks: number[]): boolean {
-    const excluded = new Set<number>();
-    for (let f = 1; f < k; f++) {
-      if (tokens[f] !== "free" || tokens[f + 1] === "from" || tokens[f + 1] === "of") continue;
-      let s = f;
-      while (s > 0 && chunks[s - 1] === chunks[f]) s--;
-      if (s === f) {
-        s = f - 1;
-        while (s > 0 && chunks[s - 1] === chunks[s]) s--;
-      }
-      while (s >= 2 && CONJUNCTIONS.has(tokens[s - 1])) {
-        s -= 2;
-        while (s > 0 && chunks[s - 1] === chunks[s]) s--;
-      }
-      for (let i = s; i <= f; i++) excluded.add(i);
-    }
-    for (let start = 0; start < k; start++) {
-      for (let len = 1; start + len <= k && len <= SUBPHRASE_MAX_TOKENS; len++) {
-        if (excluded.has(start + len - 1)) break;
-        if (excluded.has(start)) break;
-        if (this.byNorm.has(tokens.slice(start, start + len).join(" "))) return true;
-      }
-    }
-    return false;
-  }
-
-  private claimSpan(tokens: string[], chunks: number[]): [number, number] | null {
-    for (let k = 0; k < tokens.length; k++) {
-      const opener = CLAIM_OPENERS.find((s) => wordsAt(tokens, k, s)) ??
-        (PROPERTY_NEGATORS.has(tokens[k]) && this.negatesAnotherName(tokens, k, chunks)
-          ? [tokens[k]]
-          : undefined);
-      if (!opener) continue;
-      let o = k + opener.length;
-      o += CLAIM_FILLERS.find((s) => wordsAt(tokens, o, s))?.length ?? 0;
-      if (o >= tokens.length || tokens.slice(o, o + 2).some((x) => GMO_WORDS.has(x))) continue;
-      let end = o;
-      for (let len = Math.min(tokens.length - o, SUBPHRASE_MAX_TOKENS); len > 1; len--) {
-        if (this.byNorm.has(tokens.slice(o, o + len).join(" "))) {
-          end = o + len - 1;
-          break;
-        }
-      }
-      return [k, end];
-    }
-    return null;
-  }
-
   /** Resolve one item's name (no brackets) to an ingredient. */
   match(text: string): NameMatch | null {
     const norm = normName(text);
@@ -390,17 +279,20 @@ export class KbIndex {
       };
     }
     const tokens = norm.split(" ");
-    // A presence claim denies what it names, so no sub-phrase that starts in it is read: after a food ("olej sezamowy
-    // bez utwardzonych tluszczow", "sesame oil no partially hydrogenated oil") or opening the item ("without any
-    // partially hydrogenated rapeseed oil"). A claim at the start is still read whole ("bez utwardzonych tluszczow i
-    // konserwantow"), and so are the words after what it denies ("bez laktozy mleko").
-    const claim = this.claimSpan(tokens, chunksOf(text, tokens.length));
+    // An exact-only name is a claim ("bez utwardzonych tluszczow", "free from hydrogenated oil"): it matches only a
+    // whole item, and no sub-phrase that starts inside it is read, so neither it, nor a word of it ("bez" as elder),
+    // nor a name it denies outranks a food before or after it ("olej sezamowy bez utwardzonych tluszczow"). Only a
+    // name that opens the item and runs past the claim is read: a food's own negated name ("nie uwodorniony olej
+    // sojowy rafinowany").
+    const claims = this.claimSpans(tokens);
     // Longest known sub-phrase: "koncentrat bialka serwatkowego instant" → "koncentrat bialka serwatkowego".
     for (let len = Math.min(tokens.length - 1, SUBPHRASE_MAX_TOKENS); len >= 1; len--) {
       for (let start = 0; start + len <= tokens.length; start++) {
-        if (claim && start > 0 && start >= claim[0] && start <= claim[1]) continue;
+        if (claims.some(([s, e]) => start >= s && start <= e && !(start === 0 && start + len - 1 > e))) {
+          continue;
+        }
         const span = tokens.slice(start, start + len).join(" ");
-        if (span.length < 3) continue;
+        if (span.length < 3 || this.exactOnly.has(span)) continue;
         const e = this.byNorm.get(span);
         if (e) {
           const coverage = span.length / norm.length;
@@ -481,6 +373,7 @@ export class KbIndex {
     }
     const q3 = trigrams(norm);
     for (const n of this.names) {
+      if (this.exactOnly.has(n.norm)) continue;
       let score = 0;
       let type: SearchHit["matchType"] = "fuzzy";
       if (n.norm === norm) [score, type] = [1, "exact"];
@@ -531,7 +424,7 @@ export class KbIndex {
   }
 }
 
-function allNames(names: NamesT | undefined): { name: string; lang: string }[] {
+function allNames(names: NamesT | ExactNamesT | undefined): { name: string; lang: string }[] {
   if (!names) return [];
   const out: { name: string; lang: string }[] = [];
   for (const [lang, list] of Object.entries(names)) for (const name of list ?? []) out.push({ name, lang });

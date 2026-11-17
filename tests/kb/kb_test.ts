@@ -55,8 +55,8 @@ Deno.test("every curated name resolves back to its ingredient", () => {
   const idx = new KbIndex(bundle!);
   const wrong: string[] = [];
   for (const ing of bundle!.ingredients.filter((i) => i.provenance !== "wikidata")) {
-    for (const n of Object.values(ing.names).flat()) {
-      if (!normName(n)) continue;
+    for (const n of [...Object.values(ing.names), ...Object.values(ing.exact_names ?? {})].flat()) {
+      if (!n || !normName(n)) continue;
       const m = idx.match(n);
       if (m?.ingredientId !== ing.id) wrong.push(`${ing.id}: "${n}" → ${m?.ingredientId ?? "nothing"}`);
     }

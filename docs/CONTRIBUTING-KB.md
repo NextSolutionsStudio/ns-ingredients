@@ -67,6 +67,17 @@ lanolin vs lichen vitamin D3). Give each variant:
 
 Assertions can target one variant with `variant: <id>`.
 
+## Claim names (`exact_names`)
+
+A label claim such as "bez utwardzonych tłuszczów" or "free from hydrogenated oil" may be an entry's name, so a
+standalone claim item or a bracket child "(bez utwardzonych tłuszczów)" resolves to it. List such names under
+`exact_names` (same language keys as `names`), not `names`. An exact name resolves only a whole item, exactly or by
+fuzzy match. Inside a longer item it is a claim: the matcher reads no sub-phrase that starts inside it, so neither the
+claim, nor a word of it ("bez" as elder), nor a name it denies outranks the food ("olej sezamowy bez utwardzonych
+tłuszczów" stays sesame oil; "bez utwardzonych tłuszczów olej rzepakowy" is rapeseed oil). Only a name that opens the
+item and runs past the claim is read ("nie uwodorniony olej sojowy rafinowany"). Exact names are never search hits,
+and the validator rejects one that is any other name, of its own entry or another.
+
 ## Checklist before opening a PR
 
 ```bash
