@@ -256,7 +256,23 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
       });
       return;
     }
-    if (existing.triggers.some((t) => t.path === full.path && t.ingredient_id === full.ingredient_id)) return;
+    const same = existing.triggers.findIndex((t) =>
+      t.path === full.path && t.ingredient_id === full.ingredient_id
+    );
+    if (same >= 0) {
+      // One trigger per item and food, holding its strongest evidence, whatever order it came in: "vegetable fat (from
+      // soybean oil, from unrefined soybean oil)" is soy "yes" (Sol 6.1 on #18 at 0e08a29)
+      if (CERTAINTY_RANK[full.certainty] <= CERTAINTY_RANK[existing.triggers[same].certainty]) return;
+      existing.triggers[same] = full;
+      const ts = existing.triggers;
+      existing.certainty = ts.reduce(
+        (x, t) => CERTAINTY_RANK[t.certainty] > CERTAINTY_RANK[x] ? t.certainty : x,
+        ts[0].certainty,
+      );
+      existing.kind = ts.reduce((x, t) => KIND_RANK[t.kind] > KIND_RANK[x] ? t.kind : x, ts[0].kind);
+      existing.grade = ts.reduce((x, t) => GRADE_RANK[t.grade] > GRADE_RANK[x] ? t.grade : x, ts[0].grade);
+      return;
+    }
     existing.triggers.push(full);
     if (CERTAINTY_RANK[full.certainty] > CERTAINTY_RANK[existing.certainty]) {
       existing.certainty = full.certainty;

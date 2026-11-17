@@ -782,6 +782,15 @@ Deno.test("a stated full refining keeps the soy exemption on a hydrogenated oil,
       assertEquals(soyFlag(excluded, idx), undefined, excluded);
     }
   }
+  // two sources of one food: the explicit one's "yes" stands, in either order (Sol 6.1 on #18 at 0e08a29)
+  for (
+    const label of [
+      "Ingredients: rapeseed oil (from soybean oil, from unrefined soybean oil)",
+      "Ingredients: rapeseed oil (from unrefined soybean oil, from soybean oil)",
+    ]
+  ) {
+    assertEquals(soyFlag(label, idx)?.certainty, "yes", label);
+  }
   // a qualifier's denied name is read as an item's: the food's own allergens at maybe (Sol 6.1 on #18 at 2668948)
   assertEquals(
     soyFlag("Ingredients: rapeseed oil (from not fully refined hydrogenated soybean oil)", idx)?.certainty,
