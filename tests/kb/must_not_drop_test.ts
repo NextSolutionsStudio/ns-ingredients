@@ -42,11 +42,32 @@ const CONTROLS: [form: string, code: string, floor: "yes" | "maybe", why: string
     "maybe",
     "a contradictory label names soybean oil (Annex II 6)",
   ],
+  // pc-opus on #18: an exclusion of something else keeps the oil after it
+  [
+    "bez konserwantów olej rzepakowy, olej sezamowy",
+    "allergen.sesame",
+    "yes",
+    "the exclusion is of preservatives; sesame oil is named (Annex II 11)",
+  ],
+  [
+    "without preservatives sesame oil",
+    "allergen.sesame",
+    "yes",
+    "the exclusion is of preservatives (Annex II 11)",
+  ],
 ];
 
 Deno.test("an exclusion never drops the allergen of the food it names", () => {
   for (const [form, code, floor, why] of CONTROLS) {
-    for (const text of [form, `chocolate (${form})`, `czekolada (${form})`]) {
+    for (
+      const text of [
+        form,
+        `chocolate (${form})`,
+        `czekolada (${form})`,
+        `rapeseed oil (${form})`,
+        `olej rzepakowy (${form})`,
+      ]
+    ) {
       const got = analyze(index, text, { lang: "pl" }).flags.find((f) => f.code === code)?.certainty;
       assert(
         (RANK[got ?? ""] ?? 0) >= RANK[floor],

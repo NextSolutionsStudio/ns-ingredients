@@ -45,6 +45,8 @@ export interface DeniedName {
   /** Its words, [start, end), in the item's normalised name. */
   start: number;
   end: number;
+  /** The variant the name selects, if any: a denial keeps the allergen "no" it asserts (an exemption it states). */
+  variantId?: string;
 }
 
 export interface SearchHit {
@@ -443,9 +445,9 @@ export class KbIndex {
     const collect = !!excluded && norm.length <= TELL_TEXT_MAX;
     // The most complete name wins: a name whose words a denied name already covers is part of it, whatever its food
     // ("fully refined soybean oil" inside the refined-soy claim adds no soy).
-    const deny = (ingredientId: string, start: number, end: number, span: string) => {
+    const deny = (ingredientId: string, start: number, end: number, span: string, variantId?: string) => {
       if (excluded?.some((x) => x.start <= start && end <= x.end)) return;
-      excluded?.push({ ingredientId, matched: span, start, end });
+      excluded?.push({ ingredientId, matched: span, start, end, ...(variantId ? { variantId } : {}) });
     };
     const longest = Math.min(tokens.length - 1, Math.max(SUBPHRASE_MAX_TOKENS, this.denyMaxTokens));
     // A claim inside a longer item ("contains no partially hydrogenated almond oil") denies what it names: its own
@@ -457,7 +459,7 @@ export class KbIndex {
         if (this.nameRunsPast(tokens, s, e, longest)) continue;
         const span = tokens.slice(s, e + 1).join(" ");
         const c = this.byNorm.get(span);
-        if (c) deny(c.ingredientId, s, e + 1, span);
+        if (c) deny(c.ingredientId, s, e + 1, span, c.variantId);
       }
     }
     let found: NameMatch | null = null;
@@ -483,7 +485,7 @@ export class KbIndex {
               (blockedIng ??= new Set()).add(e.ingredientId);
             }
             if (collect) {
-              deny(e.ingredientId, start, start + len, span);
+              deny(e.ingredientId, start, start + len, span, e.variantId);
               // and, as for a denied variant name, no fuzzy match to that food is taken
               (blockedIng ??= new Set()).add(e.ingredientId);
             }
@@ -499,7 +501,7 @@ export class KbIndex {
         const reading = this.variantReading(e, tokens, start, start + len, norm.length);
         if (reading === "deny") {
           blocked.fill(1, start, start + len);
-          deny(e.ingredientId, start, start + len, span);
+          deny(e.ingredientId, start, start + len, span, e.variantId);
           (blockedIng ??= new Set()).add(e.ingredientId);
           continue;
         }
@@ -627,8 +629,15 @@ export class KbIndex {
         if (!own.has(a.code)) own.set(a.code, a.certainty === "yes" ? "maybe" : a.certainty);
       }
     }
+    // A variant may also state an allergen exemption ("no") where the food's own reading has the allergen ("fully
+    // refined hydrogenated soybean oil", Annex II 6(a)): a denial keeps the exemption (`analyze`), and a drop reads
+    // the food's own allergens, never fewer.
+    const same = (a: AssertionT) =>
+      own.get(a.code) === a.certainty ||
+      (a.code.startsWith("allergen.") && a.certainty === "no" &&
+        (own.get(a.code) === "yes" || own.get(a.code) === "maybe"));
     for (const v of ing.variants ?? []) {
-      if (!v.tells?.length || !scoped(v.id).every((a) => own.get(a.code) === a.certainty)) continue;
+      if (!v.tells?.length || !scoped(v.id).every(same)) continue;
       // and only if its tells fire on each of its names inside a longer neutral item, so a denial is a negation
       // the tells read, never an anchored tell that a neutral item cannot meet
       const res = v.tells.map((s) => new RegExp(s, "u"));

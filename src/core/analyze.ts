@@ -280,20 +280,26 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
   };
 
   /**
-   * The allergens a denied name of `ing` is exempt from: those a variant of the food asserts "no" for whose tells fire
-   * on the name's head, its words from some point to the end ("fully refined soybean oil" in "hydrogenated fully
-   * refined soybean oil": Annex II 6(a)), as the KB's claims that name that oil carry none.
+   * The allergens a denied name is exempt from: those the variant its name selects asserts "no" for ("fully refined
+   * hydrogenated soybean oil": Annex II 6(a)). A name that states no exemption keeps the food's own allergens.
    */
-  const exemptFrom = (ing: IngredientT, norm: string) => {
-    const out = new Set<string>();
-    const no = (ing.assertions ?? []).filter((a) =>
-      a.variant && a.code.startsWith("allergen.") && a.certainty === "no"
+  const exemptFrom = (ing: IngredientT, variantId?: string) =>
+    new Set(
+      (ing.assertions ?? []).filter((a) =>
+        variantId && a.variant === variantId && a.code.startsWith("allergen.") && a.certainty === "no"
+      ).map((a) => a.code),
     );
-    if (!no.length) return out;
-    const words = norm.split(" ");
-    for (let i = 0; i < words.length; i++) {
-      const fired = new Set(index.tellsFor(ing.id, words.slice(i).join(" ")).map((v) => v.id));
-      for (const a of no) if (fired.has(a.variant!)) out.add(a.code);
+
+  /**
+   * A qualifier's allergens: those its food asserts ("z soi"), and those of its most likely prior variant at "maybe",
+   * as the food named as an item shows them ("(bez GMO olej sojowy)": soy maybe, as "olej sojowy").
+   */
+  const qualifierAllergens = (ing: IngredientT) => {
+    const out: AssertionT[] = allergenAssertions(ing);
+    for (const a of ownAllergens(ing)) {
+      if (a.variant && !out.some((b) => b.code === a.code)) {
+        out.push({ ...a, certainty: "maybe", kind: a.kind === "fact" ? "estimate" : a.kind });
+      }
     }
     return out;
   };
@@ -474,7 +480,7 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
     for (const x of excluded) {
       const q = index.get(x.ingredientId);
       if (!q) continue;
-      const exempt = exemptFrom(q, x.matched);
+      const exempt = exemptFrom(q, x.variantId);
       const own = ownAllergens(q).filter((a) => !exempt.has(a.code));
       if (own.length) deniedFoods.add(q.id);
       for (const a of own) {
@@ -490,7 +496,8 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
       if ((c.role === "qualifier" || c.role === "e_number") && c.match) {
         const q = index.get(c.match.ingredient_id);
         if (!q) continue;
-        for (const a of allergenAssertions(q)) addFlag(a, trig(item.path, q.id, "qualifier", a));
+        const allergens = c.role === "qualifier" ? qualifierAllergens(q) : allergenAssertions(q);
+        for (const a of allergens) addFlag(a, trig(item.path, q.id, "qualifier", a));
         if (c.role === "qualifier") dietInputs.push({ path: c.path, ingredient: q });
       }
     }
