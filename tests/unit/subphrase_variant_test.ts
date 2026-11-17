@@ -791,6 +791,18 @@ Deno.test("the words of an exclusion keep the negation on the name, whatever the
     },
   );
   assertEquals(far.items[0].match?.ingredient_id, "poultry-fat");
+  // any other word ends the negation, a food the KB knows or not (Sol 6.1 on #18 at c16374b, P2 1): the food after
+  // it is the food
+  for (
+    const label of [
+      "Ingredients: without preservatives partially hydrogenated poultry fat",
+      "Ingredients: rapeseed oil (without preservatives partially hydrogenated poultry fat)",
+    ]
+  ) {
+    const r = analyze(idx, label, { lang: "en" });
+    assertEquals(r.flags.some((x) => x.code === "origin.animal"), true, label);
+    assertEquals(r.diets.vegan.status, "no", label);
+  }
   // a food the KB knows, or a break, between them ends the negation: the food after it is the food
   for (
     const text of [
@@ -824,11 +836,18 @@ Deno.test("a qualifier that names a food carries its likely variant's allergens 
             prior: 0.45,
             tells: ["^(?:fully )?refined soybean oil$"],
           },
+          {
+            id: "hydrogenated-fully-refined",
+            names: { en: ["fully refined hydrogenated soybean oil"] },
+            process: { en: "p" },
+            tells: [SOY_TELL],
+          },
         ],
-        assertions: [says("allergen.soybeans", "unrefined"), {
-          ...says("allergen.soybeans", "fully-refined"),
-          certainty: "no",
-        }],
+        assertions: [
+          says("allergen.soybeans", "unrefined"),
+          { ...says("allergen.soybeans", "fully-refined"), certainty: "no" },
+          { ...says("allergen.soybeans", "hydrogenated-fully-refined"), certainty: "no" },
+        ],
       },
       { id: "soy", names: { en: ["soy"], pl: ["soja", "soi"] }, assertions: [says("allergen.soybeans")] },
     ],
@@ -842,6 +861,11 @@ Deno.test("a qualifier that names a food carries its likely variant's allergens 
     const soy = analyze(idx, label, { lang: "pl" }).flags.find((f) => f.code === "allergen.soybeans");
     assertEquals(soy?.certainty, "maybe", label);
   }
+  // a qualifier that names an exempt variant keeps the exemption, not the prior (Sol 6.1 on #18 at c16374b, P2 2)
+  const exempt = analyze(idx, "Ingredients: rapeseed oil (from fully refined hydrogenated soybean oil)", {
+    lang: "en",
+  });
+  assertEquals(exempt.flags.find((f) => f.code === "allergen.soybeans"), undefined);
   // a source the food asserts outright keeps "yes"
   assertEquals(
     analyze(idx, "Składniki: lecytyna (z soi)", { lang: "pl" }).flags.find((f) =>

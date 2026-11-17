@@ -83,29 +83,49 @@ export const TELL_TEXT_MAX = 500;
  */
 const DENIAL_GAP_MAX = 5;
 /**
- * Words that end a negation before a later name: a conjunction or an affirmation ("without added sugars with
- * partially hydrogenated …", "bez cukru i z …", "ohne Zucker mit …"). Polish "a" is left out: it is also the English
- * article, a filler.
+ * The adverbs of an exclusion, which may stand between a negator and the name it denies, as DENIAL_FILLERS may
+ * ("without ever using", "without in any way adding", "bez w ogóle dodatku", "ohne jemals …"). Any other word, a food
+ * the KB knows or not ("sugar", "konserwantów", "artificial colours"), ends the negation: the name after it is the
+ * food (Sol 6.1 on #18 at c16374b).
  */
-const DENIAL_BREAKS = new Set([
-  "with",
-  "and",
-  "but",
-  "plus",
-  "also",
-  "z",
-  "ze",
-  "i",
-  "oraz",
-  "ale",
-  "lecz",
-  "takze",
-  "rowniez",
-  "mit",
-  "und",
-  "aber",
-  "sowie",
-  "auch",
+const DENIAL_ADVERBS = new Set([
+  // en
+  "ever",
+  "never",
+  "at",
+  "all",
+  "in",
+  "way",
+  "point",
+  "time",
+  "whatsoever",
+  "deliberately",
+  "intentionally",
+  "knowingly",
+  "even",
+  "having",
+  "been",
+  // pl
+  "nigdy",
+  "w",
+  "ogole",
+  "zadnym",
+  "razie",
+  "zupelnie",
+  "absolutnie",
+  "celowo",
+  "jakiegokolwiek",
+  "jakichkolwiek",
+  "jakiejkolwiek",
+  // de
+  "jemals",
+  "niemals",
+  "gar",
+  "irgendwelche",
+  "irgendwelchen",
+  "jeglichem",
+  "jeglichen",
+  "jeglicher",
 ]);
 /**
  * Negators that negate the word after them, not a food: "not fully refined hydrogenated soybean oil" negates the full
@@ -573,12 +593,10 @@ export class KbIndex {
    * negation is scoped to the name, so `match` reads it like a claim ("without using partially hydrogenated rapeseed
    * oil"); "drop" (the plain entry, as #14 reads it) when it is not.
    * Scoped means: between the negator (the nearest start from which the tells fail) and the name lie at most
-   * DENIAL_GAP_MAX words, and none of them ends the negation: no break (DENIAL_BREAKS) and no word of a KB name
-   * (`nameWords`: "sugar", "completely refined"), filler words aside. So the words of an exclusion, whatever they are
-   * ("without ever using", "without in any way adding"), keep the negation on the name. A negator after the name
-   * ("… poultry fat without added sugar") keeps the variant, and one that denies something else ("without added
-   * sugars with partially hydrogenated poultry fat", "without sugar partially hydrogenated poultry fat", "not
-   * completely refined hydrogenated soybean oil") leaves the plain food.
+   * DENIAL_GAP_MAX words, each a word of an exclusion (DENIAL_FILLERS, DENIAL_ADVERBS: "without ever using", "without
+   * in any way adding"). A negator after the name ("… poultry fat without added sugar") keeps the variant, and one
+   * that denies something else ("without added sugars with partially hydrogenated poultry fat", "bez konserwantów
+   * częściowo utwardzony tłuszcz drobiowy", "not completely refined hydrogenated soybean oil") leaves the plain food.
    * "negate" is a denial whose negator negates the word after it (ADJECTIVE_NEGATORS) right before the name: it
    * negates the name's own first words ("not fully refined hydrogenated soybean oil"), so the name states no exemption.
    */
@@ -603,26 +621,9 @@ export class KbIndex {
     while (k > 0 && fires(k)) k--;
     const gap = tokens.slice(k + 1, start);
     if (gap.length > DENIAL_GAP_MAX) return "drop";
-    const ends = (w: string) => !DENIAL_FILLERS.has(w) && (DENIAL_BREAKS.has(w) || this.nameWords().has(w));
-    if (gap.some(ends)) return "drop";
+    if (!gap.every((w) => DENIAL_FILLERS.has(w) || DENIAL_ADVERBS.has(w))) return "drop";
     return !gap.length && ADJECTIVE_NEGATORS.test(tokens[k]) ? "negate" : "deny";
   }
-
-  /**
-   * Every word of a food's or a variant's own name (claims aside): what a negation that reaches one denies is that
-   * word ("not completely refined hydrogenated soybean oil", "without sugar …"), not a later name. The words of an
-   * exclusion ("ever", "using", "in any way") are in none.
-   */
-  private nameWords(): Set<string> {
-    if (!this.nameWordSet) {
-      this.nameWordSet = new Set();
-      for (const n of this.byNorm.keys()) {
-        if (!this.exactOnly.has(n)) { for (const w of n.split(" ")) this.nameWordSet.add(w); }
-      }
-    }
-    return this.nameWordSet;
-  }
-  private nameWordSet?: Set<string>;
 
   /**
    * The variants with tells that an item may deny or drop (`variantReading`): every allergen, diet and origin assertion of the

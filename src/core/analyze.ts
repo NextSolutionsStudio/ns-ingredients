@@ -291,11 +291,25 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
     );
 
   /**
-   * A qualifier's allergens: those its food asserts ("z soi"), and those of its most likely prior variant at "maybe",
-   * as the food named as an item shows them ("(bez GMO olej sojowy)": soy maybe, as "olej sojowy").
+   * A qualifier's allergens: those its food asserts ("z soi"); then those of the variant its name selects, the
+   * variant's "no" an exemption ("(from fully refined hydrogenated soybean oil)": no soy, Sol 6.1 on #18 at c16374b);
+   * else those of its most likely prior variant at "maybe", as the food named as an item shows them ("(bez GMO olej
+   * sojowy)": soy maybe, as "olej sojowy").
    */
-  const qualifierAllergens = (ing: IngredientT) => {
+  const qualifierAllergens = (ing: IngredientT, variantId?: string) => {
     const out: AssertionT[] = allergenAssertions(ing);
+    if (variantId) {
+      const scoped = (ing.assertions ?? []).filter((a) =>
+        a.variant === variantId && a.code.startsWith("allergen.")
+      );
+      const exempt = new Set(scoped.filter((a) => a.certainty === "no").map((a) => a.code));
+      return [
+        ...out.filter((a) => !exempt.has(a.code)),
+        ...scoped.filter((a) =>
+          (a.certainty === "yes" || a.certainty === "maybe") && !out.some((b) => b.code === a.code)
+        ),
+      ];
+    }
     for (const a of ownAllergens(ing)) {
       if (a.variant && !out.some((b) => b.code === a.code)) {
         out.push({ ...a, certainty: "maybe", kind: a.kind === "fact" ? "estimate" : a.kind });
@@ -313,6 +327,8 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
   const dietInputs: DietInput[] = [];
   /** Entries a denied variant name contributes allergens from: no diet input, but their provenance counts. */
   const deniedFoods = new Set<string>();
+  /** Per qualifier path, the variant its name selects ("(from fully refined hydrogenated soybean oil)"). */
+  const qualifierVariants = new Map<string, string>();
   /** Per item path, the words of it and of its brackets that denied names cover: emphasis there reasserts nothing. */
   const deniedTexts = new Map<string, DeniedText[]>();
 
@@ -333,6 +349,7 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
     if (item.role === "qualifier") {
       const m = index.match(item.name.replace(/^(?:z|ze|from|of|aus|von)\s+/iu, ""));
       if (m) base.match = toMatch(index, m.ingredientId, m.matchType, m.confidence);
+      if (m?.variantId) qualifierVariants.set(item.path, m.variantId);
       return base;
     }
     if (item.role === "e_number") {
@@ -496,7 +513,9 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
       if ((c.role === "qualifier" || c.role === "e_number") && c.match) {
         const q = index.get(c.match.ingredient_id);
         if (!q) continue;
-        const allergens = c.role === "qualifier" ? qualifierAllergens(q) : allergenAssertions(q);
+        const allergens = c.role === "qualifier"
+          ? qualifierAllergens(q, qualifierVariants.get(c.path))
+          : allergenAssertions(q);
         for (const a of allergens) addFlag(a, trig(item.path, q.id, "qualifier", a));
         if (c.role === "qualifier") dietInputs.push({ path: c.path, ingredient: q });
       }
