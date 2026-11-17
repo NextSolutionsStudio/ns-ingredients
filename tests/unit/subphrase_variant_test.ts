@@ -745,11 +745,18 @@ Deno.test("a stated full refining keeps the soy exemption on a hydrogenated oil,
   ) {
     assertEquals(soyFlag(label, idx)?.certainty, "maybe", label);
   }
-  // an exclusion that does not reach the name reads the food's own allergens, never fewer
-  assertEquals(
-    soyFlag("Ingredients: without rapeseed oil fully refined hydrogenated soybean oil", idx)?.certainty,
-    "maybe",
-  );
+  // an exclusion of something else leaves the variant as named: exempt and hydrogenated (Sol 6.1 on #18 at 0547db1,
+  // P2 2), not the food's own reading
+  for (
+    const label of [
+      "Ingredients: without rapeseed oil fully refined hydrogenated soybean oil",
+      "Ingredients: without preservatives fully refined hydrogenated soybean oil",
+      "Ingredients: olive oil (without preservatives fully refined hydrogenated soybean oil)",
+    ]
+  ) {
+    assertEquals(soyFlag(label, idx), undefined, label);
+    assertEquals(hydrogenated(label), true, label);
+  }
 });
 
 Deno.test("the words of an exclusion keep the negation on the name, whatever they are (Sol 6.1 on #10 at f1a6e25, P2 2)", () => {
@@ -827,7 +834,8 @@ Deno.test("a qualifier that names a food carries its likely variant's allergens 
     ingredients: [
       {
         id: "soybean-oil",
-        names: { en: ["soybean oil"], pl: ["olej sojowy"] },
+        // as on b2's KB, "fully refined soybean oil" is the food's own name and its tell selects the exempt variant
+        names: { en: ["soybean oil", "fully refined soybean oil"], pl: ["olej sojowy"] },
         variants: [
           { id: "unrefined", names: { en: ["unrefined soybean oil"] }, process: { en: "p" }, prior: 0.5 },
           {
@@ -866,6 +874,9 @@ Deno.test("a qualifier that names a food carries its likely variant's allergens 
     lang: "en",
   });
   assertEquals(exempt.flags.find((f) => f.code === "allergen.soybeans"), undefined);
+  // and one that names the food, whose tell selects the exempt variant (Sol 6.1 on #18 at 0547db1, P2 1)
+  const told = analyze(idx, "Ingredients: rapeseed oil (from fully refined soybean oil)", { lang: "en" });
+  assertEquals(told.flags.find((f) => f.code === "allergen.soybeans"), undefined);
   // a source the food asserts outright keeps "yes"
   assertEquals(
     analyze(idx, "Składniki: lecytyna (z soi)", { lang: "pl" }).flags.find((f) =>

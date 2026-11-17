@@ -197,6 +197,8 @@ export class KbIndex {
    * asserts about allergens, diets or origins: the only variants a sub-phrase may name without selecting.
    */
   private readonly droppable = new Set<string>();
+  /** The droppable variants that state an allergen exemption the food's own reading does not make (`markDroppable`). */
+  private readonly exempting = new Set<string>();
   /** The most words a droppable variant name has: how far past SUBPHRASE_MAX_TOKENS a denial is looked for. */
   private denyMaxTokens = 0;
   /** The first word of every exact-only name, and the most words one has: the occurrence scan's bounds. */
@@ -620,8 +622,11 @@ export class KbIndex {
     let k = start - 1;
     while (k > 0 && fires(k)) k--;
     const gap = tokens.slice(k + 1, start);
-    if (gap.length > DENIAL_GAP_MAX) return "drop";
-    if (!gap.every((w) => DENIAL_FILLERS.has(w) || DENIAL_ADVERBS.has(w))) return "drop";
+    // Not denied: the plain entry (#14), except a variant that states an exemption, which stands as named ("bez cukru
+    // całkowicie utwardzony w pełni rafinowany olej sojowy": hydrogenated, exempt; Sol 6.1 on #18 at 0547db1)
+    const notDenied = this.exempting.has(`${e.ingredientId}/${e.variantId}`) ? "keep" : "drop";
+    if (gap.length > DENIAL_GAP_MAX) return notDenied;
+    if (!gap.every((w) => DENIAL_FILLERS.has(w) || DENIAL_ADVERBS.has(w))) return notDenied;
     return !gap.length && ADJECTIVE_NEGATORS.test(tokens[k]) ? "negate" : "deny";
   }
 
@@ -644,20 +649,22 @@ export class KbIndex {
       }
     }
     // A variant may also state an allergen exemption ("no") where the food's own reading has the allergen ("fully
-    // refined hydrogenated soybean oil", Annex II 6(a)): a denial keeps the exemption (`analyze`), and a drop reads
-    // the food's own allergens, never fewer.
-    const same = (a: AssertionT) =>
-      own.get(a.code) === a.certainty ||
-      (a.code.startsWith("allergen.") && a.certainty === "no" &&
-        (own.get(a.code) === "yes" || own.get(a.code) === "maybe"));
+    // refined hydrogenated soybean oil", Annex II 6(a)): a denial keeps the exemption (`analyze`), and where the
+    // negation does not reach it the variant stands as named (`variantReading`), never the food's own reading.
+    const exempts = (a: AssertionT) =>
+      a.code.startsWith("allergen.") && a.certainty === "no" &&
+      (own.get(a.code) === "yes" || own.get(a.code) === "maybe");
     for (const v of ing.variants ?? []) {
-      if (!v.tells?.length || !scoped(v.id).every(same)) continue;
+      if (!v.tells?.length || !scoped(v.id).every((a) => own.get(a.code) === a.certainty || exempts(a))) {
+        continue;
+      }
       // and only if its tells fire on each of its names inside a longer neutral item, so a denial is a negation
       // the tells read, never an anchored tell that a neutral item cannot meet
       const res = v.tells.map((s) => new RegExp(s, "u"));
       const names = allNames(v.names).map((n) => normName(n.name)).filter(Boolean);
       if (!names.every((n) => res.some((re) => re.test(`x ${n} x`)))) continue;
       this.droppable.add(`${ing.id}/${v.id}`);
+      if (scoped(v.id).some(exempts)) this.exempting.add(`${ing.id}/${v.id}`);
       for (const n of names) this.denyMaxTokens = Math.max(this.denyMaxTokens, n.split(" ").length);
     }
   }

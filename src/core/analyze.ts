@@ -296,13 +296,20 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
    * else those of its most likely prior variant at "maybe", as the food named as an item shows them ("(bez GMO olej
    * sojowy)": soy maybe, as "olej sojowy").
    */
-  const qualifierAllergens = (ing: IngredientT, variantId?: string) => {
+  const qualifierAllergens = (ing: IngredientT, variantIds?: string[]) => {
     const out: AssertionT[] = allergenAssertions(ing);
-    if (variantId) {
+    if (variantIds?.length) {
       const scoped = (ing.assertions ?? []).filter((a) =>
-        a.variant === variantId && a.code.startsWith("allergen.")
+        !!a.variant && variantIds.includes(a.variant) && a.code.startsWith("allergen.")
       );
-      const exempt = new Set(scoped.filter((a) => a.certainty === "no").map((a) => a.code));
+      // exempt only where every variant the qualifier names says "no"
+      const exempt = new Set(
+        scoped.filter((a) => a.certainty === "no").map((a) => a.code).filter((code) =>
+          variantIds.every((v) =>
+            scoped.some((a) => a.variant === v && a.code === code && a.certainty === "no")
+          )
+        ),
+      );
       return [
         ...out.filter((a) => !exempt.has(a.code)),
         ...scoped.filter((a) =>
@@ -328,7 +335,7 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
   /** Entries a denied variant name contributes allergens from: no diet input, but their provenance counts. */
   const deniedFoods = new Set<string>();
   /** Per qualifier path, the variant its name selects ("(from fully refined hydrogenated soybean oil)"). */
-  const qualifierVariants = new Map<string, string>();
+  const qualifierVariants = new Map<string, string[]>();
   /** Per item path, the words of it and of its brackets that denied names cover: emphasis there reasserts nothing. */
   const deniedTexts = new Map<string, DeniedText[]>();
 
@@ -347,9 +354,16 @@ export function analyze(index: KbIndex, text: string, opts: AnalyzeOptions = {})
 
     // Qualifiers ("z soi") and bare E-number annotations are resolved for their parent.
     if (item.role === "qualifier") {
-      const m = index.match(item.name.replace(/^(?:z|ze|from|of|aus|von)\s+/iu, ""));
+      const named = item.name.replace(/^(?:z|ze|from|of|aus|von)\s+/iu, "");
+      const m = index.match(named);
       if (m) base.match = toMatch(index, m.ingredientId, m.matchType, m.confidence);
-      if (m?.variantId) qualifierVariants.set(item.path, m.variantId);
+      // the variant its name selects, else those its tells select ("(from fully refined soybean oil)")
+      const vs = m?.variantId
+        ? [m.variantId]
+        : m
+        ? index.tellsFor(m.ingredientId, named).map((v) => v.id)
+        : [];
+      if (vs.length) qualifierVariants.set(item.path, vs);
       return base;
     }
     if (item.role === "e_number") {
