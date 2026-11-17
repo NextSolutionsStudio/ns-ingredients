@@ -68,9 +68,54 @@ const SUBPHRASE_MAX_TOKENS = 7;
 export const TELL_TEXT_MAX = 500;
 /**
  * At most this many words between a negator and the variant name it denies ("without the addition of partially
- * hydrogenated …"); a longer gap reads as a negation of something else, as main reads it.
+ * hydrogenated …"), each one of DENIAL_FILLERS.
  */
 const DENIAL_GAP_MAX = 3;
+/**
+ * The words (normalised) that may stand between a negator and the variant name it denies: articles, the connectors
+ * the KB's negators take ("free from", "wolny od", "ohne Zusatz von") and the verbs and nouns of an exclusion
+ * ("using", "added", "the addition of", "bez stosowania", "bez dodatku"). Any other word, a food ("sugars") or an
+ * affirmation ("with"), is no evidence that the negation reaches the name.
+ */
+const DENIAL_FILLERS = new Set([
+  // en
+  "a",
+  "an",
+  "the",
+  "any",
+  "of",
+  "from",
+  "using",
+  "use",
+  "used",
+  "added",
+  "adding",
+  "addition",
+  "contain",
+  "contains",
+  "containing",
+  // pl
+  "od",
+  "stosowania",
+  "uzycia",
+  "uzywania",
+  "dodatku",
+  "dodawania",
+  "dodania",
+  "dodanego",
+  "dodanej",
+  "dodanych",
+  "zawiera",
+  "zawieraja",
+  "zawierajacy",
+  "zawierajace",
+  // de
+  "von",
+  "zusatz",
+  "verwendung",
+  "zugesetztem",
+  "zugesetzten",
+]);
 /** A prior variant raises its flags only when it is more likely than not (`analyze`). */
 export const PRIOR_FLAG_MIN = 0.5;
 
@@ -361,7 +406,8 @@ export class KbIndex {
         if (span.length < 3 || this.exactOnly.has(span)) continue;
         const e = this.byNorm.get(span);
         if (!e) continue;
-        if (this.deniedVariant(e, tokens, start, start + len, norm.length)) {
+        const reading = this.variantReading(e, tokens, start, start + len, norm.length);
+        if (reading === "deny") {
           blocked.fill(1, start, start + len);
           excluded?.push({ ingredientId: e.ingredientId, matched: span });
           (blockedIng ??= new Set()).add(e.ingredientId);
@@ -371,7 +417,8 @@ export class KbIndex {
         const coverage = span.length / norm.length;
         found = {
           ingredientId: e.ingredientId,
-          variantId: e.variantId,
+          // a variant whose tells fail where the item does not deny it is the plain entry (#14)
+          variantId: reading === "drop" ? undefined : e.variantId,
           matchType: "sub_phrase",
           confidence: Math.round((0.6 + 0.35 * coverage) * 100) / 100,
           matched: span,
@@ -418,49 +465,41 @@ export class KbIndex {
   }
 
   /**
-   * Whether the item denies the variant the name at tokens[start, end) selects: a droppable variant
-   * (`markDroppable`) none of whose tells fires on the item read up to the name's end, with the negation scoped to
-   * that name. The tells carry the KB's negation guards, so "without using partially hydrogenated rapeseed oil" names
-   * the hydrogenated variant and denies it, and `match` reads that name like a claim. Scoped means: the words between
-   * the negator (the nearest start from which the tells fail) and the name are at most DENIAL_GAP_MAX and name
-   * nothing (no ingredient, variant, class or E-number). So a negator after the name ("… poultry fat without added
-   * sugar") or one that denies another food ("without added sugar with partially hydrogenated poultry fat") leaves
-   * the name as main reads it. A variant with no tells, a non-droppable one, and an item past TELL_TEXT_MAX
-   * (`itemLength`) are never denied.
+   * How the item reads the variant the name at tokens[start, end) selects. "keep": the variant (no tells, not
+   * droppable (`markDroppable`), an item past TELL_TEXT_MAX (`itemLength`), or a tell fires on the item read up to
+   * the name's end). Otherwise the tells fail, and the KB's negation guards they carry say why: "deny" when the
+   * negation is scoped to the name, so `match` reads it like a claim ("without using partially hydrogenated rapeseed
+   * oil"); "drop" (the plain entry, as #14 reads it) when it is not.
+   * Scoped means: between the negator (the nearest start from which the tells fail) and the name lie at most
+   * DENIAL_GAP_MAX words, each one of DENIAL_FILLERS. So a negator after the name ("… poultry fat without added
+   * sugar") keeps the variant, and one that denies something else ("without added sugars with partially
+   * hydrogenated poultry fat") leaves the plain food.
    */
-  private deniedVariant(
+  private variantReading(
     e: NameEntry,
     tokens: string[],
     start: number,
     end: number,
     itemLength: number,
-  ): boolean {
+  ): "keep" | "drop" | "deny" {
     if (
       !e.variantId || itemLength > TELL_TEXT_MAX || !this.droppable.has(`${e.ingredientId}/${e.variantId}`)
     ) {
-      return false;
+      return "keep";
     }
     const t = this.tells.get(e.ingredientId)?.find((x) => x.variant.id === e.variantId);
-    if (!t) return false;
+    if (!t) return "keep";
     // read as `markDroppable` reads a name: between neutral words
     const fires = (from: number) => t.res.some((re) => re.test(`x ${tokens.slice(from, end).join(" ")} x`));
-    if (fires(0)) return false;
+    if (fires(0)) return "keep";
     let k = start - 1;
     while (k > 0 && fires(k)) k--;
     const gap = tokens.slice(k + 1, start);
-    if (gap.length > DENIAL_GAP_MAX) return false;
-    for (let i = 0; i < gap.length; i++) {
-      if (/^e\d{3}/.test(gap[i])) return false;
-      for (let j = i + 1; j <= gap.length; j++) {
-        const s = gap.slice(i, j).join(" ");
-        if (s.length >= 3 && (this.byNorm.has(s) || this.classByNorm.has(s))) return false;
-      }
-    }
-    return true;
+    return gap.length <= DENIAL_GAP_MAX && gap.every((w) => DENIAL_FILLERS.has(w)) ? "deny" : "drop";
   }
 
   /**
-   * The variants with tells that an item may deny (`deniedVariant`): every allergen, diet and origin assertion of the
+   * The variants with tells that an item may deny or drop (`variantReading`): every allergen, diet and origin assertion of the
    * variant is made, with the same certainty, by the entry's own reading (its unscoped assertions, else its most
    * likely prior variant's, at most "maybe"), so a denial never loses an allergen or turns a diet verdict: "soy
    * lecithin" or "wheat starch" keeps its variant even where its tells do not fire. And its tells must fire on each

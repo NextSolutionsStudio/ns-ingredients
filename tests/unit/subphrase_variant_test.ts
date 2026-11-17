@@ -154,12 +154,7 @@ Deno.test("a denied variant name of an allergen food keeps the allergen at maybe
       { id: "olive-oil", names: { en: ["olive oil"] } },
     ],
   } as unknown as KbBundle);
-  for (
-    const text of [
-      "not completely refined hydrogenated soybean oil",
-      "without using hydrogenated soybean oil",
-    ]
-  ) {
+  for (const text of ["not hydrogenated soybean oil", "without using hydrogenated soybean oil"]) {
     const ex: DeniedName[] = [];
     assertEquals(idx.match(text, ex), null, text);
     assertEquals(ex.map((x) => x.ingredientId), ["soybean-oil"], text);
@@ -170,6 +165,10 @@ Deno.test("a denied variant name of an allergen food keeps the allergen at maybe
       assertEquals(r.flags.some((f) => f.code === "origin.plant"), false, label);
     }
   }
+  // a negator that reaches another word first ("not completely refined") denies nothing: the plain oil, as #14 reads it
+  const ex: DeniedName[] = [];
+  const plain = idx.match("not completely refined hydrogenated soybean oil", ex);
+  assertEquals([plain?.ingredientId, plain?.variantId, ex.length], ["soybean-oil", undefined, 0]);
   // the food named affirmatively keeps both, as before
   const r = analyze(idx, "Ingredients: hydrogenated soybean oil", { lang: "en" });
   assertEquals(r.flags.find((f) => f.code === "allergen.soybeans")?.certainty, "yes");
@@ -303,7 +302,7 @@ function soyIndex(provenance?: string): KbIndex {
 const soyFlag = (label: string, idx = soyIndex()) =>
   analyze(idx, label, { lang: "en" }).flags.find((f) => f.code === "allergen.soybeans");
 
-Deno.test("a negator that denies something else leaves the name (Sol 6.1 on #15 at b71a92d and 8dc421e, P2 1)", () => {
+Deno.test("a negator that denies something else leaves the food (Sol 6.1 on #15 at b71a92d, 8dc421e, 2a6349f)", () => {
   const idx = new KbIndex({
     version: "t",
     counts: {},
@@ -326,8 +325,10 @@ Deno.test("a negator that denies something else leaves the name (Sol 6.1 on #15 
     const text of [
       // the negator comes after the name
       "partially hydrogenated poultry fat without added sugar",
-      // another food lies between the negator and the name
+      // another food lies between the negator and the name, known to the KB or not (Sol 6.1 on #15 at 2a6349f)
       "without added sugar with partially hydrogenated poultry fat",
+      "without added sugars with partially hydrogenated poultry fat",
+      "without artificial colours with partially hydrogenated poultry fat",
       // more words than DENIAL_GAP_MAX lie between them
       "without any added flavour and with partially hydrogenated poultry fat",
     ]
