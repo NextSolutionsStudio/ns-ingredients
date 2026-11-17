@@ -146,7 +146,7 @@ variants:
       en: "Pumpkin seed oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej z pestek dyni utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
     tells:
-      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!partially )(?<!fully )(?<!totally )(?<!teilweise )(?<!vollstandig )(?<!\b(?:nie ?podda\w*|nie|ani|bez|brak|not|non|no|without|ohne|nicht|free from|free of)(?: (?:podda\w*|zosta\w*|byl\w*|jest|sa|procesu|procesowi|procesom|czesciow\w*|calkowit\w*|peln\w*|partial\w*|full\w*|total\w*|subjected|to|been|was|were|is|any|dodatku|dodania|zawartosci|uzycia|zastosowania|udzialu|tluszcz\w*|olej\w*|added|containing|contains|fats?|oils?|zawier\w*|zawiera\w*)){0,3} )\b(?:utwardzon|uwodornion|utwardzan[yea]\b|uwodornian[yea]\b|hydrogenated|gehartet)|(?<!\b(?:nie ?podda\w*|nie|ani|bez|brak|not|non|no|without|ohne|nicht|free from|free of)(?: (?:podda\w*|zosta\w*|byl\w*|jest|sa|procesu|procesowi|procesom|czesciow\w*|calkowit\w*|peln\w*|partial\w*|full\w*|total\w*|subjected|to|been|was|were|is|any|dodatku|dodania|zawartosci|uzycia|zastosowania|udzialu|tluszcz\w*|olej\w*|added|containing|contains|fats?|oils?|zawier\w*|zawiera\w*)){0,3} )\b(?:po|podda\w*|podlega\w*)(?: (?:czesciow|calkowit|peln)\w*)? (?:uwodornieni|uwodornian|utwardzeni|utwardzan)'
+      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!partially )(?<!fully )(?<!totally )(?<!teilweise )(?<!vollstandig )(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:utwardzon|uwodornion|utwardzan[yea]\b|uwodornian[yea]\b|hydrogenated|gehartet)|(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:po|podda\w*|podlega\w*)(?: \S+){0,3}? (?:uwodornieni|uwodornian|utwardzeni|utwardzan)'
   - id: partially-hydrogenated
     names:
       en:
@@ -193,9 +193,9 @@ variants:
       en: "Pumpkin seed oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
       pl: "Olej z pestek dyni, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
     tells:
-      - '(?<!\b(?:nie ?podda\w*|nie|ani|bez|brak|not|non|no|without|ohne|nicht|free from|free of)(?: (?:podda\w*|zosta\w*|byl\w*|jest|sa|procesu|procesowi|procesom|czesciow\w*|calkowit\w*|peln\w*|partial\w*|full\w*|total\w*|subjected|to|been|was|were|is|any|dodatku|dodania|zawartosci|uzycia|zastosowania|udzialu|tluszcz\w*|olej\w*|added|containing|contains|fats?|oils?|zawier\w*|zawiera\w*)){0,3} )czesciowo (?:utwardzon|uwodorn)'
-      - '(?<!\b(?:nie ?podda\w*|nie|ani|bez|brak|not|non|no|without|ohne|nicht|free from|free of)(?: (?:podda\w*|zosta\w*|byl\w*|jest|sa|procesu|procesowi|procesom|czesciow\w*|calkowit\w*|peln\w*|partial\w*|full\w*|total\w*|subjected|to|been|was|were|is|any|dodatku|dodania|zawartosci|uzycia|zastosowania|udzialu|tluszcz\w*|olej\w*|added|containing|contains|fats?|oils?|zawier\w*|zawiera\w*)){0,3} )partially hydrogenated'
-      - '(?<!\b(?:nie ?podda\w*|nie|ani|bez|brak|not|non|no|without|ohne|nicht|free from|free of)(?: (?:podda\w*|zosta\w*|byl\w*|jest|sa|procesu|procesowi|procesom|czesciow\w*|calkowit\w*|peln\w*|partial\w*|full\w*|total\w*|subjected|to|been|was|were|is|any|dodatku|dodania|zawartosci|uzycia|zastosowania|udzialu|tluszcz\w*|olej\w*|added|containing|contains|fats?|oils?|zawier\w*|zawiera\w*)){0,3} )teilweise gehartet'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )czesciowo (?:utwardzon|uwodorn)'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )partially hydrogenated'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )teilweise gehartet'
   - id: fully-hydrogenated
     names:
       en:
@@ -256,11 +256,11 @@ variants:
       en: "Pumpkin seed oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
       pl: "Olej z pestek dyni ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
     tells:
-      - '(?<!\b(?:nie ?podda\w*|nie|ani|bez|brak|not|non|no|without|ohne|nicht|free from|free of)(?: (?:podda\w*|zosta\w*|byl\w*|jest|sa|procesu|procesowi|procesom|czesciow\w*|calkowit\w*|peln\w*|partial\w*|full\w*|total\w*|subjected|to|been|was|were|is|any|dodatku|dodania|zawartosci|uzycia|zastosowania|udzialu|tluszcz\w*|olej\w*|added|containing|contains|fats?|oils?|zawier\w*|zawiera\w*)){0,3} )calkowicie (?:utwardzon|uwodorn)'
-      - '(?<!\b(?:nie ?podda\w*|nie|ani|bez|brak|not|non|no|without|ohne|nicht|free from|free of)(?: (?:podda\w*|zosta\w*|byl\w*|jest|sa|procesu|procesowi|procesom|czesciow\w*|calkowit\w*|peln\w*|partial\w*|full\w*|total\w*|subjected|to|been|was|were|is|any|dodatku|dodania|zawartosci|uzycia|zastosowania|udzialu|tluszcz\w*|olej\w*|added|containing|contains|fats?|oils?|zawier\w*|zawiera\w*)){0,3} )w pelni (?:utwardzon|uwodorn)'
-      - '(?<!\b(?:nie ?podda\w*|nie|ani|bez|brak|not|non|no|without|ohne|nicht|free from|free of)(?: (?:podda\w*|zosta\w*|byl\w*|jest|sa|procesu|procesowi|procesom|czesciow\w*|calkowit\w*|peln\w*|partial\w*|full\w*|total\w*|subjected|to|been|was|were|is|any|dodatku|dodania|zawartosci|uzycia|zastosowania|udzialu|tluszcz\w*|olej\w*|added|containing|contains|fats?|oils?|zawier\w*|zawiera\w*)){0,3} )fully hydrogenated'
-      - '(?<!\b(?:nie ?podda\w*|nie|ani|bez|brak|not|non|no|without|ohne|nicht|free from|free of)(?: (?:podda\w*|zosta\w*|byl\w*|jest|sa|procesu|procesowi|procesom|czesciow\w*|calkowit\w*|peln\w*|partial\w*|full\w*|total\w*|subjected|to|been|was|were|is|any|dodatku|dodania|zawartosci|uzycia|zastosowania|udzialu|tluszcz\w*|olej\w*|added|containing|contains|fats?|oils?|zawier\w*|zawiera\w*)){0,3} )totally hydrogenated'
-      - '(?<!\b(?:nie ?podda\w*|nie|ani|bez|brak|not|non|no|without|ohne|nicht|free from|free of)(?: (?:podda\w*|zosta\w*|byl\w*|jest|sa|procesu|procesowi|procesom|czesciow\w*|calkowit\w*|peln\w*|partial\w*|full\w*|total\w*|subjected|to|been|was|were|is|any|dodatku|dodania|zawartosci|uzycia|zastosowania|udzialu|tluszcz\w*|olej\w*|added|containing|contains|fats?|oils?|zawier\w*|zawiera\w*)){0,3} )vollstandig gehartet'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )calkowicie (?:utwardzon|uwodorn)'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )w pelni (?:utwardzon|uwodorn)'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )fully hydrogenated'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )totally hydrogenated'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )vollstandig gehartet'
 assertions:
   - code: origin.vegetable_oil_derived
     certainty: 'yes'
