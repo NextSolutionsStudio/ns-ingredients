@@ -770,6 +770,16 @@ Deno.test("a stated full refining keeps the soy exemption on a hydrogenated oil,
       assertEquals(soyFlag(label, idx), undefined, label);
     }
   }
+  // "not" before an exclusion verb with an unknown word between them is still the exclusion: the exemption stands
+  // (Sol 6.1 on #10 at 69045ab)
+  for (
+    const label of [
+      "Ingredients: not actually containing fully refined hydrogenated soybean oil",
+      "Ingredients: rapeseed oil (without actually using fully refined hydrogenated soybean oil)",
+    ]
+  ) {
+    assertEquals(soyFlag(label, idx), undefined, label);
+  }
   // an adverb phrase may hold an article: without the verb it negates the full refining (soy maybe), with it it is
   // the exclusion (no soy) (Sol 6.1 on #18 at 165ecbd)
   for (const adv of ["not in any way", "not at any point", "not at all"]) {
@@ -848,6 +858,29 @@ Deno.test("the words of an exclusion keep the negation on the name, whatever the
     assertEquals(r.items[0].children?.[0]?.match?.ingredient_id === "poultry-fat", false, label);
     assertEquals(r.flags.some((x) => x.code === "origin.animal"), false, label);
     assertEquals(r.diets.vegan.status === "no", false, label);
+  }
+  // an exclusion verb that takes the name as its object carries the negation over any word before it, inside the
+  // window (Sol 6.1 on #10 at 69045ab, P2 2)
+  for (
+    const f of [
+      "actually using",
+      "really adding",
+      "additionally the use of",
+      "actually and truly using any",
+      "preservatives or using",
+    ]
+  ) {
+    const label = `Ingredients: olive oil (without ${f} partially hydrogenated poultry fat)`;
+    const r = analyze(idx, label, { lang: "en" });
+    assertEquals(r.items[0].children?.[0]?.match?.ingredient_id === "poultry-fat", false, label);
+    assertEquals(r.flags.some((x) => x.code === "origin.animal"), false, label);
+    assertEquals(r.diets.vegan.status === "no", false, label);
+  }
+  // a participle after its noun closes an exclusion of that noun: the food after it is the food
+  for (const text of ["without sugar added partially hydrogenated poultry fat"]) {
+    const r = analyze(idx, `Ingredients: ${text}`, { lang: "en" });
+    assertEquals(r.items[0].match?.ingredient_id, "poultry-fat", text);
+    assertEquals(r.flags.some((x) => x.code === "origin.animal"), true, text);
   }
   // a negator more than DENIAL_GAP_MAX (5) words before the name does not reach it (pc-opus: keep it in the window)
   const far = analyze(

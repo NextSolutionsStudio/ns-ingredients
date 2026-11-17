@@ -197,6 +197,33 @@ const DENIAL_CONNECTORS = new Set([
   "zadnej",
   "von",
 ]);
+/**
+ * The exclusion verbs (and their nouns) that take what follows as their object: "using", "adding", "the use of",
+ * "bez stosowania", "nie zawiera". Right before a name, through articles and adverbs, one carries the negation over any
+ * words between it and the negator (`variantReading`). Not the participles that follow their noun ("sugar added",
+ * "cukru dodanego"), which close an exclusion of something else.
+ */
+const OBJECT_VERBS = new Set([
+  "using",
+  "use",
+  "adding",
+  "addition",
+  "containing",
+  "contain",
+  "contains",
+  "stosowania",
+  "uzycia",
+  "uzywania",
+  "dodatku",
+  "dodawania",
+  "dodania",
+  "zawiera",
+  "zawieraja",
+  "zawierajacy",
+  "zawierajace",
+  "verwendung",
+  "zusatz",
+]);
 /** A prior variant raises its flags only when it is more likely than not (`analyze`). */
 export const PRIOR_FLAG_MIN = 0.5;
 
@@ -614,7 +641,8 @@ export class KbIndex {
    * oil"); "drop" (the plain entry, as #14 reads it) when it is not.
    * Scoped means: between the negator (the nearest start from which the tells fail) and the name lie at most
    * DENIAL_GAP_MAX words, each a word of an exclusion (DENIAL_FILLERS, DENIAL_ADVERBS: "without ever using", "without
-   * in any way adding"). A negator after the name ("… poultry fat without added sugar") keeps the variant, and one
+   * in any way adding"), or any words closed by an exclusion verb that takes the name as its object (OBJECT_VERBS:
+   * "without actually using"). A negator after the name ("… poultry fat without added sugar") keeps the variant, and one
    * that denies something else ("without added sugars with partially hydrogenated poultry fat", "bez konserwantów
    * częściowo utwardzony tłuszcz drobiowy", "not completely refined hydrogenated soybean oil") leaves the plain food.
    * "negate" is a denial whose negator negates the word after it (ADJECTIVE_NEGATORS) right before the name: it
@@ -647,12 +675,20 @@ export class KbIndex {
     // and an adverb phrase may hold an article ("not in any way", "not at any point": Sol 6.1 at 165ecbd)
     let v = k + 1;
     while (v < start && (DENIAL_ADVERBS.has(tokens[v]) || DENIAL_CONNECTORS.has(tokens[v]))) v++;
-    const adjectival = ADJECTIVE_NEGATORS.test(tokens[k] ?? "") && !DENIAL_FILLERS.has(tokens[v] ?? "");
+    // An exclusion verb that takes the name as its object, right before it through articles and adverbs, carries the
+    // negation over any word before it ("without actually using partially hydrogenated poultry fat": Sol 6.1 on #10
+    // at 69045ab, P2 2). Without one, a word that is not part of an exclusion ends the negation ("bez konserwantów
+    // częściowo utwardzony tłuszcz drobiowy" keeps the fat; "without sugar added …" is an exclusion of sugar).
+    let o = start - 1;
+    while (o > k && (DENIAL_CONNECTORS.has(tokens[o]) || DENIAL_ADVERBS.has(tokens[o]))) o--;
+    const anchored = o > k && OBJECT_VERBS.has(tokens[o]);
+    const adjectival = ADJECTIVE_NEGATORS.test(tokens[k] ?? "") && !anchored &&
+      !DENIAL_FILLERS.has(tokens[v] ?? "");
     // Not denied: the plain entry (#14), except a variant that states an exemption, which stands as named ("bez cukru
     // całkowicie utwardzony w pełni rafinowany olej sojowy": hydrogenated, exempt; Sol 6.1 on #18 at 0547db1)
     const notDenied = this.exempting.has(`${e.ingredientId}/${e.variantId}`) && !adjectival ? "keep" : "drop";
     if (gap.length > DENIAL_GAP_MAX) return notDenied;
-    if (!gap.every((w) => DENIAL_FILLERS.has(w) || DENIAL_ADVERBS.has(w))) return notDenied;
+    if (!anchored && !gap.every((w) => DENIAL_FILLERS.has(w) || DENIAL_ADVERBS.has(w))) return notDenied;
     return adjectival ? "negate" : "deny";
   }
 
