@@ -1,0 +1,33 @@
+id: hydrogenation-claim-sesame
+type: fat
+names:
+  en: [hydrogenation claim naming sesame]
+  pl: [deklaracja o utwardzeniu z nazwą sezam]
+exact_names:
+  en: [no hydrogenated refined sesame oil, no partially hydrogenated refined sesame oil, no fully hydrogenated refined sesame oil, no totally hydrogenated refined sesame oil, without hydrogenated refined sesame oil, without partially hydrogenated refined sesame oil, without fully hydrogenated refined sesame oil, without totally hydrogenated refined sesame oil, free from hydrogenated refined sesame oil, free from partially hydrogenated refined sesame oil, free from fully hydrogenated refined sesame oil, free from totally hydrogenated refined sesame oil, free of hydrogenated refined sesame oil, free of partially hydrogenated refined sesame oil, free of fully hydrogenated refined sesame oil, free of totally hydrogenated refined sesame oil, no hydrogenated sesame oil, no partially hydrogenated sesame oil, no fully hydrogenated sesame oil, no totally hydrogenated sesame oil, without hydrogenated sesame oil, without partially hydrogenated sesame oil, without fully hydrogenated sesame oil, without totally hydrogenated sesame oil, free from hydrogenated sesame oil, free from partially hydrogenated sesame oil, free from fully hydrogenated sesame oil, free from totally hydrogenated sesame oil, free of hydrogenated sesame oil, free of partially hydrogenated sesame oil, free of fully hydrogenated sesame oil, free of totally hydrogenated sesame oil, no hydrogenated sesame seed oil, no partially hydrogenated sesame seed oil, no fully hydrogenated sesame seed oil, no totally hydrogenated sesame seed oil, without hydrogenated sesame seed oil, without partially hydrogenated sesame seed oil, without fully hydrogenated sesame seed oil, without totally hydrogenated sesame seed oil, free from hydrogenated sesame seed oil, free from partially hydrogenated sesame seed oil, free from fully hydrogenated sesame seed oil, free from totally hydrogenated sesame seed oil, free of hydrogenated sesame seed oil, free of partially hydrogenated sesame seed oil, free of fully hydrogenated sesame seed oil, free of totally hydrogenated sesame seed oil, no hydrogenated toasted sesame oil, no partially hydrogenated toasted sesame oil, no fully hydrogenated toasted sesame oil, no totally hydrogenated toasted sesame oil, without hydrogenated toasted sesame oil, without partially hydrogenated toasted sesame oil, without fully hydrogenated toasted sesame oil, without totally hydrogenated toasted sesame oil, free from hydrogenated toasted sesame oil, free from partially hydrogenated toasted sesame oil, free from fully hydrogenated toasted sesame oil, free from totally hydrogenated toasted sesame oil, free of hydrogenated toasted sesame oil, free of partially hydrogenated toasted sesame oil, free of fully hydrogenated toasted sesame oil, free of totally hydrogenated toasted sesame oil]
+summary:
+  en: >-
+    A label claim that excludes hydrogenation on a fat or oil from sesame ("without hydrogenated
+    soybean oil", "free from fully hydrogenated almond oil"). It excludes a process, not the food: a label
+    that names the oil this way often contains the plain oil, so the allergen stays possible. The claim
+    asserts nothing else: no hydrogenation, no origin, no diet.
+  pl: >-
+    Deklaracja na etykiecie, która wyklucza utwardzenie tłuszczu lub oleju z: sezam ("bez utwardzonego
+    oleju sojowego"). Wyklucza proces, nie składnik: etykieta, która tak wymienia olej, często zawiera
+    zwykły olej, więc alergen pozostaje możliwy. Deklaracja nie stwierdza nic więcej: ani utwardzenia,
+    ani pochodzenia, ani wpływu na dietę.
+assertions:
+  - code: allergen.sesame
+    certainty: maybe
+    kind: estimate
+    grade: C
+    note:
+      en: The claim names a sesame oil or fat; the plain one is often present. EU Annex II item 11.
+      pl: Deklaracja wymienia olej lub tłuszcz (sezam); zwykły często jest obecny. Aneks II UE, punkt 11.
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 11
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "b2 round 29z: the presence claims of sesame-oil. Policy B (pc-opus): an exclusion of a process on an allergen food keeps the allergen at maybe and asserts nothing else."

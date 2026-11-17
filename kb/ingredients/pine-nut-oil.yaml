@@ -198,8 +198,6 @@ names:
   de:
     - Pinienkernöl
     - Zedernussöl
-exact_names:
-  en: [no hydrogenated cedar nut oil, no partially hydrogenated cedar nut oil, no fully hydrogenated cedar nut oil, no totally hydrogenated cedar nut oil, without hydrogenated cedar nut oil, without partially hydrogenated cedar nut oil, without fully hydrogenated cedar nut oil, without totally hydrogenated cedar nut oil, free from hydrogenated cedar nut oil, free from partially hydrogenated cedar nut oil, free from fully hydrogenated cedar nut oil, free from totally hydrogenated cedar nut oil, free of hydrogenated cedar nut oil, free of partially hydrogenated cedar nut oil, free of fully hydrogenated cedar nut oil, free of totally hydrogenated cedar nut oil, no hydrogenated pine kernel oil, no partially hydrogenated pine kernel oil, no fully hydrogenated pine kernel oil, no totally hydrogenated pine kernel oil, without hydrogenated pine kernel oil, without partially hydrogenated pine kernel oil, without fully hydrogenated pine kernel oil, without totally hydrogenated pine kernel oil, free from hydrogenated pine kernel oil, free from partially hydrogenated pine kernel oil, free from fully hydrogenated pine kernel oil, free from totally hydrogenated pine kernel oil, free of hydrogenated pine kernel oil, free of partially hydrogenated pine kernel oil, free of fully hydrogenated pine kernel oil, free of totally hydrogenated pine kernel oil, no hydrogenated pine nut oil, no partially hydrogenated pine nut oil, no fully hydrogenated pine nut oil, no totally hydrogenated pine nut oil, without hydrogenated pine nut oil, without partially hydrogenated pine nut oil, without fully hydrogenated pine nut oil, without totally hydrogenated pine nut oil, free from hydrogenated pine nut oil, free from partially hydrogenated pine nut oil, free from fully hydrogenated pine nut oil, free from totally hydrogenated pine nut oil, free of hydrogenated pine nut oil, free of partially hydrogenated pine nut oil, free of fully hydrogenated pine nut oil, free of totally hydrogenated pine nut oil, no hydrogenated pine nuts oil, no partially hydrogenated pine nuts oil, no fully hydrogenated pine nuts oil, no totally hydrogenated pine nuts oil, without hydrogenated pine nuts oil, without partially hydrogenated pine nuts oil, without fully hydrogenated pine nuts oil, without totally hydrogenated pine nuts oil, free from hydrogenated pine nuts oil, free from partially hydrogenated pine nuts oil, free from fully hydrogenated pine nuts oil, free from totally hydrogenated pine nuts oil, free of hydrogenated pine nuts oil, free of partially hydrogenated pine nuts oil, free of fully hydrogenated pine nuts oil, free of totally hydrogenated pine nuts oil, no hydrogenated pine seed oil, no partially hydrogenated pine seed oil, no fully hydrogenated pine seed oil, no totally hydrogenated pine seed oil, without hydrogenated pine seed oil, without partially hydrogenated pine seed oil, without fully hydrogenated pine seed oil, without totally hydrogenated pine seed oil, free from hydrogenated pine seed oil, free from partially hydrogenated pine seed oil, free from fully hydrogenated pine seed oil, free from totally hydrogenated pine seed oil, free of hydrogenated pine seed oil, free of partially hydrogenated pine seed oil, free of fully hydrogenated pine seed oil, free of totally hydrogenated pine seed oil]
 summary:
   en: >-
     Vegetable oil pressed from pine nuts, the edible seeds of pines such as Pinus pinea and Pinus sibirica. Pine nuts
@@ -275,7 +273,7 @@ variants:
       en: "Pine nut oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Olej z orzeszków piniowych utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
     tells:
-      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!partially )(?<!fully )(?<!totally )(?<!teilweise )(?<!vollstandig )(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:utwardzon|uwodornion|utwardzan[yea]\b|uwodornian[yea]\b|hydrogenated|gehartet)|(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:po|podda\w*|podlega\w*)(?: (?!(?:nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b)\S+){0,3}? (?:uwodornieni|uwodornian|utwardzeni|utwardzan)'
+      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!partially )(?<!fully )(?<!totally )(?<!teilweise )(?<!vollstandig )(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:utwardzon|uwodornion|utwardzan[yea]\b|uwodornian[yea]\b|hydrogenated|gehartet)|(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:po|podda\w*|podlega\w*)(?: (?!(?:nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b)\S+){0,3}? (?:uwodornieni|uwodornian|utwardzeni|utwardzan)'
   - id: partially-hydrogenated
     names:
       en:
@@ -342,9 +340,9 @@ variants:
       en: "Pine nut oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
       pl: "Olej z orzeszków piniowych, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
     tells:
-      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )czesciowo (?:utwardzon|uwodorn)'
-      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )partially hydrogenated'
-      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )teilweise gehartet'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )czesciowo (?:utwardzon|uwodorn)'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )partially hydrogenated'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )teilweise gehartet'
   - id: fully-hydrogenated
     names:
       en:
@@ -437,11 +435,11 @@ variants:
       en: "Pine nut oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
       pl: "Olej z orzeszków piniowych ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
     tells:
-      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )calkowicie (?:utwardzon|uwodorn)'
-      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )w pelni (?:utwardzon|uwodorn)'
-      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )fully hydrogenated'
-      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )totally hydrogenated'
-      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )vollstandig gehartet'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )calkowicie (?:utwardzon|uwodorn)'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )w pelni (?:utwardzon|uwodorn)'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )fully hydrogenated'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )totally hydrogenated'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )vollstandig gehartet'
 assertions:
   - code: origin.vegetable_oil_derived
     certainty: 'yes'

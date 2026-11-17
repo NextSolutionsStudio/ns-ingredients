@@ -4,8 +4,6 @@ names:
   en: [milk fat, butterfat, anhydrous milk fat, non-hydrogenated milk fat, unhydrogenated milk fat, non-hydrogenated anhydrous milk fat, unhydrogenated anhydrous milk fat, not hydrogenated anhydrous milk fat, not partially hydrogenated anhydrous milk fat, not fully hydrogenated anhydrous milk fat, non partially hydrogenated anhydrous milk fat, not hydrogenated milk fat, not partially hydrogenated milk fat, not fully hydrogenated milk fat, non partially hydrogenated milk fat]
   pl: [tłuszcz mleczny, bezwodny tłuszcz mleczny, nie utwardzony tłuszcz mleczny, tłuszcz mleczny nie utwardzony, nie uwodorniony tłuszcz mleczny, tłuszcz mleczny nie uwodorniony, nieutwardzony tłuszcz mleczny, tłuszcz mleczny nieutwardzony, nieuwodorniony tłuszcz mleczny, tłuszcz mleczny nieuwodorniony, tłuszcz z mleka, tłuszcz mleka, nie utwardzony tłuszcz z mleka, tłuszcz z mleka nie utwardzony, nie uwodorniony tłuszcz z mleka, tłuszcz z mleka nie uwodorniony, nieutwardzony tłuszcz z mleka, tłuszcz z mleka nieutwardzony, nieuwodorniony tłuszcz z mleka, tłuszcz z mleka nieuwodorniony, nie utwardzony tłuszcz mleka, tłuszcz mleka nie utwardzony, nie uwodorniony tłuszcz mleka, tłuszcz mleka nie uwodorniony, nieutwardzony tłuszcz mleka, tłuszcz mleka nieutwardzony, nieuwodorniony tłuszcz mleka, tłuszcz mleka nieuwodorniony, tłuszcz nie utwardzony mleczny, tłuszcz nie uwodorniony mleczny, tłuszcz nieutwardzony mleczny, tłuszcz nieuwodorniony mleczny, tłuszcz nie utwardzony z mleka, tłuszcz nie uwodorniony z mleka, tłuszcz nieutwardzony z mleka, tłuszcz nieuwodorniony z mleka, tłuszcz nie utwardzony mleka, tłuszcz nie uwodorniony mleka, tłuszcz nieutwardzony mleka, tłuszcz nieuwodorniony mleka]
   de: [Milchfett, Butterreinfett]
-exact_names:
-  en: [no hydrogenated anhydrous milk fat, no partially hydrogenated anhydrous milk fat, no fully hydrogenated anhydrous milk fat, no totally hydrogenated anhydrous milk fat, without hydrogenated anhydrous milk fat, without partially hydrogenated anhydrous milk fat, without fully hydrogenated anhydrous milk fat, without totally hydrogenated anhydrous milk fat, free from hydrogenated anhydrous milk fat, free from partially hydrogenated anhydrous milk fat, free from fully hydrogenated anhydrous milk fat, free from totally hydrogenated anhydrous milk fat, free of hydrogenated anhydrous milk fat, free of partially hydrogenated anhydrous milk fat, free of fully hydrogenated anhydrous milk fat, free of totally hydrogenated anhydrous milk fat, no hydrogenated milk fat, no partially hydrogenated milk fat, no fully hydrogenated milk fat, no totally hydrogenated milk fat, without hydrogenated milk fat, without partially hydrogenated milk fat, without fully hydrogenated milk fat, without totally hydrogenated milk fat, free from hydrogenated milk fat, free from partially hydrogenated milk fat, free from fully hydrogenated milk fat, free from totally hydrogenated milk fat, free of hydrogenated milk fat, free of partially hydrogenated milk fat, free of fully hydrogenated milk fat, free of totally hydrogenated milk fat]
 summary:
   en: "The fat fraction of milk, isolated to near-pure fat (anhydrous milk fat/butterfat removes essentially all water and milk solids); one of the EU's fourteen regulated allergens (milk) regardless of how little non-fat milk solid remains."
   pl: "Frakcja tłuszczowa mleka, wyodrębniona do postaci praktycznie czystego tłuszczu (bezwodny tłuszcz mleczny usuwa niemal całą wodę i suchą masę mleka); jeden z czternastu regulowanych alergenów UE (mleko), niezależnie od tego, jak mało beztłuszczowej suchej masy mleka pozostaje."
@@ -39,7 +37,7 @@ variants:
       en: "Milk fat hardened by hydrogenation; the label does not specify partial or full hydrogenation."
       pl: "Tłuszcz mleczny utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
     tells:
-      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!partially )(?<!fully )(?<!totally )(?<!teilweise )(?<!vollstandig )(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:utwardzon|uwodornion|utwardzan[yea]\b|uwodornian[yea]\b|hydrogenated|gehartet)|(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:po|podda\w*|podlega\w*)(?: (?!(?:nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b)\S+){0,3}? (?:uwodornieni|uwodornian|utwardzeni|utwardzan)'
+      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!partially )(?<!fully )(?<!totally )(?<!teilweise )(?<!vollstandig )(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:utwardzon|uwodornion|utwardzan[yea]\b|uwodornian[yea]\b|hydrogenated|gehartet)|(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:po|podda\w*|podlega\w*)(?: (?!(?:nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b)\S+){0,3}? (?:uwodornieni|uwodornian|utwardzeni|utwardzan)'
   - id: partially-hydrogenated
     names:
       en:
@@ -68,9 +66,9 @@ variants:
       en: "Milk fat in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
       pl: "Tłuszcz mleczny, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
     tells:
-      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )czesciowo (?:utwardzon|uwodorn)'
-      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )partially hydrogenated'
-      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )teilweise gehartet'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )czesciowo (?:utwardzon|uwodorn)'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )partially hydrogenated'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )teilweise gehartet'
   - id: fully-hydrogenated
     names:
       en:
@@ -119,11 +117,11 @@ variants:
       en: "Milk fat with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
       pl: "Tłuszcz mleczny ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
     tells:
-      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )calkowicie (?:utwardzon|uwodorn)'
-      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )w pelni (?:utwardzon|uwodorn)'
-      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )fully hydrogenated'
-      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )totally hydrogenated'
-      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )vollstandig gehartet'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )calkowicie (?:utwardzon|uwodorn)'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )w pelni (?:utwardzon|uwodorn)'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )fully hydrogenated'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )totally hydrogenated'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )vollstandig gehartet'
 assertions:
   - code: allergen.milk
     certainty: yes

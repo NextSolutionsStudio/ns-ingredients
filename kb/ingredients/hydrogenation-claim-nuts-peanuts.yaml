@@ -1,0 +1,43 @@
+id: hydrogenation-claim-nuts-peanuts
+type: fat
+names:
+  en: [hydrogenation claim naming nuts and peanuts]
+  pl: [deklaracja o utwardzeniu z nazwą orzechy i orzeszki ziemne]
+exact_names:
+  en: [no hydrogenated nut oil, no partially hydrogenated nut oil, no fully hydrogenated nut oil, no totally hydrogenated nut oil, without hydrogenated nut oil, without partially hydrogenated nut oil, without fully hydrogenated nut oil, without totally hydrogenated nut oil, free from hydrogenated nut oil, free from partially hydrogenated nut oil, free from fully hydrogenated nut oil, free from totally hydrogenated nut oil, free of hydrogenated nut oil, free of partially hydrogenated nut oil, free of fully hydrogenated nut oil, free of totally hydrogenated nut oil]
+summary:
+  en: >-
+    A label claim that excludes hydrogenation on a fat or oil from nuts and peanuts ("without hydrogenated
+    soybean oil", "free from fully hydrogenated almond oil"). It excludes a process, not the food: a label
+    that names the oil this way often contains the plain oil, so the allergen stays possible. The claim
+    asserts nothing else: no hydrogenation, no origin, no diet.
+  pl: >-
+    Deklaracja na etykiecie, która wyklucza utwardzenie tłuszczu lub oleju z: orzechy i orzeszki ziemne ("bez utwardzonego
+    oleju sojowego"). Wyklucza proces, nie składnik: etykieta, która tak wymienia olej, często zawiera
+    zwykły olej, więc alergen pozostaje możliwy. Deklaracja nie stwierdza nic więcej: ani utwardzenia,
+    ani pochodzenia, ani wpływu na dietę.
+assertions:
+  - code: allergen.nuts
+    certainty: maybe
+    kind: estimate
+    grade: C
+    note:
+      en: The claim names a nuts oil or fat; the plain one is often present. EU Annex II item 8.
+      pl: Deklaracja wymienia olej lub tłuszcz (orzechy); zwykły często jest obecny. Aneks II UE, punkt 8.
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 8
+  - code: allergen.peanuts
+    certainty: maybe
+    kind: estimate
+    grade: C
+    note:
+      en: The claim names a peanuts oil or fat; the plain one is often present. EU Annex II item 5.
+      pl: Deklaracja wymienia olej lub tłuszcz (orzeszki ziemne); zwykły często jest obecny. Aneks II UE, punkt 5.
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 5
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "b2 round 29z: the presence claims of nut-oil. Policy B (pc-opus): an exclusion of a process on an allergen food keeps the allergen at maybe and asserts nothing else."

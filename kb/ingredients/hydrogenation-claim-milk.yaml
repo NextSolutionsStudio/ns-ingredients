@@ -1,0 +1,33 @@
+id: hydrogenation-claim-milk
+type: fat
+names:
+  en: [hydrogenation claim naming milk]
+  pl: [deklaracja o utwardzeniu z nazwą mleko]
+exact_names:
+  en: [no hydrogenated anhydrous milk fat, no partially hydrogenated anhydrous milk fat, no fully hydrogenated anhydrous milk fat, no totally hydrogenated anhydrous milk fat, without hydrogenated anhydrous milk fat, without partially hydrogenated anhydrous milk fat, without fully hydrogenated anhydrous milk fat, without totally hydrogenated anhydrous milk fat, free from hydrogenated anhydrous milk fat, free from partially hydrogenated anhydrous milk fat, free from fully hydrogenated anhydrous milk fat, free from totally hydrogenated anhydrous milk fat, free of hydrogenated anhydrous milk fat, free of partially hydrogenated anhydrous milk fat, free of fully hydrogenated anhydrous milk fat, free of totally hydrogenated anhydrous milk fat, no hydrogenated milk fat, no partially hydrogenated milk fat, no fully hydrogenated milk fat, no totally hydrogenated milk fat, without hydrogenated milk fat, without partially hydrogenated milk fat, without fully hydrogenated milk fat, without totally hydrogenated milk fat, free from hydrogenated milk fat, free from partially hydrogenated milk fat, free from fully hydrogenated milk fat, free from totally hydrogenated milk fat, free of hydrogenated milk fat, free of partially hydrogenated milk fat, free of fully hydrogenated milk fat, free of totally hydrogenated milk fat]
+summary:
+  en: >-
+    A label claim that excludes hydrogenation on a fat or oil from milk ("without hydrogenated
+    soybean oil", "free from fully hydrogenated almond oil"). It excludes a process, not the food: a label
+    that names the oil this way often contains the plain oil, so the allergen stays possible. The claim
+    asserts nothing else: no hydrogenation, no origin, no diet.
+  pl: >-
+    Deklaracja na etykiecie, która wyklucza utwardzenie tłuszczu lub oleju z: mleko ("bez utwardzonego
+    oleju sojowego"). Wyklucza proces, nie składnik: etykieta, która tak wymienia olej, często zawiera
+    zwykły olej, więc alergen pozostaje możliwy. Deklaracja nie stwierdza nic więcej: ani utwardzenia,
+    ani pochodzenia, ani wpływu na dietę.
+assertions:
+  - code: allergen.milk
+    certainty: maybe
+    kind: estimate
+    grade: C
+    note:
+      en: The claim names a milk oil or fat; the plain one is often present. EU Annex II item 7.
+      pl: Deklaracja wymienia olej lub tłuszcz (mleko); zwykły często jest obecny. Aneks II UE, punkt 7.
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 7
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "b2 round 29z: the presence claims of milk-fat. Policy B (pc-opus): an exclusion of a process on an allergen food keeps the allergen at maybe and asserts nothing else."

@@ -1,0 +1,33 @@
+id: hydrogenation-claim-soybeans
+type: fat
+names:
+  en: [hydrogenation claim naming soybeans]
+  pl: [deklaracja o utwardzeniu z nazwą soja]
+exact_names:
+  en: [no hydrogenated fully refined soya oil, no partially hydrogenated fully refined soya oil, no fully hydrogenated fully refined soya oil, no totally hydrogenated fully refined soya oil, without hydrogenated fully refined soya oil, without partially hydrogenated fully refined soya oil, without fully hydrogenated fully refined soya oil, without totally hydrogenated fully refined soya oil, free from hydrogenated fully refined soya oil, free from partially hydrogenated fully refined soya oil, free from fully hydrogenated fully refined soya oil, free from totally hydrogenated fully refined soya oil, free of hydrogenated fully refined soya oil, free of partially hydrogenated fully refined soya oil, free of fully hydrogenated fully refined soya oil, free of totally hydrogenated fully refined soya oil, no hydrogenated fully refined soybean oil, no partially hydrogenated fully refined soybean oil, no fully hydrogenated fully refined soybean oil, no totally hydrogenated fully refined soybean oil, without hydrogenated fully refined soybean oil, without partially hydrogenated fully refined soybean oil, without fully hydrogenated fully refined soybean oil, without totally hydrogenated fully refined soybean oil, free from hydrogenated fully refined soybean oil, free from partially hydrogenated fully refined soybean oil, free from fully hydrogenated fully refined soybean oil, free from totally hydrogenated fully refined soybean oil, free of hydrogenated fully refined soybean oil, free of partially hydrogenated fully refined soybean oil, free of fully hydrogenated fully refined soybean oil, free of totally hydrogenated fully refined soybean oil, no hydrogenated refined soya oil, no partially hydrogenated refined soya oil, no fully hydrogenated refined soya oil, no totally hydrogenated refined soya oil, without hydrogenated refined soya oil, without partially hydrogenated refined soya oil, without fully hydrogenated refined soya oil, without totally hydrogenated refined soya oil, free from hydrogenated refined soya oil, free from partially hydrogenated refined soya oil, free from fully hydrogenated refined soya oil, free from totally hydrogenated refined soya oil, free of hydrogenated refined soya oil, free of partially hydrogenated refined soya oil, free of fully hydrogenated refined soya oil, free of totally hydrogenated refined soya oil, no hydrogenated refined soybean oil, no partially hydrogenated refined soybean oil, no fully hydrogenated refined soybean oil, no totally hydrogenated refined soybean oil, without hydrogenated refined soybean oil, without partially hydrogenated refined soybean oil, without fully hydrogenated refined soybean oil, without totally hydrogenated refined soybean oil, free from hydrogenated refined soybean oil, free from partially hydrogenated refined soybean oil, free from fully hydrogenated refined soybean oil, free from totally hydrogenated refined soybean oil, free of hydrogenated refined soybean oil, free of partially hydrogenated refined soybean oil, free of fully hydrogenated refined soybean oil, free of totally hydrogenated refined soybean oil, no hydrogenated soya oil, no partially hydrogenated soya oil, no fully hydrogenated soya oil, no totally hydrogenated soya oil, without hydrogenated soya oil, without partially hydrogenated soya oil, without fully hydrogenated soya oil, without totally hydrogenated soya oil, free from hydrogenated soya oil, free from partially hydrogenated soya oil, free from fully hydrogenated soya oil, free from totally hydrogenated soya oil, free of hydrogenated soya oil, free of partially hydrogenated soya oil, free of fully hydrogenated soya oil, free of totally hydrogenated soya oil, no hydrogenated soybean oil, no partially hydrogenated soybean oil, no fully hydrogenated soybean oil, no totally hydrogenated soybean oil, without hydrogenated soybean oil, without partially hydrogenated soybean oil, without fully hydrogenated soybean oil, without totally hydrogenated soybean oil, free from hydrogenated soybean oil, free from partially hydrogenated soybean oil, free from fully hydrogenated soybean oil, free from totally hydrogenated soybean oil, free of hydrogenated soybean oil, free of partially hydrogenated soybean oil, free of fully hydrogenated soybean oil, free of totally hydrogenated soybean oil]
+summary:
+  en: >-
+    A label claim that excludes hydrogenation on a fat or oil from soybeans ("without hydrogenated
+    soybean oil", "free from fully hydrogenated almond oil"). It excludes a process, not the food: a label
+    that names the oil this way often contains the plain oil, so the allergen stays possible. The claim
+    asserts nothing else: no hydrogenation, no origin, no diet.
+  pl: >-
+    Deklaracja na etykiecie, która wyklucza utwardzenie tłuszczu lub oleju z: soja ("bez utwardzonego
+    oleju sojowego"). Wyklucza proces, nie składnik: etykieta, która tak wymienia olej, często zawiera
+    zwykły olej, więc alergen pozostaje możliwy. Deklaracja nie stwierdza nic więcej: ani utwardzenia,
+    ani pochodzenia, ani wpływu na dietę.
+assertions:
+  - code: allergen.soybeans
+    certainty: maybe
+    kind: estimate
+    grade: C
+    note:
+      en: The claim names a soybeans oil or fat; the plain one is often present. EU Annex II item 6.
+      pl: Deklaracja wymienia olej lub tłuszcz (soja); zwykły często jest obecny. Aneks II UE, punkt 6.
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 6
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "b2 round 29z: the presence claims of soybean-oil. Policy B (pc-opus): an exclusion of a process on an allergen food keeps the allergen at maybe and asserts nothing else."
