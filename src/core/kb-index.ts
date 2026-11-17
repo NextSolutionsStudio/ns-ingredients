@@ -210,6 +210,18 @@ export class KbIndex {
     return out;
   }
 
+  /** Whether a plain name lies wholly in the words before word `k`, starting outside every claim: a food named first. */
+  private nameBefore(tokens: string[], k: number, claims: [number, number][]): boolean {
+    for (let start = 0; start < k; start++) {
+      if (claims.some(([s, e]) => start >= s && start <= e)) continue;
+      for (let len = 1; start + len <= k && len <= SUBPHRASE_MAX_TOKENS; len++) {
+        const span = tokens.slice(start, start + len).join(" ");
+        if (this.byNorm.has(span) && !this.exactOnly.has(span)) return true;
+      }
+    }
+    return false;
+  }
+
   get(id: string): IngredientT | undefined {
     const direct = this.ingredients.get(id.toLowerCase());
     if (direct) return direct;
@@ -282,15 +294,19 @@ export class KbIndex {
     // An exact-only name is a claim ("bez utwardzonych tluszczow", "free from hydrogenated oil"): it matches only a
     // whole item, and no sub-phrase that starts inside it is read, so neither it, nor a word of it ("bez" as elder),
     // nor a name it denies outranks a food before or after it ("olej sezamowy bez utwardzonych tluszczow"). Only a
-    // name that opens the item and runs past the claim is read: a food's own negated name ("nie uwodorniony olej
-    // sojowy rafinowany").
+    // name that starts at the claim and runs past it is read, a food's own negated name ("bio non hydrogenated
+    // coconut fat"), and only when no plain name lies before it outside the claims ("sesame oil not partially
+    // hydrogenated rapeseed oil" stays sesame oil).
     const claims = this.claimSpans(tokens);
     // Longest known sub-phrase: "koncentrat bialka serwatkowego instant" → "koncentrat bialka serwatkowego".
     for (let len = Math.min(tokens.length - 1, SUBPHRASE_MAX_TOKENS); len >= 1; len--) {
       for (let start = 0; start + len <= tokens.length; start++) {
-        if (claims.some(([s, e]) => start >= s && start <= e && !(start === 0 && start + len - 1 > e))) {
-          continue;
-        }
+        if (
+          claims.some(([s, e]) =>
+            start >= s && start <= e &&
+            !(start === s && start + len - 1 > e && !this.nameBefore(tokens, start, claims))
+          )
+        ) continue;
         const span = tokens.slice(start, start + len).join(" ");
         if (span.length < 3 || this.exactOnly.has(span)) continue;
         const e = this.byNorm.get(span);

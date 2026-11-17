@@ -261,6 +261,51 @@ Deno.test("a food's own negated name is the food, wherever an exclusion stands (
   }
 });
 
+Deno.test("a food's own negated name that starts at a claim is read when no food comes before it (Sol 6.1 on b5e9b93)", () => {
+  const nh = "!non hydrogenated";
+  // after a modifier: the own name, not a word of it
+  assertEquals(
+    hit(["coconut", "non hydrogenated coconut fat|coconut oil", nh], "bio non-hydrogenated coconut fat"),
+    "non hydrogenated coconut fat sub_phrase",
+  );
+  const sesame = "non hydrogenated sesame oil|hydrogenated sesame oil|sesame oil";
+  assertEquals(
+    hit([sesame, nh], "bio non hydrogenated sesame oil"),
+    "non hydrogenated sesame oil sub_phrase",
+  );
+  // after an exclusion, with the claim declared: a shorter exclusion name does not tie the oil
+  for (
+    const [ex, text] of [
+      ["gluten", "gluten-free non-hydrogenated sesame oil"],
+      ["lactose", "lactose-free non-hydrogenated sesame oil"],
+      ["milk|milk protein concentrate", "milk-protein-free non-hydrogenated sesame oil"],
+      ["milk|milk protein concentrate", "milk protein free non-hydrogenated sesame oil"],
+      ["soy|dairy", "soy and dairy free non-hydrogenated sesame oil"],
+    ]
+  ) {
+    const m = tinyIndex([ex, sesame, nh]).match(text);
+    assertEquals(m?.ingredientId, "t1", text);
+  }
+  // after a food, the claim still decides: the food named first is kept
+  const rape = "non hydrogenated rapeseed oil|rapeseed oil";
+  assertEquals(
+    hit(["sesame oil", rape, nh], "sesame oil non hydrogenated rapeseed oil"),
+    "sesame oil sub_phrase",
+  );
+  assertEquals(
+    hit(["sesame oil", "gluten", rape, nh], "sesame oil gluten-free non hydrogenated rapeseed oil"),
+    "sesame oil sub_phrase",
+  );
+  // a claim before the food is not a food: "bez utwardzonych tluszczow non hydrogenated sesame oil" reads the oil
+  assertEquals(
+    hit(
+      [sesame, nh, "!bez utwardzonych tluszczow"],
+      "bez utwardzonych tłuszczów non hydrogenated sesame oil",
+    ),
+    "non hydrogenated sesame oil sub_phrase",
+  );
+});
+
 Deno.test("an item that opens with a claim reads the food after it, not a word of the claim (pc-opus)", () => {
   const claim = "!bez utwardzonych tluszczow";
   assertEquals(
