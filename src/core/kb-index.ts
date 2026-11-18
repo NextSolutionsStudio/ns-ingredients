@@ -282,6 +282,24 @@ const ANCHOR_BREAKS = new Set([
   "mit",
   "sondern",
 ]);
+/**
+ * Limiting words: after a negator they affirm what follows ("not merely using or containing hydrogenated soybean oil"
+ * names the oil), so no object verb after them carries a denial (Sol 6.1 on #19 at 90df8fe).
+ */
+const LIMITING_WORDS = new Set([
+  "merely",
+  "only",
+  "just",
+  "simply",
+  "solely",
+  "exclusively",
+  "tylko",
+  "jedynie",
+  "wylacznie",
+  "nur",
+  "lediglich",
+  "bloss",
+]);
 /** Words that join two things an exclusion excludes ("without preservatives or using …"): the carry passes them. */
 const DISJUNCTIONS = new Set(["or", "nor", "ani", "lub", "albo", "czy", "oder", "noch"]);
 /** A prior variant raises its flags only when it is more likely than not (`analyze`). */
@@ -755,7 +773,7 @@ export class KbIndex {
       adverbsOnly = DENIAL_FILLERS.has(w) || DENIAL_ADVERBS.has(w) || DENIAL_CONNECTORS.has(w);
     }
     const anchored = o > k && OBJECT_VERBS.has(tokens[o]) && EXCLUSION_NEGATORS.test(tokens[k] ?? "") &&
-      !tokens.slice(k + 1, o).some((w) => ANCHOR_BREAKS.has(w)) && adverbsOnly;
+      !tokens.slice(k + 1, o).some((w) => ANCHOR_BREAKS.has(w) || LIMITING_WORDS.has(w)) && adverbsOnly;
     const adjectival = ADJECTIVE_NEGATORS.test(tokens[k] ?? "") && !anchored &&
       !DENIAL_FILLERS.has(tokens[v] ?? "");
     // Not denied: the plain entry (#14), except a variant that states an exemption, which stands as named ("bez cukru
