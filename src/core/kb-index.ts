@@ -224,6 +224,36 @@ const OBJECT_VERBS = new Set([
   "verwendung",
   "zusatz",
 ]);
+/**
+ * The negators that open an exclusion an object verb can carry (`variantReading`): a tell that fails for another
+ * reason ("extra virgin" before "containing virgin olive oil") carries nothing.
+ */
+const EXCLUSION_NEGATORS =
+  /^(?:not|non|no|nie\w*|ani|nicht|without|bez|brak|ohne|kein\w*|zero|free|woln\w*)$/u;
+/**
+ * Words that open an affirmative clause between a negator and an object verb ("without sugar but using …", "bez
+ * cukru, ale z …"): the verb after them is affirmed, so the negation does not carry over them.
+ */
+const ANCHOR_BREAKS = new Set([
+  "but",
+  "yet",
+  "and",
+  "with",
+  "however",
+  "while",
+  "plus",
+  "ale",
+  "lecz",
+  "jednak",
+  "oraz",
+  "i",
+  "z",
+  "ze",
+  "aber",
+  "und",
+  "mit",
+  "sondern",
+]);
 /** A prior variant raises its flags only when it is more likely than not (`analyze`). */
 export const PRIOR_FLAG_MIN = 0.5;
 
@@ -681,7 +711,11 @@ export class KbIndex {
     // częściowo utwardzony tłuszcz drobiowy" keeps the fat; "without sugar added …" is an exclusion of sugar).
     let o = start - 1;
     while (o > k && (DENIAL_CONNECTORS.has(tokens[o]) || DENIAL_ADVERBS.has(tokens[o]))) o--;
-    const anchored = o > k && OBJECT_VERBS.has(tokens[o]);
+    // The carry needs a negator that opens an exclusion, and no affirmative clause between it and the verb ("without
+    // sugar but using …" uses the fat; "extra virgin dressing containing virgin olive oil" denies nothing: Sol 6.1 on
+    // #19 at 268fb97)
+    const anchored = o > k && OBJECT_VERBS.has(tokens[o]) && EXCLUSION_NEGATORS.test(tokens[k] ?? "") &&
+      !tokens.slice(k + 1, o).some((w) => ANCHOR_BREAKS.has(w));
     const adjectival = ADJECTIVE_NEGATORS.test(tokens[k] ?? "") && !anchored &&
       !DENIAL_FILLERS.has(tokens[v] ?? "");
     // Not denied: the plain entry (#14), except a variant that states an exemption, which stands as named ("bez cukru

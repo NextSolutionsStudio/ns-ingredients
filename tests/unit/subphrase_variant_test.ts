@@ -866,7 +866,7 @@ Deno.test("the words of an exclusion keep the negation on the name, whatever the
       "actually using",
       "really adding",
       "additionally the use of",
-      "actually and truly using any",
+      "actually truly using any",
       "preservatives or using",
     ]
   ) {
@@ -875,6 +875,15 @@ Deno.test("the words of an exclusion keep the negation on the name, whatever the
     assertEquals(r.items[0].children?.[0]?.match?.ingredient_id === "poultry-fat", false, label);
     assertEquals(r.flags.some((x) => x.code === "origin.animal"), false, label);
     assertEquals(r.diets.vegan.status === "no", false, label);
+  }
+  // an affirmative clause between the negator and the verb affirms the verb (Sol 6.1 on #19 at 268fb97, P2 1)
+  for (
+    const f of ["sugar but using", "sugar and using", "sugar yet adding", "sugar and with the use of"]
+  ) {
+    const label = `Ingredients: olive oil (without ${f} partially hydrogenated poultry fat)`;
+    const r = analyze(idx, label, { lang: "en" });
+    assertEquals(r.flags.some((x) => x.code === "origin.animal"), true, label);
+    assertEquals(r.diets.vegan.status, "no", label);
   }
   // a participle after its noun closes an exclusion of that noun: the food after it is the food
   for (const text of ["without sugar added partially hydrogenated poultry fat"]) {
@@ -914,6 +923,34 @@ Deno.test("the words of an exclusion keep the negation on the name, whatever the
     assertEquals(r.items[0].match?.ingredient_id, "poultry-fat", text);
     assertEquals(r.flags.some((x) => x.code === "origin.animal"), true, text);
   }
+});
+
+Deno.test("a tell that fails without a negator carries no denial (Sol 6.1 on #19 at 268fb97, P2 2)", () => {
+  const idx = new KbIndex({
+    version: "t",
+    counts: {},
+    implications: IMPL,
+    sources: [],
+    classes: [],
+    ingredients: [
+      {
+        id: "olive-oil",
+        names: { en: ["olive oil"] },
+        variants: [{
+          id: "virgin",
+          names: { en: ["virgin olive oil"] },
+          process: { en: "p" },
+          tells: ["^(?!.*\\bextra virgin\\b).*\\bvirgin\\b"],
+        }],
+        assertions: [says("origin.plant")],
+      },
+    ],
+  } as unknown as KbBundle);
+  const text = "extra virgin dressing containing virgin olive oil";
+  const m = idx.match(text, []);
+  assertEquals(m?.ingredientId, "olive-oil", text);
+  const r = analyze(idx, `Ingredients: ${text}`, { lang: "en" });
+  assertEquals(r.flags.some((x) => x.code === "origin.plant"), true, text);
 });
 
 Deno.test("a qualifier that names a food carries its likely variant's allergens at maybe (pc-opus on #18)", () => {
