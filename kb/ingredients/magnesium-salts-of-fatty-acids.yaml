@@ -1,0 +1,108 @@
+id: magnesium-salts-of-fatty-acids
+type: additive
+e_number: E470b
+names:
+  en:
+    - magnesium salts of fatty acids
+    - magnesium stearate
+  pl:
+    - sole magnezowe kwasów tłuszczowych
+    - sól magnezowa kwasu tłuszczowego
+    - stearynian magnezu
+  de:
+    - Magnesiumsalze der Speisefettsäuren
+    - Magnesiumsalze von Speisefettsäuren
+    - Magnesiumstearat
+functions:
+  - anti-caking-agent
+  - emulsifier
+  - stabiliser
+summary:
+  en: >-
+    Magnesium salts of food fatty acids (primarily palmitic and stearic acids, commonly called magnesium
+    stearate), used as an anti-caking agent, emulsifier and tablet lubricant in confectionery and food
+    supplements. Manufactured from edible vegetable oils (such as palm oil) or animal fats (such as lard or
+    tallow).
+  pl: >-
+    Sole magnezowe kwasów tłuszczowych występujących w żywności (głównie kwasu palmitynowego i stearynowego,
+    powszechnie określane jako stearynian magnezu), stosowane jako substancja przeciwzbrylająca i emulgator
+    m.in. w suplementach i wyrobach cukierniczych. Mogą pochodzić z jadalnych olejów roślinnych (np.
+    palmowego) lub tłuszczów zwierzęcych (np. smalcu lub łoju).
+assertions:
+  - code: origin.chemical_synthesis
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: >-
+        EFSA (2018) Section 3.1.3 documents manufacture either by direct reaction of fatty acids with magnesium
+        oxide or hydroxide, or via a sodium soap followed by precipitation with a magnesium salt.
+      pl: >-
+        Sekcja 3.1.3 opinii EFSA (2018) dokumentuje wytwarzanie przez bezpośrednią reakcję kwasów tłuszczowych
+        z tlenkiem lub wodorotlenkiem magnezu albo przez mydło sodowe i wytrącanie solą magnezową.
+    sources:
+      - id: efsa-e470-2018
+        locator: Section 3.1.3
+  - code: origin.vegetable_oil_derived
+    certainty: maybe
+    kind: fact
+    grade: A
+    note:
+      en: >-
+        Reg (EU) No 231/2012 E 470b Definition and EFSA (2018) Section 3.1.1 document edible vegetable oils
+        (such as palm oil) alongside animal fats as commercial starting materials.
+      pl: >-
+        Definicja E 470b w rozporządzeniu (UE) nr 231/2012 oraz sekcja 3.1.1 opinii EFSA (2018) wskazują
+        jadalne oleje roślinne (np. olej palmowy) obok tłuszczów zwierzęcych jako surowce wyjściowe.
+    sources:
+      - id: reg-231-2012
+        locator: E 470b (Definition)
+      - id: efsa-e470-2018
+        locator: Section 3.1.1
+  - code: origin.animal
+    certainty: maybe
+    kind: fact
+    grade: A
+    note:
+      en: >-
+        EFSA (2018) Section 3.1.1 explicitly notes animal fats (such as lard, tallow and bone fat) are used
+        alongside vegetable oils in E 470b manufacture, and labels do not disclose fat origin.
+      pl: >-
+        Sekcja 3.1.1 opinii EFSA (2018) wprost wymienia tłuszcze zwierzęce (np. smalec, łój, tłuszcz kostny)
+        obok olejów roślinnych jako surowce do produkcji E 470b, a etykieta nie ujawnia pochodzenia.
+    sources:
+      - id: reg-231-2012
+        locator: E 470b (Definition)
+      - id: efsa-e470-2018
+        locator: Section 3.1.1
+  - code: ethics.palm_oil
+    certainty: maybe
+    kind: estimate
+    grade: B
+    note:
+      en: >-
+        EFSA (2018) Section 3.1.1 explicitly cites palm oil among vegetable oils used as starting materials for
+        E 470a and E 470b fatty acid salts.
+      pl: >-
+        Sekcja 3.1.1 opinii EFSA (2018) wyraźnie wymienia olej palmowy wśród olejów roślinnych używanych jako
+        surowiec wyjściowy do produkcji E 470a i E 470b.
+    sources:
+      - id: efsa-e470-2018
+        locator: Section 3.1.1
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: "Group I additive (Reg (EC) No 1333/2008 Annex II Part C): quantum satis in most food categories."
+      pl: "Dodatek grupy I (Rozp. (WE) nr 1333/2008 Załącznik II część C): quantum satis w większości kategorii żywności."
+    source: reg-1333-2008
+reference_values:
+  - type: ADI
+    value: not specified
+    body: EFSA
+    year: 2018
+    source: efsa-e470-2018
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Intentionally claims 'stearynian magnezu', 'magnesium stearate', and 'Magnesiumstearat' over generated kb/generated/wikidata-additives.yaml entry e572 (in EU food law magnesium stearate is E470b, not E572); curated-vs-generated shadow warning in readKb is expected."

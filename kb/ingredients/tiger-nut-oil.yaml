@@ -1,0 +1,1290 @@
+id: tiger-nut-oil
+type: fat
+names:
+  en:
+    - tiger nut oil
+    - tigernut oil
+    - tiger nuts oil
+    - earth almond oil
+    - earth almonds oil
+    - tigernuts oil
+    - chufa nut oil
+    - chufa nuts oil
+    - chufa oil
+    - cyperus esculentus oil
+    - not hydrogenated chufa oil
+    - not partially hydrogenated chufa oil
+    - not fully hydrogenated chufa oil
+    - non partially hydrogenated chufa oil
+    - not hydrogenated cyperus esculentus oil
+    - not partially hydrogenated cyperus esculentus oil
+    - not fully hydrogenated cyperus esculentus oil
+    - non partially hydrogenated cyperus esculentus oil
+    - not hydrogenated earth almond oil
+    - not partially hydrogenated earth almond oil
+    - not fully hydrogenated earth almond oil
+    - non partially hydrogenated earth almond oil
+    - not hydrogenated tiger nut oil
+    - not partially hydrogenated tiger nut oil
+    - not fully hydrogenated tiger nut oil
+    - non partially hydrogenated tiger nut oil
+    - not hydrogenated tiger nuts oil
+    - not partially hydrogenated tiger nuts oil
+    - not fully hydrogenated tiger nuts oil
+    - non partially hydrogenated tiger nuts oil
+    - not hydrogenated tigernut oil
+    - not partially hydrogenated tigernut oil
+    - not fully hydrogenated tigernut oil
+    - non partially hydrogenated tigernut oil
+    - non-hydrogenated tiger nut oil
+    - unhydrogenated tiger nut oil
+    - non-hydrogenated tigernut oil
+    - unhydrogenated tigernut oil
+    - non-hydrogenated tiger nuts oil
+    - unhydrogenated tiger nuts oil
+    - non-hydrogenated earth almond oil
+    - unhydrogenated earth almond oil
+    - non-hydrogenated chufa oil
+    - unhydrogenated chufa oil
+    - non-hydrogenated cyperus esculentus oil
+    - unhydrogenated cyperus esculentus oil
+    - not hydrogenated chufa nut oil
+    - not partially hydrogenated chufa nut oil
+    - not fully hydrogenated chufa nut oil
+    - non partially hydrogenated chufa nut oil
+    - not hydrogenated chufa nuts oil
+    - not partially hydrogenated chufa nuts oil
+    - not fully hydrogenated chufa nuts oil
+    - non partially hydrogenated chufa nuts oil
+    - not hydrogenated earth almonds oil
+    - not partially hydrogenated earth almonds oil
+    - not fully hydrogenated earth almonds oil
+    - non partially hydrogenated earth almonds oil
+    - not hydrogenated tigernuts oil
+    - not partially hydrogenated tigernuts oil
+    - not fully hydrogenated tigernuts oil
+    - non partially hydrogenated tigernuts oil
+    - non-hydrogenated earth almonds oil
+    - unhydrogenated earth almonds oil
+    - non-hydrogenated tigernuts oil
+    - unhydrogenated tigernuts oil
+    - non-hydrogenated chufa nut oil
+    - unhydrogenated chufa nut oil
+    - non-hydrogenated chufa nuts oil
+    - unhydrogenated chufa nuts oil
+  pl:
+    - olej z migdałów ziemnych
+    - olej z migdała ziemnego
+    - olej z orzechów tygrysich
+    - olej z orzeszków tygrysich
+    - olej z cibory jadalnej
+    - olej cibory jadalnej
+    - olej z bulw cibory jadalnej
+    - tłuszcz roślinny z cibory jadalnej
+    - tłuszcze roślinne z cibory jadalnej
+    - olej roślinny z cibory jadalnej
+    - oleje roślinne z cibory jadalnej
+    - tłuszcz roślinny z migdała ziemnego
+    - tłuszcze roślinne z migdała ziemnego
+    - olej roślinny z migdała ziemnego
+    - oleje roślinne z migdała ziemnego
+    - tłuszcz roślinny z migdałów ziemnych
+    - tłuszcze roślinne z migdałów ziemnych
+    - olej roślinny z migdałów ziemnych
+    - oleje roślinne z migdałów ziemnych
+    - tłuszcz roślinny z orzechów tygrysich
+    - tłuszcze roślinne z orzechów tygrysich
+    - olej roślinny z orzechów tygrysich
+    - oleje roślinne z orzechów tygrysich
+    - tłuszcz roślinny z orzeszków tygrysich
+    - tłuszcze roślinne z orzeszków tygrysich
+    - olej roślinny z orzeszków tygrysich
+    - oleje roślinne z orzeszków tygrysich
+    - nie utwardzony olej z migdałów ziemnych
+    - olej z migdałów ziemnych nie utwardzony
+    - nie uwodorniony olej z migdałów ziemnych
+    - olej z migdałów ziemnych nie uwodorniony
+    - nieutwardzony olej z migdałów ziemnych
+    - olej z migdałów ziemnych nieutwardzony
+    - nieuwodorniony olej z migdałów ziemnych
+    - olej z migdałów ziemnych nieuwodorniony
+    - nie utwardzony olej z migdała ziemnego
+    - olej z migdała ziemnego nie utwardzony
+    - nie uwodorniony olej z migdała ziemnego
+    - olej z migdała ziemnego nie uwodorniony
+    - nieutwardzony olej z migdała ziemnego
+    - olej z migdała ziemnego nieutwardzony
+    - nieuwodorniony olej z migdała ziemnego
+    - olej z migdała ziemnego nieuwodorniony
+    - nie utwardzony olej z orzechów tygrysich
+    - olej z orzechów tygrysich nie utwardzony
+    - nie uwodorniony olej z orzechów tygrysich
+    - olej z orzechów tygrysich nie uwodorniony
+    - nieutwardzony olej z orzechów tygrysich
+    - olej z orzechów tygrysich nieutwardzony
+    - nieuwodorniony olej z orzechów tygrysich
+    - olej z orzechów tygrysich nieuwodorniony
+    - nie utwardzony olej z orzeszków tygrysich
+    - olej z orzeszków tygrysich nie utwardzony
+    - nie uwodorniony olej z orzeszków tygrysich
+    - olej z orzeszków tygrysich nie uwodorniony
+    - nieutwardzony olej z orzeszków tygrysich
+    - olej z orzeszków tygrysich nieutwardzony
+    - nieuwodorniony olej z orzeszków tygrysich
+    - olej z orzeszków tygrysich nieuwodorniony
+    - nie utwardzony olej z cibory jadalnej
+    - olej z cibory jadalnej nie utwardzony
+    - nie uwodorniony olej z cibory jadalnej
+    - olej z cibory jadalnej nie uwodorniony
+    - nieutwardzony olej z cibory jadalnej
+    - olej z cibory jadalnej nieutwardzony
+    - nieuwodorniony olej z cibory jadalnej
+    - olej z cibory jadalnej nieuwodorniony
+    - nie utwardzony olej cibory jadalnej
+    - olej cibory jadalnej nie utwardzony
+    - nie uwodorniony olej cibory jadalnej
+    - olej cibory jadalnej nie uwodorniony
+    - nieutwardzony olej cibory jadalnej
+    - olej cibory jadalnej nieutwardzony
+    - nieuwodorniony olej cibory jadalnej
+    - olej cibory jadalnej nieuwodorniony
+    - nie utwardzony tłuszcz roślinny z cibory jadalnej
+    - tłuszcz roślinny z cibory jadalnej nie utwardzony
+    - tłuszcz roślinny nie utwardzony z cibory jadalnej
+    - nie uwodorniony tłuszcz roślinny z cibory jadalnej
+    - tłuszcz roślinny z cibory jadalnej nie uwodorniony
+    - tłuszcz roślinny nie uwodorniony z cibory jadalnej
+    - nieutwardzony tłuszcz roślinny z cibory jadalnej
+    - tłuszcz roślinny z cibory jadalnej nieutwardzony
+    - tłuszcz roślinny nieutwardzony z cibory jadalnej
+    - nieuwodorniony tłuszcz roślinny z cibory jadalnej
+    - tłuszcz roślinny z cibory jadalnej nieuwodorniony
+    - tłuszcz roślinny nieuwodorniony z cibory jadalnej
+    - nie utwardzone tłuszcze roślinne z cibory jadalnej
+    - tłuszcze roślinne z cibory jadalnej nie utwardzone
+    - tłuszcze roślinne nie utwardzone z cibory jadalnej
+    - nie uwodornione tłuszcze roślinne z cibory jadalnej
+    - tłuszcze roślinne z cibory jadalnej nie uwodornione
+    - tłuszcze roślinne nie uwodornione z cibory jadalnej
+    - nieutwardzone tłuszcze roślinne z cibory jadalnej
+    - tłuszcze roślinne z cibory jadalnej nieutwardzone
+    - tłuszcze roślinne nieutwardzone z cibory jadalnej
+    - nieuwodornione tłuszcze roślinne z cibory jadalnej
+    - tłuszcze roślinne z cibory jadalnej nieuwodornione
+    - tłuszcze roślinne nieuwodornione z cibory jadalnej
+    - nie utwardzony olej roślinny z cibory jadalnej
+    - olej roślinny z cibory jadalnej nie utwardzony
+    - olej roślinny nie utwardzony z cibory jadalnej
+    - nie uwodorniony olej roślinny z cibory jadalnej
+    - olej roślinny z cibory jadalnej nie uwodorniony
+    - olej roślinny nie uwodorniony z cibory jadalnej
+    - nieutwardzony olej roślinny z cibory jadalnej
+    - olej roślinny z cibory jadalnej nieutwardzony
+    - olej roślinny nieutwardzony z cibory jadalnej
+    - nieuwodorniony olej roślinny z cibory jadalnej
+    - olej roślinny z cibory jadalnej nieuwodorniony
+    - olej roślinny nieuwodorniony z cibory jadalnej
+    - nie utwardzone oleje roślinne z cibory jadalnej
+    - oleje roślinne z cibory jadalnej nie utwardzone
+    - oleje roślinne nie utwardzone z cibory jadalnej
+    - nie uwodornione oleje roślinne z cibory jadalnej
+    - oleje roślinne z cibory jadalnej nie uwodornione
+    - oleje roślinne nie uwodornione z cibory jadalnej
+    - nieutwardzone oleje roślinne z cibory jadalnej
+    - oleje roślinne z cibory jadalnej nieutwardzone
+    - oleje roślinne nieutwardzone z cibory jadalnej
+    - nieuwodornione oleje roślinne z cibory jadalnej
+    - oleje roślinne z cibory jadalnej nieuwodornione
+    - oleje roślinne nieuwodornione z cibory jadalnej
+    - nie utwardzony tłuszcz roślinny z migdała ziemnego
+    - tłuszcz roślinny z migdała ziemnego nie utwardzony
+    - tłuszcz roślinny nie utwardzony z migdała ziemnego
+    - nie uwodorniony tłuszcz roślinny z migdała ziemnego
+    - tłuszcz roślinny z migdała ziemnego nie uwodorniony
+    - tłuszcz roślinny nie uwodorniony z migdała ziemnego
+    - nieutwardzony tłuszcz roślinny z migdała ziemnego
+    - tłuszcz roślinny z migdała ziemnego nieutwardzony
+    - tłuszcz roślinny nieutwardzony z migdała ziemnego
+    - nieuwodorniony tłuszcz roślinny z migdała ziemnego
+    - tłuszcz roślinny z migdała ziemnego nieuwodorniony
+    - tłuszcz roślinny nieuwodorniony z migdała ziemnego
+    - nie utwardzone tłuszcze roślinne z migdała ziemnego
+    - tłuszcze roślinne z migdała ziemnego nie utwardzone
+    - tłuszcze roślinne nie utwardzone z migdała ziemnego
+    - nie uwodornione tłuszcze roślinne z migdała ziemnego
+    - tłuszcze roślinne z migdała ziemnego nie uwodornione
+    - tłuszcze roślinne nie uwodornione z migdała ziemnego
+    - nieutwardzone tłuszcze roślinne z migdała ziemnego
+    - tłuszcze roślinne z migdała ziemnego nieutwardzone
+    - tłuszcze roślinne nieutwardzone z migdała ziemnego
+    - nieuwodornione tłuszcze roślinne z migdała ziemnego
+    - tłuszcze roślinne z migdała ziemnego nieuwodornione
+    - tłuszcze roślinne nieuwodornione z migdała ziemnego
+    - nie utwardzony olej roślinny z migdała ziemnego
+    - olej roślinny z migdała ziemnego nie utwardzony
+    - olej roślinny nie utwardzony z migdała ziemnego
+    - nie uwodorniony olej roślinny z migdała ziemnego
+    - olej roślinny z migdała ziemnego nie uwodorniony
+    - olej roślinny nie uwodorniony z migdała ziemnego
+    - nieutwardzony olej roślinny z migdała ziemnego
+    - olej roślinny z migdała ziemnego nieutwardzony
+    - olej roślinny nieutwardzony z migdała ziemnego
+    - nieuwodorniony olej roślinny z migdała ziemnego
+    - olej roślinny z migdała ziemnego nieuwodorniony
+    - olej roślinny nieuwodorniony z migdała ziemnego
+    - nie utwardzone oleje roślinne z migdała ziemnego
+    - oleje roślinne z migdała ziemnego nie utwardzone
+    - oleje roślinne nie utwardzone z migdała ziemnego
+    - nie uwodornione oleje roślinne z migdała ziemnego
+    - oleje roślinne z migdała ziemnego nie uwodornione
+    - oleje roślinne nie uwodornione z migdała ziemnego
+    - nieutwardzone oleje roślinne z migdała ziemnego
+    - oleje roślinne z migdała ziemnego nieutwardzone
+    - oleje roślinne nieutwardzone z migdała ziemnego
+    - nieuwodornione oleje roślinne z migdała ziemnego
+    - oleje roślinne z migdała ziemnego nieuwodornione
+    - oleje roślinne nieuwodornione z migdała ziemnego
+    - nie utwardzony tłuszcz roślinny z migdałów ziemnych
+    - tłuszcz roślinny z migdałów ziemnych nie utwardzony
+    - tłuszcz roślinny nie utwardzony z migdałów ziemnych
+    - nie uwodorniony tłuszcz roślinny z migdałów ziemnych
+    - tłuszcz roślinny z migdałów ziemnych nie uwodorniony
+    - tłuszcz roślinny nie uwodorniony z migdałów ziemnych
+    - nieutwardzony tłuszcz roślinny z migdałów ziemnych
+    - tłuszcz roślinny z migdałów ziemnych nieutwardzony
+    - tłuszcz roślinny nieutwardzony z migdałów ziemnych
+    - nieuwodorniony tłuszcz roślinny z migdałów ziemnych
+    - tłuszcz roślinny z migdałów ziemnych nieuwodorniony
+    - tłuszcz roślinny nieuwodorniony z migdałów ziemnych
+    - nie utwardzone tłuszcze roślinne z migdałów ziemnych
+    - tłuszcze roślinne z migdałów ziemnych nie utwardzone
+    - tłuszcze roślinne nie utwardzone z migdałów ziemnych
+    - nie uwodornione tłuszcze roślinne z migdałów ziemnych
+    - tłuszcze roślinne z migdałów ziemnych nie uwodornione
+    - tłuszcze roślinne nie uwodornione z migdałów ziemnych
+    - nieutwardzone tłuszcze roślinne z migdałów ziemnych
+    - tłuszcze roślinne z migdałów ziemnych nieutwardzone
+    - tłuszcze roślinne nieutwardzone z migdałów ziemnych
+    - nieuwodornione tłuszcze roślinne z migdałów ziemnych
+    - tłuszcze roślinne z migdałów ziemnych nieuwodornione
+    - tłuszcze roślinne nieuwodornione z migdałów ziemnych
+    - nie utwardzony olej roślinny z migdałów ziemnych
+    - olej roślinny z migdałów ziemnych nie utwardzony
+    - olej roślinny nie utwardzony z migdałów ziemnych
+    - nie uwodorniony olej roślinny z migdałów ziemnych
+    - olej roślinny z migdałów ziemnych nie uwodorniony
+    - olej roślinny nie uwodorniony z migdałów ziemnych
+    - nieutwardzony olej roślinny z migdałów ziemnych
+    - olej roślinny z migdałów ziemnych nieutwardzony
+    - olej roślinny nieutwardzony z migdałów ziemnych
+    - nieuwodorniony olej roślinny z migdałów ziemnych
+    - olej roślinny z migdałów ziemnych nieuwodorniony
+    - olej roślinny nieuwodorniony z migdałów ziemnych
+    - nie utwardzone oleje roślinne z migdałów ziemnych
+    - oleje roślinne z migdałów ziemnych nie utwardzone
+    - oleje roślinne nie utwardzone z migdałów ziemnych
+    - nie uwodornione oleje roślinne z migdałów ziemnych
+    - oleje roślinne z migdałów ziemnych nie uwodornione
+    - oleje roślinne nie uwodornione z migdałów ziemnych
+    - nieutwardzone oleje roślinne z migdałów ziemnych
+    - oleje roślinne z migdałów ziemnych nieutwardzone
+    - oleje roślinne nieutwardzone z migdałów ziemnych
+    - nieuwodornione oleje roślinne z migdałów ziemnych
+    - oleje roślinne z migdałów ziemnych nieuwodornione
+    - oleje roślinne nieuwodornione z migdałów ziemnych
+    - nie utwardzony tłuszcz roślinny z orzechów tygrysich
+    - tłuszcz roślinny z orzechów tygrysich nie utwardzony
+    - tłuszcz roślinny nie utwardzony z orzechów tygrysich
+    - nie uwodorniony tłuszcz roślinny z orzechów tygrysich
+    - tłuszcz roślinny z orzechów tygrysich nie uwodorniony
+    - tłuszcz roślinny nie uwodorniony z orzechów tygrysich
+    - nieutwardzony tłuszcz roślinny z orzechów tygrysich
+    - tłuszcz roślinny z orzechów tygrysich nieutwardzony
+    - tłuszcz roślinny nieutwardzony z orzechów tygrysich
+    - nieuwodorniony tłuszcz roślinny z orzechów tygrysich
+    - tłuszcz roślinny z orzechów tygrysich nieuwodorniony
+    - tłuszcz roślinny nieuwodorniony z orzechów tygrysich
+    - nie utwardzone tłuszcze roślinne z orzechów tygrysich
+    - tłuszcze roślinne z orzechów tygrysich nie utwardzone
+    - tłuszcze roślinne nie utwardzone z orzechów tygrysich
+    - nie uwodornione tłuszcze roślinne z orzechów tygrysich
+    - tłuszcze roślinne z orzechów tygrysich nie uwodornione
+    - tłuszcze roślinne nie uwodornione z orzechów tygrysich
+    - nieutwardzone tłuszcze roślinne z orzechów tygrysich
+    - tłuszcze roślinne z orzechów tygrysich nieutwardzone
+    - tłuszcze roślinne nieutwardzone z orzechów tygrysich
+    - nieuwodornione tłuszcze roślinne z orzechów tygrysich
+    - tłuszcze roślinne z orzechów tygrysich nieuwodornione
+    - tłuszcze roślinne nieuwodornione z orzechów tygrysich
+    - nie utwardzony olej roślinny z orzechów tygrysich
+    - olej roślinny z orzechów tygrysich nie utwardzony
+    - olej roślinny nie utwardzony z orzechów tygrysich
+    - nie uwodorniony olej roślinny z orzechów tygrysich
+    - olej roślinny z orzechów tygrysich nie uwodorniony
+    - olej roślinny nie uwodorniony z orzechów tygrysich
+    - nieutwardzony olej roślinny z orzechów tygrysich
+    - olej roślinny z orzechów tygrysich nieutwardzony
+    - olej roślinny nieutwardzony z orzechów tygrysich
+    - nieuwodorniony olej roślinny z orzechów tygrysich
+    - olej roślinny z orzechów tygrysich nieuwodorniony
+    - olej roślinny nieuwodorniony z orzechów tygrysich
+    - nie utwardzone oleje roślinne z orzechów tygrysich
+    - oleje roślinne z orzechów tygrysich nie utwardzone
+    - oleje roślinne nie utwardzone z orzechów tygrysich
+    - nie uwodornione oleje roślinne z orzechów tygrysich
+    - oleje roślinne z orzechów tygrysich nie uwodornione
+    - oleje roślinne nie uwodornione z orzechów tygrysich
+    - nieutwardzone oleje roślinne z orzechów tygrysich
+    - oleje roślinne z orzechów tygrysich nieutwardzone
+    - oleje roślinne nieutwardzone z orzechów tygrysich
+    - nieuwodornione oleje roślinne z orzechów tygrysich
+    - oleje roślinne z orzechów tygrysich nieuwodornione
+    - oleje roślinne nieuwodornione z orzechów tygrysich
+    - nie utwardzony tłuszcz roślinny z orzeszków tygrysich
+    - tłuszcz roślinny z orzeszków tygrysich nie utwardzony
+    - tłuszcz roślinny nie utwardzony z orzeszków tygrysich
+    - nie uwodorniony tłuszcz roślinny z orzeszków tygrysich
+    - tłuszcz roślinny z orzeszków tygrysich nie uwodorniony
+    - tłuszcz roślinny nie uwodorniony z orzeszków tygrysich
+    - nieutwardzony tłuszcz roślinny z orzeszków tygrysich
+    - tłuszcz roślinny z orzeszków tygrysich nieutwardzony
+    - tłuszcz roślinny nieutwardzony z orzeszków tygrysich
+    - nieuwodorniony tłuszcz roślinny z orzeszków tygrysich
+    - tłuszcz roślinny z orzeszków tygrysich nieuwodorniony
+    - tłuszcz roślinny nieuwodorniony z orzeszków tygrysich
+    - nie utwardzone tłuszcze roślinne z orzeszków tygrysich
+    - tłuszcze roślinne z orzeszków tygrysich nie utwardzone
+    - tłuszcze roślinne nie utwardzone z orzeszków tygrysich
+    - nie uwodornione tłuszcze roślinne z orzeszków tygrysich
+    - tłuszcze roślinne z orzeszków tygrysich nie uwodornione
+    - tłuszcze roślinne nie uwodornione z orzeszków tygrysich
+    - nieutwardzone tłuszcze roślinne z orzeszków tygrysich
+    - tłuszcze roślinne z orzeszków tygrysich nieutwardzone
+    - tłuszcze roślinne nieutwardzone z orzeszków tygrysich
+    - nieuwodornione tłuszcze roślinne z orzeszków tygrysich
+    - tłuszcze roślinne z orzeszków tygrysich nieuwodornione
+    - tłuszcze roślinne nieuwodornione z orzeszków tygrysich
+    - nie utwardzony olej roślinny z orzeszków tygrysich
+    - olej roślinny z orzeszków tygrysich nie utwardzony
+    - olej roślinny nie utwardzony z orzeszków tygrysich
+    - nie uwodorniony olej roślinny z orzeszków tygrysich
+    - olej roślinny z orzeszków tygrysich nie uwodorniony
+    - olej roślinny nie uwodorniony z orzeszków tygrysich
+    - nieutwardzony olej roślinny z orzeszków tygrysich
+    - olej roślinny z orzeszków tygrysich nieutwardzony
+    - olej roślinny nieutwardzony z orzeszków tygrysich
+    - nieuwodorniony olej roślinny z orzeszków tygrysich
+    - olej roślinny z orzeszków tygrysich nieuwodorniony
+    - olej roślinny nieuwodorniony z orzeszków tygrysich
+    - nie utwardzone oleje roślinne z orzeszków tygrysich
+    - oleje roślinne z orzeszków tygrysich nie utwardzone
+    - oleje roślinne nie utwardzone z orzeszków tygrysich
+    - nie uwodornione oleje roślinne z orzeszków tygrysich
+    - oleje roślinne z orzeszków tygrysich nie uwodornione
+    - oleje roślinne nie uwodornione z orzeszków tygrysich
+    - nieutwardzone oleje roślinne z orzeszków tygrysich
+    - oleje roślinne z orzeszków tygrysich nieutwardzone
+    - oleje roślinne nieutwardzone z orzeszków tygrysich
+    - nieuwodornione oleje roślinne z orzeszków tygrysich
+    - oleje roślinne z orzeszków tygrysich nieuwodornione
+    - oleje roślinne nieuwodornione z orzeszków tygrysich
+    - tłuszcz roślinny z bulw cibory jadalnej
+    - tłuszcze roślinne z bulw cibory jadalnej
+    - olej roślinny z bulw cibory jadalnej
+    - oleje roślinne z bulw cibory jadalnej
+    - nie utwardzony olej z bulw cibory jadalnej
+    - olej z bulw cibory jadalnej nie utwardzony
+    - nie uwodorniony olej z bulw cibory jadalnej
+    - olej z bulw cibory jadalnej nie uwodorniony
+    - nieutwardzony olej z bulw cibory jadalnej
+    - olej z bulw cibory jadalnej nieutwardzony
+    - nieuwodorniony olej z bulw cibory jadalnej
+    - olej z bulw cibory jadalnej nieuwodorniony
+    - nie utwardzony tłuszcz roślinny z bulw cibory jadalnej
+    - tłuszcz roślinny z bulw cibory jadalnej nie utwardzony
+    - tłuszcz roślinny nie utwardzony z bulw cibory jadalnej
+    - nie uwodorniony tłuszcz roślinny z bulw cibory jadalnej
+    - tłuszcz roślinny z bulw cibory jadalnej nie uwodorniony
+    - tłuszcz roślinny nie uwodorniony z bulw cibory jadalnej
+    - nieutwardzony tłuszcz roślinny z bulw cibory jadalnej
+    - tłuszcz roślinny z bulw cibory jadalnej nieutwardzony
+    - tłuszcz roślinny nieutwardzony z bulw cibory jadalnej
+    - nieuwodorniony tłuszcz roślinny z bulw cibory jadalnej
+    - tłuszcz roślinny z bulw cibory jadalnej nieuwodorniony
+    - tłuszcz roślinny nieuwodorniony z bulw cibory jadalnej
+    - nie utwardzone tłuszcze roślinne z bulw cibory jadalnej
+    - tłuszcze roślinne z bulw cibory jadalnej nie utwardzone
+    - tłuszcze roślinne nie utwardzone z bulw cibory jadalnej
+    - nie uwodornione tłuszcze roślinne z bulw cibory jadalnej
+    - tłuszcze roślinne z bulw cibory jadalnej nie uwodornione
+    - tłuszcze roślinne nie uwodornione z bulw cibory jadalnej
+    - nieutwardzone tłuszcze roślinne z bulw cibory jadalnej
+    - tłuszcze roślinne z bulw cibory jadalnej nieutwardzone
+    - tłuszcze roślinne nieutwardzone z bulw cibory jadalnej
+    - nieuwodornione tłuszcze roślinne z bulw cibory jadalnej
+    - tłuszcze roślinne z bulw cibory jadalnej nieuwodornione
+    - tłuszcze roślinne nieuwodornione z bulw cibory jadalnej
+    - nie utwardzony olej roślinny z bulw cibory jadalnej
+    - olej roślinny z bulw cibory jadalnej nie utwardzony
+    - olej roślinny nie utwardzony z bulw cibory jadalnej
+    - nie uwodorniony olej roślinny z bulw cibory jadalnej
+    - olej roślinny z bulw cibory jadalnej nie uwodorniony
+    - olej roślinny nie uwodorniony z bulw cibory jadalnej
+    - nieutwardzony olej roślinny z bulw cibory jadalnej
+    - olej roślinny z bulw cibory jadalnej nieutwardzony
+    - olej roślinny nieutwardzony z bulw cibory jadalnej
+    - nieuwodorniony olej roślinny z bulw cibory jadalnej
+    - olej roślinny z bulw cibory jadalnej nieuwodorniony
+    - olej roślinny nieuwodorniony z bulw cibory jadalnej
+    - nie utwardzone oleje roślinne z bulw cibory jadalnej
+    - oleje roślinne z bulw cibory jadalnej nie utwardzone
+    - oleje roślinne nie utwardzone z bulw cibory jadalnej
+    - nie uwodornione oleje roślinne z bulw cibory jadalnej
+    - oleje roślinne z bulw cibory jadalnej nie uwodornione
+    - oleje roślinne nie uwodornione z bulw cibory jadalnej
+    - nieutwardzone oleje roślinne z bulw cibory jadalnej
+    - oleje roślinne z bulw cibory jadalnej nieutwardzone
+    - oleje roślinne nieutwardzone z bulw cibory jadalnej
+    - nieuwodornione oleje roślinne z bulw cibory jadalnej
+    - oleje roślinne z bulw cibory jadalnej nieuwodornione
+    - oleje roślinne nieuwodornione z bulw cibory jadalnej
+  de:
+    - Erdmandelöl
+    - Tigernussöl
+summary:
+  en: >-
+    Vegetable oil pressed from tiger nuts (earth almonds), the tubers of Cyperus esculentus. Despite the names, tiger
+    nuts are neither almonds nor peanuts nor any tree nut listed in EU Annex II item 8, so the oil carries no nut or
+    peanut allergen declaration.
+  pl: >-
+    Olej roślinny tłoczony z migdałów ziemnych (orzechów tygrysich), bulw cibory jadalnej (Cyperus esculentus). Mimo
+    nazwy migdały ziemne nie są migdałami, orzeszkami ziemnymi ani żadnym orzechem z Aneksu II UE (punkt 8), więc olej
+    nie podlega deklaracji alergenu orzechów ani orzeszków ziemnych.
+variants:
+  - id: hydrogenated
+    names:
+      en:
+        - hydrogenated tiger nut oil
+        - hydrogenated tigernut oil
+        - hydrogenated tiger nuts oil
+        - hydrogenated earth almond oil
+        - hydrogenated chufa oil
+        - hydrogenated cyperus esculentus oil
+        - hydrogenated earth almonds oil
+        - hydrogenated tigernuts oil
+        - hydrogenated chufa nut oil
+        - hydrogenated chufa nuts oil
+      pl:
+        - utwardzony olej z migdałów ziemnych
+        - olej z migdałów ziemnych utwardzony
+        - uwodorniony olej z migdałów ziemnych
+        - olej z migdałów ziemnych uwodorniony
+        - utwardzony olej z migdała ziemnego
+        - olej z migdała ziemnego utwardzony
+        - uwodorniony olej z migdała ziemnego
+        - olej z migdała ziemnego uwodorniony
+        - utwardzony olej z orzechów tygrysich
+        - olej z orzechów tygrysich utwardzony
+        - uwodorniony olej z orzechów tygrysich
+        - olej z orzechów tygrysich uwodorniony
+        - utwardzony olej z orzeszków tygrysich
+        - olej z orzeszków tygrysich utwardzony
+        - uwodorniony olej z orzeszków tygrysich
+        - olej z orzeszków tygrysich uwodorniony
+        - utwardzony olej z cibory jadalnej
+        - olej z cibory jadalnej utwardzony
+        - uwodorniony olej z cibory jadalnej
+        - olej z cibory jadalnej uwodorniony
+        - utwardzony olej cibory jadalnej
+        - olej cibory jadalnej utwardzony
+        - uwodorniony olej cibory jadalnej
+        - olej cibory jadalnej uwodorniony
+        - utwardzony tłuszcz roślinny z cibory jadalnej
+        - tłuszcz roślinny z cibory jadalnej utwardzony
+        - tłuszcz roślinny utwardzony z cibory jadalnej
+        - uwodorniony tłuszcz roślinny z cibory jadalnej
+        - tłuszcz roślinny z cibory jadalnej uwodorniony
+        - tłuszcz roślinny uwodorniony z cibory jadalnej
+        - utwardzone tłuszcze roślinne z cibory jadalnej
+        - tłuszcze roślinne z cibory jadalnej utwardzone
+        - tłuszcze roślinne utwardzone z cibory jadalnej
+        - uwodornione tłuszcze roślinne z cibory jadalnej
+        - tłuszcze roślinne z cibory jadalnej uwodornione
+        - tłuszcze roślinne uwodornione z cibory jadalnej
+        - utwardzony olej roślinny z cibory jadalnej
+        - olej roślinny z cibory jadalnej utwardzony
+        - olej roślinny utwardzony z cibory jadalnej
+        - uwodorniony olej roślinny z cibory jadalnej
+        - olej roślinny z cibory jadalnej uwodorniony
+        - olej roślinny uwodorniony z cibory jadalnej
+        - utwardzone oleje roślinne z cibory jadalnej
+        - oleje roślinne z cibory jadalnej utwardzone
+        - oleje roślinne utwardzone z cibory jadalnej
+        - uwodornione oleje roślinne z cibory jadalnej
+        - oleje roślinne z cibory jadalnej uwodornione
+        - oleje roślinne uwodornione z cibory jadalnej
+        - utwardzony tłuszcz roślinny z migdała ziemnego
+        - tłuszcz roślinny z migdała ziemnego utwardzony
+        - tłuszcz roślinny utwardzony z migdała ziemnego
+        - uwodorniony tłuszcz roślinny z migdała ziemnego
+        - tłuszcz roślinny z migdała ziemnego uwodorniony
+        - tłuszcz roślinny uwodorniony z migdała ziemnego
+        - utwardzone tłuszcze roślinne z migdała ziemnego
+        - tłuszcze roślinne z migdała ziemnego utwardzone
+        - tłuszcze roślinne utwardzone z migdała ziemnego
+        - uwodornione tłuszcze roślinne z migdała ziemnego
+        - tłuszcze roślinne z migdała ziemnego uwodornione
+        - tłuszcze roślinne uwodornione z migdała ziemnego
+        - utwardzony olej roślinny z migdała ziemnego
+        - olej roślinny z migdała ziemnego utwardzony
+        - olej roślinny utwardzony z migdała ziemnego
+        - uwodorniony olej roślinny z migdała ziemnego
+        - olej roślinny z migdała ziemnego uwodorniony
+        - olej roślinny uwodorniony z migdała ziemnego
+        - utwardzone oleje roślinne z migdała ziemnego
+        - oleje roślinne z migdała ziemnego utwardzone
+        - oleje roślinne utwardzone z migdała ziemnego
+        - uwodornione oleje roślinne z migdała ziemnego
+        - oleje roślinne z migdała ziemnego uwodornione
+        - oleje roślinne uwodornione z migdała ziemnego
+        - utwardzony tłuszcz roślinny z migdałów ziemnych
+        - tłuszcz roślinny z migdałów ziemnych utwardzony
+        - tłuszcz roślinny utwardzony z migdałów ziemnych
+        - uwodorniony tłuszcz roślinny z migdałów ziemnych
+        - tłuszcz roślinny z migdałów ziemnych uwodorniony
+        - tłuszcz roślinny uwodorniony z migdałów ziemnych
+        - utwardzone tłuszcze roślinne z migdałów ziemnych
+        - tłuszcze roślinne z migdałów ziemnych utwardzone
+        - tłuszcze roślinne utwardzone z migdałów ziemnych
+        - uwodornione tłuszcze roślinne z migdałów ziemnych
+        - tłuszcze roślinne z migdałów ziemnych uwodornione
+        - tłuszcze roślinne uwodornione z migdałów ziemnych
+        - utwardzony olej roślinny z migdałów ziemnych
+        - olej roślinny z migdałów ziemnych utwardzony
+        - olej roślinny utwardzony z migdałów ziemnych
+        - uwodorniony olej roślinny z migdałów ziemnych
+        - olej roślinny z migdałów ziemnych uwodorniony
+        - olej roślinny uwodorniony z migdałów ziemnych
+        - utwardzone oleje roślinne z migdałów ziemnych
+        - oleje roślinne z migdałów ziemnych utwardzone
+        - oleje roślinne utwardzone z migdałów ziemnych
+        - uwodornione oleje roślinne z migdałów ziemnych
+        - oleje roślinne z migdałów ziemnych uwodornione
+        - oleje roślinne uwodornione z migdałów ziemnych
+        - utwardzony tłuszcz roślinny z orzechów tygrysich
+        - tłuszcz roślinny z orzechów tygrysich utwardzony
+        - tłuszcz roślinny utwardzony z orzechów tygrysich
+        - uwodorniony tłuszcz roślinny z orzechów tygrysich
+        - tłuszcz roślinny z orzechów tygrysich uwodorniony
+        - tłuszcz roślinny uwodorniony z orzechów tygrysich
+        - utwardzone tłuszcze roślinne z orzechów tygrysich
+        - tłuszcze roślinne z orzechów tygrysich utwardzone
+        - tłuszcze roślinne utwardzone z orzechów tygrysich
+        - uwodornione tłuszcze roślinne z orzechów tygrysich
+        - tłuszcze roślinne z orzechów tygrysich uwodornione
+        - tłuszcze roślinne uwodornione z orzechów tygrysich
+        - utwardzony olej roślinny z orzechów tygrysich
+        - olej roślinny z orzechów tygrysich utwardzony
+        - olej roślinny utwardzony z orzechów tygrysich
+        - uwodorniony olej roślinny z orzechów tygrysich
+        - olej roślinny z orzechów tygrysich uwodorniony
+        - olej roślinny uwodorniony z orzechów tygrysich
+        - utwardzone oleje roślinne z orzechów tygrysich
+        - oleje roślinne z orzechów tygrysich utwardzone
+        - oleje roślinne utwardzone z orzechów tygrysich
+        - uwodornione oleje roślinne z orzechów tygrysich
+        - oleje roślinne z orzechów tygrysich uwodornione
+        - oleje roślinne uwodornione z orzechów tygrysich
+        - utwardzony tłuszcz roślinny z orzeszków tygrysich
+        - tłuszcz roślinny z orzeszków tygrysich utwardzony
+        - tłuszcz roślinny utwardzony z orzeszków tygrysich
+        - uwodorniony tłuszcz roślinny z orzeszków tygrysich
+        - tłuszcz roślinny z orzeszków tygrysich uwodorniony
+        - tłuszcz roślinny uwodorniony z orzeszków tygrysich
+        - utwardzone tłuszcze roślinne z orzeszków tygrysich
+        - tłuszcze roślinne z orzeszków tygrysich utwardzone
+        - tłuszcze roślinne utwardzone z orzeszków tygrysich
+        - uwodornione tłuszcze roślinne z orzeszków tygrysich
+        - tłuszcze roślinne z orzeszków tygrysich uwodornione
+        - tłuszcze roślinne uwodornione z orzeszków tygrysich
+        - utwardzony olej roślinny z orzeszków tygrysich
+        - olej roślinny z orzeszków tygrysich utwardzony
+        - olej roślinny utwardzony z orzeszków tygrysich
+        - uwodorniony olej roślinny z orzeszków tygrysich
+        - olej roślinny z orzeszków tygrysich uwodorniony
+        - olej roślinny uwodorniony z orzeszków tygrysich
+        - utwardzone oleje roślinne z orzeszków tygrysich
+        - oleje roślinne z orzeszków tygrysich utwardzone
+        - oleje roślinne utwardzone z orzeszków tygrysich
+        - uwodornione oleje roślinne z orzeszków tygrysich
+        - oleje roślinne z orzeszków tygrysich uwodornione
+        - oleje roślinne uwodornione z orzeszków tygrysich
+        - utwardzony olej z bulw cibory jadalnej
+        - olej z bulw cibory jadalnej utwardzony
+        - uwodorniony olej z bulw cibory jadalnej
+        - olej z bulw cibory jadalnej uwodorniony
+        - utwardzony tłuszcz roślinny z bulw cibory jadalnej
+        - tłuszcz roślinny z bulw cibory jadalnej utwardzony
+        - tłuszcz roślinny utwardzony z bulw cibory jadalnej
+        - uwodorniony tłuszcz roślinny z bulw cibory jadalnej
+        - tłuszcz roślinny z bulw cibory jadalnej uwodorniony
+        - tłuszcz roślinny uwodorniony z bulw cibory jadalnej
+        - utwardzone tłuszcze roślinne z bulw cibory jadalnej
+        - tłuszcze roślinne z bulw cibory jadalnej utwardzone
+        - tłuszcze roślinne utwardzone z bulw cibory jadalnej
+        - uwodornione tłuszcze roślinne z bulw cibory jadalnej
+        - tłuszcze roślinne z bulw cibory jadalnej uwodornione
+        - tłuszcze roślinne uwodornione z bulw cibory jadalnej
+        - utwardzony olej roślinny z bulw cibory jadalnej
+        - olej roślinny z bulw cibory jadalnej utwardzony
+        - olej roślinny utwardzony z bulw cibory jadalnej
+        - uwodorniony olej roślinny z bulw cibory jadalnej
+        - olej roślinny z bulw cibory jadalnej uwodorniony
+        - olej roślinny uwodorniony z bulw cibory jadalnej
+        - utwardzone oleje roślinne z bulw cibory jadalnej
+        - oleje roślinne z bulw cibory jadalnej utwardzone
+        - oleje roślinne utwardzone z bulw cibory jadalnej
+        - uwodornione oleje roślinne z bulw cibory jadalnej
+        - oleje roślinne z bulw cibory jadalnej uwodornione
+        - oleje roślinne uwodornione z bulw cibory jadalnej
+        - olej uwodorniony z migdałów ziemnych
+        - olej utwardzony z migdałów ziemnych
+    process:
+      en: "Tiger nut oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
+      pl: "Olej z migdałów ziemnych utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
+    tells:
+      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!partially )(?<!fully )(?<!totally )(?<!teilweise )(?<!vollstandig )(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:utwardzon|uwodornion|utwardzan[yea]\b|uwodornian[yea]\b|hydrogenated|gehartet)|(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:po|podda\w*|podlega\w*)(?: (?!(?:nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b)\S+){0,3}? (?:uwodornieni|uwodornian|utwardzeni|utwardzan)'
+  - id: partially-hydrogenated
+    names:
+      en:
+        - partially hydrogenated tiger nut oil
+        - partially hydrogenated tigernut oil
+        - partially hydrogenated tiger nuts oil
+        - partially hydrogenated earth almond oil
+        - partially hydrogenated chufa oil
+        - partially hydrogenated cyperus esculentus oil
+        - partially hydrogenated earth almonds oil
+        - partially hydrogenated tigernuts oil
+        - partially hydrogenated chufa nut oil
+        - partially hydrogenated chufa nuts oil
+      pl:
+        - częściowo utwardzony olej z migdałów ziemnych
+        - olej z migdałów ziemnych częściowo utwardzony
+        - częściowo uwodorniony olej z migdałów ziemnych
+        - olej z migdałów ziemnych częściowo uwodorniony
+        - częściowo utwardzony olej z migdała ziemnego
+        - olej z migdała ziemnego częściowo utwardzony
+        - częściowo uwodorniony olej z migdała ziemnego
+        - olej z migdała ziemnego częściowo uwodorniony
+        - częściowo utwardzony olej z orzechów tygrysich
+        - olej z orzechów tygrysich częściowo utwardzony
+        - częściowo uwodorniony olej z orzechów tygrysich
+        - olej z orzechów tygrysich częściowo uwodorniony
+        - częściowo utwardzony olej z orzeszków tygrysich
+        - olej z orzeszków tygrysich częściowo utwardzony
+        - częściowo uwodorniony olej z orzeszków tygrysich
+        - olej z orzeszków tygrysich częściowo uwodorniony
+        - częściowo utwardzony olej z cibory jadalnej
+        - olej z cibory jadalnej częściowo utwardzony
+        - częściowo uwodorniony olej z cibory jadalnej
+        - olej z cibory jadalnej częściowo uwodorniony
+        - częściowo utwardzony olej cibory jadalnej
+        - olej cibory jadalnej częściowo utwardzony
+        - częściowo uwodorniony olej cibory jadalnej
+        - olej cibory jadalnej częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny z cibory jadalnej
+        - tłuszcz roślinny z cibory jadalnej częściowo utwardzony
+        - tłuszcz roślinny częściowo utwardzony z cibory jadalnej
+        - częściowo uwodorniony tłuszcz roślinny z cibory jadalnej
+        - tłuszcz roślinny z cibory jadalnej częściowo uwodorniony
+        - tłuszcz roślinny częściowo uwodorniony z cibory jadalnej
+        - częściowo utwardzone tłuszcze roślinne z cibory jadalnej
+        - tłuszcze roślinne z cibory jadalnej częściowo utwardzone
+        - tłuszcze roślinne częściowo utwardzone z cibory jadalnej
+        - częściowo uwodornione tłuszcze roślinne z cibory jadalnej
+        - tłuszcze roślinne z cibory jadalnej częściowo uwodornione
+        - tłuszcze roślinne częściowo uwodornione z cibory jadalnej
+        - częściowo utwardzony olej roślinny z cibory jadalnej
+        - olej roślinny z cibory jadalnej częściowo utwardzony
+        - olej roślinny częściowo utwardzony z cibory jadalnej
+        - częściowo uwodorniony olej roślinny z cibory jadalnej
+        - olej roślinny z cibory jadalnej częściowo uwodorniony
+        - olej roślinny częściowo uwodorniony z cibory jadalnej
+        - częściowo utwardzone oleje roślinne z cibory jadalnej
+        - oleje roślinne z cibory jadalnej częściowo utwardzone
+        - oleje roślinne częściowo utwardzone z cibory jadalnej
+        - częściowo uwodornione oleje roślinne z cibory jadalnej
+        - oleje roślinne z cibory jadalnej częściowo uwodornione
+        - oleje roślinne częściowo uwodornione z cibory jadalnej
+        - częściowo utwardzony tłuszcz roślinny z migdała ziemnego
+        - tłuszcz roślinny z migdała ziemnego częściowo utwardzony
+        - tłuszcz roślinny częściowo utwardzony z migdała ziemnego
+        - częściowo uwodorniony tłuszcz roślinny z migdała ziemnego
+        - tłuszcz roślinny z migdała ziemnego częściowo uwodorniony
+        - tłuszcz roślinny częściowo uwodorniony z migdała ziemnego
+        - częściowo utwardzone tłuszcze roślinne z migdała ziemnego
+        - tłuszcze roślinne z migdała ziemnego częściowo utwardzone
+        - tłuszcze roślinne częściowo utwardzone z migdała ziemnego
+        - częściowo uwodornione tłuszcze roślinne z migdała ziemnego
+        - tłuszcze roślinne z migdała ziemnego częściowo uwodornione
+        - tłuszcze roślinne częściowo uwodornione z migdała ziemnego
+        - częściowo utwardzony olej roślinny z migdała ziemnego
+        - olej roślinny z migdała ziemnego częściowo utwardzony
+        - olej roślinny częściowo utwardzony z migdała ziemnego
+        - częściowo uwodorniony olej roślinny z migdała ziemnego
+        - olej roślinny z migdała ziemnego częściowo uwodorniony
+        - olej roślinny częściowo uwodorniony z migdała ziemnego
+        - częściowo utwardzone oleje roślinne z migdała ziemnego
+        - oleje roślinne z migdała ziemnego częściowo utwardzone
+        - oleje roślinne częściowo utwardzone z migdała ziemnego
+        - częściowo uwodornione oleje roślinne z migdała ziemnego
+        - oleje roślinne z migdała ziemnego częściowo uwodornione
+        - oleje roślinne częściowo uwodornione z migdała ziemnego
+        - częściowo utwardzony tłuszcz roślinny z migdałów ziemnych
+        - tłuszcz roślinny z migdałów ziemnych częściowo utwardzony
+        - tłuszcz roślinny częściowo utwardzony z migdałów ziemnych
+        - częściowo uwodorniony tłuszcz roślinny z migdałów ziemnych
+        - tłuszcz roślinny z migdałów ziemnych częściowo uwodorniony
+        - tłuszcz roślinny częściowo uwodorniony z migdałów ziemnych
+        - częściowo utwardzone tłuszcze roślinne z migdałów ziemnych
+        - tłuszcze roślinne z migdałów ziemnych częściowo utwardzone
+        - tłuszcze roślinne częściowo utwardzone z migdałów ziemnych
+        - częściowo uwodornione tłuszcze roślinne z migdałów ziemnych
+        - tłuszcze roślinne z migdałów ziemnych częściowo uwodornione
+        - tłuszcze roślinne częściowo uwodornione z migdałów ziemnych
+        - częściowo utwardzony olej roślinny z migdałów ziemnych
+        - olej roślinny z migdałów ziemnych częściowo utwardzony
+        - olej roślinny częściowo utwardzony z migdałów ziemnych
+        - częściowo uwodorniony olej roślinny z migdałów ziemnych
+        - olej roślinny z migdałów ziemnych częściowo uwodorniony
+        - olej roślinny częściowo uwodorniony z migdałów ziemnych
+        - częściowo utwardzone oleje roślinne z migdałów ziemnych
+        - oleje roślinne z migdałów ziemnych częściowo utwardzone
+        - oleje roślinne częściowo utwardzone z migdałów ziemnych
+        - częściowo uwodornione oleje roślinne z migdałów ziemnych
+        - oleje roślinne z migdałów ziemnych częściowo uwodornione
+        - oleje roślinne częściowo uwodornione z migdałów ziemnych
+        - częściowo utwardzony tłuszcz roślinny z orzechów tygrysich
+        - tłuszcz roślinny z orzechów tygrysich częściowo utwardzony
+        - tłuszcz roślinny częściowo utwardzony z orzechów tygrysich
+        - częściowo uwodorniony tłuszcz roślinny z orzechów tygrysich
+        - tłuszcz roślinny z orzechów tygrysich częściowo uwodorniony
+        - tłuszcz roślinny częściowo uwodorniony z orzechów tygrysich
+        - częściowo utwardzone tłuszcze roślinne z orzechów tygrysich
+        - tłuszcze roślinne z orzechów tygrysich częściowo utwardzone
+        - tłuszcze roślinne częściowo utwardzone z orzechów tygrysich
+        - częściowo uwodornione tłuszcze roślinne z orzechów tygrysich
+        - tłuszcze roślinne z orzechów tygrysich częściowo uwodornione
+        - tłuszcze roślinne częściowo uwodornione z orzechów tygrysich
+        - częściowo utwardzony olej roślinny z orzechów tygrysich
+        - olej roślinny z orzechów tygrysich częściowo utwardzony
+        - olej roślinny częściowo utwardzony z orzechów tygrysich
+        - częściowo uwodorniony olej roślinny z orzechów tygrysich
+        - olej roślinny z orzechów tygrysich częściowo uwodorniony
+        - olej roślinny częściowo uwodorniony z orzechów tygrysich
+        - częściowo utwardzone oleje roślinne z orzechów tygrysich
+        - oleje roślinne z orzechów tygrysich częściowo utwardzone
+        - oleje roślinne częściowo utwardzone z orzechów tygrysich
+        - częściowo uwodornione oleje roślinne z orzechów tygrysich
+        - oleje roślinne z orzechów tygrysich częściowo uwodornione
+        - oleje roślinne częściowo uwodornione z orzechów tygrysich
+        - częściowo utwardzony tłuszcz roślinny z orzeszków tygrysich
+        - tłuszcz roślinny z orzeszków tygrysich częściowo utwardzony
+        - tłuszcz roślinny częściowo utwardzony z orzeszków tygrysich
+        - częściowo uwodorniony tłuszcz roślinny z orzeszków tygrysich
+        - tłuszcz roślinny z orzeszków tygrysich częściowo uwodorniony
+        - tłuszcz roślinny częściowo uwodorniony z orzeszków tygrysich
+        - częściowo utwardzone tłuszcze roślinne z orzeszków tygrysich
+        - tłuszcze roślinne z orzeszków tygrysich częściowo utwardzone
+        - tłuszcze roślinne częściowo utwardzone z orzeszków tygrysich
+        - częściowo uwodornione tłuszcze roślinne z orzeszków tygrysich
+        - tłuszcze roślinne z orzeszków tygrysich częściowo uwodornione
+        - tłuszcze roślinne częściowo uwodornione z orzeszków tygrysich
+        - częściowo utwardzony olej roślinny z orzeszków tygrysich
+        - olej roślinny z orzeszków tygrysich częściowo utwardzony
+        - olej roślinny częściowo utwardzony z orzeszków tygrysich
+        - częściowo uwodorniony olej roślinny z orzeszków tygrysich
+        - olej roślinny z orzeszków tygrysich częściowo uwodorniony
+        - olej roślinny częściowo uwodorniony z orzeszków tygrysich
+        - częściowo utwardzone oleje roślinne z orzeszków tygrysich
+        - oleje roślinne z orzeszków tygrysich częściowo utwardzone
+        - oleje roślinne częściowo utwardzone z orzeszków tygrysich
+        - częściowo uwodornione oleje roślinne z orzeszków tygrysich
+        - oleje roślinne z orzeszków tygrysich częściowo uwodornione
+        - oleje roślinne częściowo uwodornione z orzeszków tygrysich
+        - częściowo utwardzony olej z bulw cibory jadalnej
+        - olej z bulw cibory jadalnej częściowo utwardzony
+        - częściowo uwodorniony olej z bulw cibory jadalnej
+        - olej z bulw cibory jadalnej częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny z bulw cibory jadalnej
+        - tłuszcz roślinny z bulw cibory jadalnej częściowo utwardzony
+        - tłuszcz roślinny częściowo utwardzony z bulw cibory jadalnej
+        - częściowo uwodorniony tłuszcz roślinny z bulw cibory jadalnej
+        - tłuszcz roślinny z bulw cibory jadalnej częściowo uwodorniony
+        - tłuszcz roślinny częściowo uwodorniony z bulw cibory jadalnej
+        - częściowo utwardzone tłuszcze roślinne z bulw cibory jadalnej
+        - tłuszcze roślinne z bulw cibory jadalnej częściowo utwardzone
+        - tłuszcze roślinne częściowo utwardzone z bulw cibory jadalnej
+        - częściowo uwodornione tłuszcze roślinne z bulw cibory jadalnej
+        - tłuszcze roślinne z bulw cibory jadalnej częściowo uwodornione
+        - tłuszcze roślinne częściowo uwodornione z bulw cibory jadalnej
+        - częściowo utwardzony olej roślinny z bulw cibory jadalnej
+        - olej roślinny z bulw cibory jadalnej częściowo utwardzony
+        - olej roślinny częściowo utwardzony z bulw cibory jadalnej
+        - częściowo uwodorniony olej roślinny z bulw cibory jadalnej
+        - olej roślinny z bulw cibory jadalnej częściowo uwodorniony
+        - olej roślinny częściowo uwodorniony z bulw cibory jadalnej
+        - częściowo utwardzone oleje roślinne z bulw cibory jadalnej
+        - oleje roślinne z bulw cibory jadalnej częściowo utwardzone
+        - oleje roślinne częściowo utwardzone z bulw cibory jadalnej
+        - częściowo uwodornione oleje roślinne z bulw cibory jadalnej
+        - oleje roślinne z bulw cibory jadalnej częściowo uwodornione
+        - oleje roślinne częściowo uwodornione z bulw cibory jadalnej
+        - olej częściowo uwodorniony z migdałów ziemnych
+        - olej częściowo utwardzony z migdałów ziemnych
+    process:
+      en: "Tiger nut oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
+      pl: "Olej z migdałów ziemnych, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
+    tells:
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )czesciowo (?:utwardzon|uwodorn)'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )partially hydrogenated'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )teilweise gehartet'
+  - id: fully-hydrogenated
+    names:
+      en:
+        - fully hydrogenated tiger nut oil
+        - totally hydrogenated tiger nut oil
+        - fully hydrogenated tigernut oil
+        - totally hydrogenated tigernut oil
+        - fully hydrogenated tiger nuts oil
+        - totally hydrogenated tiger nuts oil
+        - fully hydrogenated earth almond oil
+        - totally hydrogenated earth almond oil
+        - fully hydrogenated chufa oil
+        - totally hydrogenated chufa oil
+        - fully hydrogenated cyperus esculentus oil
+        - totally hydrogenated cyperus esculentus oil
+        - fully hydrogenated earth almonds oil
+        - totally hydrogenated earth almonds oil
+        - fully hydrogenated tigernuts oil
+        - totally hydrogenated tigernuts oil
+        - fully hydrogenated chufa nut oil
+        - totally hydrogenated chufa nut oil
+        - fully hydrogenated chufa nuts oil
+        - totally hydrogenated chufa nuts oil
+      pl:
+        - całkowicie utwardzony olej z migdałów ziemnych
+        - olej z migdałów ziemnych całkowicie utwardzony
+        - całkowicie uwodorniony olej z migdałów ziemnych
+        - olej z migdałów ziemnych całkowicie uwodorniony
+        - w pełni utwardzony olej z migdałów ziemnych
+        - olej z migdałów ziemnych w pełni utwardzony
+        - w pełni uwodorniony olej z migdałów ziemnych
+        - olej z migdałów ziemnych w pełni uwodorniony
+        - całkowicie utwardzony olej z migdała ziemnego
+        - olej z migdała ziemnego całkowicie utwardzony
+        - całkowicie uwodorniony olej z migdała ziemnego
+        - olej z migdała ziemnego całkowicie uwodorniony
+        - w pełni utwardzony olej z migdała ziemnego
+        - olej z migdała ziemnego w pełni utwardzony
+        - w pełni uwodorniony olej z migdała ziemnego
+        - olej z migdała ziemnego w pełni uwodorniony
+        - całkowicie utwardzony olej z orzechów tygrysich
+        - olej z orzechów tygrysich całkowicie utwardzony
+        - całkowicie uwodorniony olej z orzechów tygrysich
+        - olej z orzechów tygrysich całkowicie uwodorniony
+        - w pełni utwardzony olej z orzechów tygrysich
+        - olej z orzechów tygrysich w pełni utwardzony
+        - w pełni uwodorniony olej z orzechów tygrysich
+        - olej z orzechów tygrysich w pełni uwodorniony
+        - całkowicie utwardzony olej z orzeszków tygrysich
+        - olej z orzeszków tygrysich całkowicie utwardzony
+        - całkowicie uwodorniony olej z orzeszków tygrysich
+        - olej z orzeszków tygrysich całkowicie uwodorniony
+        - w pełni utwardzony olej z orzeszków tygrysich
+        - olej z orzeszków tygrysich w pełni utwardzony
+        - w pełni uwodorniony olej z orzeszków tygrysich
+        - olej z orzeszków tygrysich w pełni uwodorniony
+        - całkowicie utwardzony olej z cibory jadalnej
+        - olej z cibory jadalnej całkowicie utwardzony
+        - całkowicie uwodorniony olej z cibory jadalnej
+        - olej z cibory jadalnej całkowicie uwodorniony
+        - w pełni utwardzony olej z cibory jadalnej
+        - olej z cibory jadalnej w pełni utwardzony
+        - w pełni uwodorniony olej z cibory jadalnej
+        - olej z cibory jadalnej w pełni uwodorniony
+        - całkowicie utwardzony olej cibory jadalnej
+        - olej cibory jadalnej całkowicie utwardzony
+        - całkowicie uwodorniony olej cibory jadalnej
+        - olej cibory jadalnej całkowicie uwodorniony
+        - w pełni utwardzony olej cibory jadalnej
+        - olej cibory jadalnej w pełni utwardzony
+        - w pełni uwodorniony olej cibory jadalnej
+        - olej cibory jadalnej w pełni uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny z cibory jadalnej
+        - tłuszcz roślinny z cibory jadalnej całkowicie utwardzony
+        - tłuszcz roślinny całkowicie utwardzony z cibory jadalnej
+        - całkowicie uwodorniony tłuszcz roślinny z cibory jadalnej
+        - tłuszcz roślinny z cibory jadalnej całkowicie uwodorniony
+        - tłuszcz roślinny całkowicie uwodorniony z cibory jadalnej
+        - w pełni utwardzony tłuszcz roślinny z cibory jadalnej
+        - tłuszcz roślinny z cibory jadalnej w pełni utwardzony
+        - tłuszcz roślinny w pełni utwardzony z cibory jadalnej
+        - w pełni uwodorniony tłuszcz roślinny z cibory jadalnej
+        - tłuszcz roślinny z cibory jadalnej w pełni uwodorniony
+        - tłuszcz roślinny w pełni uwodorniony z cibory jadalnej
+        - całkowicie utwardzone tłuszcze roślinne z cibory jadalnej
+        - tłuszcze roślinne z cibory jadalnej całkowicie utwardzone
+        - tłuszcze roślinne całkowicie utwardzone z cibory jadalnej
+        - całkowicie uwodornione tłuszcze roślinne z cibory jadalnej
+        - tłuszcze roślinne z cibory jadalnej całkowicie uwodornione
+        - tłuszcze roślinne całkowicie uwodornione z cibory jadalnej
+        - w pełni utwardzone tłuszcze roślinne z cibory jadalnej
+        - tłuszcze roślinne z cibory jadalnej w pełni utwardzone
+        - tłuszcze roślinne w pełni utwardzone z cibory jadalnej
+        - w pełni uwodornione tłuszcze roślinne z cibory jadalnej
+        - tłuszcze roślinne z cibory jadalnej w pełni uwodornione
+        - tłuszcze roślinne w pełni uwodornione z cibory jadalnej
+        - całkowicie utwardzony olej roślinny z cibory jadalnej
+        - olej roślinny z cibory jadalnej całkowicie utwardzony
+        - olej roślinny całkowicie utwardzony z cibory jadalnej
+        - całkowicie uwodorniony olej roślinny z cibory jadalnej
+        - olej roślinny z cibory jadalnej całkowicie uwodorniony
+        - olej roślinny całkowicie uwodorniony z cibory jadalnej
+        - w pełni utwardzony olej roślinny z cibory jadalnej
+        - olej roślinny z cibory jadalnej w pełni utwardzony
+        - olej roślinny w pełni utwardzony z cibory jadalnej
+        - w pełni uwodorniony olej roślinny z cibory jadalnej
+        - olej roślinny z cibory jadalnej w pełni uwodorniony
+        - olej roślinny w pełni uwodorniony z cibory jadalnej
+        - całkowicie utwardzone oleje roślinne z cibory jadalnej
+        - oleje roślinne z cibory jadalnej całkowicie utwardzone
+        - oleje roślinne całkowicie utwardzone z cibory jadalnej
+        - całkowicie uwodornione oleje roślinne z cibory jadalnej
+        - oleje roślinne z cibory jadalnej całkowicie uwodornione
+        - oleje roślinne całkowicie uwodornione z cibory jadalnej
+        - w pełni utwardzone oleje roślinne z cibory jadalnej
+        - oleje roślinne z cibory jadalnej w pełni utwardzone
+        - oleje roślinne w pełni utwardzone z cibory jadalnej
+        - w pełni uwodornione oleje roślinne z cibory jadalnej
+        - oleje roślinne z cibory jadalnej w pełni uwodornione
+        - oleje roślinne w pełni uwodornione z cibory jadalnej
+        - całkowicie utwardzony tłuszcz roślinny z migdała ziemnego
+        - tłuszcz roślinny z migdała ziemnego całkowicie utwardzony
+        - tłuszcz roślinny całkowicie utwardzony z migdała ziemnego
+        - całkowicie uwodorniony tłuszcz roślinny z migdała ziemnego
+        - tłuszcz roślinny z migdała ziemnego całkowicie uwodorniony
+        - tłuszcz roślinny całkowicie uwodorniony z migdała ziemnego
+        - w pełni utwardzony tłuszcz roślinny z migdała ziemnego
+        - tłuszcz roślinny z migdała ziemnego w pełni utwardzony
+        - tłuszcz roślinny w pełni utwardzony z migdała ziemnego
+        - w pełni uwodorniony tłuszcz roślinny z migdała ziemnego
+        - tłuszcz roślinny z migdała ziemnego w pełni uwodorniony
+        - tłuszcz roślinny w pełni uwodorniony z migdała ziemnego
+        - całkowicie utwardzone tłuszcze roślinne z migdała ziemnego
+        - tłuszcze roślinne z migdała ziemnego całkowicie utwardzone
+        - tłuszcze roślinne całkowicie utwardzone z migdała ziemnego
+        - całkowicie uwodornione tłuszcze roślinne z migdała ziemnego
+        - tłuszcze roślinne z migdała ziemnego całkowicie uwodornione
+        - tłuszcze roślinne całkowicie uwodornione z migdała ziemnego
+        - w pełni utwardzone tłuszcze roślinne z migdała ziemnego
+        - tłuszcze roślinne z migdała ziemnego w pełni utwardzone
+        - tłuszcze roślinne w pełni utwardzone z migdała ziemnego
+        - w pełni uwodornione tłuszcze roślinne z migdała ziemnego
+        - tłuszcze roślinne z migdała ziemnego w pełni uwodornione
+        - tłuszcze roślinne w pełni uwodornione z migdała ziemnego
+        - całkowicie utwardzony olej roślinny z migdała ziemnego
+        - olej roślinny z migdała ziemnego całkowicie utwardzony
+        - olej roślinny całkowicie utwardzony z migdała ziemnego
+        - całkowicie uwodorniony olej roślinny z migdała ziemnego
+        - olej roślinny z migdała ziemnego całkowicie uwodorniony
+        - olej roślinny całkowicie uwodorniony z migdała ziemnego
+        - w pełni utwardzony olej roślinny z migdała ziemnego
+        - olej roślinny z migdała ziemnego w pełni utwardzony
+        - olej roślinny w pełni utwardzony z migdała ziemnego
+        - w pełni uwodorniony olej roślinny z migdała ziemnego
+        - olej roślinny z migdała ziemnego w pełni uwodorniony
+        - olej roślinny w pełni uwodorniony z migdała ziemnego
+        - całkowicie utwardzone oleje roślinne z migdała ziemnego
+        - oleje roślinne z migdała ziemnego całkowicie utwardzone
+        - oleje roślinne całkowicie utwardzone z migdała ziemnego
+        - całkowicie uwodornione oleje roślinne z migdała ziemnego
+        - oleje roślinne z migdała ziemnego całkowicie uwodornione
+        - oleje roślinne całkowicie uwodornione z migdała ziemnego
+        - w pełni utwardzone oleje roślinne z migdała ziemnego
+        - oleje roślinne z migdała ziemnego w pełni utwardzone
+        - oleje roślinne w pełni utwardzone z migdała ziemnego
+        - w pełni uwodornione oleje roślinne z migdała ziemnego
+        - oleje roślinne z migdała ziemnego w pełni uwodornione
+        - oleje roślinne w pełni uwodornione z migdała ziemnego
+        - całkowicie utwardzony tłuszcz roślinny z migdałów ziemnych
+        - tłuszcz roślinny z migdałów ziemnych całkowicie utwardzony
+        - tłuszcz roślinny całkowicie utwardzony z migdałów ziemnych
+        - całkowicie uwodorniony tłuszcz roślinny z migdałów ziemnych
+        - tłuszcz roślinny z migdałów ziemnych całkowicie uwodorniony
+        - tłuszcz roślinny całkowicie uwodorniony z migdałów ziemnych
+        - w pełni utwardzony tłuszcz roślinny z migdałów ziemnych
+        - tłuszcz roślinny z migdałów ziemnych w pełni utwardzony
+        - tłuszcz roślinny w pełni utwardzony z migdałów ziemnych
+        - w pełni uwodorniony tłuszcz roślinny z migdałów ziemnych
+        - tłuszcz roślinny z migdałów ziemnych w pełni uwodorniony
+        - tłuszcz roślinny w pełni uwodorniony z migdałów ziemnych
+        - całkowicie utwardzone tłuszcze roślinne z migdałów ziemnych
+        - tłuszcze roślinne z migdałów ziemnych całkowicie utwardzone
+        - tłuszcze roślinne całkowicie utwardzone z migdałów ziemnych
+        - całkowicie uwodornione tłuszcze roślinne z migdałów ziemnych
+        - tłuszcze roślinne z migdałów ziemnych całkowicie uwodornione
+        - tłuszcze roślinne całkowicie uwodornione z migdałów ziemnych
+        - w pełni utwardzone tłuszcze roślinne z migdałów ziemnych
+        - tłuszcze roślinne z migdałów ziemnych w pełni utwardzone
+        - tłuszcze roślinne w pełni utwardzone z migdałów ziemnych
+        - w pełni uwodornione tłuszcze roślinne z migdałów ziemnych
+        - tłuszcze roślinne z migdałów ziemnych w pełni uwodornione
+        - tłuszcze roślinne w pełni uwodornione z migdałów ziemnych
+        - całkowicie utwardzony olej roślinny z migdałów ziemnych
+        - olej roślinny z migdałów ziemnych całkowicie utwardzony
+        - olej roślinny całkowicie utwardzony z migdałów ziemnych
+        - całkowicie uwodorniony olej roślinny z migdałów ziemnych
+        - olej roślinny z migdałów ziemnych całkowicie uwodorniony
+        - olej roślinny całkowicie uwodorniony z migdałów ziemnych
+        - w pełni utwardzony olej roślinny z migdałów ziemnych
+        - olej roślinny z migdałów ziemnych w pełni utwardzony
+        - olej roślinny w pełni utwardzony z migdałów ziemnych
+        - w pełni uwodorniony olej roślinny z migdałów ziemnych
+        - olej roślinny z migdałów ziemnych w pełni uwodorniony
+        - olej roślinny w pełni uwodorniony z migdałów ziemnych
+        - całkowicie utwardzone oleje roślinne z migdałów ziemnych
+        - oleje roślinne z migdałów ziemnych całkowicie utwardzone
+        - oleje roślinne całkowicie utwardzone z migdałów ziemnych
+        - całkowicie uwodornione oleje roślinne z migdałów ziemnych
+        - oleje roślinne z migdałów ziemnych całkowicie uwodornione
+        - oleje roślinne całkowicie uwodornione z migdałów ziemnych
+        - w pełni utwardzone oleje roślinne z migdałów ziemnych
+        - oleje roślinne z migdałów ziemnych w pełni utwardzone
+        - oleje roślinne w pełni utwardzone z migdałów ziemnych
+        - w pełni uwodornione oleje roślinne z migdałów ziemnych
+        - oleje roślinne z migdałów ziemnych w pełni uwodornione
+        - oleje roślinne w pełni uwodornione z migdałów ziemnych
+        - całkowicie utwardzony tłuszcz roślinny z orzechów tygrysich
+        - tłuszcz roślinny z orzechów tygrysich całkowicie utwardzony
+        - tłuszcz roślinny całkowicie utwardzony z orzechów tygrysich
+        - całkowicie uwodorniony tłuszcz roślinny z orzechów tygrysich
+        - tłuszcz roślinny z orzechów tygrysich całkowicie uwodorniony
+        - tłuszcz roślinny całkowicie uwodorniony z orzechów tygrysich
+        - w pełni utwardzony tłuszcz roślinny z orzechów tygrysich
+        - tłuszcz roślinny z orzechów tygrysich w pełni utwardzony
+        - tłuszcz roślinny w pełni utwardzony z orzechów tygrysich
+        - w pełni uwodorniony tłuszcz roślinny z orzechów tygrysich
+        - tłuszcz roślinny z orzechów tygrysich w pełni uwodorniony
+        - tłuszcz roślinny w pełni uwodorniony z orzechów tygrysich
+        - całkowicie utwardzone tłuszcze roślinne z orzechów tygrysich
+        - tłuszcze roślinne z orzechów tygrysich całkowicie utwardzone
+        - tłuszcze roślinne całkowicie utwardzone z orzechów tygrysich
+        - całkowicie uwodornione tłuszcze roślinne z orzechów tygrysich
+        - tłuszcze roślinne z orzechów tygrysich całkowicie uwodornione
+        - tłuszcze roślinne całkowicie uwodornione z orzechów tygrysich
+        - w pełni utwardzone tłuszcze roślinne z orzechów tygrysich
+        - tłuszcze roślinne z orzechów tygrysich w pełni utwardzone
+        - tłuszcze roślinne w pełni utwardzone z orzechów tygrysich
+        - w pełni uwodornione tłuszcze roślinne z orzechów tygrysich
+        - tłuszcze roślinne z orzechów tygrysich w pełni uwodornione
+        - tłuszcze roślinne w pełni uwodornione z orzechów tygrysich
+        - całkowicie utwardzony olej roślinny z orzechów tygrysich
+        - olej roślinny z orzechów tygrysich całkowicie utwardzony
+        - olej roślinny całkowicie utwardzony z orzechów tygrysich
+        - całkowicie uwodorniony olej roślinny z orzechów tygrysich
+        - olej roślinny z orzechów tygrysich całkowicie uwodorniony
+        - olej roślinny całkowicie uwodorniony z orzechów tygrysich
+        - w pełni utwardzony olej roślinny z orzechów tygrysich
+        - olej roślinny z orzechów tygrysich w pełni utwardzony
+        - olej roślinny w pełni utwardzony z orzechów tygrysich
+        - w pełni uwodorniony olej roślinny z orzechów tygrysich
+        - olej roślinny z orzechów tygrysich w pełni uwodorniony
+        - olej roślinny w pełni uwodorniony z orzechów tygrysich
+        - całkowicie utwardzone oleje roślinne z orzechów tygrysich
+        - oleje roślinne z orzechów tygrysich całkowicie utwardzone
+        - oleje roślinne całkowicie utwardzone z orzechów tygrysich
+        - całkowicie uwodornione oleje roślinne z orzechów tygrysich
+        - oleje roślinne z orzechów tygrysich całkowicie uwodornione
+        - oleje roślinne całkowicie uwodornione z orzechów tygrysich
+        - w pełni utwardzone oleje roślinne z orzechów tygrysich
+        - oleje roślinne z orzechów tygrysich w pełni utwardzone
+        - oleje roślinne w pełni utwardzone z orzechów tygrysich
+        - w pełni uwodornione oleje roślinne z orzechów tygrysich
+        - oleje roślinne z orzechów tygrysich w pełni uwodornione
+        - oleje roślinne w pełni uwodornione z orzechów tygrysich
+        - całkowicie utwardzony tłuszcz roślinny z orzeszków tygrysich
+        - tłuszcz roślinny z orzeszków tygrysich całkowicie utwardzony
+        - tłuszcz roślinny całkowicie utwardzony z orzeszków tygrysich
+        - całkowicie uwodorniony tłuszcz roślinny z orzeszków tygrysich
+        - tłuszcz roślinny z orzeszków tygrysich całkowicie uwodorniony
+        - tłuszcz roślinny całkowicie uwodorniony z orzeszków tygrysich
+        - w pełni utwardzony tłuszcz roślinny z orzeszków tygrysich
+        - tłuszcz roślinny z orzeszków tygrysich w pełni utwardzony
+        - tłuszcz roślinny w pełni utwardzony z orzeszków tygrysich
+        - w pełni uwodorniony tłuszcz roślinny z orzeszków tygrysich
+        - tłuszcz roślinny z orzeszków tygrysich w pełni uwodorniony
+        - tłuszcz roślinny w pełni uwodorniony z orzeszków tygrysich
+        - całkowicie utwardzone tłuszcze roślinne z orzeszków tygrysich
+        - tłuszcze roślinne z orzeszków tygrysich całkowicie utwardzone
+        - tłuszcze roślinne całkowicie utwardzone z orzeszków tygrysich
+        - całkowicie uwodornione tłuszcze roślinne z orzeszków tygrysich
+        - tłuszcze roślinne z orzeszków tygrysich całkowicie uwodornione
+        - tłuszcze roślinne całkowicie uwodornione z orzeszków tygrysich
+        - w pełni utwardzone tłuszcze roślinne z orzeszków tygrysich
+        - tłuszcze roślinne z orzeszków tygrysich w pełni utwardzone
+        - tłuszcze roślinne w pełni utwardzone z orzeszków tygrysich
+        - w pełni uwodornione tłuszcze roślinne z orzeszków tygrysich
+        - tłuszcze roślinne z orzeszków tygrysich w pełni uwodornione
+        - tłuszcze roślinne w pełni uwodornione z orzeszków tygrysich
+        - całkowicie utwardzony olej roślinny z orzeszków tygrysich
+        - olej roślinny z orzeszków tygrysich całkowicie utwardzony
+        - olej roślinny całkowicie utwardzony z orzeszków tygrysich
+        - całkowicie uwodorniony olej roślinny z orzeszków tygrysich
+        - olej roślinny z orzeszków tygrysich całkowicie uwodorniony
+        - olej roślinny całkowicie uwodorniony z orzeszków tygrysich
+        - w pełni utwardzony olej roślinny z orzeszków tygrysich
+        - olej roślinny z orzeszków tygrysich w pełni utwardzony
+        - olej roślinny w pełni utwardzony z orzeszków tygrysich
+        - w pełni uwodorniony olej roślinny z orzeszków tygrysich
+        - olej roślinny z orzeszków tygrysich w pełni uwodorniony
+        - olej roślinny w pełni uwodorniony z orzeszków tygrysich
+        - całkowicie utwardzone oleje roślinne z orzeszków tygrysich
+        - oleje roślinne z orzeszków tygrysich całkowicie utwardzone
+        - oleje roślinne całkowicie utwardzone z orzeszków tygrysich
+        - całkowicie uwodornione oleje roślinne z orzeszków tygrysich
+        - oleje roślinne z orzeszków tygrysich całkowicie uwodornione
+        - oleje roślinne całkowicie uwodornione z orzeszków tygrysich
+        - w pełni utwardzone oleje roślinne z orzeszków tygrysich
+        - oleje roślinne z orzeszków tygrysich w pełni utwardzone
+        - oleje roślinne w pełni utwardzone z orzeszków tygrysich
+        - w pełni uwodornione oleje roślinne z orzeszków tygrysich
+        - oleje roślinne z orzeszków tygrysich w pełni uwodornione
+        - oleje roślinne w pełni uwodornione z orzeszków tygrysich
+        - całkowicie utwardzony olej z bulw cibory jadalnej
+        - olej z bulw cibory jadalnej całkowicie utwardzony
+        - całkowicie uwodorniony olej z bulw cibory jadalnej
+        - olej z bulw cibory jadalnej całkowicie uwodorniony
+        - w pełni utwardzony olej z bulw cibory jadalnej
+        - olej z bulw cibory jadalnej w pełni utwardzony
+        - w pełni uwodorniony olej z bulw cibory jadalnej
+        - olej z bulw cibory jadalnej w pełni uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny z bulw cibory jadalnej
+        - tłuszcz roślinny z bulw cibory jadalnej całkowicie utwardzony
+        - tłuszcz roślinny całkowicie utwardzony z bulw cibory jadalnej
+        - całkowicie uwodorniony tłuszcz roślinny z bulw cibory jadalnej
+        - tłuszcz roślinny z bulw cibory jadalnej całkowicie uwodorniony
+        - tłuszcz roślinny całkowicie uwodorniony z bulw cibory jadalnej
+        - w pełni utwardzony tłuszcz roślinny z bulw cibory jadalnej
+        - tłuszcz roślinny z bulw cibory jadalnej w pełni utwardzony
+        - tłuszcz roślinny w pełni utwardzony z bulw cibory jadalnej
+        - w pełni uwodorniony tłuszcz roślinny z bulw cibory jadalnej
+        - tłuszcz roślinny z bulw cibory jadalnej w pełni uwodorniony
+        - tłuszcz roślinny w pełni uwodorniony z bulw cibory jadalnej
+        - całkowicie utwardzone tłuszcze roślinne z bulw cibory jadalnej
+        - tłuszcze roślinne z bulw cibory jadalnej całkowicie utwardzone
+        - tłuszcze roślinne całkowicie utwardzone z bulw cibory jadalnej
+        - całkowicie uwodornione tłuszcze roślinne z bulw cibory jadalnej
+        - tłuszcze roślinne z bulw cibory jadalnej całkowicie uwodornione
+        - tłuszcze roślinne całkowicie uwodornione z bulw cibory jadalnej
+        - w pełni utwardzone tłuszcze roślinne z bulw cibory jadalnej
+        - tłuszcze roślinne z bulw cibory jadalnej w pełni utwardzone
+        - tłuszcze roślinne w pełni utwardzone z bulw cibory jadalnej
+        - w pełni uwodornione tłuszcze roślinne z bulw cibory jadalnej
+        - tłuszcze roślinne z bulw cibory jadalnej w pełni uwodornione
+        - tłuszcze roślinne w pełni uwodornione z bulw cibory jadalnej
+        - całkowicie utwardzony olej roślinny z bulw cibory jadalnej
+        - olej roślinny z bulw cibory jadalnej całkowicie utwardzony
+        - olej roślinny całkowicie utwardzony z bulw cibory jadalnej
+        - całkowicie uwodorniony olej roślinny z bulw cibory jadalnej
+        - olej roślinny z bulw cibory jadalnej całkowicie uwodorniony
+        - olej roślinny całkowicie uwodorniony z bulw cibory jadalnej
+        - w pełni utwardzony olej roślinny z bulw cibory jadalnej
+        - olej roślinny z bulw cibory jadalnej w pełni utwardzony
+        - olej roślinny w pełni utwardzony z bulw cibory jadalnej
+        - w pełni uwodorniony olej roślinny z bulw cibory jadalnej
+        - olej roślinny z bulw cibory jadalnej w pełni uwodorniony
+        - olej roślinny w pełni uwodorniony z bulw cibory jadalnej
+        - całkowicie utwardzone oleje roślinne z bulw cibory jadalnej
+        - oleje roślinne z bulw cibory jadalnej całkowicie utwardzone
+        - oleje roślinne całkowicie utwardzone z bulw cibory jadalnej
+        - całkowicie uwodornione oleje roślinne z bulw cibory jadalnej
+        - oleje roślinne z bulw cibory jadalnej całkowicie uwodornione
+        - oleje roślinne całkowicie uwodornione z bulw cibory jadalnej
+        - w pełni utwardzone oleje roślinne z bulw cibory jadalnej
+        - oleje roślinne z bulw cibory jadalnej w pełni utwardzone
+        - oleje roślinne w pełni utwardzone z bulw cibory jadalnej
+        - w pełni uwodornione oleje roślinne z bulw cibory jadalnej
+        - oleje roślinne z bulw cibory jadalnej w pełni uwodornione
+        - oleje roślinne w pełni uwodornione z bulw cibory jadalnej
+        - olej całkowicie uwodorniony z migdałów ziemnych
+        - olej całkowicie utwardzony z migdałów ziemnych
+        - olej w pełni uwodorniony z migdałów ziemnych
+        - olej w pełni utwardzony z migdałów ziemnych
+    process:
+      en: "Tiger nut oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
+      pl: "Olej z migdałów ziemnych ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
+    tells:
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )calkowicie (?:utwardzon|uwodorn)'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )w pelni (?:utwardzon|uwodorn)'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )fully hydrogenated'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )totally hydrogenated'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )vollstandig gehartet'
+assertions:
+  - code: origin.vegetable_oil_derived
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A pressed vegetable oil; EU labelling requires its specific plant origin to be named.
+      pl: Wyciskany olej roślinny; przepisy UE o etykietowaniu wymagają podania jego konkretnego pochodzenia rośliny.
+    sources:
+      - id: reg-1169-2011
+        locator: Annex VII Part A, point 8
+  - code: processing.hydrogenated
+    variant: hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares hydrogenation without specifying partial or full, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje utwardzenie (bez wskazania, czy częściowe, czy całkowite), czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: processing.hydrogenated
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares partial hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje częściowe utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: health.trans_fat_source
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Partial hydrogenation is the main industrial source of trans fat; EU food sold to consumers is capped at 2 g trans fat per 100 g of fat."
+      pl: "Częściowe utwardzanie jest głównym przemysłowym źródłem tłuszczów trans; żywność sprzedawana konsumentom w UE ma limit 2 g tłuszczów trans na 100 g tłuszczu."
+    sources:
+      - id: reg-2019-649
+  - code: processing.hydrogenated
+    variant: fully-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares full hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje całkowite utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "No allergen.nuts on purpose: Annex II item 8 lists almonds, hazelnuts, walnuts, cashews, pecans, Brazil nuts, pistachios and macadamia nuts, not tiger nuts (tubers of Cyperus esculentus, sold as 'migdały ziemne')."

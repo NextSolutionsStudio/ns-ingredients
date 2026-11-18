@@ -24,6 +24,7 @@ names:
     - kultury bakterii fermentacji kwasu mlekowego
     - kultury mleczarskie
     - kultury kefirowe
+    - fermenty mlekowe
     - Streptococcus thermophilus
     - Lactobacillus bulgaricus
     - Lactobacillus delbrueckii subsp. bulgaricus
@@ -45,5 +46,5 @@ review_status: draft
 provenance: ai-drafted
 review_notes:
   - >-
-    Identity-only. Not asserted: diet status (cultures for dairy are often propagated on milk-based media; no
-    source opened).
+    origin.*: NO CODE FITS — live bacterial starter cultures are the microorganisms themselves rather than
+    fermentation metabolites; propagation media (dairy vs plant) are also undeclared on food labels.

@@ -26,6 +26,20 @@ summary:
     EFSA ustaliła górny tolerowany poziom spożycia (UL) dla dorosłych wynoszący 12 mg/dobę (w tym w ciąży i
     laktacji) ze względu na neuropatię obwodową przy długotrwałym wysokim spożyciu z suplementów.
 assertions:
+  - code: origin.chemical_synthesis
+    certainty: 'yes'
+    kind: estimate
+    grade: C
+    note:
+      en: >-
+        Most current B-vitamin production uses non-renewable chemical methods while fermentative processes still
+        face hurdles to reach the market (Acevedo-Rocha et al. 2019).
+      pl: >-
+        Większość obecnych metod produkcji witamin z grupy B opiera się na metodach chemicznych z
+        nieodnawialnych źródeł, a procesy fermentacyjne napotykają jeszcze bariery w drodze na rynek
+        (Acevedo-Rocha i in. 2019).
+    sources:
+      - id: acevedo-rocha-2019-bvit
   - code: diet.vegan
     certainty: 'yes'
     kind: estimate
@@ -79,6 +93,3 @@ provenance: ai-drafted
 review_notes:
   - >-
     Added to prevent "witamina B6" from fuzzy-matching E101 (riboflavin, vitamin B2) at 0.71.
-  - >-
-    Chemical synthesis route for pyridoxine was not opened directly, so no origin.chemical_synthesis assertion
-    is recorded.

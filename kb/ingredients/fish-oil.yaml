@@ -1,0 +1,635 @@
+id: fish-oil
+type: fat
+names:
+  en:
+    - fish oil
+    - fish oils
+    - tuna oil
+    - salmon oil
+    - sardine oil
+    - anchovy oil
+    - cod liver oil
+    - marine fish oil
+    - non-hydrogenated fish oil
+    - unhydrogenated fish oil
+    - non-hydrogenated tuna oil
+    - unhydrogenated tuna oil
+    - not hydrogenated anchovy oil
+    - not partially hydrogenated anchovy oil
+    - not fully hydrogenated anchovy oil
+    - non partially hydrogenated anchovy oil
+    - not hydrogenated cod liver oil
+    - not partially hydrogenated cod liver oil
+    - not fully hydrogenated cod liver oil
+    - non partially hydrogenated cod liver oil
+    - not hydrogenated fish oil
+    - not partially hydrogenated fish oil
+    - not fully hydrogenated fish oil
+    - non partially hydrogenated fish oil
+    - not hydrogenated fish oils
+    - not partially hydrogenated fish oils
+    - not fully hydrogenated fish oils
+    - non partially hydrogenated fish oils
+    - not hydrogenated marine fish oil
+    - not partially hydrogenated marine fish oil
+    - not fully hydrogenated marine fish oil
+    - non partially hydrogenated marine fish oil
+    - not hydrogenated salmon oil
+    - not partially hydrogenated salmon oil
+    - not fully hydrogenated salmon oil
+    - non partially hydrogenated salmon oil
+    - not hydrogenated sardine oil
+    - not partially hydrogenated sardine oil
+    - not fully hydrogenated sardine oil
+    - non partially hydrogenated sardine oil
+    - not hydrogenated tuna oil
+    - not partially hydrogenated tuna oil
+    - not fully hydrogenated tuna oil
+    - non partially hydrogenated tuna oil
+    - non-hydrogenated fish oils
+    - unhydrogenated fish oils
+    - non-hydrogenated salmon oil
+    - unhydrogenated salmon oil
+    - non-hydrogenated sardine oil
+    - unhydrogenated sardine oil
+    - non-hydrogenated anchovy oil
+    - unhydrogenated anchovy oil
+    - non-hydrogenated cod liver oil
+    - unhydrogenated cod liver oil
+    - non-hydrogenated marine fish oil
+    - unhydrogenated marine fish oil
+  pl:
+    - olej rybny
+    - oleje rybne
+    - olej z ryb
+    - olej z tuńczyka
+    - olej z łososia
+    - olej z sardynek
+    - olej z sardeli
+    - olej z anchois
+    - olej z wątroby dorsza
+    - tran
+    - tłuszcz rybi
+    - tłuszcz z ryb
+    - nie utwardzony olej rybny
+    - olej rybny nie utwardzony
+    - nie uwodorniony olej rybny
+    - olej rybny nie uwodorniony
+    - nieutwardzony olej rybny
+    - olej rybny nieutwardzony
+    - nieuwodorniony olej rybny
+    - olej rybny nieuwodorniony
+    - nie utwardzone oleje rybne
+    - oleje rybne nie utwardzone
+    - nie uwodornione oleje rybne
+    - oleje rybne nie uwodornione
+    - nieutwardzone oleje rybne
+    - oleje rybne nieutwardzone
+    - nieuwodornione oleje rybne
+    - oleje rybne nieuwodornione
+    - nie utwardzony olej z ryb
+    - olej z ryb nie utwardzony
+    - nie uwodorniony olej z ryb
+    - olej z ryb nie uwodorniony
+    - nieutwardzony olej z ryb
+    - olej z ryb nieutwardzony
+    - nieuwodorniony olej z ryb
+    - olej z ryb nieuwodorniony
+    - nie utwardzony olej z tuńczyka
+    - olej z tuńczyka nie utwardzony
+    - nie uwodorniony olej z tuńczyka
+    - olej z tuńczyka nie uwodorniony
+    - nieutwardzony olej z tuńczyka
+    - olej z tuńczyka nieutwardzony
+    - nieuwodorniony olej z tuńczyka
+    - olej z tuńczyka nieuwodorniony
+    - nie utwardzony olej z łososia
+    - olej z łososia nie utwardzony
+    - nie uwodorniony olej z łososia
+    - olej z łososia nie uwodorniony
+    - nieutwardzony olej z łososia
+    - olej z łososia nieutwardzony
+    - nieuwodorniony olej z łososia
+    - olej z łososia nieuwodorniony
+    - nie utwardzony olej z sardynek
+    - olej z sardynek nie utwardzony
+    - nie uwodorniony olej z sardynek
+    - olej z sardynek nie uwodorniony
+    - nieutwardzony olej z sardynek
+    - olej z sardynek nieutwardzony
+    - nieuwodorniony olej z sardynek
+    - olej z sardynek nieuwodorniony
+    - nie utwardzony olej z sardeli
+    - olej z sardeli nie utwardzony
+    - nie uwodorniony olej z sardeli
+    - olej z sardeli nie uwodorniony
+    - nieutwardzony olej z sardeli
+    - olej z sardeli nieutwardzony
+    - nieuwodorniony olej z sardeli
+    - olej z sardeli nieuwodorniony
+    - nie utwardzony olej z anchois
+    - olej z anchois nie utwardzony
+    - nie uwodorniony olej z anchois
+    - olej z anchois nie uwodorniony
+    - nieutwardzony olej z anchois
+    - olej z anchois nieutwardzony
+    - nieuwodorniony olej z anchois
+    - olej z anchois nieuwodorniony
+    - nie utwardzony olej z wątroby dorsza
+    - olej z wątroby dorsza nie utwardzony
+    - nie uwodorniony olej z wątroby dorsza
+    - olej z wątroby dorsza nie uwodorniony
+    - nieutwardzony olej z wątroby dorsza
+    - olej z wątroby dorsza nieutwardzony
+    - nieuwodorniony olej z wątroby dorsza
+    - olej z wątroby dorsza nieuwodorniony
+    - nie utwardzony tłuszcz rybi
+    - tłuszcz rybi nie utwardzony
+    - nie uwodorniony tłuszcz rybi
+    - tłuszcz rybi nie uwodorniony
+    - nieutwardzony tłuszcz rybi
+    - tłuszcz rybi nieutwardzony
+    - nieuwodorniony tłuszcz rybi
+    - tłuszcz rybi nieuwodorniony
+    - nie utwardzony tłuszcz z ryb
+    - tłuszcz z ryb nie utwardzony
+    - nie uwodorniony tłuszcz z ryb
+    - tłuszcz z ryb nie uwodorniony
+    - nieutwardzony tłuszcz z ryb
+    - tłuszcz z ryb nieutwardzony
+    - nieuwodorniony tłuszcz z ryb
+    - tłuszcz z ryb nieuwodorniony
+    - olej nie utwardzony rybny
+    - olej nie uwodorniony rybny
+    - olej nieutwardzony rybny
+    - olej nieuwodorniony rybny
+    - oleje nie utwardzone rybne
+    - oleje nie uwodornione rybne
+    - oleje nieutwardzone rybne
+    - oleje nieuwodornione rybne
+    - olej nie utwardzony z ryb
+    - olej nie uwodorniony z ryb
+    - olej nieutwardzony z ryb
+    - olej nieuwodorniony z ryb
+    - olej nie utwardzony z tuńczyka
+    - olej nie uwodorniony z tuńczyka
+    - olej nieutwardzony z tuńczyka
+    - olej nieuwodorniony z tuńczyka
+    - olej nie utwardzony z łososia
+    - olej nie uwodorniony z łososia
+    - olej nieutwardzony z łososia
+    - olej nieuwodorniony z łososia
+    - olej nie utwardzony z sardynek
+    - olej nie uwodorniony z sardynek
+    - olej nieutwardzony z sardynek
+    - olej nieuwodorniony z sardynek
+    - olej nie utwardzony z sardeli
+    - olej nie uwodorniony z sardeli
+    - olej nieutwardzony z sardeli
+    - olej nieuwodorniony z sardeli
+    - olej nie utwardzony z anchois
+    - olej nie uwodorniony z anchois
+    - olej nieutwardzony z anchois
+    - olej nieuwodorniony z anchois
+    - olej nie utwardzony z wątroby dorsza
+    - olej nie uwodorniony z wątroby dorsza
+    - olej nieutwardzony z wątroby dorsza
+    - olej nieuwodorniony z wątroby dorsza
+    - tłuszcz nie utwardzony rybi
+    - tłuszcz nie uwodorniony rybi
+    - tłuszcz nieutwardzony rybi
+    - tłuszcz nieuwodorniony rybi
+    - tłuszcz nie utwardzony z ryb
+    - tłuszcz nie uwodorniony z ryb
+    - tłuszcz nieutwardzony z ryb
+    - tłuszcz nieuwodorniony z ryb
+  de:
+    - Fischöl
+    - Thunfischöl
+    - Lachsöl
+    - Lebertran
+summary:
+  en: >-
+    Oil extracted from fish (tuna, salmon, sardine, anchovy, cod liver and others) when the label names fish oil
+    or a fish species without a more specific entry. As a product derived from fish, it falls under EU Annex II
+    item 4 fish allergen labelling, which has no exemption for fish oil.
+  pl: >-
+    Olej pozyskiwany z ryb (tuńczyka, łososia, sardynek, sardeli, wątroby dorsza i innych), gdy etykieta podaje
+    olej rybny lub gatunek ryby bez bardziej szczegółowego wpisu. Jako produkt z ryb podlega deklarowaniu alergenu
+    z Aneksu II UE (punkt 4), który nie przewiduje wyłączenia dla oleju rybnego.
+variants:
+  - id: hydrogenated
+    names:
+      en:
+        - hydrogenated fish oil
+        - hydrogenated tuna oil
+        - hydrogenated fish oils
+        - hydrogenated salmon oil
+        - hydrogenated sardine oil
+        - hydrogenated anchovy oil
+        - hydrogenated cod liver oil
+        - hydrogenated marine fish oil
+      pl:
+        - utwardzony olej rybny
+        - olej rybny utwardzony
+        - uwodorniony olej rybny
+        - olej rybny uwodorniony
+        - utwardzony olej z ryb
+        - olej z ryb utwardzony
+        - uwodorniony olej z ryb
+        - olej z ryb uwodorniony
+        - utwardzony olej z tuńczyka
+        - olej z tuńczyka utwardzony
+        - uwodorniony olej z tuńczyka
+        - olej z tuńczyka uwodorniony
+        - utwardzony olej z łososia
+        - olej z łososia utwardzony
+        - uwodorniony olej z łososia
+        - olej z łososia uwodorniony
+        - utwardzone oleje rybne
+        - oleje rybne utwardzone
+        - uwodornione oleje rybne
+        - oleje rybne uwodornione
+        - utwardzony olej z sardynek
+        - olej z sardynek utwardzony
+        - uwodorniony olej z sardynek
+        - olej z sardynek uwodorniony
+        - utwardzony olej z sardeli
+        - olej z sardeli utwardzony
+        - uwodorniony olej z sardeli
+        - olej z sardeli uwodorniony
+        - utwardzony olej z anchois
+        - olej z anchois utwardzony
+        - uwodorniony olej z anchois
+        - olej z anchois uwodorniony
+        - utwardzony olej z wątroby dorsza
+        - olej z wątroby dorsza utwardzony
+        - uwodorniony olej z wątroby dorsza
+        - olej z wątroby dorsza uwodorniony
+        - utwardzony tłuszcz rybi
+        - tłuszcz rybi utwardzony
+        - uwodorniony tłuszcz rybi
+        - tłuszcz rybi uwodorniony
+        - utwardzony tłuszcz z ryb
+        - tłuszcz z ryb utwardzony
+        - uwodorniony tłuszcz z ryb
+        - tłuszcz z ryb uwodorniony
+        - olej utwardzony rybny
+        - olej uwodorniony rybny
+        - oleje utwardzone rybne
+        - oleje uwodornione rybne
+        - olej utwardzony z ryb
+        - olej uwodorniony z ryb
+        - olej utwardzony z tuńczyka
+        - olej uwodorniony z tuńczyka
+        - olej utwardzony z łososia
+        - olej uwodorniony z łososia
+        - olej utwardzony z sardynek
+        - olej uwodorniony z sardynek
+        - olej utwardzony z sardeli
+        - olej uwodorniony z sardeli
+        - olej utwardzony z anchois
+        - olej uwodorniony z anchois
+        - olej utwardzony z wątroby dorsza
+        - olej uwodorniony z wątroby dorsza
+        - tłuszcz utwardzony rybi
+        - tłuszcz uwodorniony rybi
+        - tłuszcz utwardzony z ryb
+        - tłuszcz uwodorniony z ryb
+    process:
+      en: "Fish oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
+      pl: "Olej rybny utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
+    tells:
+      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!partially )(?<!fully )(?<!totally )(?<!teilweise )(?<!vollstandig )(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:utwardzon|uwodornion|utwardzan[yea]\b|uwodornian[yea]\b|hydrogenated|gehartet)|(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:po|podda\w*|podlega\w*)(?: (?!(?:nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b)\S+){0,3}? (?:uwodornieni|uwodornian|utwardzeni|utwardzan)'
+  - id: partially-hydrogenated
+    names:
+      en:
+        - partially hydrogenated fish oil
+        - partially hydrogenated tuna oil
+        - partially hydrogenated fish oils
+        - partially hydrogenated salmon oil
+        - partially hydrogenated sardine oil
+        - partially hydrogenated anchovy oil
+        - partially hydrogenated cod liver oil
+        - partially hydrogenated marine fish oil
+      pl:
+        - częściowo utwardzony olej rybny
+        - olej rybny częściowo utwardzony
+        - częściowo uwodorniony olej rybny
+        - olej rybny częściowo uwodorniony
+        - częściowo utwardzony olej z ryb
+        - olej z ryb częściowo utwardzony
+        - częściowo uwodorniony olej z ryb
+        - olej z ryb częściowo uwodorniony
+        - częściowo utwardzony olej z tuńczyka
+        - olej z tuńczyka częściowo utwardzony
+        - częściowo uwodorniony olej z tuńczyka
+        - olej z tuńczyka częściowo uwodorniony
+        - częściowo utwardzony olej z łososia
+        - olej z łososia częściowo utwardzony
+        - częściowo uwodorniony olej z łososia
+        - olej z łososia częściowo uwodorniony
+        - częściowo utwardzone oleje rybne
+        - oleje rybne częściowo utwardzone
+        - częściowo uwodornione oleje rybne
+        - oleje rybne częściowo uwodornione
+        - częściowo utwardzony olej z sardynek
+        - olej z sardynek częściowo utwardzony
+        - częściowo uwodorniony olej z sardynek
+        - olej z sardynek częściowo uwodorniony
+        - częściowo utwardzony olej z sardeli
+        - olej z sardeli częściowo utwardzony
+        - częściowo uwodorniony olej z sardeli
+        - olej z sardeli częściowo uwodorniony
+        - częściowo utwardzony olej z anchois
+        - olej z anchois częściowo utwardzony
+        - częściowo uwodorniony olej z anchois
+        - olej z anchois częściowo uwodorniony
+        - częściowo utwardzony olej z wątroby dorsza
+        - olej z wątroby dorsza częściowo utwardzony
+        - częściowo uwodorniony olej z wątroby dorsza
+        - olej z wątroby dorsza częściowo uwodorniony
+        - częściowo utwardzony tłuszcz rybi
+        - tłuszcz rybi częściowo utwardzony
+        - częściowo uwodorniony tłuszcz rybi
+        - tłuszcz rybi częściowo uwodorniony
+        - częściowo utwardzony tłuszcz z ryb
+        - tłuszcz z ryb częściowo utwardzony
+        - częściowo uwodorniony tłuszcz z ryb
+        - tłuszcz z ryb częściowo uwodorniony
+        - olej częściowo utwardzony rybny
+        - olej częściowo uwodorniony rybny
+        - oleje częściowo utwardzone rybne
+        - oleje częściowo uwodornione rybne
+        - olej częściowo utwardzony z ryb
+        - olej częściowo uwodorniony z ryb
+        - olej częściowo utwardzony z tuńczyka
+        - olej częściowo uwodorniony z tuńczyka
+        - olej częściowo utwardzony z łososia
+        - olej częściowo uwodorniony z łososia
+        - olej częściowo utwardzony z sardynek
+        - olej częściowo uwodorniony z sardynek
+        - olej częściowo utwardzony z sardeli
+        - olej częściowo uwodorniony z sardeli
+        - olej częściowo utwardzony z anchois
+        - olej częściowo uwodorniony z anchois
+        - olej częściowo utwardzony z wątroby dorsza
+        - olej częściowo uwodorniony z wątroby dorsza
+        - tłuszcz częściowo utwardzony rybi
+        - tłuszcz częściowo uwodorniony rybi
+        - tłuszcz częściowo utwardzony z ryb
+        - tłuszcz częściowo uwodorniony z ryb
+    process:
+      en: "Fish oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
+      pl: "Olej rybny, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
+    tells:
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )czesciowo (?:utwardzon|uwodorn)'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )partially hydrogenated'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )teilweise gehartet'
+  - id: fully-hydrogenated
+    names:
+      en:
+        - fully hydrogenated fish oil
+        - totally hydrogenated fish oil
+        - fully hydrogenated tuna oil
+        - totally hydrogenated tuna oil
+        - fully hydrogenated fish oils
+        - totally hydrogenated fish oils
+        - fully hydrogenated salmon oil
+        - totally hydrogenated salmon oil
+        - fully hydrogenated sardine oil
+        - totally hydrogenated sardine oil
+        - fully hydrogenated anchovy oil
+        - totally hydrogenated anchovy oil
+        - fully hydrogenated cod liver oil
+        - totally hydrogenated cod liver oil
+        - fully hydrogenated marine fish oil
+        - totally hydrogenated marine fish oil
+      pl:
+        - całkowicie utwardzony olej rybny
+        - olej rybny całkowicie utwardzony
+        - całkowicie uwodorniony olej rybny
+        - olej rybny całkowicie uwodorniony
+        - w pełni utwardzony olej rybny
+        - olej rybny w pełni utwardzony
+        - w pełni uwodorniony olej rybny
+        - olej rybny w pełni uwodorniony
+        - całkowicie utwardzony olej z ryb
+        - olej z ryb całkowicie utwardzony
+        - całkowicie uwodorniony olej z ryb
+        - olej z ryb całkowicie uwodorniony
+        - w pełni utwardzony olej z ryb
+        - olej z ryb w pełni utwardzony
+        - w pełni uwodorniony olej z ryb
+        - olej z ryb w pełni uwodorniony
+        - całkowicie utwardzony olej z tuńczyka
+        - olej z tuńczyka całkowicie utwardzony
+        - całkowicie uwodorniony olej z tuńczyka
+        - olej z tuńczyka całkowicie uwodorniony
+        - w pełni utwardzony olej z tuńczyka
+        - olej z tuńczyka w pełni utwardzony
+        - w pełni uwodorniony olej z tuńczyka
+        - olej z tuńczyka w pełni uwodorniony
+        - całkowicie utwardzony olej z łososia
+        - olej z łososia całkowicie utwardzony
+        - całkowicie uwodorniony olej z łososia
+        - olej z łososia całkowicie uwodorniony
+        - w pełni utwardzony olej z łososia
+        - olej z łososia w pełni utwardzony
+        - w pełni uwodorniony olej z łososia
+        - olej z łososia w pełni uwodorniony
+        - całkowicie utwardzone oleje rybne
+        - oleje rybne całkowicie utwardzone
+        - całkowicie uwodornione oleje rybne
+        - oleje rybne całkowicie uwodornione
+        - w pełni utwardzone oleje rybne
+        - oleje rybne w pełni utwardzone
+        - w pełni uwodornione oleje rybne
+        - oleje rybne w pełni uwodornione
+        - całkowicie utwardzony olej z sardynek
+        - olej z sardynek całkowicie utwardzony
+        - całkowicie uwodorniony olej z sardynek
+        - olej z sardynek całkowicie uwodorniony
+        - w pełni utwardzony olej z sardynek
+        - olej z sardynek w pełni utwardzony
+        - w pełni uwodorniony olej z sardynek
+        - olej z sardynek w pełni uwodorniony
+        - całkowicie utwardzony olej z sardeli
+        - olej z sardeli całkowicie utwardzony
+        - całkowicie uwodorniony olej z sardeli
+        - olej z sardeli całkowicie uwodorniony
+        - w pełni utwardzony olej z sardeli
+        - olej z sardeli w pełni utwardzony
+        - w pełni uwodorniony olej z sardeli
+        - olej z sardeli w pełni uwodorniony
+        - całkowicie utwardzony olej z anchois
+        - olej z anchois całkowicie utwardzony
+        - całkowicie uwodorniony olej z anchois
+        - olej z anchois całkowicie uwodorniony
+        - w pełni utwardzony olej z anchois
+        - olej z anchois w pełni utwardzony
+        - w pełni uwodorniony olej z anchois
+        - olej z anchois w pełni uwodorniony
+        - całkowicie utwardzony olej z wątroby dorsza
+        - olej z wątroby dorsza całkowicie utwardzony
+        - całkowicie uwodorniony olej z wątroby dorsza
+        - olej z wątroby dorsza całkowicie uwodorniony
+        - w pełni utwardzony olej z wątroby dorsza
+        - olej z wątroby dorsza w pełni utwardzony
+        - w pełni uwodorniony olej z wątroby dorsza
+        - olej z wątroby dorsza w pełni uwodorniony
+        - całkowicie utwardzony tłuszcz rybi
+        - tłuszcz rybi całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz rybi
+        - tłuszcz rybi całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz rybi
+        - tłuszcz rybi w pełni utwardzony
+        - w pełni uwodorniony tłuszcz rybi
+        - tłuszcz rybi w pełni uwodorniony
+        - całkowicie utwardzony tłuszcz z ryb
+        - tłuszcz z ryb całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz z ryb
+        - tłuszcz z ryb całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz z ryb
+        - tłuszcz z ryb w pełni utwardzony
+        - w pełni uwodorniony tłuszcz z ryb
+        - tłuszcz z ryb w pełni uwodorniony
+        - olej całkowicie utwardzony rybny
+        - olej całkowicie uwodorniony rybny
+        - olej w pełni utwardzony rybny
+        - olej w pełni uwodorniony rybny
+        - oleje całkowicie utwardzone rybne
+        - oleje całkowicie uwodornione rybne
+        - oleje w pełni utwardzone rybne
+        - oleje w pełni uwodornione rybne
+        - olej całkowicie utwardzony z ryb
+        - olej całkowicie uwodorniony z ryb
+        - olej w pełni utwardzony z ryb
+        - olej w pełni uwodorniony z ryb
+        - olej całkowicie utwardzony z tuńczyka
+        - olej całkowicie uwodorniony z tuńczyka
+        - olej w pełni utwardzony z tuńczyka
+        - olej w pełni uwodorniony z tuńczyka
+        - olej całkowicie utwardzony z łososia
+        - olej całkowicie uwodorniony z łososia
+        - olej w pełni utwardzony z łososia
+        - olej w pełni uwodorniony z łososia
+        - olej całkowicie utwardzony z sardynek
+        - olej całkowicie uwodorniony z sardynek
+        - olej w pełni utwardzony z sardynek
+        - olej w pełni uwodorniony z sardynek
+        - olej całkowicie utwardzony z sardeli
+        - olej całkowicie uwodorniony z sardeli
+        - olej w pełni utwardzony z sardeli
+        - olej w pełni uwodorniony z sardeli
+        - olej całkowicie utwardzony z anchois
+        - olej całkowicie uwodorniony z anchois
+        - olej w pełni utwardzony z anchois
+        - olej w pełni uwodorniony z anchois
+        - olej całkowicie utwardzony z wątroby dorsza
+        - olej całkowicie uwodorniony z wątroby dorsza
+        - olej w pełni utwardzony z wątroby dorsza
+        - olej w pełni uwodorniony z wątroby dorsza
+        - tłuszcz całkowicie utwardzony rybi
+        - tłuszcz całkowicie uwodorniony rybi
+        - tłuszcz w pełni utwardzony rybi
+        - tłuszcz w pełni uwodorniony rybi
+        - tłuszcz całkowicie utwardzony z ryb
+        - tłuszcz całkowicie uwodorniony z ryb
+        - tłuszcz w pełni utwardzony z ryb
+        - tłuszcz w pełni uwodorniony z ryb
+    process:
+      en: "Fish oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
+      pl: "Olej rybny ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
+    tells:
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )calkowicie (?:utwardzon|uwodorn)'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )w pelni (?:utwardzon|uwodorn)'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )fully hydrogenated'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )totally hydrogenated'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )vollstandig gehartet'
+assertions:
+  - code: allergen.fish
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Derived from fish; EU Annex II item 4 (fish and products thereof, no exemption for fish oil).
+      pl: Produkt z ryb; Aneks II UE, punkt 4 (ryby i produkty z nich, brak wyłączenia dla oleju rybnego).
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 4
+  - code: origin.fish
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Extracted from fish.
+      pl: Pozyskiwany z ryb.
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 4
+  - code: diet.vegan
+    certainty: 'no'
+    kind: fact
+    grade: A
+    note:
+      en: An animal (fish) fat.
+      pl: Tłuszcz zwierzęcy (rybi).
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 4
+  - code: diet.vegetarian
+    certainty: 'no'
+    kind: fact
+    grade: A
+    note:
+      en: Fish oil is obtained from fish and is not compatible with a vegetarian diet.
+      pl: Olej rybny jest pozyskiwany z ryb i nie jest zgodny z dietą wegetariańską.
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 4
+  - code: processing.hydrogenated
+    variant: hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares hydrogenation without specifying partial or full, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje utwardzenie (bez wskazania, czy częściowe, czy całkowite), czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: processing.hydrogenated
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares partial hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje częściowe utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: health.trans_fat_source
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Partial hydrogenation is the main industrial source of trans fat; EU food sold to consumers is capped at 2 g trans fat per 100 g of fat."
+      pl: "Częściowe utwardzanie jest głównym przemysłowym źródłem tłuszczów trans; żywność sprzedawana konsumentom w UE ma limit 2 g tłuszczów trans na 100 g tłuszczu."
+    sources:
+      - id: reg-2019-649
+  - code: processing.hydrogenated
+    variant: fully-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares full hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje całkowite utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+review_status: draft
+provenance: ai-drafted

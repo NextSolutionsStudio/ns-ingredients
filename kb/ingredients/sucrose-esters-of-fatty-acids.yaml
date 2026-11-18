@@ -1,0 +1,113 @@
+id: sucrose-esters-of-fatty-acids
+type: additive
+e_number: E473
+names:
+  en:
+    - sucrose esters of fatty acids
+    - sucrose esters
+    - sucrose fatty acid esters
+    - sugar ester
+    - sugar esters
+  pl:
+    - estry sacharozy i kwasów tłuszczowych
+    - estry kwasów tłuszczowych i sacharozy
+    - ester kwasu tłuszczowego i sacharozy
+  de:
+    - Zuckerester von Speisefettsäuren
+    - Zuckerester
+    - Saccharoseester von Speisefettsäuren
+functions:
+  - emulsifier
+  - stabiliser
+summary:
+  en: >-
+    Mono-, di- and triesters of sucrose with food fatty acids, produced by chemical transesterification of
+    sucrose with methyl, ethyl or vinyl fatty-acid esters. Used as an emulsifier in fine bakery wares,
+    flavoured drinks and confectionery. EFSA's 2023 follow-up retained the group ADI of 40 mg/kg bw/day and
+    noted exceedances in refined brand-loyal exposure scenarios; industry data reports palm, palm kernel and
+    coconut oils among fatty-acid feedstocks.
+  pl: >-
+    Mono-, di- i triestry sacharozy z kwasami tłuszczowymi żywności, wytwarzane w drodze chemicznej
+    transestryfikacji sacharozy estrami metylowymi, etylowymi lub winylowymi kwasów tłuszczowych. Stosowane
+    jako emulgator w wyrobach piekarskich, napojach smakowych i cukiernictwie. Opinia EFSA z 2023 r.
+    wskazała palmę, ziarna palmowe i kokos wśród zgłaszanych źródeł tłuszczu.
+assertions:
+  - code: origin.chemical_synthesis
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: >-
+        Reg (EU) No 231/2012 E 473 Definition and EFSA (2023) Sections 3.1 & 3.2.1 describe manufacture by
+        transesterification/interesterification of sucrose with fatty-acid methyl/ethyl/vinyl esters or
+        sucroglycerides.
+      pl: >-
+        Definicja E 473 w rozporządzeniu (UE) nr 231/2012 oraz sekcje 3.1 i 3.2.1 opinii EFSA (2023) opisują
+        wytwarzanie w drodze transestryfikacji sacharozy z estrami kwasów tłuszczowych lub sukroglicerydami.
+    sources:
+      - id: reg-231-2012
+        locator: E 473 (Definition)
+      - id: efsa-e473-2023
+        locator: Sections 3.1 & 3.2.1
+  - code: origin.vegetable_oil_derived
+    certainty: maybe
+    kind: fact
+    grade: A
+    note:
+      en: >-
+        EFSA (2023) Section 3.2.3.3 notes palm oil, palm kernel oil and coconut oil as reported vegetable-oil
+        sources of the fatty acids used for E 473, though Reg (EU) No 231/2012 also permits animal fats.
+      pl: >-
+        Sekcja 3.2.3.3 opinii EFSA (2023) wymienia olej palmowy, z ziaren palmowych i kokosowy jako zgłaszane
+        roślinne źródła kwasów tłuszczowych do produkcji E 473, choć rozp. (UE) nr 231/2012 dopuszcza też
+        tłuszcze zwierzęce.
+    sources:
+      - id: reg-231-2012
+        locator: E 473 (Definition)
+      - id: efsa-e473-2023
+        locator: Section 3.2.3.3
+  - code: origin.animal
+    certainty: maybe
+    kind: fact
+    grade: A
+    note:
+      en: >-
+        Reg (EU) No 231/2012 defines E 473 using 'fatty acids occurring in food fats and oils' without
+        excluding animal fats, and food labels need not disclose botanical or animal fat origin.
+      pl: >-
+        Rozporządzenie (UE) nr 231/2012 definiuje E 473 przy użyciu 'kwasów tłuszczowych występujących w
+        tłuszczach i olejach spożywczych' bez wykluczenia tłuszczów zwierzęcych, a etykieta nie ujawnia
+        źródła.
+    sources:
+      - id: reg-231-2012
+        locator: E 473 (Definition)
+  - code: ethics.palm_oil
+    certainty: maybe
+    kind: estimate
+    grade: B
+    note:
+      en: >-
+        EFSA (2023) Section 3.2.3.3 notes industry reports palm oil and palm kernel oil (alongside coconut oil)
+        as fatty-acid sources for E 473 manufacture.
+      pl: >-
+        Sekcja 3.2.3.3 opinii EFSA (2023) podaje, że przemysł zgłasza olej palmowy i z ziaren palmowych (obok
+        kokosowego) jako źródła kwasów tłuszczowych do produkcji E 473.
+    sources:
+      - id: efsa-e473-2023
+        locator: Section 3.2.3.3
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: "Authorised additive under Reg (EC) No 1333/2008 Annex II with category-specific maximum levels."
+      pl: "Dodatek dozwolony w Rozp. (WE) nr 1333/2008 Załącznik II z maksymalnymi limitami w wybranych kategoriach."
+    source: reg-1333-2008
+reference_values:
+  - type: group_ADI
+    value: 40
+    unit: mg/kg bw/day
+    body: EFSA
+    year: 2023
+    source: efsa-e473-2023
+review_status: draft
+provenance: ai-drafted

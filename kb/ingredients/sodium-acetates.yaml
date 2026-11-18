@@ -40,5 +40,8 @@ review_status: draft
 provenance: ai-drafted
 review_notes:
   - >-
-    Identity-only: no EFSA re-evaluation of E 262 was opened, so no assessment is recorded. Composition from
-    Reg 231/2012.
+    Identity-only: no EFSA food-additive re-evaluation of E 262 was opened, so no assessment is recorded.
+    Composition from Reg 231/2012.
+  - >-
+    origin.chemical_synthesis omitted: the JECFA URL returned HTTP 404 and Reg (EU) No 231/2012 E 262(i)-(ii)
+    is compositional only without stating a manufacturing route.

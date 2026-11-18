@@ -1,0 +1,151 @@
+id: vegetable-fat
+type: fat
+names:
+  en:
+    - vegetable fat
+    - vegetable fats
+    - vegetable oil
+    - vegetable oils
+    - non-hydrogenated vegetable fat
+    - non hydrogenated vegetable fat
+    - unhydrogenated vegetable fat
+    - non-hydrogenated vegetable fats
+    - non hydrogenated vegetable fats
+    - unhydrogenated vegetable fats
+    - non-hydrogenated vegetable oil
+    - non hydrogenated vegetable oil
+    - unhydrogenated vegetable oil
+    - non-hydrogenated vegetable oils
+    - non hydrogenated vegetable oils
+    - unhydrogenated vegetable oils
+    - not hydrogenated vegetable fat
+    - not partially hydrogenated vegetable fat
+    - not fully hydrogenated vegetable fat
+    - non partially hydrogenated vegetable fat
+    - not hydrogenated vegetable fats
+    - not partially hydrogenated vegetable fats
+    - not fully hydrogenated vegetable fats
+    - non partially hydrogenated vegetable fats
+    - not hydrogenated vegetable oil
+    - not partially hydrogenated vegetable oil
+    - not fully hydrogenated vegetable oil
+    - non partially hydrogenated vegetable oil
+    - not hydrogenated vegetable oils
+    - not partially hydrogenated vegetable oils
+    - not fully hydrogenated vegetable oils
+    - non partially hydrogenated vegetable oils
+  pl:
+    - tłuszcz roślinny
+    - tłuszcze roślinne
+    - olej roślinny
+    - oleje roślinne
+    - nie utwardzone olej roślinny
+    - olej roślinny nie utwardzone
+    - nie uwodornione olej roślinny
+    - olej roślinny nie uwodornione
+    - nie utwardzone tłuszcz roślinny
+    - tłuszcz roślinny nie utwardzone
+    - nie uwodornione tłuszcz roślinny
+    - tłuszcz roślinny nie uwodornione
+    - nie utwardzony oleje roślinne
+    - oleje roślinne nie utwardzony
+    - nie uwodorniony oleje roślinne
+    - oleje roślinne nie uwodorniony
+    - nie utwardzony tłuszcze roślinne
+    - tłuszcze roślinne nie utwardzony
+    - nie uwodorniony tłuszcze roślinne
+    - tłuszcze roślinne nie uwodorniony
+    - nie utwardzony tłuszcz roślinny
+    - tłuszcz roślinny nie utwardzony
+    - nie uwodorniony tłuszcz roślinny
+    - tłuszcz roślinny nie uwodorniony
+    - nie utwardzone tłuszcze roślinne
+    - tłuszcze roślinne nie utwardzone
+    - nie uwodornione tłuszcze roślinne
+    - tłuszcze roślinne nie uwodornione
+    - nie utwardzony olej roślinny
+    - olej roślinny nie utwardzony
+    - nie uwodorniony olej roślinny
+    - olej roślinny nie uwodorniony
+    - nie utwardzone oleje roślinne
+    - oleje roślinne nie utwardzone
+    - nie uwodornione oleje roślinne
+    - oleje roślinne nie uwodornione
+    - tłuszcz nie utwardzony roślinny
+    - tłuszcz nie uwodorniony roślinny
+    - nieutwardzony tłuszcz roślinny
+    - tłuszcz roślinny nieutwardzony
+    - tłuszcz nieutwardzony roślinny
+    - nieuwodorniony tłuszcz roślinny
+    - tłuszcz roślinny nieuwodorniony
+    - tłuszcz nieuwodorniony roślinny
+    - tłuszcze nie utwardzone roślinne
+    - tłuszcze nie uwodornione roślinne
+    - nieutwardzone tłuszcze roślinne
+    - tłuszcze roślinne nieutwardzone
+    - tłuszcze nieutwardzone roślinne
+    - nieuwodornione tłuszcze roślinne
+    - tłuszcze roślinne nieuwodornione
+    - tłuszcze nieuwodornione roślinne
+    - olej nie utwardzony roślinny
+    - olej nie uwodorniony roślinny
+    - nieutwardzony olej roślinny
+    - olej roślinny nieutwardzony
+    - olej nieutwardzony roślinny
+    - nieuwodorniony olej roślinny
+    - olej roślinny nieuwodorniony
+    - olej nieuwodorniony roślinny
+    - oleje nie utwardzone roślinne
+    - oleje nie uwodornione roślinne
+    - nieutwardzone oleje roślinne
+    - oleje roślinne nieutwardzone
+    - oleje nieutwardzone roślinne
+    - nieuwodornione oleje roślinne
+    - oleje roślinne nieuwodornione
+    - oleje nieuwodornione roślinne
+  de:
+    - Pflanzenfett
+    - Pflanzenfette
+    - Pflanzenöl
+    - Pflanzenöle
+    - ungehärtetes Pflanzenfett
+    - ungehärtete Pflanzenfette
+    - ungehärtetes Pflanzenöl
+    - ungehärtete Pflanzenöle
+    - nicht gehärtetes Pflanzenfett
+    - nicht gehärtetes Pflanzenöl
+summary:
+  en: >-
+    Generic umbrella term for refined oils and fats of vegetable origin. Under EU Regulation (EU) No
+    1169/2011 Annex VII Part A points 8-9, EU food labels using 'vegetable oils' or 'vegetable fats' must
+    follow immediately with a list of the specific vegetable origins (such as palm, rapeseed or shea).
+  pl: >-
+    Ogólne określenie rafinowanych olejów i tłuszczów pochodzenia roślinnego. Zgodnie z rozporządzeniem (UE)
+    nr 1169/2011 (Załącznik VII część A pkt 8-9) etykieta w UE używająca określenia 'oleje roślinne' lub
+    'tłuszcze roślinne' musi bezpośrednio po nim wymienić konkretne pochodzenie roślinne (np. palmowy,
+    rzepakowy, shea).
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Defined in EU law as refined oils or fats of vegetable origin (Reg (EU) No 1169/2011 Annex VII Part A points 8-9)."
+      pl: "Zdefiniowany w prawie UE jako rafinowane oleje lub tłuszcze pochodzenia roślinnego (Rozp. (UE) nr 1169/2011 Załącznik VII część A pkt 8-9)."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8-9"
+  - code: origin.vegetable_oil_derived
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Generic vegetable oil/fat category; in EU compliant lists, specific botanical species follow in parentheses."
+      pl: "Ogólna kategoria olejów/tłuszczów roślinnych; w wykazach zgodnych z prawem UE konkretne gatunki roślin są wymieniane w nawiasie."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8-9"
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "No ethics.palm_oil assertion placed on the generic wrapper: EU Reg 1169/2011 Annex VII Part A points 8-9 mandates specific species disclosure in parentheses, so palm-containing mixes are flagged directly on child palm-oil / palm-kernel-oil matches."

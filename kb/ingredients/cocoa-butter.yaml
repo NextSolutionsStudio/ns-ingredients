@@ -2,7 +2,7 @@ id: cocoa-butter
 type: fat
 names:
   en: [cocoa butter]
-  pl: [tłuszcz kakaowy, masło kakaowe]
+  pl: [tłuszcz kakaowy, masło kakaowe, tłuszcz roślinny kakaowy, tłuszcze roślinne kakaowe]
   de: [Kakaobutter]
 summary:
   en: >-
@@ -26,6 +26,14 @@ assertions:
     note:
       en: "Pressed only from cocoa beans (Theobroma cacao); no dairy or other animal ingredient is part of the EU definition."
       pl: "Wytłaczany wyłącznie z ziaren kakaowca (Theobroma cacao); definicja UE nie obejmuje mleka ani innego składnika zwierzęcego."
+    sources: [{ id: dir-2000-36 }]
+  - code: origin.vegetable_oil_derived
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "EU cocoa and chocolate law defines cocoa butter strictly as fat obtained from cocoa beans or parts thereof."
+      pl: "Prawo UE dotyczące kakao i czekolady definiuje tłuszcz kakaowy wyłącznie jako tłuszcz otrzymywany z ziaren kakaowych lub ich części."
     sources: [{ id: dir-2000-36 }]
   - code: diet.vegan
     certainty: yes

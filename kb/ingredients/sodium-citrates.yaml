@@ -32,6 +32,25 @@ summary:
   pl: >-
     Mono-, di- i trisodowe sole kwasu cytrynowego (E 331(i)–(iii)), stosowane jako regulatory kwasowości i
     jako sole emulgujące w serach topionych.
+assertions:
+  - code: origin.microbial_fermentation
+    certainty: yes
+    kind: estimate
+    grade: B
+    note:
+      en: "Reg (EU) No 231/2012 defines E 331 as sodium salts of citric acid (E 330), and defines E 330 as produced from lemon/pineapple juice or Candida / Aspergillus niger fermentation; commercial citric acid is overwhelmingly fermentation-derived."
+      pl: "Rozporządzenie (UE) nr 231/2012 definiuje E 331 jako sole sodowe kwasu cytrynowego (E 330), a E 330 jako wytwarzany z soku z cytryny/ananasa lub przez fermentację Candida / Aspergillus niger; handlowy kwas cytrynowy pochodzi niemal wyłącznie z fermentacji."
+    sources:
+      - { id: reg-231-2012, locator: "E 331 / E 330 (Definition)" }
+      - { id: col-latif-2025-citric-acid }
+  - code: origin.plant
+    certainty: maybe
+    kind: fact
+    grade: A
+    note:
+      en: "Reg (EU) No 231/2012 permits parent citric acid (E 330) to be obtained from lemon or pineapple juice, though this route is commercially minor."
+      pl: "Rozporządzenie (UE) nr 231/2012 dopuszcza pozyskiwanie wyjściowego kwasu cytrynowego (E 330) z soku z cytryny lub ananasa, choć ta ścieżka ma marginalne znaczenie handlowe."
+    sources: [{ id: reg-231-2012, locator: "E 331 / E 330 (Definition)" }]
 regulatory:
   - jurisdiction: EU
     status: authorised

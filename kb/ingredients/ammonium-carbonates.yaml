@@ -46,8 +46,9 @@ review_status: draft
 provenance: ai-drafted
 review_notes:
   - >-
-    Identity-only: no EFSA re-evaluation of E 503 was found and the JECFA database redirected away from the
-    fetch tool, so no assessment or reference value is recorded.
+    Identity-only: no EFSA re-evaluation of E 503 was found and the JECFA URL returned 404, so no assessment,
+    origin or diet assertion is recorded (Reg (EU) No 231/2012 E 503(i)-(ii) states composition only, not
+    synthesis).
   - >-
     Composition from Reg 231/2012 (E 503(i), E 503(ii) definitions). The decomposition on baking is general
     chemistry, stated in the summary only.

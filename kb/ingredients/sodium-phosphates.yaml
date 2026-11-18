@@ -39,6 +39,21 @@ summary:
     EFSA (2019) ustaliła grupowe ADI 40 mg/kg masy ciała na dzień, wyrażone jako fosfor, dla wszystkich
     fosforanów stosowanych jako dodatki, i zauważyła, że szacowane spożycie z całej diety przekraczało je
     średnio u niemowląt, małych dzieci i starszych dzieci.
+assertions:
+  - code: origin.mineral
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: >-
+        EFSA (2019) Section 3.1.4 documents that food-grade sodium phosphates (E 339) are manufactured by
+        neutralising phosphate-rock-derived phosphoric acid with sodium hydroxide or carbonate.
+      pl: >-
+        Sekcja 3.1.4 opinii EFSA (2019) dokumentuje, że fosforany sodu (E 339) wytwarza się przez
+        zobojętnianie kwasu fosforowego ze skały fosforytowej wodorotlenkiem lub węglanem sodu.
+    sources:
+      - id: efsa-phosphates-2019
+        locator: Section 3.1.4
 regulatory:
   - jurisdiction: EU
     status: authorised

@@ -54,7 +54,7 @@ assertions:
   - code: health.iarc_group_2b
     certainty: yes
     kind: fact
-    grade: B
+    grade: A
     note:
       en: >-
         IARC (July 2023, Monographs Vol. 134) classified aspartame as Group 2B on limited evidence
@@ -91,5 +91,5 @@ reference_values:
 review_status: draft
 provenance: ai-drafted
 review_notes:
-  - "Production route (chemical synthesis of the two amino-acid-derived fragments vs the enzymatic/thermolysin coupling process used by some manufacturers) not verified against an opened source this session; left out rather than asserted from memory."
+  - "origin.chemical_synthesis omitted: sources-pack/efsa-2013-aspartame.txt was empty and EFSA 2013 §3.1.3 was not opened (would also require checking whether chemical synthesis vs enzymatic coupling covers all units)."
   - "diet.vegan not asserted: no opened source this session confirms whether the phenylalanine/aspartic acid feedstocks are exclusively fermentation-derived."

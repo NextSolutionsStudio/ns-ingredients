@@ -5,13 +5,95 @@ names:
     - shea butter
     - shea fat
     - shea
+    - non-hydrogenated shea butter
+    - unhydrogenated shea butter
+    - non-hydrogenated shea fat
+    - unhydrogenated shea fat
+    - non-hydrogenated shea oil
+    - unhydrogenated shea oil
+    - not hydrogenated shea butter
+    - not partially hydrogenated shea butter
+    - not fully hydrogenated shea butter
+    - non partially hydrogenated shea butter
+    - not hydrogenated shea fat
+    - not partially hydrogenated shea fat
+    - not fully hydrogenated shea fat
+    - non partially hydrogenated shea fat
+    - not hydrogenated shea oil
+    - not partially hydrogenated shea oil
+    - not fully hydrogenated shea oil
+    - non partially hydrogenated shea oil
+    - shea nut oil
+    - shea nut butter
+    - shea nut fat
+    - not hydrogenated shea nut butter
+    - not partially hydrogenated shea nut butter
+    - not fully hydrogenated shea nut butter
+    - non partially hydrogenated shea nut butter
+    - not hydrogenated shea nut fat
+    - not partially hydrogenated shea nut fat
+    - not fully hydrogenated shea nut fat
+    - non partially hydrogenated shea nut fat
+    - not hydrogenated shea nut oil
+    - not partially hydrogenated shea nut oil
+    - not fully hydrogenated shea nut oil
+    - non partially hydrogenated shea nut oil
+    - non-hydrogenated shea nut oil
+    - unhydrogenated shea nut oil
+    - non-hydrogenated shea nut butter
+    - unhydrogenated shea nut butter
+    - non-hydrogenated shea nut fat
+    - unhydrogenated shea nut fat
   pl:
     - tłuszcz shea
     - masło shea
     - olej shea
     - olej roślinny shea
+    - tłuszcz roślinny shea
+    - tłuszcze roślinne shea
+    - oleje roślinne shea
+    - nie utwardzony tłuszcz shea
+    - tłuszcz shea nie utwardzony
+    - nie uwodorniony tłuszcz shea
+    - tłuszcz shea nie uwodorniony
+    - nie utwardzone masło shea
+    - masło shea nie utwardzone
+    - nie uwodornione masło shea
+    - masło shea nie uwodornione
+    - nie utwardzony olej shea
+    - olej shea nie utwardzony
+    - nie uwodorniony olej shea
+    - olej shea nie uwodorniony
+    - nieutwardzony tłuszcz shea
+    - tłuszcz shea nieutwardzony
+    - nieuwodorniony tłuszcz shea
+    - tłuszcz shea nieuwodorniony
+    - nieutwardzone masło shea
+    - masło shea nieutwardzone
+    - nieuwodornione masło shea
+    - masło shea nieuwodornione
+    - nieutwardzony olej shea
+    - olej shea nieutwardzony
+    - nieuwodorniony olej shea
+    - olej shea nieuwodorniony
+    - nie utwardzony olej roślinny shea
+    - nie uwodorniony olej roślinny shea
+    - nieutwardzony olej roślinny shea
+    - olej roślinny shea nieutwardzony
+    - nieuwodorniony olej roślinny shea
+    - olej roślinny shea nieuwodorniony
+    - nie utwardzony tłuszcz roślinny shea
+    - nie uwodorniony tłuszcz roślinny shea
+    - nieutwardzony tłuszcz roślinny shea
+    - tłuszcz roślinny shea nieutwardzony
+    - nieuwodorniony tłuszcz roślinny shea
+    - tłuszcz roślinny shea nieuwodorniony
   de:
     - Sheabutter
+    - ungehärtete Sheabutter
+    - nicht gehärtete Sheabutter
+    - ungehärtetes Sheafett
+    - nicht gehärtetes Sheafett
 summary:
   en: >-
     Fat pressed from the nuts of the shea tree (Vitellaria paradoxa), used in chocolate fillings and as a
@@ -19,6 +101,144 @@ summary:
   pl: >-
     Tłuszcz wyciskany z orzechów masłosza (Vitellaria paradoxa), stosowany w nadzieniach czekoladowych i jako
     ekwiwalent masła kakaowego. Nie jest orzechem w rozumieniu załącznika II UE.
+variants:
+  - id: hydrogenated
+    names:
+      en:
+        - hydrogenated shea butter
+        - hydrogenated shea fat
+        - hydrogenated shea oil
+        - hydrogenated shea nut oil
+        - hydrogenated shea nut butter
+        - hydrogenated shea nut fat
+      pl:
+        - utwardzony tłuszcz shea
+        - tłuszcz shea utwardzony
+        - uwodorniony tłuszcz shea
+        - tłuszcz shea uwodorniony
+        - utwardzony olej shea
+        - olej shea utwardzony
+        - uwodorniony olej shea
+        - olej shea uwodorniony
+        - utwardzone masło shea
+        - masło shea utwardzone
+        - uwodornione masło shea
+        - masło shea uwodornione
+        - utwardzony olej roślinny shea
+        - olej roślinny shea utwardzony
+        - uwodorniony olej roślinny shea
+        - olej roślinny shea uwodorniony
+        - utwardzony tłuszcz roślinny shea
+        - tłuszcz roślinny shea utwardzony
+        - uwodorniony tłuszcz roślinny shea
+        - tłuszcz roślinny shea uwodorniony
+      de:
+        - gehärtete Sheabutter
+        - gehärtetes Sheafett
+    process:
+      en: "Shea fat hardened by hydrogenation; the label does not specify partial or full hydrogenation."
+      pl: "Tłuszcz shea utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
+    tells:
+      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!partially )(?<!fully )(?<!totally )(?<!teilweise )(?<!vollstandig )(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:utwardzon|uwodornion|utwardzan[yea]\b|uwodornian[yea]\b|hydrogenated|gehartet)|(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:po|podda\w*|podlega\w*)(?: (?!(?:nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b)\S+){0,3}? (?:uwodornieni|uwodornian|utwardzeni|utwardzan)'
+  - id: partially-hydrogenated
+    names:
+      en:
+        - partially hydrogenated shea butter
+        - partially hydrogenated shea fat
+        - partially hydrogenated shea oil
+        - partially hydrogenated shea nut oil
+        - partially hydrogenated shea nut butter
+        - partially hydrogenated shea nut fat
+      pl:
+        - częściowo utwardzony tłuszcz shea
+        - tłuszcz shea częściowo utwardzony
+        - częściowo uwodorniony tłuszcz shea
+        - tłuszcz shea częściowo uwodorniony
+        - częściowo utwardzony olej shea
+        - olej shea częściowo utwardzony
+        - częściowo uwodorniony olej shea
+        - olej shea częściowo uwodorniony
+        - częściowo utwardzone masło shea
+        - masło shea częściowo utwardzone
+        - częściowo uwodornione masło shea
+        - masło shea częściowo uwodornione
+        - częściowo utwardzony olej roślinny shea
+        - olej roślinny shea częściowo utwardzony
+        - częściowo uwodorniony olej roślinny shea
+        - olej roślinny shea częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny shea
+        - tłuszcz roślinny shea częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny shea
+        - tłuszcz roślinny shea częściowo uwodorniony
+      de:
+        - teilweise gehärtete Sheabutter
+        - teilweise gehärtetes Sheafett
+    process:
+      en: "Shea fat in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
+      pl: "Tłuszcz shea, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
+    tells:
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )czesciowo (?:utwardzon|uwodorn)'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )partially hydrogenated'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )teilweise gehartet'
+  - id: fully-hydrogenated
+    names:
+      en:
+        - fully hydrogenated shea butter
+        - totally hydrogenated shea butter
+        - fully hydrogenated shea fat
+        - fully hydrogenated shea oil
+        - totally hydrogenated shea fat
+        - fully hydrogenated shea nut oil
+        - totally hydrogenated shea nut oil
+        - fully hydrogenated shea nut butter
+        - totally hydrogenated shea nut butter
+        - fully hydrogenated shea nut fat
+        - totally hydrogenated shea nut fat
+      pl:
+        - całkowicie utwardzony tłuszcz shea
+        - tłuszcz shea całkowicie utwardzony
+        - w pełni utwardzony tłuszcz shea
+        - tłuszcz shea w pełni utwardzony
+        - całkowicie uwodorniony tłuszcz shea
+        - tłuszcz shea całkowicie uwodorniony
+        - całkowicie utwardzony olej shea
+        - olej shea całkowicie utwardzony
+        - w pełni utwardzony olej shea
+        - olej shea w pełni utwardzony
+        - całkowicie uwodorniony olej shea
+        - olej shea całkowicie uwodorniony
+        - całkowicie utwardzone masło shea
+        - masło shea całkowicie utwardzone
+        - w pełni uwodorniony tłuszcz shea
+        - tłuszcz shea w pełni uwodorniony
+        - całkowicie uwodornione masło shea
+        - masło shea całkowicie uwodornione
+        - w pełni utwardzone masło shea
+        - masło shea w pełni utwardzone
+        - w pełni uwodornione masło shea
+        - masło shea w pełni uwodornione
+        - w pełni uwodorniony olej shea
+        - olej shea w pełni uwodorniony
+        - całkowicie utwardzony olej roślinny shea
+        - olej roślinny shea całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny shea
+        - olej roślinny shea całkowicie uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny shea
+        - tłuszcz roślinny shea całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny shea
+        - tłuszcz roślinny shea całkowicie uwodorniony
+      de:
+        - vollständig gehärtete Sheabutter
+        - vollständig gehärtetes Sheafett
+    process:
+      en: "Shea fat with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
+      pl: "Tłuszcz shea ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
+    tells:
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )calkowicie (?:utwardzon|uwodorn)'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )w pelni (?:utwardzon|uwodorn)'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )fully hydrogenated'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )totally hydrogenated'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )vollstandig gehartet'
 assertions:
   - code: origin.vegetable_oil_derived
     certainty: 'yes'
@@ -30,5 +250,48 @@ assertions:
     sources:
       - id: reg-1169-2011
         locator: 'Annex VII Part A, point 9'
+  - code: processing.hydrogenated
+    variant: hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares hydrogenation without specifying partial or full, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje utwardzenie (bez wskazania, czy częściowe, czy całkowite), czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: processing.hydrogenated
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares partial hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje częściowe utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: health.trans_fat_source
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Partial hydrogenation is the main industrial source of trans fat; EU food sold to consumers is capped at 2 g trans fat per 100 g of fat."
+      pl: "Częściowe utwardzanie jest głównym przemysłowym źródłem tłuszczów trans; żywność sprzedawana konsumentom w UE ma limit 2 g tłuszczów trans na 100 g tłuszczu."
+    sources:
+      - id: reg-2019-649
+  - code: processing.hydrogenated
+    variant: fully-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares full hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje całkowite utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
 review_status: draft
 provenance: ai-drafted

@@ -1,9 +1,9 @@
 id: hydrogenated-vegetable-fat
 type: fat
 names:
-  en: [hydrogenated vegetable fat, hydrogenated vegetable oil]
-  pl: [tłuszcz utwardzony, olej roślinny utwardzony, tłuszcz roślinny utwardzony]
-  de: [gehärtetes Pflanzenfett, gehärtetes Pflanzenöl]
+  en: [hydrogenated vegetable fat, hydrogenated vegetable fats, hydrogenated vegetable oil, hydrogenated vegetable oils]
+  pl: [olej roślinny utwardzony, utwardzony olej roślinny, oleje roślinne utwardzone, utwardzone oleje roślinne, tłuszcz roślinny utwardzony, utwardzony tłuszcz roślinny, tłuszcze roślinne utwardzone, utwardzone tłuszcze roślinne, olej roślinny uwodorniony, uwodorniony olej roślinny, oleje roślinne uwodornione, uwodornione oleje roślinne, tłuszcz roślinny uwodorniony, uwodorniony tłuszcz roślinny, tłuszcze roślinne uwodornione, uwodornione tłuszcze roślinne, utwardzone olej roślinny, olej roślinny utwardzone, uwodornione olej roślinny, olej roślinny uwodornione, utwardzone tłuszcz roślinny, tłuszcz roślinny utwardzone, uwodornione tłuszcz roślinny, tłuszcz roślinny uwodornione, utwardzony oleje roślinne, oleje roślinne utwardzony, uwodorniony oleje roślinne, oleje roślinne uwodorniony, utwardzony tłuszcze roślinne, tłuszcze roślinne utwardzony, uwodorniony tłuszcze roślinne, tłuszcze roślinne uwodorniony]
+  de: [gehärtetes Pflanzenfett, gehärtete Pflanzenfette, gehärtetes Pflanzenöl, gehärtete Pflanzenöle]
 summary:
   en: >-
     A vegetable oil hardened by adding hydrogen across its double bonds, to raise its melting point and
@@ -24,13 +24,13 @@ summary:
 variants:
   - id: partially-hydrogenated
     names:
-      en: [partially hydrogenated vegetable oil, partially hydrogenated vegetable fat]
-      pl: [olej roślinny częściowo utwardzony, tłuszcz częściowo utwardzony, częściowo utwardzony olej roślinny, olej roślinny częściowo uwodorniony, częściowo uwodorniony olej roślinny]
+      en: [partially hydrogenated vegetable oil, partially hydrogenated vegetable oils, partially hydrogenated vegetable fat, partially hydrogenated vegetable fats]
+      pl: [olej roślinny częściowo utwardzony, częściowo utwardzony olej roślinny, oleje roślinne częściowo utwardzone, częściowo utwardzone oleje roślinne, tłuszcz roślinny częściowo utwardzony, częściowo utwardzony tłuszcz roślinny, tłuszcze roślinne częściowo utwardzone, częściowo utwardzone tłuszcze roślinne, olej roślinny częściowo uwodorniony, częściowo uwodorniony olej roślinny, oleje roślinne częściowo uwodornione, częściowo uwodornione oleje roślinne, tłuszcz roślinny częściowo uwodorniony, częściowo uwodorniony tłuszcz roślinny, tłuszcze roślinne częściowo uwodornione, częściowo uwodornione tłuszcze roślinne]
       de: [teilweise gehärtetes Pflanzenöl, teilweise gehärtetes Pflanzenfett]
     process:
       en: "Some but not all double bonds are hydrogenated, leaving a mix of natural cis and industrially formed trans unsaturated fatty acids."
       pl: "Utwardzeniu podlega część, nie wszystkie, wiązania podwójne, co pozostawia mieszankę naturalnych (cis) i powstałych przemysłowo (trans) nienasyconych kwasów tłuszczowych."
-    tells: ['czesciowo (?:utwardzon|uwodorn)', 'partially hydrogenated', 'teilweise gehartet']
+    tells: ['(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )czesciowo (?:utwardzon|uwodorn)', '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )partially hydrogenated', '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )teilweise gehartet']
     prior: 0.45
     prior_rationale:
       en: >-
@@ -43,18 +43,36 @@ variants:
         tłuszczów trans i związanego z tym ryzyka na etykiecie.
   - id: fully-hydrogenated
     names:
-      en: [fully hydrogenated vegetable oil, totally hydrogenated vegetable fat]
-      pl: [olej roślinny całkowicie utwardzony, tłuszcz całkowicie utwardzony, w pełni utwardzony tłuszcz roślinny, olej roślinny całkowicie uwodorniony, całkowicie uwodorniony olej roślinny]
-      de: [vollständig gehärtetes Pflanzenöl]
+      en: [fully hydrogenated vegetable oil, fully hydrogenated vegetable oils, totally hydrogenated vegetable fat, fully hydrogenated vegetable fat, fully hydrogenated vegetable fats]
+      pl: [olej roślinny całkowicie utwardzony, całkowicie utwardzony olej roślinny, oleje roślinne całkowicie utwardzone, całkowicie utwardzone oleje roślinne, tłuszcz roślinny całkowicie utwardzony, całkowicie utwardzony tłuszcz roślinny, tłuszcze roślinne całkowicie utwardzone, całkowicie utwardzone tłuszcze roślinne, w pełni utwardzony olej roślinny, olej roślinny w pełni utwardzony, w pełni utwardzone oleje roślinne, oleje roślinne w pełni utwardzone, w pełni utwardzony tłuszcz roślinny, tłuszcz roślinny w pełni utwardzony, w pełni utwardzone tłuszcze roślinne, tłuszcze roślinne w pełni utwardzone, olej roślinny całkowicie uwodorniony, całkowicie uwodorniony olej roślinny, oleje roślinne całkowicie uwodornione, całkowicie uwodornione oleje roślinne, tłuszcz roślinny całkowicie uwodorniony, całkowicie uwodorniony tłuszcz roślinny, tłuszcze roślinne całkowicie uwodornione, całkowicie uwodornione tłuszcze roślinne, w pełni uwodorniony tłuszcz roślinny, tłuszcz roślinny w pełni uwodorniony, w pełni uwodorniony olej roślinny, olej roślinny w pełni uwodorniony, w pełni uwodornione tłuszcze roślinne, tłuszcze roślinne w pełni uwodornione, w pełni uwodornione oleje roślinne, oleje roślinne w pełni uwodornione]
+      de: [vollständig gehärtetes Pflanzenöl, vollständig gehärtetes Pflanzenfett]
     process:
       en: "All double bonds are hydrogenated; the fat is fully saturated, very hard, and contains essentially no trans fat."
       pl: "Wszystkie wiązania podwójne są utwardzone; tłuszcz jest w pełni nasycony, bardzo twardy i praktycznie nie zawiera tłuszczów trans."
-    tells: ['calkowicie (?:utwardzon|uwodorn)', 'fully hydrogenated', 'totally hydrogenated', 'w pelni (?:utwardzon|uwodorn)', 'vollstandig gehartet']
+    tells: ['(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )calkowicie (?:utwardzon|uwodorn)', '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )fully hydrogenated', '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )totally hydrogenated', '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )w pelni (?:utwardzon|uwodorn)', '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )vollstandig gehartet']
     prior: 0.5
     prior_rationale:
       en: "The post-2021 default for a 'fully hardened' commodity fat, usually blended or interesterified with a liquid oil to get a workable texture."
       pl: "Domyślny wybór po 2021 r. dla masowego 'w pełni utwardzonego' tłuszczu, zwykle mieszanego lub estryfikowanego z olejem ciekłym w celu uzyskania odpowiedniej konsystencji."
 assertions:
+  - code: origin.plant
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Derived from refined oils and fats of vegetable origin (Reg (EU) No 1169/2011 Annex VII Part A points 8-9)."
+      pl: "Pochodzi z rafinowanych olejów i tłuszczów pochodzenia roślinnego (rozporządzenie (UE) nr 1169/2011, załącznik VII część A pkt 8-9)."
+    sources: [{ id: reg-1169-2011, locator: "Annex VII Part A, points 8-9" }]
+  - code: origin.vegetable_oil_derived
+    certainty: yes
+    kind: fact
+    grade: A
+    note:
+      en: "Manufactured by catalytic hydrogenation of refined vegetable oils or fats."
+      pl: "Wytwarzany przez katalityczne uwodornienie rafinowanych olejów lub tłuszczów roślinnych."
+    sources:
+      - { id: reg-1169-2011, locator: "Annex VII Part A, points 8-9" }
+      - { id: reg-2019-649 }
   - code: processing.hydrogenated
     certainty: yes
     kind: fact
@@ -75,4 +93,4 @@ assertions:
 review_status: draft
 provenance: ai-drafted
 review_notes:
-  - "No source-oil variant (palm/rapeseed/soy) was added on top of the hydrogenation-degree axis, to keep the single prior budget on the axis that carries the health-relevant distinction; the base oil is usually named separately on a real label (e.g. 'utwardzony olej rzepakowy')."
+  - "No source-oil variant (palm/rapeseed/soy) was added on top of the hydrogenation-degree axis, to keep the single prior budget on the axis that carries the health-relevant distinction; named single-oil hydrogenated forms (e.g. 'utwardzony olej rzepakowy') are handled on their respective oil entries."

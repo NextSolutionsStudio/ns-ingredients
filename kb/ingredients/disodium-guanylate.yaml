@@ -36,3 +36,10 @@ review_status: draft
 provenance: ai-drafted
 review_notes:
   - 'Identity-only: no EFSA re-evaluation of E 626–635 was opened.'
+  - >-
+    origin.*: not asserted — checked Reg (EU) No 231/2012 E 627 Definition (no manufacturing route),
+    EFSA re-evaluation status (call for data only; no published food-additive opinion),
+    sources-pack/efsa-ribonucleotides-e626-e635.txt (FEEDAP animal-feed IMP opinions only), and
+    sources-pack/review-nucleotides-production.txt (research abstracts on yeast RNA/GMP). Without an
+    opened food-additive dossier settling yeast RNA hydrolysis vs bacterial fermentation vs animal/fish
+    sources, no origin code is asserted and diet status remains unknown.

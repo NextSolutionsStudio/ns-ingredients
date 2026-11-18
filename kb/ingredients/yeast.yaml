@@ -19,4 +19,7 @@ summary:
 review_status: draft
 provenance: ai-drafted
 review_notes:
-  - 'Identity-only: no source on growth media or diet status was opened.'
+  - >-
+    origin.*: NO CODE FITS — Saccharomyces cerevisiae is the living fungal microorganism itself rather than
+    a plant (origin.plant) or fermentation-derived metabolite (origin.microbial_fermentation); no fungal or
+    microorganism origin code exists in kb/implications.yaml.

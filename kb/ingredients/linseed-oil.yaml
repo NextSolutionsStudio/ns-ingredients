@@ -1,0 +1,423 @@
+id: linseed-oil
+type: fat
+names:
+  en:
+    - linseed oil
+    - flaxseed oil
+    - cold-pressed flaxseed oil
+    - non-hydrogenated linseed oil
+    - non hydrogenated linseed oil
+    - unhydrogenated linseed oil
+    - non-hydrogenated flaxseed oil
+    - non hydrogenated flaxseed oil
+    - unhydrogenated flaxseed oil
+    - non-hydrogenated cold-pressed flaxseed oil
+    - unhydrogenated cold-pressed flaxseed oil
+    - not hydrogenated linseed oil
+    - not partially hydrogenated linseed oil
+    - not fully hydrogenated linseed oil
+    - non partially hydrogenated linseed oil
+    - not hydrogenated flaxseed oil
+    - not partially hydrogenated flaxseed oil
+    - not fully hydrogenated flaxseed oil
+    - non partially hydrogenated flaxseed oil
+    - not hydrogenated cold-pressed flaxseed oil
+    - not partially hydrogenated cold-pressed flaxseed oil
+    - not fully hydrogenated cold-pressed flaxseed oil
+    - non partially hydrogenated cold-pressed flaxseed oil
+  pl:
+    - olej lniany
+    - olej roślinny lniany
+    - tłuszcz roślinny lniany
+    - lniany olej roślinny
+    - olej lniany tłoczony na zimno
+    - olej z siemienia lnianego
+    - olej z nasion lnu
+    - tłuszcze roślinne lniane
+    - oleje roślinne lniane
+    - oleje roślinne lniany
+    - olej roślinny z nasion lnu
+    - tłuszcz roślinny z nasion lnu
+    - oleje roślinne z nasion lnu
+    - tłuszcze roślinne z nasion lnu
+    - olej roślinny z siemienia lnianego
+    - tłuszcz roślinny z siemienia lnianego
+    - oleje roślinne z siemienia lnianego
+    - tłuszcze roślinne z siemienia lnianego
+    - nie utwardzony olej lniany
+    - olej lniany nie utwardzony
+    - nie uwodorniony olej lniany
+    - olej lniany nie uwodorniony
+    - nie utwardzony olej z siemienia lnianego
+    - olej z siemienia lnianego nie utwardzony
+    - nie uwodorniony olej z siemienia lnianego
+    - olej z siemienia lnianego nie uwodorniony
+    - nie utwardzony olej z nasion lnu
+    - olej z nasion lnu nie utwardzony
+    - nie uwodorniony olej z nasion lnu
+    - olej z nasion lnu nie uwodorniony
+    - olej z lnu
+    - tłuszcz roślinny z lnu
+    - tłuszcze roślinne z lnu
+    - olej roślinny z lnu
+    - oleje roślinne z lnu
+    - nie utwardzony olej z lnu
+    - olej z lnu nie utwardzony
+    - nie uwodorniony olej z lnu
+    - olej z lnu nie uwodorniony
+    - nieutwardzony olej lniany
+    - olej lniany nieutwardzony
+    - nieuwodorniony olej lniany
+    - olej lniany nieuwodorniony
+    - nieutwardzony olej z siemienia lnianego
+    - olej z siemienia lnianego nieutwardzony
+    - nieuwodorniony olej z siemienia lnianego
+    - olej z siemienia lnianego nieuwodorniony
+    - nieutwardzony olej z nasion lnu
+    - olej z nasion lnu nieutwardzony
+    - nieuwodorniony olej z nasion lnu
+    - olej z nasion lnu nieuwodorniony
+    - nieutwardzony olej z lnu
+    - olej z lnu nieutwardzony
+    - nieuwodorniony olej z lnu
+    - olej z lnu nieuwodorniony
+    - nie utwardzony olej roślinny lniany
+    - nie uwodorniony olej roślinny lniany
+    - nieutwardzony olej roślinny lniany
+    - olej roślinny lniany nieutwardzony
+    - nieuwodorniony olej roślinny lniany
+    - olej roślinny lniany nieuwodorniony
+    - nie utwardzony tłuszcz roślinny lniany
+    - nie uwodorniony tłuszcz roślinny lniany
+    - nieutwardzony tłuszcz roślinny lniany
+    - tłuszcz roślinny lniany nieutwardzony
+    - nieuwodorniony tłuszcz roślinny lniany
+    - tłuszcz roślinny lniany nieuwodorniony
+    - nie utwardzony olej roślinny z nasion lnu
+    - nie uwodorniony olej roślinny z nasion lnu
+    - nieutwardzony olej roślinny z nasion lnu
+    - olej roślinny z nasion lnu nieutwardzony
+    - nieuwodorniony olej roślinny z nasion lnu
+    - olej roślinny z nasion lnu nieuwodorniony
+    - nie utwardzony tłuszcz roślinny z nasion lnu
+    - nie uwodorniony tłuszcz roślinny z nasion lnu
+    - nieutwardzony tłuszcz roślinny z nasion lnu
+    - tłuszcz roślinny z nasion lnu nieutwardzony
+    - nieuwodorniony tłuszcz roślinny z nasion lnu
+    - tłuszcz roślinny z nasion lnu nieuwodorniony
+    - nie utwardzony olej roślinny z siemienia lnianego
+    - nie uwodorniony olej roślinny z siemienia lnianego
+    - nieutwardzony olej roślinny z siemienia lnianego
+    - olej roślinny z siemienia lnianego nieutwardzony
+    - nieuwodorniony olej roślinny z siemienia lnianego
+    - olej roślinny z siemienia lnianego nieuwodorniony
+    - nie utwardzony tłuszcz roślinny z siemienia lnianego
+    - nie uwodorniony tłuszcz roślinny z siemienia lnianego
+    - nieutwardzony tłuszcz roślinny z siemienia lnianego
+    - tłuszcz roślinny z siemienia lnianego nieutwardzony
+    - nieuwodorniony tłuszcz roślinny z siemienia lnianego
+    - tłuszcz roślinny z siemienia lnianego nieuwodorniony
+    - nie utwardzony tłuszcz roślinny z lnu
+    - nie uwodorniony tłuszcz roślinny z lnu
+    - nieutwardzony tłuszcz roślinny z lnu
+    - tłuszcz roślinny z lnu nieutwardzony
+    - nieuwodorniony tłuszcz roślinny z lnu
+    - tłuszcz roślinny z lnu nieuwodorniony
+    - nie utwardzony olej roślinny z lnu
+    - nie uwodorniony olej roślinny z lnu
+    - nieutwardzony olej roślinny z lnu
+    - olej roślinny z lnu nieutwardzony
+    - nieuwodorniony olej roślinny z lnu
+    - olej roślinny z lnu nieuwodorniony
+  de:
+    - Leinöl
+    - Leinsamenöl
+summary:
+  en: >-
+    Vegetable oil pressed from flax seeds (Linum usitatissimum), rich in alpha-linolenic acid (an omega-3
+    polyunsaturated fatty acid); used in food chiefly in cold-pressed form.
+  pl: >-
+    Olej roślinny tłoczony z nasion lnu (siemienia lnianego, Linum usitatissimum), bogaty w kwas
+    alfa-linolenowy (wielonienasycony kwas tłuszczowy omega-3); w żywności stosowany głównie jako olej
+    tłoczony na zimno.
+variants:
+  - id: hydrogenated
+    names:
+      en:
+        - hydrogenated linseed oil
+        - hydrogenated flaxseed oil
+        - hydrogenated cold-pressed flaxseed oil
+      pl:
+        - utwardzony olej lniany
+        - olej lniany utwardzony
+        - uwodorniony olej lniany
+        - olej lniany uwodorniony
+        - utwardzony olej z nasion lnu
+        - olej z nasion lnu utwardzony
+        - utwardzony olej z siemienia lnianego
+        - olej z siemienia lnianego utwardzony
+        - uwodorniony olej z siemienia lnianego
+        - olej z siemienia lnianego uwodorniony
+        - uwodorniony olej z nasion lnu
+        - olej z nasion lnu uwodorniony
+        - utwardzony olej z lnu
+        - olej z lnu utwardzony
+        - uwodorniony olej z lnu
+        - olej z lnu uwodorniony
+        - utwardzony olej roślinny lniany
+        - olej roślinny lniany utwardzony
+        - uwodorniony olej roślinny lniany
+        - olej roślinny lniany uwodorniony
+        - utwardzony tłuszcz roślinny lniany
+        - tłuszcz roślinny lniany utwardzony
+        - uwodorniony tłuszcz roślinny lniany
+        - tłuszcz roślinny lniany uwodorniony
+        - utwardzony olej roślinny z nasion lnu
+        - olej roślinny z nasion lnu utwardzony
+        - uwodorniony olej roślinny z nasion lnu
+        - olej roślinny z nasion lnu uwodorniony
+        - utwardzony tłuszcz roślinny z nasion lnu
+        - tłuszcz roślinny z nasion lnu utwardzony
+        - uwodorniony tłuszcz roślinny z nasion lnu
+        - tłuszcz roślinny z nasion lnu uwodorniony
+        - utwardzony olej roślinny z siemienia lnianego
+        - olej roślinny z siemienia lnianego utwardzony
+        - uwodorniony olej roślinny z siemienia lnianego
+        - olej roślinny z siemienia lnianego uwodorniony
+        - utwardzony tłuszcz roślinny z siemienia lnianego
+        - tłuszcz roślinny z siemienia lnianego utwardzony
+        - uwodorniony tłuszcz roślinny z siemienia lnianego
+        - tłuszcz roślinny z siemienia lnianego uwodorniony
+        - utwardzony tłuszcz roślinny z lnu
+        - tłuszcz roślinny z lnu utwardzony
+        - uwodorniony tłuszcz roślinny z lnu
+        - tłuszcz roślinny z lnu uwodorniony
+        - utwardzony olej roślinny z lnu
+        - olej roślinny z lnu utwardzony
+        - uwodorniony olej roślinny z lnu
+        - olej roślinny z lnu uwodorniony
+      de:
+        - gehärtetes Leinöl
+        - gehärtetes Leinsamenöl
+    process:
+      en: "Linseed oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
+      pl: "Olej lniany utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
+    tells:
+      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!partially )(?<!fully )(?<!totally )(?<!teilweise )(?<!vollstandig )(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:utwardzon|uwodornion|utwardzan[yea]\b|uwodornian[yea]\b|hydrogenated|gehartet)|(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:po|podda\w*|podlega\w*)(?: (?!(?:nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b)\S+){0,3}? (?:uwodornieni|uwodornian|utwardzeni|utwardzan)'
+  - id: partially-hydrogenated
+    names:
+      en:
+        - partially hydrogenated linseed oil
+        - partially hydrogenated flaxseed oil
+        - partially hydrogenated cold-pressed flaxseed oil
+      pl:
+        - częściowo utwardzony olej lniany
+        - olej lniany częściowo utwardzony
+        - częściowo uwodorniony olej lniany
+        - olej lniany częściowo uwodorniony
+        - częściowo utwardzony olej z nasion lnu
+        - olej z nasion lnu częściowo utwardzony
+        - częściowo utwardzony olej z siemienia lnianego
+        - olej z siemienia lnianego częściowo utwardzony
+        - częściowo uwodorniony olej z siemienia lnianego
+        - olej z siemienia lnianego częściowo uwodorniony
+        - częściowo uwodorniony olej z nasion lnu
+        - olej z nasion lnu częściowo uwodorniony
+        - częściowo utwardzony olej z lnu
+        - olej z lnu częściowo utwardzony
+        - częściowo uwodorniony olej z lnu
+        - olej z lnu częściowo uwodorniony
+        - częściowo utwardzony olej roślinny lniany
+        - olej roślinny lniany częściowo utwardzony
+        - częściowo uwodorniony olej roślinny lniany
+        - olej roślinny lniany częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny lniany
+        - tłuszcz roślinny lniany częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny lniany
+        - tłuszcz roślinny lniany częściowo uwodorniony
+        - częściowo utwardzony olej roślinny z nasion lnu
+        - olej roślinny z nasion lnu częściowo utwardzony
+        - częściowo uwodorniony olej roślinny z nasion lnu
+        - olej roślinny z nasion lnu częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny z nasion lnu
+        - tłuszcz roślinny z nasion lnu częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny z nasion lnu
+        - tłuszcz roślinny z nasion lnu częściowo uwodorniony
+        - częściowo utwardzony olej roślinny z siemienia lnianego
+        - olej roślinny z siemienia lnianego częściowo utwardzony
+        - częściowo uwodorniony olej roślinny z siemienia lnianego
+        - olej roślinny z siemienia lnianego częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny z siemienia lnianego
+        - tłuszcz roślinny z siemienia lnianego częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny z siemienia lnianego
+        - tłuszcz roślinny z siemienia lnianego częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny z lnu
+        - tłuszcz roślinny z lnu częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny z lnu
+        - tłuszcz roślinny z lnu częściowo uwodorniony
+        - częściowo utwardzony olej roślinny z lnu
+        - olej roślinny z lnu częściowo utwardzony
+        - częściowo uwodorniony olej roślinny z lnu
+        - olej roślinny z lnu częściowo uwodorniony
+      de:
+        - teilweise gehärtetes Leinöl
+        - teilweise gehärtetes Leinsamenöl
+    process:
+      en: "Linseed oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
+      pl: "Olej lniany, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
+    tells:
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )czesciowo (?:utwardzon|uwodorn)'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )partially hydrogenated'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )teilweise gehartet'
+  - id: fully-hydrogenated
+    names:
+      en:
+        - fully hydrogenated linseed oil
+        - totally hydrogenated linseed oil
+        - fully hydrogenated flaxseed oil
+        - totally hydrogenated flaxseed oil
+        - fully hydrogenated cold-pressed flaxseed oil
+        - totally hydrogenated cold-pressed flaxseed oil
+      pl:
+        - całkowicie utwardzony olej lniany
+        - olej lniany całkowicie utwardzony
+        - w pełni utwardzony olej lniany
+        - olej lniany w pełni utwardzony
+        - całkowicie uwodorniony olej lniany
+        - olej lniany całkowicie uwodorniony
+        - w pełni uwodorniony olej lniany
+        - olej lniany w pełni uwodorniony
+        - całkowicie utwardzony olej z nasion lnu
+        - olej z nasion lnu całkowicie utwardzony
+        - całkowicie utwardzony olej z siemienia lnianego
+        - olej z siemienia lnianego całkowicie utwardzony
+        - całkowicie uwodorniony olej z siemienia lnianego
+        - olej z siemienia lnianego całkowicie uwodorniony
+        - w pełni utwardzony olej z siemienia lnianego
+        - olej z siemienia lnianego w pełni utwardzony
+        - w pełni uwodorniony olej z siemienia lnianego
+        - olej z siemienia lnianego w pełni uwodorniony
+        - całkowicie uwodorniony olej z nasion lnu
+        - olej z nasion lnu całkowicie uwodorniony
+        - w pełni utwardzony olej z nasion lnu
+        - olej z nasion lnu w pełni utwardzony
+        - w pełni uwodorniony olej z nasion lnu
+        - olej z nasion lnu w pełni uwodorniony
+        - całkowicie utwardzony olej z lnu
+        - olej z lnu całkowicie utwardzony
+        - całkowicie uwodorniony olej z lnu
+        - olej z lnu całkowicie uwodorniony
+        - w pełni utwardzony olej z lnu
+        - olej z lnu w pełni utwardzony
+        - w pełni uwodorniony olej z lnu
+        - olej z lnu w pełni uwodorniony
+        - całkowicie utwardzony olej roślinny lniany
+        - olej roślinny lniany całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny lniany
+        - olej roślinny lniany całkowicie uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny lniany
+        - tłuszcz roślinny lniany całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny lniany
+        - tłuszcz roślinny lniany całkowicie uwodorniony
+        - całkowicie utwardzony olej roślinny z nasion lnu
+        - olej roślinny z nasion lnu całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny z nasion lnu
+        - olej roślinny z nasion lnu całkowicie uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny z nasion lnu
+        - tłuszcz roślinny z nasion lnu całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny z nasion lnu
+        - tłuszcz roślinny z nasion lnu całkowicie uwodorniony
+        - całkowicie utwardzony olej roślinny z siemienia lnianego
+        - olej roślinny z siemienia lnianego całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny z siemienia lnianego
+        - olej roślinny z siemienia lnianego całkowicie uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny z siemienia lnianego
+        - tłuszcz roślinny z siemienia lnianego całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny z siemienia lnianego
+        - tłuszcz roślinny z siemienia lnianego całkowicie uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny z lnu
+        - tłuszcz roślinny z lnu całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny z lnu
+        - tłuszcz roślinny z lnu całkowicie uwodorniony
+        - całkowicie utwardzony olej roślinny z lnu
+        - olej roślinny z lnu całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny z lnu
+        - olej roślinny z lnu całkowicie uwodorniony
+      de:
+        - vollständig gehärtetes Leinöl
+        - vollständig gehärtetes Leinsamenöl
+    process:
+      en: "Linseed oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
+      pl: "Olej lniany ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
+    tells:
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )calkowicie (?:utwardzon|uwodorn)'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )w pelni (?:utwardzon|uwodorn)'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )fully hydrogenated'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )totally hydrogenated'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )vollstandig gehartet'
+assertions:
+  - code: origin.plant
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Obtained from the seeds of flax (Linum usitatissimum) (Reg (EU) No 1169/2011 Annex VII Part A point 8)."
+      pl: "Pozyskiwany z nasion lnu (Linum usitatissimum) (Rozp. (UE) nr 1169/2011 Załącznik VII część A pkt 8)."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, point 8"
+  - code: origin.vegetable_oil_derived
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Plant seed oil expressed from flaxseed."
+      pl: "Olej roślinny wytłaczany z siemienia lnianego."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, point 8"
+  - code: processing.hydrogenated
+    variant: hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares hydrogenation without specifying partial or full, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje utwardzenie (bez wskazania, czy częściowe, czy całkowite), czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: processing.hydrogenated
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares partial hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje częściowe utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: health.trans_fat_source
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Partial hydrogenation is the main industrial source of trans fat; EU food sold to consumers is capped at 2 g trans fat per 100 g of fat."
+      pl: "Częściowe utwardzanie jest głównym przemysłowym źródłem tłuszczów trans; żywność sprzedawana konsumentom w UE ma limit 2 g tłuszczów trans na 100 g tłuszczu."
+    sources:
+      - id: reg-2019-649
+  - code: processing.hydrogenated
+    variant: fully-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares full hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje całkowite utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+review_status: draft
+provenance: ai-drafted

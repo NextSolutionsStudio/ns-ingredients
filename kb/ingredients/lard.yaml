@@ -4,17 +4,167 @@ names:
   en:
     - lard
     - pork fat
+    - non-hydrogenated pork fat
+    - unhydrogenated pork fat
+    - not hydrogenated pork fat
+    - not partially hydrogenated pork fat
+    - not fully hydrogenated pork fat
+    - non partially hydrogenated pork fat
+    - not hydrogenated lard
+    - not partially hydrogenated lard
+    - not fully hydrogenated lard
+    - non partially hydrogenated lard
+    - non-hydrogenated lard
+    - unhydrogenated lard
   pl:
     - tłuszcz wieprzowy
     - smalec
     - smalec wieprzowy
     - słonina
+    - nie utwardzony tłuszcz wieprzowy
+    - tłuszcz wieprzowy nie utwardzony
+    - nie uwodorniony tłuszcz wieprzowy
+    - tłuszcz wieprzowy nie uwodorniony
+    - nie utwardzony smalec
+    - smalec nie utwardzony
+    - nie uwodorniony smalec
+    - smalec nie uwodorniony
+    - nie utwardzony smalec wieprzowy
+    - smalec wieprzowy nie utwardzony
+    - nie uwodorniony smalec wieprzowy
+    - smalec wieprzowy nie uwodorniony
+    - nieutwardzony tłuszcz wieprzowy
+    - tłuszcz wieprzowy nieutwardzony
+    - nieuwodorniony tłuszcz wieprzowy
+    - tłuszcz wieprzowy nieuwodorniony
+    - nieutwardzony smalec
+    - smalec nieutwardzony
+    - nieuwodorniony smalec
+    - smalec nieuwodorniony
+    - nieutwardzony smalec wieprzowy
+    - smalec wieprzowy nieutwardzony
+    - nieuwodorniony smalec wieprzowy
+    - smalec wieprzowy nieuwodorniony
+    - tłuszcz nie utwardzony wieprzowy
+    - tłuszcz nie uwodorniony wieprzowy
+    - tłuszcz nieutwardzony wieprzowy
+    - tłuszcz nieuwodorniony wieprzowy
+    - smalec nie utwardzony wieprzowy
+    - smalec nie uwodorniony wieprzowy
+    - smalec nieutwardzony wieprzowy
+    - smalec nieuwodorniony wieprzowy
   de:
     - Schweineschmalz
     - Schweinefett
 summary:
   en: 'Fat from pigs: rendered lard, or back fat (słonina).'
   pl: 'Tłuszcz ze świń: wytopiony smalec lub słonina.'
+variants:
+  - id: hydrogenated
+    names:
+      en:
+        - hydrogenated pork fat
+        - hydrogenated lard
+      pl:
+        - utwardzony tłuszcz wieprzowy
+        - tłuszcz wieprzowy utwardzony
+        - uwodorniony tłuszcz wieprzowy
+        - tłuszcz wieprzowy uwodorniony
+        - utwardzony smalec wieprzowy
+        - smalec wieprzowy utwardzony
+        - uwodorniony smalec wieprzowy
+        - smalec wieprzowy uwodorniony
+        - utwardzony smalec
+        - smalec utwardzony
+        - uwodorniony smalec
+        - smalec uwodorniony
+        - tłuszcz utwardzony wieprzowy
+        - tłuszcz uwodorniony wieprzowy
+        - smalec utwardzony wieprzowy
+        - smalec uwodorniony wieprzowy
+    process:
+      en: "Pork fat hardened by hydrogenation; the label does not specify partial or full hydrogenation."
+      pl: "Tłuszcz wieprzowy utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
+    tells:
+      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!partially )(?<!fully )(?<!totally )(?<!teilweise )(?<!vollstandig )(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:utwardzon|uwodornion|utwardzan[yea]\b|uwodornian[yea]\b|hydrogenated|gehartet)|(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:po|podda\w*|podlega\w*)(?: (?!(?:nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b)\S+){0,3}? (?:uwodornieni|uwodornian|utwardzeni|utwardzan)'
+  - id: partially-hydrogenated
+    names:
+      en:
+        - partially hydrogenated pork fat
+        - partially hydrogenated lard
+      pl:
+        - częściowo utwardzony tłuszcz wieprzowy
+        - tłuszcz wieprzowy częściowo utwardzony
+        - częściowo uwodorniony tłuszcz wieprzowy
+        - tłuszcz wieprzowy częściowo uwodorniony
+        - częściowo utwardzony smalec wieprzowy
+        - smalec wieprzowy częściowo utwardzony
+        - częściowo uwodorniony smalec wieprzowy
+        - smalec wieprzowy częściowo uwodorniony
+        - częściowo utwardzony smalec
+        - smalec częściowo utwardzony
+        - częściowo uwodorniony smalec
+        - smalec częściowo uwodorniony
+        - tłuszcz częściowo utwardzony wieprzowy
+        - tłuszcz częściowo uwodorniony wieprzowy
+        - smalec częściowo utwardzony wieprzowy
+        - smalec częściowo uwodorniony wieprzowy
+    process:
+      en: "Pork fat in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
+      pl: "Tłuszcz wieprzowy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
+    tells:
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )czesciowo (?:utwardzon|uwodorn)'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )partially hydrogenated'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )teilweise gehartet'
+  - id: fully-hydrogenated
+    names:
+      en:
+        - fully hydrogenated pork fat
+        - totally hydrogenated pork fat
+        - fully hydrogenated lard
+        - totally hydrogenated lard
+      pl:
+        - całkowicie utwardzony tłuszcz wieprzowy
+        - tłuszcz wieprzowy całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz wieprzowy
+        - tłuszcz wieprzowy całkowicie uwodorniony
+        - w pełni utwardzony tłuszcz wieprzowy
+        - tłuszcz wieprzowy w pełni utwardzony
+        - w pełni uwodorniony tłuszcz wieprzowy
+        - tłuszcz wieprzowy w pełni uwodorniony
+        - całkowicie utwardzony smalec wieprzowy
+        - smalec wieprzowy całkowicie utwardzony
+        - całkowicie uwodorniony smalec wieprzowy
+        - smalec wieprzowy całkowicie uwodorniony
+        - w pełni utwardzony smalec wieprzowy
+        - smalec wieprzowy w pełni utwardzony
+        - w pełni uwodorniony smalec wieprzowy
+        - smalec wieprzowy w pełni uwodorniony
+        - całkowicie utwardzony smalec
+        - smalec całkowicie utwardzony
+        - całkowicie uwodorniony smalec
+        - smalec całkowicie uwodorniony
+        - w pełni utwardzony smalec
+        - smalec w pełni utwardzony
+        - w pełni uwodorniony smalec
+        - smalec w pełni uwodorniony
+        - tłuszcz całkowicie utwardzony wieprzowy
+        - tłuszcz całkowicie uwodorniony wieprzowy
+        - tłuszcz w pełni utwardzony wieprzowy
+        - tłuszcz w pełni uwodorniony wieprzowy
+        - smalec całkowicie utwardzony wieprzowy
+        - smalec całkowicie uwodorniony wieprzowy
+        - smalec w pełni utwardzony wieprzowy
+        - smalec w pełni uwodorniony wieprzowy
+    process:
+      en: "Pork fat with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
+      pl: "Tłuszcz wieprzowy ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
+    tells:
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )calkowicie (?:utwardzon|uwodorn)'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )w pelni (?:utwardzon|uwodorn)'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )fully hydrogenated'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )totally hydrogenated'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )vollstandig gehartet'
 assertions:
   - code: origin.animal
     certainty: 'yes'
@@ -26,5 +176,48 @@ assertions:
     sources:
       - id: reg-1169-2011
         locator: 'Annex VII Part B, row 2 (fats of animal origin named with their animal origin)'
+  - code: processing.hydrogenated
+    variant: hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares hydrogenation without specifying partial or full in its list of ingredients."
+      pl: "Etykieta deklaruje utwardzenie (bez wskazania, czy częściowe, czy całkowite) w wykazie składników."
+    sources:
+      - id: reg-1169-2011
+        locator: "Article 9(1)(b) and Article 18 (list of ingredients)"
+  - code: processing.hydrogenated
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares partial hydrogenation in its list of ingredients."
+      pl: "Etykieta deklaruje częściowe utwardzenie w wykazie składników."
+    sources:
+      - id: reg-1169-2011
+        locator: "Article 9(1)(b) and Article 18 (list of ingredients)"
+  - code: health.trans_fat_source
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Partial hydrogenation is the main industrial source of trans fat; EU food sold to consumers is capped at 2 g trans fat per 100 g of fat, and the cap covers trans fat formed by hydrogenating an animal fat, which is not naturally occurring."
+      pl: "Częściowe utwardzanie jest głównym przemysłowym źródłem tłuszczów trans; żywność sprzedawana konsumentom w UE ma limit 2 g tłuszczów trans na 100 g tłuszczu, obejmujący też tłuszcze trans powstałe przy utwardzaniu tłuszczu zwierzęcego, które nie występują naturalnie."
+    sources:
+      - id: reg-2019-649
+  - code: processing.hydrogenated
+    variant: fully-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares full hydrogenation in its list of ingredients."
+      pl: "Etykieta deklaruje całkowite utwardzenie w wykazie składników."
+    sources:
+      - id: reg-1169-2011
+        locator: "Article 9(1)(b) and Article 18 (list of ingredients)"
 review_status: draft
 provenance: ai-drafted

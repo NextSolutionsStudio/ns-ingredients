@@ -1,0 +1,84 @@
+id: sodium-stearoyl-2-lactylate
+type: additive
+e_number: E481
+names:
+  en:
+    - sodium stearoyl-2-lactylate
+    - sodium stearoyl lactylate
+  pl:
+    - stearoilomleczan sodu
+    - stearoilo-2-mleczan sodu
+    - stearyoilomleczan sodu
+    - sól sodowa kwasu stearoilomlekowego
+  de:
+    - Natriumstearoyl-2-lactylat
+    - Natriumstearoyllactylat
+functions:
+  - emulsifier
+  - stabiliser
+summary:
+  en: >-
+    Sodium salts of stearoyl lactylic acids and related fatty-acid lactylates, manufactured by reacting
+    commercial stearic acid with lactic acid and neutralising with a sodium alkali. Widely used as a dough
+    strengthener and crumb softener in baked goods. Commercial stearic acid may come from vegetable oils or
+    animal fats.
+  pl: >-
+    Sole sodowe kwasów stearoilomlekowych i pokrewnych laktylanów kwasów tłuszczowych, wytwarzane w reakcji
+    handlowego kwasu stearynowego z kwasem mlekowym i zobojętniane zasadą sodową. Szeroko stosowane jako
+    emulgator i polepszacz w piekarnictwie. Handlowy kwas stearynowy może pochodzić z olejów roślinnych lub
+    tłuszczów zwierzęcych.
+assertions:
+  - code: origin.chemical_synthesis
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: >-
+        Reg (EU) No 231/2012 E 481 Definition specifies manufacture by reacting stearic acid and lactic acid
+        with sodium neutralisation.
+      pl: >-
+        Definicja E 481 w rozporządzeniu (UE) nr 231/2012 opisuje wytwarzanie w reakcji kwasu stearynowego i
+        kwasu mlekowego z zobojętnieniem sodowym.
+    sources:
+      - id: reg-231-2012
+        locator: E 481 (Definition)
+  - code: origin.vegetable_oil_derived
+    certainty: maybe
+    kind: estimate
+    grade: B
+    note:
+      en: >-
+        Reg (EU) No 231/2012 E 481 Definition specifies commercial stearic acid without naming its botanical or
+        animal fat source; vegetable oils are a plausible source, which food labels do not disclose.
+      pl: >-
+        Definicja E 481 w rozporządzeniu (UE) nr 231/2012 wskazuje handlowy kwas stearynowy bez określenia
+        jego roślinnego lub zwierzęcego źródła; oleje roślinne są możliwym źródłem, czego etykieta nie ujawnia.
+    sources:
+      - id: reg-231-2012
+        locator: E 481 (Definition)
+  - code: origin.animal
+    certainty: maybe
+    kind: estimate
+    grade: B
+    note:
+      en: >-
+        Reg (EU) No 231/2012 E 481 Definition does not exclude commercial stearic acid derived from animal fats,
+        and food ingredient lists do not specify the fat source.
+      pl: >-
+        Definicja E 481 w rozporządzeniu (UE) nr 231/2012 nie wyklucza handlowego kwasu stearynowego z
+        tłuszczów zwierzęcych, a etykieta nie wskazuje źródła kwasu tłuszczowego.
+    sources:
+      - id: reg-231-2012
+        locator: E 481 (Definition)
+regulatory:
+  - jurisdiction: EU
+    status: authorised
+    conditions:
+      en: "Authorised food additive under Reg (EC) No 1333/2008 Annex II with category-specific maximum levels (e.g. bakery products)."
+      pl: "Dodatek dozwolony w Rozp. (WE) nr 1333/2008 Załącznik II z maksymalnymi poziomami dla wybranych kategorii (np. wyroby piekarskie)."
+    source: reg-1333-2008
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - "Created to give curated E481 coverage and fix 'stearoilo-2-mleczan sodu' matching sodium lactates (e325)."
+  - "EFSA 2013 opinion (doi:10.2903/j.efsa.2013.3144) returned a Wiley cookie wall and was not opened, so only Reg (EU) No 231/2012 E 481 Definition is cited."

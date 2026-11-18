@@ -1,0 +1,1878 @@
+id: peanut-oil
+type: fat
+parent: peanuts
+names:
+  en:
+    - peanut oil
+    - groundnut oil
+    - arachis oil
+    - peanuts oil
+    - non-hydrogenated peanut oil
+    - unhydrogenated peanut oil
+    - non-hydrogenated groundnut oil
+    - unhydrogenated groundnut oil
+    - non-hydrogenated arachis oil
+    - unhydrogenated arachis oil
+    - non-hydrogenated peanuts oil
+    - unhydrogenated peanuts oil
+    - not hydrogenated peanut oil
+    - not partially hydrogenated peanut oil
+    - not fully hydrogenated peanut oil
+    - non partially hydrogenated peanut oil
+    - not hydrogenated groundnut oil
+    - not partially hydrogenated groundnut oil
+    - not fully hydrogenated groundnut oil
+    - non partially hydrogenated groundnut oil
+    - not hydrogenated arachis oil
+    - not partially hydrogenated arachis oil
+    - not fully hydrogenated arachis oil
+    - non partially hydrogenated arachis oil
+    - not hydrogenated peanuts oil
+    - not partially hydrogenated peanuts oil
+    - not fully hydrogenated peanuts oil
+    - non partially hydrogenated peanuts oil
+    - vegetable oil from peanuts
+    - non-hydrogenated vegetable oil from peanuts
+    - not hydrogenated vegetable oil from peanuts
+    - unhydrogenated vegetable oil from peanuts
+    - vegetable fat from peanuts
+    - non-hydrogenated vegetable fat from peanuts
+    - not hydrogenated vegetable fat from peanuts
+    - unhydrogenated vegetable fat from peanuts
+    - vegetable oils from peanuts
+    - non-hydrogenated vegetable oils from peanuts
+    - not hydrogenated vegetable oils from peanuts
+    - unhydrogenated vegetable oils from peanuts
+    - vegetable fats from peanuts
+    - non-hydrogenated vegetable fats from peanuts
+    - not hydrogenated vegetable fats from peanuts
+    - unhydrogenated vegetable fats from peanuts
+    - nut oil from peanuts
+    - non-hydrogenated nut oil from peanuts
+    - not hydrogenated nut oil from peanuts
+    - unhydrogenated nut oil from peanuts
+    - vegetable oil from groundnuts
+    - non-hydrogenated vegetable oil from groundnuts
+    - not hydrogenated vegetable oil from groundnuts
+    - unhydrogenated vegetable oil from groundnuts
+    - vegetable fat from groundnuts
+    - non-hydrogenated vegetable fat from groundnuts
+    - not hydrogenated vegetable fat from groundnuts
+    - unhydrogenated vegetable fat from groundnuts
+    - vegetable oils from groundnuts
+    - non-hydrogenated vegetable oils from groundnuts
+    - not hydrogenated vegetable oils from groundnuts
+    - unhydrogenated vegetable oils from groundnuts
+    - vegetable fats from groundnuts
+    - non-hydrogenated vegetable fats from groundnuts
+    - not hydrogenated vegetable fats from groundnuts
+    - unhydrogenated vegetable fats from groundnuts
+    - nut oil from groundnuts
+    - non-hydrogenated nut oil from groundnuts
+    - not hydrogenated nut oil from groundnuts
+    - unhydrogenated nut oil from groundnuts
+  pl:
+    - olej arachidowy
+    - olej z orzeszków ziemnych
+    - olej roślinny arachidowy
+    - tłuszcz roślinny arachidowy
+    - arachidowy olej roślinny
+    - oleje roślinne arachidowe
+    - tłuszcze roślinne arachidowe
+    - olej roślinny z orzeszków ziemnych
+    - olej orzechowy arachidowy
+    - olej roślinny orzechowy arachidowy
+    - tłuszcz roślinny z orzeszków ziemnych
+    - olej orzechowy z orzeszków ziemnych
+    - olej roślinny orzechowy z orzeszków ziemnych
+    - oleje roślinne z orzeszków ziemnych
+    - tłuszcze roślinne z orzeszków ziemnych
+    - nie utwardzony olej arachidowy
+    - olej arachidowy nie utwardzony
+    - nie uwodorniony olej arachidowy
+    - olej arachidowy nie uwodorniony
+    - nie utwardzony olej z orzeszków ziemnych
+    - olej z orzeszków ziemnych nie utwardzony
+    - nie uwodorniony olej z orzeszków ziemnych
+    - olej z orzeszków ziemnych nie uwodorniony
+    - tłuszcz roślinny orzechowy arachidowy
+    - orzechowy olej roślinny arachidowy
+    - oleje roślinne orzechowe arachidowe
+    - oleje orzechowe arachidowe
+    - tłuszcze roślinne orzechowe arachidowe
+    - tłuszcz orzechowy arachidowy
+    - tłuszcze orzechowe arachidowe
+    - tłuszcz roślinny orzechowy z orzeszków ziemnych
+    - oleje roślinne orzechowe z orzeszków ziemnych
+    - orzechowy olej roślinny z orzeszków ziemnych
+    - tłuszcze roślinne orzechowe z orzeszków ziemnych
+    - oleje orzechowe z orzeszków ziemnych
+    - tłuszcz orzechowy z orzeszków ziemnych
+    - tłuszcze orzechowe z orzeszków ziemnych
+    - nieutwardzony olej arachidowy
+    - olej arachidowy nieutwardzony
+    - nieuwodorniony olej arachidowy
+    - olej arachidowy nieuwodorniony
+    - nieutwardzony olej z orzeszków ziemnych
+    - olej z orzeszków ziemnych nieutwardzony
+    - nieuwodorniony olej z orzeszków ziemnych
+    - olej z orzeszków ziemnych nieuwodorniony
+    - nieutwardzony olej roślinny arachidowy
+    - olej roślinny arachidowy nieutwardzony
+    - nieuwodorniony olej roślinny arachidowy
+    - olej roślinny arachidowy nieuwodorniony
+    - nieutwardzony tłuszcz roślinny arachidowy
+    - tłuszcz roślinny arachidowy nieutwardzony
+    - nieuwodorniony tłuszcz roślinny arachidowy
+    - tłuszcz roślinny arachidowy nieuwodorniony
+    - nieutwardzony olej roślinny z orzeszków ziemnych
+    - olej roślinny z orzeszków ziemnych nieutwardzony
+    - nieuwodorniony olej roślinny z orzeszków ziemnych
+    - olej roślinny z orzeszków ziemnych nieuwodorniony
+    - nieutwardzony tłuszcz roślinny z orzeszków ziemnych
+    - tłuszcz roślinny z orzeszków ziemnych nieutwardzony
+    - nieuwodorniony tłuszcz roślinny z orzeszków ziemnych
+    - tłuszcz roślinny z orzeszków ziemnych nieuwodorniony
+    - olej z orzeszków arachidowych
+    - olej z arachidów
+    - olej z orzeszków arachidu
+    - tłuszcz roślinny z arachidów
+    - tłuszcze roślinne z arachidów
+    - olej roślinny z arachidów
+    - oleje roślinne z arachidów
+    - olej orzechowy z arachidów
+    - olej roślinny orzechowy z arachidów
+    - tłuszcz roślinny orzechowy z arachidów
+    - oleje roślinne orzechowe z arachidów
+    - orzechowy olej roślinny z arachidów
+    - tłuszcze roślinne orzechowe z arachidów
+    - oleje orzechowe z arachidów
+    - tłuszcz orzechowy z arachidów
+    - tłuszcze orzechowe z arachidów
+    - tłuszcz roślinny z orzeszków arachidowych
+    - tłuszcze roślinne z orzeszków arachidowych
+    - olej roślinny z orzeszków arachidowych
+    - oleje roślinne z orzeszków arachidowych
+    - olej orzechowy z orzeszków arachidowych
+    - olej roślinny orzechowy z orzeszków arachidowych
+    - tłuszcz roślinny orzechowy z orzeszków arachidowych
+    - oleje roślinne orzechowe z orzeszków arachidowych
+    - orzechowy olej roślinny z orzeszków arachidowych
+    - tłuszcze roślinne orzechowe z orzeszków arachidowych
+    - oleje orzechowe z orzeszków arachidowych
+    - tłuszcz orzechowy z orzeszków arachidowych
+    - tłuszcze orzechowe z orzeszków arachidowych
+    - tłuszcz roślinny z orzeszków arachidu
+    - tłuszcze roślinne z orzeszków arachidu
+    - olej roślinny z orzeszków arachidu
+    - oleje roślinne z orzeszków arachidu
+    - olej orzechowy z orzeszków arachidu
+    - olej roślinny orzechowy z orzeszków arachidu
+    - tłuszcz roślinny orzechowy z orzeszków arachidu
+    - oleje roślinne orzechowe z orzeszków arachidu
+    - orzechowy olej roślinny z orzeszków arachidu
+    - tłuszcze roślinne orzechowe z orzeszków arachidu
+    - oleje orzechowe z orzeszków arachidu
+    - tłuszcz orzechowy z orzeszków arachidu
+    - tłuszcze orzechowe z orzeszków arachidu
+    - nie utwardzony olej z orzeszków arachidowych
+    - olej z orzeszków arachidowych nie utwardzony
+    - nie uwodorniony olej z orzeszków arachidowych
+    - olej z orzeszków arachidowych nie uwodorniony
+    - nieutwardzony olej z orzeszków arachidowych
+    - olej z orzeszków arachidowych nieutwardzony
+    - nieuwodorniony olej z orzeszków arachidowych
+    - olej z orzeszków arachidowych nieuwodorniony
+    - nie utwardzony olej z arachidów
+    - olej z arachidów nie utwardzony
+    - nie uwodorniony olej z arachidów
+    - olej z arachidów nie uwodorniony
+    - nieutwardzony olej z arachidów
+    - olej z arachidów nieutwardzony
+    - nieuwodorniony olej z arachidów
+    - olej z arachidów nieuwodorniony
+    - nie utwardzony olej z orzeszków arachidu
+    - olej z orzeszków arachidu nie utwardzony
+    - nie uwodorniony olej z orzeszków arachidu
+    - olej z orzeszków arachidu nie uwodorniony
+    - nieutwardzony olej z orzeszków arachidu
+    - olej z orzeszków arachidu nieutwardzony
+    - nieuwodorniony olej z orzeszków arachidu
+    - olej z orzeszków arachidu nieuwodorniony
+    - nieutwardzony tłuszcz roślinny z arachidów
+    - tłuszcz roślinny z arachidów nieutwardzony
+    - nieuwodorniony tłuszcz roślinny z arachidów
+    - tłuszcz roślinny z arachidów nieuwodorniony
+    - nieutwardzony olej roślinny z arachidów
+    - olej roślinny z arachidów nieutwardzony
+    - nieuwodorniony olej roślinny z arachidów
+    - olej roślinny z arachidów nieuwodorniony
+    - nieutwardzony tłuszcz roślinny z orzeszków arachidowych
+    - tłuszcz roślinny z orzeszków arachidowych nieutwardzony
+    - nieuwodorniony tłuszcz roślinny z orzeszków arachidowych
+    - tłuszcz roślinny z orzeszków arachidowych nieuwodorniony
+    - nieutwardzony olej roślinny z orzeszków arachidowych
+    - olej roślinny z orzeszków arachidowych nieutwardzony
+    - nieuwodorniony olej roślinny z orzeszków arachidowych
+    - olej roślinny z orzeszków arachidowych nieuwodorniony
+    - nieutwardzony tłuszcz roślinny z orzeszków arachidu
+    - tłuszcz roślinny z orzeszków arachidu nieutwardzony
+    - nieuwodorniony tłuszcz roślinny z orzeszków arachidu
+    - tłuszcz roślinny z orzeszków arachidu nieuwodorniony
+    - nieutwardzony olej roślinny z orzeszków arachidu
+    - olej roślinny z orzeszków arachidu nieutwardzony
+    - nieuwodorniony olej roślinny z orzeszków arachidu
+    - olej roślinny z orzeszków arachidu nieuwodorniony
+    - olej z orzechów ziemnych
+    - olej z orzechów arachidowych
+    - tłuszcz roślinny z orzechów arachidowych
+    - tłuszcze roślinne z orzechów arachidowych
+    - olej roślinny z orzechów arachidowych
+    - oleje roślinne z orzechów arachidowych
+    - olej orzechowy z orzechów arachidowych
+    - olej roślinny orzechowy z orzechów arachidowych
+    - tłuszcz roślinny orzechowy z orzechów arachidowych
+    - oleje roślinne orzechowe z orzechów arachidowych
+    - orzechowy olej roślinny z orzechów arachidowych
+    - tłuszcze roślinne orzechowe z orzechów arachidowych
+    - oleje orzechowe z orzechów arachidowych
+    - tłuszcz orzechowy z orzechów arachidowych
+    - tłuszcze orzechowe z orzechów arachidowych
+    - tłuszcz roślinny z orzechów ziemnych
+    - tłuszcze roślinne z orzechów ziemnych
+    - olej roślinny z orzechów ziemnych
+    - oleje roślinne z orzechów ziemnych
+    - olej orzechowy z orzechów ziemnych
+    - olej roślinny orzechowy z orzechów ziemnych
+    - tłuszcz roślinny orzechowy z orzechów ziemnych
+    - oleje roślinne orzechowe z orzechów ziemnych
+    - orzechowy olej roślinny z orzechów ziemnych
+    - tłuszcze roślinne orzechowe z orzechów ziemnych
+    - oleje orzechowe z orzechów ziemnych
+    - tłuszcz orzechowy z orzechów ziemnych
+    - tłuszcze orzechowe z orzechów ziemnych
+    - nie utwardzony olej z orzechów ziemnych
+    - olej z orzechów ziemnych nie utwardzony
+    - nie uwodorniony olej z orzechów ziemnych
+    - olej z orzechów ziemnych nie uwodorniony
+    - nieutwardzony olej z orzechów ziemnych
+    - olej z orzechów ziemnych nieutwardzony
+    - nieuwodorniony olej z orzechów ziemnych
+    - olej z orzechów ziemnych nieuwodorniony
+    - nie utwardzony olej z orzechów arachidowych
+    - olej z orzechów arachidowych nie utwardzony
+    - nie uwodorniony olej z orzechów arachidowych
+    - olej z orzechów arachidowych nie uwodorniony
+    - nieutwardzony olej z orzechów arachidowych
+    - olej z orzechów arachidowych nieutwardzony
+    - nieuwodorniony olej z orzechów arachidowych
+    - olej z orzechów arachidowych nieuwodorniony
+    - nieutwardzony tłuszcz roślinny z orzechów arachidowych
+    - tłuszcz roślinny z orzechów arachidowych nieutwardzony
+    - nieuwodorniony tłuszcz roślinny z orzechów arachidowych
+    - tłuszcz roślinny z orzechów arachidowych nieuwodorniony
+    - nieutwardzony olej roślinny z orzechów arachidowych
+    - olej roślinny z orzechów arachidowych nieutwardzony
+    - nieuwodorniony olej roślinny z orzechów arachidowych
+    - olej roślinny z orzechów arachidowych nieuwodorniony
+    - nieutwardzony tłuszcz roślinny z orzechów ziemnych
+    - tłuszcz roślinny z orzechów ziemnych nieutwardzony
+    - nieuwodorniony tłuszcz roślinny z orzechów ziemnych
+    - tłuszcz roślinny z orzechów ziemnych nieuwodorniony
+    - nieutwardzony olej roślinny z orzechów ziemnych
+    - olej roślinny z orzechów ziemnych nieutwardzony
+    - nieuwodorniony olej roślinny z orzechów ziemnych
+    - olej roślinny z orzechów ziemnych nieuwodorniony
+    - nie utwardzony olej roślinny arachidowy
+    - nie uwodorniony olej roślinny arachidowy
+    - nie utwardzony tłuszcz roślinny arachidowy
+    - nie uwodorniony tłuszcz roślinny arachidowy
+    - nie utwardzony olej roślinny z orzeszków ziemnych
+    - nie uwodorniony olej roślinny z orzeszków ziemnych
+    - nie utwardzony tłuszcz roślinny z orzeszków ziemnych
+    - nie uwodorniony tłuszcz roślinny z orzeszków ziemnych
+    - nie utwardzony tłuszcz roślinny z arachidów
+    - nie uwodorniony tłuszcz roślinny z arachidów
+    - nie utwardzony olej roślinny z arachidów
+    - nie uwodorniony olej roślinny z arachidów
+    - nie utwardzony tłuszcz roślinny z orzeszków arachidowych
+    - nie uwodorniony tłuszcz roślinny z orzeszków arachidowych
+    - nie utwardzony olej roślinny z orzeszków arachidowych
+    - nie uwodorniony olej roślinny z orzeszków arachidowych
+    - nie utwardzony tłuszcz roślinny z orzeszków arachidu
+    - nie uwodorniony tłuszcz roślinny z orzeszków arachidu
+    - nie utwardzony olej roślinny z orzeszków arachidu
+    - nie uwodorniony olej roślinny z orzeszków arachidu
+    - nie utwardzony tłuszcz roślinny z orzechów arachidowych
+    - nie uwodorniony tłuszcz roślinny z orzechów arachidowych
+    - nie utwardzony olej roślinny z orzechów arachidowych
+    - nie uwodorniony olej roślinny z orzechów arachidowych
+    - nie utwardzony tłuszcz roślinny z orzechów ziemnych
+    - nie uwodorniony tłuszcz roślinny z orzechów ziemnych
+    - nie utwardzony olej roślinny z orzechów ziemnych
+    - nie uwodorniony olej roślinny z orzechów ziemnych
+    - olej roślinny arachidowy nie utwardzony
+    - olej roślinny nie utwardzony arachidowy
+    - olej roślinny arachidowy nie uwodorniony
+    - olej roślinny nie uwodorniony arachidowy
+    - olej roślinny nieutwardzony arachidowy
+    - olej roślinny nieuwodorniony arachidowy
+    - tłuszcz roślinny arachidowy nie utwardzony
+    - tłuszcz roślinny nie utwardzony arachidowy
+    - tłuszcz roślinny arachidowy nie uwodorniony
+    - tłuszcz roślinny nie uwodorniony arachidowy
+    - tłuszcz roślinny nieutwardzony arachidowy
+    - tłuszcz roślinny nieuwodorniony arachidowy
+    - nie utwardzone oleje roślinne arachidowe
+    - oleje roślinne arachidowe nie utwardzone
+    - oleje roślinne nie utwardzone arachidowe
+    - nie uwodornione oleje roślinne arachidowe
+    - oleje roślinne arachidowe nie uwodornione
+    - oleje roślinne nie uwodornione arachidowe
+    - nieutwardzone oleje roślinne arachidowe
+    - oleje roślinne arachidowe nieutwardzone
+    - oleje roślinne nieutwardzone arachidowe
+    - nieuwodornione oleje roślinne arachidowe
+    - oleje roślinne arachidowe nieuwodornione
+    - oleje roślinne nieuwodornione arachidowe
+    - nie utwardzone tłuszcze roślinne arachidowe
+    - tłuszcze roślinne arachidowe nie utwardzone
+    - tłuszcze roślinne nie utwardzone arachidowe
+    - nie uwodornione tłuszcze roślinne arachidowe
+    - tłuszcze roślinne arachidowe nie uwodornione
+    - tłuszcze roślinne nie uwodornione arachidowe
+    - nieutwardzone tłuszcze roślinne arachidowe
+    - tłuszcze roślinne arachidowe nieutwardzone
+    - tłuszcze roślinne nieutwardzone arachidowe
+    - nieuwodornione tłuszcze roślinne arachidowe
+    - tłuszcze roślinne arachidowe nieuwodornione
+    - tłuszcze roślinne nieuwodornione arachidowe
+    - olej roślinny z orzeszków ziemnych nie utwardzony
+    - olej roślinny nie utwardzony z orzeszków ziemnych
+    - olej roślinny z orzeszków ziemnych nie uwodorniony
+    - olej roślinny nie uwodorniony z orzeszków ziemnych
+    - olej roślinny nieutwardzony z orzeszków ziemnych
+    - olej roślinny nieuwodorniony z orzeszków ziemnych
+    - tłuszcz roślinny z orzeszków ziemnych nie utwardzony
+    - tłuszcz roślinny nie utwardzony z orzeszków ziemnych
+    - tłuszcz roślinny z orzeszków ziemnych nie uwodorniony
+    - tłuszcz roślinny nie uwodorniony z orzeszków ziemnych
+    - tłuszcz roślinny nieutwardzony z orzeszków ziemnych
+    - tłuszcz roślinny nieuwodorniony z orzeszków ziemnych
+    - nie utwardzone oleje roślinne z orzeszków ziemnych
+    - oleje roślinne z orzeszków ziemnych nie utwardzone
+    - oleje roślinne nie utwardzone z orzeszków ziemnych
+    - nie uwodornione oleje roślinne z orzeszków ziemnych
+    - oleje roślinne z orzeszków ziemnych nie uwodornione
+    - oleje roślinne nie uwodornione z orzeszków ziemnych
+    - nieutwardzone oleje roślinne z orzeszków ziemnych
+    - oleje roślinne z orzeszków ziemnych nieutwardzone
+    - oleje roślinne nieutwardzone z orzeszków ziemnych
+    - nieuwodornione oleje roślinne z orzeszków ziemnych
+    - oleje roślinne z orzeszków ziemnych nieuwodornione
+    - oleje roślinne nieuwodornione z orzeszków ziemnych
+    - nie utwardzone tłuszcze roślinne z orzeszków ziemnych
+    - tłuszcze roślinne z orzeszków ziemnych nie utwardzone
+    - tłuszcze roślinne nie utwardzone z orzeszków ziemnych
+    - nie uwodornione tłuszcze roślinne z orzeszków ziemnych
+    - tłuszcze roślinne z orzeszków ziemnych nie uwodornione
+    - tłuszcze roślinne nie uwodornione z orzeszków ziemnych
+    - nieutwardzone tłuszcze roślinne z orzeszków ziemnych
+    - tłuszcze roślinne z orzeszków ziemnych nieutwardzone
+    - tłuszcze roślinne nieutwardzone z orzeszków ziemnych
+    - nieuwodornione tłuszcze roślinne z orzeszków ziemnych
+    - tłuszcze roślinne z orzeszków ziemnych nieuwodornione
+    - tłuszcze roślinne nieuwodornione z orzeszków ziemnych
+    - tłuszcz roślinny z arachidów nie utwardzony
+    - tłuszcz roślinny nie utwardzony z arachidów
+    - tłuszcz roślinny z arachidów nie uwodorniony
+    - tłuszcz roślinny nie uwodorniony z arachidów
+    - tłuszcz roślinny nieutwardzony z arachidów
+    - tłuszcz roślinny nieuwodorniony z arachidów
+    - nie utwardzone tłuszcze roślinne z arachidów
+    - tłuszcze roślinne z arachidów nie utwardzone
+    - tłuszcze roślinne nie utwardzone z arachidów
+    - nie uwodornione tłuszcze roślinne z arachidów
+    - tłuszcze roślinne z arachidów nie uwodornione
+    - tłuszcze roślinne nie uwodornione z arachidów
+    - nieutwardzone tłuszcze roślinne z arachidów
+    - tłuszcze roślinne z arachidów nieutwardzone
+    - tłuszcze roślinne nieutwardzone z arachidów
+    - nieuwodornione tłuszcze roślinne z arachidów
+    - tłuszcze roślinne z arachidów nieuwodornione
+    - tłuszcze roślinne nieuwodornione z arachidów
+    - olej roślinny z arachidów nie utwardzony
+    - olej roślinny nie utwardzony z arachidów
+    - olej roślinny z arachidów nie uwodorniony
+    - olej roślinny nie uwodorniony z arachidów
+    - olej roślinny nieutwardzony z arachidów
+    - olej roślinny nieuwodorniony z arachidów
+    - nie utwardzone oleje roślinne z arachidów
+    - oleje roślinne z arachidów nie utwardzone
+    - oleje roślinne nie utwardzone z arachidów
+    - nie uwodornione oleje roślinne z arachidów
+    - oleje roślinne z arachidów nie uwodornione
+    - oleje roślinne nie uwodornione z arachidów
+    - nieutwardzone oleje roślinne z arachidów
+    - oleje roślinne z arachidów nieutwardzone
+    - oleje roślinne nieutwardzone z arachidów
+    - nieuwodornione oleje roślinne z arachidów
+    - oleje roślinne z arachidów nieuwodornione
+    - oleje roślinne nieuwodornione z arachidów
+    - tłuszcz roślinny z orzeszków arachidowych nie utwardzony
+    - tłuszcz roślinny nie utwardzony z orzeszków arachidowych
+    - tłuszcz roślinny z orzeszków arachidowych nie uwodorniony
+    - tłuszcz roślinny nie uwodorniony z orzeszków arachidowych
+    - tłuszcz roślinny nieutwardzony z orzeszków arachidowych
+    - tłuszcz roślinny nieuwodorniony z orzeszków arachidowych
+    - nie utwardzone tłuszcze roślinne z orzeszków arachidowych
+    - tłuszcze roślinne z orzeszków arachidowych nie utwardzone
+    - tłuszcze roślinne nie utwardzone z orzeszków arachidowych
+    - nie uwodornione tłuszcze roślinne z orzeszków arachidowych
+    - tłuszcze roślinne z orzeszków arachidowych nie uwodornione
+    - tłuszcze roślinne nie uwodornione z orzeszków arachidowych
+    - nieutwardzone tłuszcze roślinne z orzeszków arachidowych
+    - tłuszcze roślinne z orzeszków arachidowych nieutwardzone
+    - tłuszcze roślinne nieutwardzone z orzeszków arachidowych
+    - nieuwodornione tłuszcze roślinne z orzeszków arachidowych
+    - tłuszcze roślinne z orzeszków arachidowych nieuwodornione
+    - tłuszcze roślinne nieuwodornione z orzeszków arachidowych
+    - olej roślinny z orzeszków arachidowych nie utwardzony
+    - olej roślinny nie utwardzony z orzeszków arachidowych
+    - olej roślinny z orzeszków arachidowych nie uwodorniony
+    - olej roślinny nie uwodorniony z orzeszków arachidowych
+    - olej roślinny nieutwardzony z orzeszków arachidowych
+    - olej roślinny nieuwodorniony z orzeszków arachidowych
+    - nie utwardzone oleje roślinne z orzeszków arachidowych
+    - oleje roślinne z orzeszków arachidowych nie utwardzone
+    - oleje roślinne nie utwardzone z orzeszków arachidowych
+    - nie uwodornione oleje roślinne z orzeszków arachidowych
+    - oleje roślinne z orzeszków arachidowych nie uwodornione
+    - oleje roślinne nie uwodornione z orzeszków arachidowych
+    - nieutwardzone oleje roślinne z orzeszków arachidowych
+    - oleje roślinne z orzeszków arachidowych nieutwardzone
+    - oleje roślinne nieutwardzone z orzeszków arachidowych
+    - nieuwodornione oleje roślinne z orzeszków arachidowych
+    - oleje roślinne z orzeszków arachidowych nieuwodornione
+    - oleje roślinne nieuwodornione z orzeszków arachidowych
+    - tłuszcz roślinny z orzeszków arachidu nie utwardzony
+    - tłuszcz roślinny nie utwardzony z orzeszków arachidu
+    - tłuszcz roślinny z orzeszków arachidu nie uwodorniony
+    - tłuszcz roślinny nie uwodorniony z orzeszków arachidu
+    - tłuszcz roślinny nieutwardzony z orzeszków arachidu
+    - tłuszcz roślinny nieuwodorniony z orzeszków arachidu
+    - nie utwardzone tłuszcze roślinne z orzeszków arachidu
+    - tłuszcze roślinne z orzeszków arachidu nie utwardzone
+    - tłuszcze roślinne nie utwardzone z orzeszków arachidu
+    - nie uwodornione tłuszcze roślinne z orzeszków arachidu
+    - tłuszcze roślinne z orzeszków arachidu nie uwodornione
+    - tłuszcze roślinne nie uwodornione z orzeszków arachidu
+    - nieutwardzone tłuszcze roślinne z orzeszków arachidu
+    - tłuszcze roślinne z orzeszków arachidu nieutwardzone
+    - tłuszcze roślinne nieutwardzone z orzeszków arachidu
+    - nieuwodornione tłuszcze roślinne z orzeszków arachidu
+    - tłuszcze roślinne z orzeszków arachidu nieuwodornione
+    - tłuszcze roślinne nieuwodornione z orzeszków arachidu
+    - olej roślinny z orzeszków arachidu nie utwardzony
+    - olej roślinny nie utwardzony z orzeszków arachidu
+    - olej roślinny z orzeszków arachidu nie uwodorniony
+    - olej roślinny nie uwodorniony z orzeszków arachidu
+    - olej roślinny nieutwardzony z orzeszków arachidu
+    - olej roślinny nieuwodorniony z orzeszków arachidu
+    - nie utwardzone oleje roślinne z orzeszków arachidu
+    - oleje roślinne z orzeszków arachidu nie utwardzone
+    - oleje roślinne nie utwardzone z orzeszków arachidu
+    - nie uwodornione oleje roślinne z orzeszków arachidu
+    - oleje roślinne z orzeszków arachidu nie uwodornione
+    - oleje roślinne nie uwodornione z orzeszków arachidu
+    - nieutwardzone oleje roślinne z orzeszków arachidu
+    - oleje roślinne z orzeszków arachidu nieutwardzone
+    - oleje roślinne nieutwardzone z orzeszków arachidu
+    - nieuwodornione oleje roślinne z orzeszków arachidu
+    - oleje roślinne z orzeszków arachidu nieuwodornione
+    - oleje roślinne nieuwodornione z orzeszków arachidu
+    - tłuszcz roślinny z orzechów arachidowych nie utwardzony
+    - tłuszcz roślinny nie utwardzony z orzechów arachidowych
+    - tłuszcz roślinny z orzechów arachidowych nie uwodorniony
+    - tłuszcz roślinny nie uwodorniony z orzechów arachidowych
+    - tłuszcz roślinny nieutwardzony z orzechów arachidowych
+    - tłuszcz roślinny nieuwodorniony z orzechów arachidowych
+    - nie utwardzone tłuszcze roślinne z orzechów arachidowych
+    - tłuszcze roślinne z orzechów arachidowych nie utwardzone
+    - tłuszcze roślinne nie utwardzone z orzechów arachidowych
+    - nie uwodornione tłuszcze roślinne z orzechów arachidowych
+    - tłuszcze roślinne z orzechów arachidowych nie uwodornione
+    - tłuszcze roślinne nie uwodornione z orzechów arachidowych
+    - nieutwardzone tłuszcze roślinne z orzechów arachidowych
+    - tłuszcze roślinne z orzechów arachidowych nieutwardzone
+    - tłuszcze roślinne nieutwardzone z orzechów arachidowych
+    - nieuwodornione tłuszcze roślinne z orzechów arachidowych
+    - tłuszcze roślinne z orzechów arachidowych nieuwodornione
+    - tłuszcze roślinne nieuwodornione z orzechów arachidowych
+    - olej roślinny z orzechów arachidowych nie utwardzony
+    - olej roślinny nie utwardzony z orzechów arachidowych
+    - olej roślinny z orzechów arachidowych nie uwodorniony
+    - olej roślinny nie uwodorniony z orzechów arachidowych
+    - olej roślinny nieutwardzony z orzechów arachidowych
+    - olej roślinny nieuwodorniony z orzechów arachidowych
+    - nie utwardzone oleje roślinne z orzechów arachidowych
+    - oleje roślinne z orzechów arachidowych nie utwardzone
+    - oleje roślinne nie utwardzone z orzechów arachidowych
+    - nie uwodornione oleje roślinne z orzechów arachidowych
+    - oleje roślinne z orzechów arachidowych nie uwodornione
+    - oleje roślinne nie uwodornione z orzechów arachidowych
+    - nieutwardzone oleje roślinne z orzechów arachidowych
+    - oleje roślinne z orzechów arachidowych nieutwardzone
+    - oleje roślinne nieutwardzone z orzechów arachidowych
+    - nieuwodornione oleje roślinne z orzechów arachidowych
+    - oleje roślinne z orzechów arachidowych nieuwodornione
+    - oleje roślinne nieuwodornione z orzechów arachidowych
+    - tłuszcz roślinny z orzechów ziemnych nie utwardzony
+    - tłuszcz roślinny nie utwardzony z orzechów ziemnych
+    - tłuszcz roślinny z orzechów ziemnych nie uwodorniony
+    - tłuszcz roślinny nie uwodorniony z orzechów ziemnych
+    - tłuszcz roślinny nieutwardzony z orzechów ziemnych
+    - tłuszcz roślinny nieuwodorniony z orzechów ziemnych
+    - nie utwardzone tłuszcze roślinne z orzechów ziemnych
+    - tłuszcze roślinne z orzechów ziemnych nie utwardzone
+    - tłuszcze roślinne nie utwardzone z orzechów ziemnych
+    - nie uwodornione tłuszcze roślinne z orzechów ziemnych
+    - tłuszcze roślinne z orzechów ziemnych nie uwodornione
+    - tłuszcze roślinne nie uwodornione z orzechów ziemnych
+    - nieutwardzone tłuszcze roślinne z orzechów ziemnych
+    - tłuszcze roślinne z orzechów ziemnych nieutwardzone
+    - tłuszcze roślinne nieutwardzone z orzechów ziemnych
+    - nieuwodornione tłuszcze roślinne z orzechów ziemnych
+    - tłuszcze roślinne z orzechów ziemnych nieuwodornione
+    - tłuszcze roślinne nieuwodornione z orzechów ziemnych
+    - olej roślinny z orzechów ziemnych nie utwardzony
+    - olej roślinny nie utwardzony z orzechów ziemnych
+    - olej roślinny z orzechów ziemnych nie uwodorniony
+    - olej roślinny nie uwodorniony z orzechów ziemnych
+    - olej roślinny nieutwardzony z orzechów ziemnych
+    - olej roślinny nieuwodorniony z orzechów ziemnych
+    - nie utwardzone oleje roślinne z orzechów ziemnych
+    - oleje roślinne z orzechów ziemnych nie utwardzone
+    - oleje roślinne nie utwardzone z orzechów ziemnych
+    - nie uwodornione oleje roślinne z orzechów ziemnych
+    - oleje roślinne z orzechów ziemnych nie uwodornione
+    - oleje roślinne nie uwodornione z orzechów ziemnych
+    - nieutwardzone oleje roślinne z orzechów ziemnych
+    - oleje roślinne z orzechów ziemnych nieutwardzone
+    - oleje roślinne nieutwardzone z orzechów ziemnych
+    - nieuwodornione oleje roślinne z orzechów ziemnych
+    - oleje roślinne z orzechów ziemnych nieuwodornione
+    - oleje roślinne nieuwodornione z orzechów ziemnych
+    - nie utwardzony olej roślinny orzechowy arachidowy
+    - nie uwodorniony olej roślinny orzechowy arachidowy
+    - nieutwardzony olej roślinny orzechowy arachidowy
+    - nieuwodorniony olej roślinny orzechowy arachidowy
+    - nie utwardzony olej roślinny orzechowy z orzeszków ziemnych
+    - nie uwodorniony olej roślinny orzechowy z orzeszków ziemnych
+    - nieutwardzony olej roślinny orzechowy z orzeszków ziemnych
+    - nieuwodorniony olej roślinny orzechowy z orzeszków ziemnych
+    - nie utwardzony tłuszcz roślinny orzechowy arachidowy
+    - nie uwodorniony tłuszcz roślinny orzechowy arachidowy
+    - nieutwardzony tłuszcz roślinny orzechowy arachidowy
+    - nieuwodorniony tłuszcz roślinny orzechowy arachidowy
+    - nie utwardzone oleje roślinne orzechowe arachidowe
+    - nie uwodornione oleje roślinne orzechowe arachidowe
+    - nieutwardzone oleje roślinne orzechowe arachidowe
+    - nieuwodornione oleje roślinne orzechowe arachidowe
+    - nie utwardzone tłuszcze roślinne orzechowe arachidowe
+    - nie uwodornione tłuszcze roślinne orzechowe arachidowe
+    - nieutwardzone tłuszcze roślinne orzechowe arachidowe
+    - nieuwodornione tłuszcze roślinne orzechowe arachidowe
+    - nie utwardzony tłuszcz roślinny orzechowy z orzeszków ziemnych
+    - nie uwodorniony tłuszcz roślinny orzechowy z orzeszków ziemnych
+    - nieutwardzony tłuszcz roślinny orzechowy z orzeszków ziemnych
+    - nieuwodorniony tłuszcz roślinny orzechowy z orzeszków ziemnych
+    - nie utwardzone oleje roślinne orzechowe z orzeszków ziemnych
+    - nie uwodornione oleje roślinne orzechowe z orzeszków ziemnych
+    - nieutwardzone oleje roślinne orzechowe z orzeszków ziemnych
+    - nieuwodornione oleje roślinne orzechowe z orzeszków ziemnych
+    - nie utwardzone tłuszcze roślinne orzechowe z orzeszków ziemnych
+    - nie uwodornione tłuszcze roślinne orzechowe z orzeszków ziemnych
+    - nieutwardzone tłuszcze roślinne orzechowe z orzeszków ziemnych
+    - nieuwodornione tłuszcze roślinne orzechowe z orzeszków ziemnych
+    - nie utwardzony olej roślinny orzechowy z arachidów
+    - nie uwodorniony olej roślinny orzechowy z arachidów
+    - nieutwardzony olej roślinny orzechowy z arachidów
+    - nieuwodorniony olej roślinny orzechowy z arachidów
+    - nie utwardzony tłuszcz roślinny orzechowy z arachidów
+    - nie uwodorniony tłuszcz roślinny orzechowy z arachidów
+    - nieutwardzony tłuszcz roślinny orzechowy z arachidów
+    - nieuwodorniony tłuszcz roślinny orzechowy z arachidów
+    - nie utwardzone oleje roślinne orzechowe z arachidów
+    - nie uwodornione oleje roślinne orzechowe z arachidów
+    - nieutwardzone oleje roślinne orzechowe z arachidów
+    - nieuwodornione oleje roślinne orzechowe z arachidów
+    - nie utwardzone tłuszcze roślinne orzechowe z arachidów
+    - nie uwodornione tłuszcze roślinne orzechowe z arachidów
+    - nieutwardzone tłuszcze roślinne orzechowe z arachidów
+    - nieuwodornione tłuszcze roślinne orzechowe z arachidów
+    - nie utwardzony olej roślinny orzechowy z orzeszków arachidowych
+    - nie uwodorniony olej roślinny orzechowy z orzeszków arachidowych
+    - nieutwardzony olej roślinny orzechowy z orzeszków arachidowych
+    - nieuwodorniony olej roślinny orzechowy z orzeszków arachidowych
+    - nie utwardzony tłuszcz roślinny orzechowy z orzeszków arachidowych
+    - nie uwodorniony tłuszcz roślinny orzechowy z orzeszków arachidowych
+    - nieutwardzony tłuszcz roślinny orzechowy z orzeszków arachidowych
+    - nieuwodorniony tłuszcz roślinny orzechowy z orzeszków arachidowych
+    - nie utwardzone oleje roślinne orzechowe z orzeszków arachidowych
+    - nie uwodornione oleje roślinne orzechowe z orzeszków arachidowych
+    - nieutwardzone oleje roślinne orzechowe z orzeszków arachidowych
+    - nieuwodornione oleje roślinne orzechowe z orzeszków arachidowych
+    - nie utwardzone tłuszcze roślinne orzechowe z orzeszków arachidowych
+    - nie uwodornione tłuszcze roślinne orzechowe z orzeszków arachidowych
+    - nieutwardzone tłuszcze roślinne orzechowe z orzeszków arachidowych
+    - nieuwodornione tłuszcze roślinne orzechowe z orzeszków arachidowych
+    - nie utwardzony olej roślinny orzechowy z orzeszków arachidu
+    - nie uwodorniony olej roślinny orzechowy z orzeszków arachidu
+    - nieutwardzony olej roślinny orzechowy z orzeszków arachidu
+    - nieuwodorniony olej roślinny orzechowy z orzeszków arachidu
+    - nie utwardzony tłuszcz roślinny orzechowy z orzeszków arachidu
+    - nie uwodorniony tłuszcz roślinny orzechowy z orzeszków arachidu
+    - nieutwardzony tłuszcz roślinny orzechowy z orzeszków arachidu
+    - nieuwodorniony tłuszcz roślinny orzechowy z orzeszków arachidu
+    - nie utwardzone oleje roślinne orzechowe z orzeszków arachidu
+    - nie uwodornione oleje roślinne orzechowe z orzeszków arachidu
+    - nieutwardzone oleje roślinne orzechowe z orzeszków arachidu
+    - nieuwodornione oleje roślinne orzechowe z orzeszków arachidu
+    - nie utwardzone tłuszcze roślinne orzechowe z orzeszków arachidu
+    - nie uwodornione tłuszcze roślinne orzechowe z orzeszków arachidu
+    - nieutwardzone tłuszcze roślinne orzechowe z orzeszków arachidu
+    - nieuwodornione tłuszcze roślinne orzechowe z orzeszków arachidu
+    - nie utwardzony olej roślinny orzechowy z orzechów arachidowych
+    - nie uwodorniony olej roślinny orzechowy z orzechów arachidowych
+    - nieutwardzony olej roślinny orzechowy z orzechów arachidowych
+    - nieuwodorniony olej roślinny orzechowy z orzechów arachidowych
+    - nie utwardzony tłuszcz roślinny orzechowy z orzechów arachidowych
+    - nie uwodorniony tłuszcz roślinny orzechowy z orzechów arachidowych
+    - nieutwardzony tłuszcz roślinny orzechowy z orzechów arachidowych
+    - nieuwodorniony tłuszcz roślinny orzechowy z orzechów arachidowych
+    - nie utwardzone oleje roślinne orzechowe z orzechów arachidowych
+    - nie uwodornione oleje roślinne orzechowe z orzechów arachidowych
+    - nieutwardzone oleje roślinne orzechowe z orzechów arachidowych
+    - nieuwodornione oleje roślinne orzechowe z orzechów arachidowych
+    - nie utwardzone tłuszcze roślinne orzechowe z orzechów arachidowych
+    - nie uwodornione tłuszcze roślinne orzechowe z orzechów arachidowych
+    - nieutwardzone tłuszcze roślinne orzechowe z orzechów arachidowych
+    - nieuwodornione tłuszcze roślinne orzechowe z orzechów arachidowych
+    - nie utwardzony olej roślinny orzechowy z orzechów ziemnych
+    - nie uwodorniony olej roślinny orzechowy z orzechów ziemnych
+    - nieutwardzony olej roślinny orzechowy z orzechów ziemnych
+    - nieuwodorniony olej roślinny orzechowy z orzechów ziemnych
+    - nie utwardzony tłuszcz roślinny orzechowy z orzechów ziemnych
+    - nie uwodorniony tłuszcz roślinny orzechowy z orzechów ziemnych
+    - nieutwardzony tłuszcz roślinny orzechowy z orzechów ziemnych
+    - nieuwodorniony tłuszcz roślinny orzechowy z orzechów ziemnych
+    - nie utwardzone oleje roślinne orzechowe z orzechów ziemnych
+    - nie uwodornione oleje roślinne orzechowe z orzechów ziemnych
+    - nieutwardzone oleje roślinne orzechowe z orzechów ziemnych
+    - nieuwodornione oleje roślinne orzechowe z orzechów ziemnych
+    - nie utwardzone tłuszcze roślinne orzechowe z orzechów ziemnych
+    - nie uwodornione tłuszcze roślinne orzechowe z orzechów ziemnych
+    - nieutwardzone tłuszcze roślinne orzechowe z orzechów ziemnych
+    - nieuwodornione tłuszcze roślinne orzechowe z orzechów ziemnych
+  de:
+    - Erdnussöl
+summary:
+  en: >-
+    Vegetable oil pressed or extracted from peanuts (Arachis hypogaea). As a product derived from them, it
+    falls under EU Annex II item 5 allergen labelling, with no Annex II exemption for the oil.
+  pl: >-
+    Olej roślinny tłoczony lub ekstrahowany z orzeszków ziemnych (Arachis hypogaea). Jako produkt z nich pochodzący
+    podlega obowiązkowi deklarowania alergenu z Aneksu II UE (punkt 5); olej nie jest z niego wyłączony.
+variants:
+  - id: hydrogenated
+    names:
+      en:
+        - hydrogenated peanut oil
+        - hydrogenated groundnut oil
+        - hydrogenated arachis oil
+        - hydrogenated peanuts oil
+        - hydrogenated vegetable oil from peanuts
+        - hydrogenated vegetable fat from peanuts
+        - hydrogenated vegetable oils from peanuts
+        - hydrogenated vegetable fats from peanuts
+        - hydrogenated nut oil from peanuts
+        - hydrogenated vegetable oil from groundnuts
+        - hydrogenated vegetable fat from groundnuts
+        - hydrogenated vegetable oils from groundnuts
+        - hydrogenated vegetable fats from groundnuts
+        - hydrogenated nut oil from groundnuts
+      pl:
+        - utwardzony olej arachidowy
+        - olej arachidowy utwardzony
+        - uwodorniony olej arachidowy
+        - olej arachidowy uwodorniony
+        - utwardzony olej z orzeszków ziemnych
+        - olej z orzeszków ziemnych utwardzony
+        - uwodorniony olej z orzeszków ziemnych
+        - olej z orzeszków ziemnych uwodorniony
+        - utwardzony olej roślinny arachidowy
+        - olej roślinny arachidowy utwardzony
+        - uwodorniony olej roślinny arachidowy
+        - olej roślinny arachidowy uwodorniony
+        - utwardzony olej roślinny z orzeszków ziemnych
+        - olej roślinny z orzeszków ziemnych utwardzony
+        - uwodorniony olej roślinny z orzeszków ziemnych
+        - olej roślinny z orzeszków ziemnych uwodorniony
+        - utwardzony tłuszcz roślinny arachidowy
+        - tłuszcz roślinny arachidowy utwardzony
+        - uwodorniony tłuszcz roślinny arachidowy
+        - tłuszcz roślinny arachidowy uwodorniony
+        - utwardzony tłuszcz roślinny z orzeszków ziemnych
+        - tłuszcz roślinny z orzeszków ziemnych utwardzony
+        - uwodorniony tłuszcz roślinny z orzeszków ziemnych
+        - tłuszcz roślinny z orzeszków ziemnych uwodorniony
+        - utwardzony olej z orzeszków arachidowych
+        - olej z orzeszków arachidowych utwardzony
+        - uwodorniony olej z orzeszków arachidowych
+        - olej z orzeszków arachidowych uwodorniony
+        - utwardzony olej z arachidów
+        - olej z arachidów utwardzony
+        - uwodorniony olej z arachidów
+        - olej z arachidów uwodorniony
+        - utwardzony olej z orzeszków arachidu
+        - olej z orzeszków arachidu utwardzony
+        - uwodorniony olej z orzeszków arachidu
+        - olej z orzeszków arachidu uwodorniony
+        - utwardzony tłuszcz roślinny z arachidów
+        - tłuszcz roślinny z arachidów utwardzony
+        - uwodorniony tłuszcz roślinny z arachidów
+        - tłuszcz roślinny z arachidów uwodorniony
+        - utwardzony olej roślinny z arachidów
+        - olej roślinny z arachidów utwardzony
+        - uwodorniony olej roślinny z arachidów
+        - olej roślinny z arachidów uwodorniony
+        - utwardzony tłuszcz roślinny z orzeszków arachidowych
+        - tłuszcz roślinny z orzeszków arachidowych utwardzony
+        - uwodorniony tłuszcz roślinny z orzeszków arachidowych
+        - tłuszcz roślinny z orzeszków arachidowych uwodorniony
+        - utwardzony olej roślinny z orzeszków arachidowych
+        - olej roślinny z orzeszków arachidowych utwardzony
+        - uwodorniony olej roślinny z orzeszków arachidowych
+        - olej roślinny z orzeszków arachidowych uwodorniony
+        - utwardzony tłuszcz roślinny z orzeszków arachidu
+        - tłuszcz roślinny z orzeszków arachidu utwardzony
+        - uwodorniony tłuszcz roślinny z orzeszków arachidu
+        - tłuszcz roślinny z orzeszków arachidu uwodorniony
+        - utwardzony olej roślinny z orzeszków arachidu
+        - olej roślinny z orzeszków arachidu utwardzony
+        - uwodorniony olej roślinny z orzeszków arachidu
+        - olej roślinny z orzeszków arachidu uwodorniony
+        - utwardzony olej z orzechów ziemnych
+        - olej z orzechów ziemnych utwardzony
+        - uwodorniony olej z orzechów ziemnych
+        - olej z orzechów ziemnych uwodorniony
+        - utwardzony olej z orzechów arachidowych
+        - olej z orzechów arachidowych utwardzony
+        - uwodorniony olej z orzechów arachidowych
+        - olej z orzechów arachidowych uwodorniony
+        - utwardzony tłuszcz roślinny z orzechów arachidowych
+        - tłuszcz roślinny z orzechów arachidowych utwardzony
+        - uwodorniony tłuszcz roślinny z orzechów arachidowych
+        - tłuszcz roślinny z orzechów arachidowych uwodorniony
+        - utwardzony olej roślinny z orzechów arachidowych
+        - olej roślinny z orzechów arachidowych utwardzony
+        - uwodorniony olej roślinny z orzechów arachidowych
+        - olej roślinny z orzechów arachidowych uwodorniony
+        - utwardzony tłuszcz roślinny z orzechów ziemnych
+        - tłuszcz roślinny z orzechów ziemnych utwardzony
+        - uwodorniony tłuszcz roślinny z orzechów ziemnych
+        - tłuszcz roślinny z orzechów ziemnych uwodorniony
+        - utwardzony olej roślinny z orzechów ziemnych
+        - olej roślinny z orzechów ziemnych utwardzony
+        - uwodorniony olej roślinny z orzechów ziemnych
+        - olej roślinny z orzechów ziemnych uwodorniony
+        - olej roślinny utwardzony arachidowy
+        - olej roślinny uwodorniony arachidowy
+        - tłuszcz roślinny utwardzony arachidowy
+        - tłuszcz roślinny uwodorniony arachidowy
+        - utwardzone oleje roślinne arachidowe
+        - oleje roślinne arachidowe utwardzone
+        - oleje roślinne utwardzone arachidowe
+        - uwodornione oleje roślinne arachidowe
+        - oleje roślinne arachidowe uwodornione
+        - oleje roślinne uwodornione arachidowe
+        - utwardzone tłuszcze roślinne arachidowe
+        - tłuszcze roślinne arachidowe utwardzone
+        - tłuszcze roślinne utwardzone arachidowe
+        - uwodornione tłuszcze roślinne arachidowe
+        - tłuszcze roślinne arachidowe uwodornione
+        - tłuszcze roślinne uwodornione arachidowe
+        - olej roślinny utwardzony z orzeszków ziemnych
+        - olej roślinny uwodorniony z orzeszków ziemnych
+        - tłuszcz roślinny utwardzony z orzeszków ziemnych
+        - tłuszcz roślinny uwodorniony z orzeszków ziemnych
+        - utwardzone oleje roślinne z orzeszków ziemnych
+        - oleje roślinne z orzeszków ziemnych utwardzone
+        - oleje roślinne utwardzone z orzeszków ziemnych
+        - uwodornione oleje roślinne z orzeszków ziemnych
+        - oleje roślinne z orzeszków ziemnych uwodornione
+        - oleje roślinne uwodornione z orzeszków ziemnych
+        - utwardzone tłuszcze roślinne z orzeszków ziemnych
+        - tłuszcze roślinne z orzeszków ziemnych utwardzone
+        - tłuszcze roślinne utwardzone z orzeszków ziemnych
+        - uwodornione tłuszcze roślinne z orzeszków ziemnych
+        - tłuszcze roślinne z orzeszków ziemnych uwodornione
+        - tłuszcze roślinne uwodornione z orzeszków ziemnych
+        - tłuszcz roślinny utwardzony z arachidów
+        - tłuszcz roślinny uwodorniony z arachidów
+        - utwardzone tłuszcze roślinne z arachidów
+        - tłuszcze roślinne z arachidów utwardzone
+        - tłuszcze roślinne utwardzone z arachidów
+        - uwodornione tłuszcze roślinne z arachidów
+        - tłuszcze roślinne z arachidów uwodornione
+        - tłuszcze roślinne uwodornione z arachidów
+        - olej roślinny utwardzony z arachidów
+        - olej roślinny uwodorniony z arachidów
+        - utwardzone oleje roślinne z arachidów
+        - oleje roślinne z arachidów utwardzone
+        - oleje roślinne utwardzone z arachidów
+        - uwodornione oleje roślinne z arachidów
+        - oleje roślinne z arachidów uwodornione
+        - oleje roślinne uwodornione z arachidów
+        - tłuszcz roślinny utwardzony z orzeszków arachidowych
+        - tłuszcz roślinny uwodorniony z orzeszków arachidowych
+        - utwardzone tłuszcze roślinne z orzeszków arachidowych
+        - tłuszcze roślinne z orzeszków arachidowych utwardzone
+        - tłuszcze roślinne utwardzone z orzeszków arachidowych
+        - uwodornione tłuszcze roślinne z orzeszków arachidowych
+        - tłuszcze roślinne z orzeszków arachidowych uwodornione
+        - tłuszcze roślinne uwodornione z orzeszków arachidowych
+        - olej roślinny utwardzony z orzeszków arachidowych
+        - olej roślinny uwodorniony z orzeszków arachidowych
+        - utwardzone oleje roślinne z orzeszków arachidowych
+        - oleje roślinne z orzeszków arachidowych utwardzone
+        - oleje roślinne utwardzone z orzeszków arachidowych
+        - uwodornione oleje roślinne z orzeszków arachidowych
+        - oleje roślinne z orzeszków arachidowych uwodornione
+        - oleje roślinne uwodornione z orzeszków arachidowych
+        - tłuszcz roślinny utwardzony z orzeszków arachidu
+        - tłuszcz roślinny uwodorniony z orzeszków arachidu
+        - utwardzone tłuszcze roślinne z orzeszków arachidu
+        - tłuszcze roślinne z orzeszków arachidu utwardzone
+        - tłuszcze roślinne utwardzone z orzeszków arachidu
+        - uwodornione tłuszcze roślinne z orzeszków arachidu
+        - tłuszcze roślinne z orzeszków arachidu uwodornione
+        - tłuszcze roślinne uwodornione z orzeszków arachidu
+        - olej roślinny utwardzony z orzeszków arachidu
+        - olej roślinny uwodorniony z orzeszków arachidu
+        - utwardzone oleje roślinne z orzeszków arachidu
+        - oleje roślinne z orzeszków arachidu utwardzone
+        - oleje roślinne utwardzone z orzeszków arachidu
+        - uwodornione oleje roślinne z orzeszków arachidu
+        - oleje roślinne z orzeszków arachidu uwodornione
+        - oleje roślinne uwodornione z orzeszków arachidu
+        - tłuszcz roślinny utwardzony z orzechów arachidowych
+        - tłuszcz roślinny uwodorniony z orzechów arachidowych
+        - utwardzone tłuszcze roślinne z orzechów arachidowych
+        - tłuszcze roślinne z orzechów arachidowych utwardzone
+        - tłuszcze roślinne utwardzone z orzechów arachidowych
+        - uwodornione tłuszcze roślinne z orzechów arachidowych
+        - tłuszcze roślinne z orzechów arachidowych uwodornione
+        - tłuszcze roślinne uwodornione z orzechów arachidowych
+        - olej roślinny utwardzony z orzechów arachidowych
+        - olej roślinny uwodorniony z orzechów arachidowych
+        - utwardzone oleje roślinne z orzechów arachidowych
+        - oleje roślinne z orzechów arachidowych utwardzone
+        - oleje roślinne utwardzone z orzechów arachidowych
+        - uwodornione oleje roślinne z orzechów arachidowych
+        - oleje roślinne z orzechów arachidowych uwodornione
+        - oleje roślinne uwodornione z orzechów arachidowych
+        - tłuszcz roślinny utwardzony z orzechów ziemnych
+        - tłuszcz roślinny uwodorniony z orzechów ziemnych
+        - utwardzone tłuszcze roślinne z orzechów ziemnych
+        - tłuszcze roślinne z orzechów ziemnych utwardzone
+        - tłuszcze roślinne utwardzone z orzechów ziemnych
+        - uwodornione tłuszcze roślinne z orzechów ziemnych
+        - tłuszcze roślinne z orzechów ziemnych uwodornione
+        - tłuszcze roślinne uwodornione z orzechów ziemnych
+        - olej roślinny utwardzony z orzechów ziemnych
+        - olej roślinny uwodorniony z orzechów ziemnych
+        - utwardzone oleje roślinne z orzechów ziemnych
+        - oleje roślinne z orzechów ziemnych utwardzone
+        - oleje roślinne utwardzone z orzechów ziemnych
+        - uwodornione oleje roślinne z orzechów ziemnych
+        - oleje roślinne z orzechów ziemnych uwodornione
+        - oleje roślinne uwodornione z orzechów ziemnych
+        - utwardzony olej roślinny orzechowy arachidowy
+        - uwodorniony olej roślinny orzechowy arachidowy
+        - utwardzony olej roślinny orzechowy z orzeszków ziemnych
+        - uwodorniony olej roślinny orzechowy z orzeszków ziemnych
+        - utwardzony tłuszcz roślinny orzechowy arachidowy
+        - uwodorniony tłuszcz roślinny orzechowy arachidowy
+        - utwardzone oleje roślinne orzechowe arachidowe
+        - uwodornione oleje roślinne orzechowe arachidowe
+        - utwardzone tłuszcze roślinne orzechowe arachidowe
+        - uwodornione tłuszcze roślinne orzechowe arachidowe
+        - utwardzony tłuszcz roślinny orzechowy z orzeszków ziemnych
+        - uwodorniony tłuszcz roślinny orzechowy z orzeszków ziemnych
+        - utwardzone oleje roślinne orzechowe z orzeszków ziemnych
+        - uwodornione oleje roślinne orzechowe z orzeszków ziemnych
+        - utwardzone tłuszcze roślinne orzechowe z orzeszków ziemnych
+        - uwodornione tłuszcze roślinne orzechowe z orzeszków ziemnych
+        - utwardzony olej roślinny orzechowy z arachidów
+        - uwodorniony olej roślinny orzechowy z arachidów
+        - utwardzony tłuszcz roślinny orzechowy z arachidów
+        - uwodorniony tłuszcz roślinny orzechowy z arachidów
+        - utwardzone oleje roślinne orzechowe z arachidów
+        - uwodornione oleje roślinne orzechowe z arachidów
+        - utwardzone tłuszcze roślinne orzechowe z arachidów
+        - uwodornione tłuszcze roślinne orzechowe z arachidów
+        - utwardzony olej roślinny orzechowy z orzeszków arachidowych
+        - uwodorniony olej roślinny orzechowy z orzeszków arachidowych
+        - utwardzony tłuszcz roślinny orzechowy z orzeszków arachidowych
+        - uwodorniony tłuszcz roślinny orzechowy z orzeszków arachidowych
+        - utwardzone oleje roślinne orzechowe z orzeszków arachidowych
+        - uwodornione oleje roślinne orzechowe z orzeszków arachidowych
+        - utwardzone tłuszcze roślinne orzechowe z orzeszków arachidowych
+        - uwodornione tłuszcze roślinne orzechowe z orzeszków arachidowych
+        - utwardzony olej roślinny orzechowy z orzeszków arachidu
+        - uwodorniony olej roślinny orzechowy z orzeszków arachidu
+        - utwardzony tłuszcz roślinny orzechowy z orzeszków arachidu
+        - uwodorniony tłuszcz roślinny orzechowy z orzeszków arachidu
+        - utwardzone oleje roślinne orzechowe z orzeszków arachidu
+        - uwodornione oleje roślinne orzechowe z orzeszków arachidu
+        - utwardzone tłuszcze roślinne orzechowe z orzeszków arachidu
+        - uwodornione tłuszcze roślinne orzechowe z orzeszków arachidu
+        - utwardzony olej roślinny orzechowy z orzechów arachidowych
+        - uwodorniony olej roślinny orzechowy z orzechów arachidowych
+        - utwardzony tłuszcz roślinny orzechowy z orzechów arachidowych
+        - uwodorniony tłuszcz roślinny orzechowy z orzechów arachidowych
+        - utwardzone oleje roślinne orzechowe z orzechów arachidowych
+        - uwodornione oleje roślinne orzechowe z orzechów arachidowych
+        - utwardzone tłuszcze roślinne orzechowe z orzechów arachidowych
+        - uwodornione tłuszcze roślinne orzechowe z orzechów arachidowych
+        - utwardzony olej roślinny orzechowy z orzechów ziemnych
+        - uwodorniony olej roślinny orzechowy z orzechów ziemnych
+        - utwardzony tłuszcz roślinny orzechowy z orzechów ziemnych
+        - uwodorniony tłuszcz roślinny orzechowy z orzechów ziemnych
+        - utwardzone oleje roślinne orzechowe z orzechów ziemnych
+        - uwodornione oleje roślinne orzechowe z orzechów ziemnych
+        - utwardzone tłuszcze roślinne orzechowe z orzechów ziemnych
+        - uwodornione tłuszcze roślinne orzechowe z orzechów ziemnych
+        - olej uwodorniony arachidowy
+        - olej utwardzony arachidowy
+        - olej uwodorniony z arachidów
+        - olej utwardzony z arachidów
+        - olej uwodorniony z orzechów ziemnych
+        - olej utwardzony z orzechów ziemnych
+    process:
+      en: "Peanut oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
+      pl: "Olej arachidowy utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
+    tells:
+      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!partially )(?<!fully )(?<!totally )(?<!teilweise )(?<!vollstandig )(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:utwardzon|uwodornion|utwardzan[yea]\b|uwodornian[yea]\b|hydrogenated|gehartet)|(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:po|podda\w*|podlega\w*)(?: (?!(?:nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b)\S+){0,3}? (?:uwodornieni|uwodornian|utwardzeni|utwardzan)'
+  - id: partially-hydrogenated
+    names:
+      en:
+        - partially hydrogenated peanut oil
+        - partially hydrogenated groundnut oil
+        - partially hydrogenated arachis oil
+        - partially hydrogenated peanuts oil
+        - partially hydrogenated vegetable oil from peanuts
+        - partially hydrogenated vegetable fat from peanuts
+        - partially hydrogenated vegetable oils from peanuts
+        - partially hydrogenated vegetable fats from peanuts
+        - partially hydrogenated nut oil from peanuts
+        - partially hydrogenated vegetable oil from groundnuts
+        - partially hydrogenated vegetable fat from groundnuts
+        - partially hydrogenated vegetable oils from groundnuts
+        - partially hydrogenated vegetable fats from groundnuts
+        - partially hydrogenated nut oil from groundnuts
+      pl:
+        - częściowo utwardzony olej arachidowy
+        - olej arachidowy częściowo utwardzony
+        - częściowo uwodorniony olej arachidowy
+        - olej arachidowy częściowo uwodorniony
+        - częściowo utwardzony olej z orzeszków ziemnych
+        - olej z orzeszków ziemnych częściowo utwardzony
+        - częściowo uwodorniony olej z orzeszków ziemnych
+        - olej z orzeszków ziemnych częściowo uwodorniony
+        - częściowo utwardzony olej roślinny arachidowy
+        - olej roślinny arachidowy częściowo utwardzony
+        - częściowo uwodorniony olej roślinny arachidowy
+        - olej roślinny arachidowy częściowo uwodorniony
+        - częściowo utwardzony olej roślinny z orzeszków ziemnych
+        - olej roślinny z orzeszków ziemnych częściowo utwardzony
+        - częściowo uwodorniony olej roślinny z orzeszków ziemnych
+        - olej roślinny z orzeszków ziemnych częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny arachidowy
+        - tłuszcz roślinny arachidowy częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny arachidowy
+        - tłuszcz roślinny arachidowy częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny z orzeszków ziemnych
+        - tłuszcz roślinny z orzeszków ziemnych częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny z orzeszków ziemnych
+        - tłuszcz roślinny z orzeszków ziemnych częściowo uwodorniony
+        - częściowo utwardzony olej z orzeszków arachidowych
+        - olej z orzeszków arachidowych częściowo utwardzony
+        - częściowo uwodorniony olej z orzeszków arachidowych
+        - olej z orzeszków arachidowych częściowo uwodorniony
+        - częściowo utwardzony olej z arachidów
+        - olej z arachidów częściowo utwardzony
+        - częściowo uwodorniony olej z arachidów
+        - olej z arachidów częściowo uwodorniony
+        - częściowo utwardzony olej z orzeszków arachidu
+        - olej z orzeszków arachidu częściowo utwardzony
+        - częściowo uwodorniony olej z orzeszków arachidu
+        - olej z orzeszków arachidu częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny z arachidów
+        - tłuszcz roślinny z arachidów częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny z arachidów
+        - tłuszcz roślinny z arachidów częściowo uwodorniony
+        - częściowo utwardzony olej roślinny z arachidów
+        - olej roślinny z arachidów częściowo utwardzony
+        - częściowo uwodorniony olej roślinny z arachidów
+        - olej roślinny z arachidów częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny z orzeszków arachidowych
+        - tłuszcz roślinny z orzeszków arachidowych częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny z orzeszków arachidowych
+        - tłuszcz roślinny z orzeszków arachidowych częściowo uwodorniony
+        - częściowo utwardzony olej roślinny z orzeszków arachidowych
+        - olej roślinny z orzeszków arachidowych częściowo utwardzony
+        - częściowo uwodorniony olej roślinny z orzeszków arachidowych
+        - olej roślinny z orzeszków arachidowych częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny z orzeszków arachidu
+        - tłuszcz roślinny z orzeszków arachidu częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny z orzeszków arachidu
+        - tłuszcz roślinny z orzeszków arachidu częściowo uwodorniony
+        - częściowo utwardzony olej roślinny z orzeszków arachidu
+        - olej roślinny z orzeszków arachidu częściowo utwardzony
+        - częściowo uwodorniony olej roślinny z orzeszków arachidu
+        - olej roślinny z orzeszków arachidu częściowo uwodorniony
+        - częściowo utwardzony olej z orzechów ziemnych
+        - olej z orzechów ziemnych częściowo utwardzony
+        - częściowo uwodorniony olej z orzechów ziemnych
+        - olej z orzechów ziemnych częściowo uwodorniony
+        - częściowo utwardzony olej z orzechów arachidowych
+        - olej z orzechów arachidowych częściowo utwardzony
+        - częściowo uwodorniony olej z orzechów arachidowych
+        - olej z orzechów arachidowych częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny z orzechów arachidowych
+        - tłuszcz roślinny z orzechów arachidowych częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny z orzechów arachidowych
+        - tłuszcz roślinny z orzechów arachidowych częściowo uwodorniony
+        - częściowo utwardzony olej roślinny z orzechów arachidowych
+        - olej roślinny z orzechów arachidowych częściowo utwardzony
+        - częściowo uwodorniony olej roślinny z orzechów arachidowych
+        - olej roślinny z orzechów arachidowych częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny z orzechów ziemnych
+        - tłuszcz roślinny z orzechów ziemnych częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny z orzechów ziemnych
+        - tłuszcz roślinny z orzechów ziemnych częściowo uwodorniony
+        - częściowo utwardzony olej roślinny z orzechów ziemnych
+        - olej roślinny z orzechów ziemnych częściowo utwardzony
+        - częściowo uwodorniony olej roślinny z orzechów ziemnych
+        - olej roślinny z orzechów ziemnych częściowo uwodorniony
+        - olej roślinny częściowo utwardzony arachidowy
+        - olej roślinny częściowo uwodorniony arachidowy
+        - tłuszcz roślinny częściowo utwardzony arachidowy
+        - tłuszcz roślinny częściowo uwodorniony arachidowy
+        - częściowo utwardzone oleje roślinne arachidowe
+        - oleje roślinne arachidowe częściowo utwardzone
+        - oleje roślinne częściowo utwardzone arachidowe
+        - częściowo uwodornione oleje roślinne arachidowe
+        - oleje roślinne arachidowe częściowo uwodornione
+        - oleje roślinne częściowo uwodornione arachidowe
+        - częściowo utwardzone tłuszcze roślinne arachidowe
+        - tłuszcze roślinne arachidowe częściowo utwardzone
+        - tłuszcze roślinne częściowo utwardzone arachidowe
+        - częściowo uwodornione tłuszcze roślinne arachidowe
+        - tłuszcze roślinne arachidowe częściowo uwodornione
+        - tłuszcze roślinne częściowo uwodornione arachidowe
+        - olej roślinny częściowo utwardzony z orzeszków ziemnych
+        - olej roślinny częściowo uwodorniony z orzeszków ziemnych
+        - tłuszcz roślinny częściowo utwardzony z orzeszków ziemnych
+        - tłuszcz roślinny częściowo uwodorniony z orzeszków ziemnych
+        - częściowo utwardzone oleje roślinne z orzeszków ziemnych
+        - oleje roślinne z orzeszków ziemnych częściowo utwardzone
+        - oleje roślinne częściowo utwardzone z orzeszków ziemnych
+        - częściowo uwodornione oleje roślinne z orzeszków ziemnych
+        - oleje roślinne z orzeszków ziemnych częściowo uwodornione
+        - oleje roślinne częściowo uwodornione z orzeszków ziemnych
+        - częściowo utwardzone tłuszcze roślinne z orzeszków ziemnych
+        - tłuszcze roślinne z orzeszków ziemnych częściowo utwardzone
+        - tłuszcze roślinne częściowo utwardzone z orzeszków ziemnych
+        - częściowo uwodornione tłuszcze roślinne z orzeszków ziemnych
+        - tłuszcze roślinne z orzeszków ziemnych częściowo uwodornione
+        - tłuszcze roślinne częściowo uwodornione z orzeszków ziemnych
+        - tłuszcz roślinny częściowo utwardzony z arachidów
+        - tłuszcz roślinny częściowo uwodorniony z arachidów
+        - częściowo utwardzone tłuszcze roślinne z arachidów
+        - tłuszcze roślinne z arachidów częściowo utwardzone
+        - tłuszcze roślinne częściowo utwardzone z arachidów
+        - częściowo uwodornione tłuszcze roślinne z arachidów
+        - tłuszcze roślinne z arachidów częściowo uwodornione
+        - tłuszcze roślinne częściowo uwodornione z arachidów
+        - olej roślinny częściowo utwardzony z arachidów
+        - olej roślinny częściowo uwodorniony z arachidów
+        - częściowo utwardzone oleje roślinne z arachidów
+        - oleje roślinne z arachidów częściowo utwardzone
+        - oleje roślinne częściowo utwardzone z arachidów
+        - częściowo uwodornione oleje roślinne z arachidów
+        - oleje roślinne z arachidów częściowo uwodornione
+        - oleje roślinne częściowo uwodornione z arachidów
+        - tłuszcz roślinny częściowo utwardzony z orzeszków arachidowych
+        - tłuszcz roślinny częściowo uwodorniony z orzeszków arachidowych
+        - częściowo utwardzone tłuszcze roślinne z orzeszków arachidowych
+        - tłuszcze roślinne z orzeszków arachidowych częściowo utwardzone
+        - tłuszcze roślinne częściowo utwardzone z orzeszków arachidowych
+        - częściowo uwodornione tłuszcze roślinne z orzeszków arachidowych
+        - tłuszcze roślinne z orzeszków arachidowych częściowo uwodornione
+        - tłuszcze roślinne częściowo uwodornione z orzeszków arachidowych
+        - olej roślinny częściowo utwardzony z orzeszków arachidowych
+        - olej roślinny częściowo uwodorniony z orzeszków arachidowych
+        - częściowo utwardzone oleje roślinne z orzeszków arachidowych
+        - oleje roślinne z orzeszków arachidowych częściowo utwardzone
+        - oleje roślinne częściowo utwardzone z orzeszków arachidowych
+        - częściowo uwodornione oleje roślinne z orzeszków arachidowych
+        - oleje roślinne z orzeszków arachidowych częściowo uwodornione
+        - oleje roślinne częściowo uwodornione z orzeszków arachidowych
+        - tłuszcz roślinny częściowo utwardzony z orzeszków arachidu
+        - tłuszcz roślinny częściowo uwodorniony z orzeszków arachidu
+        - częściowo utwardzone tłuszcze roślinne z orzeszków arachidu
+        - tłuszcze roślinne z orzeszków arachidu częściowo utwardzone
+        - tłuszcze roślinne częściowo utwardzone z orzeszków arachidu
+        - częściowo uwodornione tłuszcze roślinne z orzeszków arachidu
+        - tłuszcze roślinne z orzeszków arachidu częściowo uwodornione
+        - tłuszcze roślinne częściowo uwodornione z orzeszków arachidu
+        - olej roślinny częściowo utwardzony z orzeszków arachidu
+        - olej roślinny częściowo uwodorniony z orzeszków arachidu
+        - częściowo utwardzone oleje roślinne z orzeszków arachidu
+        - oleje roślinne z orzeszków arachidu częściowo utwardzone
+        - oleje roślinne częściowo utwardzone z orzeszków arachidu
+        - częściowo uwodornione oleje roślinne z orzeszków arachidu
+        - oleje roślinne z orzeszków arachidu częściowo uwodornione
+        - oleje roślinne częściowo uwodornione z orzeszków arachidu
+        - tłuszcz roślinny częściowo utwardzony z orzechów arachidowych
+        - tłuszcz roślinny częściowo uwodorniony z orzechów arachidowych
+        - częściowo utwardzone tłuszcze roślinne z orzechów arachidowych
+        - tłuszcze roślinne z orzechów arachidowych częściowo utwardzone
+        - tłuszcze roślinne częściowo utwardzone z orzechów arachidowych
+        - częściowo uwodornione tłuszcze roślinne z orzechów arachidowych
+        - tłuszcze roślinne z orzechów arachidowych częściowo uwodornione
+        - tłuszcze roślinne częściowo uwodornione z orzechów arachidowych
+        - olej roślinny częściowo utwardzony z orzechów arachidowych
+        - olej roślinny częściowo uwodorniony z orzechów arachidowych
+        - częściowo utwardzone oleje roślinne z orzechów arachidowych
+        - oleje roślinne z orzechów arachidowych częściowo utwardzone
+        - oleje roślinne częściowo utwardzone z orzechów arachidowych
+        - częściowo uwodornione oleje roślinne z orzechów arachidowych
+        - oleje roślinne z orzechów arachidowych częściowo uwodornione
+        - oleje roślinne częściowo uwodornione z orzechów arachidowych
+        - tłuszcz roślinny częściowo utwardzony z orzechów ziemnych
+        - tłuszcz roślinny częściowo uwodorniony z orzechów ziemnych
+        - częściowo utwardzone tłuszcze roślinne z orzechów ziemnych
+        - tłuszcze roślinne z orzechów ziemnych częściowo utwardzone
+        - tłuszcze roślinne częściowo utwardzone z orzechów ziemnych
+        - częściowo uwodornione tłuszcze roślinne z orzechów ziemnych
+        - tłuszcze roślinne z orzechów ziemnych częściowo uwodornione
+        - tłuszcze roślinne częściowo uwodornione z orzechów ziemnych
+        - olej roślinny częściowo utwardzony z orzechów ziemnych
+        - olej roślinny częściowo uwodorniony z orzechów ziemnych
+        - częściowo utwardzone oleje roślinne z orzechów ziemnych
+        - oleje roślinne z orzechów ziemnych częściowo utwardzone
+        - oleje roślinne częściowo utwardzone z orzechów ziemnych
+        - częściowo uwodornione oleje roślinne z orzechów ziemnych
+        - oleje roślinne z orzechów ziemnych częściowo uwodornione
+        - oleje roślinne częściowo uwodornione z orzechów ziemnych
+        - częściowo utwardzony olej roślinny orzechowy arachidowy
+        - częściowo uwodorniony olej roślinny orzechowy arachidowy
+        - częściowo utwardzony olej roślinny orzechowy z orzeszków ziemnych
+        - częściowo uwodorniony olej roślinny orzechowy z orzeszków ziemnych
+        - częściowo utwardzony tłuszcz roślinny orzechowy arachidowy
+        - częściowo uwodorniony tłuszcz roślinny orzechowy arachidowy
+        - częściowo utwardzone oleje roślinne orzechowe arachidowe
+        - częściowo uwodornione oleje roślinne orzechowe arachidowe
+        - częściowo utwardzone tłuszcze roślinne orzechowe arachidowe
+        - częściowo uwodornione tłuszcze roślinne orzechowe arachidowe
+        - częściowo utwardzony tłuszcz roślinny orzechowy z orzeszków ziemnych
+        - częściowo uwodorniony tłuszcz roślinny orzechowy z orzeszków ziemnych
+        - częściowo utwardzone oleje roślinne orzechowe z orzeszków ziemnych
+        - częściowo uwodornione oleje roślinne orzechowe z orzeszków ziemnych
+        - częściowo utwardzone tłuszcze roślinne orzechowe z orzeszków ziemnych
+        - częściowo uwodornione tłuszcze roślinne orzechowe z orzeszków ziemnych
+        - częściowo utwardzony olej roślinny orzechowy z arachidów
+        - częściowo uwodorniony olej roślinny orzechowy z arachidów
+        - częściowo utwardzony tłuszcz roślinny orzechowy z arachidów
+        - częściowo uwodorniony tłuszcz roślinny orzechowy z arachidów
+        - częściowo utwardzone oleje roślinne orzechowe z arachidów
+        - częściowo uwodornione oleje roślinne orzechowe z arachidów
+        - częściowo utwardzone tłuszcze roślinne orzechowe z arachidów
+        - częściowo uwodornione tłuszcze roślinne orzechowe z arachidów
+        - częściowo utwardzony olej roślinny orzechowy z orzeszków arachidowych
+        - częściowo uwodorniony olej roślinny orzechowy z orzeszków arachidowych
+        - częściowo utwardzony tłuszcz roślinny orzechowy z orzeszków arachidowych
+        - częściowo uwodorniony tłuszcz roślinny orzechowy z orzeszków arachidowych
+        - częściowo utwardzone oleje roślinne orzechowe z orzeszków arachidowych
+        - częściowo uwodornione oleje roślinne orzechowe z orzeszków arachidowych
+        - częściowo utwardzone tłuszcze roślinne orzechowe z orzeszków arachidowych
+        - częściowo uwodornione tłuszcze roślinne orzechowe z orzeszków arachidowych
+        - częściowo utwardzony olej roślinny orzechowy z orzeszków arachidu
+        - częściowo uwodorniony olej roślinny orzechowy z orzeszków arachidu
+        - częściowo utwardzony tłuszcz roślinny orzechowy z orzeszków arachidu
+        - częściowo uwodorniony tłuszcz roślinny orzechowy z orzeszków arachidu
+        - częściowo utwardzone oleje roślinne orzechowe z orzeszków arachidu
+        - częściowo uwodornione oleje roślinne orzechowe z orzeszków arachidu
+        - częściowo utwardzone tłuszcze roślinne orzechowe z orzeszków arachidu
+        - częściowo uwodornione tłuszcze roślinne orzechowe z orzeszków arachidu
+        - częściowo utwardzony olej roślinny orzechowy z orzechów arachidowych
+        - częściowo uwodorniony olej roślinny orzechowy z orzechów arachidowych
+        - częściowo utwardzony tłuszcz roślinny orzechowy z orzechów arachidowych
+        - częściowo uwodorniony tłuszcz roślinny orzechowy z orzechów arachidowych
+        - częściowo utwardzone oleje roślinne orzechowe z orzechów arachidowych
+        - częściowo uwodornione oleje roślinne orzechowe z orzechów arachidowych
+        - częściowo utwardzone tłuszcze roślinne orzechowe z orzechów arachidowych
+        - częściowo uwodornione tłuszcze roślinne orzechowe z orzechów arachidowych
+        - częściowo utwardzony olej roślinny orzechowy z orzechów ziemnych
+        - częściowo uwodorniony olej roślinny orzechowy z orzechów ziemnych
+        - częściowo utwardzony tłuszcz roślinny orzechowy z orzechów ziemnych
+        - częściowo uwodorniony tłuszcz roślinny orzechowy z orzechów ziemnych
+        - częściowo utwardzone oleje roślinne orzechowe z orzechów ziemnych
+        - częściowo uwodornione oleje roślinne orzechowe z orzechów ziemnych
+        - częściowo utwardzone tłuszcze roślinne orzechowe z orzechów ziemnych
+        - częściowo uwodornione tłuszcze roślinne orzechowe z orzechów ziemnych
+        - olej częściowo uwodorniony arachidowy
+        - olej częściowo utwardzony arachidowy
+        - olej częściowo uwodorniony z arachidów
+        - olej częściowo utwardzony z arachidów
+        - olej częściowo uwodorniony z orzechów ziemnych
+        - olej częściowo utwardzony z orzechów ziemnych
+    process:
+      en: "Peanut oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
+      pl: "Olej arachidowy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
+    tells:
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )czesciowo (?:utwardzon|uwodorn)'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )partially hydrogenated'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )teilweise gehartet'
+  - id: fully-hydrogenated
+    names:
+      en:
+        - fully hydrogenated peanut oil
+        - totally hydrogenated peanut oil
+        - fully hydrogenated groundnut oil
+        - totally hydrogenated groundnut oil
+        - fully hydrogenated arachis oil
+        - totally hydrogenated arachis oil
+        - fully hydrogenated peanuts oil
+        - totally hydrogenated peanuts oil
+        - fully hydrogenated vegetable oil from peanuts
+        - totally hydrogenated vegetable oil from peanuts
+        - fully hydrogenated vegetable fat from peanuts
+        - totally hydrogenated vegetable fat from peanuts
+        - fully hydrogenated vegetable oils from peanuts
+        - totally hydrogenated vegetable oils from peanuts
+        - fully hydrogenated vegetable fats from peanuts
+        - totally hydrogenated vegetable fats from peanuts
+        - fully hydrogenated nut oil from peanuts
+        - totally hydrogenated nut oil from peanuts
+        - fully hydrogenated vegetable oil from groundnuts
+        - totally hydrogenated vegetable oil from groundnuts
+        - fully hydrogenated vegetable fat from groundnuts
+        - totally hydrogenated vegetable fat from groundnuts
+        - fully hydrogenated vegetable oils from groundnuts
+        - totally hydrogenated vegetable oils from groundnuts
+        - fully hydrogenated vegetable fats from groundnuts
+        - totally hydrogenated vegetable fats from groundnuts
+        - fully hydrogenated nut oil from groundnuts
+        - totally hydrogenated nut oil from groundnuts
+      pl:
+        - całkowicie utwardzony olej arachidowy
+        - olej arachidowy całkowicie utwardzony
+        - całkowicie uwodorniony olej arachidowy
+        - olej arachidowy całkowicie uwodorniony
+        - w pełni utwardzony olej arachidowy
+        - olej arachidowy w pełni utwardzony
+        - w pełni uwodorniony olej arachidowy
+        - olej arachidowy w pełni uwodorniony
+        - całkowicie utwardzony olej z orzeszków ziemnych
+        - olej z orzeszków ziemnych całkowicie utwardzony
+        - całkowicie uwodorniony olej z orzeszków ziemnych
+        - olej z orzeszków ziemnych całkowicie uwodorniony
+        - w pełni utwardzony olej z orzeszków ziemnych
+        - olej z orzeszków ziemnych w pełni utwardzony
+        - w pełni uwodorniony olej z orzeszków ziemnych
+        - olej z orzeszków ziemnych w pełni uwodorniony
+        - całkowicie utwardzony olej roślinny arachidowy
+        - olej roślinny arachidowy całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny arachidowy
+        - olej roślinny arachidowy całkowicie uwodorniony
+        - całkowicie utwardzony olej roślinny z orzeszków ziemnych
+        - olej roślinny z orzeszków ziemnych całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny z orzeszków ziemnych
+        - olej roślinny z orzeszków ziemnych całkowicie uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny arachidowy
+        - tłuszcz roślinny arachidowy całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny arachidowy
+        - tłuszcz roślinny arachidowy całkowicie uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny z orzeszków ziemnych
+        - tłuszcz roślinny z orzeszków ziemnych całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny z orzeszków ziemnych
+        - tłuszcz roślinny z orzeszków ziemnych całkowicie uwodorniony
+        - całkowicie utwardzony olej z orzeszków arachidowych
+        - olej z orzeszków arachidowych całkowicie utwardzony
+        - całkowicie uwodorniony olej z orzeszków arachidowych
+        - olej z orzeszków arachidowych całkowicie uwodorniony
+        - w pełni utwardzony olej z orzeszków arachidowych
+        - olej z orzeszków arachidowych w pełni utwardzony
+        - w pełni uwodorniony olej z orzeszków arachidowych
+        - olej z orzeszków arachidowych w pełni uwodorniony
+        - całkowicie utwardzony olej z arachidów
+        - olej z arachidów całkowicie utwardzony
+        - całkowicie uwodorniony olej z arachidów
+        - olej z arachidów całkowicie uwodorniony
+        - w pełni utwardzony olej z arachidów
+        - olej z arachidów w pełni utwardzony
+        - w pełni uwodorniony olej z arachidów
+        - olej z arachidów w pełni uwodorniony
+        - całkowicie utwardzony olej z orzeszków arachidu
+        - olej z orzeszków arachidu całkowicie utwardzony
+        - całkowicie uwodorniony olej z orzeszków arachidu
+        - olej z orzeszków arachidu całkowicie uwodorniony
+        - w pełni utwardzony olej z orzeszków arachidu
+        - olej z orzeszków arachidu w pełni utwardzony
+        - w pełni uwodorniony olej z orzeszków arachidu
+        - olej z orzeszków arachidu w pełni uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny z arachidów
+        - tłuszcz roślinny z arachidów całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny z arachidów
+        - tłuszcz roślinny z arachidów całkowicie uwodorniony
+        - całkowicie utwardzony olej roślinny z arachidów
+        - olej roślinny z arachidów całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny z arachidów
+        - olej roślinny z arachidów całkowicie uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny z orzeszków arachidowych
+        - tłuszcz roślinny z orzeszków arachidowych całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny z orzeszków arachidowych
+        - tłuszcz roślinny z orzeszków arachidowych całkowicie uwodorniony
+        - całkowicie utwardzony olej roślinny z orzeszków arachidowych
+        - olej roślinny z orzeszków arachidowych całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny z orzeszków arachidowych
+        - olej roślinny z orzeszków arachidowych całkowicie uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny z orzeszków arachidu
+        - tłuszcz roślinny z orzeszków arachidu całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny z orzeszków arachidu
+        - tłuszcz roślinny z orzeszków arachidu całkowicie uwodorniony
+        - całkowicie utwardzony olej roślinny z orzeszków arachidu
+        - olej roślinny z orzeszków arachidu całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny z orzeszków arachidu
+        - olej roślinny z orzeszków arachidu całkowicie uwodorniony
+        - całkowicie utwardzony olej z orzechów ziemnych
+        - olej z orzechów ziemnych całkowicie utwardzony
+        - całkowicie uwodorniony olej z orzechów ziemnych
+        - olej z orzechów ziemnych całkowicie uwodorniony
+        - w pełni utwardzony olej z orzechów ziemnych
+        - olej z orzechów ziemnych w pełni utwardzony
+        - w pełni uwodorniony olej z orzechów ziemnych
+        - olej z orzechów ziemnych w pełni uwodorniony
+        - całkowicie utwardzony olej z orzechów arachidowych
+        - olej z orzechów arachidowych całkowicie utwardzony
+        - całkowicie uwodorniony olej z orzechów arachidowych
+        - olej z orzechów arachidowych całkowicie uwodorniony
+        - w pełni utwardzony olej z orzechów arachidowych
+        - olej z orzechów arachidowych w pełni utwardzony
+        - w pełni uwodorniony olej z orzechów arachidowych
+        - olej z orzechów arachidowych w pełni uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny z orzechów arachidowych
+        - tłuszcz roślinny z orzechów arachidowych całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny z orzechów arachidowych
+        - tłuszcz roślinny z orzechów arachidowych całkowicie uwodorniony
+        - całkowicie utwardzony olej roślinny z orzechów arachidowych
+        - olej roślinny z orzechów arachidowych całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny z orzechów arachidowych
+        - olej roślinny z orzechów arachidowych całkowicie uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny z orzechów ziemnych
+        - tłuszcz roślinny z orzechów ziemnych całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny z orzechów ziemnych
+        - tłuszcz roślinny z orzechów ziemnych całkowicie uwodorniony
+        - całkowicie utwardzony olej roślinny z orzechów ziemnych
+        - olej roślinny z orzechów ziemnych całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny z orzechów ziemnych
+        - olej roślinny z orzechów ziemnych całkowicie uwodorniony
+        - olej roślinny całkowicie utwardzony arachidowy
+        - olej roślinny całkowicie uwodorniony arachidowy
+        - w pełni utwardzony olej roślinny arachidowy
+        - olej roślinny arachidowy w pełni utwardzony
+        - olej roślinny w pełni utwardzony arachidowy
+        - w pełni uwodorniony olej roślinny arachidowy
+        - olej roślinny arachidowy w pełni uwodorniony
+        - olej roślinny w pełni uwodorniony arachidowy
+        - tłuszcz roślinny całkowicie utwardzony arachidowy
+        - tłuszcz roślinny całkowicie uwodorniony arachidowy
+        - w pełni utwardzony tłuszcz roślinny arachidowy
+        - tłuszcz roślinny arachidowy w pełni utwardzony
+        - tłuszcz roślinny w pełni utwardzony arachidowy
+        - w pełni uwodorniony tłuszcz roślinny arachidowy
+        - tłuszcz roślinny arachidowy w pełni uwodorniony
+        - tłuszcz roślinny w pełni uwodorniony arachidowy
+        - całkowicie utwardzone oleje roślinne arachidowe
+        - oleje roślinne arachidowe całkowicie utwardzone
+        - oleje roślinne całkowicie utwardzone arachidowe
+        - całkowicie uwodornione oleje roślinne arachidowe
+        - oleje roślinne arachidowe całkowicie uwodornione
+        - oleje roślinne całkowicie uwodornione arachidowe
+        - w pełni utwardzone oleje roślinne arachidowe
+        - oleje roślinne arachidowe w pełni utwardzone
+        - oleje roślinne w pełni utwardzone arachidowe
+        - w pełni uwodornione oleje roślinne arachidowe
+        - oleje roślinne arachidowe w pełni uwodornione
+        - oleje roślinne w pełni uwodornione arachidowe
+        - całkowicie utwardzone tłuszcze roślinne arachidowe
+        - tłuszcze roślinne arachidowe całkowicie utwardzone
+        - tłuszcze roślinne całkowicie utwardzone arachidowe
+        - całkowicie uwodornione tłuszcze roślinne arachidowe
+        - tłuszcze roślinne arachidowe całkowicie uwodornione
+        - tłuszcze roślinne całkowicie uwodornione arachidowe
+        - w pełni utwardzone tłuszcze roślinne arachidowe
+        - tłuszcze roślinne arachidowe w pełni utwardzone
+        - tłuszcze roślinne w pełni utwardzone arachidowe
+        - w pełni uwodornione tłuszcze roślinne arachidowe
+        - tłuszcze roślinne arachidowe w pełni uwodornione
+        - tłuszcze roślinne w pełni uwodornione arachidowe
+        - olej roślinny całkowicie utwardzony z orzeszków ziemnych
+        - olej roślinny całkowicie uwodorniony z orzeszków ziemnych
+        - w pełni utwardzony olej roślinny z orzeszków ziemnych
+        - olej roślinny z orzeszków ziemnych w pełni utwardzony
+        - olej roślinny w pełni utwardzony z orzeszków ziemnych
+        - w pełni uwodorniony olej roślinny z orzeszków ziemnych
+        - olej roślinny z orzeszków ziemnych w pełni uwodorniony
+        - olej roślinny w pełni uwodorniony z orzeszków ziemnych
+        - tłuszcz roślinny całkowicie utwardzony z orzeszków ziemnych
+        - tłuszcz roślinny całkowicie uwodorniony z orzeszków ziemnych
+        - w pełni utwardzony tłuszcz roślinny z orzeszków ziemnych
+        - tłuszcz roślinny z orzeszków ziemnych w pełni utwardzony
+        - tłuszcz roślinny w pełni utwardzony z orzeszków ziemnych
+        - w pełni uwodorniony tłuszcz roślinny z orzeszków ziemnych
+        - tłuszcz roślinny z orzeszków ziemnych w pełni uwodorniony
+        - tłuszcz roślinny w pełni uwodorniony z orzeszków ziemnych
+        - całkowicie utwardzone oleje roślinne z orzeszków ziemnych
+        - oleje roślinne z orzeszków ziemnych całkowicie utwardzone
+        - oleje roślinne całkowicie utwardzone z orzeszków ziemnych
+        - całkowicie uwodornione oleje roślinne z orzeszków ziemnych
+        - oleje roślinne z orzeszków ziemnych całkowicie uwodornione
+        - oleje roślinne całkowicie uwodornione z orzeszków ziemnych
+        - w pełni utwardzone oleje roślinne z orzeszków ziemnych
+        - oleje roślinne z orzeszków ziemnych w pełni utwardzone
+        - oleje roślinne w pełni utwardzone z orzeszków ziemnych
+        - w pełni uwodornione oleje roślinne z orzeszków ziemnych
+        - oleje roślinne z orzeszków ziemnych w pełni uwodornione
+        - oleje roślinne w pełni uwodornione z orzeszków ziemnych
+        - całkowicie utwardzone tłuszcze roślinne z orzeszków ziemnych
+        - tłuszcze roślinne z orzeszków ziemnych całkowicie utwardzone
+        - tłuszcze roślinne całkowicie utwardzone z orzeszków ziemnych
+        - całkowicie uwodornione tłuszcze roślinne z orzeszków ziemnych
+        - tłuszcze roślinne z orzeszków ziemnych całkowicie uwodornione
+        - tłuszcze roślinne całkowicie uwodornione z orzeszków ziemnych
+        - w pełni utwardzone tłuszcze roślinne z orzeszków ziemnych
+        - tłuszcze roślinne z orzeszków ziemnych w pełni utwardzone
+        - tłuszcze roślinne w pełni utwardzone z orzeszków ziemnych
+        - w pełni uwodornione tłuszcze roślinne z orzeszków ziemnych
+        - tłuszcze roślinne z orzeszków ziemnych w pełni uwodornione
+        - tłuszcze roślinne w pełni uwodornione z orzeszków ziemnych
+        - tłuszcz roślinny całkowicie utwardzony z arachidów
+        - tłuszcz roślinny całkowicie uwodorniony z arachidów
+        - w pełni utwardzony tłuszcz roślinny z arachidów
+        - tłuszcz roślinny z arachidów w pełni utwardzony
+        - tłuszcz roślinny w pełni utwardzony z arachidów
+        - w pełni uwodorniony tłuszcz roślinny z arachidów
+        - tłuszcz roślinny z arachidów w pełni uwodorniony
+        - tłuszcz roślinny w pełni uwodorniony z arachidów
+        - całkowicie utwardzone tłuszcze roślinne z arachidów
+        - tłuszcze roślinne z arachidów całkowicie utwardzone
+        - tłuszcze roślinne całkowicie utwardzone z arachidów
+        - całkowicie uwodornione tłuszcze roślinne z arachidów
+        - tłuszcze roślinne z arachidów całkowicie uwodornione
+        - tłuszcze roślinne całkowicie uwodornione z arachidów
+        - w pełni utwardzone tłuszcze roślinne z arachidów
+        - tłuszcze roślinne z arachidów w pełni utwardzone
+        - tłuszcze roślinne w pełni utwardzone z arachidów
+        - w pełni uwodornione tłuszcze roślinne z arachidów
+        - tłuszcze roślinne z arachidów w pełni uwodornione
+        - tłuszcze roślinne w pełni uwodornione z arachidów
+        - olej roślinny całkowicie utwardzony z arachidów
+        - olej roślinny całkowicie uwodorniony z arachidów
+        - w pełni utwardzony olej roślinny z arachidów
+        - olej roślinny z arachidów w pełni utwardzony
+        - olej roślinny w pełni utwardzony z arachidów
+        - w pełni uwodorniony olej roślinny z arachidów
+        - olej roślinny z arachidów w pełni uwodorniony
+        - olej roślinny w pełni uwodorniony z arachidów
+        - całkowicie utwardzone oleje roślinne z arachidów
+        - oleje roślinne z arachidów całkowicie utwardzone
+        - oleje roślinne całkowicie utwardzone z arachidów
+        - całkowicie uwodornione oleje roślinne z arachidów
+        - oleje roślinne z arachidów całkowicie uwodornione
+        - oleje roślinne całkowicie uwodornione z arachidów
+        - w pełni utwardzone oleje roślinne z arachidów
+        - oleje roślinne z arachidów w pełni utwardzone
+        - oleje roślinne w pełni utwardzone z arachidów
+        - w pełni uwodornione oleje roślinne z arachidów
+        - oleje roślinne z arachidów w pełni uwodornione
+        - oleje roślinne w pełni uwodornione z arachidów
+        - tłuszcz roślinny całkowicie utwardzony z orzeszków arachidowych
+        - tłuszcz roślinny całkowicie uwodorniony z orzeszków arachidowych
+        - w pełni utwardzony tłuszcz roślinny z orzeszków arachidowych
+        - tłuszcz roślinny z orzeszków arachidowych w pełni utwardzony
+        - tłuszcz roślinny w pełni utwardzony z orzeszków arachidowych
+        - w pełni uwodorniony tłuszcz roślinny z orzeszków arachidowych
+        - tłuszcz roślinny z orzeszków arachidowych w pełni uwodorniony
+        - tłuszcz roślinny w pełni uwodorniony z orzeszków arachidowych
+        - całkowicie utwardzone tłuszcze roślinne z orzeszków arachidowych
+        - tłuszcze roślinne z orzeszków arachidowych całkowicie utwardzone
+        - tłuszcze roślinne całkowicie utwardzone z orzeszków arachidowych
+        - całkowicie uwodornione tłuszcze roślinne z orzeszków arachidowych
+        - tłuszcze roślinne z orzeszków arachidowych całkowicie uwodornione
+        - tłuszcze roślinne całkowicie uwodornione z orzeszków arachidowych
+        - w pełni utwardzone tłuszcze roślinne z orzeszków arachidowych
+        - tłuszcze roślinne z orzeszków arachidowych w pełni utwardzone
+        - tłuszcze roślinne w pełni utwardzone z orzeszków arachidowych
+        - w pełni uwodornione tłuszcze roślinne z orzeszków arachidowych
+        - tłuszcze roślinne z orzeszków arachidowych w pełni uwodornione
+        - tłuszcze roślinne w pełni uwodornione z orzeszków arachidowych
+        - olej roślinny całkowicie utwardzony z orzeszków arachidowych
+        - olej roślinny całkowicie uwodorniony z orzeszków arachidowych
+        - w pełni utwardzony olej roślinny z orzeszków arachidowych
+        - olej roślinny z orzeszków arachidowych w pełni utwardzony
+        - olej roślinny w pełni utwardzony z orzeszków arachidowych
+        - w pełni uwodorniony olej roślinny z orzeszków arachidowych
+        - olej roślinny z orzeszków arachidowych w pełni uwodorniony
+        - olej roślinny w pełni uwodorniony z orzeszków arachidowych
+        - całkowicie utwardzone oleje roślinne z orzeszków arachidowych
+        - oleje roślinne z orzeszków arachidowych całkowicie utwardzone
+        - oleje roślinne całkowicie utwardzone z orzeszków arachidowych
+        - całkowicie uwodornione oleje roślinne z orzeszków arachidowych
+        - oleje roślinne z orzeszków arachidowych całkowicie uwodornione
+        - oleje roślinne całkowicie uwodornione z orzeszków arachidowych
+        - w pełni utwardzone oleje roślinne z orzeszków arachidowych
+        - oleje roślinne z orzeszków arachidowych w pełni utwardzone
+        - oleje roślinne w pełni utwardzone z orzeszków arachidowych
+        - w pełni uwodornione oleje roślinne z orzeszków arachidowych
+        - oleje roślinne z orzeszków arachidowych w pełni uwodornione
+        - oleje roślinne w pełni uwodornione z orzeszków arachidowych
+        - tłuszcz roślinny całkowicie utwardzony z orzeszków arachidu
+        - tłuszcz roślinny całkowicie uwodorniony z orzeszków arachidu
+        - w pełni utwardzony tłuszcz roślinny z orzeszków arachidu
+        - tłuszcz roślinny z orzeszków arachidu w pełni utwardzony
+        - tłuszcz roślinny w pełni utwardzony z orzeszków arachidu
+        - w pełni uwodorniony tłuszcz roślinny z orzeszków arachidu
+        - tłuszcz roślinny z orzeszków arachidu w pełni uwodorniony
+        - tłuszcz roślinny w pełni uwodorniony z orzeszków arachidu
+        - całkowicie utwardzone tłuszcze roślinne z orzeszków arachidu
+        - tłuszcze roślinne z orzeszków arachidu całkowicie utwardzone
+        - tłuszcze roślinne całkowicie utwardzone z orzeszków arachidu
+        - całkowicie uwodornione tłuszcze roślinne z orzeszków arachidu
+        - tłuszcze roślinne z orzeszków arachidu całkowicie uwodornione
+        - tłuszcze roślinne całkowicie uwodornione z orzeszków arachidu
+        - w pełni utwardzone tłuszcze roślinne z orzeszków arachidu
+        - tłuszcze roślinne z orzeszków arachidu w pełni utwardzone
+        - tłuszcze roślinne w pełni utwardzone z orzeszków arachidu
+        - w pełni uwodornione tłuszcze roślinne z orzeszków arachidu
+        - tłuszcze roślinne z orzeszków arachidu w pełni uwodornione
+        - tłuszcze roślinne w pełni uwodornione z orzeszków arachidu
+        - olej roślinny całkowicie utwardzony z orzeszków arachidu
+        - olej roślinny całkowicie uwodorniony z orzeszków arachidu
+        - w pełni utwardzony olej roślinny z orzeszków arachidu
+        - olej roślinny z orzeszków arachidu w pełni utwardzony
+        - olej roślinny w pełni utwardzony z orzeszków arachidu
+        - w pełni uwodorniony olej roślinny z orzeszków arachidu
+        - olej roślinny z orzeszków arachidu w pełni uwodorniony
+        - olej roślinny w pełni uwodorniony z orzeszków arachidu
+        - całkowicie utwardzone oleje roślinne z orzeszków arachidu
+        - oleje roślinne z orzeszków arachidu całkowicie utwardzone
+        - oleje roślinne całkowicie utwardzone z orzeszków arachidu
+        - całkowicie uwodornione oleje roślinne z orzeszków arachidu
+        - oleje roślinne z orzeszków arachidu całkowicie uwodornione
+        - oleje roślinne całkowicie uwodornione z orzeszków arachidu
+        - w pełni utwardzone oleje roślinne z orzeszków arachidu
+        - oleje roślinne z orzeszków arachidu w pełni utwardzone
+        - oleje roślinne w pełni utwardzone z orzeszków arachidu
+        - w pełni uwodornione oleje roślinne z orzeszków arachidu
+        - oleje roślinne z orzeszków arachidu w pełni uwodornione
+        - oleje roślinne w pełni uwodornione z orzeszków arachidu
+        - tłuszcz roślinny całkowicie utwardzony z orzechów arachidowych
+        - tłuszcz roślinny całkowicie uwodorniony z orzechów arachidowych
+        - w pełni utwardzony tłuszcz roślinny z orzechów arachidowych
+        - tłuszcz roślinny z orzechów arachidowych w pełni utwardzony
+        - tłuszcz roślinny w pełni utwardzony z orzechów arachidowych
+        - w pełni uwodorniony tłuszcz roślinny z orzechów arachidowych
+        - tłuszcz roślinny z orzechów arachidowych w pełni uwodorniony
+        - tłuszcz roślinny w pełni uwodorniony z orzechów arachidowych
+        - całkowicie utwardzone tłuszcze roślinne z orzechów arachidowych
+        - tłuszcze roślinne z orzechów arachidowych całkowicie utwardzone
+        - tłuszcze roślinne całkowicie utwardzone z orzechów arachidowych
+        - całkowicie uwodornione tłuszcze roślinne z orzechów arachidowych
+        - tłuszcze roślinne z orzechów arachidowych całkowicie uwodornione
+        - tłuszcze roślinne całkowicie uwodornione z orzechów arachidowych
+        - w pełni utwardzone tłuszcze roślinne z orzechów arachidowych
+        - tłuszcze roślinne z orzechów arachidowych w pełni utwardzone
+        - tłuszcze roślinne w pełni utwardzone z orzechów arachidowych
+        - w pełni uwodornione tłuszcze roślinne z orzechów arachidowych
+        - tłuszcze roślinne z orzechów arachidowych w pełni uwodornione
+        - tłuszcze roślinne w pełni uwodornione z orzechów arachidowych
+        - olej roślinny całkowicie utwardzony z orzechów arachidowych
+        - olej roślinny całkowicie uwodorniony z orzechów arachidowych
+        - w pełni utwardzony olej roślinny z orzechów arachidowych
+        - olej roślinny z orzechów arachidowych w pełni utwardzony
+        - olej roślinny w pełni utwardzony z orzechów arachidowych
+        - w pełni uwodorniony olej roślinny z orzechów arachidowych
+        - olej roślinny z orzechów arachidowych w pełni uwodorniony
+        - olej roślinny w pełni uwodorniony z orzechów arachidowych
+        - całkowicie utwardzone oleje roślinne z orzechów arachidowych
+        - oleje roślinne z orzechów arachidowych całkowicie utwardzone
+        - oleje roślinne całkowicie utwardzone z orzechów arachidowych
+        - całkowicie uwodornione oleje roślinne z orzechów arachidowych
+        - oleje roślinne z orzechów arachidowych całkowicie uwodornione
+        - oleje roślinne całkowicie uwodornione z orzechów arachidowych
+        - w pełni utwardzone oleje roślinne z orzechów arachidowych
+        - oleje roślinne z orzechów arachidowych w pełni utwardzone
+        - oleje roślinne w pełni utwardzone z orzechów arachidowych
+        - w pełni uwodornione oleje roślinne z orzechów arachidowych
+        - oleje roślinne z orzechów arachidowych w pełni uwodornione
+        - oleje roślinne w pełni uwodornione z orzechów arachidowych
+        - tłuszcz roślinny całkowicie utwardzony z orzechów ziemnych
+        - tłuszcz roślinny całkowicie uwodorniony z orzechów ziemnych
+        - w pełni utwardzony tłuszcz roślinny z orzechów ziemnych
+        - tłuszcz roślinny z orzechów ziemnych w pełni utwardzony
+        - tłuszcz roślinny w pełni utwardzony z orzechów ziemnych
+        - w pełni uwodorniony tłuszcz roślinny z orzechów ziemnych
+        - tłuszcz roślinny z orzechów ziemnych w pełni uwodorniony
+        - tłuszcz roślinny w pełni uwodorniony z orzechów ziemnych
+        - całkowicie utwardzone tłuszcze roślinne z orzechów ziemnych
+        - tłuszcze roślinne z orzechów ziemnych całkowicie utwardzone
+        - tłuszcze roślinne całkowicie utwardzone z orzechów ziemnych
+        - całkowicie uwodornione tłuszcze roślinne z orzechów ziemnych
+        - tłuszcze roślinne z orzechów ziemnych całkowicie uwodornione
+        - tłuszcze roślinne całkowicie uwodornione z orzechów ziemnych
+        - w pełni utwardzone tłuszcze roślinne z orzechów ziemnych
+        - tłuszcze roślinne z orzechów ziemnych w pełni utwardzone
+        - tłuszcze roślinne w pełni utwardzone z orzechów ziemnych
+        - w pełni uwodornione tłuszcze roślinne z orzechów ziemnych
+        - tłuszcze roślinne z orzechów ziemnych w pełni uwodornione
+        - tłuszcze roślinne w pełni uwodornione z orzechów ziemnych
+        - olej roślinny całkowicie utwardzony z orzechów ziemnych
+        - olej roślinny całkowicie uwodorniony z orzechów ziemnych
+        - w pełni utwardzony olej roślinny z orzechów ziemnych
+        - olej roślinny z orzechów ziemnych w pełni utwardzony
+        - olej roślinny w pełni utwardzony z orzechów ziemnych
+        - w pełni uwodorniony olej roślinny z orzechów ziemnych
+        - olej roślinny z orzechów ziemnych w pełni uwodorniony
+        - olej roślinny w pełni uwodorniony z orzechów ziemnych
+        - całkowicie utwardzone oleje roślinne z orzechów ziemnych
+        - oleje roślinne z orzechów ziemnych całkowicie utwardzone
+        - oleje roślinne całkowicie utwardzone z orzechów ziemnych
+        - całkowicie uwodornione oleje roślinne z orzechów ziemnych
+        - oleje roślinne z orzechów ziemnych całkowicie uwodornione
+        - oleje roślinne całkowicie uwodornione z orzechów ziemnych
+        - w pełni utwardzone oleje roślinne z orzechów ziemnych
+        - oleje roślinne z orzechów ziemnych w pełni utwardzone
+        - oleje roślinne w pełni utwardzone z orzechów ziemnych
+        - w pełni uwodornione oleje roślinne z orzechów ziemnych
+        - oleje roślinne z orzechów ziemnych w pełni uwodornione
+        - oleje roślinne w pełni uwodornione z orzechów ziemnych
+        - całkowicie utwardzony olej roślinny orzechowy arachidowy
+        - całkowicie uwodorniony olej roślinny orzechowy arachidowy
+        - w pełni utwardzony olej roślinny orzechowy arachidowy
+        - w pełni uwodorniony olej roślinny orzechowy arachidowy
+        - całkowicie utwardzony olej roślinny orzechowy z orzeszków ziemnych
+        - całkowicie uwodorniony olej roślinny orzechowy z orzeszków ziemnych
+        - w pełni utwardzony olej roślinny orzechowy z orzeszków ziemnych
+        - w pełni uwodorniony olej roślinny orzechowy z orzeszków ziemnych
+        - całkowicie utwardzony tłuszcz roślinny orzechowy arachidowy
+        - całkowicie uwodorniony tłuszcz roślinny orzechowy arachidowy
+        - w pełni utwardzony tłuszcz roślinny orzechowy arachidowy
+        - w pełni uwodorniony tłuszcz roślinny orzechowy arachidowy
+        - całkowicie utwardzone oleje roślinne orzechowe arachidowe
+        - całkowicie uwodornione oleje roślinne orzechowe arachidowe
+        - w pełni utwardzone oleje roślinne orzechowe arachidowe
+        - w pełni uwodornione oleje roślinne orzechowe arachidowe
+        - całkowicie utwardzone tłuszcze roślinne orzechowe arachidowe
+        - całkowicie uwodornione tłuszcze roślinne orzechowe arachidowe
+        - w pełni utwardzone tłuszcze roślinne orzechowe arachidowe
+        - w pełni uwodornione tłuszcze roślinne orzechowe arachidowe
+        - całkowicie utwardzony tłuszcz roślinny orzechowy z orzeszków ziemnych
+        - całkowicie uwodorniony tłuszcz roślinny orzechowy z orzeszków ziemnych
+        - w pełni utwardzony tłuszcz roślinny orzechowy z orzeszków ziemnych
+        - w pełni uwodorniony tłuszcz roślinny orzechowy z orzeszków ziemnych
+        - całkowicie utwardzone oleje roślinne orzechowe z orzeszków ziemnych
+        - całkowicie uwodornione oleje roślinne orzechowe z orzeszków ziemnych
+        - w pełni utwardzone oleje roślinne orzechowe z orzeszków ziemnych
+        - w pełni uwodornione oleje roślinne orzechowe z orzeszków ziemnych
+        - całkowicie utwardzone tłuszcze roślinne orzechowe z orzeszków ziemnych
+        - całkowicie uwodornione tłuszcze roślinne orzechowe z orzeszków ziemnych
+        - w pełni utwardzone tłuszcze roślinne orzechowe z orzeszków ziemnych
+        - w pełni uwodornione tłuszcze roślinne orzechowe z orzeszków ziemnych
+        - całkowicie utwardzony olej roślinny orzechowy z arachidów
+        - całkowicie uwodorniony olej roślinny orzechowy z arachidów
+        - w pełni utwardzony olej roślinny orzechowy z arachidów
+        - w pełni uwodorniony olej roślinny orzechowy z arachidów
+        - całkowicie utwardzony tłuszcz roślinny orzechowy z arachidów
+        - całkowicie uwodorniony tłuszcz roślinny orzechowy z arachidów
+        - w pełni utwardzony tłuszcz roślinny orzechowy z arachidów
+        - w pełni uwodorniony tłuszcz roślinny orzechowy z arachidów
+        - całkowicie utwardzone oleje roślinne orzechowe z arachidów
+        - całkowicie uwodornione oleje roślinne orzechowe z arachidów
+        - w pełni utwardzone oleje roślinne orzechowe z arachidów
+        - w pełni uwodornione oleje roślinne orzechowe z arachidów
+        - całkowicie utwardzone tłuszcze roślinne orzechowe z arachidów
+        - całkowicie uwodornione tłuszcze roślinne orzechowe z arachidów
+        - w pełni utwardzone tłuszcze roślinne orzechowe z arachidów
+        - w pełni uwodornione tłuszcze roślinne orzechowe z arachidów
+        - całkowicie utwardzony olej roślinny orzechowy z orzeszków arachidowych
+        - całkowicie uwodorniony olej roślinny orzechowy z orzeszków arachidowych
+        - w pełni utwardzony olej roślinny orzechowy z orzeszków arachidowych
+        - w pełni uwodorniony olej roślinny orzechowy z orzeszków arachidowych
+        - całkowicie utwardzony tłuszcz roślinny orzechowy z orzeszków arachidowych
+        - całkowicie uwodorniony tłuszcz roślinny orzechowy z orzeszków arachidowych
+        - w pełni utwardzony tłuszcz roślinny orzechowy z orzeszków arachidowych
+        - w pełni uwodorniony tłuszcz roślinny orzechowy z orzeszków arachidowych
+        - całkowicie utwardzone oleje roślinne orzechowe z orzeszków arachidowych
+        - całkowicie uwodornione oleje roślinne orzechowe z orzeszków arachidowych
+        - w pełni utwardzone oleje roślinne orzechowe z orzeszków arachidowych
+        - w pełni uwodornione oleje roślinne orzechowe z orzeszków arachidowych
+        - całkowicie utwardzone tłuszcze roślinne orzechowe z orzeszków arachidowych
+        - całkowicie uwodornione tłuszcze roślinne orzechowe z orzeszków arachidowych
+        - w pełni utwardzone tłuszcze roślinne orzechowe z orzeszków arachidowych
+        - w pełni uwodornione tłuszcze roślinne orzechowe z orzeszków arachidowych
+        - całkowicie utwardzony olej roślinny orzechowy z orzeszków arachidu
+        - całkowicie uwodorniony olej roślinny orzechowy z orzeszków arachidu
+        - w pełni utwardzony olej roślinny orzechowy z orzeszków arachidu
+        - w pełni uwodorniony olej roślinny orzechowy z orzeszków arachidu
+        - całkowicie utwardzony tłuszcz roślinny orzechowy z orzeszków arachidu
+        - całkowicie uwodorniony tłuszcz roślinny orzechowy z orzeszków arachidu
+        - w pełni utwardzony tłuszcz roślinny orzechowy z orzeszków arachidu
+        - w pełni uwodorniony tłuszcz roślinny orzechowy z orzeszków arachidu
+        - całkowicie utwardzone oleje roślinne orzechowe z orzeszków arachidu
+        - całkowicie uwodornione oleje roślinne orzechowe z orzeszków arachidu
+        - w pełni utwardzone oleje roślinne orzechowe z orzeszków arachidu
+        - w pełni uwodornione oleje roślinne orzechowe z orzeszków arachidu
+        - całkowicie utwardzone tłuszcze roślinne orzechowe z orzeszków arachidu
+        - całkowicie uwodornione tłuszcze roślinne orzechowe z orzeszków arachidu
+        - w pełni utwardzone tłuszcze roślinne orzechowe z orzeszków arachidu
+        - w pełni uwodornione tłuszcze roślinne orzechowe z orzeszków arachidu
+        - całkowicie utwardzony olej roślinny orzechowy z orzechów arachidowych
+        - całkowicie uwodorniony olej roślinny orzechowy z orzechów arachidowych
+        - w pełni utwardzony olej roślinny orzechowy z orzechów arachidowych
+        - w pełni uwodorniony olej roślinny orzechowy z orzechów arachidowych
+        - całkowicie utwardzony tłuszcz roślinny orzechowy z orzechów arachidowych
+        - całkowicie uwodorniony tłuszcz roślinny orzechowy z orzechów arachidowych
+        - w pełni utwardzony tłuszcz roślinny orzechowy z orzechów arachidowych
+        - w pełni uwodorniony tłuszcz roślinny orzechowy z orzechów arachidowych
+        - całkowicie utwardzone oleje roślinne orzechowe z orzechów arachidowych
+        - całkowicie uwodornione oleje roślinne orzechowe z orzechów arachidowych
+        - w pełni utwardzone oleje roślinne orzechowe z orzechów arachidowych
+        - w pełni uwodornione oleje roślinne orzechowe z orzechów arachidowych
+        - całkowicie utwardzone tłuszcze roślinne orzechowe z orzechów arachidowych
+        - całkowicie uwodornione tłuszcze roślinne orzechowe z orzechów arachidowych
+        - w pełni utwardzone tłuszcze roślinne orzechowe z orzechów arachidowych
+        - w pełni uwodornione tłuszcze roślinne orzechowe z orzechów arachidowych
+        - całkowicie utwardzony olej roślinny orzechowy z orzechów ziemnych
+        - całkowicie uwodorniony olej roślinny orzechowy z orzechów ziemnych
+        - w pełni utwardzony olej roślinny orzechowy z orzechów ziemnych
+        - w pełni uwodorniony olej roślinny orzechowy z orzechów ziemnych
+        - całkowicie utwardzony tłuszcz roślinny orzechowy z orzechów ziemnych
+        - całkowicie uwodorniony tłuszcz roślinny orzechowy z orzechów ziemnych
+        - w pełni utwardzony tłuszcz roślinny orzechowy z orzechów ziemnych
+        - w pełni uwodorniony tłuszcz roślinny orzechowy z orzechów ziemnych
+        - całkowicie utwardzone oleje roślinne orzechowe z orzechów ziemnych
+        - całkowicie uwodornione oleje roślinne orzechowe z orzechów ziemnych
+        - w pełni utwardzone oleje roślinne orzechowe z orzechów ziemnych
+        - w pełni uwodornione oleje roślinne orzechowe z orzechów ziemnych
+        - całkowicie utwardzone tłuszcze roślinne orzechowe z orzechów ziemnych
+        - całkowicie uwodornione tłuszcze roślinne orzechowe z orzechów ziemnych
+        - w pełni utwardzone tłuszcze roślinne orzechowe z orzechów ziemnych
+        - w pełni uwodornione tłuszcze roślinne orzechowe z orzechów ziemnych
+        - olej całkowicie uwodorniony arachidowy
+        - olej całkowicie utwardzony arachidowy
+        - olej w pełni uwodorniony arachidowy
+        - olej w pełni utwardzony arachidowy
+        - olej całkowicie uwodorniony z arachidów
+        - olej całkowicie utwardzony z arachidów
+        - olej w pełni uwodorniony z arachidów
+        - olej w pełni utwardzony z arachidów
+        - olej całkowicie uwodorniony z orzechów ziemnych
+        - olej całkowicie utwardzony z orzechów ziemnych
+        - olej w pełni uwodorniony z orzechów ziemnych
+        - olej w pełni utwardzony z orzechów ziemnych
+    process:
+      en: "Peanut oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
+      pl: "Olej arachidowy ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
+    tells:
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )calkowicie (?:utwardzon|uwodorn)'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )w pelni (?:utwardzon|uwodorn)'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )fully hydrogenated'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )totally hydrogenated'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )vollstandig gehartet'
+assertions:
+  - code: origin.vegetable_oil_derived
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A pressed vegetable oil; EU labelling requires its specific plant origin to be named.
+      pl: Wyciskany olej roślinny; przepisy UE o etykietowaniu wymagają podania jego konkretnego pochodzenia rośliny.
+    sources:
+      - id: reg-1169-2011
+        locator: Annex VII Part A, point 8
+  - code: allergen.peanuts
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Product derived from peanuts; EU Annex II item 5, with no exemption for the oil.
+      pl: Produkt z orzeszków ziemnych; Aneks II UE, punkt 5, bez wyłączenia dla oleju.
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 5
+  - code: processing.hydrogenated
+    variant: hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares hydrogenation without specifying partial or full, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje utwardzenie (bez wskazania, czy częściowe, czy całkowite), czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: processing.hydrogenated
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares partial hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje częściowe utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: health.trans_fat_source
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Partial hydrogenation is the main industrial source of trans fat; EU food sold to consumers is capped at 2 g trans fat per 100 g of fat."
+      pl: "Częściowe utwardzanie jest głównym przemysłowym źródłem tłuszczów trans; żywność sprzedawana konsumentom w UE ma limit 2 g tłuszczów trans na 100 g tłuszczu."
+    sources:
+      - id: reg-2019-649
+  - code: processing.hydrogenated
+    variant: fully-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares full hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje całkowite utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Split from the `peanuts` entry in batch b2 (Sol 6.1: an oil is a different food from the whole
+    seed or nut). Identity-only beyond origin and the allergen; no assessment opened.

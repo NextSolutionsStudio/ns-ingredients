@@ -29,3 +29,7 @@ assertions:
         locator: 'Art. 18 and Annex VII: the ingredient as declared by its name'
 review_status: draft
 provenance: ai-drafted
+review_notes:
+  - >-
+    origin.*: NO CODE FITS — cultivated mushrooms (Agaricus bisporus) are fungi, not plants or algae
+    (origin.plant) and not industrial microbial fermentation products (origin.microbial_fermentation).

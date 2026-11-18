@@ -15,6 +15,27 @@ functions:
 summary:
   en: 'The sodium salt of ascorbic acid (vitamin C), used as an antioxidant, for example in cured meats.'
   pl: 'Sól sodowa kwasu askorbinowego (witaminy C), stosowana jako przeciwutleniacz, np. w peklowanych wędlinach.'
+assertions:
+  - code: origin.microbial_fermentation
+    certainty: maybe
+    kind: estimate
+    grade: B
+    note:
+      en: >-
+        E 301 is the monosodium salt of L-ascorbic acid (Reg (EU) No 231/2012 E 301). Parent L-ascorbic acid
+        is manufactured industrially via the Reichstein process (six chemical steps and one microbial
+        fermentation step from D-glucose/sorbitol) or via two-step bacterial fermentation routes (Wang et al.
+        2021), so a label cannot show which route or degree of fermentation was used.
+      pl: >-
+        E 301 to sól monosodowa kwasu L-askorbinowego (Rozp. (UE) nr 231/2012 E 301). Wyjściowy kwas
+        L-askorbinowy wytwarza się przemysłowo metodą Reichsteina (sześć etapów chemicznych i jeden etap
+        fermentacji mikrobiologicznej z D-glukozy/sorbitolu) lub w dwuetapowych procesach fermentacji
+        bakteryjnej (Wang i in. 2021), więc etykieta nie wskazuje użytej metody ani udziału fermentacji.
+    sources:
+      - id: reg-231-2012
+        locator: "E 301"
+      - id: wang-2021-vitamins-pmc8247775
+        locator: "Water-Soluble Vitamins - Vitamin C & Figure 2"
 regulatory:
   - jurisdiction: EU
     status: authorised
@@ -30,6 +51,6 @@ review_status: draft
 provenance: ai-drafted
 review_notes:
   - >-
-    Identity-only: EFSA's 2015 re-evaluation of E 300–302 was not opened this session (Wiley 403, not in
-    Europe PMC). See kb/ingredients/ascorbic-acid.yaml for the parent acid's production-route claims, which
-    were not copied here without a source that covers the salt.
+    EFSA 2015 opinion (doi:10.2903/j.efsa.2015.4087) returned a Wiley cookie wall and could not be opened;
+    left out origin.chemical_synthesis and kept origin.microbial_fermentation: maybe aligned with parent
+    ascorbic-acid.

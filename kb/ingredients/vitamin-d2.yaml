@@ -78,3 +78,8 @@ review_notes:
   - >-
     Separate molecule from vitamin-d3.yaml (cholecalciferol); created so "witamina D2" no longer
     fuzzy-matches vitamin-d3.
+  - >-
+    origin.*: NO CODE FITS — ergocalciferol is made by UV-B photochemical conversion of fungal or yeast
+    ergosterol (e.g. mushrooms or Saccharomyces cerevisiae yeast, pmc8701098-vitd2-yeast / pmc-vitd2-2026);
+    fungi are not origin.plant and a photochemical UV irradiation step sits outside pure
+    origin.microbial_fermentation.

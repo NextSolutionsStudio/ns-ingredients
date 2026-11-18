@@ -1,0 +1,376 @@
+id: nut-oil
+type: fat
+names:
+  en:
+    - nut oil
+    - non-hydrogenated nut oil
+    - unhydrogenated nut oil
+    - not hydrogenated nut oil
+    - not partially hydrogenated nut oil
+    - not fully hydrogenated nut oil
+    - non partially hydrogenated nut oil
+    - hydrogenated nut oil
+    - partially hydrogenated nut oil
+    - fully hydrogenated nut oil
+    - totally hydrogenated nut oil
+  pl:
+    - olej orzechowy
+    - olej roślinny orzechowy
+    - tłuszcz roślinny orzechowy
+    - oleje roślinne orzechowe
+    - orzechowy olej roślinny
+    - tłuszcze roślinne orzechowe
+    - oleje orzechowe
+    - tłuszcz orzechowy
+    - tłuszcze orzechowe
+    - nie utwardzony olej orzechowy
+    - olej orzechowy nie utwardzony
+    - nie uwodorniony olej orzechowy
+    - olej orzechowy nie uwodorniony
+    - nieutwardzony olej orzechowy
+    - olej orzechowy nieutwardzony
+    - nieuwodorniony olej orzechowy
+    - olej orzechowy nieuwodorniony
+    - nie utwardzony olej roślinny orzechowy
+    - olej roślinny orzechowy nie utwardzony
+    - nie uwodorniony olej roślinny orzechowy
+    - olej roślinny orzechowy nie uwodorniony
+    - nieutwardzony olej roślinny orzechowy
+    - olej roślinny orzechowy nieutwardzony
+    - nieuwodorniony olej roślinny orzechowy
+    - olej roślinny orzechowy nieuwodorniony
+    - nie utwardzony tłuszcz roślinny orzechowy
+    - tłuszcz roślinny orzechowy nie utwardzony
+    - nie uwodorniony tłuszcz roślinny orzechowy
+    - tłuszcz roślinny orzechowy nie uwodorniony
+    - nieutwardzony tłuszcz roślinny orzechowy
+    - tłuszcz roślinny orzechowy nieutwardzony
+    - nieuwodorniony tłuszcz roślinny orzechowy
+    - tłuszcz roślinny orzechowy nieuwodorniony
+    - nie utwardzone oleje roślinne orzechowe
+    - oleje roślinne orzechowe nie utwardzone
+    - nie uwodornione oleje roślinne orzechowe
+    - oleje roślinne orzechowe nie uwodornione
+    - nieutwardzone oleje roślinne orzechowe
+    - oleje roślinne orzechowe nieutwardzone
+    - nieuwodornione oleje roślinne orzechowe
+    - oleje roślinne orzechowe nieuwodornione
+    - nie utwardzone tłuszcze roślinne orzechowe
+    - tłuszcze roślinne orzechowe nie utwardzone
+    - nie uwodornione tłuszcze roślinne orzechowe
+    - tłuszcze roślinne orzechowe nie uwodornione
+    - nieutwardzone tłuszcze roślinne orzechowe
+    - tłuszcze roślinne orzechowe nieutwardzone
+    - nieuwodornione tłuszcze roślinne orzechowe
+    - tłuszcze roślinne orzechowe nieuwodornione
+    - nie utwardzone oleje orzechowe
+    - oleje orzechowe nie utwardzone
+    - nie uwodornione oleje orzechowe
+    - oleje orzechowe nie uwodornione
+    - nieutwardzone oleje orzechowe
+    - oleje orzechowe nieutwardzone
+    - nieuwodornione oleje orzechowe
+    - oleje orzechowe nieuwodornione
+    - nie utwardzony tłuszcz orzechowy
+    - tłuszcz orzechowy nie utwardzony
+    - nie uwodorniony tłuszcz orzechowy
+    - tłuszcz orzechowy nie uwodorniony
+    - nieutwardzony tłuszcz orzechowy
+    - tłuszcz orzechowy nieutwardzony
+    - nieuwodorniony tłuszcz orzechowy
+    - tłuszcz orzechowy nieuwodorniony
+    - nie utwardzone tłuszcze orzechowe
+    - tłuszcze orzechowe nie utwardzone
+    - nie uwodornione tłuszcze orzechowe
+    - tłuszcze orzechowe nie uwodornione
+    - nieutwardzone tłuszcze orzechowe
+    - tłuszcze orzechowe nieutwardzone
+    - nieuwodornione tłuszcze orzechowe
+    - tłuszcze orzechowe nieuwodornione
+    - utwardzony olej orzechowy
+    - olej orzechowy utwardzony
+    - uwodorniony olej orzechowy
+    - olej orzechowy uwodorniony
+    - częściowo utwardzony olej orzechowy
+    - olej orzechowy częściowo utwardzony
+    - częściowo uwodorniony olej orzechowy
+    - olej orzechowy częściowo uwodorniony
+    - całkowicie utwardzony olej orzechowy
+    - olej orzechowy całkowicie utwardzony
+    - całkowicie uwodorniony olej orzechowy
+    - olej orzechowy całkowicie uwodorniony
+    - w pełni utwardzony olej orzechowy
+    - olej orzechowy w pełni utwardzony
+    - w pełni uwodorniony olej orzechowy
+    - olej orzechowy w pełni uwodorniony
+    - utwardzony olej roślinny orzechowy
+    - olej roślinny orzechowy utwardzony
+    - uwodorniony olej roślinny orzechowy
+    - olej roślinny orzechowy uwodorniony
+    - częściowo utwardzony olej roślinny orzechowy
+    - olej roślinny orzechowy częściowo utwardzony
+    - częściowo uwodorniony olej roślinny orzechowy
+    - olej roślinny orzechowy częściowo uwodorniony
+    - całkowicie utwardzony olej roślinny orzechowy
+    - olej roślinny orzechowy całkowicie utwardzony
+    - całkowicie uwodorniony olej roślinny orzechowy
+    - olej roślinny orzechowy całkowicie uwodorniony
+    - w pełni utwardzony olej roślinny orzechowy
+    - olej roślinny orzechowy w pełni utwardzony
+    - w pełni uwodorniony olej roślinny orzechowy
+    - olej roślinny orzechowy w pełni uwodorniony
+    - utwardzony tłuszcz roślinny orzechowy
+    - tłuszcz roślinny orzechowy utwardzony
+    - uwodorniony tłuszcz roślinny orzechowy
+    - tłuszcz roślinny orzechowy uwodorniony
+    - częściowo utwardzony tłuszcz roślinny orzechowy
+    - tłuszcz roślinny orzechowy częściowo utwardzony
+    - częściowo uwodorniony tłuszcz roślinny orzechowy
+    - tłuszcz roślinny orzechowy częściowo uwodorniony
+    - całkowicie utwardzony tłuszcz roślinny orzechowy
+    - tłuszcz roślinny orzechowy całkowicie utwardzony
+    - całkowicie uwodorniony tłuszcz roślinny orzechowy
+    - tłuszcz roślinny orzechowy całkowicie uwodorniony
+    - w pełni utwardzony tłuszcz roślinny orzechowy
+    - tłuszcz roślinny orzechowy w pełni utwardzony
+    - w pełni uwodorniony tłuszcz roślinny orzechowy
+    - tłuszcz roślinny orzechowy w pełni uwodorniony
+    - utwardzone oleje roślinne orzechowe
+    - oleje roślinne orzechowe utwardzone
+    - uwodornione oleje roślinne orzechowe
+    - oleje roślinne orzechowe uwodornione
+    - częściowo utwardzone oleje roślinne orzechowe
+    - oleje roślinne orzechowe częściowo utwardzone
+    - częściowo uwodornione oleje roślinne orzechowe
+    - oleje roślinne orzechowe częściowo uwodornione
+    - całkowicie utwardzone oleje roślinne orzechowe
+    - oleje roślinne orzechowe całkowicie utwardzone
+    - całkowicie uwodornione oleje roślinne orzechowe
+    - oleje roślinne orzechowe całkowicie uwodornione
+    - w pełni utwardzone oleje roślinne orzechowe
+    - oleje roślinne orzechowe w pełni utwardzone
+    - w pełni uwodornione oleje roślinne orzechowe
+    - oleje roślinne orzechowe w pełni uwodornione
+    - utwardzone tłuszcze roślinne orzechowe
+    - tłuszcze roślinne orzechowe utwardzone
+    - uwodornione tłuszcze roślinne orzechowe
+    - tłuszcze roślinne orzechowe uwodornione
+    - częściowo utwardzone tłuszcze roślinne orzechowe
+    - tłuszcze roślinne orzechowe częściowo utwardzone
+    - częściowo uwodornione tłuszcze roślinne orzechowe
+    - tłuszcze roślinne orzechowe częściowo uwodornione
+    - całkowicie utwardzone tłuszcze roślinne orzechowe
+    - tłuszcze roślinne orzechowe całkowicie utwardzone
+    - całkowicie uwodornione tłuszcze roślinne orzechowe
+    - tłuszcze roślinne orzechowe całkowicie uwodornione
+    - w pełni utwardzone tłuszcze roślinne orzechowe
+    - tłuszcze roślinne orzechowe w pełni utwardzone
+    - w pełni uwodornione tłuszcze roślinne orzechowe
+    - tłuszcze roślinne orzechowe w pełni uwodornione
+    - utwardzone oleje orzechowe
+    - oleje orzechowe utwardzone
+    - uwodornione oleje orzechowe
+    - oleje orzechowe uwodornione
+    - częściowo utwardzone oleje orzechowe
+    - oleje orzechowe częściowo utwardzone
+    - częściowo uwodornione oleje orzechowe
+    - oleje orzechowe częściowo uwodornione
+    - całkowicie utwardzone oleje orzechowe
+    - oleje orzechowe całkowicie utwardzone
+    - całkowicie uwodornione oleje orzechowe
+    - oleje orzechowe całkowicie uwodornione
+    - w pełni utwardzone oleje orzechowe
+    - oleje orzechowe w pełni utwardzone
+    - w pełni uwodornione oleje orzechowe
+    - oleje orzechowe w pełni uwodornione
+    - utwardzony tłuszcz orzechowy
+    - tłuszcz orzechowy utwardzony
+    - uwodorniony tłuszcz orzechowy
+    - tłuszcz orzechowy uwodorniony
+    - częściowo utwardzony tłuszcz orzechowy
+    - tłuszcz orzechowy częściowo utwardzony
+    - częściowo uwodorniony tłuszcz orzechowy
+    - tłuszcz orzechowy częściowo uwodorniony
+    - całkowicie utwardzony tłuszcz orzechowy
+    - tłuszcz orzechowy całkowicie utwardzony
+    - całkowicie uwodorniony tłuszcz orzechowy
+    - tłuszcz orzechowy całkowicie uwodorniony
+    - w pełni utwardzony tłuszcz orzechowy
+    - tłuszcz orzechowy w pełni utwardzony
+    - w pełni uwodorniony tłuszcz orzechowy
+    - tłuszcz orzechowy w pełni uwodorniony
+    - utwardzone tłuszcze orzechowe
+    - tłuszcze orzechowe utwardzone
+    - uwodornione tłuszcze orzechowe
+    - tłuszcze orzechowe uwodornione
+    - częściowo utwardzone tłuszcze orzechowe
+    - tłuszcze orzechowe częściowo utwardzone
+    - częściowo uwodornione tłuszcze orzechowe
+    - tłuszcze orzechowe częściowo uwodornione
+    - całkowicie utwardzone tłuszcze orzechowe
+    - tłuszcze orzechowe całkowicie utwardzone
+    - całkowicie uwodornione tłuszcze orzechowe
+    - tłuszcze orzechowe całkowicie uwodornione
+    - w pełni utwardzone tłuszcze orzechowe
+    - tłuszcze orzechowe w pełni utwardzone
+    - w pełni uwodornione tłuszcze orzechowe
+    - tłuszcze orzechowe w pełni uwodornione
+    - orzechowy olej roślinny nieutwardzony
+    - orzechowy olej roślinny nieuwodorniony
+    - orzechowy olej roślinny utwardzony
+    - orzechowy olej roślinny uwodorniony
+  de:
+    - Nussöl
+summary:
+  en: >-
+    A label term for oil from nuts that does not name the nut. In Polish, "olej orzechowy" is used both for
+    peanut oil and for oil from tree nuts such as walnuts, so the name alone does not show which Annex II
+    allergen applies.
+  pl: >-
+    Określenie z etykiety oznaczające olej z orzechów bez wskazania, z jakich. Po polsku "olej orzechowy" bywa
+    nazwą oleju arachidowego i oleju z orzechów (np. włoskich), więc sama nazwa nie pokazuje, który alergen z
+    Aneksu II UE dotyczy produktu.
+variants:
+  - id: source-not-named
+    process:
+      en: "A nut oil whose label names no nut: peanut or a tree nut are both possible. A named nut outside Annex II (pine nut, coconut) is not this variant."
+      pl: "Olej orzechowy, którego etykieta nie podaje orzecha: możliwe są zarówno orzeszki ziemne, jak i orzechy. Orzech spoza Aneksu II (piniowy, kokosowy) to nie ten wariant."
+    tells: ['^(?!.*(?:piniow|\bpinii|cedrow|\bpine\b|\bcedar\b|pinien|zirbel|zeder|kokos|kasztan|tygrys|\bshea\b|coconut|chestnut|tiger ?nut|kastanie|erdmandel|migdal\w* ziemn|earth almond|\bchufa|\bcibor|tigernus|\bcyperus|\bpinus|\bcocos\b|\bpinon|\bpignol|muszkat|nutmeg|muskat|\bkola\b|hickory|\bcarya\b|\bjuglans\b|\bcorylus\b|\bpistacia\b|\banacardium\b|\bpili\b|canarium|kukui|candlenut|aleurites|baobab|argan|moringa|sacha inchi|plukenetia|marula|sclerocarya|mongongo|babassu|ginkgo|areca|\bbetel|beech ?nut|bukiew|\bbukow|bucheckern|eichel|zoladz|zoledz|acorn|butternut|heartnut))(?!.*(?:orzech\w* (?:wlosk|lasko|nerkow|brazylij|pekan|makadami|queensland)|\bmigdal(?!\w* ziemn)|\bpistacj|\bmakadami|\bpekan|\bnerkow|\blaskow|\bwlosk|\bbrazylij|\bwalnut|\bhazelnut|\bfilbert|(?<!earth )\balmond|\bcashew|\bpistachio|\bmacadamia|\bpecan|\bbrazil nut|\bqueensland|\bmandel|haselnus|walnus|paranus|pistazi|\bcobnut|juglans regia|corylus avellana|\bamygdal|prunus dulcis|anacardium occidentale|carya illino|\bbertholletia|pistacia vera))(?!.*(?:orzeszk\w* ziemn|orzech\w* ziemn|(?<!migdal\w* )\bziemn(?:e|ych|y|a|ymi)\b|\barachid|\barachis|\bpeanut|\bground ?nut|\bmonkey ?nut|fistaszk|erdnus)).+']
+  - id: tree-nut-named
+    process:
+      en: "A nut oil whose label names a tree nut as its source (in the name or in brackets)."
+      pl: "Olej orzechowy, którego etykieta podaje orzech jako źródło (w nazwie lub w nawiasie)."
+    tells: ['(?:orzech\w* (?:wlosk|lasko|nerkow|brazylij|pekan|makadami|queensland)|\bmigdal(?!\w* ziemn)|\bpistacj|\bmakadami|\bpekan|\bnerkow|\blaskow|\bwlosk|\bbrazylij|\bwalnut|\bhazelnut|\bfilbert|(?<!earth )\balmond|\bcashew|\bpistachio|\bmacadamia|\bpecan|\bbrazil nut|\bqueensland|\bmandel|haselnus|walnus|paranus|pistazi|\bcobnut|juglans regia|corylus avellana|\bamygdal|prunus dulcis|anacardium occidentale|carya illino|\bbertholletia|pistacia vera)']
+  - id: peanut-named
+    process:
+      en: "A nut oil whose label names peanuts as its source (in the name or in brackets)."
+      pl: "Olej orzechowy, którego etykieta podaje orzeszki ziemne jako źródło (w nazwie lub w nawiasie)."
+    tells: ['(?:orzeszk\w* ziemn|orzech\w* ziemn|(?<!migdal\w* )\bziemn(?:e|ych|y|a|ymi)\b|\barachid|\barachis|\bpeanut|\bground ?nut|\bmonkey ?nut|fistaszk|erdnus)']
+  - id: hydrogenated
+    process:
+      en: "Nut oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
+      pl: "Olej orzechowy utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
+    tells:
+      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!partially )(?<!fully )(?<!totally )(?<!teilweise )(?<!vollstandig )(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:utwardzon|uwodornion|utwardzan[yea]\b|uwodornian[yea]\b|hydrogenated|gehartet)|(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:po|podda\w*|podlega\w*)(?: (?!(?:nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b)\S+){0,3}? (?:uwodornieni|uwodornian|utwardzeni|utwardzan)'
+  - id: partially-hydrogenated
+    process:
+      en: "Nut oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
+      pl: "Olej orzechowy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
+    tells:
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )czesciowo (?:utwardzon|uwodorn)'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )partially hydrogenated'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )teilweise gehartet'
+  - id: fully-hydrogenated
+    process:
+      en: "Nut oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
+      pl: "Olej orzechowy ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
+    tells:
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )calkowicie (?:utwardzon|uwodorn)'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )w pelni (?:utwardzon|uwodorn)'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )fully hydrogenated'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )totally hydrogenated'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )vollstandig gehartet'
+assertions:
+  - code: origin.vegetable_oil_derived
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A pressed vegetable oil; EU labelling requires its specific plant origin to be named.
+      pl: Wyciskany olej roślinny; przepisy UE o etykietowaniu wymagają podania jego konkretnego pochodzenia rośliny.
+    sources:
+      - id: reg-1169-2011
+        locator: Annex VII Part A, point 8
+  - code: processing.hydrogenated
+    variant: hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares hydrogenation without specifying partial or full, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje utwardzenie (bez wskazania, czy częściowe, czy całkowite), czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: processing.hydrogenated
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares partial hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje częściowe utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: health.trans_fat_source
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Partial hydrogenation is the main industrial source of trans fat; EU food sold to consumers is capped at 2 g trans fat per 100 g of fat."
+      pl: "Częściowe utwardzanie jest głównym przemysłowym źródłem tłuszczów trans; żywność sprzedawana konsumentom w UE ma limit 2 g tłuszczów trans na 100 g tłuszczu."
+    sources:
+      - id: reg-2019-649
+  - code: processing.hydrogenated
+    variant: fully-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares full hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje całkowite utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: allergen.peanuts
+    variant: source-not-named
+    certainty: maybe
+    kind: estimate
+    grade: C
+    note:
+      en: "'Olej orzechowy' ('nut oil') does not say which nut: it may be peanut oil or a tree-nut oil, so peanut is possible but not shown (Annex II item 5)."
+      pl: "'Olej orzechowy' nie mówi, z jakich orzechów: może to być olej arachidowy albo olej z orzechów, więc orzeszki ziemne są możliwe, ale nie wykazane (Aneks II, punkt 5)."
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 5
+  - code: allergen.nuts
+    variant: source-not-named
+    certainty: maybe
+    kind: estimate
+    grade: C
+    note:
+      en: "The same name is used for walnut and other tree-nut oils, so a tree nut is possible but not shown (Annex II item 8)."
+      pl: "Ta sama nazwa bywa używana dla oleju z orzechów włoskich i innych orzechów, więc orzechy są możliwe, ale nie wykazane (Aneks II, punkt 8)."
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 8
+  - code: allergen.nuts
+    variant: tree-nut-named
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label names a tree nut as the oil's source; EU Annex II item 8."
+      pl: "Etykieta podaje orzech jako źródło oleju; Aneks II UE, punkt 8."
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 8
+  - code: allergen.peanuts
+    variant: peanut-named
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label names peanuts as the oil's source; EU Annex II item 5."
+      pl: "Etykieta podaje orzeszki ziemne jako źródło oleju; Aneks II UE, punkt 5."
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 5
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Added in batch b2 after Sol 6.1 showed that 'olej orzechowy' on walnut-oil hid a possible peanut allergen.
+    Both allergens are maybe because the label term does not name the nut.

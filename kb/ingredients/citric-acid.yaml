@@ -32,9 +32,19 @@ assertions:
     kind: estimate
     grade: B
     note:
-      en: "Aspergillus niger fermentation of a sugar feedstock (molasses, glucose syrup or sucrose) is described as the dominant industrial route, essentially since 1919; fruit extraction is not commercially significant. A label cannot show this either way, hence 'estimate' rather than a declared fact."
-      pl: "Fermentacja Aspergillus niger surowca cukrowego (melasy, syropu glukozowego lub sacharozy) jest opisywana jako dominująca metoda przemysłowa, praktycznie od 1919 r.; ekstrakcja z owoców nie ma istotnego znaczenia handlowego. Etykieta tego nie wskazuje, stąd „szacunek”, a nie zadeklarowany fakt."
-    sources: [{ id: col-latif-2025-citric-acid }]
+      en: "Reg (EU) No 231/2012 defines E 330 as produced from lemon or pineapple juice or by fermentation of carbohydrate solutions using Candida spp. or non-toxicogenic Aspergillus niger; the 2025 peer-reviewed review reports that commercial supply has long come almost entirely from Aspergillus niger fermentation rather than fruit extraction."
+      pl: "Rozporządzenie (UE) nr 231/2012 definiuje E 330 jako wytwarzany z soku z cytryny lub ananasa albo przez fermentację roztworów węglowodanów przy użyciu Candida spp. lub nietoksykogennych szczepów Aspergillus niger; przegląd z 2025 r. wskazuje, że podaż handlowa od dawna pochodzi niemal wyłącznie z fermentacji Aspergillus niger, a nie z ekstrakcji z owoców."
+    sources:
+      - { id: reg-231-2012, locator: "E 330 (Definition)" }
+      - { id: col-latif-2025-citric-acid }
+  - code: origin.plant
+    certainty: maybe
+    kind: fact
+    grade: A
+    note:
+      en: "Reg (EU) No 231/2012 permits production from lemon or pineapple juice, although fruit extraction represents a negligible share of commercial supply compared with microbial fermentation."
+      pl: "Rozporządzenie (UE) nr 231/2012 dopuszcza wytwarzanie z soku z cytryny lub ananasa, choć ekstrakcja z owoców stanowi znikomy ułamek podaży handlowej względem fermentacji mikrobiologicznej."
+    sources: [{ id: reg-231-2012, locator: "E 330 (Definition)" }]
   - code: health.sensitivity_reported
     certainty: maybe
     kind: opinion
@@ -52,4 +62,4 @@ regulatory:
 review_status: draft
 provenance: ai-drafted
 review_notes:
-  - "The specific EU/JECFA specification text for E330 manufacture (Reg 231/2012) was not successfully opened this session (page too large to reach the E330 entry); the fermentation-route claim is sourced to a 2025 peer-reviewed review instead, hence grade B/estimate rather than grade A/fact."
+  - "Reg (EU) No 231/2012 E 330 Definition opened in sources-pack/reg-231-2012-specs.txt; microbial fermentation kept as estimate (grade B) because Reg 231/2012 also lists lemon/pineapple juice."

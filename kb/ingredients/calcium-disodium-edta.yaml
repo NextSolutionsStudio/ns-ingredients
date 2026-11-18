@@ -35,3 +35,6 @@ review_notes:
   - >-
     Identity-only: no assessment opened. The food-category list in the summary is general knowledge, not
     checked against Annex II; drop it if a reviewer prefers.
+  - >-
+    origin.chemical_synthesis omitted: the JECFA monograph URL returned HTTP 404 and Reg (EU) No 231/2012
+    E 385 specifies identity and purity only without stating a synthesis route.

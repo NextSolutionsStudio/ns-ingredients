@@ -1,0 +1,708 @@
+id: wheat-germ-oil
+type: fat
+parent: wheat
+names:
+  en:
+    - wheat germ oil
+    - wheatgerm oil
+    - non-hydrogenated wheat germ oil
+    - unhydrogenated wheat germ oil
+    - non-hydrogenated wheatgerm oil
+    - unhydrogenated wheatgerm oil
+    - not hydrogenated wheat germ oil
+    - not partially hydrogenated wheat germ oil
+    - not fully hydrogenated wheat germ oil
+    - non partially hydrogenated wheat germ oil
+    - not hydrogenated wheatgerm oil
+    - not partially hydrogenated wheatgerm oil
+    - not fully hydrogenated wheatgerm oil
+    - non partially hydrogenated wheatgerm oil
+    - vegetable oil from wheat germ
+    - non-hydrogenated vegetable oil from wheat germ
+    - not hydrogenated vegetable oil from wheat germ
+    - unhydrogenated vegetable oil from wheat germ
+    - vegetable fat from wheat germ
+    - non-hydrogenated vegetable fat from wheat germ
+    - not hydrogenated vegetable fat from wheat germ
+    - unhydrogenated vegetable fat from wheat germ
+    - vegetable oils from wheat germ
+    - non-hydrogenated vegetable oils from wheat germ
+    - not hydrogenated vegetable oils from wheat germ
+    - unhydrogenated vegetable oils from wheat germ
+    - vegetable fats from wheat germ
+    - non-hydrogenated vegetable fats from wheat germ
+    - not hydrogenated vegetable fats from wheat germ
+    - unhydrogenated vegetable fats from wheat germ
+  pl:
+    - olej z kiełków pszenicy
+    - olej z zarodków pszenicy
+    - olej roślinny z kiełków pszenicy
+    - olej roślinny z zarodków pszenicy
+    - tłuszcz roślinny z kiełków pszenicy
+    - oleje roślinne z kiełków pszenicy
+    - tłuszcze roślinne z kiełków pszenicy
+    - tłuszcz roślinny z zarodków pszenicy
+    - oleje roślinne z zarodków pszenicy
+    - tłuszcze roślinne z zarodków pszenicy
+    - nie utwardzony olej z kiełków pszenicy
+    - olej z kiełków pszenicy nie utwardzony
+    - nie uwodorniony olej z kiełków pszenicy
+    - olej z kiełków pszenicy nie uwodorniony
+    - nie utwardzony olej z zarodków pszenicy
+    - olej z zarodków pszenicy nie utwardzony
+    - nie uwodorniony olej z zarodków pszenicy
+    - olej z zarodków pszenicy nie uwodorniony
+    - nieutwardzony olej z kiełków pszenicy
+    - olej z kiełków pszenicy nieutwardzony
+    - nieuwodorniony olej z kiełków pszenicy
+    - olej z kiełków pszenicy nieuwodorniony
+    - nieutwardzony olej z zarodków pszenicy
+    - olej z zarodków pszenicy nieutwardzony
+    - nieuwodorniony olej z zarodków pszenicy
+    - olej z zarodków pszenicy nieuwodorniony
+    - nieutwardzony olej roślinny z kiełków pszenicy
+    - olej roślinny z kiełków pszenicy nieutwardzony
+    - nieuwodorniony olej roślinny z kiełków pszenicy
+    - olej roślinny z kiełków pszenicy nieuwodorniony
+    - nieutwardzony olej roślinny z zarodków pszenicy
+    - olej roślinny z zarodków pszenicy nieutwardzony
+    - nieuwodorniony olej roślinny z zarodków pszenicy
+    - olej roślinny z zarodków pszenicy nieuwodorniony
+    - nieutwardzony tłuszcz roślinny z kiełków pszenicy
+    - tłuszcz roślinny z kiełków pszenicy nieutwardzony
+    - nieuwodorniony tłuszcz roślinny z kiełków pszenicy
+    - tłuszcz roślinny z kiełków pszenicy nieuwodorniony
+    - nieutwardzony tłuszcz roślinny z zarodków pszenicy
+    - tłuszcz roślinny z zarodków pszenicy nieutwardzony
+    - nieuwodorniony tłuszcz roślinny z zarodków pszenicy
+    - tłuszcz roślinny z zarodków pszenicy nieuwodorniony
+    - olej z zarodków pszennych
+    - tłuszcz roślinny z zarodków pszennych
+    - tłuszcze roślinne z zarodków pszennych
+    - olej roślinny z zarodków pszennych
+    - oleje roślinne z zarodków pszennych
+    - nie utwardzony olej z zarodków pszennych
+    - olej z zarodków pszennych nie utwardzony
+    - nie uwodorniony olej z zarodków pszennych
+    - olej z zarodków pszennych nie uwodorniony
+    - nieutwardzony olej z zarodków pszennych
+    - olej z zarodków pszennych nieutwardzony
+    - nieuwodorniony olej z zarodków pszennych
+    - olej z zarodków pszennych nieuwodorniony
+    - nieutwardzony tłuszcz roślinny z zarodków pszennych
+    - tłuszcz roślinny z zarodków pszennych nieutwardzony
+    - nieuwodorniony tłuszcz roślinny z zarodków pszennych
+    - tłuszcz roślinny z zarodków pszennych nieuwodorniony
+    - nieutwardzony olej roślinny z zarodków pszennych
+    - olej roślinny z zarodków pszennych nieutwardzony
+    - nieuwodorniony olej roślinny z zarodków pszennych
+    - olej roślinny z zarodków pszennych nieuwodorniony
+    - nie utwardzony olej roślinny z kiełków pszenicy
+    - nie uwodorniony olej roślinny z kiełków pszenicy
+    - nie utwardzony olej roślinny z zarodków pszenicy
+    - nie uwodorniony olej roślinny z zarodków pszenicy
+    - nie utwardzony tłuszcz roślinny z kiełków pszenicy
+    - nie uwodorniony tłuszcz roślinny z kiełków pszenicy
+    - nie utwardzony tłuszcz roślinny z zarodków pszenicy
+    - nie uwodorniony tłuszcz roślinny z zarodków pszenicy
+    - nie utwardzony tłuszcz roślinny z zarodków pszennych
+    - nie uwodorniony tłuszcz roślinny z zarodków pszennych
+    - nie utwardzony olej roślinny z zarodków pszennych
+    - nie uwodorniony olej roślinny z zarodków pszennych
+    - olej roślinny z kiełków pszenicy nie utwardzony
+    - olej roślinny nie utwardzony z kiełków pszenicy
+    - olej roślinny z kiełków pszenicy nie uwodorniony
+    - olej roślinny nie uwodorniony z kiełków pszenicy
+    - olej roślinny nieutwardzony z kiełków pszenicy
+    - olej roślinny nieuwodorniony z kiełków pszenicy
+    - olej roślinny z zarodków pszenicy nie utwardzony
+    - olej roślinny nie utwardzony z zarodków pszenicy
+    - olej roślinny z zarodków pszenicy nie uwodorniony
+    - olej roślinny nie uwodorniony z zarodków pszenicy
+    - olej roślinny nieutwardzony z zarodków pszenicy
+    - olej roślinny nieuwodorniony z zarodków pszenicy
+    - tłuszcz roślinny z kiełków pszenicy nie utwardzony
+    - tłuszcz roślinny nie utwardzony z kiełków pszenicy
+    - tłuszcz roślinny z kiełków pszenicy nie uwodorniony
+    - tłuszcz roślinny nie uwodorniony z kiełków pszenicy
+    - tłuszcz roślinny nieutwardzony z kiełków pszenicy
+    - tłuszcz roślinny nieuwodorniony z kiełków pszenicy
+    - nie utwardzone oleje roślinne z kiełków pszenicy
+    - oleje roślinne z kiełków pszenicy nie utwardzone
+    - oleje roślinne nie utwardzone z kiełków pszenicy
+    - nie uwodornione oleje roślinne z kiełków pszenicy
+    - oleje roślinne z kiełków pszenicy nie uwodornione
+    - oleje roślinne nie uwodornione z kiełków pszenicy
+    - nieutwardzone oleje roślinne z kiełków pszenicy
+    - oleje roślinne z kiełków pszenicy nieutwardzone
+    - oleje roślinne nieutwardzone z kiełków pszenicy
+    - nieuwodornione oleje roślinne z kiełków pszenicy
+    - oleje roślinne z kiełków pszenicy nieuwodornione
+    - oleje roślinne nieuwodornione z kiełków pszenicy
+    - nie utwardzone tłuszcze roślinne z kiełków pszenicy
+    - tłuszcze roślinne z kiełków pszenicy nie utwardzone
+    - tłuszcze roślinne nie utwardzone z kiełków pszenicy
+    - nie uwodornione tłuszcze roślinne z kiełków pszenicy
+    - tłuszcze roślinne z kiełków pszenicy nie uwodornione
+    - tłuszcze roślinne nie uwodornione z kiełków pszenicy
+    - nieutwardzone tłuszcze roślinne z kiełków pszenicy
+    - tłuszcze roślinne z kiełków pszenicy nieutwardzone
+    - tłuszcze roślinne nieutwardzone z kiełków pszenicy
+    - nieuwodornione tłuszcze roślinne z kiełków pszenicy
+    - tłuszcze roślinne z kiełków pszenicy nieuwodornione
+    - tłuszcze roślinne nieuwodornione z kiełków pszenicy
+    - tłuszcz roślinny z zarodków pszenicy nie utwardzony
+    - tłuszcz roślinny nie utwardzony z zarodków pszenicy
+    - tłuszcz roślinny z zarodków pszenicy nie uwodorniony
+    - tłuszcz roślinny nie uwodorniony z zarodków pszenicy
+    - tłuszcz roślinny nieutwardzony z zarodków pszenicy
+    - tłuszcz roślinny nieuwodorniony z zarodków pszenicy
+    - nie utwardzone oleje roślinne z zarodków pszenicy
+    - oleje roślinne z zarodków pszenicy nie utwardzone
+    - oleje roślinne nie utwardzone z zarodków pszenicy
+    - nie uwodornione oleje roślinne z zarodków pszenicy
+    - oleje roślinne z zarodków pszenicy nie uwodornione
+    - oleje roślinne nie uwodornione z zarodków pszenicy
+    - nieutwardzone oleje roślinne z zarodków pszenicy
+    - oleje roślinne z zarodków pszenicy nieutwardzone
+    - oleje roślinne nieutwardzone z zarodków pszenicy
+    - nieuwodornione oleje roślinne z zarodków pszenicy
+    - oleje roślinne z zarodków pszenicy nieuwodornione
+    - oleje roślinne nieuwodornione z zarodków pszenicy
+    - nie utwardzone tłuszcze roślinne z zarodków pszenicy
+    - tłuszcze roślinne z zarodków pszenicy nie utwardzone
+    - tłuszcze roślinne nie utwardzone z zarodków pszenicy
+    - nie uwodornione tłuszcze roślinne z zarodków pszenicy
+    - tłuszcze roślinne z zarodków pszenicy nie uwodornione
+    - tłuszcze roślinne nie uwodornione z zarodków pszenicy
+    - nieutwardzone tłuszcze roślinne z zarodków pszenicy
+    - tłuszcze roślinne z zarodków pszenicy nieutwardzone
+    - tłuszcze roślinne nieutwardzone z zarodków pszenicy
+    - nieuwodornione tłuszcze roślinne z zarodków pszenicy
+    - tłuszcze roślinne z zarodków pszenicy nieuwodornione
+    - tłuszcze roślinne nieuwodornione z zarodków pszenicy
+    - tłuszcz roślinny z zarodków pszennych nie utwardzony
+    - tłuszcz roślinny nie utwardzony z zarodków pszennych
+    - tłuszcz roślinny z zarodków pszennych nie uwodorniony
+    - tłuszcz roślinny nie uwodorniony z zarodków pszennych
+    - tłuszcz roślinny nieutwardzony z zarodków pszennych
+    - tłuszcz roślinny nieuwodorniony z zarodków pszennych
+    - nie utwardzone tłuszcze roślinne z zarodków pszennych
+    - tłuszcze roślinne z zarodków pszennych nie utwardzone
+    - tłuszcze roślinne nie utwardzone z zarodków pszennych
+    - nie uwodornione tłuszcze roślinne z zarodków pszennych
+    - tłuszcze roślinne z zarodków pszennych nie uwodornione
+    - tłuszcze roślinne nie uwodornione z zarodków pszennych
+    - nieutwardzone tłuszcze roślinne z zarodków pszennych
+    - tłuszcze roślinne z zarodków pszennych nieutwardzone
+    - tłuszcze roślinne nieutwardzone z zarodków pszennych
+    - nieuwodornione tłuszcze roślinne z zarodków pszennych
+    - tłuszcze roślinne z zarodków pszennych nieuwodornione
+    - tłuszcze roślinne nieuwodornione z zarodków pszennych
+    - olej roślinny z zarodków pszennych nie utwardzony
+    - olej roślinny nie utwardzony z zarodków pszennych
+    - olej roślinny z zarodków pszennych nie uwodorniony
+    - olej roślinny nie uwodorniony z zarodków pszennych
+    - olej roślinny nieutwardzony z zarodków pszennych
+    - olej roślinny nieuwodorniony z zarodków pszennych
+    - nie utwardzone oleje roślinne z zarodków pszennych
+    - oleje roślinne z zarodków pszennych nie utwardzone
+    - oleje roślinne nie utwardzone z zarodków pszennych
+    - nie uwodornione oleje roślinne z zarodków pszennych
+    - oleje roślinne z zarodków pszennych nie uwodornione
+    - oleje roślinne nie uwodornione z zarodków pszennych
+    - nieutwardzone oleje roślinne z zarodków pszennych
+    - oleje roślinne z zarodków pszennych nieutwardzone
+    - oleje roślinne nieutwardzone z zarodków pszennych
+    - nieuwodornione oleje roślinne z zarodków pszennych
+    - oleje roślinne z zarodków pszennych nieuwodornione
+    - oleje roślinne nieuwodornione z zarodków pszennych
+  de:
+    - Weizenkeimöl
+summary:
+  en: >-
+    Vegetable oil pressed or extracted from wheat germ. As a product derived from wheat, it falls under EU
+    Annex II item 1 (cereals containing gluten); the item's exemptions do not include wheat germ oil.
+  pl: >-
+    Olej roślinny tłoczony lub ekstrahowany z kiełków pszenicy. Jako produkt z pszenicy podlega punktowi 1
+    Aneksu II UE (zboża zawierające gluten); wyłączenia z tego punktu nie obejmują oleju z kiełków pszenicy.
+variants:
+  - id: hydrogenated
+    names:
+      en:
+        - hydrogenated wheat germ oil
+        - hydrogenated wheatgerm oil
+        - hydrogenated vegetable oil from wheat germ
+        - hydrogenated vegetable fat from wheat germ
+        - hydrogenated vegetable oils from wheat germ
+        - hydrogenated vegetable fats from wheat germ
+      pl:
+        - utwardzony olej z kiełków pszenicy
+        - olej z kiełków pszenicy utwardzony
+        - uwodorniony olej z kiełków pszenicy
+        - olej z kiełków pszenicy uwodorniony
+        - utwardzony olej z zarodków pszenicy
+        - olej z zarodków pszenicy utwardzony
+        - uwodorniony olej z zarodków pszenicy
+        - olej z zarodków pszenicy uwodorniony
+        - utwardzony olej roślinny z kiełków pszenicy
+        - olej roślinny z kiełków pszenicy utwardzony
+        - uwodorniony olej roślinny z kiełków pszenicy
+        - olej roślinny z kiełków pszenicy uwodorniony
+        - utwardzony olej roślinny z zarodków pszenicy
+        - olej roślinny z zarodków pszenicy utwardzony
+        - uwodorniony olej roślinny z zarodków pszenicy
+        - olej roślinny z zarodków pszenicy uwodorniony
+        - utwardzony tłuszcz roślinny z kiełków pszenicy
+        - tłuszcz roślinny z kiełków pszenicy utwardzony
+        - uwodorniony tłuszcz roślinny z kiełków pszenicy
+        - tłuszcz roślinny z kiełków pszenicy uwodorniony
+        - utwardzony tłuszcz roślinny z zarodków pszenicy
+        - tłuszcz roślinny z zarodków pszenicy utwardzony
+        - uwodorniony tłuszcz roślinny z zarodków pszenicy
+        - tłuszcz roślinny z zarodków pszenicy uwodorniony
+        - utwardzony olej z zarodków pszennych
+        - olej z zarodków pszennych utwardzony
+        - uwodorniony olej z zarodków pszennych
+        - olej z zarodków pszennych uwodorniony
+        - utwardzony tłuszcz roślinny z zarodków pszennych
+        - tłuszcz roślinny z zarodków pszennych utwardzony
+        - uwodorniony tłuszcz roślinny z zarodków pszennych
+        - tłuszcz roślinny z zarodków pszennych uwodorniony
+        - utwardzony olej roślinny z zarodków pszennych
+        - olej roślinny z zarodków pszennych utwardzony
+        - uwodorniony olej roślinny z zarodków pszennych
+        - olej roślinny z zarodków pszennych uwodorniony
+        - olej roślinny utwardzony z kiełków pszenicy
+        - olej roślinny uwodorniony z kiełków pszenicy
+        - olej roślinny utwardzony z zarodków pszenicy
+        - olej roślinny uwodorniony z zarodków pszenicy
+        - tłuszcz roślinny utwardzony z kiełków pszenicy
+        - tłuszcz roślinny uwodorniony z kiełków pszenicy
+        - utwardzone oleje roślinne z kiełków pszenicy
+        - oleje roślinne z kiełków pszenicy utwardzone
+        - oleje roślinne utwardzone z kiełków pszenicy
+        - uwodornione oleje roślinne z kiełków pszenicy
+        - oleje roślinne z kiełków pszenicy uwodornione
+        - oleje roślinne uwodornione z kiełków pszenicy
+        - utwardzone tłuszcze roślinne z kiełków pszenicy
+        - tłuszcze roślinne z kiełków pszenicy utwardzone
+        - tłuszcze roślinne utwardzone z kiełków pszenicy
+        - uwodornione tłuszcze roślinne z kiełków pszenicy
+        - tłuszcze roślinne z kiełków pszenicy uwodornione
+        - tłuszcze roślinne uwodornione z kiełków pszenicy
+        - tłuszcz roślinny utwardzony z zarodków pszenicy
+        - tłuszcz roślinny uwodorniony z zarodków pszenicy
+        - utwardzone oleje roślinne z zarodków pszenicy
+        - oleje roślinne z zarodków pszenicy utwardzone
+        - oleje roślinne utwardzone z zarodków pszenicy
+        - uwodornione oleje roślinne z zarodków pszenicy
+        - oleje roślinne z zarodków pszenicy uwodornione
+        - oleje roślinne uwodornione z zarodków pszenicy
+        - utwardzone tłuszcze roślinne z zarodków pszenicy
+        - tłuszcze roślinne z zarodków pszenicy utwardzone
+        - tłuszcze roślinne utwardzone z zarodków pszenicy
+        - uwodornione tłuszcze roślinne z zarodków pszenicy
+        - tłuszcze roślinne z zarodków pszenicy uwodornione
+        - tłuszcze roślinne uwodornione z zarodków pszenicy
+        - tłuszcz roślinny utwardzony z zarodków pszennych
+        - tłuszcz roślinny uwodorniony z zarodków pszennych
+        - utwardzone tłuszcze roślinne z zarodków pszennych
+        - tłuszcze roślinne z zarodków pszennych utwardzone
+        - tłuszcze roślinne utwardzone z zarodków pszennych
+        - uwodornione tłuszcze roślinne z zarodków pszennych
+        - tłuszcze roślinne z zarodków pszennych uwodornione
+        - tłuszcze roślinne uwodornione z zarodków pszennych
+        - olej roślinny utwardzony z zarodków pszennych
+        - olej roślinny uwodorniony z zarodków pszennych
+        - utwardzone oleje roślinne z zarodków pszennych
+        - oleje roślinne z zarodków pszennych utwardzone
+        - oleje roślinne utwardzone z zarodków pszennych
+        - uwodornione oleje roślinne z zarodków pszennych
+        - oleje roślinne z zarodków pszennych uwodornione
+        - oleje roślinne uwodornione z zarodków pszennych
+        - olej uwodorniony z kiełków pszenicy
+        - olej utwardzony z kiełków pszenicy
+        - olej uwodorniony z zarodków pszenicy
+        - olej utwardzony z zarodków pszenicy
+    process:
+      en: "Wheat germ oil hardened by hydrogenation; the label does not specify partial or full hydrogenation."
+      pl: "Olej z kiełków pszenicy utwardzony przez uwodornienie; etykieta nie precyzuje, czy utwardzenie jest częściowe czy całkowite."
+    tells:
+      - '(?<!czesciowo )(?<!calkowicie )(?<!w pelni )(?<!partially )(?<!fully )(?<!totally )(?<!teilweise )(?<!vollstandig )(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:utwardzon|uwodornion|utwardzan[yea]\b|uwodornian[yea]\b|hydrogenated|gehartet)|(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )\b(?:po|podda\w*|podlega\w*)(?: (?!(?:nie|ani|bez|brak|woln\w*|not|no|without|ohne|nicht|free)\b)\S+){0,3}? (?:uwodornieni|uwodornian|utwardzeni|utwardzan)'
+  - id: partially-hydrogenated
+    names:
+      en:
+        - partially hydrogenated wheat germ oil
+        - partially hydrogenated wheatgerm oil
+        - partially hydrogenated vegetable oil from wheat germ
+        - partially hydrogenated vegetable fat from wheat germ
+        - partially hydrogenated vegetable oils from wheat germ
+        - partially hydrogenated vegetable fats from wheat germ
+      pl:
+        - częściowo utwardzony olej z kiełków pszenicy
+        - olej z kiełków pszenicy częściowo utwardzony
+        - częściowo uwodorniony olej z kiełków pszenicy
+        - olej z kiełków pszenicy częściowo uwodorniony
+        - częściowo utwardzony olej z zarodków pszenicy
+        - olej z zarodków pszenicy częściowo utwardzony
+        - częściowo uwodorniony olej z zarodków pszenicy
+        - olej z zarodków pszenicy częściowo uwodorniony
+        - częściowo utwardzony olej roślinny z kiełków pszenicy
+        - olej roślinny z kiełków pszenicy częściowo utwardzony
+        - częściowo uwodorniony olej roślinny z kiełków pszenicy
+        - olej roślinny z kiełków pszenicy częściowo uwodorniony
+        - częściowo utwardzony olej roślinny z zarodków pszenicy
+        - olej roślinny z zarodków pszenicy częściowo utwardzony
+        - częściowo uwodorniony olej roślinny z zarodków pszenicy
+        - olej roślinny z zarodków pszenicy częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny z kiełków pszenicy
+        - tłuszcz roślinny z kiełków pszenicy częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny z kiełków pszenicy
+        - tłuszcz roślinny z kiełków pszenicy częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny z zarodków pszenicy
+        - tłuszcz roślinny z zarodków pszenicy częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny z zarodków pszenicy
+        - tłuszcz roślinny z zarodków pszenicy częściowo uwodorniony
+        - częściowo utwardzony olej z zarodków pszennych
+        - olej z zarodków pszennych częściowo utwardzony
+        - częściowo uwodorniony olej z zarodków pszennych
+        - olej z zarodków pszennych częściowo uwodorniony
+        - częściowo utwardzony tłuszcz roślinny z zarodków pszennych
+        - tłuszcz roślinny z zarodków pszennych częściowo utwardzony
+        - częściowo uwodorniony tłuszcz roślinny z zarodków pszennych
+        - tłuszcz roślinny z zarodków pszennych częściowo uwodorniony
+        - częściowo utwardzony olej roślinny z zarodków pszennych
+        - olej roślinny z zarodków pszennych częściowo utwardzony
+        - częściowo uwodorniony olej roślinny z zarodków pszennych
+        - olej roślinny z zarodków pszennych częściowo uwodorniony
+        - olej roślinny częściowo utwardzony z kiełków pszenicy
+        - olej roślinny częściowo uwodorniony z kiełków pszenicy
+        - olej roślinny częściowo utwardzony z zarodków pszenicy
+        - olej roślinny częściowo uwodorniony z zarodków pszenicy
+        - tłuszcz roślinny częściowo utwardzony z kiełków pszenicy
+        - tłuszcz roślinny częściowo uwodorniony z kiełków pszenicy
+        - częściowo utwardzone oleje roślinne z kiełków pszenicy
+        - oleje roślinne z kiełków pszenicy częściowo utwardzone
+        - oleje roślinne częściowo utwardzone z kiełków pszenicy
+        - częściowo uwodornione oleje roślinne z kiełków pszenicy
+        - oleje roślinne z kiełków pszenicy częściowo uwodornione
+        - oleje roślinne częściowo uwodornione z kiełków pszenicy
+        - częściowo utwardzone tłuszcze roślinne z kiełków pszenicy
+        - tłuszcze roślinne z kiełków pszenicy częściowo utwardzone
+        - tłuszcze roślinne częściowo utwardzone z kiełków pszenicy
+        - częściowo uwodornione tłuszcze roślinne z kiełków pszenicy
+        - tłuszcze roślinne z kiełków pszenicy częściowo uwodornione
+        - tłuszcze roślinne częściowo uwodornione z kiełków pszenicy
+        - tłuszcz roślinny częściowo utwardzony z zarodków pszenicy
+        - tłuszcz roślinny częściowo uwodorniony z zarodków pszenicy
+        - częściowo utwardzone oleje roślinne z zarodków pszenicy
+        - oleje roślinne z zarodków pszenicy częściowo utwardzone
+        - oleje roślinne częściowo utwardzone z zarodków pszenicy
+        - częściowo uwodornione oleje roślinne z zarodków pszenicy
+        - oleje roślinne z zarodków pszenicy częściowo uwodornione
+        - oleje roślinne częściowo uwodornione z zarodków pszenicy
+        - częściowo utwardzone tłuszcze roślinne z zarodków pszenicy
+        - tłuszcze roślinne z zarodków pszenicy częściowo utwardzone
+        - tłuszcze roślinne częściowo utwardzone z zarodków pszenicy
+        - częściowo uwodornione tłuszcze roślinne z zarodków pszenicy
+        - tłuszcze roślinne z zarodków pszenicy częściowo uwodornione
+        - tłuszcze roślinne częściowo uwodornione z zarodków pszenicy
+        - tłuszcz roślinny częściowo utwardzony z zarodków pszennych
+        - tłuszcz roślinny częściowo uwodorniony z zarodków pszennych
+        - częściowo utwardzone tłuszcze roślinne z zarodków pszennych
+        - tłuszcze roślinne z zarodków pszennych częściowo utwardzone
+        - tłuszcze roślinne częściowo utwardzone z zarodków pszennych
+        - częściowo uwodornione tłuszcze roślinne z zarodków pszennych
+        - tłuszcze roślinne z zarodków pszennych częściowo uwodornione
+        - tłuszcze roślinne częściowo uwodornione z zarodków pszennych
+        - olej roślinny częściowo utwardzony z zarodków pszennych
+        - olej roślinny częściowo uwodorniony z zarodków pszennych
+        - częściowo utwardzone oleje roślinne z zarodków pszennych
+        - oleje roślinne z zarodków pszennych częściowo utwardzone
+        - oleje roślinne częściowo utwardzone z zarodków pszennych
+        - częściowo uwodornione oleje roślinne z zarodków pszennych
+        - oleje roślinne z zarodków pszennych częściowo uwodornione
+        - oleje roślinne częściowo uwodornione z zarodków pszennych
+        - olej częściowo uwodorniony z kiełków pszenicy
+        - olej częściowo utwardzony z kiełków pszenicy
+        - olej częściowo uwodorniony z zarodków pszenicy
+        - olej częściowo utwardzony z zarodków pszenicy
+    process:
+      en: "Wheat germ oil in which some, not all, double bonds have been hydrogenated, which forms industrial trans fatty acids."
+      pl: "Olej z kiełków pszenicy, w którym utwardzono część, nie wszystkie, wiązania podwójne, co tworzy przemysłowe kwasy tłuszczowe trans."
+    tells:
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )czesciowo (?:utwardzon|uwodorn)'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )partially hydrogenated'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )teilweise gehartet'
+  - id: fully-hydrogenated
+    names:
+      en:
+        - fully hydrogenated wheat germ oil
+        - totally hydrogenated wheat germ oil
+        - fully hydrogenated wheatgerm oil
+        - totally hydrogenated wheatgerm oil
+        - fully hydrogenated vegetable oil from wheat germ
+        - totally hydrogenated vegetable oil from wheat germ
+        - fully hydrogenated vegetable fat from wheat germ
+        - totally hydrogenated vegetable fat from wheat germ
+        - fully hydrogenated vegetable oils from wheat germ
+        - totally hydrogenated vegetable oils from wheat germ
+        - fully hydrogenated vegetable fats from wheat germ
+        - totally hydrogenated vegetable fats from wheat germ
+      pl:
+        - całkowicie utwardzony olej z kiełków pszenicy
+        - olej z kiełków pszenicy całkowicie utwardzony
+        - całkowicie uwodorniony olej z kiełków pszenicy
+        - olej z kiełków pszenicy całkowicie uwodorniony
+        - w pełni utwardzony olej z kiełków pszenicy
+        - olej z kiełków pszenicy w pełni utwardzony
+        - w pełni uwodorniony olej z kiełków pszenicy
+        - olej z kiełków pszenicy w pełni uwodorniony
+        - całkowicie utwardzony olej z zarodków pszenicy
+        - olej z zarodków pszenicy całkowicie utwardzony
+        - całkowicie uwodorniony olej z zarodków pszenicy
+        - olej z zarodków pszenicy całkowicie uwodorniony
+        - w pełni utwardzony olej z zarodków pszenicy
+        - olej z zarodków pszenicy w pełni utwardzony
+        - w pełni uwodorniony olej z zarodków pszenicy
+        - olej z zarodków pszenicy w pełni uwodorniony
+        - całkowicie utwardzony olej roślinny z kiełków pszenicy
+        - olej roślinny z kiełków pszenicy całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny z kiełków pszenicy
+        - olej roślinny z kiełków pszenicy całkowicie uwodorniony
+        - całkowicie utwardzony olej roślinny z zarodków pszenicy
+        - olej roślinny z zarodków pszenicy całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny z zarodków pszenicy
+        - olej roślinny z zarodków pszenicy całkowicie uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny z kiełków pszenicy
+        - tłuszcz roślinny z kiełków pszenicy całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny z kiełków pszenicy
+        - tłuszcz roślinny z kiełków pszenicy całkowicie uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny z zarodków pszenicy
+        - tłuszcz roślinny z zarodków pszenicy całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny z zarodków pszenicy
+        - tłuszcz roślinny z zarodków pszenicy całkowicie uwodorniony
+        - całkowicie utwardzony olej z zarodków pszennych
+        - olej z zarodków pszennych całkowicie utwardzony
+        - całkowicie uwodorniony olej z zarodków pszennych
+        - olej z zarodków pszennych całkowicie uwodorniony
+        - w pełni utwardzony olej z zarodków pszennych
+        - olej z zarodków pszennych w pełni utwardzony
+        - w pełni uwodorniony olej z zarodków pszennych
+        - olej z zarodków pszennych w pełni uwodorniony
+        - całkowicie utwardzony tłuszcz roślinny z zarodków pszennych
+        - tłuszcz roślinny z zarodków pszennych całkowicie utwardzony
+        - całkowicie uwodorniony tłuszcz roślinny z zarodków pszennych
+        - tłuszcz roślinny z zarodków pszennych całkowicie uwodorniony
+        - całkowicie utwardzony olej roślinny z zarodków pszennych
+        - olej roślinny z zarodków pszennych całkowicie utwardzony
+        - całkowicie uwodorniony olej roślinny z zarodków pszennych
+        - olej roślinny z zarodków pszennych całkowicie uwodorniony
+        - olej roślinny całkowicie utwardzony z kiełków pszenicy
+        - olej roślinny całkowicie uwodorniony z kiełków pszenicy
+        - w pełni utwardzony olej roślinny z kiełków pszenicy
+        - olej roślinny z kiełków pszenicy w pełni utwardzony
+        - olej roślinny w pełni utwardzony z kiełków pszenicy
+        - w pełni uwodorniony olej roślinny z kiełków pszenicy
+        - olej roślinny z kiełków pszenicy w pełni uwodorniony
+        - olej roślinny w pełni uwodorniony z kiełków pszenicy
+        - olej roślinny całkowicie utwardzony z zarodków pszenicy
+        - olej roślinny całkowicie uwodorniony z zarodków pszenicy
+        - w pełni utwardzony olej roślinny z zarodków pszenicy
+        - olej roślinny z zarodków pszenicy w pełni utwardzony
+        - olej roślinny w pełni utwardzony z zarodków pszenicy
+        - w pełni uwodorniony olej roślinny z zarodków pszenicy
+        - olej roślinny z zarodków pszenicy w pełni uwodorniony
+        - olej roślinny w pełni uwodorniony z zarodków pszenicy
+        - tłuszcz roślinny całkowicie utwardzony z kiełków pszenicy
+        - tłuszcz roślinny całkowicie uwodorniony z kiełków pszenicy
+        - w pełni utwardzony tłuszcz roślinny z kiełków pszenicy
+        - tłuszcz roślinny z kiełków pszenicy w pełni utwardzony
+        - tłuszcz roślinny w pełni utwardzony z kiełków pszenicy
+        - w pełni uwodorniony tłuszcz roślinny z kiełków pszenicy
+        - tłuszcz roślinny z kiełków pszenicy w pełni uwodorniony
+        - tłuszcz roślinny w pełni uwodorniony z kiełków pszenicy
+        - całkowicie utwardzone oleje roślinne z kiełków pszenicy
+        - oleje roślinne z kiełków pszenicy całkowicie utwardzone
+        - oleje roślinne całkowicie utwardzone z kiełków pszenicy
+        - całkowicie uwodornione oleje roślinne z kiełków pszenicy
+        - oleje roślinne z kiełków pszenicy całkowicie uwodornione
+        - oleje roślinne całkowicie uwodornione z kiełków pszenicy
+        - w pełni utwardzone oleje roślinne z kiełków pszenicy
+        - oleje roślinne z kiełków pszenicy w pełni utwardzone
+        - oleje roślinne w pełni utwardzone z kiełków pszenicy
+        - w pełni uwodornione oleje roślinne z kiełków pszenicy
+        - oleje roślinne z kiełków pszenicy w pełni uwodornione
+        - oleje roślinne w pełni uwodornione z kiełków pszenicy
+        - całkowicie utwardzone tłuszcze roślinne z kiełków pszenicy
+        - tłuszcze roślinne z kiełków pszenicy całkowicie utwardzone
+        - tłuszcze roślinne całkowicie utwardzone z kiełków pszenicy
+        - całkowicie uwodornione tłuszcze roślinne z kiełków pszenicy
+        - tłuszcze roślinne z kiełków pszenicy całkowicie uwodornione
+        - tłuszcze roślinne całkowicie uwodornione z kiełków pszenicy
+        - w pełni utwardzone tłuszcze roślinne z kiełków pszenicy
+        - tłuszcze roślinne z kiełków pszenicy w pełni utwardzone
+        - tłuszcze roślinne w pełni utwardzone z kiełków pszenicy
+        - w pełni uwodornione tłuszcze roślinne z kiełków pszenicy
+        - tłuszcze roślinne z kiełków pszenicy w pełni uwodornione
+        - tłuszcze roślinne w pełni uwodornione z kiełków pszenicy
+        - tłuszcz roślinny całkowicie utwardzony z zarodków pszenicy
+        - tłuszcz roślinny całkowicie uwodorniony z zarodków pszenicy
+        - w pełni utwardzony tłuszcz roślinny z zarodków pszenicy
+        - tłuszcz roślinny z zarodków pszenicy w pełni utwardzony
+        - tłuszcz roślinny w pełni utwardzony z zarodków pszenicy
+        - w pełni uwodorniony tłuszcz roślinny z zarodków pszenicy
+        - tłuszcz roślinny z zarodków pszenicy w pełni uwodorniony
+        - tłuszcz roślinny w pełni uwodorniony z zarodków pszenicy
+        - całkowicie utwardzone oleje roślinne z zarodków pszenicy
+        - oleje roślinne z zarodków pszenicy całkowicie utwardzone
+        - oleje roślinne całkowicie utwardzone z zarodków pszenicy
+        - całkowicie uwodornione oleje roślinne z zarodków pszenicy
+        - oleje roślinne z zarodków pszenicy całkowicie uwodornione
+        - oleje roślinne całkowicie uwodornione z zarodków pszenicy
+        - w pełni utwardzone oleje roślinne z zarodków pszenicy
+        - oleje roślinne z zarodków pszenicy w pełni utwardzone
+        - oleje roślinne w pełni utwardzone z zarodków pszenicy
+        - w pełni uwodornione oleje roślinne z zarodków pszenicy
+        - oleje roślinne z zarodków pszenicy w pełni uwodornione
+        - oleje roślinne w pełni uwodornione z zarodków pszenicy
+        - całkowicie utwardzone tłuszcze roślinne z zarodków pszenicy
+        - tłuszcze roślinne z zarodków pszenicy całkowicie utwardzone
+        - tłuszcze roślinne całkowicie utwardzone z zarodków pszenicy
+        - całkowicie uwodornione tłuszcze roślinne z zarodków pszenicy
+        - tłuszcze roślinne z zarodków pszenicy całkowicie uwodornione
+        - tłuszcze roślinne całkowicie uwodornione z zarodków pszenicy
+        - w pełni utwardzone tłuszcze roślinne z zarodków pszenicy
+        - tłuszcze roślinne z zarodków pszenicy w pełni utwardzone
+        - tłuszcze roślinne w pełni utwardzone z zarodków pszenicy
+        - w pełni uwodornione tłuszcze roślinne z zarodków pszenicy
+        - tłuszcze roślinne z zarodków pszenicy w pełni uwodornione
+        - tłuszcze roślinne w pełni uwodornione z zarodków pszenicy
+        - tłuszcz roślinny całkowicie utwardzony z zarodków pszennych
+        - tłuszcz roślinny całkowicie uwodorniony z zarodków pszennych
+        - w pełni utwardzony tłuszcz roślinny z zarodków pszennych
+        - tłuszcz roślinny z zarodków pszennych w pełni utwardzony
+        - tłuszcz roślinny w pełni utwardzony z zarodków pszennych
+        - w pełni uwodorniony tłuszcz roślinny z zarodków pszennych
+        - tłuszcz roślinny z zarodków pszennych w pełni uwodorniony
+        - tłuszcz roślinny w pełni uwodorniony z zarodków pszennych
+        - całkowicie utwardzone tłuszcze roślinne z zarodków pszennych
+        - tłuszcze roślinne z zarodków pszennych całkowicie utwardzone
+        - tłuszcze roślinne całkowicie utwardzone z zarodków pszennych
+        - całkowicie uwodornione tłuszcze roślinne z zarodków pszennych
+        - tłuszcze roślinne z zarodków pszennych całkowicie uwodornione
+        - tłuszcze roślinne całkowicie uwodornione z zarodków pszennych
+        - w pełni utwardzone tłuszcze roślinne z zarodków pszennych
+        - tłuszcze roślinne z zarodków pszennych w pełni utwardzone
+        - tłuszcze roślinne w pełni utwardzone z zarodków pszennych
+        - w pełni uwodornione tłuszcze roślinne z zarodków pszennych
+        - tłuszcze roślinne z zarodków pszennych w pełni uwodornione
+        - tłuszcze roślinne w pełni uwodornione z zarodków pszennych
+        - olej roślinny całkowicie utwardzony z zarodków pszennych
+        - olej roślinny całkowicie uwodorniony z zarodków pszennych
+        - w pełni utwardzony olej roślinny z zarodków pszennych
+        - olej roślinny z zarodków pszennych w pełni utwardzony
+        - olej roślinny w pełni utwardzony z zarodków pszennych
+        - w pełni uwodorniony olej roślinny z zarodków pszennych
+        - olej roślinny z zarodków pszennych w pełni uwodorniony
+        - olej roślinny w pełni uwodorniony z zarodków pszennych
+        - całkowicie utwardzone oleje roślinne z zarodków pszennych
+        - oleje roślinne z zarodków pszennych całkowicie utwardzone
+        - oleje roślinne całkowicie utwardzone z zarodków pszennych
+        - całkowicie uwodornione oleje roślinne z zarodków pszennych
+        - oleje roślinne z zarodków pszennych całkowicie uwodornione
+        - oleje roślinne całkowicie uwodornione z zarodków pszennych
+        - w pełni utwardzone oleje roślinne z zarodków pszennych
+        - oleje roślinne z zarodków pszennych w pełni utwardzone
+        - oleje roślinne w pełni utwardzone z zarodków pszennych
+        - w pełni uwodornione oleje roślinne z zarodków pszennych
+        - oleje roślinne z zarodków pszennych w pełni uwodornione
+        - oleje roślinne w pełni uwodornione z zarodków pszennych
+        - olej całkowicie uwodorniony z kiełków pszenicy
+        - olej całkowicie utwardzony z kiełków pszenicy
+        - olej w pełni uwodorniony z kiełków pszenicy
+        - olej w pełni utwardzony z kiełków pszenicy
+        - olej całkowicie uwodorniony z zarodków pszenicy
+        - olej całkowicie utwardzony z zarodków pszenicy
+        - olej w pełni uwodorniony z zarodków pszenicy
+        - olej w pełni utwardzony z zarodków pszenicy
+    process:
+      en: "Wheat germ oil with all double bonds hydrogenated: fully saturated, with essentially no trans fat."
+      pl: "Olej z kiełków pszenicy ze wszystkimi wiązaniami podwójnymi utwardzonymi: w pełni nasycony, praktycznie bez tłuszczów trans."
+    tells:
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )calkowicie (?:utwardzon|uwodorn)'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )w pelni (?:utwardzon|uwodorn)'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )fully hydrogenated'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )totally hydrogenated'
+      - '(?<!\b(?:niepodda\w*|niepodleg\w*|nie|ani|bez|brak|woln\w*|not|no|non|zero|without|ohne|nicht|free)\b(?! (?:z |ze |od )?(?:gmo|gm|genetycz\w*|modyfik\w*)\b)(?: \S+)* )(?<!\bnon )vollstandig gehartet'
+assertions:
+  - code: origin.vegetable_oil_derived
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: A pressed vegetable oil; EU labelling requires its specific plant origin to be named.
+      pl: Wyciskany olej roślinny; przepisy UE o etykietowaniu wymagają podania jego konkretnego pochodzenia rośliny.
+    sources:
+      - id: reg-1169-2011
+        locator: Annex VII Part A, point 8
+  - code: allergen.gluten
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: Product derived from wheat; EU Annex II item 1, whose exemptions (glucose syrups, maltodextrins, distillates) do not cover the oil.
+      pl: Produkt z pszenicy; Aneks II UE, punkt 1, którego wyłączenia (syropy glukozowe, maltodekstryny, destylaty) nie obejmują oleju.
+    sources:
+      - id: reg-1169-2011
+        locator: Annex II item 1
+  - code: processing.hydrogenated
+    variant: hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares hydrogenation without specifying partial or full, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje utwardzenie (bez wskazania, czy częściowe, czy całkowite), czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: processing.hydrogenated
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares partial hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje częściowe utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+  - code: health.trans_fat_source
+    variant: partially-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "Partial hydrogenation is the main industrial source of trans fat; EU food sold to consumers is capped at 2 g trans fat per 100 g of fat."
+      pl: "Częściowe utwardzanie jest głównym przemysłowym źródłem tłuszczów trans; żywność sprzedawana konsumentom w UE ma limit 2 g tłuszczów trans na 100 g tłuszczu."
+    sources:
+      - id: reg-2019-649
+  - code: processing.hydrogenated
+    variant: fully-hydrogenated
+    certainty: 'yes'
+    kind: fact
+    grade: A
+    note:
+      en: "The label declares full hydrogenation, as EU law requires for a hydrogenated oil or fat."
+      pl: "Etykieta deklaruje całkowite utwardzenie, czego prawo UE wymaga dla utwardzonego oleju lub tłuszczu."
+    sources:
+      - id: reg-1169-2011
+        locator: "Annex VII Part A, points 8 and 9"
+review_status: draft
+provenance: ai-drafted
+review_notes:
+  - >-
+    Added in batch b2: without it the generic 'olej roślinny' took 'olej roślinny z kiełków pszenicy' and the
+    gluten allergen was lost (Grok 4.7 P3). Identity-only beyond origin and the allergen.

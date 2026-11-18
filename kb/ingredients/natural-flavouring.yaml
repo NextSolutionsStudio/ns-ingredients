@@ -31,7 +31,7 @@ summary:
 assertions:
   - code: diet.vegan
     certainty: maybe
-    kind: estimate
+    kind: fact
     grade: A
     note:
       en: "Reg 1334/2008 Art. 3 explicitly allows a 'natural flavouring substance' to be obtained from material of animal origin (e.g. historically, substances from castoreum or civet); the label is not required to disclose vegetable vs. animal vs. microbial sourcing, so 'maybe' rather than 'yes' or 'no' when the source is unnamed."
@@ -45,6 +45,30 @@ assertions:
       en: "NOVA explicitly lists flavourings among its markers of group-4 (ultra-processed) products, regardless of whether the flavouring itself is 'natural' — a weak, contested signal on its own."
       pl: "NOVA wyraźnie wymienia aromaty wśród wskaźników produktów grupy 4 (wysoko przetworzonych), niezależnie od tego, czy sam aromat jest 'naturalny' — sam w sobie słaby, dyskusyjny sygnał."
     sources: [{ id: reg-1334-2008 }]
+  - code: origin.plant
+    certainty: maybe
+    kind: fact
+    grade: A
+    note:
+      en: "Reg (EC) No 1334/2008 Art. 3(2)(c)-(d) allows natural flavouring substances and preparations to be derived from material of vegetable origin; an unqualified 'natural flavouring' declaration does not specify which origin was used."
+      pl: "Art. 3 ust. 2 lit. c-d rozporządzenia (WE) nr 1334/2008 dopuszcza pochodzenie naturalnych substancji i preparatów aromatycznych z materiału roślinnego; ogólne określenie 'aromat naturalny' nie wskazuje konkretnego źródła."
+    sources: [{ id: reg-1334-2008, locator: "Article 3(2)(c)-(d)" }]
+  - code: diet.vegetarian
+    certainty: maybe
+    kind: fact
+    grade: A
+    note:
+      en: "Reg (EC) No 1334/2008 Art. 3(2)(c)-(d) allows natural flavouring preparations and substances to be obtained from source material of vegetable, animal or microbiological origin, so a label stating only 'natural flavouring' cannot show that it is free of animal material."
+      pl: "Art. 3 ust. 2 lit. c-d rozporządzenia (WE) nr 1334/2008 dopuszcza pochodzenie naturalnych preparatów i substancji aromatycznych z materiału roślinnego, zwierzęcego lub mikrobiologicznego, więc etykieta podająca jedynie 'aromat naturalny' nie potwierdza braku materiału zwierzęcego."
+    sources: [{ id: reg-1334-2008, locator: "Article 3(2)(c)-(d)" }]
+  - code: origin.microbial_fermentation
+    certainty: maybe
+    kind: fact
+    grade: A
+    note:
+      en: "Reg (EC) No 1334/2008 Art. 3(2)(c)-(d) explicitly covers natural flavouring substances produced by microbiological processes from material of vegetable, animal or microbiological origin."
+      pl: "Art. 3 ust. 2 lit. c-d rozporządzenia (WE) nr 1334/2008 wyraźnie obejmuje naturalne substancje aromatyczne wytwarzane w procesach mikrobiologicznych z materiału pochodzenia roślinnego, zwierzęcego lub mikrobiologicznego."
+    sources: [{ id: reg-1334-2008, locator: "Article 3(2)(c)-(d)" }]
 review_status: draft
 provenance: ai-drafted
 review_notes:
