@@ -770,8 +770,8 @@ Deno.test("a stated full refining keeps the soy exemption on a hydrogenated oil,
       assertEquals(soyFlag(label, idx), undefined, label);
     }
   }
-  // "not" before an exclusion verb with an unknown word between them is still the exclusion: the exemption stands
-  // (Sol 6.1 on #10 at 69045ab)
+  // "not" before an exclusion verb with a scope-keeping adverb between them is still the exclusion: the exemption
+  // stands (Sol 6.1 on #10 at 69045ab)
   for (
     const label of [
       "Ingredients: not actually containing fully refined hydrogenated soybean oil",
@@ -872,15 +872,16 @@ Deno.test("the words of an exclusion keep the negation on the name, whatever the
     assertEquals(r.flags.some((x) => x.code === "origin.animal"), false, label);
     assertEquals(r.diets.vegan.status === "no", false, label);
   }
-  // an exclusion verb that takes the name as its object carries the negation over any word before it, inside the
-  // window (Sol 6.1 on #10 at 69045ab, P2 2)
+  // the adverbs that keep an exclusion's scope, and the words that join two exclusion verbs, are words of the exclusion
+  // (Sol 6.1 on #10 at 69045ab, P2 2)
   for (
     const f of [
       "actually using",
       "really adding",
       "additionally the use of",
       "actually truly using any",
-      "preservatives or using",
+      "either using or containing",
+      "using or adding",
     ]
   ) {
     const label = `Ingredients: olive oil (without ${f} partially hydrogenated poultry fat)`;
@@ -889,20 +890,19 @@ Deno.test("the words of an exclusion keep the negation on the name, whatever the
     assertEquals(r.flags.some((x) => x.code === "origin.animal"), false, label);
     assertEquals(r.diets.vegan.status === "no", false, label);
   }
-  // an affirmative clause between the negator and the verb affirms the verb (Sol 6.1 on #19 at 268fb97, P2 1)
+  // any other word between the negator and the name, a food or an affirmative clause, is what the negator excludes:
+  // the verb after it is affirmed (Sol 6.1 on #19 at 268fb97, 92da880, e79f87a and a807795)
   for (
     const f of [
       "sugar but using",
       "sugar and using",
       "sugar yet adding",
       "sugar and with the use of",
-      // a food, or any word that is not an adverb, before the verb is what the negator excludes (Sol 6.1 on #19 at
-      // 92da880)
       "butter using",
       "butter instead using",
       "sugar using",
-      // a food the KB does not know is not an adverb, whatever it ends in (Sol 6.1 on #19 at e79f87a)
       "jelly using",
+      "butter by adding or using",
     ]
   ) {
     const label = `Ingredients: olive oil (without ${f} partially hydrogenated poultry fat)`;
@@ -950,7 +950,7 @@ Deno.test("the words of an exclusion keep the negation on the name, whatever the
   }
 });
 
-Deno.test("a tell that fails without a negator carries no denial (Sol 6.1 on #19 at 268fb97, P2 2)", () => {
+Deno.test("a tell that fails without a negator denies nothing (Sol 6.1 on #19 at 268fb97, P2 2)", () => {
   const idx = new KbIndex({
     version: "t",
     counts: {},
