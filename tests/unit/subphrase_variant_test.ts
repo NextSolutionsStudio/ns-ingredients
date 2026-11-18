@@ -878,7 +878,17 @@ Deno.test("the words of an exclusion keep the negation on the name, whatever the
   }
   // an affirmative clause between the negator and the verb affirms the verb (Sol 6.1 on #19 at 268fb97, P2 1)
   for (
-    const f of ["sugar but using", "sugar and using", "sugar yet adding", "sugar and with the use of"]
+    const f of [
+      "sugar but using",
+      "sugar and using",
+      "sugar yet adding",
+      "sugar and with the use of",
+      // a food, or any word that is not an adverb, before the verb is what the negator excludes (Sol 6.1 on #19 at
+      // 92da880)
+      "butter using",
+      "butter instead using",
+      "sugar using",
+    ]
   ) {
     const label = `Ingredients: olive oil (without ${f} partially hydrogenated poultry fat)`;
     const r = analyze(idx, label, { lang: "en" });

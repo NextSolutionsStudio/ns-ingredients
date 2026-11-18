@@ -254,6 +254,8 @@ const ANCHOR_BREAKS = new Set([
   "mit",
   "sondern",
 ]);
+/** Words that join two things an exclusion excludes ("without preservatives or using …"): the carry passes them. */
+const DISJUNCTIONS = new Set(["or", "nor", "ani", "lub", "albo", "czy", "oder", "noch"]);
 /** A prior variant raises its flags only when it is more likely than not (`analyze`). */
 export const PRIOR_FLAG_MIN = 0.5;
 
@@ -714,8 +716,19 @@ export class KbIndex {
     // The carry needs a negator that opens an exclusion, and no affirmative clause between it and the verb ("without
     // sugar but using …" uses the fat; "extra virgin dressing containing virgin olive oil" denies nothing: Sol 6.1 on
     // #19 at 268fb97)
+    // Between the verb and the negator (or the last "or" before the verb), every word belongs to the exclusion: its
+    // fillers and adverbs, or an adverb in -ly that names no food ("without actually using", "without really adding").
+    // A food or any other word there is what the negator excludes, and the verb after it is affirmed ("made without
+    // butter using …", "without butter instead using …": Sol 6.1 on #19 at 92da880).
+    let adverbsOnly = true;
+    for (let i = o - 1; i > k && adverbsOnly; i--) {
+      const w = tokens[i];
+      if (DISJUNCTIONS.has(w)) break;
+      adverbsOnly = DENIAL_FILLERS.has(w) || DENIAL_ADVERBS.has(w) || DENIAL_CONNECTORS.has(w) ||
+        (/^[a-z]{3,}ly$/u.test(w) && !this.byNorm.has(w));
+    }
     const anchored = o > k && OBJECT_VERBS.has(tokens[o]) && EXCLUSION_NEGATORS.test(tokens[k] ?? "") &&
-      !tokens.slice(k + 1, o).some((w) => ANCHOR_BREAKS.has(w));
+      !tokens.slice(k + 1, o).some((w) => ANCHOR_BREAKS.has(w)) && adverbsOnly;
     const adjectival = ADJECTIVE_NEGATORS.test(tokens[k] ?? "") && !anchored &&
       !DENIAL_FILLERS.has(tokens[v] ?? "");
     // Not denied: the plain entry (#14), except a variant that states an exemption, which stands as named ("bez cukru
