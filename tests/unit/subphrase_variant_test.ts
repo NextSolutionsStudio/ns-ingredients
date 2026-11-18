@@ -770,6 +770,29 @@ Deno.test("a stated full refining keeps the soy exemption on a hydrogenated oil,
       assertEquals(soyFlag(label, idx), undefined, label);
     }
   }
+  // "not" before an exclusion verb with a scope-keeping adverb between them is still the exclusion: the exemption
+  // stands (Sol 6.1 on #10 at 69045ab)
+  for (
+    const label of [
+      "Ingredients: not actually containing fully refined hydrogenated soybean oil",
+      "Ingredients: rapeseed oil (without actually using fully refined hydrogenated soybean oil)",
+    ]
+  ) {
+    assertEquals(soyFlag(label, idx), undefined, label);
+  }
+  // a limiting adverb after "not" affirms the verb: "not merely containing" names the food (Sol 6.1 on #19 at e79f87a)
+  for (const lim of ["merely", "only", "just"]) {
+    for (
+      const label of [
+        `Ingredients: not ${lim} containing hydrogenated soybean oil`,
+        `Ingredients: not ${lim} using or containing hydrogenated soybean oil`,
+        `Ingredients: olive oil (not ${lim} using or containing hydrogenated soybean oil)`,
+      ]
+    ) {
+      // (Sol 6.1 on #19 at 90df8fe: a disjunction does not carry a limited negator either)
+      assertEquals(soyFlag(label)?.certainty, "yes", label);
+    }
+  }
   // an adverb phrase may hold an article: without the verb it negates the full refining (soy maybe), with it it is
   // the exclusion (no soy) (Sol 6.1 on #18 at 165ecbd)
   for (const adv of ["not in any way", "not at any point", "not at all"]) {
@@ -849,6 +872,50 @@ Deno.test("the words of an exclusion keep the negation on the name, whatever the
     assertEquals(r.flags.some((x) => x.code === "origin.animal"), false, label);
     assertEquals(r.diets.vegan.status === "no", false, label);
   }
+  // the adverbs that keep an exclusion's scope, and the words that join two exclusion verbs, are words of the exclusion
+  // (Sol 6.1 on #10 at 69045ab, P2 2)
+  for (
+    const f of [
+      "actually using",
+      "really adding",
+      "additionally the use of",
+      "actually truly using any",
+      "either using or containing",
+      "using or adding",
+    ]
+  ) {
+    const label = `Ingredients: olive oil (without ${f} partially hydrogenated poultry fat)`;
+    const r = analyze(idx, label, { lang: "en" });
+    assertEquals(r.items[0].children?.[0]?.match?.ingredient_id === "poultry-fat", false, label);
+    assertEquals(r.flags.some((x) => x.code === "origin.animal"), false, label);
+    assertEquals(r.diets.vegan.status === "no", false, label);
+  }
+  // any other word between the negator and the name, a food or an affirmative clause, is what the negator excludes:
+  // the verb after it is affirmed (Sol 6.1 on #19 at 268fb97, 92da880, e79f87a and a807795)
+  for (
+    const f of [
+      "sugar but using",
+      "sugar and using",
+      "sugar yet adding",
+      "sugar and with the use of",
+      "butter using",
+      "butter instead using",
+      "sugar using",
+      "jelly using",
+      "butter by adding or using",
+    ]
+  ) {
+    const label = `Ingredients: olive oil (without ${f} partially hydrogenated poultry fat)`;
+    const r = analyze(idx, label, { lang: "en" });
+    assertEquals(r.flags.some((x) => x.code === "origin.animal"), true, label);
+    assertEquals(r.diets.vegan.status, "no", label);
+  }
+  // a participle after its noun closes an exclusion of that noun: the food after it is the food
+  for (const text of ["without sugar added partially hydrogenated poultry fat"]) {
+    const r = analyze(idx, `Ingredients: ${text}`, { lang: "en" });
+    assertEquals(r.items[0].match?.ingredient_id, "poultry-fat", text);
+    assertEquals(r.flags.some((x) => x.code === "origin.animal"), true, text);
+  }
   // a negator more than DENIAL_GAP_MAX (5) words before the name does not reach it (pc-opus: keep it in the window)
   const far = analyze(
     idx,
@@ -881,6 +948,34 @@ Deno.test("the words of an exclusion keep the negation on the name, whatever the
     assertEquals(r.items[0].match?.ingredient_id, "poultry-fat", text);
     assertEquals(r.flags.some((x) => x.code === "origin.animal"), true, text);
   }
+});
+
+Deno.test("a tell that fails without a negator denies nothing (Sol 6.1 on #19 at 268fb97, P2 2)", () => {
+  const idx = new KbIndex({
+    version: "t",
+    counts: {},
+    implications: IMPL,
+    sources: [],
+    classes: [],
+    ingredients: [
+      {
+        id: "olive-oil",
+        names: { en: ["olive oil"] },
+        variants: [{
+          id: "virgin",
+          names: { en: ["virgin olive oil"] },
+          process: { en: "p" },
+          tells: ["^(?!.*\\bextra virgin\\b).*\\bvirgin\\b"],
+        }],
+        assertions: [says("origin.plant")],
+      },
+    ],
+  } as unknown as KbBundle);
+  const text = "extra virgin dressing containing virgin olive oil";
+  const m = idx.match(text, []);
+  assertEquals(m?.ingredientId, "olive-oil", text);
+  const r = analyze(idx, `Ingredients: ${text}`, { lang: "en" });
+  assertEquals(r.flags.some((x) => x.code === "origin.plant"), true, text);
 });
 
 Deno.test("a qualifier that names a food carries its likely variant's allergens at maybe (pc-opus on #18)", () => {
