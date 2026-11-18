@@ -105,6 +105,26 @@ const DENIAL_ADVERBS = new Set([
   "even",
   "having",
   "been",
+  // adverbs that keep the exclusion's scope ("without actually using …": Sol 6.1 on #10 at 69045ab). Not the limiting
+  // "merely", "only", "just": "not merely containing …" names the food (Sol 6.1 on #19 at e79f87a)
+  "actually",
+  "really",
+  "truly",
+  "additionally",
+  "also",
+  "further",
+  "directly",
+  "previously",
+  "purposely",
+  "purposefully",
+  "wilfully",
+  "willfully",
+  "consciously",
+  // words that join two exclusion verbs ("without either using or containing …")
+  "or",
+  "nor",
+  "either",
+  "neither",
   // pl
   "nigdy",
   "w",
@@ -117,6 +137,17 @@ const DENIAL_ADVERBS = new Set([
   "jakiegokolwiek",
   "jakichkolwiek",
   "jakiejkolwiek",
+  "faktycznie",
+  "rzeczywiscie",
+  "naprawde",
+  "dodatkowo",
+  "swiadomie",
+  "umyslnie",
+  "nawet",
+  "lub",
+  "albo",
+  "ani",
+  "czy",
   // de
   "jemals",
   "niemals",
@@ -126,6 +157,15 @@ const DENIAL_ADVERBS = new Set([
   "jeglichem",
   "jeglichen",
   "jeglicher",
+  "tatsachlich",
+  "wirklich",
+  "zusatzlich",
+  "absichtlich",
+  "bewusst",
+  "sogar",
+  "oder",
+  "noch",
+  "weder",
 ]);
 /**
  * Negators that negate the word after them, not a food: "not fully refined hydrogenated soybean oil" negates the full
@@ -614,7 +654,7 @@ export class KbIndex {
    * oil"); "drop" (the plain entry, as #14 reads it) when it is not.
    * Scoped means: between the negator (the nearest start from which the tells fail) and the name lie at most
    * DENIAL_GAP_MAX words, each a word of an exclusion (DENIAL_FILLERS, DENIAL_ADVERBS: "without ever using", "without
-   * in any way adding"). A negator after the name ("… poultry fat without added sugar") keeps the variant, and one
+   * in any way adding", "without actually using", "without either using or containing"). A negator after the name ("… poultry fat without added sugar") keeps the variant, and one
    * that denies something else ("without added sugars with partially hydrogenated poultry fat", "bez konserwantów
    * częściowo utwardzony tłuszcz drobiowy", "not completely refined hydrogenated soybean oil") leaves the plain food.
    * "negate" is a denial whose negator negates the word after it (ADJECTIVE_NEGATORS) right before the name: it
