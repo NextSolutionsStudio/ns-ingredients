@@ -780,6 +780,8 @@ Deno.test("a stated full refining keeps the soy exemption on a hydrogenated oil,
   ) {
     assertEquals(soyFlag(label, idx), undefined, label);
   }
+  // a limiting adverb after "not" affirms the verb: "not merely containing" names the food (Sol 6.1 on #19 at e79f87a)
+  assertEquals(soyFlag("Ingredients: not merely containing hydrogenated soybean oil")?.certainty, "yes");
   // an adverb phrase may hold an article: without the verb it negates the full refining (soy maybe), with it it is
   // the exclusion (no soy) (Sol 6.1 on #18 at 165ecbd)
   for (const adv of ["not in any way", "not at any point", "not at all"]) {
@@ -888,6 +890,8 @@ Deno.test("the words of an exclusion keep the negation on the name, whatever the
       "butter using",
       "butter instead using",
       "sugar using",
+      // a food the KB does not know is not an adverb, whatever it ends in (Sol 6.1 on #19 at e79f87a)
+      "jelly using",
     ]
   ) {
     const label = `Ingredients: olive oil (without ${f} partially hydrogenated poultry fat)`;

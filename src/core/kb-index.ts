@@ -105,6 +105,21 @@ const DENIAL_ADVERBS = new Set([
   "even",
   "having",
   "been",
+  // adverbs that keep the exclusion's scope (not the limiting "merely", "only", "just": "not merely containing …" is
+  // affirmative; Sol 6.1 on #19 at e79f87a)
+  "actually",
+  "really",
+  "truly",
+  "additionally",
+  "also",
+  "further",
+  "directly",
+  "previously",
+  "purposely",
+  "purposefully",
+  "wilfully",
+  "willfully",
+  "consciously",
   // pl
   "nigdy",
   "w",
@@ -117,6 +132,13 @@ const DENIAL_ADVERBS = new Set([
   "jakiegokolwiek",
   "jakichkolwiek",
   "jakiejkolwiek",
+  "faktycznie",
+  "rzeczywiscie",
+  "naprawde",
+  "dodatkowo",
+  "swiadomie",
+  "umyslnie",
+  "nawet",
   // de
   "jemals",
   "niemals",
@@ -126,6 +148,12 @@ const DENIAL_ADVERBS = new Set([
   "jeglichem",
   "jeglichen",
   "jeglicher",
+  "tatsachlich",
+  "wirklich",
+  "zusatzlich",
+  "absichtlich",
+  "bewusst",
+  "sogar",
 ]);
 /**
  * Negators that negate the word after them, not a food: "not fully refined hydrogenated soybean oil" negates the full
@@ -717,15 +745,14 @@ export class KbIndex {
     // sugar but using …" uses the fat; "extra virgin dressing containing virgin olive oil" denies nothing: Sol 6.1 on
     // #19 at 268fb97)
     // Between the verb and the negator (or the last "or" before the verb), every word belongs to the exclusion: its
-    // fillers and adverbs, or an adverb in -ly that names no food ("without actually using", "without really adding").
-    // A food or any other word there is what the negator excludes, and the verb after it is affirmed ("made without
-    // butter using …", "without butter instead using …": Sol 6.1 on #19 at 92da880).
+    // fillers and its listed adverbs ("without actually using", "without really adding"). A food or any other word
+    // there is what the negator excludes, and the verb after it is affirmed ("made without butter using …", "without
+    // jelly using …", "not merely containing …": Sol 6.1 on #19 at 92da880 and e79f87a).
     let adverbsOnly = true;
     for (let i = o - 1; i > k && adverbsOnly; i--) {
       const w = tokens[i];
       if (DISJUNCTIONS.has(w)) break;
-      adverbsOnly = DENIAL_FILLERS.has(w) || DENIAL_ADVERBS.has(w) || DENIAL_CONNECTORS.has(w) ||
-        (/^[a-z]{3,}ly$/u.test(w) && !this.byNorm.has(w));
+      adverbsOnly = DENIAL_FILLERS.has(w) || DENIAL_ADVERBS.has(w) || DENIAL_CONNECTORS.has(w);
     }
     const anchored = o > k && OBJECT_VERBS.has(tokens[o]) && EXCLUSION_NEGATORS.test(tokens[k] ?? "") &&
       !tokens.slice(k + 1, o).some((w) => ANCHOR_BREAKS.has(w)) && adverbsOnly;
